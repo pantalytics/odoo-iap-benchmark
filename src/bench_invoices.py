@@ -47,6 +47,8 @@ ENGINES = {
     "gemini-2.5-pro": ("openrouter", "google/gemini-2.5-pro"),  # Fraunhofer's best, as anchor
     "claude-sonnet": ("openrouter", "anthropic/claude-sonnet-5.5"),
     "gpt": ("openrouter", "openai/gpt-5.5"),
+    "gpt-terra": ("openrouter", "openai/gpt-5.6-terra"),
+    "claude-opus": ("openrouter", "anthropic/claude-opus-5.5"),
     "mistral-ocr": ("openrouter-ocr", "mistralai/mistral-medium-3-5"),
     "mistral-docai": ("mistral", "mistral-ocr-latest"),
 }
@@ -61,6 +63,15 @@ PROMPT = (
     "The vendor is the company that issued the bill. Dates as YYYY-MM-DD. Amounts as plain "
     "numbers, no currency sign or thousands separator. Use null for anything not on the bill."
 )
+
+# H3: the reading rules as pre-registered in plan.md (addendum), word for word in substance.
+RULES = """Reading rules:
+- Read dates in the convention of the vendor's country: month first for US vendors, day
+  first elsewhere. Use the address, the currency and any unambiguous date on the page.
+- The vendor is the party that issues the bill and is paid; never a heading or the buyer.
+- The invoice number is the number labelled as the bill's own number; not an order,
+  customer or delivery number.
+- When no VAT is shown, the untaxed amount equals the total and the tax is 0."""
 
 
 def _s(desc: str) -> dict:
@@ -221,7 +232,7 @@ def run_openrouter(path: Path, model: str, cfg: dict, pdf_engine: str = "native"
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": PROMPT},
+                    {"type": "text", "text": cfg.get("prompt", PROMPT)},
                     {"type": "file", "file": {"filename": path.name, "file_data": data}},
                 ],
             }
@@ -309,6 +320,12 @@ def main() -> None:
     ap.add_argument("--engines", default=",".join(ENGINES), help="comma separated")
     ap.add_argument("--limit", type=int, default=0, help="only the first N bills")
     ap.add_argument("--sample", type=int, default=0, help="N bills at random, same N same bills")
+    ap.add_argument(
+        "--train-sample", type=int, default=0,
+        help="N bills (seed 7) from those NOT in the --sample test sample, for H4",
+    )  # fmt: skip
+    ap.add_argument("--rules", choices=["none", "h3", "file"], default="none")
+    ap.add_argument("--rules-file", type=Path, help="learned rules for --rules file (H4)")
     ap.add_argument("--max-eur", type=float, default=100, help="stop starting calls past this")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--score-only", action="store_true")
@@ -333,6 +350,12 @@ def main() -> None:
             "max_eur": args.max_eur,
             "usd_eur": args.usd_eur,
             "retry_errors": args.retry_errors,
+            "prompt": PROMPT
+            + {
+                "none": "",
+                "h3": "\n\n" + RULES,
+                "file": "\n\n" + (args.rules_file.read_text() if args.rules_file else ""),
+            }[args.rules],
             "odoo_credit_usd": args.odoo_credit_usd,
             "mistral_page_usd": args.mistral_page_usd,
             "user_infos": {
@@ -346,7 +369,13 @@ def main() -> None:
         docs = [json.loads(line) for line in (args.data / "truth.jsonl").open()]
         docs = docs[: args.limit] if args.limit else docs
         if args.sample and args.sample < len(docs):
-            docs = random.Random(42).sample(docs, args.sample)
+            test = random.Random(42).sample(docs, args.sample)
+            if args.train_sample:
+                ids = {d["id"] for d in test}
+                rest = [d for d in docs if d["id"] not in ids]
+                docs = random.Random(7).sample(rest, args.train_sample)
+            else:
+                docs = test
         # Bill by bill, so one slow model does not hold up the others.
         jobs = [(e, d) for d in docs for e in engines]
         with ThreadPoolExecutor(args.workers) as pool:
