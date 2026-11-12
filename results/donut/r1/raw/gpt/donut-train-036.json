@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Baker Inc",
+  "vendor_vat": "978-83-5677",
+  "invoice_ref": "26248685",
+  "invoice_date": "2018-05-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 281,
+  "tax": 28.1,
+  "total": 309.1,
+  "iban": "GB97DXYE25395425116910",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FashionNova “Forecasting You” MAXI DRESS TAUPE SZ M",
+    "quantity": 5,
+    "unit_price": 25,
+    "tax_rate": 10,
+    "net": 125
+   },
+   {
+    "description": "Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT",
+    "quantity": 4,
+    "unit_price": 39,
+    "tax_rate": 10,
+    "net": 156
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 281,
+    "tax": 28.1
+   }
+  ]
+ },
+ "cost_usd": 0.01832,
+ "raw": {
+  "id": "gen-1794512532-40s166MGRYDPnTxtpRxu",
+  "object": "chat.completion",
+  "created": 1794512532,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Baker Inc\",\"vendor_vat\":\"978-83-5677\",\"invoice_ref\":\"26248685\",\"invoice_date\":\"2018-05-26\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":281,\"tax\":28.1,\"total\":309.1,\"iban\":\"GB97DXYE25395425116910\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"FashionNova “Forecasting You” MAXI DRESS TAUPE SZ M\",\"quantity\":5,\"unit_price\":25,\"tax_rate\":10,\"net\":125},{\"description\":\"Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT\",\"quantity\":4,\"unit_price\":39,\"tax_rate\":10,\"net\":156}],\"vat_breakdown\":[{\"rate\":10,\"base\":281,\"tax\":28.1}]}",
+     "refusal": null,
+     "reasoning": "**Formatting invoice JSON**\n\nI need to ensure my output follows a proper JSON schema. I’m parsing the image and including details for Vendor Seller Baker Inc, with its address and tax ID. The invoice number is 26248685, and I'll convert the issue date from 05/26/2018 to 2018-05-26. I suspect the currency is USD based on the dollar sign, even though the IBAN looks British. The totals will include untaxed amounts, tax, and total, while keeping VAT treatment noted as S (10%). I’ll ensure the JSON matches the bill format without any extra details.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Formatting invoice JSON**\n\nI need to ensure my output follows a proper JSON schema. I’m parsing the image and including details for Vendor Seller Baker Inc, with its address and tax ID. The invoice number is 26248685, and I'll convert the issue date from 05/26/2018 to 2018-05-26. I suspect the currency is USD based on the dollar sign, even though the IBAN looks British. The totals will include untaxed amounts, tax, and total, while keeping VAT treatment noted as S (10%). I’ll ensure the JSON matches the bill format without any extra details.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9habo-KBwU8Aly38LkrLQMgu_s6ExYL5bNJDDrNYHgn6EsIewsZpTeh6SD_Nxj_JPJm2pJuiPZ6Vkv3VFIQxwQUuaCT2WpwmOOPuwxSIq_D8hnbje_8HQSN1Ba9ifmFO_DrhaMGsGk3LgOiTvrCs0TuOHx5BrsEU0Zi-UIHYZfR74L6ia7HfMEUZYCH0B3OQyzaSveuepLsimPZESgU1oIQRL01WedJcUI0XEmwv93mmtgz2Fv4iNfqBKzHM1IzQ8dyKDR3JsiJ3j1ymwbuX4zp7IRR_UEeiEVVE5IwFbqw90mB2ItDxROtzBedD37eTAtFA1LyI4al1xrCUM1YC8d-mYpIHa_ptfx0IoF8U7Ie15MAIoS3HB7wrMamiYM0MeOllpdb04EsY5bKd1HB2fQeiLTu-fW3ZfDwhRdc0jbz10Djntku2TqtnmO99DxWxnTFrnvnmhjfKCk5QHNAWPsOs4zmhHTU2A3XBTFBca5cPRGKZZxsHMuox1olazXPRaP9Y3n52nTixyXn_dRNIWhYvKnJJNUiI1qJxyrkURzbfcn10lRQU_TuhniFyaMTAYuOxAoPlnG6Qbr1ZDMVj3miRTo7xWn1z2DcQOHhvUg2lsNTWjpaqy2PwV178055PLNG7pf0mjIXdnYQ-aXX8WYdXN6Y9kjMn-6LfmFsj09j7Hdh-O6oKlYZjvcAnvcHmTsWls7fQFzMTcj6Hleg9HjVJId-GqGsMFKytKR5QCV8oywP7gHCNYUuqTb8OtEj4tDTC_BNqi5Zx9heUi05yOTXsGBg7mujuK7UYZ538V1oDUYvwZS5XReIhDZoN_YiZMoHxn2tW__ChwRbixZXOIMP3DgpXEa-v_nvqb3rR6VZJ7ccs2FRWS-OscP_HC4O3LzHcl8HNiMbO0nTLXbeZKQglm-2W68mHfFc2AM3atJpCSoQG5H6z_jcJhhi07Y11enI_hkmqW9UHe3JDjlcKVz4xqtOypcDErIQVuYcs2oYGQNm5dZLq22dXagyr2G7YKSMtzy6Kjp--fgcHI2nuyGY4JtxlCZcS1PVZztTxCvAg7IMVwrhW-U4w9uSHGci2EUwELS1MWMXv4O87fW1iPrK_ORC6uU0cs7oObr09A6xKMRzoU1D39gIjfToXQ07cAsc8PNh4Yi9-8yD-eUrm4kfFpjvoYTV6aYO6GGQMYKDzhxGZNnw11QDLvqMwwsHeEnCuG_i9dP-FTls46puTsWiUgDeEjjIZZiV9rTSnkRc7IOr_Xy6t8v4waxAvxZOAQch4YxzfQ72svE6GoWNYYCT4A4fBYOy-PTPjy2z9Eea07UqaIBqLoxWk4epHHoDCisJyaXdA9EyIgBdZjso8KCnSMOnzPMyREXq89qsuwxVTHpLLW474L70MigHBb0KIpoiKlq_BOwNktVknC0aCc4ws_6BxSw9z0X3dmGR02xjJAOV7nDdMCC9N6a22D9PXjTbKe8r9XD7cY76jSHKIhuYi8horhE3loK7drR8P8XQn7cYX5VWXFOvN0nZNEE_N7-wQ9k1hfS6RGVKetnbDitUH5zQBK5y1-x6WdrABbLKhDPI7gekm9q8q6P5O1aafSUry_OtaY4t2P8Ws98pyxhLl0u4-K1h0TF-SJPxb2MaLXoELgFfg-BP6XkywemxqWsjpd0DmorKATmtoBpzF1HUhS4eDYhBvjGXTeQnHyUlnPOjULQKXiLDDIW7R4b5_F-moNXrilR9KnMCLEr96v1oiG3oYuCkTGtU-dK6kePIamKgovSJK1ktd1cHHFGFHKcJfRWWB2GHvq16nIQnnipsBNa6qQYDH9RMTz9HSYuCRxLfcM6DtdHdUtb5I3if-RX_ai2WWoOWT5VhqiwzGPhOIPLOQJiwQ-7-Ku7a6LURNX6uNub-gbaP4hEDDpkxG2eu_RvdqwPHCVcb-GOCxxHvh8CVqzfyDKMrGuqwvaDW4Kp5d1gi9Fdl0q6W196LFkBLHHc7LkuRDBaJgh3fp9zBvc9-Oo8Ah_IxM7sVxxEUFUXzu3WA2HW4MNTxozdqMDfNUeSwCiNs9a35C4srkh3Ji53At-Z-REmhnsYQcfdEMF0GFBONfCT5Pyk4cPrXPXcPbSdSrycZcurPafkhS-fkqNgcXb-sOMn4vicrYW38UvUZgyWY4HFW6oa_rjoWRJE4DgCvseGWcxEd6Wl76xac6rwwqrGHUUGfIYYrcpGRxxk6OWGKo0FaYlPWH6s0LnmgJT1ZJr3ZFXL19awcoclWkxWxaHJ30Xb7U63b38U_Gdbe64Wt917HnMRVgrYFFOI3dsjbgWMuJeGhRRETz_lduqqyohG0QBhMpvEWau_F8xAMnLKWBzP78wbVIirK1J-hG3j1DN7RsBiEVJ-oHyTaqFUPfFQjApn32J7YBsv8rfKnNcCfvklVv4nLvnYP0fuMQ_xz6Fhblg4PzByE5vvYtmmbhBV3jP2WL3XrJ61puFiMiONsJDaAuIjK6_2R_MGkfnKGnyUPzYqQDb7WRLm48eVP0f-BgTivhUk6fz6DgQ6lM9pYbtryS7gyzUnRhWPi0xTeUxm0KmivUqu7oCa-1iY4NAT7W1qeWGfrQK7C7mHYyIW92wdRPSStiGAHhfb9XxrxtrBzWGRaxecENzJ1i0w-v-ix22Lf5917GfJrRdmw2HTAqOu--zTWsf43NB5YUXsU5p8vV-P-Y-7uIUjXS4UFjGHgGQUc9GNBVHEZTuaACW674qlqA2iF0nht7G1ssyL6UFO94Q6j5w56uFXn-eXDupoax_IkfH081AIWZSTC3n6V-DwuO3lIExslGrOJPTOP1jlq18FlELffi2Kph3zwaGnN8i-IRLwI9l8-Q8KwnFySwUOjZXra7rLSwpoh9-ShAjVwU64htvNT3Y_-SLYgQgkgc-uz452tTFahSowbBataPclcYFoykodya25eCipgFGdCE3hlxF-eSpPwPdzwn5H_nbrZKU-njXm46Nhhe45ExsOeGekwQX_73A67sliJD0XtzQAHvnvkzY58s9lxGVv03JEBP8h12M8PcACa0chJpwpQqLppmvUw85JsZPAOkgCDslBqsHh9SngcpGmcWEjpirLLnKxDo07U-ug91j1l0vPVl6ljSwlHwWBhSD4ZyMqt7QB73pC0EBWcQZAlZxzZsCIKgfw_ceSndHzCbvnsSCEN9tjGaU2FNoi1h2nOjtCOuT7kov0P9ZsAGargjHZpWgAT748VYBhLl0UmZx66_VOeLLzHX_crc5x-YKowOWUxQAkGqyDugI4gop9dmYCkrX2UxzYP_2ADljt6RhxvHo-ImqxAhG7jNFbcKr86kUEmXHDm2bMPj2fx55_o2ka09iM5JfQj8JHgOf-f04ra8YV9Cb5aeHfCRai_AyKd0hlL5spfWwy2IaoRFYk4-jfbu72pItzL4acrKmRjkVQ3cGpT23gET6EvgEvuUf1au8ft3TQo_1Vn_JLhDiSloIArXwS3jaa3NhXYZlPa7LGHltxrkNIFccP7vfiLPX55iHjBCDdNXATsIdyzagVExuvZseQ77XXxs7KTvgCtKmF0Ba3YmlV6RWk8jFwfarmnpZkzZhXmvpNXx2b8n-g==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0da72e380a904eef016af61696437087d1afa39f038b155f7f",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 360,
+   "total_tokens": 1864,
+   "cost": 0.01832,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01832,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.0108
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 170,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.02
+}

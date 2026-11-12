@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Baker Inc",
+  "vendor_vat": "978-83-5677",
+  "invoice_ref": "26248685",
+  "invoice_date": "2018-05-26",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 281.0,
+  "tax": 28.1,
+  "total": 309.1,
+  "iban": "GB97DXYE25395425116910",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FashionNova \"Forecasting You\" MAXI DRESS TAUPE SZ M",
+    "quantity": 5.0,
+    "unit_price": 25.0,
+    "tax_rate": 10.0,
+    "net": 125.0
+   },
+   {
+    "description": "Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT",
+    "quantity": 4.0,
+    "unit_price": 39.0,
+    "tax_rate": 10.0,
+    "net": 156.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 281.0,
+    "tax": 28.1
+   }
+  ]
+ },
+ "cost_usd": 0.0308275,
+ "raw": {
+  "id": "gen-1794512530-AJtjNEfyoM8dKNfILVPh",
+  "object": "chat.completion",
+  "created": 1794512530,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Baker Inc\",\n  \"vendor_vat\": \"978-83-5677\",\n  \"invoice_ref\": \"26248685\",\n  \"invoice_date\": \"2018-05-26\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 281.0,\n  \"tax\": 28.1,\n  \"total\": 309.1,\n  \"iban\": \"GB97DXYE25395425116910\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"FashionNova \\\"Forecasting You\\\" MAXI DRESS TAUPE SZ M\",\n      \"quantity\": 5.0,\n      \"unit_price\": 25.0,\n      \"tax_rate\": 10.0,\n      \"net\": 125.0\n    },\n    {\n      \"description\": \"Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT\",\n      \"quantity\": 4.0,\n      \"unit_price\": 39.0,\n      \"tax_rate\": 10.0,\n      \"net\": 156.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 281.0,\n      \"tax\": 28.1\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Seller Details**\n\nI've determined the vendor's name is \"Baker Inc\" and their Tax ID is \"978-83-5677\". I've also found the invoice number, which is \"26248685\". My next step is to identify and extract any other relevant data points from this document that will fill out the JSON schema.\n\n\n**Analyzing Currency Ambiguity**\n\nI've successfully extracted the invoice date \"2018-05-26\", and identified the invoice due date as null. I've also tackled the currency ambiguity; while the \"$\" and US addresses suggest USD, the IBAN points to the UK. However, the seller's address and the format of the Tax ID leans towards USD. I'm inferring USD based on this. I still need to find a way to make it more precise.\n\n\n**Identifying Missing Data**\n\nI've extracted the vendor and invoice details as \"Baker Inc\", \"978-83-5677\", and \"26248685\". I've assigned \"2018-05-26\" as the invoice date and `null` to the due date. The currency presented a complex situation, with the \"$\" symbol, US addresses, and a GB IBAN.  Based on the totals being prefixed by \"$\", and the lack of a clear ISO code, I'll use `null` for currency, in line with the instructions.\n\n\n**Inferring Currency and Totals**\n\nI've extracted the \"Net worth\", \"VAT\", and \"Gross worth\" totals as 281.00, 28.10, and 309.10, respectively. I was able to successfully identify and extract all requested data points from the document, including the currency, even in the absence of an ISO code. Based on the clues in the document, I inferred it as USD, though the schema does not have this explicitly listed.\n\n\n**Finalizing Information Extraction**\n\nI've extracted all required data points. The vendor's IBAN is confirmed as GB97DXYE25395425116910, along with the VAT Treatment \"S\" and the lines. I am ready to render the final JSON.\n\n\n\n**Finalizing Data Extraction**\n\nI've extracted the vendor information, with details confirmed as \"Baker Inc\" and \"978-83-5677\". The invoice reference is \"26248685,\" and the date is \"2018-05-26\". I've correctly extracted the IBAN as GB97DXYE25395425116910 and the totals, along with the lines and VAT breakdown. I'm ready to proceed with finalizing the schema.\n\n\n**Refining Currency and Structure**\n\nI've re-examined the currency ambiguity extensively, sticking with `null` due to the lack of an explicit ISO code on the invoice and the conflicting signals. I've double-checked all other extracted fields, ensuring data integrity across them and confirming they align with the expected JSON structure. The vendor information, including the name, Tax ID, and IBAN are all verified.\n\n\n**Finalizing All Data**\n\nI've extracted all the required information: vendor, invoice details, dates, totals, and lines. Despite the ambiguity, I'm sticking with `null` for the currency to align strictly with the schema instructions, given no explicit ISO code. I've double-checked that all data corresponds to the prompt.\n\n\n**Finalizing JSON Construction**\n\nI've re-reviewed the currency dilemma and, based on the principle of using null for information not explicitly on the document and the conflicting data, I am sticking with `null` for the currency. I've double-checked all extracted data, and I'm ready to render the final JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Seller Details**\n\nI've determined the vendor's name is \"Baker Inc\" and their Tax ID is \"978-83-5677\". I've also found the invoice number, which is \"26248685\". My next step is to identify and extract any other relevant data points from this document that will fill out the JSON schema.\n\n\n**Analyzing Currency Ambiguity**\n\nI've successfully extracted the invoice date \"2018-05-26\", and identified the invoice due date as null. I've also tackled the currency ambiguity; while the \"$\" and US addresses suggest USD, the IBAN points to the UK. However, the seller's address and the format of the Tax ID leans towards USD. I'm inferring USD based on this. I still need to find a way to make it more precise.\n\n\n**Identifying Missing Data**\n\nI've extracted the vendor and invoice details as \"Baker Inc\", \"978-83-5677\", and \"26248685\". I've assigned \"2018-05-26\" as the invoice date and `null` to the due date. The currency presented a complex situation, with the \"$\" symbol, US addresses, and a GB IBAN.  Based on the totals being prefixed by \"$\", and the lack of a clear ISO code, I'll use `null` for currency, in line with the instructions.\n\n\n**Inferring Currency and Totals**\n\nI've extracted the \"Net worth\", \"VAT\", and \"Gross worth\" totals as 281.00, 28.10, and 309.10, respectively. I was able to successfully identify and extract all requested data points from the document, including the currency, even in the absence of an ISO code. Based on the clues in the document, I inferred it as USD, though the schema does not have this explicitly listed.\n\n\n**Finalizing Information Extraction**\n\nI've extracted all required data points. The vendor's IBAN is confirmed as GB97DXYE25395425116910, along with the VAT Treatment \"S\" and the lines. I am ready to render the final JSON.\n\n\n\n**Finalizing Data Extraction**\n\nI've extracted the vendor information, with details confirmed as \"Baker Inc\" and \"978-83-5677\". The invoice reference is \"26248685,\" and the date is \"2018-05-26\". I've correctly extracted the IBAN as GB97DXYE25395425116910 and the totals, along with the lines and VAT breakdown. I'm ready to proceed with finalizing the schema.\n\n\n**Refining Currency and Structure**\n\nI've re-examined the currency ambiguity extensively, sticking with `null` due to the lack of an explicit ISO code on the invoice and the conflicting signals. I've double-checked all other extracted fields, ensuring data integrity across them and confirming they align with the expected JSON structure. The vendor information, including the name, Tax ID, and IBAN are all verified.\n\n\n**Finalizing All Data**\n\nI've extracted all the required information: vendor, invoice details, dates, totals, and lines. Despite the ambiguity, I'm sticking with `null` for the currency to align strictly with the schema instructions, given no explicit ISO code. I've double-checked that all data corresponds to the prompt.\n\n\n**Finalizing JSON Construction**\n\nI've re-reviewed the currency dilemma and, based on the principle of using null for information not explicitly on the document and the conflicting data, I am sticking with `null` for the currency. I've double-checked all extracted data, and I'm ready to render the final JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3043,
+   "total_tokens": 3361,
+   "cost": 0.0308275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0308275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03043
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2691,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.32
+}

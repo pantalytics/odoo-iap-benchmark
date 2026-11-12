@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "Barnes Ltd",
+  "vendor_vat": "901-85-5560",
+  "invoice_ref": "26110076",
+  "invoice_date": "2012-05-20",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 1506.89,
+  "tax": 150.69,
+  "total": 1657.58,
+  "iban": "GB36HFJI03231901211539",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo 64 N64 Game Console System + Controller Cords WORKING",
+    "quantity": 4.0,
+    "unit_price": 100.0,
+    "tax_rate": 10,
+    "net": 400.0
+   },
+   {
+    "description": "Vg PlayStation PS Vita console PCH-1100AB01 PCH-1100 Crystal Black 4GB 271214",
+    "quantity": 1.0,
+    "unit_price": 114.98,
+    "tax_rate": 10,
+    "net": 114.98
+   },
+   {
+    "description": "Nintendo 64 N64 Console Black Japan Tested Working NUSHA",
+    "quantity": 3.0,
+    "unit_price": 49.99,
+    "tax_rate": 10,
+    "net": 149.97
+   },
+   {
+    "description": "Sega V Saturn Victor Console RG-JX1 Gray Tested Working Japan",
+    "quantity": 3.0,
+    "unit_price": 109.99,
+    "tax_rate": 10,
+    "net": 329.97
+   },
+   {
+    "description": "Nintendo Switch Lite Turquoise Blue CONSOLE ONLY - No Charger [B1-3]",
+    "quantity": 3.0,
+    "unit_price": 135.0,
+    "tax_rate": 10,
+    "net": 405.0
+   },
+   {
+    "description": "Nintendo Wii Console Complete Bundle w/extras tested",
+    "quantity": 1.0,
+    "unit_price": 104.99,
+    "tax_rate": 10,
+    "net": 104.99
+   },
+   {
+    "description": "B284 Nintendo DSi console White Japan NDS x",
+    "quantity": 2.0,
+    "unit_price": 0.99,
+    "tax_rate": 10,
+    "net": 1.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 1506.89,
+    "tax": 150.69
+   }
+  ]
+ },
+ "cost_usd": 0.029392,
+ "raw": {
+  "id": "gen-1794512479-bqv1RH5yZXJd3GoRb71G",
+  "object": "chat.completion",
+  "created": 1794512479,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Barnes Ltd\",\n  \"vendor_vat\": \"901-85-5560\",\n  \"invoice_ref\": \"26110076\",\n  \"invoice_date\": \"2012-05-20\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 1506.89,\n  \"tax\": 150.69,\n  \"total\": 1657.58,\n  \"iban\": \"GB36HFJI03231901211539\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nintendo 64 N64 Game Console System + Controller Cords WORKING\",\n      \"quantity\": 4.00,\n      \"unit_price\": 100.00,\n      \"tax_rate\": 10,\n      \"net\": 400.00\n    },\n    {\n      \"description\": \"Vg PlayStation PS Vita console PCH-1100AB01 PCH-1100 Crystal Black 4GB 271214\",\n      \"quantity\": 1.00,\n      \"unit_price\": 114.98,\n      \"tax_rate\": 10,\n      \"net\": 114.98\n    },\n    {\n      \"description\": \"Nintendo 64 N64 Console Black Japan Tested Working NUSHA\",\n      \"quantity\": 3.00,\n      \"unit_price\": 49.99,\n      \"tax_rate\": 10,\n      \"net\": 149.97\n    },\n    {\n      \"description\": \"Sega V Saturn Victor Console RG-JX1 Gray Tested Working Japan\",\n      \"quantity\": 3.00,\n      \"unit_price\": 109.99,\n      \"tax_rate\": 10,\n      \"net\": 329.97\n    },\n    {\n      \"description\": \"Nintendo Switch Lite Turquoise Blue CONSOLE ONLY - No Charger [B1-3]\",\n      \"quantity\": 3.00,\n      \"unit_price\": 135.00,\n      \"tax_rate\": 10,\n      \"net\": 405.00\n    },\n    {\n      \"description\": \"Nintendo Wii Console Complete Bundle w/extras tested\",\n      \"quantity\": 1.00,\n      \"unit_price\": 104.99,\n      \"tax_rate\": 10,\n      \"net\": 104.99\n    },\n    {\n      \"description\": \"B284 Nintendo DSi console White Japan NDS x\",\n      \"quantity\": 2.00,\n      \"unit_price\": 0.99,\n      \"tax_rate\": 10,\n      \"net\": 1.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 1506.89,\n      \"tax\": 150.69\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the vendor's name and VAT number. My process involves identifying these specific fields from the invoice image and mapping them to the corresponding keys in the JSON schema.\n\n**Refining Invoice Date Format**\n\nI've successfully extracted the invoice number and identified the currency as USD. Now, I'm standardizing the invoice date from \"05/20/2012\" to the required \"YYYY-MM-DD\" format, which is \"2012-05-20\". The due date wasn't found and will be null.\n\n**Processing Numerical Data**\n\nI'm now standardizing numerical values, converting comma decimals to periods for tax and total amounts. I've also identified and logged the IBAN. The VAT treatment is being mapped to its code.\n\n**Parsing Line Items**\n\nI've successfully parsed the individual line items. For each, I'm extracting the description, quantity, unit price, net amount, and tax rate, preparing them for structured output.\n\n**Finalizing JSON Structure**\n\nI'm now consolidating all extracted and formatted data into the final JSON structure, ensuring all fields match the schema requirements, including precise numerical formats and escaped strings for the complete invoice details.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the vendor's name and VAT number. My process involves identifying these specific fields from the invoice image and mapping them to the corresponding keys in the JSON schema.\n\n**Refining Invoice Date Format**\n\nI've successfully extracted the invoice number and identified the currency as USD. Now, I'm standardizing the invoice date from \"05/20/2012\" to the required \"YYYY-MM-DD\" format, which is \"2012-05-20\". The due date wasn't found and will be null.\n\n**Processing Numerical Data**\n\nI'm now standardizing numerical values, converting comma decimals to periods for tax and total amounts. I've also identified and logged the IBAN. The VAT treatment is being mapped to its code.\n\n**Parsing Line Items**\n\nI've successfully parsed the individual line items. For each, I'm extracting the description, quantity, unit price, net amount, and tax rate, preparing them for structured output.\n\n**Finalizing JSON Structure**\n\nI'm now consolidating all extracted and formatted data into the final JSON structure, ensuring all fields match the schema requirements, including precise numerical formats and escaped strings for the complete invoice details.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2188,
+   "total_tokens": 3756,
+   "cost": 0.029392,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029392,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.026256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1416,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.79
+}

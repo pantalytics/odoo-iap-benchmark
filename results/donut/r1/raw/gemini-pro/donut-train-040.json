@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "Johnson LLC",
+  "vendor_vat": "980-77-0423",
+  "invoice_ref": "12830936",
+  "invoice_date": "2021-04-27",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5936.86,
+  "tax": 593.69,
+  "total": 6530.55,
+  "iban": "GB30QDVO20178698471358",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FAST Dell Windows 10 Desktop Computer Core 2 Duo 4GB Ram 250GB DVD WiFi 22\" LCD",
+    "quantity": 1.0,
+    "unit_price": 169.95,
+    "tax_rate": 10,
+    "net": 169.95
+   },
+   {
+    "description": "Desktop Computer Gaming PC Build Your Own Ryzen 3000G 3200G 3.5Ghz+ Vega or GTX",
+    "quantity": 5.0,
+    "unit_price": 579.0,
+    "tax_rate": 10,
+    "net": 2895.0
+   },
+   {
+    "description": "HP ProDesk G1 Desktop Computer Core i3 3.4GHz 8GB 500GB HD 19\" LCD Windows 10 PC",
+    "quantity": 1.0,
+    "unit_price": 119.95,
+    "tax_rate": 10,
+    "net": 119.95
+   },
+   {
+    "description": "AMD Dual Core 3.9Ghz 4GB DDR3 500GB HDD WiFi Windows 10 Desktop PC Computer",
+    "quantity": 2.0,
+    "unit_price": 259.99,
+    "tax_rate": 10,
+    "net": 519.98
+   },
+   {
+    "description": "personal computer",
+    "quantity": 4.0,
+    "unit_price": 59.0,
+    "tax_rate": 10,
+    "net": 236.0
+   },
+   {
+    "description": "desktop computers gaming build from scratch",
+    "quantity": 2.0,
+    "unit_price": 188.0,
+    "tax_rate": 10,
+    "net": 376.0
+   },
+   {
+    "description": "Gaming PC Desktop Computer Intel i7 RGB, GTX 1660, 16GB RAM, 2TB HDD, 480GB SSD",
+    "quantity": 2.0,
+    "unit_price": 809.99,
+    "tax_rate": 10,
+    "net": 1619.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 5936.86,
+    "tax": 593.69
+   }
+  ]
+ },
+ "cost_usd": 0.031876,
+ "raw": {
+  "id": "gen-1794512373-lSnmHGe3KLLKrcbNyWRh",
+  "object": "chat.completion",
+  "created": 1794512373,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Johnson LLC\",\n  \"vendor_vat\": \"980-77-0423\",\n  \"invoice_ref\": \"12830936\",\n  \"invoice_date\": \"2021-04-27\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 5936.86,\n  \"tax\": 593.69,\n  \"total\": 6530.55,\n  \"iban\": \"GB30QDVO20178698471358\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"FAST Dell Windows 10 Desktop Computer Core 2 Duo 4GB Ram 250GB DVD WiFi 22\\\" LCD\",\n      \"quantity\": 1.00,\n      \"unit_price\": 169.95,\n      \"tax_rate\": 10,\n      \"net\": 169.95\n    },\n    {\n      \"description\": \"Desktop Computer Gaming PC Build Your Own Ryzen 3000G 3200G 3.5Ghz+ Vega or GTX\",\n      \"quantity\": 5.00,\n      \"unit_price\": 579.00,\n      \"tax_rate\": 10,\n      \"net\": 2895.00\n    },\n    {\n      \"description\": \"HP ProDesk G1 Desktop Computer Core i3 3.4GHz 8GB 500GB HD 19\\\" LCD Windows 10 PC\",\n      \"quantity\": 1.00,\n      \"unit_price\": 119.95,\n      \"tax_rate\": 10,\n      \"net\": 119.95\n    },\n    {\n      \"description\": \"AMD Dual Core 3.9Ghz 4GB DDR3 500GB HDD WiFi Windows 10 Desktop PC Computer\",\n      \"quantity\": 2.00,\n      \"unit_price\": 259.99,\n      \"tax_rate\": 10,\n      \"net\": 519.98\n    },\n    {\n      \"description\": \"personal computer\",\n      \"quantity\": 4.00,\n      \"unit_price\": 59.00,\n      \"tax_rate\": 10,\n      \"net\": 236.00\n    },\n    {\n      \"description\": \"desktop computers gaming build from scratch\",\n      \"quantity\": 2.00,\n      \"unit_price\": 188.00,\n      \"tax_rate\": 10,\n      \"net\": 376.00\n    },\n    {\n      \"description\": \"Gaming PC Desktop Computer Intel i7 RGB, GTX 1660, 16GB RAM, 2TB HDD, 480GB SSD\",\n      \"quantity\": 2.00,\n      \"unit_price\": 809.99,\n      \"tax_rate\": 10,\n      \"net\": 1619.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 5936.86,\n      \"tax\": 593.69\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` fields, looking for their presence and type within the invoice data. My next steps involve mapping these identified values to the appropriate schema keys.\n\n**Identifying Invoice Fields**\n\nI've successfully extracted the vendor name and VAT from the image data. Now, I'm proceeding to identify and parse other key invoice details like reference numbers, dates, and financial figures.\n\n**Extracting Line Items**\n\nI'm now diligently processing the individual line items from the invoice. My current focus is on parsing the descriptions, quantities, unit prices, and associated tax rates for each entry, aiming for precise data extraction.\n\n**Validating Extracted Data**\n\nI am now performing detailed validation on the extracted line items, meticulously checking quantities, prices, and tax rates against the overall VAT breakdown. My focus is on ensuring numerical accuracy and proper formatting for all data points.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` fields, looking for their presence and type within the invoice data. My next steps involve mapping these identified values to the appropriate schema keys.\n\n**Identifying Invoice Fields**\n\nI've successfully extracted the vendor name and VAT from the image data. Now, I'm proceeding to identify and parse other key invoice details like reference numbers, dates, and financial figures.\n\n**Extracting Line Items**\n\nI'm now diligently processing the individual line items from the invoice. My current focus is on parsing the descriptions, quantities, unit prices, and associated tax rates for each entry, aiming for precise data extraction.\n\n**Validating Extracted Data**\n\nI am now performing detailed validation on the extracted line items, meticulously checking quantities, prices, and tax rates against the overall VAT breakdown. My focus is on ensuring numerical accuracy and proper formatting for all data points.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2395,
+   "total_tokens": 3963,
+   "cost": 0.031876,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.031876,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.02874
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1571,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.99
+}

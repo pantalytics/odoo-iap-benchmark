@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Davis, Evans and Cooper",
+  "vendor_vat": "933-70-8828",
+  "invoice_ref": "24342647",
+  "invoice_date": "2020-07-05",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 4112.98,
+  "tax": 411.3,
+  "total": 4524.28,
+  "iban": "GB05CPFN10349037207241",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "15\"x15\" White Marble Coffee Table Top With 15\" Tall Stand Semi Precious Art Deco",
+    "quantity": 4.0,
+    "unit_price": 575.99,
+    "tax_rate": 10.0,
+    "net": 2303.96
+   },
+   {
+    "description": "12\" Marble Lapis Inlay Chess Table Top With 2\" Pieces & 15\" Wooden Stand W537",
+    "quantity": 3.0,
+    "unit_price": 444.6,
+    "tax_rate": 10.0,
+    "net": 1333.8
+   },
+   {
+    "description": "18\"x18\" White Hand Curved Top Coffee Table Inlay Decorative Gift For Her Wedding",
+    "quantity": 1.0,
+    "unit_price": 475.22,
+    "tax_rate": 10.0,
+    "net": 475.22
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 4112.98,
+    "tax": 411.3
+   }
+  ]
+ },
+ "cost_usd": 0.0262175,
+ "raw": {
+  "id": "gen-1794512139-EdnhVNypggOUmPHa7LrC",
+  "object": "chat.completion",
+  "created": 1794512139,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Davis, Evans and Cooper\",\n  \"vendor_vat\": \"933-70-8828\",\n  \"invoice_ref\": \"24342647\",\n  \"invoice_date\": \"2020-07-05\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 4112.98,\n  \"tax\": 411.3,\n  \"total\": 4524.28,\n  \"iban\": \"GB05CPFN10349037207241\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"15\\\"x15\\\" White Marble Coffee Table Top With 15\\\" Tall Stand Semi Precious Art Deco\",\n      \"quantity\": 4.0,\n      \"unit_price\": 575.99,\n      \"tax_rate\": 10.0,\n      \"net\": 2303.96\n    },\n    {\n      \"description\": \"12\\\" Marble Lapis Inlay Chess Table Top With 2\\\" Pieces & 15\\\" Wooden Stand W537\",\n      \"quantity\": 3.0,\n      \"unit_price\": 444.6,\n      \"tax_rate\": 10.0,\n      \"net\": 1333.8\n    },\n    {\n      \"description\": \"18\\\"x18\\\" White Hand Curved Top Coffee Table Inlay Decorative Gift For Her Wedding\",\n      \"quantity\": 1.0,\n      \"unit_price\": 475.22,\n      \"tax_rate\": 10.0,\n      \"net\": 475.22\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 4112.98,\n      \"tax\": 411.3\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focused on extracting crucial details from the invoice document. Specifically, I've identified the vendor as \"Davis, Evans and Cooper\" and their tax ID as \"933-70-8828\". This data aligns with the structure defined in the provided JSON schema.\n\n\n**Defining Invoice Attributes**\n\nI've now moved on to defining additional attributes. The invoice reference is \"24342647\", and the issue date is \"2020-07-05\". The due date is set to `null` as it's not present. I'm focusing on the currency, which is likely USD despite a UK IBAN, given the US locations of the client and seller, and the USD currency symbol. I've also parsed the totals: net worth at `4112.98`, VAT at `411.30`, and gross worth at `4524.28`.\n\n\n**Confirming Invoice Data**\n\nI have now confirmed the data according to the schema. The IBAN is now included. I am now working on the individual line items; I will extract the details from each line, including description, quantity, unit price, tax rate, and net amount.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON format, ensuring data integrity. I've re-checked the currency ambiguity and am confident in assigning \"USD\".  I've converted the date and formatted it correctly. I'm carefully parsing the numbers and adjusting them according to the requirements to avoid any formatting issues. The VAT treatment and breakdown have been confirmed, and I am almost finished.\n\n\n**Finalizing JSON Data**\n\nNow I'm at the final stage. I've double-checked all the fields, including the currency ambiguity, and confirmed USD based on the provided context. I've ensured correct date formatting, number parsing, and the VAT breakdown aligns perfectly. All the data points and line item extractions are confirmed, so the JSON output is constructed.\n\n\n**Generating JSON Output**\n\nI'm now generating the JSON output, carefully cross-checking every field one last time. Despite the currency ambiguity, I'm confident with USD based on the US locations. The date is now formatted correctly, and number parsing is complete, including a final check of VAT calculations. All extracted line item details are also included.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focused on extracting crucial details from the invoice document. Specifically, I've identified the vendor as \"Davis, Evans and Cooper\" and their tax ID as \"933-70-8828\". This data aligns with the structure defined in the provided JSON schema.\n\n\n**Defining Invoice Attributes**\n\nI've now moved on to defining additional attributes. The invoice reference is \"24342647\", and the issue date is \"2020-07-05\". The due date is set to `null` as it's not present. I'm focusing on the currency, which is likely USD despite a UK IBAN, given the US locations of the client and seller, and the USD currency symbol. I've also parsed the totals: net worth at `4112.98`, VAT at `411.30`, and gross worth at `4524.28`.\n\n\n**Confirming Invoice Data**\n\nI have now confirmed the data according to the schema. The IBAN is now included. I am now working on the individual line items; I will extract the details from each line, including description, quantity, unit price, tax rate, and net amount.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON format, ensuring data integrity. I've re-checked the currency ambiguity and am confident in assigning \"USD\".  I've converted the date and formatted it correctly. I'm carefully parsing the numbers and adjusting them according to the requirements to avoid any formatting issues. The VAT treatment and breakdown have been confirmed, and I am almost finished.\n\n\n**Finalizing JSON Data**\n\nNow I'm at the final stage. I've double-checked all the fields, including the currency ambiguity, and confirmed USD based on the provided context. I've ensured correct date formatting, number parsing, and the VAT breakdown aligns perfectly. All the data points and line item extractions are confirmed, so the JSON output is constructed.\n\n\n**Generating JSON Output**\n\nI'm now generating the JSON output, carefully cross-checking every field one last time. Despite the currency ambiguity, I'm confident with USD based on the US locations. The date is now formatted correctly, and number parsing is complete, including a final check of VAT calculations. All extracted line item details are also included.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2582,
+   "total_tokens": 2900,
+   "cost": 0.0262175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0262175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02582
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2107,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.62
+}

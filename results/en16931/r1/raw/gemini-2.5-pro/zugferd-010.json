@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1.0,
+    "tax_rate": 19,
+    "net": -5.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.020665,
+ "raw": {
+  "id": "gen-1794511848-C7WKfu4isb72Piqr2v5R",
+  "object": "chat.completion",
+  "created": 1794511848,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MUSTERLIEFERANT GMBH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"RK21012345\",\n  \"invoice_date\": \"2018-09-16\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"untaxed\": -7.67,\n  \"tax\": -1.12,\n  \"total\": -8.79,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Zitronensäure 100ml\",\n      \"quantity\": -5,\n      \"unit_price\": 1.0,\n      \"tax_rate\": 19,\n      \"net\": -5.0\n    },\n    {\n      \"description\": \"Gelierzucker Extra 250g\",\n      \"quantity\": -2,\n      \"unit_price\": 1.45,\n      \"tax_rate\": 7,\n      \"net\": -2.9\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19,\n      \"base\": -4.85,\n      \"tax\": -0.92\n    },\n    {\n      \"rate\": 7,\n      \"base\": -2.82,\n      \"tax\": -0.2\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Credit Note Data**\n\nI'm working on extracting data from a German credit note and converting it to JSON. Currently, I'm focusing on identifying the vendor name, which is listed under \"Verkäufer.\" I've located the name and am ready to move to the next data point in the schema.\n\n\n**Analyzing Credit Note Data**\n\nI've moved on from vendor identification and am now extracting the vendor's VAT ID, which I've found labeled as \"USt.-Id.-Nr.\" under \"Verkäufer.\" The invoice number (\"Nr. RK21012345\") and date (\"vom 16. 09.2018\") are next on my list; I will format the date into YYYY-MM-DD format as \"2018-09-16.\" I'll set \"due_date\" to null, as it's not present. The currency is \"EUR,\" which is labeled \"Währung:\".\n\n\n**Mapping Credit Note Fields**\n\nI'm now identifying and mapping the remaining data. I've successfully extracted and formatted the invoice date, and I'll default the due date to null. The currency is straightforward. Now, I'm onto the total amounts, like untaxed, tax, and total, then setting IBAN to null as it's absent from the document. The VAT treatment code is \"S.\" Finally, I will break down the lines.\n\n\n**Finalizing Credit Note Extraction**\n\nI've completed extracting all the required data points and verifying the totals. I've confirmed that the credit note's negative values are correctly represented, and all the required fields are populated. The line items and VAT breakdown are also accounted for, and I am ready to convert everything into the final JSON structure.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, generating the JSON output. I've finished identifying all data points, including handling negative amounts and verifying totals. I am confident that the extracted values align with the credit note's structure and my understanding. With the data validated, I'm proceeding to convert this into the JSON format prescribed.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Credit Note Data**\n\nI'm working on extracting data from a German credit note and converting it to JSON. Currently, I'm focusing on identifying the vendor name, which is listed under \"Verkäufer.\" I've located the name and am ready to move to the next data point in the schema.\n\n\n**Analyzing Credit Note Data**\n\nI've moved on from vendor identification and am now extracting the vendor's VAT ID, which I've found labeled as \"USt.-Id.-Nr.\" under \"Verkäufer.\" The invoice number (\"Nr. RK21012345\") and date (\"vom 16. 09.2018\") are next on my list; I will format the date into YYYY-MM-DD format as \"2018-09-16.\" I'll set \"due_date\" to null, as it's not present. The currency is \"EUR,\" which is labeled \"Währung:\".\n\n\n**Mapping Credit Note Fields**\n\nI'm now identifying and mapping the remaining data. I've successfully extracted and formatted the invoice date, and I'll default the due date to null. The currency is straightforward. Now, I'm onto the total amounts, like untaxed, tax, and total, then setting IBAN to null as it's absent from the document. The VAT treatment code is \"S.\" Finally, I will break down the lines.\n\n\n**Finalizing Credit Note Extraction**\n\nI've completed extracting all the required data points and verifying the totals. I've confirmed that the credit note's negative values are correctly represented, and all the required fields are populated. The line items and VAT breakdown are also accounted for, and I am ready to convert everything into the final JSON structure.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, generating the JSON output. I've finished identifying all data points, including handling negative amounts and verifying totals. I am confident that the extracted values align with the credit note's structure and my understanding. With the data validated, I'm proceeding to convert this into the JSON format prescribed.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1092,
+   "completion_tokens": 1930,
+   "total_tokens": 3022,
+   "cost": 0.020665,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.020665,
+    "upstream_inference_prompt_cost": 0.001365,
+    "upstream_inference_completions_cost": 0.0193
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1576,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.96
+}

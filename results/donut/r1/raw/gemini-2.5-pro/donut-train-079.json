@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Ware Group",
+  "vendor_vat": "905-94-4458",
+  "invoice_ref": "79434652",
+  "invoice_date": "2013-06-22",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 210.11,
+  "tax": 21.01,
+  "total": 231.12,
+  "iban": "GB05FZSB29082242149094",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dont Sweat the Small Stuff... and Its All Small Stuff: Simple Ways to Keep",
+    "quantity": 1.0,
+    "unit_price": 4.49,
+    "tax_rate": 10.0,
+    "net": 4.49
+   },
+   {
+    "description": "Book: The Lee-Enfield by lan Skennerton- Signed Edition",
+    "quantity": 2.0,
+    "unit_price": 94.95,
+    "tax_rate": 10.0,
+    "net": 189.9
+   },
+   {
+    "description": "The Last Kings of Shanghai by Jonathan Kaufman",
+    "quantity": 3.0,
+    "unit_price": 2.99,
+    "tax_rate": 10.0,
+    "net": 8.97
+   },
+   {
+    "description": "Arnold Ehret RATIONAL FASTING 1971 paperback collector's edition",
+    "quantity": 1.0,
+    "unit_price": 6.75,
+    "tax_rate": 10.0,
+    "net": 6.75
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 210.11,
+    "tax": 21.01
+   }
+  ]
+ },
+ "cost_usd": 0.0137775,
+ "raw": {
+  "id": "gen-1794512285-9PqFYiWVwgfUe9oKILyu",
+  "object": "chat.completion",
+  "created": 1794512285,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Ware Group\",\n  \"vendor_vat\": \"905-94-4458\",\n  \"invoice_ref\": \"79434652\",\n  \"invoice_date\": \"2013-06-22\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 210.11,\n  \"tax\": 21.01,\n  \"total\": 231.12,\n  \"iban\": \"GB05FZSB29082242149094\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Dont Sweat the Small Stuff... and Its All Small Stuff: Simple Ways to Keep\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.49,\n      \"tax_rate\": 10.0,\n      \"net\": 4.49\n    },\n    {\n      \"description\": \"Book: The Lee-Enfield by lan Skennerton- Signed Edition\",\n      \"quantity\": 2.0,\n      \"unit_price\": 94.95,\n      \"tax_rate\": 10.0,\n      \"net\": 189.9\n    },\n    {\n      \"description\": \"The Last Kings of Shanghai by Jonathan Kaufman\",\n      \"quantity\": 3.0,\n      \"unit_price\": 2.99,\n      \"tax_rate\": 10.0,\n      \"net\": 8.97\n    },\n    {\n      \"description\": \"Arnold Ehret RATIONAL FASTING 1971 paperback collector's edition\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.75,\n      \"tax_rate\": 10.0,\n      \"net\": 6.75\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 210.11,\n      \"tax\": 21.01\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm now identifying vendor information. I've successfully extracted \"Ware Group\" as the vendor name and \"905-94-4458\" as their Tax ID. Next, I need to find the invoice number and other key information to complete the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've filled out more fields in the JSON schema. The invoice reference is \"79434652,\" and the issue date is \"2013-06-22.\" Since no due date is given, I'm setting it to null. I'm assuming the currency is USD based on the '$' sign and populating the financial values now. I'm also adding the seller's IBAN and VAT treatment details. I am now working on extracting and structuring the line items.\n\n\n**Constructing JSON Object**\n\nNow, I'm synthesizing the JSON object. I'm adding all the data, paying attention to data types, and using \"USD\" as the currency. The vendor's tax ID is the VAT number. I've populated the line items. The `vat_breakdown` section includes base and tax values, and tax rate, as I have extracted the VAT summary. I've used the data to build the schema.\n\n\n**Compiling JSON Data**\n\nNow, I'm integrating the extracted details into the JSON structure. I've populated fields like vendor name, tax ID, and invoice information directly from the document. The total amounts, untaxed and tax, are represented as numbers, the due date is null. The IBAN and VAT treatment have also been added. I am now building the line items based on the given information.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm now identifying vendor information. I've successfully extracted \"Ware Group\" as the vendor name and \"905-94-4458\" as their Tax ID. Next, I need to find the invoice number and other key information to complete the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've filled out more fields in the JSON schema. The invoice reference is \"79434652,\" and the issue date is \"2013-06-22.\" Since no due date is given, I'm setting it to null. I'm assuming the currency is USD based on the '$' sign and populating the financial values now. I'm also adding the seller's IBAN and VAT treatment details. I am now working on extracting and structuring the line items.\n\n\n**Constructing JSON Object**\n\nNow, I'm synthesizing the JSON object. I'm adding all the data, paying attention to data types, and using \"USD\" as the currency. The vendor's tax ID is the VAT number. I've populated the line items. The `vat_breakdown` section includes base and tax values, and tax rate, as I have extracted the VAT summary. I've used the data to build the schema.\n\n\n**Compiling JSON Data**\n\nNow, I'm integrating the extracted details into the JSON structure. I've populated fields like vendor name, tax ID, and invoice information directly from the document. The total amounts, untaxed and tax, are represented as numbers, the due date is null. The IBAN and VAT treatment have also been added. I am now building the line items based on the given information.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1338,
+   "total_tokens": 1656,
+   "cost": 0.0137775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0137775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01338
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 840,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.09
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Jones-Frazier",
+  "vendor_vat": "937-84-4041",
+  "invoice_ref": "15801054",
+  "invoice_date": "2015-09-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 246.31,
+  "tax": 24.63,
+  "total": 270.94,
+  "iban": "GB29ITRF67964142047762",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes",
+    "quantity": 4.0,
+    "unit_price": 44.99,
+    "tax_rate": 10.0,
+    "net": 179.96
+   },
+   {
+    "description": "10\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock",
+    "quantity": 1.0,
+    "unit_price": 26.99,
+    "tax_rate": 10.0,
+    "net": 26.99
+   },
+   {
+    "description": "Boys Kids Printed Cotton Slippers Zip Fastening 350172494",
+    "quantity": 2.0,
+    "unit_price": 19.68,
+    "tax_rate": 10.0,
+    "net": 39.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 246.31,
+    "tax": 24.63
+   }
+  ]
+ },
+ "cost_usd": 0.0200375,
+ "raw": {
+  "id": "gen-1794512399-mKKZBKyQ8x05cJcHYmCs",
+  "object": "chat.completion",
+  "created": 1794512399,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Jones-Frazier\",\n  \"vendor_vat\": \"937-84-4041\",\n  \"invoice_ref\": \"15801054\",\n  \"invoice_date\": \"2015-09-08\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 246.31,\n  \"tax\": 24.63,\n  \"total\": 270.94,\n  \"iban\": \"GB29ITRF67964142047762\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes\",\n      \"quantity\": 4.0,\n      \"unit_price\": 44.99,\n      \"tax_rate\": 10.0,\n      \"net\": 179.96\n    },\n    {\n      \"description\": \"10\\\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock\",\n      \"quantity\": 1.0,\n      \"unit_price\": 26.99,\n      \"tax_rate\": 10.0,\n      \"net\": 26.99\n    },\n    {\n      \"description\": \"Boys Kids Printed Cotton Slippers Zip Fastening 350172494\",\n      \"quantity\": 2.0,\n      \"unit_price\": 19.68,\n      \"tax_rate\": 10.0,\n      \"net\": 39.36\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 246.31,\n      \"tax\": 24.63\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data**\n\nI've successfully identified and extracted the vendor's name as \"Jones-Frazier\". I've also extracted their VAT ID, which is \"937-84-4041\", and the invoice reference, which is \"15801054\".\n\n\n**Analyzing Invoice Data**\n\nI'm now focusing on extracting further data points for the JSON schema. The issue date is \"09/08/2015\", which I've converted to \"2015-09-08\" as per the required YYYY-MM-DD format. Since no due date is mentioned, I will set it to null. Though the currency symbol is '$', I will assume USD given the US addresses. The untaxed amount is '$ 246,31', so it is `246.31`.\n\n\n**Compiling JSON Elements**\n\nI'm now putting together the key-value pairs. I've got the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, and `total` populated. Also, `iban`, and `vat_treatment`. I'm starting to parse the `lines` items. Each line contains a `description`, `quantity`, `unit_price`, `tax_rate`, and `net`, so I'm extracting the data.\n\n\n**Finalizing JSON Schema**\n\nI've completed extracting all the data and am constructing the final JSON object. I've double-checked all the values from calculations of line items to the total values, including the tax calculations. I had to resolve an ambiguity with the currency, eventually settling on USD due to the US addresses and the '$' symbol, even though the IBAN suggested UK. The VAT treatment is \"S\" as 10% is a standard rate. The breakdown of each line is incorporated, along with the vat breakdown by rate.\n\n\n**Constructing JSON Output**\n\nI'm now generating the JSON object based on the extracted and validated data. I've double-checked all the values one last time, ensuring data types and formats are correct. The final JSON will include all the extracted information, including the line item details and VAT breakdown.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data**\n\nI've successfully identified and extracted the vendor's name as \"Jones-Frazier\". I've also extracted their VAT ID, which is \"937-84-4041\", and the invoice reference, which is \"15801054\".\n\n\n**Analyzing Invoice Data**\n\nI'm now focusing on extracting further data points for the JSON schema. The issue date is \"09/08/2015\", which I've converted to \"2015-09-08\" as per the required YYYY-MM-DD format. Since no due date is mentioned, I will set it to null. Though the currency symbol is '$', I will assume USD given the US addresses. The untaxed amount is '$ 246,31', so it is `246.31`.\n\n\n**Compiling JSON Elements**\n\nI'm now putting together the key-value pairs. I've got the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, and `total` populated. Also, `iban`, and `vat_treatment`. I'm starting to parse the `lines` items. Each line contains a `description`, `quantity`, `unit_price`, `tax_rate`, and `net`, so I'm extracting the data.\n\n\n**Finalizing JSON Schema**\n\nI've completed extracting all the data and am constructing the final JSON object. I've double-checked all the values from calculations of line items to the total values, including the tax calculations. I had to resolve an ambiguity with the currency, eventually settling on USD due to the US addresses and the '$' symbol, even though the IBAN suggested UK. The VAT treatment is \"S\" as 10% is a standard rate. The breakdown of each line is incorporated, along with the vat breakdown by rate.\n\n\n**Constructing JSON Output**\n\nI'm now generating the JSON object based on the extracted and validated data. I've double-checked all the values one last time, ensuring data types and formats are correct. The final JSON will include all the extracted information, including the line item details and VAT breakdown.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1964,
+   "total_tokens": 2282,
+   "cost": 0.0200375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0200375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01964
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1506,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.99
+}

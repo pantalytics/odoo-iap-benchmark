@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "ELEKTRON Industrieservice GmbH",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "181301674",
+  "invoice_date": "2018-04-25",
+  "due_date": "2018-04-25",
+  "currency": "EUR",
+  "untaxed": 252.1,
+  "tax": 47.9,
+  "total": 300.0,
+  "iban": "DE91100000000123456789",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "TGA Obermonteur/Monteur",
+    "quantity": 3.0,
+    "unit_price": 43.2,
+    "tax_rate": 19.0,
+    "net": 129.6
+   },
+   {
+    "description": "Beamer-Deckenhalterung",
+    "quantity": 1.0,
+    "unit_price": 122.5,
+    "tax_rate": 19.0,
+    "net": 122.5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19.0,
+    "base": 252.1,
+    "tax": 47.9
+   }
+  ]
+ },
+ "cost_usd": 0.0146225,
+ "raw": {
+  "id": "gen-1794511831-JKZOfqjmjXXQiAdQ0Lib",
+  "object": "chat.completion",
+  "created": 1794511831,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ELEKTRON Industrieservice GmbH\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"181301674\",\n  \"invoice_date\": \"2018-04-25\",\n  \"due_date\": \"2018-04-25\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 252.1,\n  \"tax\": 47.9,\n  \"total\": 300.0,\n  \"iban\": \"DE91100000000123456789\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"TGA Obermonteur/Monteur\",\n      \"quantity\": 3.0,\n      \"unit_price\": 43.2,\n      \"tax_rate\": 19.0,\n      \"net\": 129.6\n    },\n    {\n      \"description\": \"Beamer-Deckenhalterung\",\n      \"quantity\": 1.0,\n      \"unit_price\": 122.5,\n      \"tax_rate\": 19.0,\n      \"net\": 122.5\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19.0,\n      \"base\": 252.1,\n      \"tax\": 47.9\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Bill Data**\n\nI'm currently focused on extracting information from a German bill and transforming it into a JSON object adhering to the specified schema. Right now, I'm identifying the vendor name within the \"Verkäufer\" section, and it looks like it will be \"ELEKTRON Industrieservice GmbH\".\n\n\n**Analyzing Bill Elements**\n\nI've successfully identified and extracted the vendor's VAT number, which is \"DE13 6695976\", from the \"Verkäufer\" section. Now I'm focusing on parsing the invoice details, specifically extracting the reference number \"18130 1674\" from the document title. Next, I am converting the invoice date, \"2 5.04.2018\", into the required \"2018-04-25\" format. Because it says the payment is \"Zahlbar sofort rein netto\", the due date is the same as the invoice date.\n\n\n**Defining Bill Data**\n\nI'm now focused on fleshing out all the required data elements for the JSON output. I've successfully identified the currency as EUR and I'm tackling the financial figures. I've formatted the untaxed, tax, and total amounts, as well as the IBAN. I'm also now extracting the VAT treatment information and the lines from the \"Positionsdaten\" table.\n\n\n**Assembling JSON Object**\n\nNow I'm focusing on the final step: structuring the extracted information into a JSON object that adheres to the established schema. I'm carefully formatting the numerical values and dates to ensure they meet the specifications. I'm working to correctly structure the VAT breakdown, ensuring the information from the \"Umsatzsteueraufschlüsselung\" table is also included. Once I'm done with the structure, the JSON object will be ready for use.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Bill Data**\n\nI'm currently focused on extracting information from a German bill and transforming it into a JSON object adhering to the specified schema. Right now, I'm identifying the vendor name within the \"Verkäufer\" section, and it looks like it will be \"ELEKTRON Industrieservice GmbH\".\n\n\n**Analyzing Bill Elements**\n\nI've successfully identified and extracted the vendor's VAT number, which is \"DE13 6695976\", from the \"Verkäufer\" section. Now I'm focusing on parsing the invoice details, specifically extracting the reference number \"18130 1674\" from the document title. Next, I am converting the invoice date, \"2 5.04.2018\", into the required \"2018-04-25\" format. Because it says the payment is \"Zahlbar sofort rein netto\", the due date is the same as the invoice date.\n\n\n**Defining Bill Data**\n\nI'm now focused on fleshing out all the required data elements for the JSON output. I've successfully identified the currency as EUR and I'm tackling the financial figures. I've formatted the untaxed, tax, and total amounts, as well as the IBAN. I'm also now extracting the VAT treatment information and the lines from the \"Positionsdaten\" table.\n\n\n**Assembling JSON Object**\n\nNow I'm focusing on the final step: structuring the extracted information into a JSON object that adheres to the established schema. I'm carefully formatting the numerical values and dates to ensure they meet the specifications. I'm working to correctly structure the VAT breakdown, ensuring the information from the \"Umsatzsteueraufschlüsselung\" table is also included. Once I'm done with the structure, the JSON object will be ready for use.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 1358,
+   "total_tokens": 2192,
+   "cost": 0.0146225,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0146225,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.01358
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 991,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.34
+}

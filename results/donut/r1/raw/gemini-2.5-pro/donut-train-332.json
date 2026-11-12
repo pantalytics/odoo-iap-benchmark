@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-12-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3.0,
+    "unit_price": 45.0,
+    "tax_rate": 10.0,
+    "net": 135.0
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4.0,
+    "unit_price": 119.99,
+    "tax_rate": 10.0,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10",
+    "quantity": 3.0,
+    "unit_price": 124.95,
+    "tax_rate": 10.0,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5.0,
+    "unit_price": 1092.27,
+    "tax_rate": 10.0,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.0285275,
+ "raw": {
+  "id": "gen-1794512205-Ttvsn8bS1SJWL8vH0ceX",
+  "object": "chat.completion",
+  "created": 1794512205,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith-Guerrero\",\n  \"vendor_vat\": \"954-91-2300\",\n  \"invoice_ref\": \"39400829\",\n  \"invoice_date\": \"2012-12-01\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 6451.16,\n  \"tax\": 645.12,\n  \"total\": 7096.28,\n  \"iban\": \"GB81NHIS20902698381776\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\n      \"quantity\": 3.0,\n      \"unit_price\": 45.0,\n      \"tax_rate\": 10.0,\n      \"net\": 135.0\n    },\n    {\n      \"description\": \"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\n      \"quantity\": 4.0,\n      \"unit_price\": 119.99,\n      \"tax_rate\": 10.0,\n      \"net\": 479.96\n    },\n    {\n      \"description\": \"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10\",\n      \"quantity\": 3.0,\n      \"unit_price\": 124.95,\n      \"tax_rate\": 10.0,\n      \"net\": 374.85\n    },\n    {\n      \"description\": \"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\n      \"quantity\": 5.0,\n      \"unit_price\": 1092.27,\n      \"tax_rate\": 10.0,\n      \"net\": 5461.35\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 6451.16,\n      \"tax\": 645.12\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data Points**\n\nI've successfully identified the necessary data fields within the document and have begun the extraction process. Specifically, I have located and recorded the vendor's name, their VAT number, and the invoice reference. I'm now cross-referencing these extracted values to ensure they correspond with the defined schema requirements.\n\n\n**Analyzing Currency & Dates**\n\nI am now focusing on refining the currency identification and standardizing the date format. Based on the data, I can determine: `vendor_name` as \"Smith-Guerrero\", `vendor_vat` as \"954-91-2300\", `invoice_ref` as \"39400829\", and the invoice date as \"2012-12-01\". I will set the due date to `null`. I am trying to determine the correct currency, and have identified the IBAN, which may lead to contradictory currency information. I will prioritize the use of USD to begin with.\n\n\n**Resolving Currency & Date Conflicts**\n\nI'm now focusing on resolving the conflicting currency indicators. While the US addresses and tax IDs suggest USD, the GB IBAN and European-style number formatting point to GBP or another European currency. I'm prioritizing the GB IBAN and the date interpretation as DD/MM/YYYY, interpreting the inconsistent number formatting as an OCR issue. I've re-confirmed that the currency is USD.\n\n\n**Finalizing Value Extraction**\n\nI've completed extracting and formatting all required data, including vendor details, invoice numbers, dates, and amounts. I've successfully resolved the potential currency ambiguity by prioritizing the US addresses and tax ID formats, opting for USD, and updating the values. The IBAN is now linked to vendor details and USD currency. I have also extracted and parsed the individual line items, including descriptions, quantities, unit prices, and tax rates.\n\n\n**Finalizing Extraction Details**\n\nI have finished parsing the line items, extracting all descriptions, quantities, unit prices, and tax rates. I've double-checked all calculations to ensure accuracy. Now, I'm formatting the `vat_breakdown` details and will cross-reference the extracted data with the schema for a final check before saving everything.\n\n\n**Finalizing & Verifying Extraction**\n\nI've carefully extracted and verified all data, resolving inconsistencies in number formatting and date interpretation, confirming USD as the currency, and accurately parsing all line items. All calculations have been double-checked, and data is now structured according to schema requirements. I am ready to save the extracted data.\n\n\n**Finalizing All Data & Structure**\n\nI have finished extracting and validating all required information, and am now finalizing the structure according to the defined schema. I've resolved data inconsistencies related to number and date formatting, ensuring all values are correctly parsed and assigned. Now, I will save the data.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data Points**\n\nI've successfully identified the necessary data fields within the document and have begun the extraction process. Specifically, I have located and recorded the vendor's name, their VAT number, and the invoice reference. I'm now cross-referencing these extracted values to ensure they correspond with the defined schema requirements.\n\n\n**Analyzing Currency & Dates**\n\nI am now focusing on refining the currency identification and standardizing the date format. Based on the data, I can determine: `vendor_name` as \"Smith-Guerrero\", `vendor_vat` as \"954-91-2300\", `invoice_ref` as \"39400829\", and the invoice date as \"2012-12-01\". I will set the due date to `null`. I am trying to determine the correct currency, and have identified the IBAN, which may lead to contradictory currency information. I will prioritize the use of USD to begin with.\n\n\n**Resolving Currency & Date Conflicts**\n\nI'm now focusing on resolving the conflicting currency indicators. While the US addresses and tax IDs suggest USD, the GB IBAN and European-style number formatting point to GBP or another European currency. I'm prioritizing the GB IBAN and the date interpretation as DD/MM/YYYY, interpreting the inconsistent number formatting as an OCR issue. I've re-confirmed that the currency is USD.\n\n\n**Finalizing Value Extraction**\n\nI've completed extracting and formatting all required data, including vendor details, invoice numbers, dates, and amounts. I've successfully resolved the potential currency ambiguity by prioritizing the US addresses and tax ID formats, opting for USD, and updating the values. The IBAN is now linked to vendor details and USD currency. I have also extracted and parsed the individual line items, including descriptions, quantities, unit prices, and tax rates.\n\n\n**Finalizing Extraction Details**\n\nI have finished parsing the line items, extracting all descriptions, quantities, unit prices, and tax rates. I've double-checked all calculations to ensure accuracy. Now, I'm formatting the `vat_breakdown` details and will cross-reference the extracted data with the schema for a final check before saving everything.\n\n\n**Finalizing & Verifying Extraction**\n\nI've carefully extracted and verified all data, resolving inconsistencies in number formatting and date interpretation, confirming USD as the currency, and accurately parsing all line items. All calculations have been double-checked, and data is now structured according to schema requirements. I am ready to save the extracted data.\n\n\n**Finalizing All Data & Structure**\n\nI have finished extracting and validating all required information, and am now finalizing the structure according to the defined schema. I've resolved data inconsistencies related to number and date formatting, ensuring all values are correctly parsed and assigned. Now, I will save the data.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2813,
+   "total_tokens": 3131,
+   "cost": 0.0285275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0285275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02813
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2232,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.74
+}

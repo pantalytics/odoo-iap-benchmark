@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Watson LLC",
+  "vendor_vat": "903-74-7444",
+  "invoice_ref": "49923258",
+  "invoice_date": "2011-10-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 1075.0,
+  "tax": 107.5,
+  "total": 1182.5,
+  "iban": "GB25DWRK25073532649300",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Original Nintendo Gaming Console with Robot, 9 games & extras",
+    "quantity": 1.0,
+    "unit_price": 475.0,
+    "tax_rate": 10,
+    "net": 475.0
+   },
+   {
+    "description": "Nintendo Switch Gaming Console W/ Neon Blue & Red Controllers,Carry Case,Cable",
+    "quantity": 2.0,
+    "unit_price": 300.0,
+    "tax_rate": 10,
+    "net": 600.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 1075.0,
+    "tax": 107.5
+   }
+  ]
+ },
+ "cost_usd": 0.025,
+ "raw": {
+  "id": "gen-1794512347-dNgYt9dW4SUvLvIPDVnj",
+  "object": "chat.completion",
+  "created": 1794512347,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Watson LLC\",\n  \"vendor_vat\": \"903-74-7444\",\n  \"invoice_ref\": \"49923258\",\n  \"invoice_date\": \"2011-10-26\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 1075.00,\n  \"tax\": 107.50,\n  \"total\": 1182.50,\n  \"iban\": \"GB25DWRK25073532649300\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Original Nintendo Gaming Console with Robot, 9 games & extras\",\n      \"quantity\": 1.00,\n      \"unit_price\": 475.00,\n      \"tax_rate\": 10,\n      \"net\": 475.00\n    },\n    {\n      \"description\": \"Nintendo Switch Gaming Console W/ Neon Blue & Red Controllers,Carry Case,Cable\",\n      \"quantity\": 2.00,\n      \"unit_price\": 300.00,\n      \"tax_rate\": 10,\n      \"net\": 600.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 1075.00,\n      \"tax\": 107.50\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting specific fields from the invoice image, particularly the `vendor_name`, `vendor_vat`, and `invoice_ref`, aligning them with the provided JSON schema.\n\n**Parsing Critical Invoice Details**\n\nI've successfully parsed the invoice number as `invoice_ref`, and identified the `invoice_date` from the provided format. Additionally, I've extracted the `vendor_name`, `vendor_vat`, and `iban` with confidence.\n\n**Processing Invoice Line Items**\n\nI'm now focusing on the individual line items. I've successfully parsed quantities, unit prices, and net amounts for each, alongside their respective VAT rates. The summary calculations for net, tax, and total are also being incorporated.\n\n**Finalizing Invoice Structure**\n\nI've successfully formatted the entire invoice data into the required JSON structure, ensuring all fields, including currency, VAT treatment, and detailed line items with their respective breakdowns, are precisely captured as per the schema.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting specific fields from the invoice image, particularly the `vendor_name`, `vendor_vat`, and `invoice_ref`, aligning them with the provided JSON schema.\n\n**Parsing Critical Invoice Details**\n\nI've successfully parsed the invoice number as `invoice_ref`, and identified the `invoice_date` from the provided format. Additionally, I've extracted the `vendor_name`, `vendor_vat`, and `iban` with confidence.\n\n**Processing Invoice Line Items**\n\nI'm now focusing on the individual line items. I've successfully parsed quantities, unit prices, and net amounts for each, alongside their respective VAT rates. The summary calculations for net, tax, and total are also being incorporated.\n\n**Finalizing Invoice Structure**\n\nI've successfully formatted the entire invoice data into the required JSON structure, ensuring all fields, including currency, VAT treatment, and detailed line items with their respective breakdowns, are precisely captured as per the schema.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1822,
+   "total_tokens": 3390,
+   "cost": 0.025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.021864
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1441,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.57
+}

@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Williams-Odom",
+  "vendor_vat": "908-80-0834",
+  "invoice_ref": "74576933",
+  "invoice_date": "2018-02-20",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 656.12,
+  "tax": 65.61,
+  "total": 721.73,
+  "iban": "GB92BAIN95242302828660",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display",
+    "quantity": 1.0,
+    "unit_price": 16.99,
+    "tax_rate": 10.0,
+    "net": 16.99
+   },
+   {
+    "description": "Keep the Boos Coming Stainless Steel Stemless Wine Tumbler, 12 oz.",
+    "quantity": 2.0,
+    "unit_price": 19.99,
+    "tax_rate": 10.0,
+    "net": 39.98
+   },
+   {
+    "description": "BLACK Butterfly Winged Corkscrew WINE BOTTLE OPENER Swing-a-Way",
+    "quantity": 5.0,
+    "unit_price": 8.95,
+    "tax_rate": 10.0,
+    "net": 44.75
+   },
+   {
+    "description": "EU Blichmann Riptide Brewing Pump - Hombrew Beer Wine Food Grade Stainless Steel",
+    "quantity": 2.0,
+    "unit_price": 200.0,
+    "tax_rate": 10.0,
+    "net": 400.0
+   },
+   {
+    "description": "Sitting Deer Wine Bottle Holder Decoration New",
+    "quantity": 5.0,
+    "unit_price": 30.88,
+    "tax_rate": 10.0,
+    "net": 154.4
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 656.12,
+    "tax": 65.61
+   }
+  ]
+ },
+ "cost_usd": 0.0209375,
+ "raw": {
+  "id": "gen-1794512209-RzCporRWrOLUaNAlvfKH",
+  "object": "chat.completion",
+  "created": 1794512209,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Williams-Odom\",\n  \"vendor_vat\": \"908-80-0834\",\n  \"invoice_ref\": \"74576933\",\n  \"invoice_date\": \"2018-02-20\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 656.12,\n  \"tax\": 65.61,\n  \"total\": 721.73,\n  \"iban\": \"GB92BAIN95242302828660\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display\",\n      \"quantity\": 1.0,\n      \"unit_price\": 16.99,\n      \"tax_rate\": 10.0,\n      \"net\": 16.99\n    },\n    {\n      \"description\": \"Keep the Boos Coming Stainless Steel Stemless Wine Tumbler, 12 oz.\",\n      \"quantity\": 2.0,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10.0,\n      \"net\": 39.98\n    },\n    {\n      \"description\": \"BLACK Butterfly Winged Corkscrew WINE BOTTLE OPENER Swing-a-Way\",\n      \"quantity\": 5.0,\n      \"unit_price\": 8.95,\n      \"tax_rate\": 10.0,\n      \"net\": 44.75\n    },\n    {\n      \"description\": \"EU Blichmann Riptide Brewing Pump - Hombrew Beer Wine Food Grade Stainless Steel\",\n      \"quantity\": 2.0,\n      \"unit_price\": 200.0,\n      \"tax_rate\": 10.0,\n      \"net\": 400.0\n    },\n    {\n      \"description\": \"Sitting Deer Wine Bottle Holder Decoration New\",\n      \"quantity\": 5.0,\n      \"unit_price\": 30.88,\n      \"tax_rate\": 10.0,\n      \"net\": 154.4\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 656.12,\n      \"tax\": 65.61\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's information to populate the JSON schema. So far, I've identified \"Williams-Odom\" as the vendor name and \"908-80-0834\" as their VAT ID. I'm moving on to extracting the invoice reference next.\n\n\n**Populating the Schema Now**\n\nI've successfully extracted the invoice number as \"74576933\" and the issue date, converting \"02/20/2018\" to \"2018-02-20\". The lack of a due date necessitates setting it to null. After analyzing the currency symbol and US addresses, I've confirmed USD as the most probable currency and I can set the value. I've also gathered the untaxed amount (656.12), the tax amount (65.61), and the total gross amount (721.73). The IBAN is now captured as \"GB92BAIN95242302828660\", and the VAT treatment is \"S\" for a standard rate of 10%. Now, I am focused on the itemized line items.\n\n\n**Extracting Line Items**\n\nI'm now focused on the line items. I'm carefully extracting the `description`, `quantity`, `unit_price`, `tax_rate`, and `net` for each. I've successfully gathered the data for the first four lines, including their descriptions, quantities, unit prices, tax rates (always 10%), and net amounts. The last line item is on its way.\n\n\n**Finalizing Data Verification**\n\nI've extracted all necessary data points: vendor details, invoice information, financial figures, the IBAN, VAT treatment, and itemized line items. I'm now cross-checking all the details to ensure accuracy and consistency before I assemble the final JSON object, including the ambiguous currency situation.\n\n\n**Constructing the JSON**\n\nI'm now putting it all together. I've double-checked all the values extracted, especially the calculations. Everything checks out! The ambiguity around the currency was resolved by considering all information. I'm ready to build the final JSON object, incorporating the itemized line items and verified financial figures.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's information to populate the JSON schema. So far, I've identified \"Williams-Odom\" as the vendor name and \"908-80-0834\" as their VAT ID. I'm moving on to extracting the invoice reference next.\n\n\n**Populating the Schema Now**\n\nI've successfully extracted the invoice number as \"74576933\" and the issue date, converting \"02/20/2018\" to \"2018-02-20\". The lack of a due date necessitates setting it to null. After analyzing the currency symbol and US addresses, I've confirmed USD as the most probable currency and I can set the value. I've also gathered the untaxed amount (656.12), the tax amount (65.61), and the total gross amount (721.73). The IBAN is now captured as \"GB92BAIN95242302828660\", and the VAT treatment is \"S\" for a standard rate of 10%. Now, I am focused on the itemized line items.\n\n\n**Extracting Line Items**\n\nI'm now focused on the line items. I'm carefully extracting the `description`, `quantity`, `unit_price`, `tax_rate`, and `net` for each. I've successfully gathered the data for the first four lines, including their descriptions, quantities, unit prices, tax rates (always 10%), and net amounts. The last line item is on its way.\n\n\n**Finalizing Data Verification**\n\nI've extracted all necessary data points: vendor details, invoice information, financial figures, the IBAN, VAT treatment, and itemized line items. I'm now cross-checking all the details to ensure accuracy and consistency before I assemble the final JSON object, including the ambiguous currency situation.\n\n\n**Constructing the JSON**\n\nI'm now putting it all together. I've double-checked all the values extracted, especially the calculations. Everything checks out! The ambiguity around the currency was resolved by considering all information. I'm ready to build the final JSON object, incorporating the itemized line items and verified financial figures.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2054,
+   "total_tokens": 2372,
+   "cost": 0.0209375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0209375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02054
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1466,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.76
+}

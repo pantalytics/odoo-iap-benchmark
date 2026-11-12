@@ -1,0 +1,120 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-06-05",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 177.49,
+  "tax": 20.16,
+  "total": 197.65,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kunstrasen grün 3m breit",
+    "quantity": 3,
+    "unit_price": 3.3333,
+    "tax_rate": 19,
+    "net": 10
+   },
+   {
+    "description": "Schweinesteak",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 7,
+    "net": 5.5
+   },
+   {
+    "description": "Mineralwasser Medium 12 x 1,0l PET",
+    "quantity": 20,
+    "unit_price": 5.49,
+    "tax_rate": 7,
+    "net": 109.8
+   },
+   {
+    "description": "Pfand",
+    "quantity": 20,
+    "unit_price": 2.77,
+    "tax_rate": 19,
+    "net": 55.46
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 113.03,
+    "tax": 7.91
+   },
+   {
+    "rate": 19,
+    "base": 64.46,
+    "tax": 12.25
+   }
+  ]
+ },
+ "cost_usd": 0.024161,
+ "raw": {
+  "id": "gen-1794511893-rk9RjSdP6rrYdz4tH4df",
+  "object": "chat.completion",
+  "created": 1794511893,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471102\",\"invoice_date\":\"2018-06-05\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":177.49,\"tax\":20.16,\"total\":197.65,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Kunstrasen grün 3m breit\",\"quantity\":3,\"unit_price\":3.3333,\"tax_rate\":19,\"net\":10},{\"description\":\"Schweinesteak\",\"quantity\":1,\"unit_price\":5.5,\"tax_rate\":7,\"net\":5.5},{\"description\":\"Mineralwasser Medium 12 x 1,0l PET\",\"quantity\":20,\"unit_price\":5.49,\"tax_rate\":7,\"net\":109.8},{\"description\":\"Pfand\",\"quantity\":20,\"unit_price\":2.77,\"tax_rate\":19,\"net\":55.46}],\"vat_breakdown\":[{\"rate\":7,\"base\":113.03,\"tax\":7.91},{\"rate\":19,\"base\":64.46,\"tax\":12.25}]}",
+     "refusal": null,
+     "reasoning": "**Extracting billing schema details**\n\nI need to produce an output JSON schema focusing on extracting invoice information. I should be clear about the total amounts — specifically, \"Zahlbetrag\" associated with prepayment of 147.65 versus the gross total of 197.65 is important. The total I want to reflect includes tax and separates out the payable amount. I have to consider all lines printed and their allowances, keeping in mind VAT details and line descriptions for accuracy.**Finalizing invoice details**\n\nI need to finalize the invoice with the currency set to EUR. The VAT breakdown consists of a base amount of 113.03 with a tax of 7.91 at rate 7%, and a base of 64.46 with a tax of 12.25 at rate 19%. The bases should sum to 177.49, which seems correct! Now I just need to make sure to format the final response in JSON format, focusing clearly on the billing details.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting billing schema details**\n\nI need to produce an output JSON schema focusing on extracting invoice information. I should be clear about the total amounts — specifically, \"Zahlbetrag\" associated with prepayment of 147.65 versus the gross total of 197.65 is important. The total I want to reflect includes tax and separates out the payable amount. I have to consider all lines printed and their allowances, keeping in mind VAT details and line descriptions for accuracy.**Finalizing invoice details**\n\nI need to finalize the invoice with the currency set to EUR. The VAT breakdown consists of a base amount of 113.03 with a tax of 7.91 at rate 7%, and a base of 64.46 with a tax of 12.25 at rate 19%. The bases should sum to 177.49, which seems correct! Now I just need to make sure to format the final response in JSON format, focusing clearly on the billing details.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hQeGgtfIZIqcB_AIiODnWbnZZKPKrQ6aM2aBBDNd7WYDBpDWJUzCkp9mbSdzjoEZ_wTBoCk2LtDtnpSNwNl4HixzQnexJYJlRZsOo1CXj4nGZaF6xZUXM5BXe3s2e2Z3cOC5dQK5CCLo5fnFE_PtqUOk5dRWrfVebVrTGo7JAt029pDp5YmrrYsvOBT854NE15mC-CC2kadkdXNKP5iw7kpVa5Q_sQT6GlqmJZLhJLwxkNIq5zUiWxJavjvDirwkXRPs0cZYQR9Cnli7gdIZgnU3T2L61saJi0pTA3hjU4Zb_B527FCnZVQproZBGjd5BO3JaQ_p2wq0mLjKG2JvjkMcnduIcILPFfDcg8s-P-gdgb1J_qmnCsJZAoS5AgRVTeuL3hgr8I7dwU_KfObY5ShAqiQUNecL_RKudGSyN3FRHRHmrd30pU9UVYiiGCakERG3md7ivfHQanoB5wmpxtkUQPCzlPzUzlc8_woVicsZbLFB85yRQdaYYFF6yV0qgg1orxx7GUMTm9wJx7LuEDW7viqY8tmKray9HORrrP-E3RAqFPMSRYLrjDarMh2n7kHxv3wSKlHm1tBH0RpzxZfmjfsUVpDSpZ17jCJxOJM6c6AunjXWR_XiFGub60uOi1MED8Dg5xdovUaCoBg3gTZn93l1LIIc4yBJnpER6LECkng7TKf7Grd2fmTnDMvlLskjfSdaCHW2mw8c_8FYOhbk8ZuwJOhBr58rpxCg7pv7DBl4tFYIx8IyB2lPcoKKEHPfC__saHr4h5t5npKhU8MVyTY9FcgJVO4nDXhwqw0840vQAWXipZH_LSTj0U7MEVhUQHU8D3wYIYPbmzAY9axQXoG7tMbX8z3aFO5tBBfgOEJw9FCHcEBP-xUCRok3l4uwO8JxWFKfe5YVljh4tYp26pwjV71pQkEs2iUhfLPvS-f-2_Hy0JejUIGo3DP0Bi8fVcsdYdOuHk1J9zES354vWlnEOldKQeI6rtihGFbAhk149thob6L6d15ArChA34MQMqZObm3uvRJiwwdTLF8fW1RGkkssP7tNaXJD4xIWaasraLLsJee_OpjKq0WU538HmJceHirgU3JzLjpsSfnRQLfWmA-yFZGGF_vRqjSiqwE-F2yx9Ia2LeO3VkNSSWwiYO7t67hUontMnw74WJfNj5PvjsQjh5HN_iEkczdN9Bw93MNLY1j7HrR6iolAIAJgORrgebJlpbehGm11vnO3ZAp4ZXVHd-5L_eqK_JZyXjiexbkAviGuVFEr5jxRD3_as1qp_kVGe5GWjOc9NsWBhORkyUWOFpa7qTiPfItAqRHCevTOqfdi4j7Wqf-oHS8Sntxo2iLVtj3uDu571Y_eEsnlTCo8RRG4P_8NjNW-3YKc1f29IRjbt4n4aNH2b4jAzm1XS8zSWtba1ZjBkjJ20ylNd6w7w_kn5uQdCPFtn9gBj_CHR_5FL_8f3FInM_8ReEUeiHF14wtG7w1MeI1ESlNWY2X0jjl4d0cjAkaaHwZyfYF-nOXzHEXUCt_s9pvH6QzKHKLpyxrmjc4EIUiw4aG9fcxJ1vlIp_M1NJf6zMOOoc1fAQpId5Jq7fJnbL2IO7JwoGhN0Bzpl2ZpkY5FPS79zmzw6SrR-CjSOsKlnaDrPTp_CAMU4QQ9Od5dM27O9yQ1dBMjB4_fACb6v00JV_ZMDDxFW2UJNLgMYLOnxbUZY5fZGmG9TRWEUkt9tREPZVeByfIfnp5RJD83KLjZj-dLyBQpohD34Gaggo4GUdA0SuinOIwYNMitqB_wc0gHJc8Y5zkGiZymNWutlY4Izw6kS2hGJYM0bHm4qkC6MX6brTaJz4LPDpm2dMofxPVd5BoarVZ4Zx-ySc3RstQN4Qm-X6IYES2qOdb7d9bK2ymY-gdI7WSo71JrfPUroXRjSUaKdQkzbb55RozIe5AB5emu44Uo1J02Fy8Wnw2jFD9J3EEtd0BvyciUMEx4AL031gmnjyLmWwnALN_SCTRj-I43RqRVHZ8sTWCKJViMKuiUMn9TVajDB4BmcLK0Nj43lObzzlAG47nzothVB2LwTnVIOXYcvnvEnH2AWuGzJi4OBoG9K9Koe2rBnQ0WgQH3XWQq-1LpcJ-9B_5PUBd8Dxn10yyJ4PmAnwf1HAHdvtjq5Xzt-mEXjO7dL5wTS7YZkyfDrE0wnQbzdhnL4Y_R4pVnM2jbzeZ_hILn_lgEyR7axJiTQQlg-WqGlne3RNk67KA-MCaEiYnIn8Gv2C_uRuMrphf_yeubpEl_sghTjMWgKudkW2qWdzODsUK08gEyiTFN-EZftKuED6mEhjLIiDuTs8cUncnm94vzwQwQA0zTu7B_AJEhmxTDn6ADrUaX25LULRtoURsDCN7uGvUEZG800eDtHgbxg_FUKW-k_cGEKS2hawF66Ie0Rn8ZbSJHHygFg0zq4MYMPi9opbLyRpjp5ldTGxfWFf6Y2vemdvi-dwdbb7zXCnF5DI4vBROB4moOtr_mZJNh8TjIbwXxK2tAX_hdkfOsbLztuWfXDO-1yJ4DMI8PxnbfWLAnEwnaInJ1AY7JKrmvJnER9c4LPKRGNwiGeDqlVZugU-EqlnImYJGvC86V3otQRtqwU977J3Gis1leDQebu6TWBIg-_2Jd1Nn1ZMPiruMPg3c-hnVgrfXPTSeF5D5W5D-3ZwdVmXPz0jabT3k2SWKZidiDY_0-Aa8ILOVkxWf8WZJTXpu5qsWSOEUuoxzeXjiDVMsbhIpr6yOysEVt1F7An2AUxD1J1fgckSn4wLMT-VSL4kjkvd_zGTRQ5yr6yR-2fJ12oRwjxqUcRO8NtKUgp6SOHKeNngaKWo3ZRHhTWxIOBZy4YmTPKxc-n2f822QXYjuc1k2ZQIQDeAsZnVjOuqlpeYoh59AZJ7n4bpcBzEk9YDb6ZxtgVMM5r4AwO_7SvzKnNfEgLiSdv4QO6806T-mZolI27ZSEm5U0fZtZRDanVUFUBZKrPTnpS0XlnFpeYPrCIRw5Ew04Rm5s-RFe7ydVnVn-Qm2WjZAYNDcLYa_HRf8ygYITYLHCV_WNd-9eOMYawwvBRoSSlrF4FK8awx11jNESDGASCtKFQ7ThZR1xQVJ2CTMlsAUwVWIPxD5GlZpkhANOsa7INTetTurgNgwLP46O3TmCV91eq2NB-dbK3mJFyEOKDpdKE8M6zGpN5X9Kr5ZFyFBL9msHtcPwMKKIxqAbyeMcJA2jaoNbXVNw1cd_EiRenvjc92tuCmjS0vn9h7XCxETNnMKoTmIGKSXgST6bc3KolxCzLt8WrVnnYVj3uLpPQMBsHVx2WvO_glxv01QYTQyCfi_aj9oqK6KT5k4tfxgPIN7LzxVkRMELcS_nniFzSi43E-zjMoiIlMopuX2vwlwO6Gj7urE5ipmo1sAMUaqFa_6xOMKBiE8Via3F_vGJCxKXTaUpQzIiua7JZ1ctKotw6iFBCYWNnOD-RFZ6dYYX5AKrgRj8N3kbpUCpMR_b-VSeR6otc_kBtNoaDqvBWSOF8QnFNEFpmjFyQvQRCyoTEKccq7mtHwscQKg-e-tSUKMDOwxXjvHxZfDMCI_t7kBuQsGn5PwKzgwCQ-EgUg1jFF8Nj8CreNPZ9xFmXxm8-pMqwmghrzHCSn2f2O3Nnki_QJIuwi1KqarolQ3K6Sx39zdtdEsLzQ0MPkm3kdXtX9UyxfU6-oi8Cg4deJ5A-CJqsN3ip3uzsYut8ka27mT7UGXR1wlKWGVx5RAnzt2jkj1x8aUV0TVdVdQqJFEmSn_ig5DQuxFUwNULo8K_XKqAJBErz_QlM5Ku3LD2UeC6tfkCyyNEmjfGYXvdA0Guml-v04nhLKREPNc1DHoDxPKuvAMQkmLYZyAGRnI-jkhIsg6zfZLW2Lm0eASBZD5-I_OgKd3TVWQHipP3AGmCnZ-_DQaGKx57At96RQRrOfTeEoc-IcHR7ycGMJ1jATGcv5pyZzidnqwHPoRp-KRmDTjqx8440KhlzDpgXAdErjwYuxcsTfDEF82GYvo-W6HGnZWmtCCmTIf5yjadJGEF4iZoAo8wFHBeoAz4bSWloZSd5bD7wMPDhlRyOzshHT4EGzNF5dPVDkxz2FQoZlUgRyZlEpl38XEbYoumHR2_LelnNb_zJApuhZJSYNt_zeyzHEt0lCRNkjyVjK6gXDrU5iq-FMgnwYouXm_WE-_lH4BDbAzxfp7b9MVgSq7FRvK7ZuvgBgrsTtlwNnKRD5eFpTRkUQLjgjseQ33PbCtcb0v1bG8jKxrPdfuGtFYvju-TL2DIwPJa3HbkozfJih4uG46Kfzdh1aDAqrm76S-vArcu3N7NDxSpEdCcwEX-eTSGj1F1iSTqKPgP00s9d_e40VqGl68P8CBDNWLZ9EuenmksoquQpBxwZgzrpVZ7jgPaSe7-Z8tDxwYX7K8AAi683HqNZrdeoIifD__Hwmya0zb-GiDGERXpi1cq3m610a-9Y4r4vJKkYVN28yeI4nsz8in74zd-orNH7GC5D9ZjutKqsIx7l81SP83OkWCaufwTtQIqa3VuWXmP69KElIz9XdrqEcNkoejMcsaXfvTjeDu_iiYLF2mm8bJACOrABx4zS0n2CPlo3LW0j_DpjXkFN9IxPwBTd0Pu48AH3FuahX-X_CicJg_yw2fKd2_9-fQy8Y2bZI6hfdOfVLYyPV4cbSZn90nzFWdj1d4qKzpyS68OJZeKZpVf2PK354Pvscrsi79OMWtLOEpR-_WQXWDtLhEWjMDao7kx2CplhRJpPYJmBhpw-MDJzptSam4JkzWrGWK5_WpvS7hhHqLa1dT4PUDyvPOVriKR_ULReu3ipFZQU0ZcF_LiCkr-DYwcf4v8HYZUd_gZaCRW7bhdWjd3sC95kf3HHHcW9d2tbmFQJpdkbrevVjV8GTfUxH4S_gfxWIgCjA0oRInj_8a-1i7QXLaIiv_ExwxmjWwjXX36KdQ3xMb9kdxmSTITNIgxXxh2fiq45r8dX9AtLuGN0XH16i6ZB-A5o9pXllUxPdyqw3yUwizJFjdwCZkCgynVkfmNN6EFuUg7wyL7RNumUuXzBIj3RRF3hAbb51mjagNfJsW2jnGx9rndPnDPtEvj1y1GPLGCjC-lFnoRfM9c3ie6nQXid7wKa9_FNKvtZwapQJTank-AzwH7EU_tfML1k8v15L8AiBt-oUc20thwEuc8uVRLTes2euiLa94l9268Cn-CiDchztVhlxgW5dAhAZeUcflarjzs031TpA60Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0a2c9b5b00342141016af6141790a487d1b32f32e1a0738838",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2947,
+   "completion_tokens": 583,
+   "total_tokens": 3530,
+   "cost": 0.024161,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024161,
+    "upstream_inference_prompt_cost": 0.006671,
+    "upstream_inference_completions_cost": 0.01749
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 327,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.07
+}

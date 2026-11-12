@@ -1,0 +1,41 @@
+# Bill extraction benchmark: donut
+
+## Bookable without correction
+
+A bill counts when vendor, number, date, currency, untaxed, tax, total and the net amount per VAT rate are all right.
+
+| Engine | Bills | Bookable % | 95% CI | vendor | invoice_ref | invoice_date | currency | untaxed | tax | total | vat_breakdown |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| odoo | 100 | 0.0 | 0.0 to 3.7 | 2.0 | 100.0 | 69.0 | 100.0 | 6.0 | 6.1 | 100.0 | 6.2 |
+| gemini-flash | 100 | 64.0 | 54.2 to 72.7 | 99.0 | 100.0 | 65.0 | 100.0 | 99.0 | 100.0 | 100.0 | 99.0 |
+| gemini-pro | 100 | 69.0 | 59.4 to 77.2 | 99.0 | 100.0 | 70.0 | 100.0 | 99.0 | 100.0 | 100.0 | 99.0 |
+| gemini-2.5-pro | 100 | 70.0 | 60.4 to 78.1 | 99.0 | 100.0 | 73.0 | 97.9 | 99.0 | 100.0 | 100.0 | 99.0 |
+| claude-sonnet | 100 | 97.0 | 91.5 to 99.0 | 99.0 | 100.0 | 100.0 | 100.0 | 99.0 | 100.0 | 100.0 | 99.0 |
+| gpt | 100 | 73.0 | 63.6 to 80.7 | 99.0 | 100.0 | 75.0 | 100.0 | 99.0 | 100.0 | 100.0 | 99.0 |
+| mistral-ocr | 100 | 61.0 | 51.2 to 70.0 | 94.0 | 100.0 | 66.0 | 100.0 | 99.0 | 100.0 | 100.0 | 99.0 |
+
+## All fields
+
+| Engine | Bills | Errors | Header fields right % | 95% CI | Bills fully right % | 95% CI | Line fields right % | Line VAT rate right | EUR per bill | Seconds per bill |
+|---|---|---|---|---|---|---|---|---|---|---|
+| odoo | 100 | 0 | 51.5 | 48.2 to 54.8 | 0.0 | 0.0 to 3.7 | 50.4 | 15/355 | 0.1290 | 7.8 |
+| gemini-flash | 100 | 0 | 95.5 | 93.9 to 96.7 | 64.0 | 54.2 to 72.7 | 99.7 | 355/355 | 0.0044 | 9.8 |
+| gemini-pro | 100 | 0 | 96.1 | 94.6 to 97.2 | 68.0 | 58.3 to 76.3 | 99.7 | 355/355 | 0.0255 | 20.9 |
+| gemini-2.5-pro | 100 | 0 | 96.1 | 94.6 to 97.2 | 69.0 | 59.4 to 77.2 | 99.7 | 355/355 | 0.0166 | 16.2 |
+| claude-sonnet | 100 | 0 | 99.5 | 98.8 to 99.8 | 96.0 | 90.2 to 98.4 | 99.7 | 355/355 | 0.0092 | 3.6 |
+| gpt | 100 | 0 | 96.2 | 94.7 to 97.3 | 69.0 | 59.4 to 77.2 | 99.7 | 355/355 | 0.0219 | 9.3 |
+| mistral-ocr | 100 | 0 | 95.0 | 93.4 to 96.3 | 61.0 | 51.2 to 70.0 | 99.7 | 355/355 | 0.0056 | 4.5 |
+
+Per field, % right:
+
+| Field | odoo | gemini-flash | gemini-pro | gemini-2.5-pro | claude-sonnet | gpt | mistral-ocr |
+|---|---|---|---|---|---|---|---|
+| vendor_name | 0.0 | 98.0 | 98.0 | 98.0 | 98.0 | 98.0 | 98.0 |
+| vendor_vat | 2.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 94.9 |
+| invoice_ref | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| invoice_date | 69.0 | 65.0 | 70.0 | 73.0 | 100.0 | 75.0 | 66.0 |
+| currency | 100.0 | 100.0 | 100.0 | 97.9 | 100.0 | 100.0 | 100.0 |
+| untaxed | 6.0 | 99.0 | 99.0 | 99.0 | 99.0 | 99.0 | 99.0 |
+| tax | 6.1 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| total | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| iban | 92.0 | 98.7 | 98.7 | 97.3 | 98.7 | 93.3 | 98.7 |

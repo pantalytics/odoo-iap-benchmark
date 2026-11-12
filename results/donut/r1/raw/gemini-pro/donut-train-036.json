@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Baker Inc",
+  "vendor_vat": "978-83-5677",
+  "invoice_ref": "26248685",
+  "invoice_date": "2018-05-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 281.0,
+  "tax": 28.1,
+  "total": 309.1,
+  "iban": "GB97DXYE25395425116910",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FashionNova \"Forecasting You\" MAXI DRESS TAUPE SZ M",
+    "quantity": 5.0,
+    "unit_price": 25.0,
+    "tax_rate": 10,
+    "net": 125.0
+   },
+   {
+    "description": "Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT",
+    "quantity": 4.0,
+    "unit_price": 39.0,
+    "tax_rate": 10,
+    "net": 156.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 281.0,
+    "tax": 28.1
+   }
+  ]
+ },
+ "cost_usd": 0.021328,
+ "raw": {
+  "id": "gen-1794512530-Ngy4wcIP79VbeBgKDCdb",
+  "object": "chat.completion",
+  "created": 1794512530,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Baker Inc\",\n  \"vendor_vat\": \"978-83-5677\",\n  \"invoice_ref\": \"26248685\",\n  \"invoice_date\": \"2018-05-26\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 281.00,\n  \"tax\": 28.10,\n  \"total\": 309.10,\n  \"iban\": \"GB97DXYE25395425116910\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"FashionNova \\\"Forecasting You\\\" MAXI DRESS TAUPE SZ M\",\n      \"quantity\": 5.00,\n      \"unit_price\": 25.00,\n      \"tax_rate\": 10,\n      \"net\": 125.00\n    },\n    {\n      \"description\": \"Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT\",\n      \"quantity\": 4.00,\n      \"unit_price\": 39.00,\n      \"tax_rate\": 10,\n      \"net\": 156.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 281.00,\n      \"tax\": 28.10\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Extracting Invoice Details**\n\nI'm now actively working on extracting the `invoice_ref` and `invoice_date`, transforming the latter into the required YYYY-MM-DD format. I'm also identifying the `currency` based on symbols present.\n\n**Mapping Extracted Data**\n\nI'm now focusing on mapping the extracted `invoice_ref`, `invoice_date`, `currency`, and `vat_treatment` to their corresponding schema fields, ensuring the date is correctly formatted.\n\n**Populating Invoice Schema**\n\nI'm systematically populating the remaining schema fields, including `vendor_name`, `vendor_vat`, `untaxed`, `tax`, `total`, and `iban`, validating data types and formats as I go.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Extracting Invoice Details**\n\nI'm now actively working on extracting the `invoice_ref` and `invoice_date`, transforming the latter into the required YYYY-MM-DD format. I'm also identifying the `currency` based on symbols present.\n\n**Mapping Extracted Data**\n\nI'm now focusing on mapping the extracted `invoice_ref`, `invoice_date`, `currency`, and `vat_treatment` to their corresponding schema fields, ensuring the date is correctly formatted.\n\n**Populating Invoice Schema**\n\nI'm systematically populating the remaining schema fields, including `vendor_name`, `vendor_vat`, `untaxed`, `tax`, `total`, and `iban`, validating data types and formats as I go.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1516,
+   "total_tokens": 3084,
+   "cost": 0.021328,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021328,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.018192
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1137,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.13
+}

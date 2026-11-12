@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0008",
+  "invoice_date": "2017-11-03",
+  "due_date": "2017-12-03",
+  "currency": "EUR",
+  "untaxed": 2076.76,
+  "tax": 0.0,
+  "total": 2076.76,
+  "iban": "FR20 1242 1242 1242 1242 1242 124",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 8.0,
+    "unit_price": 4.55,
+    "tax_rate": 0.0,
+    "net": 32.76
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 20.0,
+    "unit_price": 3.2,
+    "tax_rate": 0.0,
+    "net": 64.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 100.0,
+    "unit_price": 19.8,
+    "tax_rate": 0.0,
+    "net": 1980.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 2076.76,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.01008525,
+ "raw": {
+  "id": "gen-1794511748-s18xJCSEcybFEeO4vmkK",
+  "object": "chat.completion",
+  "created": 1794511748,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Au bon moulin SARL\",\"vendor_vat\":\"FR11999999998\",\"invoice_ref\":\"FA-2017-0008\",\"invoice_date\":\"2017-11-03\",\"due_date\":\"2017-12-03\",\"currency\":\"EUR\",\"untaxed\":2076.76,\"tax\":0.0,\"total\":2076.76,\"iban\":\"FR20 1242 1242 1242 1242 1242 124\",\"vat_treatment\":\"K\",\"lines\":[{\"description\":\"Nougat de l'Abbaye 250g\",\"quantity\":8.0,\"unit_price\":4.55,\"tax_rate\":0.0,\"net\":32.76},{\"description\":\"Biscuits aux raisins 300g\",\"quantity\":20.0,\"unit_price\":3.2,\"tax_rate\":0.0,\"net\":64.0},{\"description\":\"Huile d'olive à l'ancienne\",\"quantity\":100.0,\"unit_price\":19.8,\"tax_rate\":0.0,\"net\":1980.0}],\"vat_breakdown\":[{\"rate\":0.0,\"base\":2076.76,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Details**\n\nI've got an invoice from \"Au bon moulin SARL.\" Vendor VAT is FR11999999998. The reference number is FA-2017-0008, and the dates are a bit ambiguous, so I'm checking the format. The invoice date is 11/03/2017 and due date 12/03/2017. Payment was via SEPA wire transfer on 11/17/2017.\n\n\n**Confirming Date Formats**\n\nI've nailed down the date formats: Invoice Date is November 3, 2017, and the Due Date is December 3, 2017, confirming the 30-day \"balance at 30 days\" period. I can now verify the payment date from the invoice. The currency is EUR, and the invoice details are: untaxed amount of 2076.76, no tax, and a total of 2076.76. I'm double-checking the IBAN format.\n\n\n**Verifying IBAN and VAT**\n\nI'm now zeroing in on the IBAN: FR20 1242 1242 1242 1242 1242 124. I will make sure the formatting is acceptable, with or without spaces. Also, I've confirmed the VAT treatment is a French VAT exemption for intra-community supply (K). The invoice details are lining up: Nougat at 32.76, Biscuits at 64, and Olive Oil at 1980, all with 0% tax. The total base is the same as the invoice total, so good.\n\n\n**Confirming IBAN Formatting**\n\nI've determined the IBAN, \"FR20 1242 1242 1242 1242 1242 124,\" is 27 characters. While both versions, with and without spaces, are valid, I'm leaning toward including the spaces, considering the `vendor_vat` format. My aim is to be consistent with the other data points that do contain spaces.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Details**\n\nI've got an invoice from \"Au bon moulin SARL.\" Vendor VAT is FR11999999998. The reference number is FA-2017-0008, and the dates are a bit ambiguous, so I'm checking the format. The invoice date is 11/03/2017 and due date 12/03/2017. Payment was via SEPA wire transfer on 11/17/2017.\n\n\n**Confirming Date Formats**\n\nI've nailed down the date formats: Invoice Date is November 3, 2017, and the Due Date is December 3, 2017, confirming the 30-day \"balance at 30 days\" period. I can now verify the payment date from the invoice. The currency is EUR, and the invoice details are: untaxed amount of 2076.76, no tax, and a total of 2076.76. I'm double-checking the IBAN format.\n\n\n**Verifying IBAN and VAT**\n\nI'm now zeroing in on the IBAN: FR20 1242 1242 1242 1242 1242 124. I will make sure the formatting is acceptable, with or without spaces. Also, I've confirmed the VAT treatment is a French VAT exemption for intra-community supply (K). The invoice details are lining up: Nougat at 32.76, Biscuits at 64, and Olive Oil at 1980, all with 0% tax. The total base is the same as the invoice total, so good.\n\n\n**Confirming IBAN Formatting**\n\nI've determined the IBAN, \"FR20 1242 1242 1242 1242 1242 124,\" is 27 characters. While both versions, with and without spaces, are valid, I'm leaning toward including the spaces, considering the `vendor_vat` format. My aim is to be consistent with the other data points that do contain spaces.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 592,
+   "completion_tokens": 2571,
+   "total_tokens": 3163,
+   "cost": 0.01008525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01008525,
+    "upstream_inference_prompt_cost": 0.000444,
+    "upstream_inference_completions_cost": 0.00964125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2259,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 30.22
+}

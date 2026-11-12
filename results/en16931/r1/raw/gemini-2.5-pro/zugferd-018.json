@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1.0,
+    "tax_rate": 19,
+    "net": -5.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.0200325,
+ "raw": {
+  "id": "gen-1794511866-FOZaLu8Gj8Hcx9SKQOR1",
+  "object": "chat.completion",
+  "created": 1794511866,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MUSTERLIEFERANT GMBH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"RK21012345\",\n  \"invoice_date\": \"2018-09-16\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"untaxed\": -7.67,\n  \"tax\": -1.12,\n  \"total\": -8.79,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Zitronensäure 100ml\",\n      \"quantity\": -5,\n      \"unit_price\": 1.0,\n      \"tax_rate\": 19,\n      \"net\": -5.0\n    },\n    {\n      \"description\": \"Gelierzucker Extra 250g\",\n      \"quantity\": -2,\n      \"unit_price\": 1.45,\n      \"tax_rate\": 7,\n      \"net\": -2.9\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19,\n      \"base\": -4.85,\n      \"tax\": -0.92\n    },\n    {\n      \"rate\": 7,\n      \"base\": -2.82,\n      \"tax\": -0.2\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's name, which I've located under \"Verkäufer:\" as \"MUSTERLIEFERANT GMBH\". This is the initial step in creating the JSON object. My next steps involve identifying and formatting the rest of the required information within the provided schema.\n\n\n**Mapping Data to Schema**\n\nI've outlined the critical data points and their locations within the German credit note. I'm focusing on mapping these elements to the required JSON schema fields. The vendor's name (\"MUSTERLIEFERANT GMBH\") has been located, along with the VAT number (\"DE123456789\") and the invoice reference (\"RK21012345\"). I'm now turning my attention to the date (\"16.09.2018\") and formatting it to \"2018-09-16\". I am now looking at the tax information; I now recognize that tax information requires calculating the total from multiple line items on the document.\n\n\n**Finalizing Data Points**\n\nNow I'm focusing on the final calculations and data mapping. I've successfully extracted all the required information: the vendor details, invoice reference and date, and tax details. The currency is confirmed as EUR, and the total amounts are identified, keeping in mind this is a credit note with negative values. I've also parsed the line items and VAT breakdown, ready for final formatting to the JSON structure.\n\n\n**Confirming Total Amounts**\n\nI'm now cross-referencing calculated totals with the document's listed amounts to ensure accuracy. The sum of line item nets and tax calculations are matching. All values are now confirmed and cross-checked, with special consideration for the credit note format. I am ready to assemble the final JSON output.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, assembling the JSON object. All required data points have been extracted, calculated, and cross-validated against the original credit note, ensuring that negative values and correct formatting are applied. I am ready to generate the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's name, which I've located under \"Verkäufer:\" as \"MUSTERLIEFERANT GMBH\". This is the initial step in creating the JSON object. My next steps involve identifying and formatting the rest of the required information within the provided schema.\n\n\n**Mapping Data to Schema**\n\nI've outlined the critical data points and their locations within the German credit note. I'm focusing on mapping these elements to the required JSON schema fields. The vendor's name (\"MUSTERLIEFERANT GMBH\") has been located, along with the VAT number (\"DE123456789\") and the invoice reference (\"RK21012345\"). I'm now turning my attention to the date (\"16.09.2018\") and formatting it to \"2018-09-16\". I am now looking at the tax information; I now recognize that tax information requires calculating the total from multiple line items on the document.\n\n\n**Finalizing Data Points**\n\nNow I'm focusing on the final calculations and data mapping. I've successfully extracted all the required information: the vendor details, invoice reference and date, and tax details. The currency is confirmed as EUR, and the total amounts are identified, keeping in mind this is a credit note with negative values. I've also parsed the line items and VAT breakdown, ready for final formatting to the JSON structure.\n\n\n**Confirming Total Amounts**\n\nI'm now cross-referencing calculated totals with the document's listed amounts to ensure accuracy. The sum of line item nets and tax calculations are matching. All values are now confirmed and cross-checked, with special consideration for the credit note format. I am ready to assemble the final JSON output.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, assembling the JSON object. All required data points have been extracted, calculated, and cross-validated against the original credit note, ensuring that negative values and correct formatting are applied. I am ready to generate the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 1899,
+   "total_tokens": 2733,
+   "cost": 0.0200325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0200325,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.01899
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1550,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.98
+}

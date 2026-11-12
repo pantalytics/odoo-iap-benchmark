@@ -1,0 +1,119 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-06-05",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 177.49,
+  "tax": 20.16,
+  "total": 197.65,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kunstrasen grün 3m breit\nWir erlauben uns Ihnen folgende Positionen aus der Lieferung Nr. 2018-51112 in Rechnung zu stellen:\ngetLineTradeAgreementBruttopreis : 4,0000\nAbschlag: 0,6667\n300cm x 100 cm",
+    "quantity": 3.0,
+    "unit_price": 3.3333,
+    "tax_rate": 19.0,
+    "net": 10.0
+   },
+   {
+    "description": "Schweinesteak\nBestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden nur die bereits gelieferten Steaks berechnet. Die noch offenen 4 kg Schweinesteak werden separat geliefert und berechnet.\ngetLineTradeAgreementBruttopreis : 5,5000\nSchweinesteak aus Deutschland",
+    "quantity": 1.0,
+    "unit_price": 5.5,
+    "tax_rate": 7.0,
+    "net": 5.5
+   },
+   {
+    "description": "Mineralwasser Medium \n12 x 1,0l PET\ngetLineTradeAgreementBruttopreis : 5,4900",
+    "quantity": 20.0,
+    "unit_price": 5.49,
+    "tax_rate": 7.0,
+    "net": 109.8
+   },
+   {
+    "description": "Pfand\ngetLineTradeAgreementBruttopreis : 2,7700",
+    "quantity": 20.0,
+    "unit_price": 2.77,
+    "tax_rate": 19.0,
+    "net": 55.46
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 113.03,
+    "tax": 7.91
+   },
+   {
+    "rate": 19.0,
+    "base": 64.46,
+    "tax": 12.25
+   }
+  ]
+ },
+ "cost_usd": 0.0079965,
+ "raw": {
+  "id": "gen-1794511734-xN7wvgY41FHsJgfn7bA2",
+  "object": "chat.completion",
+  "created": 1794511734,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Lieferant GmbH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"471102\",\n  \"invoice_date\": \"2018-06-05\",\n  \"due_date\": \"2018-07-04\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 177.49,\n  \"tax\": 20.16,\n  \"total\": 197.65,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Kunstrasen grün 3m breit\\nWir erlauben uns Ihnen folgende Positionen aus der Lieferung Nr. 2018-51112 in Rechnung zu stellen:\\ngetLineTradeAgreementBruttopreis : 4,0000\\nAbschlag: 0,6667\\n300cm x 100 cm\",\n      \"quantity\": 3.0,\n      \"unit_price\": 3.3333,\n      \"tax_rate\": 19.0,\n      \"net\": 10.0\n    },\n    {\n      \"description\": \"Schweinesteak\\nBestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden nur die bereits gelieferten Steaks berechnet. Die noch offenen 4 kg Schweinesteak werden separat geliefert und berechnet.\\ngetLineTradeAgreementBruttopreis : 5,5000\\nSchweinesteak aus Deutschland\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.5,\n      \"tax_rate\": 7.0,\n      \"net\": 5.5\n    },\n    {\n      \"description\": \"Mineralwasser Medium \\n12 x 1,0l PET\\ngetLineTradeAgreementBruttopreis : 5,4900\",\n      \"quantity\": 20.0,\n      \"unit_price\": 5.49,\n      \"tax_rate\": 7.0,\n      \"net\": 109.8\n    },\n    {\n      \"description\": \"Pfand\\ngetLineTradeAgreementBruttopreis : 2,7700\",\n      \"quantity\": 20.0,\n      \"unit_price\": 2.77,\n      \"tax_rate\": 19.0,\n      \"net\": 55.46\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7.0,\n      \"base\": 113.03,\n      \"tax\": 7.91\n    },\n    {\n      \"rate\": 19.0,\n      \"base\": 64.46,\n      \"tax\": 12.25\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Details**\n\nI'm currently focused on extracting specific invoice information. So far, I've identified the vendor name as Lieferant GmbH, their VAT number as DE123456789, and the invoice reference 471102. The invoice date is confirmed as 2018-06-05, with a due date of 2018-07-04. The currency is EUR, and the untaxed amount is 177.49.\n\n**Verifying Invoice Totals**\n\nMy current focus is on reconciling the total amounts. I've noted a net amount of 177.49 and a tax of 20.16, leading to a gross total of 197.65. I'm clarifying whether the \"Zahlbetrag\" of 147.65 reflects prepayments or if the true invoice total should be the gross 197.65.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Details**\n\nI'm currently focused on extracting specific invoice information. So far, I've identified the vendor name as Lieferant GmbH, their VAT number as DE123456789, and the invoice reference 471102. The invoice date is confirmed as 2018-06-05, with a due date of 2018-07-04. The currency is EUR, and the untaxed amount is 177.49.\n\n**Verifying Invoice Totals**\n\nMy current focus is on reconciling the total amounts. I've noted a net amount of 177.49 and a tax of 20.16, leading to a gross total of 197.65. I'm clarifying whether the \"Zahlbetrag\" of 147.65 reflects prepayments or if the true invoice total should be the gross 197.65.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2632,
+   "completion_tokens": 1606,
+   "total_tokens": 4238,
+   "cost": 0.0079965,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0079965,
+    "upstream_inference_prompt_cost": 0.001974,
+    "upstream_inference_completions_cost": 0.0060225
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 907,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.58
+}

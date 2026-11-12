@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Ware Group",
+  "vendor_vat": "905-94-4458",
+  "invoice_ref": "79434652",
+  "invoice_date": "2013-06-22",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 210.11,
+  "tax": 21.01,
+  "total": 231.12,
+  "iban": "GB05FZSB29082242149094",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dont Sweat the Small Stuff... and Its All Small Stuff: Simple Ways to Keep",
+    "quantity": 1,
+    "unit_price": 4.49,
+    "tax_rate": 10,
+    "net": 4.49
+   },
+   {
+    "description": "Book: The Lee-Enfield by Ian Skennerton- Signed Edition",
+    "quantity": 2,
+    "unit_price": 94.95,
+    "tax_rate": 10,
+    "net": 189.9
+   },
+   {
+    "description": "The Last Kings of Shanghai by Jonathan Kaufman",
+    "quantity": 3,
+    "unit_price": 2.99,
+    "tax_rate": 10,
+    "net": 8.97
+   },
+   {
+    "description": "Arnold Ehret RATIONAL FASTING 1971 paperback collector's edition",
+    "quantity": 1,
+    "unit_price": 6.75,
+    "tax_rate": 10,
+    "net": 6.75
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 210.11,
+    "tax": 21.01
+   }
+  ]
+ },
+ "cost_usd": 0.02579,
+ "raw": {
+  "id": "gen-1794512286-2jkcCko8BnMCLCEhIhrQ",
+  "object": "chat.completion",
+  "created": 1794512286,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Ware Group\",\"vendor_vat\":\"905-94-4458\",\"invoice_ref\":\"79434652\",\"invoice_date\":\"2013-06-22\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":210.11,\"tax\":21.01,\"total\":231.12,\"iban\":\"GB05FZSB29082242149094\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Dont Sweat the Small Stuff... and Its All Small Stuff: Simple Ways to Keep\",\"quantity\":1,\"unit_price\":4.49,\"tax_rate\":10,\"net\":4.49},{\"description\":\"Book: The Lee-Enfield by Ian Skennerton- Signed Edition\",\"quantity\":2,\"unit_price\":94.95,\"tax_rate\":10,\"net\":189.9},{\"description\":\"The Last Kings of Shanghai by Jonathan Kaufman\",\"quantity\":3,\"unit_price\":2.99,\"tax_rate\":10,\"net\":8.97},{\"description\":\"Arnold Ehret RATIONAL FASTING 1971 paperback collector's edition\",\"quantity\":1,\"unit_price\":6.75,\"tax_rate\":10,\"net\":6.75}],\"vat_breakdown\":[{\"rate\":10,\"base\":210.11,\"tax\":21.01}]}",
+     "refusal": null,
+     "reasoning": "**Formatting invoice details**\n\nI need to output a JSON schema for the bill and carefully parse the image while dealing with decimals and commas. I see vendor details, tax ID, invoice number, and date formatting. There's also a currency symbol and amounts, with VAT treatment noted. I need to handle line descriptions and quantities carefully, converting any necessary formats. I noticed a printed title that might have been incorrect; I need to decide how to preserve it properly. Let's make sure everything is clear and accurate.**Formatting lines for JSON**\n\nI need to correctly format the lines for the JSON output. The first line has a title with a missing apostrophe, and I need to decide how to preserve it as printed. The following lines contain details for various books, like quantities, unit prices, and net totals. It seems I must use a final JSON object without any markdown while ensuring it aligns with the specified bill schema. I’ll aim for clarity and accuracy in this final output.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Formatting invoice details**\n\nI need to output a JSON schema for the bill and carefully parse the image while dealing with decimals and commas. I see vendor details, tax ID, invoice number, and date formatting. There's also a currency symbol and amounts, with VAT treatment noted. I need to handle line descriptions and quantities carefully, converting any necessary formats. I noticed a printed title that might have been incorrect; I need to decide how to preserve it properly. Let's make sure everything is clear and accurate.**Formatting lines for JSON**\n\nI need to correctly format the lines for the JSON output. The first line has a title with a missing apostrophe, and I need to decide how to preserve it as printed. The following lines contain details for various books, like quantities, unit prices, and net totals. It seems I must use a final JSON object without any markdown while ensuring it aligns with the specified bill schema. I’ll aim for clarity and accuracy in this final output.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hWnj44OsAIutNEgRDxg_cWrODnCikIdVP66eXOMlymwpOQydj7H9nF99n9vACSmgCiXYxn7f0LJiSP5FLs_Lo5y1W6DCYVqdVbWqGXpyBLVGr7ipy16QAoDKXl8k_3wwoVBLr-gw_9gXYzv9WkrHZBDggH42a6CazPUphXyiJdvD9b2ZmCYpaCoagpjaQCKd9o6XiB7dmRB-tX_xzELPU4o1pdTWtpVIw-WvIH6hg7Zx3jPotWZPohjH-mHAERWAQuxEMSUcp5Qb2Vszt4dFNVSL3lUHmPtkAc-_s5c-TRL31psJ1fy0UYlD7fCcQsZlSdkdeNeNDQQoHPP49vcBx7GyMV4-ekRFKHbYwd0m9eEpVaYuvE86a1Xtd32ktNHFxrqRfJEDuibZNOj9L59OUF05zzuNNuzIVJczOF-TbwezkKEjY-E0upk-EtC5Ehk174NihzfJrBnDSo5Ato0AiRq94sG0eWee6RA2JYR6Mcf0r17DHQOrd__fxElrirKJdW9JzfWzXODQthL5cARvRmYPopwQSKj_vw4ZpDnTD2GxiZasYyGpO2o9bidgZdkv2NLuC4n2PvoMq9_lCuQzA2YiVqZrW-89MpTU-9LGodY-GhOrCamBDBdR9jCfJ8CC7puWdVEYfR9sQf-g_jCMziieRJjG5IqPnWD8MB4qX_U1IRZYvVQY9DXy-zGTc0o44qRJaMuqhuEEW191oCUX0T69HEIni0mbGS7EZuwSq4kizYbQcJp-u-XLJBaPa0HoHfIcoZ1HZnuQnHftmorS1BsKIZJD_O-lyz5BgMQC_mA71CM44ykqE-Ef1ENnctbNZLzTUk40T0P5hHxSNnEmt10e3n-dvKoqg9cUTcryIZt4KhqIog7GaC6ImK5T5nTkCYYPXpu-6HAaQebTmX_pTBlVoXUTVhOqMRo98RuTdugMqEpCovM80Euh9yoJty-lwaUW92dnEc6bQeyI6yYDvIpZieCKjgqBekEDh1xlQ_v52oG8doA5Q6doPwnLVMP_Nbcmo0futRqoHTamIlV26ZrFqoBPdNVLmxdKSoHVSqKbHFc_Zpk5q6AhRL4JPE56GOfGTVa5Cpi6pfMb5Pap-bhz1-eVRD6BpnyDFEZ4-qKeaAsFPfeWjBw0xGz5j5QLcd1pIQDtvj3ldZ4BMsilKQme-3FAzpXPiHIX7iRNbfhQdGCZD9n3tZ3yoaY2ACArBh4gZfXeyYuJ9aHua62dPnjSyIx7phOSNHKzqN8pUuVXSITVdQCRh-7hEteW2-Oz8NB-ZNDyjRNv7Bar3oyiUSTcrnY2w8xLME--YqJIC78kOVDdmMTAssqQZ06LoIk9q5WPm2WXuhT16gHV4RE0Fd7zbDHQGzijDHnLjAtCzw93mGUFtgrtlN6Fv3prOjC3xPtijxVA60JjuIE8wmtaMmnof4XmYigdwYiFkDrIMUItmk2tpcF594SPllblyCV3KInC4pdfEelw9Cn2MLaSX-142_cceV4AUibq3jCv0ZpvD8bxMJ0KvLW_i_k7gsyVdxXhiNZKtQacb6-7DReFc2O0gBV519PHmiLqFONpoCuzmU50ja6SgSjdmtMXYBBwpE1DPmVOQOc4JjCrotDqiUWKTSrt86T4aSFOAhjgZhbxBM4UshW5GYLeyusszsh_vsxcAHOUX308F-xmQ5cbjN6twNZjaJSl8VxOb2tCG4SvKNXstOPnJy15LQzfkryq0fD9WHptljikvYcgFGpiooLN5qaelxj4fWdFgVOEvoSUrngh22keoiGjpQlqcERDnqyE8J2O_TPzBsrSJNrhLBSPJzm_vbPA2MuU7MYSW7PiNVwXD97imdRSnVcdMyk60mcjfbMnTS6XJCwqh-ESJlgacppLfZZFnWPLxIIxiPcnDMPAp_vZ3AVVjmxT8pWN4p_bboAekzPoWzIp_YYf8EbJ9mDd4jtWUWDZPH-fjklmHMV65HuF2423PBY42CZ4YbkWazjLulUPAKGr9mmhdBbRrJVDrWDkK5I36Jl0mIpD37mlLJqaffQrSL4lkgq766bI6ymNkkbo6L9mesHzitSbvpt_6j8Gyu_3F1Do-AXjwwH2tYs1HfQNudfboUg13WcH77vNjK7n30CSaQD-Nrw8MRCx6kRu8a-Wj1FDtphcfJpy9DSBerahdH2vNTJ5hqH7pS3cK6MXQpHHfviQ60oZCBxhjgYjhE-Ys3lIQ0VGC-IUIFESmTAFjb_-vqQ385I_YUGPemkSGDedLo1iD7hkmwjCcQ667LjYoU9bm1XMVKkv69Uu5LXzx8FdR0jYBtgHIeSaMCawZ1B10Q-j0SuyAwPT-oe0HhRUBjxcD6m3XReih3guN_AbgkMd0YreDa86EoANh_ry0f3Fotfj4tUJiNmILmEK-MNN5Kqbu63NaOX6wzPguwOR8zVF05zI6asKQvJqQbkiu2u_JuoSPLuTWiKvUcJX1E0dNZTL52YvBBFeIEsf99vDcuWwdGbJD9hVEExmYXv1yAUkCJBhn-R4nj7ewFeVR_uixQvIsNEk4lsh23RcX5U2fo2mIquHreunTfTpaR7TyTgViy38bpfLmnGyypmj8FBf2HPEW5ro0YLzVwITfdmNbPG2ThrCR-hc0o-aptkBZfkSzLwpnxY9uCIAtSG5-9M_8cu86mL3sVcSwy6CxR-GFDKRiJxxiloktn2QFLw9uw3xWVuZBn1ygq2qUBFm7vIfhvQdpvtGLbV3__7sfSORO6qJfs9fcSUcDqSxnTv1mWgo04Gdb-JOMUdwiokzFX6t8ywy-4jkTkFOj84P0KOYVJ6gg6evTwOyqrS6uZP1Ah6CSRogaaSG2v_A6Kzhl8v-LHEhdjLYnono3pNPcHtCaZ9SWMDH2h6dzRWXBcUOC5dQy1gspLsMUUDJEfvBfBnd79Dl3F5B3LyMEjCLNnIXhiXXdoxFsPiEII-jPeXZ2dYmKPC47PTSy6rSKc6Y_uBQ7dZSFbYlOLcIesK4viTO0haUI3wgStwBxKV8rS8T90Ymgs73S5pWzCgKIZej1NMLm24qbFdQ1ngV2epcj9sS6qui7l1bzI0mLOgoyU28A93WqBPP9Uftk0oN4CIP8hbOy5gJMTbrsrw1Gk6TwJSnvj6rG5W2e8DYjEIxgwkZfteWpmZ8kJ1wM_lZ7RxaPA4FEPb8VYg2yrLH6GncdDiCPni1GqItDHrifXsTDuTXHLTSUPIll4arof35epEWHX4WjK-rKvpgojbo3UjmT6kN3li-IxOt4sqhhNbKaWtV5CmeJw4BpmPrUc11Ahh39OhZ5LH6Au_QgMgqt4V-O_wZ-nwf5Q91dwsUtnviMJlJ04U-uqBuGvUjsB1HuAZppwkBrOVxvAXn5ntMJiKcEWfPMJlmfRmMQEDUGUvzRhkKdQKWzSNvFzxLOL2JZ5KnZNGEBix1wskW_lXfTIZ66OFHC-en0mxly9HlccRqXVd6a_JhVzotkD6jBlzQWjHqioAPvpHatH1ekmjuhFHY_l4Ot-OaA19AxSgo61ZTzARSYurasP8kfhdAuhRlt6Km45AMWsccO5gbQPz0RPmjBiMOlaejNtn1P0dJu_EWiA-rPQP95sqHAxMCswciy01y1uSCJd69L7HE4FFkf0jyjkP_7vWlfBCFx3TzFWRjC6AYIbyBiTTBia9xgsZooVSDD0JxsXj4z3h64jVYcm_wmz1dJsqPP0T45ot0nEqktmH-mwm6CeuYMORBiVNdXwoshpE3p0_iyd0e84y7El8NNNGoirLtkSWOUpY839i80OGmNuHSc7-tkgIhFH72v_vECNRAej0xFphe0H5ypt8uuD3BIT_iLupKKew5vhI7qtFwGy9xW9W4IkEWDJyOwlKaTEeSeBPAwHqv08aQTTlGz0J5Fhf9FPCGyP6HxuA-tFgzUYktdG5nOqYbOjIw2XWtNWHeNSlAwlxYQPvG6lZ47FqMiI0Hup-gw3wv66lzJGzeYnqKEbK9OliSTauBp4SAd1Ogs_e9KCikJ295PGuczui4mH5pnDi7omvcbSeTuH9zh3yQUbGBGkuQgtbPig5UJ8TgZYKrAHWUCW3eYPfVF6Yc03Yj4MP4wFmejQca6RwOO78UKCFZIeIRzs9q-q2IZ_TuxFJCJ92k0JdEwTQxPgZF7ntxbrs0HwD9HdZjh8YkOUihvzv0ntSvieUVyiRDfUkVpx0ODn2V2DlErOZ2QesIhVqwx-B4Ylhsg5pV3e2gNsdzxmP4hCNSocNXSGJtMvYI3RMMe-s32Jtq_4zcQZoWaOv00JFnAxpQNFqFBUn6VxJc85ptJAezsUE_BX6j8lV6ALwibnqbXP98l9T0QSc2EijVZi7vYfG4ZyTYbS9HFd7xwJ45YiywXeoFEIbd3tMrsIIicBMoJnl63iHTLN8TGBix0swRbDyMCHAK5FFa5Rfe1DEWjOJo-MX4E834ZQ-0Vus_q5Cn306PTDcoekllURZ9tJWddSc5TCpeQyC_KF1yppq-ad55EBfw83cTxxJr8jL18vXapP4NNHhbZYDIut9mAveTPOu8iBa1pBKTjJs8sEYtQuqM95lO7Omvc_2y6tKGp4btGl5F6f7gnSWD0OD_SkAvGnmQlQZoOgO1avsflpKyr8obswWHC50gC-hGPFe6BtTWMLSW7Lwedp56u5RSIpbcJPTd15DmfmMrrdwW5_GF4fszgFmB4trRVY6FssNTT_GcmM8Odppu7xzTif5zJrw8W7HlIeFZ9ui7HQxlcpFwfNLQQh5nadlX18gda9LIIm0LvVXGsdodWkTnOwnwj5kC6SHY3HvvZzVUKz1k6TLJh0BKWyHJIizxOemYPA6--uPqy4TVSoWcgyO3IMg7ziCMftJt16fZlaNcoB9eRgiNm13Qp4W0KlhRhUkiCXa715LX_oia3qU0UTEWbhvI4eDGWbG1zesz0eq-I1rErbbKvmCxlcP8IDsu45kjX9UPwWmGjT4mIdhOdCXZEuJWqtOCRWjwVljtZkngM-L8XlhKeMOu03iUIQJncinREreowbaamyoJjeu_FUIiD7iaOjCYD2RGkPnopwsWGHku1KrIrEzdHFfkbPHiANZh0xPb-Ihw5vd1asZ609XTWwT36n6o1DV5dY-3sLUE3N2zDXNnsjg907CJjFW_n9Lo4b6DVGXUIjS-PWMndwJHhscrDE54bONFzgqXb02pGaCAxg1GwrF4mNR_7T01kWWJCemPCy_8DAlnNuqokOZM5JY42b4zyNpJu9dR_bakKTsPveAcp6ax2u4L6aqcPdqHX-HbtCgYR5LJffmozmqzQA9rvSo4CiiG5sYWoeUbahiukHuHPhPcBwSQqJuMj8yW2JkNAcJE-XKB8ne77ckFS7BsC_4Y57u8kQndZVOKQgT2a_i6BMuWiFNRFVc9IK4ZWEXfG96w9UceFY-HN7WHL1_tmYJVAou.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_067251946f388877016af615a0395c87d19c2bfbecfdb36a77",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 609,
+   "total_tokens": 2113,
+   "cost": 0.02579,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02579,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01827
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 338,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.07
+}

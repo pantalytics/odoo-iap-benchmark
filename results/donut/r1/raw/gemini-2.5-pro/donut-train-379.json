@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Rodriguez and Sons",
+  "vendor_vat": "943-82-3154",
+  "invoice_ref": "76229289",
+  "invoice_date": "2018-04-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5149.91,
+  "tax": 514.99,
+  "total": 5664.9,
+  "iban": "GB62DPIQ05886436296811",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram",
+    "quantity": 3.0,
+    "unit_price": 400.0,
+    "tax_rate": 10.0,
+    "net": 1200.0
+   },
+   {
+    "description": "GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB",
+    "quantity": 5.0,
+    "unit_price": 549.99,
+    "tax_rate": 10.0,
+    "net": 2749.95
+   },
+   {
+    "description": "computer",
+    "quantity": 4.0,
+    "unit_price": 299.99,
+    "tax_rate": 10.0,
+    "net": 1199.96
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 5149.91,
+    "tax": 514.99
+   }
+  ]
+ },
+ "cost_usd": 0.0158775,
+ "raw": {
+  "id": "gen-1794512124-P45xWrvEsRGZE3CaPqkV",
+  "object": "chat.completion",
+  "created": 1794512124,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Rodriguez and Sons\",\n  \"vendor_vat\": \"943-82-3154\",\n  \"invoice_ref\": \"76229289\",\n  \"invoice_date\": \"2018-04-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 5149.91,\n  \"tax\": 514.99,\n  \"total\": 5664.9,\n  \"iban\": \"GB62DPIQ05886436296811\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram\",\n      \"quantity\": 3.0,\n      \"unit_price\": 400.0,\n      \"tax_rate\": 10.0,\n      \"net\": 1200.0\n    },\n    {\n      \"description\": \"GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB\",\n      \"quantity\": 5.0,\n      \"unit_price\": 549.99,\n      \"tax_rate\": 10.0,\n      \"net\": 2749.95\n    },\n    {\n      \"description\": \"computer\",\n      \"quantity\": 4.0,\n      \"unit_price\": 299.99,\n      \"tax_rate\": 10.0,\n      \"net\": 1199.96\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 5149.91,\n      \"tax\": 514.99\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Rodriguez and Sons\" as the vendor and extracted their VAT ID, \"943-82-3154.\" Next, I'll move on to the invoice reference and other relevant data points in the document.\n\n\n**Populating The JSON Schema**\n\nI've successfully populated the JSON schema with key data points: invoice reference \"76229289,\" issue date \"2018-04-12,\" and a null due date. I've also determined the currency is USD and calculated the untaxed, tax, and total amounts: $5149.91, $514.99, and $5664.90 respectively. The seller's IBAN is now captured. I have set the vat_treatment to \"S\" since there is a 10% standard VAT rate and I have started extracting the line items. The first line item is in place.\n\n\n**Confirming Currency and Items**\n\nI've carefully revisited the currency ambiguity, confirming USD based on the US addresses and the dollar sign. I've now extracted all line items with descriptions, quantities, unit prices, tax rates, and net values for each. I've also identified the single VAT breakdown with rate, base, and tax amounts.\n\n\n**Constructing JSON Now**\n\nI'm now putting the finishing touches on the JSON structure. I've extracted all necessary data, including line item details and the VAT breakdown. I've also re-verified totals and currency to ensure consistency. I'm ready to finalize the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Rodriguez and Sons\" as the vendor and extracted their VAT ID, \"943-82-3154.\" Next, I'll move on to the invoice reference and other relevant data points in the document.\n\n\n**Populating The JSON Schema**\n\nI've successfully populated the JSON schema with key data points: invoice reference \"76229289,\" issue date \"2018-04-12,\" and a null due date. I've also determined the currency is USD and calculated the untaxed, tax, and total amounts: $5149.91, $514.99, and $5664.90 respectively. The seller's IBAN is now captured. I have set the vat_treatment to \"S\" since there is a 10% standard VAT rate and I have started extracting the line items. The first line item is in place.\n\n\n**Confirming Currency and Items**\n\nI've carefully revisited the currency ambiguity, confirming USD based on the US addresses and the dollar sign. I've now extracted all line items with descriptions, quantities, unit prices, tax rates, and net values for each. I've also identified the single VAT breakdown with rate, base, and tax amounts.\n\n\n**Constructing JSON Now**\n\nI'm now putting the finishing touches on the JSON structure. I've extracted all necessary data, including line item details and the VAT breakdown. I've also re-verified totals and currency to ensure consistency. I'm ready to finalize the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1548,
+   "total_tokens": 1866,
+   "cost": 0.0158775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0158775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01548
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1090,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.53
+}

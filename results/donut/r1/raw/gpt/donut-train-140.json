@@ -1,0 +1,136 @@
+{
+ "pred": {
+  "vendor_name": "Yoder Inc",
+  "vendor_vat": "928-77-9757",
+  "invoice_ref": "86602235",
+  "invoice_date": "2021-03-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 3390.85,
+  "tax": 339.09,
+  "total": 3729.94,
+  "iban": "GB71QJNA44395529511929",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Pond Scenery Fish Area Rugs Kitchen Rug Bedroom Floor Mat Non-slip Carpet Decor",
+    "quantity": 3,
+    "unit_price": 13.73,
+    "tax_rate": 10,
+    "net": 41.19
+   },
+   {
+    "description": "Nordic Braided Tassels Sofa Rugs Area Rug Soft Mat Palm Leaves Room Carpet",
+    "quantity": 5,
+    "unit_price": 186.54,
+    "tax_rate": 10,
+    "net": 932.7
+   },
+   {
+    "description": "Abstract Blue Gray Gradient Bedside Area Rugs Bedroom Decor Carpets Non-Slip Mat",
+    "quantity": 4,
+    "unit_price": 36.98,
+    "tax_rate": 10,
+    "net": 147.92
+   },
+   {
+    "description": "YILONG 1.2x1.7' 300L Tree And Birds Handmade Silk Rug Carpet Tapestry LH691A",
+    "quantity": 1,
+    "unit_price": 188,
+    "tax_rate": 10,
+    "net": 188
+   },
+   {
+    "description": "5x6 Geometric Modern Gabbeh Kashkoli Oriental Area Rug Hand-knotted Foyer Carpet",
+    "quantity": 4,
+    "unit_price": 310.68,
+    "tax_rate": 10,
+    "net": 1242.72
+   },
+   {
+    "description": "Victorian European Country Traditional Floral Floor Mat Area Rug Carpet Beige U",
+    "quantity": 4,
+    "unit_price": 178,
+    "tax_rate": 10,
+    "net": 712
+   },
+   {
+    "description": "Floor Mat Kitchen Bedroom Bathroom Non Slip Doormat Carpet Area Rug 180x60cm",
+    "quantity": 4,
+    "unit_price": 31.58,
+    "tax_rate": 10,
+    "net": 126.32
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 3390.85,
+    "tax": 339.09
+   }
+  ]
+ },
+ "cost_usd": 0.03932,
+ "raw": {
+  "id": "gen-1794512128-66TShFwIUSg78zK9ecNX",
+  "object": "chat.completion",
+  "created": 1794512128,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Yoder Inc\",\"vendor_vat\":\"928-77-9757\",\"invoice_ref\":\"86602235\",\"invoice_date\":\"2021-03-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":3390.85,\"tax\":339.09,\"total\":3729.94,\"iban\":\"GB71QJNA44395529511929\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Pond Scenery Fish Area Rugs Kitchen Rug Bedroom Floor Mat Non-slip Carpet Decor\",\"quantity\":3,\"unit_price\":13.73,\"tax_rate\":10,\"net\":41.19},{\"description\":\"Nordic Braided Tassels Sofa Rugs Area Rug Soft Mat Palm Leaves Room Carpet\",\"quantity\":5,\"unit_price\":186.54,\"tax_rate\":10,\"net\":932.7},{\"description\":\"Abstract Blue Gray Gradient Bedside Area Rugs Bedroom Decor Carpets Non-Slip Mat\",\"quantity\":4,\"unit_price\":36.98,\"tax_rate\":10,\"net\":147.92},{\"description\":\"YILONG 1.2x1.7' 300L Tree And Birds Handmade Silk Rug Carpet Tapestry LH691A\",\"quantity\":1,\"unit_price\":188,\"tax_rate\":10,\"net\":188},{\"description\":\"5x6 Geometric Modern Gabbeh Kashkoli Oriental Area Rug Hand-knotted Foyer Carpet\",\"quantity\":4,\"unit_price\":310.68,\"tax_rate\":10,\"net\":1242.72},{\"description\":\"Victorian European Country Traditional Floral Floor Mat Area Rug Carpet Beige U\",\"quantity\":4,\"unit_price\":178,\"tax_rate\":10,\"net\":712},{\"description\":\"Floor Mat Kitchen Bedroom Bathroom Non Slip Doormat Carpet Area Rug 180x60cm\",\"quantity\":4,\"unit_price\":31.58,\"tax_rate\":10,\"net\":126.32}],\"vat_breakdown\":[{\"rate\":10,\"base\":3390.85,\"tax\":339.09}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice data**\n\nI need to extract JSON according to the specified bill format. The invoice number is 86602235, and the issue date is 04/03/2021, which might be ambiguous. I should consider whether to interpret it as DD/MM/YYYY or MM/DD/YYYY, especially since the vendor is Yoder Inc. in Kentucky, and the currency is likely USD. To meet the JSON format requirements, I’ll use 2021-03-04. The due date isn't listed, so that will be null.**Parsing invoice amounts**\n\nI need to summarize the amounts here. The net total is 3,390.85, tax is 339.09, and the gross is 3,729.94, using periods for decimal points. The VAT category is standard at 10%. \n\nFor the line items:\n1. Pond scenery rugs: Qty 3, each at a net price of 13.73, which totals 41.19 net and 45.31 gross.\n2. Nordic rugs: Qty 5, each at 186.54, netting 932.70.\n3. Abstract rugs: Qty 4, each at 36.98, totaling 147.92.\n4. Handmade silk rug: Qty 1 at 188.00.**Calculating totals for invoice**\n\nI'm working through some calculations for a carpet area rug. I’ve checked the sums, and they seem to add up correctly, with the final total coming to 3729.94 after including VAT. I need to ensure all fields are included, and I plan to format this in a final bill response as JSON. It's important to get these details right for accurate invoicing! Let’s finalize this now.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice data**\n\nI need to extract JSON according to the specified bill format. The invoice number is 86602235, and the issue date is 04/03/2021, which might be ambiguous. I should consider whether to interpret it as DD/MM/YYYY or MM/DD/YYYY, especially since the vendor is Yoder Inc. in Kentucky, and the currency is likely USD. To meet the JSON format requirements, I’ll use 2021-03-04. The due date isn't listed, so that will be null.**Parsing invoice amounts**\n\nI need to summarize the amounts here. The net total is 3,390.85, tax is 339.09, and the gross is 3,729.94, using periods for decimal points. The VAT category is standard at 10%. \n\nFor the line items:\n1. Pond scenery rugs: Qty 3, each at a net price of 13.73, which totals 41.19 net and 45.31 gross.\n2. Nordic rugs: Qty 5, each at 186.54, netting 932.70.\n3. Abstract rugs: Qty 4, each at 36.98, totaling 147.92.\n4. Handmade silk rug: Qty 1 at 188.00.**Calculating totals for invoice**\n\nI'm working through some calculations for a carpet area rug. I’ve checked the sums, and they seem to add up correctly, with the final total coming to 3729.94 after including VAT. I need to ensure all fields are included, and I plan to format this in a final bill response as JSON. It's important to get these details right for accurate invoicing! Let’s finalize this now.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hUNGlDIw1qR8PhPUTCc_nqvKje_Zf7AvZ4M_RT4VNBp2Uj_axN9F5lwZOdzPVSq4DTdfzIFpWKWfMxG726J-oRJ2seEisCztTyiYaotZ92iLUyIhVcNhJwFaSuBi_MWUEYwTe88iP8kZLFX2DxmyH41H8g4WhZ4NVXB8IpMUjdbgqIFUE1Bd42R2U7537ldfmBfzpQ3F_go7A0iBpy9WEHXDVDeUoIPBMUGq8cQa-TrXNyWQ8PsVfXRSHtdOSO4NECVzDuTAQAywZOQT69dtF2EwUI46VrlHScsWWlE6xlLnUbuh182Vj97CUaHnwW7qagJAuUTcDH3Fu__zG3ESb3oRmQcHeIeJ4_ziEMMMbaRZHvYFPTb6dOOXhHA_8qGK7_dvJ4fMNWv4RU_YpWxumntpqFD3BNXBrPz5vremBouk1-8ksZaLOm-pHytKYZD4s7FTBkBcX7ww9g3tf4NdgBNBoNLyqnGPMymiieFggC7YUd2k4R5mZJA-7d2tSHbLGKH1X2qFi3IlQhZBCYGMFoRCPyXSGDKUytX5ocuKgwYARSpK5Q77tgMgpLxiPmQZRqxKBZ5FVCcWDCTSAUTnf1QweZb61zHvi5FQwzt-XhodWgNTMzfR68IryZyIojz0QzPNn3IMmN1giTOhQKMr4mmNqZffyWolgfLFti-bGp2LtF_Xi0JhOMV0R1eeagmLCThZwW0M3d-k9cL_E-foEb4Onc2zZ1-k48HuUmCSTU6b8If0Pw-Cis2TXyWtZ8KU1xcUvfhZWLL0DZNC0OnvaGxq_Y9lJQgykVROA_lvzOyCXYSdczhcg0nTvKOfkuWVPOFQGa5gNmOeOHA9cMRGPSCkxsArapcGmxoYA4K0s40B7wAES0emav2GKNussOrLb6L0fCmvbm0lCBdimuc64VdBOso3fRhsT2-wDDJh17P24uGK5IM0kQ3cdgnjKiwm4CiYZ29q9faBW_p8fwVxy_G5x3NWPD_T4ulEbFAqy6nrN-2eBAqLSsF3Ot_-U6Lu2aOCtFu9TXQH60Rc7aNKFDdxRqwqALoqwbapah0IXIULIRqCgYW0OZwlekKuMGwtFzWlKCN6GzuWPOcW6X0PdB6xnFIiWheh4T8nSv597azSK_JI5y-5ZS7RzbUdR3XpeYj1nRzPa3OPeMq9FnebF3vrICmefTPcJHupoLJ1n1c852AoJ1kqDAn3HKCO0WLyA2aRqxqBYsBOaKZBrRUI2EWfICzBYG6N8Ga_e_Xe0qq9T-qt3vHBwhLq2sHv2BFML2T5ttk4rn8B1aEBWrLZNby2tbvmDy6mbqRu3rqVSXGMqP5KO5Sn-EouuacHd-qWCegRH1hewxwuV4zZJDEA9FW-41hjSlodBjpROzvzAowDTj7btbDitQDyCojHWSdbsYcxr6oxm2O4P9z_SwhM8IEzCNYP_mzzzvjIPZS_ZZpxo6rHSCxww2fiGzBnoYLgrGggZi_gY9xppQLKpLo1-SPpSbjYt38jh7tvj5Zhuy3LX3JmnwCiVXjXs8RQ73r8n5MsbyDMgmXxTClXDOIBwjDPImhDmq_wEEGD82o5Azk2VF5fXEFZnBJefPxrfPvKZOtVMGPeJ0snrFQuGAOLACAFLb6WN4vDJOy-WNIsnjaSzjHgHgno9OXbNkZ6bXED3hPB5Mji0gOlzvjsMGKMo0Z_RnVmAJWHIv72tmoLR2oQdoPDBA33Tv4yrXDDtAhyzhBlLwtr0H9NxPbCCDHc5e8KbwHXm0GvUqlAsLqd77ksGFOE1v9N8qedVYDaecPoxQS1MUPdLaEVuhJlVkBt1nr11KN9JTBlc3ZMnPVwhdpFmexC3j5_NP6rQb-ZEyVg_qVW7TeigshQ3QIqedR7W-wFwfgqCVK6N8ngGvYQbURljv42xwb9I8Xy1wKLGPfsqa2waVpyi4CGwTCA6HHYvDjXkOSv44nlBZxr0rsGvijt8YDdCFH2i4yVInn6crk1T-D1od3x88HI9Cz2ZtNkMvOygqlnmss585uRpX4dEyQk1VxyA9LMl2yYCgylTKFdXeq2acCFGpCAZ994woLcdBbkBPzhHVl6DraIuMuOrPDrmaYCq0Z0oI6_-2pLwBUQd1tltKQNvTZaUq5EmdteWxJTKW7WHuupac9i2jYvhLhSOXdoB9DAJnb2kjWPrzloLooHNcFmJkrZUz7ORxM2r2Pm7HnHaQ_kZJ_4iK9evyVM_ZOECDB78xoSsH5WEuQ2wLFSdWa1ughA2sAcYN1YG0caHmFpa_TIsQEqGv7rfSGJQCEOLJnmBRVkCICbVZEiqpGyKksBy5HfdjIuYt43eO9PaYJLzHdbn0Hm_wM_JMsNYBYgGp0u6XH5B7bcvn0oWexTGqqAkNCU68kspNGR3sNwrpWxKkTUP0DvvXqaGte9KMlRj5RAcnwPCZsfDAvg9o0st-e2Xg8Bj-kQ-mfcfZBBMRhGmfaq_nQzBPBaJgYK49yS1-JNSCffyP713myP5o97n_iJGG05mh1n5LE15LSms94mlnshGCZ9KIm44Hf9TdWzyU9O7ivyhQCJ86VZO_8-1U4Ba8PSaCk7DveENc5Rt13uNhPLXPe1u7lgz11_WIYtZn2OAkNfxslCDJEV1N91Px9tIWUNA3g9UpvAOHNRzTGlsCXKLW-pggEkcJ8aYj7OnVdD_TnU6YamzXXOKMsx04qPFJlxymbaH-NInbXXLZ1uG14Z3OFl7YlVFTCtgHkAMaJTMbEg7sPH0DiOJld4oZ7Rj5TORhaNcYnI6QPKH2l4WRkA0CcbrEUB6lKqziwTpg3H5TJN5lTvZh85-r-ljCQeztftzG1E3Dpp9jShWCpuYtX1VIATmKZScIp75bkGf6k13WtMV51bRY2RJFYj2fhbt-ac1DVmU9juIyCDrGh4T5vK19Lb9XVqM8E6LIXHDUnMKlFg1vmwCfS3hrz8C6d-AHO1ScOcrkq6fjC0I4ZxBYEyZguazMZhhL5s8NAQ6vkIi4a1AtC9qvaQowiQ9DVOTimcHJ_hYzSExIAfU-jtdlJA66hnpowj5wQVTvr6qCNEt_EHGHVptqIZm_pAqclf2J3bEOPTYXhcA8wGWeMreRQepRALzXMULbggpdggEtfHhF7ZbakLkDNe_aGx9AWmKO77PVvBRluN4d6GHk2t5O8dzIsiIYS0RAtewrzvfgAb90u8fuu-nusAympAM14nferdVwfQpXYiTvLuUHXl95CN_o0I1oLrIWyg6Koiaz4ujEW1Ypjopd_zcgSKlU7M503Zp6AC-g2XT2VJ-4qTNOfSQgSwwzsw8IGKqk3WeAsbtc4OK579UgYOIDOiGihAHMEVy714YIBaPD4IRZqpjMaRP2GbdXmpWb_kZpCpRBQcJpJb2yI09DqU3Os692LcGHufr2KIgiOei3ibhyQvGADvQgVqWi5qiIi9vjFHo0i6VJuaYGigRl_zo51CEieyExPEu0Sm85sdaZh4PP3IuhGMS_WD9YFcWFQGuhKZ5HQ4pMd97YigTKO4zVZ-YELX6kXEnQOOyxwvPJI937rXQViz3YvC-l0siOA7Po4JKg_TYb8WWcc3lw-Y8GMCIf9CYeO2kShlucjVBDPr7eRzMW45SYkaANia0udoIWESRmNn5QUOnXuA5uh3zP-C8v1KBtbpz48sIJLwI9ZMOxsJ6LtmfmcUqWHTWmLiB5KdPjRETMObTzE7vMNOvmXsu7yQ73eZBjmIXC0dU86HsIjbgERm9mjtl38YxdGB0Ax_t51P7RuSIG2eVunX8p5SR7Li1aEZBWJRzXwQpNhhJaQvbyCXdFkx8i8c9O2IxYh1ulNyIdohAzBkMmlFVajrnopj2tErYZ0hGYF99h9lGJvIkdXJhkmnt71Zx3s5MwpMZvStFsJEbuPSfHDattJeO5dFOF8fvgb3HyYL0D7FImPrhIYfqrcaJ2BnB_rXBvEW_80nnujhJCSdAEUOslJnOnEpnmZN3RseyrYjIivQONrAxJ9MfBZ4YVIvm8QEyAWS2Eah7Z3yK0mV5vKdA1zaV78du6HgUI-DtcE2k6DJwmJt4EMypHJTTi8e8fjr1xYL-W1MsP1kWVtNvkQ-Z7G2KYdkch8NdilyM2ZuGCg8id1q6p45Z85Km8OqbZBSrDkl2zgDQKtkDyHuxJW9feQJet4yt2r0CE4Kxlg_YD2v_LYcHL1p-fT0zuWWy6oHmJe0p1wqDnTAMGZ2KjwEmkoEKEGEO8IJt6XBt7JP0flsiFb88eGCTARY0PNzy5QPrSDt7sGySAh8yrLZLmgWNAZCI8h7BuPGN4tLe9h3M9b7cZrV2_K6kKtFVljFL2PVVgVfDXmKp68Mcqt9NL2HWTtQWe2delmO44vBZASgQ8TM4Si9wjrx12XqoisFuyJQR5XE7uuf7Agm92_Dlx_rpb_r2ZoejLF243cL090OJ9ndIxMX-mkYbpIDP4nfgPWGAaWF5Y0y-qk90XysUNxsMux47kicYdVl_8qYyFy8Cfong6KgcQUeS3-QzC1VJn0-LjGbSTQIf_YcGbOd4nonduKspxQqj50bZpb7sQ_x2BYrFz_VZ1AxeoDWh87Z-LgCqe0JaUqEkzOrFpuwZtzQV78RV6g395DQms459bdWQ7b_xKpzAr8CIbLSBijPdpqJuLwgPhxIjoRIVRvYT2FBE1fvl76WNBPI99tl8nfVcUFdbJ3SVbBFkG-X1iLwQ9q1TZtbR9cHn8vkGhQPL0eHIf_fay3k-ruZc0cuboTAvARpd3QD5uML-a6mZBbgF8IydZF8VNd2M7su2GvLDYQUmq21WLb6obwdLwKh7AaQqmJjgs8wIzO9HHpDsrjcQHcmTzid5EwrZi9BL_hNRlur6yIRQS1V4QL-fZ7CNPgrGgm5hkAGD75w601w_rcm6oCO5PT9AQjBF7OvTZGWPRZhmgaEbNm4nt5rfsk7ufUS1qJ9Y8M5-VddTXHbqgXASDTraIBFY2OcaEk9QqQrmCNOkQ4Ioz_xwM2sV4fI2r-DLsTRijTc3G6exuWcaNoAJ3XJvMT2ioOCbK_Tmh7wQwessYLk2aXX5paNIAx0sD4zD3gAcv5WVat2V3UIa2tJBPIKW4bWkNlOg9p6UIfrxeBaQ87QNENMHtr-kq2iA0iDaLU6kOKFltfl_VmtA1tVImChFpDk-HINO_jUZelsLO29h9AV0l7GT8vtQUKi7FI_lzJrxPs3EUn9qQUSHTej5bI-lhd5XFTIBkJ7MgjcoZVx1wPRrQgJ85T7_uAwJQo4VDof7OqPiFDHHoiyhv_4sc5al3RI0V2rKNa2r6Tb-d_Jr0llrLpz0MogvRkwlcXAHtpR2oBMLxQYVLAZb40aUX8jOy0lgOmB9lZBaoN5AZ1duRlIPUy--XM6y8pHZStPSAgysL-aGr0DCEms0XIy8sMfmIJmNGUg1TBJLscAEfDOrdcJNRbIUF7dG3XzEt4blXPNKfzXvgm_cuk7vB-u_sCCUcsEsbgV7ZIPoJ1fQFjLMIXCI0NPbEmHDXfeqBP9rZ-xAme1IpoUcAMod6VxeJOCaD2oIVyaO-6knsuVCSuELU8pnnjlLdqMo3mr_hiklIT9kIThro0q2xXptSRuevbaGR7XSjfEbtIBtPWFgDchnE2lP_fdo9OWQlncQlV8p1X-fNoZbvmB3IQ7ixkfkkLS7C7W6OQdYhIuisULklO9m4YjkR0uxcf7x_39Ge3oGhXtmTXMXn-VCJGl8AfmpxyIBviqq5g4i3REwQm3ZpjSXjOALpPoYC_D3rX4eXOECgFds8Ed-JFOBlLdae7M3kj19dsu0EbQN_8a-llf0EUd3y2RFBO-L77N76mkxPK4lXuOmaq_hJxkPq5zt8r6430qQxGwVupHEncaPounvDkZt4JP0lExHLr3GI9jZJ4f1QcFyV4rzxCDBku0vBBO6bxE5drbvMGE1BlDKxEH9-vTtXX79mBQtEpEMdUbnzdBAZOhS0aa_CY37fIN7KTDtiWHX9QYKI3Fde859E3YqjgYzl7ZAHvc7_EqeZ3PPjQNkbHOnPZ1P8rfXqYGy-jWMv-yTnz2K-nCMccOBM1iM6Wc6dH2-NmL6b5DReOUOwgh3uVH_R7VlWjrclU_DRGlOcfRTjWtLBG0X1PBFWMj-s0RFeKhU92STlO-lMqMcouKvhMH7LoI_f2m2kB1HjTm8xDt4D0fuEJD-MqHOymNFrr3jkMnq0CZst4ZgFKYhMcz8ILontnW08mQ8NaeHTI0YJuHuBaHdy7nZLgdbqIm_6KdlC8FE24wjd7snM8uyt6fheno57o3fshlvcgnlfxcurrOpsDcAN_4hUmgW4PHHex0CTfLjkPtX34uT2oDxC9ww7NhBvEKSQwo5KX1Cq4cHDm8PwHen-1oMmS_Jr0xYnsj6Tpv5L9zM9_WWdQrzcNcKrgNyyFJ9_Et1NEHepCE6HopIdqEryqcsj_Pb9GcqoHg3WP2BDCtaB7nU30J9XvWk8eMWWp6DHz_bnsegiANb9bIzy_TTZEXaZVEvTMyJGnCcaegX8qVcBbUrI9utboAFihq5UkiQBRsl9Ex-FtHis37RliR8ylKL_sob2yPbfv1QVM62ro9gKwjIbNGQyc0k_jf-0YZE47IsryXlT20iXplxS3eSC_dh3nNYrZRcbhSaEaUKzEaCQLvbnOmWBKRrwDjVTqSkj4ue0olz87r-w8osgUOi-w2rqcrL_TkAs0mAkpm_gqHVbcfjYeoYI0JQz43l-ysqJOFHTdPYRLSaYXmgdOKZP-iXyfAI-hRX9H1XVft0RA7UJs0ouRy5Yl1UbgfOfE0KSbqsiSWZ4QrPqQ217d9hpE7I3vUjoucSN47BdtqexMRzyHj5VfIFXCEakGevBUfJ1vCyds-tmxvpf8WRf5TCp1ZLQmUyqUx5jcYaATH3IqLaL0KEbAofU7dE-OIOY7BtBnjccM5LHntxpXr4aCUcgizjMVABiHtE_CKprNUeR41pZt1s3rZHSaiJFQZ1abl5gV9fUQVtxHpmmjTCjlBhDs1Imyn9MOnwaHBhffc-y8HBIr-fp3jSZJwoIGkQsqoxflXCw84pkiJWtkZ6xQ_xVHImzHd_ZXVeSUNpqMg9ALbl1GnnvcYNfiQl7vYXzNTNS47foniKvxD5bVHIPvFI_19X8TL4bm-2rfNOeydeMRkCGZoQlvVgT5KgUDOa-bXdN8lTKIDemn2D-tvmS-bvyXLEABM0CGZC4Knjc255Ui5hxDBMUisAsczKCDvZderzzwPr5dF0nLaZD3sUFkAmnrYULU9oi_g6UlwAKY2euOyIsNwEbr_EB38dRN6WMI4z5XxELAe85ioRRJPkGquqaVY4kbF2EMRF4jogKMwXaQIHy2SxMBBGhsoPMEboICqYQ6fJRrAWba26T81fRyvCK_q3oeSSEyKSqv3evdy-wBrJZN8tUzI9FAJoQ-X7ssISRdxTqjj_MGBNxfkmPrK3KD4ZMTOdZ-vVcaYTGtBb4dBLA6wyYsQiNvgCuQiN3D3EIq8Yl4GVZqgycNPmWs1mtZC48RDLXYyqyA80KrWT7NeB-1Vmz5Mb29G5sQBOjOEBxnxuaU4DVZoRYDglHBv3Vqpss6jcUV8Cz2jRQSLZqWlVZscjNnnw_q9FaNb7QDSj7Rsn5bcWsEDVtgLIwbvsSIhs6jyg_HO76kQKCW5HVmr-MghgR-MxIIJ1kCvYkAZKUhjF2Nw2mXnkZjrqJJSozw7Dbgtz-SYYQiRqM6FA-h5dBMVtRzm1cLtK3MJnccRd1Pg3c6c0pwOFAH6s68JZYaS-UQD10BAap9nLQTfm2VfafRrDy_yuDEE4IspQmzqPeNTTNNf1GiiDz9lSScBdPIU06-jEWD0_vs3BcQaHyiaeYvcoDMvN1lmMQl13WrfJVjztKkQ7xGyH7SSWeBzdDt1zzvZQC8VidQR0KdRoMtEgFxKcGPHKJc_cIqRwI6xl8Ntzq6F30QyF3QYN-SXNtZ-BzNBsckC41C2qWDsX-RpnQJrOyveBCU6gWR4syNhvJwI5vk596ZBqUpZdqb1KarCLu2A8vCMQc159N3j-3dhqjs0tYvmoTIJoNUFMleSuZoZPYQ_Z7gfIhIhlJzU1u8EoZf8e7x_M12zhPau0TIBaMzGxrPpsx_XOcwGRvqBBhNuEVvn0piSfF3UHK07UFSCSxpY3KhLqrNHwIHJGqXMOUx78fyy_o38gJ1I7u4vdha_c9skHvMbhvPjx8TvD0KHGnYtfSOg3TZvtv8WnGNL1OBveLw3UVVedGWFbmvLjdezSniXhcZWOmHF4tp_PrQKEVBakaLwBT7aT5ue1u9O153XwyZjRbmF6ka4E96ZpLmSjvlsn5tsjfapm6fKKU6tnqPrjGrczVBvlfjDmwZ17a6H4pn2ZOjlOyEEiS2t-xuQSUkMxhuMm2fVaqX82_kVrKtEVUE6Bqy1sPiWQCMcQnu1ZEyeBrwq6eq-lYaGMIV234M6LhoseQeRqfPOy6Nrge5H9O3HXCPP0WHBNwowmBwv6qQdUoYQAFFV23JfGvHwKWnfZ1u6wHGTNbGRw8K6foRLO6yXi0QJBaTJtAHYyVIp6CHILKFJDi60f0bngsk-CMiMLz1Cuy5IsC12CNNtMg5IAvzLJoovVDy_abpR22z851m5PY5i0szGeRDhBkks1gOSUkJqO78vT275bhSdlhUiB5SAU3Nv3Yyi3FcjEa5yBxhTvEsgV_bcXoYsx9zQi-uERu8h1HE5TSInc1CcsHKVqivhg2xsUmusIozfrBA9m95-28N_8SBubnddK55xCRO-Uw92PEn1tlUSLzD3TugmFvOgtDMjJrJdPdYilY7nz2LGv4lvnmOzCYJtWj7ZtEXlwnFObbXwXok519e3eSRKOCF0ow0Vti3oocdrUd3tPcARo5H12g1lwl9wCRBBkrD9jySbgI_uxEHaJMfJvy3nBDPmaVCYO5zK6MVnAcG_LcD9XWgH0icdGOB8nXuqjmAqHMaXNGUjImUVeksEKc-nOzuPMnL6HBlWdNP24Pm6yng6H7j1QZ5iUKkYJixVWmp3yuKGW0XEqFvygCZLFIz70icd8EQOunwOu7qvhCZY_lPkMO9wPmXNFD0KUjo-qX2chPHnfgagDwK305Eg-LDY7YhlBmzBoMEO-XQ-xGl7pOZuhTgPRYMbOfAr5CDMuW0gShi_4acHA7HKLC9o2ysG71fYEl4EJk1sg3MKz8wHsXaTwaFdn7dXv8pHoWSUG3A5GTko2BYfeKEARxKjUDGhjowTK276ZIHVRisqf6r7eG7ExmnbDLs19gHeJJ7LSlKQayIf1KPEAH1KIlTyJp0OfWfYajvUg5TZ8MqPRyL2q35tQYX_7Ro4eaATI1RHC6r2toM7LM2wWY_N0ToP_c5PLowhYiBnIADFj3w4uGs7iextLY1CMQzyNOIKwQOMZIRvg_FHqYOE0BDISW2cSIf9E93RbTkYcYdpptzUceyyMZd9rZQ8_ooI0IHGpWgiJ1XOzFaM7AGBsc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0d0f2bb5633a041f016af6150192b487d1bda459c3643a237f",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 1060,
+   "total_tokens": 2564,
+   "cost": 0.03932,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03932,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.0318
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 645,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.55
+}

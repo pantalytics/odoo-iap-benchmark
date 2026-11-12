@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Adams, French and Lee",
+  "vendor_vat": "930-97-7214",
+  "invoice_ref": "31137784",
+  "invoice_date": "2015-01-27",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 69.96,
+  "tax": 7.0,
+  "total": 76.96,
+  "iban": "GB96WMVJ60269691548875",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat",
+    "quantity": 3.0,
+    "unit_price": 11.63,
+    "tax_rate": 10.0,
+    "net": 34.89
+   },
+   {
+    "description": "Hippie Sea Wave 3D Carpet Floor Mats Soft Rug for Living Room Non-slip Carpets",
+    "quantity": 3.0,
+    "unit_price": 11.69,
+    "tax_rate": 10.0,
+    "net": 35.07
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 69.96,
+    "tax": 7.0
+   }
+  ]
+ },
+ "cost_usd": 0.0102375,
+ "raw": {
+  "id": "gen-1794512371-pveRE8ArfYGphlUKc36F",
+  "object": "chat.completion",
+  "created": 1794512371,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Adams, French and Lee\",\n  \"vendor_vat\": \"930-97-7214\",\n  \"invoice_ref\": \"31137784\",\n  \"invoice_date\": \"2015-01-27\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 69.96,\n  \"tax\": 7.00,\n  \"total\": 76.96,\n  \"iban\": \"GB96WMVJ60269691548875\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat\",\n      \"quantity\": 3.00,\n      \"unit_price\": 11.63,\n      \"tax_rate\": 10.0,\n      \"net\": 34.89\n    },\n    {\n      \"description\": \"Hippie Sea Wave 3D Carpet Floor Mats Soft Rug for Living Room Non-slip Carpets\",\n      \"quantity\": 3.00,\n      \"unit_price\": 11.69,\n      \"tax_rate\": 10.0,\n      \"net\": 35.07\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 69.96,\n      \"tax\": 7.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Adams, French and Lee\" as the vendor and extracted \"930-97-7214\" as their VAT. This information will fill the `vendor_name` and `vendor_vat` fields in my schema, which will give a great start. I will now look for how to process the remaining schema fields!\n\n\n**Populating The Schema**\n\nI'm now populating the rest of the schema, I've got the `invoice_ref` as \"31137784\" and the invoice date \"2015-01-27\". The due date will be null, and I am assigning \"USD\" to the currency. I am setting the values for the net, tax, and total amounts, as well.  The IBAN is \"GB96WMVJ60269 691548875\", and the VAT treatment is \"S\". I have identified two line items, and I am now working through their components.\n\n\n**Constructing JSON Object**\n\nNow, I'm composing the JSON object. I've successfully mapped the document's information to the schema. I have the vendor details, invoice data, and the amounts. I also have the lines, including descriptions, quantities, unit prices, and tax information. Now I am working on the VAT breakdown, which is the last key piece. After this I'll have the complete JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Adams, French and Lee\" as the vendor and extracted \"930-97-7214\" as their VAT. This information will fill the `vendor_name` and `vendor_vat` fields in my schema, which will give a great start. I will now look for how to process the remaining schema fields!\n\n\n**Populating The Schema**\n\nI'm now populating the rest of the schema, I've got the `invoice_ref` as \"31137784\" and the invoice date \"2015-01-27\". The due date will be null, and I am assigning \"USD\" to the currency. I am setting the values for the net, tax, and total amounts, as well.  The IBAN is \"GB96WMVJ60269 691548875\", and the VAT treatment is \"S\". I have identified two line items, and I am now working through their components.\n\n\n**Constructing JSON Object**\n\nNow, I'm composing the JSON object. I've successfully mapped the document's information to the schema. I have the vendor details, invoice data, and the amounts. I also have the lines, including descriptions, quantities, unit prices, and tax information. Now I am working on the VAT breakdown, which is the last key piece. After this I'll have the complete JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 984,
+   "total_tokens": 1302,
+   "cost": 0.0102375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0102375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.00984
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 610,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.31
+}

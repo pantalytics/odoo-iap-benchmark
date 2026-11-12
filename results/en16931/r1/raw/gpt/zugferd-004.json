@@ -1,0 +1,136 @@
+{
+ "pred": {
+  "vendor_name": "MUSTER-Autovermietung",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "9314110911/00/M/00/N",
+  "invoice_date": "2018-10-01",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 286.52,
+  "tax": 54.44,
+  "total": 340.96,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Miettage",
+    "quantity": 2,
+    "unit_price": 86.55,
+    "tax_rate": 19,
+    "net": 173.1
+   },
+   {
+    "description": "Navigationssystem - Garantie",
+    "quantity": 2,
+    "unit_price": 5.04,
+    "tax_rate": 19,
+    "net": 10.08
+   },
+   {
+    "description": "Inklusiv-Kilometer waren: 873",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": null,
+    "net": null
+   },
+   {
+    "description": "Vollkasko",
+    "quantity": 2,
+    "unit_price": 23.1,
+    "tax_rate": 19,
+    "net": 46.2
+   },
+   {
+    "description": "minimale Selbstbeteiligung",
+    "quantity": 2,
+    "unit_price": 15.55,
+    "tax_rate": 19,
+    "net": 31.1
+   },
+   {
+    "description": "Personen-Unfallversicherung",
+    "quantity": 2,
+    "unit_price": 7.98,
+    "tax_rate": 19,
+    "net": 15.96
+   },
+   {
+    "description": "Choice Upgrade",
+    "quantity": 2,
+    "unit_price": 5.04,
+    "tax_rate": 19,
+    "net": 10.08
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": 286.52,
+    "tax": 54.44
+   }
+  ]
+ },
+ "cost_usd": 0.037745,
+ "raw": {
+  "id": "gen-1794511894-OFTRhr5Xmm36SOkOWd0q",
+  "object": "chat.completion",
+  "created": 1794511894,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTER-Autovermietung\",\"vendor_vat\":\"DE136695976\",\"invoice_ref\":\"9314110911/00/M/00/N\",\"invoice_date\":\"2018-10-01\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":286.52,\"tax\":54.44,\"total\":340.96,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Miettage\",\"quantity\":2,\"unit_price\":86.55,\"tax_rate\":19,\"net\":173.1},{\"description\":\"Navigationssystem - Garantie\",\"quantity\":2,\"unit_price\":5.04,\"tax_rate\":19,\"net\":10.08},{\"description\":\"Inklusiv-Kilometer waren: 873\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":null,\"net\":null},{\"description\":\"Vollkasko\",\"quantity\":2,\"unit_price\":23.1,\"tax_rate\":19,\"net\":46.2},{\"description\":\"minimale Selbstbeteiligung\",\"quantity\":2,\"unit_price\":15.55,\"tax_rate\":19,\"net\":31.1},{\"description\":\"Personen-Unfallversicherung\",\"quantity\":2,\"unit_price\":7.98,\"tax_rate\":19,\"net\":15.96},{\"description\":\"Choice Upgrade\",\"quantity\":2,\"unit_price\":5.04,\"tax_rate\":19,\"net\":10.08}],\"vat_breakdown\":[{\"rate\":19,\"base\":286.52,\"tax\":54.44}]}",
+     "refusal": null,
+     "reasoning": "**Creating JSON Bill**\n\nI'm tasked with extracting details for a JSON bill. The invoice reference is \"9314110911/00/M/00/N\" and the title seems to be Mietrechnung (387) dated 01.10.2018. The seller's name must be \"MUSTER-Autovermietung\", and the VAT number is DE136695976. There’s no due date for credit card payment, and it's in EUR. \n\nI need to clarify line items, especially with the ambiguity around \"Navigationssystem - Garantie\". It seems like it should be separate but unnumbered. There’s also a position with no amount, so I might treat it as a description line without specific values.**Preparing JSON Bill**\n\nI need to sum all the charges for the totals, so I'll include all printed positions and charge rows. The fields will be based on what’s printed in the invoice. For tax rates, I'll note that no VAT is charged when it’s 0, using null for anything not listed on the bill.\n\nQuantities like \"2 Tag(e)\" will translate to 2. For unit prices, I see details for Navigationssystem at 5.04 with quantity 2 and net 10.08. I’ll also include calculations for Vollkasko and other items. The next step is to ensure the final JSON matches the schema correctly—without any markdown, of course!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Creating JSON Bill**\n\nI'm tasked with extracting details for a JSON bill. The invoice reference is \"9314110911/00/M/00/N\" and the title seems to be Mietrechnung (387) dated 01.10.2018. The seller's name must be \"MUSTER-Autovermietung\", and the VAT number is DE136695976. There’s no due date for credit card payment, and it's in EUR. \n\nI need to clarify line items, especially with the ambiguity around \"Navigationssystem - Garantie\". It seems like it should be separate but unnumbered. There’s also a position with no amount, so I might treat it as a description line without specific values.**Preparing JSON Bill**\n\nI need to sum all the charges for the totals, so I'll include all printed positions and charge rows. The fields will be based on what’s printed in the invoice. For tax rates, I'll note that no VAT is charged when it’s 0, using null for anything not listed on the bill.\n\nQuantities like \"2 Tag(e)\" will translate to 2. For unit prices, I see details for Navigationssystem at 5.04 with quantity 2 and net 10.08. I’ll also include calculations for Vollkasko and other items. The next step is to ensure the final JSON matches the schema correctly—without any markdown, of course!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hQglSBFKPR67IleSMRD8diL93B--YT-oV65gWt0gTk28KOxs5g1xqsnBER1U_uSHiUW1y4QNX_ZksZLTNrTQYqksB-9fGXkkY1k-eq0xT7BebsctLojPP30nI0avAYsJhWKhq8e55bbQabv8D6mPCb8nZRIPxbeEfSrIXdBpBES5g4rZjx_ZeU5vcXAno9wJjZrFlZfTsdW-roz8k5CKpH8jvj1j3hMFyXbibOJns-6pEOlJrX0KoE-1uluu7uPmL2mws1ulURfHPpRdEjb9799iprUo_iN1qpDBKNr5dTP8UBpwa0nUE-3VCKgQFf9V_k-MF5eHCk03bEWtORFmMCRc09tkjed1kzKbtqtRU1ApVY7sMP_GAF__Tn8zDM_P9uzKvIzfPZjXAgSeU0GWgRCVDm46udGWpVHbKJ2OYhNO2MxAOIPkgUNypPZjWMENdjXcDKKv5ipBydz7gSAdz6VgKZyidR46-aYPPt2H-KZJk-rbZS-Ingx2nfJ2ENiZp5RXa8DFudqFuPAD2MsJVGks9vS3EJOIJLEUBrS1wTpgOG1c-MZzBxqwpAJaiw1O8Xzo6O4ETKQ3U2_VCubSUTbWRZu9LNACk6fOza7_S2mEZxhYTRN87ipEgXyxaG6-bOJgTBG6DSS1xPQKkP_ZF8WipNHyIJFpk0qGwXWsJJhS-ioDmiWG_g3MGPmaaSgD_DlsiOu5OvCWs_F9CSwo_y1mlBfMIz5guYc-IJA9-jLyPF64Xd5fxJR_-jkiVCiCMGQSdnk6eQgCNbG10LQ4jX3ze2WmH_JBhT-Un9E9famzx-qezljo3qIjt6wvB7gdIDU8fyvXaajejehKDWQ09M78RtH41gPwbQizpLRtjJTl31vrY7YEzn2jtjQoVlo5d5ps5fCcGWiMX0rYK1MJCPC_xFrAcMrcyOi6ip1ikMw7J0v663No5qPb-iriXMhxA_8cS0Grt383sxeJDOYXKNSb17ede0KMpOufjKjINbxjc9xjLKxn1CkVbeYqEdfZJXlspv8bTOG8PcIrgbVVbdq86M0if6ncZR9_C2XY2Pcv_ua7WOHeGBiGWh5nPtqoY7p62wWNM7EWT6nwYhx-WR0XXgbYe0IRxfvFbrmQF8-2Smjo3xfNzbSF7rCzhcZ0B4vx4CyOLe9F3WMCdUyvnH74yYLevLyhxOI8FxQ3iQBaXyRUvdaycklWwUcCP-EGHNcZ4akPyq6SEu6llnH4_Mzh86rZO6TGTDireptsKKB1ofhZ4qBpZbpX-xKVji5GODyExf8FA1bNFWR1ikvLV-8AQJXWDvxKOTE9A96DEWo9tPWlcbjE2MnSBCFhAd13wYW2vVHdvie5YOxhvYuICfpLR7J-G_pVebZWYriROMQlGVHJFy_SW-e5Dl6YZDywsRi5OqBz-3mvyWcAoSnJUm_hgl4K2Yjiqi7cItG1RXYrgkqONUFcLonBGhnI5nRDkp4kkXqzsBHaJdSEowirPGaRjtFUKM5axYNuyVhAfaRm8A5qco58XZEVkcpQseYSHvqwcr_yiWu9qZOgo9bzbChh49MOcF_z1xzd_0vnc47NM91rJW4kdoC3btNRCSspAgltTU6-YCaqaaKq8M01sm3z3aSmy2UIYo1ougzCrIW9Boq_gNJB-xTIi-hl_LC9Q34yMQw3jEL8TvNaT6nN-7WwwZ7AJ2pJ5WhNCxmJTSigTOw9GUckj2fRvGxQNHgBhBlKzMWHGoiBds8z6FTVUGjKOBbnoue0LeuDFzGC5C_tVjUBicdJeMuDRoIiNnXJyETw4DHp47jw1xFKn57AUJ4jHbwAVQeXNQUabuiUYK-Qp40VY3CrG4PfewUr16AGrlyyBI4xTQIspEIg169z8RPrfsHNO2-Bcf4eCQ7SFmIXbRbFnZ_q2EdzXSJ8hX71hNYIskAto66lp1GBgSjI_rpWXiYmM5E2bsxH7r4YZYCnxx1cHViv8NfBcqJIoVxWRyKdFXeYp94Fg-8xD6GgBr9dXd9im4GvO3myUS8nLKYFj4iaEhU4-Z2m-W7GdomXvUOpVqLC5NbRHKn5ukz9FVNmGD0_Y7_1kL08qazcbcvL7Q-7JpFhfJWlj5HjTYTjIhgPNhKQcKC4MK9kVNrT5UwYloGWMQ5A_opaX63oHtKL0yFb7Zn9feglg8Bi70Jr88bdvNSh7TTEsBJuTJ8HJpNU4rjXW_Mye4-bbi0ai1HTWVNBa6e7HhsQ855AajA4WETPDXvt9RZ3RV8qZwHSeHuy3jGAFjQOikeQ1QgB0E9HaUIVUTC79Z1A1w-_VqiVrItfb_CgIOHusS9D_LsePm_lx7DJdcoK7QdiVgsBrvn7aXSv5TvBOApuMobjP0wVPyq3o2O0fPjHlBMuCtu_IeFk1fpIqvLmB14N_WGSUkq3JzE7D82wId97LhCMOBUk19fIQMXz6SSIeXC4qCSVIPXesuJ10Er4yKjCCntKiOSEIYirQJoDoQcnLWuZ8_CEIFyjnVttFCtSZ9GxYj-jWV2NdZhuQzw_CQ7hXpPsAQO87Zb3mjpSSKpB4T6ErdfOWM97XUEV75uL8rA5of7vEwR8lr3ucGtcKw4-qsvZxKRY_KhTxdfaKtI_qavKr_S7ROSrj-gzG6JvuUHEYakQJBtL3FTO6LUCTt-KioDFoRhKSsBKvWLcqJ_EtRd8UUUHG5GEbwOiOD6Komx4a8cwxUVxmHvhR6ToPdAHVxqGwQiFsTES7yY7wEcr8O7uqqfpyySh2EBtAdL7wMAy4Xd3vae2EEo8lsW5hcURkQGgGk29YjxMqi275VfImKPulRkW7-PmikTUjvPUwHl-iC5yPtHEPnvRXZsHIJv2zDMcpbkQ3WbGOQtMQBhaMUEkN-lT9jecdjCs_9ygcB0AJXDkteXuHNJ2Bw46348Ruvb4ITTL0r2I0mmGOMru1c4EgZDTqcPmlAKgX-D6iiTGo86Y8-_nGjz3MZTDRUZuof7U9BL35Hy879PTqH3HQ-k3_4Sjb3V7On6W_Mds1gfJGo43v6RtPxVlC8EYp5QFfTqy0yvEtK5HOSi1Nu5xGGByDdeSYNntSATe-fVaYBMbRhesirEOBiXmaKlBYheyEX1JJHa56ay04Ep1KL0Rr01QPlcHGf3OvqhK47xZUVLBhzVSFb0eL-wOS7HqvdbpjgWwnWgBAPfWTlSILeZ1PqVJUNWgO5whQvrArxvZm7G2t6Bl3eg9C2DJZWtp5XXPaQNbJVh9ca07BFrDSt7_3losGXDb5yDXJsSAQ580BdGDnQ0g9nYkyvBgBsgoQLVk2ihRBtYWPqYC38ZGIIsKeDNyTj10SQTj0nA_IZSVMK6fcJHiab4QfSmpSUgnV47NRsZUV1iRoAVqiNAEC0wDIVoOjTrl0omaw6xKfqcD2HM07rx8wuFMR9bnKPfYZVxJNThvmpuRZTHN56ylHHkAghAGifEF1ZKCDTMvTSFJjMx9CuZ-LNkRf_OlmnbJS3UykEfwdP8GWBR9GMSjZ0AyTFWOwcHa2rxB33RAxgZDheiu132kqXSYvVC62wrw1qGvv67p3C0d98ZhN21BFWYfzgAZmzkCra-q67jaZpVYFw47uqn7VPwMQB1PJ8GZpCIUvIa3Qrb3ik4xx35KOkosk3F1bo3mrsMdBIQBKTiGdrpnv5t262sv0GIiWtVom3prJ0k2veS3-n0u446hJVJ2gqc6v5K3cJg6szLY5ucN9oA94plzwooo-FrbBCsj3UCLLKzUOP5WGKFR6vZvA27bLMy2hAOe8IHqvuqVLk3iIzWbQZeqwmn09A4ZZ8GTWMAp7AqYnShlYAlbSzjavLKtc2j9kCwr5qxIxZkbzlbE6p5L9zlscBNJshg-CgJnJ9Fl_F-ADFxKY_6x0dRGkDb3AEHebOi60dqjYUL6vb1C9ZlMd3FRFPhjXW97FaNz7Z-5ANP-U_MYUroNdZW6Pv_G2gyKFaUrFWaP-RvrrlastHpjRJgagSRoG-V8v5-cQ00ttT1tNl5FqVDTSxIZ6HTgKL7efpnXhGSUcszvh4Rf0vWL_NGqz--T5ARrNRONKgGv9W0Bj_FTeaOqw1PpFEFCZUczJG-ditYjsK5MwBrWpL8NG_Au3ixCwWU0Hm0EUianlwaOFUz21SElwaR2v2pX_2cRsYI-ysVsGHmfHU3fZG38BP_5yWFoadFAE7bkMAeV1JTbqi7oA2JtK_wC3B1694K50Gwc3cXPvJ1cjriTyiIn7LZ4yRnOop0YXdcY_iy3oaKEu-AjlJzgFQRoPvPepuXQNBCiCvLvF44IbbHfdcL1ZCHKbEBAPKL7jXKVkJxLNzSM9aay_leipbcuwcgbAGFOg98UdkPqv-uM1jM4dHzBBJbAjKhTESYhJjvGybR0W5jXfnntlGw6D2ry1r6kfureU_yGEz_gFofh2dTen9nfiXaovOBai9N7vd1bJCSd8GcALRY9zOsdgqJkVeJMYxw4mpFAJSZequNOUqfDmfcRzLSSHFp4QnIZ4ohG93pQBUASxNWrf_s9xZ2uX6etlXVCKnG05plP6IYCGHkaAVDmmHNbPKQlF0uUK8jPolmJZ-CjNVdLM4Qh2DCdxtz9ygc8lFOmNvE9ucNYMqz_zXZEoUbYiNWict2Ea07lgMi_H4HFm5Q8ixJh2tdAqFTq2EZjcb8WBuaTY8jXO20QiXkQOBb7PLTLMIddr2DRCU5ej-M5zxrnmWWbgdjH-Swg_8fi_RraqNXdEzgsv1AYdgDQ81MBJbsFU0KwAjSrPMFjlTWkfz2gNs3G0tcs1dF-EW5-1Fcw5UO9vP5lRlLnPvl3bivapQbDWQSvzDtKVJkfJiqd84qWP1rLGiX6RlgYASiFySNP8Nv1se2Px90rbSCHEoCRxItQG0EJPaffn3xcWKmVYEe5ITs78i6Btw3ERhi_oQ3vQX9P_CA5cO-iRTb3fA9FWFJBMlmeAfE-FlsHs3sknljQGyNZy5OvfK1zvpQaEyfqbTgO_1F6fqPTfh0jDOzxRwYbiIXmMJJqZ3-ofnJS4i0T0NfBBk8hhvXe4t7nXtE5EsOEqMMGGG-d747cmA40ViCIZrORZyCwQYDyfVdzf1jlxV5So6IcED1LLgz9AiFkfvyEJHkOdhC2c9EzMm0yIGdvRh_9TFu5Ol5l99ImluLqqx8wk10nSESlhAek0lFLoLnoQzfBaoRZK_C9ounC4IIl1jHGsS0m5fYe4Olyt25e7QvY-zgmMCJyKNL40wAsrn0fKA9GkyvezFrXwcH4b8hbs-AS-rdd_j2daKiVwwXjxOliS2qg3Pf5Roq6dJ1UXA_PlLSm2K1JxtNCHPTqiBn-0sE1oxdin_lmT4qpkfJyTpc_0zNTuQQTH6HjMt2FPlDKX8Ag2-96XVyWmcK2YdxUuA87mBDwMi5NCuU2PQpbIhDCZJcs53YThOPGteu3-xuZh9hDPu9mwRWxXKZKLDw_PmC_a4rqeIhSJavjEo47URw6tslxKBAS-aX9O37gwVv0-wP5h0CaUny4uBRttS9b41tqsirDMSDq7EQP7khOBkkwZMvgcBGmmQAoxHiR-524jzyfkiFQZz_BeJB_Ry1WzwHZoUphVOOxu0bAD7pxDIWSEdekuJxgfswhGKzQIGWqXBaCyfzvKerijSuBcFy2ejmmGV9sIsHjA9t7FRO1Udsrcgs9emDBWL1EAKSCwruA6G3Jdqv5aBhzg3XuMtZBU3ZkiTBB59tamNHCaKWL-6xFdPLuNEmdgSRyambeVhEFu64D7uuhdRTLvggf8BJMNq0JbpVC6ytn83YDzh-XhFdBdsztAW25aatreAseDTx6-PY4lMRSDucy_OSqQWXmxeV6RUmYIk1IP-Je6Yk2HRhyQ-bZiCh_Zl8bbod30zJbCMOdWXvQDExdjMhHF8LeErF-awxJX7ruLjb0Ur1Dz5oO6g5wM8bRI20BzRDwiVTX9HqcKm-8eOY6P0YNlJQq34KLdNPQQV_tohx_m4kt6VAUcjmk4zZidDlcIfNW0nH0FZpGqI4442e-49-gEqJuLRa6KyKS2Rtba5W5vTLIggVl3rRVOtqsm_sdYu8ljPkoRH5WKz1E9M5OmtJpFrSukXceY3OV_MnmIPCT7sLNFNHSH0cBqnZvZKk_XgJyOmBru8q_oDWIKmD2VTwbFtPUp2zb3XUoj06hvm8EgGAWrNhVsrbkD-EK6cjRthZyznDMmEEW0WZWqrZdn0wJZrVAFJwlsoGgbMFXIgCen3dKJLN0eSntvG7-ruOMuJeboWyGqqhOL1_J1WSDy9JiMHY3fP3ds714lcnJTlso6r87MEUzs9SihxZ9WnsE6ccEQkgE9xH0r1R2nNjlwo4O_zR9dRXyr0nyrzPj724_Njbt6pp8TazpkoP65UvY-aK5UqVwDlF1MiMAWZePMr549KFipRp0AMB4C3x3ogE7em7AKEDlHim3bzOv8RCWVMZ5t7-ciXmcvbbO8dnsxTBaKwHpYOnc7-Z1Z9ZFCFLq2R_Nrkd3vZhirEKZndZhF2kqc0y0c37zsBp6Ezt9XNH-dfIdgP9Hf8nlRcSwR5vTetmVQhAh973aXz5p_GVtANgUphUVZA-4kAXSXrTW5zANob5BUCUc5VThw32yWV2B7qzRfec5-FAqMmGKS2wjR0XI0A5FooPqM9SsDlVV3KXdFlXHg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0661fe800896d03c016af61418a2a887d1bd0fa2d464636e8e",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2953,
+   "completion_tokens": 766,
+   "total_tokens": 3719,
+   "cost": 0.037745,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.037745,
+    "upstream_inference_prompt_cost": 0.014765,
+    "upstream_inference_completions_cost": 0.02298
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 440,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.95
+}

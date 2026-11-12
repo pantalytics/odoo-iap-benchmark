@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Carpenter, Robinson and Jackson",
+  "vendor_vat": "940-95-2437",
+  "invoice_ref": "41389063",
+  "invoice_date": "2021-03-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 14.67,
+  "tax": 1.47,
+  "total": 16.14,
+  "iban": "GB47PCJH31839415874046",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Haida: Their Art and Culture",
+    "quantity": 3.0,
+    "unit_price": 4.89,
+    "tax_rate": 10.0,
+    "net": 14.67
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 14.67,
+    "tax": 1.47
+   }
+  ]
+ },
+ "cost_usd": 0.0189975,
+ "raw": {
+  "id": "gen-1794512223-n5OctTxY6w83DkD0XhKW",
+  "object": "chat.completion",
+  "created": 1794512223,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Carpenter, Robinson and Jackson\",\n  \"vendor_vat\": \"940-95-2437\",\n  \"invoice_ref\": \"41389063\",\n  \"invoice_date\": \"2021-03-17\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 14.67,\n  \"tax\": 1.47,\n  \"total\": 16.14,\n  \"iban\": \"GB47PCJH31839415874046\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Haida: Their Art and Culture\",\n      \"quantity\": 3.0,\n      \"unit_price\": 4.89,\n      \"tax_rate\": 10.0,\n      \"net\": 14.67\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 14.67,\n      \"tax\": 1.47\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI have successfully identified the vendor's name as \"Carpenter, Robinson and Jackson.\" I have also located the vendor's VAT ID, which is \"940-95-2437,\" from the document provided. This fulfills the necessary information to proceed with completing the JSON schema.\n\n\n**Analyzing Currency Ambiguity**\n\nI'm now grappling with the currency. While the currency symbol is '$', suggesting USD, the IBAN suggests a UK entity, and the total uses a comma as the decimal separator, common in Europe. I've re-examined the details and assessed a few clues.\n\n\n**Populating JSON Schema**\n\nI've moved on to populating the JSON schema with extracted data. I have filled the following fields: `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, and `iban`. I've also tackled the monetary values, including `untaxed`, `tax`, and `total`. After further consideration and some ambiguities, I've concluded on 'USD' for the `currency` despite the mixed indicators. I'm now setting VAT treatment to `S` (standard rate). Finally, I'm analyzing the line item details.\n\n\n**Extracting Schema Data**\n\nI've now extracted all of the necessary information to complete the JSON schema. I've populated the fields, including vendor details, invoice specifics, and monetary values. I've set `due_date` to `null` as it wasn't specified. I've also carefully calculated the tax and totals, cross-checking all the details. I've finalized the `vat_breakdown` and line item details, performing all necessary arithmetic. I've assigned 'USD' as the value to the `currency` field.\n\n\n**Finalizing Schema Population**\n\nI've completed extracting all the necessary data and have populated every field in the JSON schema. There were some ambiguities with the currency. After careful deliberation, and checking the instructions, I'm confident in my choices and the calculations. I've re-examined and confirmed each value for accuracy and consistency. The schema is complete now.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI have successfully identified the vendor's name as \"Carpenter, Robinson and Jackson.\" I have also located the vendor's VAT ID, which is \"940-95-2437,\" from the document provided. This fulfills the necessary information to proceed with completing the JSON schema.\n\n\n**Analyzing Currency Ambiguity**\n\nI'm now grappling with the currency. While the currency symbol is '$', suggesting USD, the IBAN suggests a UK entity, and the total uses a comma as the decimal separator, common in Europe. I've re-examined the details and assessed a few clues.\n\n\n**Populating JSON Schema**\n\nI've moved on to populating the JSON schema with extracted data. I have filled the following fields: `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, and `iban`. I've also tackled the monetary values, including `untaxed`, `tax`, and `total`. After further consideration and some ambiguities, I've concluded on 'USD' for the `currency` despite the mixed indicators. I'm now setting VAT treatment to `S` (standard rate). Finally, I'm analyzing the line item details.\n\n\n**Extracting Schema Data**\n\nI've now extracted all of the necessary information to complete the JSON schema. I've populated the fields, including vendor details, invoice specifics, and monetary values. I've set `due_date` to `null` as it wasn't specified. I've also carefully calculated the tax and totals, cross-checking all the details. I've finalized the `vat_breakdown` and line item details, performing all necessary arithmetic. I've assigned 'USD' as the value to the `currency` field.\n\n\n**Finalizing Schema Population**\n\nI've completed extracting all the necessary data and have populated every field in the JSON schema. There were some ambiguities with the currency. After careful deliberation, and checking the instructions, I'm confident in my choices and the calculations. I've re-examined and confirmed each value for accuracy and consistency. The schema is complete now.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1860,
+   "total_tokens": 2178,
+   "cost": 0.0189975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0189975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0186
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1583,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.94
+}

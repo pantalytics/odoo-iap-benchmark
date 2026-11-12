@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "AV-2017-0005",
+  "invoice_date": "2017-11-16",
+  "due_date": "2017-11-16",
+  "currency": "EUR",
+  "untaxed": -218.48,
+  "tax": -14.99,
+  "total": -233.47,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 5,
+    "unit_price": -4.096,
+    "tax_rate": 20.0,
+    "net": -20.48
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 10,
+    "unit_price": -19.8,
+    "tax_rate": 5.5,
+    "net": -198.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 20.0,
+    "base": -20.48,
+    "tax": -4.1
+   },
+   {
+    "rate": 5.5,
+    "base": -198.0,
+    "tax": -10.89
+   }
+  ]
+ },
+ "cost_usd": 0.0281675,
+ "raw": {
+  "id": "gen-1794511850-8P9FuWUpVcFYOVdGMOS5",
+  "object": "chat.completion",
+  "created": 1794511850,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Au bon moulin SARL\",\n  \"vendor_vat\": \"FR11999999998\",\n  \"invoice_ref\": \"AV-2017-0005\",\n  \"invoice_date\": \"2017-11-16\",\n  \"due_date\": \"2017-11-16\",\n  \"currency\": \"EUR\",\n  \"untaxed\": -218.48,\n  \"tax\": -14.99,\n  \"total\": -233.47,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nougat de l'Abbaye 250g\",\n      \"quantity\": 5,\n      \"unit_price\": -4.096,\n      \"tax_rate\": 20.0,\n      \"net\": -20.48\n    },\n    {\n      \"description\": \"Huile d'olive à l'ancienne\",\n      \"quantity\": 10,\n      \"unit_price\": -19.8,\n      \"tax_rate\": 5.5,\n      \"net\": -198.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 20.0,\n      \"base\": -20.48,\n      \"tax\": -4.1\n    },\n    {\n      \"rate\": 5.5,\n      \"base\": -198.0,\n      \"tax\": -10.89\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Au bon moulin SARL\" as the vendor and \"FR11999999998\" as the VAT number. I've also determined this document is a credit note (\"Avoir\"). I'm now focusing on extracting the invoice reference number.\n\n\n**Finalizing Data Extraction**\n\nI've extracted the date of the invoice as 2017-11-16 and the due date is the same. I've also confirmed that the currency is EUR, based on the presence of the euro symbol. Further, I've calculated the untaxed amount (-218.48), tax amount (-14.99) and the total (-233.47). I'm confident about these values, including filling for the missing IBAN as null, and VAT treatment \"S.\" I am now confident that all of the main data is extracted from the invoice and ready to be used.\n\n\n**Populating Line Item Details**\n\nI'm now diving into the line item details. For the first line, I've deciphered the product description, quantity (5), and tax rate (20%). The net amount is -20.48, and I've calculated an effective unit price after applying a 10% discount. I am now trying to work out the unit price.\n\n\n**Finalizing Line Item Details**\n\nI've determined I need to represent all values as negative, given this is a credit note.  I've re-calculated the unit price for Line 1, accounting for the 10% discount to arrive at a value.  The net value for Line 1 corresponds to a 20% tax rate. For Line 2, the unit price matches the \"Prix HT\" divided by the quantity. I've successfully extracted and validated all the data needed for the JSON schema, including the two tax rates and their corresponding amounts, and I am almost ready to submit the final results.\n\n\n**Finalizing Data Mapping**\n\nI'm now integrating all extracted data, double-checking for consistency and accuracy. I've re-evaluated all line items, ensuring values are negative as this is a credit note. Unit prices are now calculated accurately, including those with discounts, to align with net amounts. VAT calculations are verified and the final JSON structure is taking shape, and is ready for submission.\n\n\n\n**Finalizing Data Structure**\n\nI'm now crafting the final JSON, integrating every extracted element. I've re-evaluated unit prices to reflect this credit note, ensuring net values are consistent with quantity and unit price, including discounts. VAT calculations have been cross-referenced with line items and totals, and everything is now verified for submission. I'm almost there.\n\n\n**Constructing JSON Structure**\n\nI've finalized all data extraction, validation, and transformations, and I'm now structuring the JSON output. I've ensured all numerical values are correctly negative to reflect this credit note. I've accurately calculated unit prices, including discounted items, and double-checked the VAT breakdowns to align with the net and total amounts. My final JSON is ready.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Au bon moulin SARL\" as the vendor and \"FR11999999998\" as the VAT number. I've also determined this document is a credit note (\"Avoir\"). I'm now focusing on extracting the invoice reference number.\n\n\n**Finalizing Data Extraction**\n\nI've extracted the date of the invoice as 2017-11-16 and the due date is the same. I've also confirmed that the currency is EUR, based on the presence of the euro symbol. Further, I've calculated the untaxed amount (-218.48), tax amount (-14.99) and the total (-233.47). I'm confident about these values, including filling for the missing IBAN as null, and VAT treatment \"S.\" I am now confident that all of the main data is extracted from the invoice and ready to be used.\n\n\n**Populating Line Item Details**\n\nI'm now diving into the line item details. For the first line, I've deciphered the product description, quantity (5), and tax rate (20%). The net amount is -20.48, and I've calculated an effective unit price after applying a 10% discount. I am now trying to work out the unit price.\n\n\n**Finalizing Line Item Details**\n\nI've determined I need to represent all values as negative, given this is a credit note.  I've re-calculated the unit price for Line 1, accounting for the 10% discount to arrive at a value.  The net value for Line 1 corresponds to a 20% tax rate. For Line 2, the unit price matches the \"Prix HT\" divided by the quantity. I've successfully extracted and validated all the data needed for the JSON schema, including the two tax rates and their corresponding amounts, and I am almost ready to submit the final results.\n\n\n**Finalizing Data Mapping**\n\nI'm now integrating all extracted data, double-checking for consistency and accuracy. I've re-evaluated all line items, ensuring values are negative as this is a credit note. Unit prices are now calculated accurately, including those with discounts, to align with net amounts. VAT calculations are verified and the final JSON structure is taking shape, and is ready for submission.\n\n\n\n**Finalizing Data Structure**\n\nI'm now crafting the final JSON, integrating every extracted element. I've re-evaluated unit prices to reflect this credit note, ensuring net values are consistent with quantity and unit price, including discounts. VAT calculations have been cross-referenced with line items and totals, and everything is now verified for submission. I'm almost there.\n\n\n**Constructing JSON Structure**\n\nI've finalized all data extraction, validation, and transformations, and I'm now structuring the JSON output. I've ensured all numerical values are correctly negative to reflect this credit note. I've accurately calculated unit prices, including discounted items, and double-checked the VAT breakdowns to align with the net and total amounts. My final JSON is ready.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2777,
+   "total_tokens": 3095,
+   "cost": 0.0281675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0281675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02777
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2390,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.14
+}

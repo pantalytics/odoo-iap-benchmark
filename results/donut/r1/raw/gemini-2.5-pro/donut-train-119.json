@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Keith LLC",
+  "vendor_vat": "997-80-1346",
+  "invoice_ref": "41925448",
+  "invoice_date": "2019-08-19",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 359.96,
+  "tax": 36.0,
+  "total": 395.96,
+  "iban": "GB69ONMU18243705319443",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "CLEARANCE!!! Fast HP Desktop Computer PC Core 2 Duo WINDOWS 10 + LCD + KB + MS",
+    "quantity": 4.0,
+    "unit_price": 89.99,
+    "tax_rate": 10.0,
+    "net": 359.96
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 359.96,
+    "tax": 36.0
+   }
+  ]
+ },
+ "cost_usd": 0.0219575,
+ "raw": {
+  "id": "gen-1794512174-M4Hkj4zbODPOsKPn5waw",
+  "object": "chat.completion",
+  "created": 1794512174,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Keith LLC\",\n  \"vendor_vat\": \"997-80-1346\",\n  \"invoice_ref\": \"41925448\",\n  \"invoice_date\": \"2019-08-19\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 359.96,\n  \"tax\": 36.00,\n  \"total\": 395.96,\n  \"iban\": \"GB69ONMU18243705319443\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"CLEARANCE!!! Fast HP Desktop Computer PC Core 2 Duo WINDOWS 10 + LCD + KB + MS\",\n      \"quantity\": 4.00,\n      \"unit_price\": 89.99,\n      \"tax_rate\": 10.0,\n      \"net\": 359.96\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 359.96,\n      \"tax\": 36.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Vendor Information**\n\nI've successfully identified the vendor's name as \"Keith LLC\" and their VAT ID as \"997-80-1346\" from the document. I am now working on extracting the invoice reference information to ensure I populate the schema correctly and comprehensively.\n\n\n**Extracting Relevant Data**\n\nI've extracted the invoice number as \"41925448\" and the issue date as \"2019-08-19\" to populate the schema. I've set the due date to \"null\" since it's not present. I'm focusing on the currency, which presents a challenge due to a mixed document referencing both US and UK information. I'll proceed with USD as the assumed currency, given the US locations, and will note the ambiguity.\n\n\n**Resolving Currency Ambiguity**\n\nI've decided on \"USD\" for the currency, despite the mixed information. While the IBAN suggests a UK connection, the US addresses and the use of the '$' symbol are strong indicators. The schema allows for a currency string, so I will populate it as \"USD\", setting the total as a plain number without the currency symbol or thousands separator. I've re-examined the prompt and decided that the \"USD\" is the best option for the currency code. I'm now certain I've made the correct choice, even though the document is inconsistent.\n\n\n**Determining Currency and Total**\n\nI've decided to set the `currency` to \"USD\". While the document is ambiguous, with a fake UK IBAN alongside US addresses and the '$' symbol, the currency code is the most reasonable inference. I'm now setting the total as a plain number \"395.96\", as requested, to comply with the schema format.\n\n\n**Determining Amounts and VAT**\n\nI've extracted and confirmed the total net amount of 359.96 and the VAT amount of 36.00, confirming the gross total of 395.96. The VAT treatment is \"S\" for standard rate, as indicated by the 10% rate. I've broken down the line item data, including description, quantity, unit price, tax rate, and net amount. I am now confident in my extraction.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all required data and am now finalizing the details for JSON schema population. I have decided to set the currency to null, as it's not explicitly stated. I'm verifying the data types and formats, paying particular attention to number formatting and null values for a clean JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Vendor Information**\n\nI've successfully identified the vendor's name as \"Keith LLC\" and their VAT ID as \"997-80-1346\" from the document. I am now working on extracting the invoice reference information to ensure I populate the schema correctly and comprehensively.\n\n\n**Extracting Relevant Data**\n\nI've extracted the invoice number as \"41925448\" and the issue date as \"2019-08-19\" to populate the schema. I've set the due date to \"null\" since it's not present. I'm focusing on the currency, which presents a challenge due to a mixed document referencing both US and UK information. I'll proceed with USD as the assumed currency, given the US locations, and will note the ambiguity.\n\n\n**Resolving Currency Ambiguity**\n\nI've decided on \"USD\" for the currency, despite the mixed information. While the IBAN suggests a UK connection, the US addresses and the use of the '$' symbol are strong indicators. The schema allows for a currency string, so I will populate it as \"USD\", setting the total as a plain number without the currency symbol or thousands separator. I've re-examined the prompt and decided that the \"USD\" is the best option for the currency code. I'm now certain I've made the correct choice, even though the document is inconsistent.\n\n\n**Determining Currency and Total**\n\nI've decided to set the `currency` to \"USD\". While the document is ambiguous, with a fake UK IBAN alongside US addresses and the '$' symbol, the currency code is the most reasonable inference. I'm now setting the total as a plain number \"395.96\", as requested, to comply with the schema format.\n\n\n**Determining Amounts and VAT**\n\nI've extracted and confirmed the total net amount of 359.96 and the VAT amount of 36.00, confirming the gross total of 395.96. The VAT treatment is \"S\" for standard rate, as indicated by the 10% rate. I've broken down the line item data, including description, quantity, unit price, tax rate, and net amount. I am now confident in my extraction.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all required data and am now finalizing the details for JSON schema population. I have decided to set the currency to null, as it's not explicitly stated. I'm verifying the data types and formats, paying particular attention to number formatting and null values for a clean JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2156,
+   "total_tokens": 2474,
+   "cost": 0.0219575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0219575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02156
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1859,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.87
+}

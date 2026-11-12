@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Rodriguez and Sons",
+  "vendor_vat": "943-82-3154",
+  "invoice_ref": "76229289",
+  "invoice_date": "2018-04-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5149.91,
+  "tax": 514.99,
+  "total": 5664.9,
+  "iban": "GB62DPIQ05886436296811",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram",
+    "quantity": 3.0,
+    "unit_price": 400.0,
+    "tax_rate": 10,
+    "net": 1200.0
+   },
+   {
+    "description": "GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB",
+    "quantity": 5.0,
+    "unit_price": 549.99,
+    "tax_rate": 10,
+    "net": 2749.95
+   },
+   {
+    "description": "computer",
+    "quantity": 4.0,
+    "unit_price": 299.99,
+    "tax_rate": 10,
+    "net": 1199.96
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 5149.91,
+    "tax": 514.99
+   }
+  ]
+ },
+ "cost_usd": 0.028984,
+ "raw": {
+  "id": "gen-1794512052-bKR6fnX8FZQC5cmEW5Jk",
+  "object": "chat.completion",
+  "created": 1794512052,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Rodriguez and Sons\",\n  \"vendor_vat\": \"943-82-3154\",\n  \"invoice_ref\": \"76229289\",\n  \"invoice_date\": \"2018-04-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 5149.91,\n  \"tax\": 514.99,\n  \"total\": 5664.90,\n  \"iban\": \"GB62DPIQ05886436296811\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram\",\n      \"quantity\": 3.00,\n      \"unit_price\": 400.00,\n      \"tax_rate\": 10,\n      \"net\": 1200.00\n    },\n    {\n      \"description\": \"GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB\",\n      \"quantity\": 5.00,\n      \"unit_price\": 549.99,\n      \"tax_rate\": 10,\n      \"net\": 2749.95\n    },\n    {\n      \"description\": \"computer\",\n      \"quantity\": 4.00,\n      \"unit_price\": 299.99,\n      \"tax_rate\": 10,\n      \"net\": 1199.96\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 5149.91,\n      \"tax\": 514.99\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently focused on identifying and extracting key invoice details. My priority is to accurately capture the vendor's name and VAT number, alongside the invoice reference number, to populate the specified JSON structure.\n\n**Populating Invoice Fields**\n\nI'm continuing to extract and format data. Specifically, I've identified the invoice date and currency, and am working on resolving potential date ambiguities and capturing the tax breakdown.\n\n**Aggregating Invoice Totals**\n\nI've successfully parsed the currency as USD and processed the untaxed amount, tax, and total, ensuring correct decimal formatting. The IBAN and VAT treatment have also been captured.\n\n**Refining Date Interpretation**\n\nI'm wrestling with the invoice date ambiguity. Despite US address indicators, the presence of a UK IBAN suggests a potential DD/MM/YYYY preference. I'm settling on \"2018-04-12\" to prioritize a more globally recognized format.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently focused on identifying and extracting key invoice details. My priority is to accurately capture the vendor's name and VAT number, alongside the invoice reference number, to populate the specified JSON structure.\n\n**Populating Invoice Fields**\n\nI'm continuing to extract and format data. Specifically, I've identified the invoice date and currency, and am working on resolving potential date ambiguities and capturing the tax breakdown.\n\n**Aggregating Invoice Totals**\n\nI've successfully parsed the currency as USD and processed the untaxed amount, tax, and total, ensuring correct decimal formatting. The IBAN and VAT treatment have also been captured.\n\n**Refining Date Interpretation**\n\nI'm wrestling with the invoice date ambiguity. Despite US address indicators, the presence of a UK IBAN suggests a potential DD/MM/YYYY preference. I'm settling on \"2018-04-12\" to prioritize a more globally recognized format.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2154,
+   "total_tokens": 3722,
+   "cost": 0.028984,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.028984,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.025848
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1685,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.75
+}

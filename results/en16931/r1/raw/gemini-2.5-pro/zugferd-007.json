@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "MVM Musterhafter Versicherungsverein Musterstadt a.G.",
+  "vendor_vat": "DE234567891",
+  "invoice_ref": "00.123.456.7-2018-1",
+  "invoice_date": "2018-03-11",
+  "due_date": "2018-07-01",
+  "currency": "EUR",
+  "untaxed": 220.0,
+  "tax": 0.0,
+  "total": 220.0,
+  "iban": "DE75123456780000001234",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9",
+    "quantity": 1.0,
+    "unit_price": 80.0,
+    "tax_rate": 0.0,
+    "net": 80.0
+   },
+   {
+    "description": "Vollkasko SF25 (30 %) Typkl. 21 Regio R4",
+    "quantity": 1.0,
+    "unit_price": 140.0,
+    "tax_rate": 0.0,
+    "net": 140.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 220.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0283425,
+ "raw": {
+  "id": "gen-1794511842-hScdCviM4ryzppRWJNEW",
+  "object": "chat.completion",
+  "created": 1794511842,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MVM Musterhafter Versicherungsverein Musterstadt a.G.\",\n  \"vendor_vat\": \"DE234567891\",\n  \"invoice_ref\": \"00.123.456.7-2018-1\",\n  \"invoice_date\": \"2018-03-11\",\n  \"due_date\": \"2018-07-01\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 220.00,\n  \"tax\": 0.00,\n  \"total\": 220.00,\n  \"iban\": \"DE75123456780000001234\",\n  \"vat_treatment\": \"E\",\n  \"lines\": [\n    {\n      \"description\": \"Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9\",\n      \"quantity\": 1.0,\n      \"unit_price\": 80.0,\n      \"tax_rate\": 0.0,\n      \"net\": 80.0\n    },\n    {\n      \"description\": \"Vollkasko SF25 (30 %) Typkl. 21 Regio R4\",\n      \"quantity\": 1.0,\n      \"unit_price\": 140.0,\n      \"tax_rate\": 0.0,\n      \"net\": 140.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 220.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Data: Plan**\n\nI'm currently focused on extracting information from the German bill and mapping it to a JSON schema. I've located the vendor's name, \"MVM Musterha\", under \"Verkäufer\" -> \"Name\" and will proceed with extracting other relevant fields, like the bill's issue date and total amount. Next, I need to identify the right data to map to other schema keys, such as the bill's number or invoice id, and start with formatting the data in a JSON object.\n\n\n**Analyzing Data: Progress**\n\nI've successfully identified and mapped several key data points from the German bill. I have located the vendor's name and VAT ID under \"Verkäufer\" and \"USt.-Id.-Nr.\", respectively. I've also extracted the invoice number and date from the header. Furthermore, I've found the due date in the \"Zahlungsbedingungen\" section and formatted it appropriately. I've also extracted the currency, untaxed amount, tax amount, and total, which required careful parsing. I am now working through handling the remaining data.\n\n\n**Mapping Data: Complete**\n\nI've now mapped almost all the key data points from the German bill to the JSON schema. I was able to find and correctly format the due date, currency, untaxed amount, tax amount, and total. Additionally, I extracted and formatted the IBAN from the payment conditions. I've also found the VAT treatment code 'E'. Now, I'm analyzing the \"Positionsdaten\" table to extract the line items.\n\n\n**Extracting Data: Refining**\n\nI am now focusing on refining the extraction of line items from the bill. I've re-evaluated the \"Positionsdaten\" table and the calculation of unit prices. The \"Nettobetrag\" column represents the net amount for each line item. I'm taking that as the line's `net` amount, and since quantity is 1, the \"Nettopreis\" is the unit price. However, since there is insurance tax included, and the VAT rate is zero, I need to represent the insurance tax, if applicable, in another field to ensure data integrity. I am now extracting the data with those insights.\n\n\n**Refining Data: Further**\n\nI'm now extracting the key details for each line item, paying close attention to the \"Nettopreis\" and \"Nettobetrag\" columns. I've confirmed that the \"Nettobetrag\" reflects the correct line total, inclusive of insurance tax. The \"Nettopreis\" requires special handling due to the inclusion of insurance tax, which will be handled to ensure data integrity.\n\n\n**Refining Data: Details**\n\nI am now focusing on refining the extraction of the line item details. I've re-examined the bill's structure, recognizing that insurance tax is included within the net amounts. Therefore, the \"Nettopreis\" and \"Nettobetrag\" columns require careful parsing, as the \"Nettobetrag\" is the total for the line, and the difference is the insurance tax.\n\n\n**Refining Data: Calculations**\n\nI've re-evaluated the data and confirmed that I'll handle insurance tax within the 'net' amount of each line item. The unit price for each line item is derived from the 'Nettobetrag' column, given the quantity is 1. The tax rate is 0.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Data: Plan**\n\nI'm currently focused on extracting information from the German bill and mapping it to a JSON schema. I've located the vendor's name, \"MVM Musterha\", under \"Verkäufer\" -> \"Name\" and will proceed with extracting other relevant fields, like the bill's issue date and total amount. Next, I need to identify the right data to map to other schema keys, such as the bill's number or invoice id, and start with formatting the data in a JSON object.\n\n\n**Analyzing Data: Progress**\n\nI've successfully identified and mapped several key data points from the German bill. I have located the vendor's name and VAT ID under \"Verkäufer\" and \"USt.-Id.-Nr.\", respectively. I've also extracted the invoice number and date from the header. Furthermore, I've found the due date in the \"Zahlungsbedingungen\" section and formatted it appropriately. I've also extracted the currency, untaxed amount, tax amount, and total, which required careful parsing. I am now working through handling the remaining data.\n\n\n**Mapping Data: Complete**\n\nI've now mapped almost all the key data points from the German bill to the JSON schema. I was able to find and correctly format the due date, currency, untaxed amount, tax amount, and total. Additionally, I extracted and formatted the IBAN from the payment conditions. I've also found the VAT treatment code 'E'. Now, I'm analyzing the \"Positionsdaten\" table to extract the line items.\n\n\n**Extracting Data: Refining**\n\nI am now focusing on refining the extraction of line items from the bill. I've re-evaluated the \"Positionsdaten\" table and the calculation of unit prices. The \"Nettobetrag\" column represents the net amount for each line item. I'm taking that as the line's `net` amount, and since quantity is 1, the \"Nettopreis\" is the unit price. However, since there is insurance tax included, and the VAT rate is zero, I need to represent the insurance tax, if applicable, in another field to ensure data integrity. I am now extracting the data with those insights.\n\n\n**Refining Data: Further**\n\nI'm now extracting the key details for each line item, paying close attention to the \"Nettopreis\" and \"Nettobetrag\" columns. I've confirmed that the \"Nettobetrag\" reflects the correct line total, inclusive of insurance tax. The \"Nettopreis\" requires special handling due to the inclusion of insurance tax, which will be handled to ensure data integrity.\n\n\n**Refining Data: Details**\n\nI am now focusing on refining the extraction of the line item details. I've re-examined the bill's structure, recognizing that insurance tax is included within the net amounts. Therefore, the \"Nettopreis\" and \"Nettobetrag\" columns require careful parsing, as the \"Nettobetrag\" is the total for the line, and the difference is the insurance tax.\n\n\n**Refining Data: Calculations**\n\nI've re-evaluated the data and confirmed that I'll handle insurance tax within the 'net' amount of each line item. The unit price for each line item is derived from the 'Nettobetrag' column, given the quantity is 1. The tax rate is 0.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2730,
+   "total_tokens": 3564,
+   "cost": 0.0283425,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0283425,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.0273
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2336,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.22
+}

@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Global Supplies Ltd.",
+  "vendor_vat": "GB123456789",
+  "invoice_ref": "47110818",
+  "invoice_date": "2018-10-31",
+  "due_date": "2018-11-30",
+  "currency": "EUR",
+  "untaxed": 2000.0,
+  "tax": 0.0,
+  "total": 2000.0,
+  "iban": "DE1212344321987600",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Toolbox 0815CO-123 Stahlcoil /V2A",
+    "quantity": 10.0,
+    "unit_price": 100.0,
+    "tax_rate": 0.0,
+    "net": 1000.0
+   },
+   {
+    "description": "BR-4529-ZFIM-712 Stoßfänger /A2A",
+    "quantity": 10.0,
+    "unit_price": 100.0,
+    "tax_rate": 0.0,
+    "net": 1000.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 2000.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0279325,
+ "raw": {
+  "id": "gen-1794511842-7Q752gwYikwMUCCFUclx",
+  "object": "chat.completion",
+  "created": 1794511842,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Global Supplies Ltd.\",\n  \"vendor_vat\": \"GB123456789\",\n  \"invoice_ref\": \"47110818\",\n  \"invoice_date\": \"2018-10-31\",\n  \"due_date\": \"2018-11-30\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 2000.00,\n  \"tax\": 0.00,\n  \"total\": 2000.00,\n  \"iban\": \"DE1212344321987600\",\n  \"vat_treatment\": \"K\",\n  \"lines\": [\n    {\n      \"description\": \"Toolbox 0815CO-123 Stahlcoil /V2A\",\n      \"quantity\": 10.0,\n      \"unit_price\": 100.0,\n      \"tax_rate\": 0.0,\n      \"net\": 1000.00\n    },\n    {\n      \"description\": \"BR-4529-ZFIM-712 Stoßfänger /A2A\",\n      \"quantity\": 10.0,\n      \"unit_price\": 100.0,\n      \"tax_rate\": 0.0,\n      \"net\": 1000.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 2000.00,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Initiating Extraction from Document**\n\nI'm starting by identifying the document as a \"Gutschrift (Selbst ausgestellte Rechnung)\" and planning to use the JSON schema to extract the relevant data from it. I aim to populate all the required fields correctly. This is the first step in processing the document.\n\n\n**Extracting Data from Document**\n\nI've successfully identified and started extracting data. I've populated several fields: `vendor_name` as \"Global Supplies Ltd.\", `vendor_vat` as \"GB123456789\", `invoice_ref` as \"47110818\", `invoice_date` as \"2018-10-31\", and `due_date` as \"2018-11-30\". I also have `currency` as \"EUR\",  `untaxed` as \"2.000,00\", `tax` as \"0,00\",  `total` as \"2000,00\" and the `iban` is now \"DE1212344321987600\". I'm still trying to find and establish the correct `vat_treatment`.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the data points from the \"Gutschrift\". I've successfully identified the `vat_treatment` as \"intra-community supply\" with the code \"K\" and extracted the two line items, including their descriptions, quantities, net amounts, tax rates, and calculated unit prices. I've also populated the `vat_breakdown` with the rate and base amount. All required fields are now extracted.\n\n\n**Finalizing JSON Data**\n\nI am now structuring the final JSON data. I've successfully extracted and formatted all the required information, including vendor details, invoice specifics, payment terms, currency, tax breakdowns, and line items. The JSON object is ready for use, encapsulating all the necessary fields.\n\n\n**Refining Data Extraction for JSON**\n\nI'm now focusing on finalizing the JSON data, but I'm pausing on the vendor details. I am interpreting a crucial detail: the document is a \"Gutschrift,\" which means it's a self-billed invoice or credit note, and thus, I need to resolve the role of vendor and buyer in the JSON. I've re-read the document and user instructions to determine if I am capturing the right vendor. Specifically, I'm interpreting who the vendor is and will adjust the `vendor_name` field.\n\n\n**Clarifying Vendor Designation**\n\nI'm now certain about designating the vendor. Despite the self-billed nature, the document consistently labels \"Global Supplies Ltd.\" as the \"Verkäufer,\" or seller. Following the provided user instructions, I will assign the role of the vendor to the company issuing the bill, even when it's self-billed. I am confirming this as the correct data entry point.\n\n\n**Finalizing JSON Structure**\n\nI'm now generating the JSON, confident in the data extracted. I've re-reviewed the vendor designation and ensured clarity on Global Supplies Ltd. being the vendor based on the document's labeling, despite the self-billed nature. All fields have been cross-checked, and I'm ready to produce the JSON output according to the schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Initiating Extraction from Document**\n\nI'm starting by identifying the document as a \"Gutschrift (Selbst ausgestellte Rechnung)\" and planning to use the JSON schema to extract the relevant data from it. I aim to populate all the required fields correctly. This is the first step in processing the document.\n\n\n**Extracting Data from Document**\n\nI've successfully identified and started extracting data. I've populated several fields: `vendor_name` as \"Global Supplies Ltd.\", `vendor_vat` as \"GB123456789\", `invoice_ref` as \"47110818\", `invoice_date` as \"2018-10-31\", and `due_date` as \"2018-11-30\". I also have `currency` as \"EUR\",  `untaxed` as \"2.000,00\", `tax` as \"0,00\",  `total` as \"2000,00\" and the `iban` is now \"DE1212344321987600\". I'm still trying to find and establish the correct `vat_treatment`.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the data points from the \"Gutschrift\". I've successfully identified the `vat_treatment` as \"intra-community supply\" with the code \"K\" and extracted the two line items, including their descriptions, quantities, net amounts, tax rates, and calculated unit prices. I've also populated the `vat_breakdown` with the rate and base amount. All required fields are now extracted.\n\n\n**Finalizing JSON Data**\n\nI am now structuring the final JSON data. I've successfully extracted and formatted all the required information, including vendor details, invoice specifics, payment terms, currency, tax breakdowns, and line items. The JSON object is ready for use, encapsulating all the necessary fields.\n\n\n**Refining Data Extraction for JSON**\n\nI'm now focusing on finalizing the JSON data, but I'm pausing on the vendor details. I am interpreting a crucial detail: the document is a \"Gutschrift,\" which means it's a self-billed invoice or credit note, and thus, I need to resolve the role of vendor and buyer in the JSON. I've re-read the document and user instructions to determine if I am capturing the right vendor. Specifically, I'm interpreting who the vendor is and will adjust the `vendor_name` field.\n\n\n**Clarifying Vendor Designation**\n\nI'm now certain about designating the vendor. Despite the self-billed nature, the document consistently labels \"Global Supplies Ltd.\" as the \"Verkäufer,\" or seller. Following the provided user instructions, I will assign the role of the vendor to the company issuing the bill, even when it's self-billed. I am confirming this as the correct data entry point.\n\n\n**Finalizing JSON Structure**\n\nI'm now generating the JSON, confident in the data extracted. I've re-reviewed the vendor designation and ensured clarity on Global Supplies Ltd. being the vendor based on the document's labeling, despite the self-billed nature. All fields have been cross-checked, and I'm ready to produce the JSON output according to the schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2689,
+   "total_tokens": 3523,
+   "cost": 0.0279325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0279325,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.02689
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2302,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.24
+}

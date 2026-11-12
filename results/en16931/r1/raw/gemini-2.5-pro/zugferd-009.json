@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Physiotherapeutin",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "R18-31",
+  "invoice_date": "2018-10-03",
+  "due_date": "2018-11-21",
+  "currency": "EUR",
+  "untaxed": 380.0,
+  "tax": 0.0,
+  "total": 380.0,
+  "iban": "DE02120300000000202051",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Physiotherapie",
+    "quantity": 10.0,
+    "unit_price": 26.0,
+    "tax_rate": 0.0,
+    "net": 260.0
+   },
+   {
+    "description": "Hausbesuch",
+    "quantity": 10.0,
+    "unit_price": 12.0,
+    "tax_rate": 0.0,
+    "net": 120.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 380.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.01441,
+ "raw": {
+  "id": "gen-1794511844-ZKouN7UkJnsHcQn07gr7",
+  "object": "chat.completion",
+  "created": 1794511844,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Physiotherapeutin\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"R18-31\",\n  \"invoice_date\": \"2018-10-03\",\n  \"due_date\": \"2018-11-21\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 380.00,\n  \"tax\": 0.00,\n  \"total\": 380.00,\n  \"iban\": \"DE02120300000000202051\",\n  \"vat_treatment\": \"E\",\n  \"lines\": [\n    {\n      \"description\": \"Physiotherapie\",\n      \"quantity\": 10.0,\n      \"unit_price\": 26.00,\n      \"tax_rate\": 0.0,\n      \"net\": 260.00\n    },\n    {\n      \"description\": \"Hausbesuch\",\n      \"quantity\": 10.0,\n      \"unit_price\": 12.00,\n      \"tax_rate\": 0.0,\n      \"net\": 120.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 380.00,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Bill Data**\n\nI'm working on extracting data from a German bill and transforming it into a JSON object. Right now, I'm focused on identifying the vendor's name, which appears under \"Verkäufer.\" I've already determined the name is \"Phys.\"\n\n\n**Extracting Invoice Details**\n\nI've made good progress on extracting key invoice details. I've located and formatted the vendor's VAT number (\"DE136695976\"), the invoice reference (\"Nr. R18-31\"), and the invoice date (\"2018-10-03\"). I've also identified the due date (\"2018-11-21\"). Currency is \"EUR\". I am now focusing on finding total amounts.\n\n\n**Defining JSON Schema**\n\nI'm now focusing on formatting the extracted data into a JSON object according to the schema. I've successfully extracted the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, and determined the VAT treatment as \"E\". I am working to determine the IBAN and line item parsing.\n\n\n**Assembling JSON Data**\n\nI've gathered all the required data points, including the vendor's IBAN (\"DE02120300000000202051\") and the line items, which I've parsed to extract detailed information about each service. My main focus is now assembling the JSON object by mapping the extracted data to their respective keys in the schema. I've also parsed the VAT breakdown to ensure correct categorization. I am finalizing the output according to the requirements.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Bill Data**\n\nI'm working on extracting data from a German bill and transforming it into a JSON object. Right now, I'm focused on identifying the vendor's name, which appears under \"Verkäufer.\" I've already determined the name is \"Phys.\"\n\n\n**Extracting Invoice Details**\n\nI've made good progress on extracting key invoice details. I've located and formatted the vendor's VAT number (\"DE136695976\"), the invoice reference (\"Nr. R18-31\"), and the invoice date (\"2018-10-03\"). I've also identified the due date (\"2018-11-21\"). Currency is \"EUR\". I am now focusing on finding total amounts.\n\n\n**Defining JSON Schema**\n\nI'm now focusing on formatting the extracted data into a JSON object according to the schema. I've successfully extracted the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, and determined the VAT treatment as \"E\". I am working to determine the IBAN and line item parsing.\n\n\n**Assembling JSON Data**\n\nI've gathered all the required data points, including the vendor's IBAN (\"DE02120300000000202051\") and the line items, which I've parsed to extract detailed information about each service. My main focus is now assembling the JSON object by mapping the extracted data to their respective keys in the schema. I've also parsed the VAT breakdown to ensure correct categorization. I am finalizing the output according to the requirements.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 576,
+   "completion_tokens": 1369,
+   "total_tokens": 1945,
+   "cost": 0.01441,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01441,
+    "upstream_inference_prompt_cost": 0.00072,
+    "upstream_inference_completions_cost": 0.01369
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1017,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.15
+}

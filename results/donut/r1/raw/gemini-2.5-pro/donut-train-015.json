@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Snyder, Williams and Walter",
+  "vendor_vat": "905-75-8307",
+  "invoice_ref": "56514066",
+  "invoice_date": "2014-05-14",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 44.89,
+  "tax": 4.49,
+  "total": 49.38,
+  "iban": "GB76WTTH68902414885248",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lilly Pulitzer XS Spike the Punch Cassie Cotton Dress with Quarter Sleeves",
+    "quantity": 1.0,
+    "unit_price": 44.89,
+    "tax_rate": 10.0,
+    "net": 44.89
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 44.89,
+    "tax": 4.49
+   }
+  ]
+ },
+ "cost_usd": 0.0147975,
+ "raw": {
+  "id": "gen-1794512166-nMCVPYIt6J9Ny6DZnnC9",
+  "object": "chat.completion",
+  "created": 1794512166,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Snyder, Williams and Walter\",\n  \"vendor_vat\": \"905-75-8307\",\n  \"invoice_ref\": \"56514066\",\n  \"invoice_date\": \"2014-05-14\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 44.89,\n  \"tax\": 4.49,\n  \"total\": 49.38,\n  \"iban\": \"GB76WTTH68902414885248\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Lilly Pulitzer XS Spike the Punch Cassie Cotton Dress with Quarter Sleeves\",\n      \"quantity\": 1.0,\n      \"unit_price\": 44.89,\n      \"tax_rate\": 10.0,\n      \"net\": 44.89\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 44.89,\n      \"tax\": 4.49\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've begun extracting data to populate the JSON schema. \"Snyder, Williams and Walter\" is the vendor name, and their VAT ID is \"905-75-8307\". I am currently focusing on parsing this information correctly. I will continue in this vein to complete the extraction.\n\n\n**Defining Data Parameters**\n\nI am now defining the specific data points to extract and how to map them to the JSON schema. I've successfully identified and mapped `vendor_name` to \"Snyder, Williams and Walter\", and `vendor_vat` to \"905-75-8307\". I've assigned \"56514066\" to `invoice_ref` and \"2014-05-14\" to `invoice_date`. The due date will be null, as it's absent from the document. I am looking into the currency now.\n\n\n**Mapping Data and Refining**\n\nI have completed the extraction. I've mapped *all* the key fields to their corresponding JSON schema elements, including the ambiguous currency field. I have assigned a `USD` currency code, given the US-style addresses, despite the UK-based IBAN, which is contradictory. Now, I'm verifying the mapping and checking for inconsistencies.\n\n\n**Finalizing Data Extraction**\n\nI'm now confidently populating the schema with all the extracted data. After resolving the ambiguous currency issue, I've assigned \"USD\" based on the US client address and the dollar sign. The IBAN from the UK introduces a conflict, but I am prioritising the provided visual clues. The numbers have also been validated and are consistent. I am proceeding to the final stage of JSON construction.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've begun extracting data to populate the JSON schema. \"Snyder, Williams and Walter\" is the vendor name, and their VAT ID is \"905-75-8307\". I am currently focusing on parsing this information correctly. I will continue in this vein to complete the extraction.\n\n\n**Defining Data Parameters**\n\nI am now defining the specific data points to extract and how to map them to the JSON schema. I've successfully identified and mapped `vendor_name` to \"Snyder, Williams and Walter\", and `vendor_vat` to \"905-75-8307\". I've assigned \"56514066\" to `invoice_ref` and \"2014-05-14\" to `invoice_date`. The due date will be null, as it's absent from the document. I am looking into the currency now.\n\n\n**Mapping Data and Refining**\n\nI have completed the extraction. I've mapped *all* the key fields to their corresponding JSON schema elements, including the ambiguous currency field. I have assigned a `USD` currency code, given the US-style addresses, despite the UK-based IBAN, which is contradictory. Now, I'm verifying the mapping and checking for inconsistencies.\n\n\n**Finalizing Data Extraction**\n\nI'm now confidently populating the schema with all the extracted data. After resolving the ambiguous currency issue, I've assigned \"USD\" based on the US client address and the dollar sign. The IBAN from the UK introduces a conflict, but I am prioritising the provided visual clues. The numbers have also been validated and are consistent. I am proceeding to the final stage of JSON construction.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1440,
+   "total_tokens": 1758,
+   "cost": 0.0147975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0147975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0144
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1146,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.5
+}

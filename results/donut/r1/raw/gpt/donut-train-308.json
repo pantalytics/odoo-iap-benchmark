@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Sanchez Inc",
+  "vendor_vat": "958-83-2401",
+  "invoice_ref": "64678621",
+  "invoice_date": "2014-06-09",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 118.95,
+  "tax": 11.89,
+  "total": 130.84,
+  "iban": "GB39NIAV91589079294162",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off",
+    "quantity": 2,
+    "unit_price": 9.5,
+    "tax_rate": 10,
+    "net": 19
+   },
+   {
+    "description": "Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y",
+    "quantity": 4,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 79.96
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 118.95,
+    "tax": 11.89
+   }
+  ]
+ },
+ "cost_usd": 0.02495,
+ "raw": {
+  "id": "gen-1794512183-HQNwCHks7JUzpZC09Slc",
+  "object": "chat.completion",
+  "created": 1794512183,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Sanchez Inc\",\"vendor_vat\":\"958-83-2401\",\"invoice_ref\":\"64678621\",\"invoice_date\":\"2014-06-09\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":118.95,\"tax\":11.89,\"total\":130.84,\"iban\":\"GB39NIAV91589079294162\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off\",\"quantity\":2,\"unit_price\":9.5,\"tax_rate\":10,\"net\":19},{\"description\":\"Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y\",\"quantity\":4,\"unit_price\":19.99,\"tax_rate\":10,\"net\":79.96},{\"description\":\"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW\",\"quantity\":1,\"unit_price\":19.99,\"tax_rate\":10,\"net\":19.99}],\"vat_breakdown\":[{\"rate\":10,\"base\":118.95,\"tax\":11.89}]}",
+     "refusal": null,
+     "reasoning": "**Parsing invoice details**\n\nI need to output JSON per schema and parse the image. The vendor is Sanchez Inc, with a tax ID and IBAN provided. The invoice date of 09/06/2014 is ambiguous; it could mean either September 6 or June 9, but since the schema requests YYYY-MM-DD, I’ll go with the European format and note it as 2014-06-09, assuming it's June 9. The amounts in the invoice are in USD, and I've gathered the relevant details for the invoice lines.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Parsing invoice details**\n\nI need to output JSON per schema and parse the image. The vendor is Sanchez Inc, with a tax ID and IBAN provided. The invoice date of 09/06/2014 is ambiguous; it could mean either September 6 or June 9, but since the schema requests YYYY-MM-DD, I’ll go with the European format and note it as 2014-06-09, assuming it's June 9. The amounts in the invoice are in USD, and I've gathered the relevant details for the invoice lines.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hU_iaVkYgIDFP_vWHYHnd649TEz0NDZNzvm4UJjkNqM6iZM3QrUpNRYXt7VxRgvdkOtjJI8CgH1cswuf_qeUEwCjuYsNwjh5a0u84TQavF0aZNKnwEP-H-F4IF1ef9Tjn50u0QgyBxSaz2s0BVhhh4YZAvxwriBz4Q1zMLVTdB3_OBwmdmKaYIVb2NEKxhRRn4EXHj_9U7mawPWcDyof7wcsljXtyO8jCCpL_T86xbFwV2OyAQ19BIsqNxNG7Rj8NyPvRlr7VzMCXyE7T5bK0ppNUCOS3bc8kQ2oFKBQ-oRi_3bjM4mMRUfhPig6F9QcCtgq0hgQs4j68xSFV7TqcvCbTO5z-0DfYBaTIMVkgVlvRqcY8dlQwS1mh-nDazUw87MQKiLJZKgBHf-As8NSzSj9Smcc6wSiInJ8cAZ0vTtX_a5xNT6TSVlwMsA-_8AYmVcFX6UwOsyU_Jm97p6x3CzkUq9xZJcPECAJJ3TUgqFsU0qx6ouaSQ6MJvom40Cq_dH8H5JKqQbdZzj7jxQjdJbyywVDXG2SQDNfcBeDY03cZeJswYDs2CcEzv0lMw8IeIGWY5ZRmA28slA9muNgBpcemYE4YTMJSYr1H0_iS06Vtxd-Aa2vPGR4XeG3MXFuF6MtW_lC5glIjzQoliGL-QHRKu3HGzrQJBK_N3IrnCwfgvDpMksdP06mum6z548TlCkig1mVwMYU8SdSyoA8b_UXk8qIR7rFy0L25ThsZC_psYEqf37Kaths13lDU5BBZFNJBXu-uBW9hHLMvUU5cXpreR-Fh-WMuCKUOAx51QSzknmm6GuPtESiSlEcr2gfE2WSFJeus7npbYR9qkB8Mv8VXbgDeunv9svqbbAZ5APCyn5UtSFeQTAtB95AwxCYCqXmKd4LT1tt9kmhaaceCic_nD-Rf24EwAwZ2ZwKHhENMAcCqEaRIY24LxITgPYJxwtVnu4ai1xfrJFseWIQ48BE2GIX4Hfu8BbXM6WsKdMe2UStlxKReBb2TSK-L3479cCCZK9uiEsO6yMHvFNfcCLELGXDQmji9uT1OVkbvpJ51pYtfzYNt1h8_PaTRVNNIrWXCONyZpp2pKNHF_AVJPPvDZzoLk7snzYvuzJCjOO6K29GrC-4HnSARAUsPceF6lq5XBspWUuqQ1qDWr2a8gbVuVGf2da0LIia9GUSIVBbg3Eaijbf-jlleSNtX1uPcpj1hO-GQ5WgjD023ICBHUWlqhgzbD7QNTaxndVlrdxbyPog3LAg6pGLUgAqPYSMcWdZ5L-9hDL8Vrkr76mpCkbUOeSY9EA-ZaYXlu_c03bxZCwqZ3yHtBu_B9tekEhwcePSOwxo5IQfbpStTo4cSwRBgfAjKKTXWsYsUMXvX5mgM6nmA454V6NvI8gQCTVEl_e4Mgq3gyUuT7xSuZ5rthKQDx3E6FPSFQCW2fZYQPJm1psUb8ElxSw_mTLmRzggBTnpmW_HRlmG-tuIrP5LI1Vg3YO-jb1Qdu5iKdWiV8PHPJuuHozTBecBD8QGlJ8mUqNw6e-_EOtdziFmypzLBCXT6CFhwXAlHTi11vmvYqIdePB7bKKPzs-7wyq3lNadxkcArj6fG1H75aVyy10eMRNhwZ7ZWT0GWu6DyExfMtrttCfp7mpj84Nh_Xzlr3IT_Oiuzt1spWkfUkYVsWO1_Bs3rwycn2wGzdGbeO01PkmbktyvQrsh5eNYl7lVWafRh_baci2FdjLiBBVRsDG1AzfwJXziKaBzSl8GH15zPlMG4CimAHAQq1DFLAtLIa2kURTdHqWruhiUq2Fk-sZQtbMWb0hhoupU1MyMk6-TIHcv1RqII4pxDVnBp66Nm09uDWWD6HAruWAT4Vou9UMizHAKkp2wgil8VaH-1BFz86B_Pgyam_ZpY6M4rMwCdYIyWKjAi9_DI6ER9kiICQQkc9YoMBAaJO50l1tltCBqjjJWEVsXPCfev6PkJMmIBXEs9d9ryURcA_-f4fQ8vxIi1xe16uHnA8FHyKKqkBYRP9PyvSMv71sG3p5ATbRmc-9lfyhdD8_5vJ-Ads0xitLzd87W7hP3zm24XkwotbwKdj1lcGHkIy1ImgSi37F-Oy7-FLypAYjXY7pLdJILnHbgDQMgJL4VsZ7mj0eNdL1JMKM-7FJh_7x3lzpW91Yogwfs-PkZJMD4PHhMru2MQ7lS59k2FNWVaBNQZnBpOq_x0ZeCBR2RC5l3hBP0PR20qUpFWqGHPBblJWS96do3XLWQExD2yUThluviDLp7g1yyEGMtkCgDsl7Fdl5uPr4GHxnukUPM0royvjWRsKBK6ni3A5dk7gA1j1QRAexcqHtNCltAMpqOqSRK0opYzmHCyF-UTLa4OZ3Df7LLB9DVwrw3rFq28hw7TosiG8BrJbNt18k5Xqwnx9i7W7D_asuoe41viAmzmeDGdxD6iP2GKg6_6n-LwSs_yoUfpralny0ecxbMPepvxvqxL-ooylZ0fJ9tX9kq8r1vEd4yka-U1sziGvs1ov1p5BrzsQqtZ0rySiwuMHuAKepJbZzOVePE5xCQfBiFGFVQr4e-9k0kDbDF_3HqXqjLG_EX7oLxJ5zrk60_Lbe7Y8KXuJWaWKKMUV7DTjyvjYO2cRMkN6q5tM7nqcDNjascADK-b1TZkVgCZh_wP8ny3Xle5IuPGm762LrlVEvt6LrJqS_0X-itgb7_tK5b2-MFH5hfi7p5XkmYGrgRBIGnNzpccyB69IQY3fVshQ6E_GY-U3XHB7Oyv81sBJgfoPTepFB50XY6M3msJkPk6aTnO_Tg7Jq2h-8ulFwE9NHI_ib1Jc9F4ebL-ag2wi6CsSZ1n9Spv2Jal_4BFU1-nf99nvAvDSCByoUXR3GgwWDDTvpKRZOMaUIyirSOoBhtzCa9cQbQEaYaTM8IUob31FnoE4LPzGBNPCm4HNs4KdKHjoY8rAa6KzYEv0K4c2vJCOMJLhACG2iSX0RiPjrNMisCA67116Uj3bscot5hzBAWnq_r0lS1_HwFfWWXPnFIiH4m8JXKicus2z2pZCeVphrEBgv1X8hR6nNL69gTbqYl5YHu7OZuaqZL53pnqPkTV9o5OKdGy6vupiyTi2IwX56C4Qevp6fJ4Efz4zDjMpB5eyW6K590p-Rsc_CXV_ix_MXjOFrpoxx_4Sq1UOPAbt8JWt8T_JOPAJhFstEorS-c2tT4Y2eFwaLqK8HoVmPDjm9MoLJTtWw6A5B9-A_qtUXvEjnba3KyGfVFTSFFF-MfjL6I8rq096cbhwdDp3Vb5JnEqao7XMX5wZ8hRq6vQ36BBR1MCz1ub-7OAIhKwu129t88AXFBB-mpSkSfpw1VSGDGGvnrOlnjsBPUGEWtJoSX9GgAcyzM0-cRSzB31KV7jypNrHpEWkE71qUV9I2ZL6fwUFDqYMg5GpffaE4X6U7RxalC1V_Jebp1BRGHvvyQyly-fsDASiIK7Od5x9ngVT0vuIUxzVcHp5mjEdMz9NcBeNWi9rN6IWLj3Tuu2iLk62xlQ3AMkPhMhPoe6q-7eSpYScYcjMGg2R17x75kk-f1kv6Jg6Xl6MheAgFbYjgtkb3p11_ta56k17KnGtOZlFxZCcgZ9SmgJX0oozNGgz7D-piV8ToVol9zpoSMR3c-xg1Nj-NzRYNOXdsM-EK-pi_EDYOenLQo6w0OjhWGJv1v9YD5UmPQFhTp_B4Phprqxe9YE76TtvLDCewVBWWdnpaHU_DppHmrHITuCJLD1Cgn4rEFNz7edSgagsna5GbHGCDD2NzFXiGSqy5bwff6Sv-pGd42XI0OraSxzGtgXXLmxBw_27uSaZ9Byia4qP7OfMGs4yBQfv3gIkiMV-a_nDVIR3hY3bvENC7MmHzV4Io-Ipf_0D0T6dLSJuC47ZCMYdTZkK5lzXgXulluJ2eMjmNhO3Arwwb7z4vIV7Gt29-y8r3mpByLGOWEEybk_2s7syYAL05ALBdx0fxq-rUqUI_2bL8ZSO_kbt2MHdTZXA6cMKnkX-iFBgXkf7mqV-J6lPlrxyxy6fxRwGAFP7-JT_l6rZ3tiwO7mfQClamJwWCy2KegjO10vA_zrsGWZbxR4ieFwLgVh7lvpDY-m_MCf7Adkrag3S6husuR_BZYOT2o4n0DDa0OlKDzURCSrnMUsRmLVjToAl8ZV7P_Ln-h4qvwbrJUZk9Dk7SjoRU_QTHW7qMU1HCEKbq07HcCZZpePTDOwrk9bw_Wh5VAxxUSpq-g4PcekOQj0hbxizilYOTdamgNkgy2JHOmAzLiTPZcN8vAnEokYTea07_2a3ydwwQHHXDY1YMfMlRimLtmxez-C46L_PXYal6pyxjszeVzoW6VRJBeVTqI5DrEpr3cmE8fo2vPQCIIC7Db0QVh2PaLdnd-8XYZ-RDoEBcGg01ITXpMI3f98Vpo6LMFV1jlA-aPyYt0r52gX6ZOM3I911tzM7FVgs-sPWvXCEN2VfPQPAyjieG4e2QqD9TpmF0dPc5DEoSB3HrI7f6jOG1BPUzG7NPNIJcuRSnQfakCfvBnmB2QN3VegtqVzBs52IppzuhHRXHoxOseKWnO_qUSZo7X6WfifAiU4b_6HsJSMmpNt_04yEAP7aB1WBDshrF_X69P9D6_r4UCFmtuCsTvJySarnbpTIZWtE5ZQPlWvtCHCiVKKDX_hKeppvZkcReFeTb55vT59mc2BdAeQBA7_Qb6C4qMkr8RCwHVe9MwBdiqLHxqb8jIKrfnkx0gGOuIuqaCuo-pa5iYuLOUt2CuFdtENS2Zp2iInD58dHW7Kyl2qbz1SBBZa4ZcoJ8V5LMj5-9k_LzHFIAXh4Flu90IR27xDLeJl4n8CCF_MttJadhxEojWwjKMDiOmyKaS1yOj0yy46ck1JeEn5Gj6gVtq8LFZMG69KxQX83B_rMONGvH9weBm3Vqxl1mghr7QVzP1HZAYFyB_Wcdjc8QqueILEVGNIRVsJ3-DxniuLFtT-RlOPErtkS6l0NfuVrrPkdA2wyF2TCCWNEfSGEheNExURzuwgQHTJsEi5fXz8qAm-NpWccrgzaznFY8K5I9ldpUmIkkWEx6-Sui_Mpvj1HkHRQFl2ovrPLmOW598ivRsmiejJBFZ-CREld3ggXxzIJLO4cVhMx8faYwpbfGRcgEU33X2OnRAayp8WhYWObvu7Af.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_09f46b0a304eec67016af61538b85487d1bf4f28fda1405ced",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 581,
+   "total_tokens": 2085,
+   "cost": 0.02495,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02495,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01743
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 324,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.4
+}
