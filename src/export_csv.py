@@ -55,7 +55,7 @@ def export_set(set_dir: Path) -> None:
             for i, line in enumerate(t.get("lines") or [])
         ],
     )
-    for run in sorted(set_dir.glob("r*/raw")):
+    for run in sorted(set_dir.glob("*/raw")):
         calls, bills, lines = [], [], []
         for engine_dir in sorted(run.iterdir()):
             engine = engine_dir.name

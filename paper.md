@@ -32,7 +32,7 @@ against current image-in models.
 
 For the people who use it, the question is whether a bill can be booked
 as read, so we define the main outcome from an accountant's point of view
-(section 4.4).
+(section 4.5).
 
 ### Research questions
 
@@ -167,6 +167,8 @@ file.
 | Gemini 2.5 Pro | `google/gemini-2.5-pro` | same; the best model of Berghaus et al., as anchor |
 | Claude Sonnet 5.5 | `anthropic/claude-sonnet-5.5` | same |
 | GPT-5.5 | `openai/gpt-5.5` | same |
+| GPT-5.6 Terra | `openai/gpt-5.6-terra` | same; added after the first results |
+| Claude Opus 5.5 | `anthropic/claude-opus-5.5` | same; added after the first results |
 | Mistral OCR → Mistral Medium 3.5 | `mistralai/mistral-medium-3-5` | OpenRouter `file-parser` plugin with engine `mistral-ocr`: the page goes through Mistral OCR, the model gets its text |
 
 All LLMs received the same one-paragraph prompt and the same JSON schema
@@ -190,7 +192,34 @@ Odoo's cost is the list price of one IAP credit in the smallest pack (100
 credits for EUR 15; larger packs go down to EUR 0.05). Seconds are wall-clock
 time per bill, including Odoo's polling at 5-second intervals.
 
-### 4.4 Outcomes
+### 4.4 Reading rules and the learning loop (H3, H4)
+
+The baseline prompt says only what the document is and which format to
+answer in. For H3 a block of four reading rules, fixed in the plan before
+any data for it (`RULES` in `src/bench_invoices.py`), is added: read dates in
+the convention of the vendor's country; the vendor is never a heading or
+the buyer; the invoice number is the bill's own number, not an order,
+customer or delivery number; no VAT shown means tax 0.
+
+For H4 the rules are written by a model instead of by us. Gemini 3.8 Flash
+read a training sample with the baseline prompt: 50 Donut bills and 50
+SROIE receipts drawn with seed 7 from the bills that are not in the test
+samples. Its wrong header fields (field, right value, its value) went to
+Claude Opus 5.5 with the request to write at most 10 general rules that
+quote no value from the errors (`src/learn_rules.py`). Those rules
+(`results/rules_learned.txt`, with the full request and answer in
+`rules_learned.trace.json`) were then added to the prompt unchanged.
+
+H3 and H4 were each run once with two models, the cheapest (Gemini 3.8
+Flash) and the most accurate of run 1 (Claude Sonnet 5.5), on the same three
+test samples as the baseline. Odoo's API takes no instructions and is not
+part of H3 or H4.
+
+This is the simplest form of a learning loop: errors in, rules out, no
+model training. In production the errors would be the corrections a
+bookkeeper makes; here the ground truth plays that role.
+
+### 4.5 Outcomes
 
 **Primary outcome: bookable without correction.** A bill counts as
 bookable when every field an accountant needs to post it is right:
@@ -477,6 +506,8 @@ that difficulty is in the labels. We exclude such truths from scoring.
 | Primary outcome: header-field accuracy | Primary outcome: bookable without correction | Header-field accuracy does not answer the practical question; changed at the research owner's request after the first results, before the repeated runs |
 | One run per engine | Planned three runs per language model; done two on the invoice sets, one on SROIE | Two runs measure run-to-run variation; the third did not fit the OpenRouter credit limit of the study |
 | Two test sets | SROIE receipts added | Requested by the research owner after the first results, for real scanned documents |
+| Six language models | Eight: GPT-5.6 Terra and Claude Opus 5.5 added | Asked by the research owner after the first results. GPT-5.5 had been chosen as OpenAI's newest model by mistake; GPT-5.6 Terra is newer. GPT-5.5 stays in as the earlier generation |
+| (not planned) | H3 and H4, reading rules and a learning loop | Added at the research owner's request after the first results; pre-registered in a plan addendum before any data for them |
 | (not planned) | An exploratory run of all engines with an earlier schema (no VAT summary, no line amount) is not reported | It preceded the final schema; its numbers were within a few points of run 1 and led to the scoring revisions below |
 | Scoring rules as first written | Four rules revised after inspecting the first LLM answers: (1) names match by containment, not prefix ("Au bon moulin" against "Au bon moulin SARL"); (2) amounts by absolute value (credit notes print negative amounts where the XML holds positive ones); (3) truth IBANs failing their checksum not scored; (4) the VAT summary added to the schema, since line amounts computed as quantity × price miss discounts | Each revision corrects a scoring error that marked a right answer wrong for every engine alike. The original rules remain available (`--strict`) and their results are published |
 

@@ -27,7 +27,7 @@ results/
 ```
 
 In `r2/` and later, `raw/odoo` is a link to `r1/raw/odoo`: Odoo's answers were
-identical across runs (paper, section 4.4), so they are stored once.
+identical across runs (paper, section 4.5), so they are stored once.
 
 ## Bills: `truth_bills.csv`, `answers_bills.csv`
 
@@ -82,7 +82,7 @@ An absent truth is not scored.
 
 The bookable outcome, the VAT summary per rate and the summaries are
 computed from the raw answers by `src/bench_score.py`; see the paper,
-section 4.4.
+section 4.5.
 
 ## Raw answers: `raw/<engine>/<bill>.json`
 
