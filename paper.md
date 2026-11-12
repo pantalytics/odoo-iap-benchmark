@@ -59,6 +59,14 @@ statement was made.
   than image-in LLMs on these born-digital documents; OCR earns its place on
   bad scans only.
 - RQ1 and RQ4 had no directional hypothesis; they are descriptive.
+- **H3** (plan addendum, committed before any data for it): a short block of
+  reading rules in the prompt (date convention by the vendor's country, who
+  the vendor is, which number is the invoice number, no VAT shown means tax 0)
+  raises the bookable rate by at least 10 points on Donut, without a drop of
+  more than 5 points on the other sets.
+- **H4** (same addendum): rules written automatically by a model from another
+  model's errors on a separate training sample improve the held-out test
+  results about as much as the hand-written rules of H3.
 
 ## 3. Related work
 

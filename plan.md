@@ -195,3 +195,33 @@ IAP credits. The script also stops at `--max-eur`.
 3. AI Pro, only if an LLM wins clearly on the [client] set: let an agent
    read a PDF attachment, with the PDF engine (native or `mistral-ocr`) as
    a setting on the model. Today AI Pro sends no files to the model.
+
+## Addendum 2026-11-12, before any data for it: instructions and a learning loop
+
+Written and committed before running anything for H3 or H4.
+
+- **H3, instructions.** A short block of reading rules added to the prompt
+  raises the bookable rate. The rules, fixed now: read dates in the
+  convention of the vendor's country (month first for US vendors, day first
+  elsewhere), using the address, currency and any unambiguous date on the
+  page; the vendor is the party that issues the bill and is paid, never a
+  heading or the buyer; the invoice number is the number labelled as the
+  bill's own number, not an order, customer or delivery number; when no VAT
+  is shown, untaxed equals total and tax is 0. Prediction: bookable rate up
+  by at least 10 points on Donut for both models, no drop of more than 5
+  points on EN 16931 or SROIE.
+- **H4, learning loop.** Rules written automatically from a model's own
+  errors on a separate training sample improve the bookable rate on the
+  held-out test sample about as much as the hand-written rules of H3.
+  Training sample: 50 Donut bills and 50 SROIE receipts drawn with seed 7 from
+  the bills not in the test samples. Gemini 3.8 Flash reads the training
+  sample with the baseline prompt; its errors (field, right value, its
+  value) go to Claude Opus 5.5, which writes at most 10 general rules and
+  may not quote any value from the errors. Those rules are then used
+  unchanged on the test samples.
+- Models for H3 and H4: Gemini 3.8 Flash (cheapest) and Claude Sonnet 5.5
+  (most accurate in run 1), one run each, on the three test samples. Odoo
+  takes no instructions and is not part of H3 or H4.
+- Odoo's own learning is out of scope: inside a database it remembers a
+  vendor's accounts and taxes from earlier bills, which the raw Extract API
+  does not show.
