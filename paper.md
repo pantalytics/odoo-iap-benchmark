@@ -385,6 +385,29 @@ Per bill a language model cost EUR 0.004 (Gemini 3.8 Flash) to EUR 0.03
 pipeline answered in 3 to 4 seconds, Gemini 3.1 Pro in about 20. Odoo took 7
 to 8 seconds, mostly waiting on its queue.
 
+The reading is not what a bill costs, though; the correcting is. We count
+EUR 1.33 for each bill that is not bookable as read (two minutes of a
+bookkeeper at EUR 40 an hour, an assumption) and add it to the reading cost
+(`results/<set>/aggregate.md`):
+
+| Per 100 bills, run 1 | Donut | EN 16931 |
+|---|---|---|
+| Odoo | EUR 146 | EUR 135 |
+| Claude Sonnet 5.5 | EUR 5 | EUR 7 |
+| Gemini 3.8 Flash | EUR 48 | EUR 0.50 |
+| GPT-5.5 | EUR 38 | EUR 2 |
+| Gemini 3.1 Pro | EUR 44 | EUR 3 |
+| Gemini 2.5 Pro | EUR 42 | EUR 8 |
+| Mistral OCR → Medium | EUR 53 | EUR 12 |
+
+Correction dominates: one bill corrected costs as much as reading 50 to 300
+bills with a language model. The ranking by total cost is the ranking by
+bookable rate unless a correction costs less than about EUR 0.05, which no
+manual check does. So the cheapest engine is the one that is most often
+right on the bills a company actually receives, not the one with the lowest
+price per call. Between engines with the same bookable rate, the price per
+call decides (on EN 16931: Gemini 3.8 Flash).
+
 ### 6.5 What this means for an Odoo user
 
 Read raw, Odoo's digitization gives a draft that needs correcting on nearly
@@ -392,7 +415,11 @@ every bill in these sets, mostly the vendor, the number and the date, and on
 US-style bills the tax. Inside a database the vendor lookup will recover part
 of the vendor errors (section 7), but not the numbers, dates and taxes. A
 current language model gets most of these bills right as read, at a quarter
-of the price or less.
+of the price per call or less, and the saving in corrections is a hundred
+times larger than the saving in price. Which model to pick depends on the
+bills: on these sets Claude Sonnet 5.5 was the safest choice (best on the US
+dates, at EUR 0.01 a bill), Gemini 3.8 Flash the cheapest where dates are
+unambiguous. A follow-up on real Dutch vendor bills will tell for those.
 
 
 ### 6.3 The ground truth has errors too
