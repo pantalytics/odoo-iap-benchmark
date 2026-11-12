@@ -4,8 +4,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install "ruff>=0.15.10,<0.16"
@@ -15,6 +15,7 @@ jobs:
       - name: Rescore from the raw answers
         run: |
           set -e
+          shopt -s nullglob
           engines=odoo,gemini-flash,gemini-pro,gemini-2.5-pro,claude-sonnet,gpt,mistral-ocr
           for run in results/*/r*/; do
             set_dir=$(dirname "$run")
@@ -22,5 +23,5 @@ jobs:
               python src/bench_invoices.py "$set_dir" "$run" --engines "$engines" --score-only $strict > /dev/null
             done
           done
-          python src/aggregate.py results > /dev/null
+          [ -d results ] && python src/aggregate.py results > /dev/null
           git diff --exit-code -- results
