@@ -347,7 +347,8 @@ def main() -> None:
         docs = docs[: args.limit] if args.limit else docs
         if args.sample and args.sample < len(docs):
             docs = random.Random(42).sample(docs, args.sample)
-        jobs = [(e, d) for e in engines for d in docs]
+        # Bill by bill, so one slow model does not hold up the others.
+        jobs = [(e, d) for d in docs for e in engines]
         with ThreadPoolExecutor(args.workers) as pool:
             done = pool.map(lambda j: (j, run_one(j[0], j[1], args.data, args.out, cfg)), jobs)
             for (engine, doc), status in done:
