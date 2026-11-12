@@ -17,9 +17,14 @@ import json
 import sys
 from pathlib import Path
 
-# The cost of a bill that is not bookable as read: someone corrects it. Two
-# minutes at EUR 40 an hour, an assumption; the paper shows what it does.
-CORRECTION_EUR = 2 / 60 * 40
+# AI cost: language models as billed by OpenRouter (USD, converted at
+# USD_EUR); Odoo at the list price of its smallest credit pack (100 credits
+# for EUR 15, iap.odoo.com, 2026-11-12), one credit per document.
+USD_EUR = 0.86
+ODOO_CREDIT_EUR = 0.15
+# Human time is reported apart, in hours, never priced: each bill that is
+# not bookable as read needs a correction, assumed to take this long.
+CORRECTION_MINUTES = 2
 
 METRICS = (
     ("Bookable %", "book", "book_n"),
@@ -41,9 +46,11 @@ def main() -> None:
             f"# {set_dir.name}: {len(runs)} runs\n",
             "Mean over runs, range in brackets. Odoo was run once: two runs gave "
             "byte-identical output, so the same answers are scored in every run. "
-            f"Corrections: EUR {CORRECTION_EUR:.2f} for each bill that is not bookable.\n",
-            "| Engine | " + " | ".join(m[0] for m in METRICS) + " | EUR per bill "
-            "| EUR per bookable bill | EUR per 100 bills incl. corrections |",
+            f"AI cost: OpenRouter as billed (USD at {USD_EUR}), Odoo at EUR {ODOO_CREDIT_EUR} a "
+            f"credit. Correction time: {CORRECTION_MINUTES} minutes per bill that is not "
+            "bookable, an assumption.\n",
+            "| Engine | " + " | ".join(m[0] for m in METRICS) + " | AI cost, EUR per 100 bills "
+            "| Bills to correct per 100 | Correction time per 100 bills |",
             "|---" * (len(METRICS) + 4) + "|",
         ]
         for e in engines:
@@ -55,15 +62,18 @@ def main() -> None:
                     continue
                 mean = sum(vals) / len(vals)
                 cells.append(f"{mean:.1f} [{min(vals):.1f} to {max(vals):.1f}]")
-            cost = sum(d[e]["cost"] / d[e]["docs"] for d in data if e in d) / len(data)
+            if e == "odoo":
+                cost = ODOO_CREDIT_EUR
+            else:  # summaries hold USD as billed times 0.86, the rate bench_invoices used
+                eur = sum(d[e]["cost"] / d[e]["docs"] for d in data if e in d) / len(data)
+                cost = eur / 0.86 * USD_EUR
             rates = [d[e]["book"] / d[e]["book_n"] for d in data if e in d and d[e]["book_n"]]
-            bookable = sum(rates) / len(rates) if rates else 0.0
-            per_bookable = f"{cost / bookable:.4f}" if bookable else "-"
-            per_100 = 100 * cost + 100 * (1 - bookable) * CORRECTION_EUR
+            to_fix = 100 * (1 - sum(rates) / len(rates)) if rates else 0.0
+            hours = to_fix * CORRECTION_MINUTES / 60
             md.append(
                 f"| {e} | "
                 + " | ".join(cells)
-                + f" | {cost:.4f} | {per_bookable} | {per_100:.2f} |"
+                + f" | {100 * cost:.2f} | {to_fix:.0f} | {hours:.1f} h |"
             )
         text = "\n".join(md) + "\n"
         (set_dir / "aggregate.md").write_text(text)
