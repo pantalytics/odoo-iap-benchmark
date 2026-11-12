@@ -24,4 +24,5 @@ jobs:
             done
           done
           [ -d results ] && python src/aggregate.py results > /dev/null
+          [ -d results ] && python src/export_csv.py results > /dev/null
           git diff --exit-code -- results

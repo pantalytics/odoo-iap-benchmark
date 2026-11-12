@@ -483,7 +483,9 @@ that difficulty is in the labels. We exclude such truths from scoring.
 ## 9. Reproducibility
 
 All code is in `src/`, all raw answers of all engines in `results/`, with
-the truth files and their source hashes. Scores can be recomputed from the
+the truth files and their source hashes. Truth, answers, calls (model,
+provider, time, cost, tokens) and scores are also given as CSV; `DATA.md`
+describes every file and column. Scores can be recomputed from the
 raw answers at no cost; the full study can be repeated with an OpenRouter
 key and an Odoo IAP account (README). Runs took place on 2026-11-12 with
 Python 3.13.18 and pypdf 7.0.1. Total cost: <!-- RESULTS:COST -->.

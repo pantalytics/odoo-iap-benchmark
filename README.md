@@ -12,6 +12,7 @@ to book it, and how do current language models compare? The paper is
 | `results/<set>/r1..r3/` | Every raw answer of every engine (`raw/`), the per-field scores (`results.csv`), the summaries (`summary.md`, `summary.json`) and the strict-scoring variant (`*_strict.*`) |
 | `results/<set>/truth.jsonl` | The right answers, with source revision and SHA-256 of each source file |
 | `results/<set>/aggregate.md` | Mean and range over the runs |
+| `results/**/*.csv` | Flat copies of truth, answers, calls and scores; every column in [DATA.md](DATA.md) |
 
 ## Rescore without spending anything
 
