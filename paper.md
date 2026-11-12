@@ -30,9 +30,9 @@ which Odoo's own model extracts the fields. That makes the comparison
 interesting beyond Odoo: it is a production OCR-then-extract pipeline
 against current image-in models.
 
-What matters to the people who use it is not character accuracy but
-whether the bill can be booked as read. We therefore define the main
-outcome from an accountant's point of view (section 4.4).
+For the people who use it, the question is whether a bill can be booked
+as read, so we define the main outcome from an accountant's point of view
+(section 4.4).
 
 ### Research questions
 
@@ -178,8 +178,8 @@ field is not held against Odoo.
 
 Model ids were checked against OpenRouter's model list on 2026-11-12, the
 day all runs took place. Costs per call are OpenRouter's reported cost.
-Odoo's cost is the price of one IAP credit, about EUR 0.13 at the pack size
-used (an assumption; Odoo bills credits in packs). Seconds are wall-clock
+Odoo's cost is the list price of one IAP credit in the smallest pack (100
+credits for EUR 15; larger packs go down to EUR 0.05). Seconds are wall-clock
 time per bill, including Odoo's polling at 5-second intervals.
 
 ### 4.4 Outcomes
@@ -212,22 +212,23 @@ currency sign counts as its ISO code. Names count when one contains the
 other (after lower-casing and removing punctuation) or when their
 similarity ratio is at least 0.9, and the prediction is at least 4
 characters. Truth IBANs that fail the ISO 13616 checksum are not scored
-(section 6.3).
+(section 6.6).
 
 **Statistics.** Proportions carry a 95% Wilson score interval. For field
 accuracy the interval treats fields as independent, which they are not
-within a bill; it is a lower bound on the uncertainty. Each LLM was run
-three times on every bill; we report the mean and the range. Odoo was run
-twice on all 123 bills, once without and once with the buyer hints, and
-returned byte-identical answers both times, so one run is scored for all
-three.
+within a bill; it is a lower bound on the uncertainty. Each language model
+was run twice on the invoice sets and once on the receipts; we report the
+mean and the range. Odoo was run twice on the 123 invoices, once without and
+once with the buyer hints, and returned byte-identical answers both times,
+so the same answers are scored in both runs. It was run once on the
+receipts.
 
 ## 5. Results
 
-Numbers below are from run 1 of 3. Square brackets give the 95% Wilson
+Numbers below are from run 1 of 2. Square brackets give the 95% Wilson
 interval of the bookable rate. "Line VAT rate" is the share of lines whose
 VAT rate is right, matched by position; "VAT summary" the share of bills
-whose base amount per VAT rate is right. When runs 2 and 3 are in, the
+whose base amount per VAT rate is right. When run 2 is in, the
 tables give the mean, with the range over runs in round brackets
 (`results/<set>/aggregate.md`).
 
@@ -235,7 +236,7 @@ tables give the mean, with the range over runs in round brackets
 
 | Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
 |---|---|---|---|---|---|---|
-| Odoo digitization | 0.0 [0 to 4] | 51.5 | 4.2 | 6.2 | 0.129 | 8 |
+| Odoo digitization | 0.0 [0 to 4] | 51.5 | 4.2 | 6.2 | 0.150 | 8 |
 | Claude Sonnet 5.5 | 97.0 [92 to 99] | 99.5 | 100.0 | 99.0 | 0.009 | 4 |
 | Gemini 3.1 Pro | 69.0 [59 to 77] | 96.1 | 100.0 | 99.0 | 0.026 | 21 |
 | GPT-5.5 | 73.0 [64 to 81] | 96.2 | 100.0 | 99.0 | 0.022 | 9 |
@@ -261,7 +262,7 @@ Per field, % right:
 
 | Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
 |---|---|---|---|---|---|---|
-| Odoo digitization | 8.7 [2 to 27] | 66.8 | 37.7 | 95.7 | 0.129 | 7 |
+| Odoo digitization | 8.7 [2 to 27] | 66.8 | 37.7 | 95.7 | 0.150 | 7 |
 | Claude Sonnet 5.5 | 95.7 [79 to 99] | 99.1 | 98.1 | 100.0 | 0.014 | 3 |
 | Gemini 3.1 Pro | 100.0 [86 to 100] | 100.0 | 100.0 | 100.0 | 0.029 | 25 |
 | GPT-5.5 | 100.0 [86 to 100] | 100.0 | 98.1 | 100.0 | 0.021 | 7 |
@@ -303,7 +304,7 @@ Odoo loses 1 to 4.
 
 | Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
 |---|---|---|---|---|---|---|
-| Odoo digitization | 0.0 [0 to 4] | 50.1 | 4.2 | 6.2 | 0.129 | 8 |
+| Odoo digitization | 0.0 [0 to 4] | 50.1 | 4.2 | 6.2 | 0.150 | 8 |
 | Claude Sonnet 5.5 | 97.0 [92 to 99] | 96.9 | 100.0 | 99.0 | 0.009 | 4 |
 | Gemini 3.1 Pro | 69.0 [59 to 77] | 93.5 | 100.0 | 99.0 | 0.026 | 21 |
 | GPT-5.5 | 73.0 [64 to 81] | 93.6 | 100.0 | 99.0 | 0.022 | 9 |
@@ -315,7 +316,7 @@ Odoo loses 1 to 4.
 
 | Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
 |---|---|---|---|---|---|---|
-| Odoo digitization | 8.7 [2 to 27] | 62.9 | 37.7 | 95.7 | 0.129 | 7 |
+| Odoo digitization | 8.7 [2 to 27] | 62.9 | 37.7 | 95.7 | 0.150 | 7 |
 | Claude Sonnet 5.5 | 91.3 [73 to 98] | 95.6 | 98.1 | 100.0 | 0.014 | 3 |
 | Gemini 3.1 Pro | 95.7 [79 to 99] | 96.5 | 100.0 | 100.0 | 0.029 | 25 |
 | GPT-5.5 | 95.7 [79 to 99] | 96.5 | 98.1 | 100.0 | 0.021 | 7 |
@@ -338,21 +339,24 @@ Odoo loses 1 to 4.
 
 ### 6.1 Where Odoo goes wrong
 
-- **Vendor.** Odoo's raw read named the vendor correctly on 0 of 100
-  Donut bills and 2 of 23 EN 16931 bills. It often returns a heading as
-  the vendor ("Invoice no", "Beispiel"). It found the vendor's VAT number on
-  2% and 27% of the bills.
-- **Invoice number and date.** On the EN 16931 bills, half the numbers and
-  dates were wrong: Odoo returned another number on the page (a customer or
-  order number) and another date (the delivery date).
-- **Untaxed amount and tax.** On 93 of 99 Donut bills Odoo returned the total
-  as the untaxed amount and 0 as the tax: it did not read the VAT column.
-  On the EN 16931 bills it got both right on 22 of 23.
-- **Lines.** Odoo returns one line per VAT rate, not the article lines (1.4
-  lines per bill against 2.3 printed). Matched line by line that scores
-  low; as a VAT summary it is right on 22 of 23 EN 16931 bills. Odoo itself
-  offers "one line per tax" as a booking option, so for the accountant this
-  is not a defect; the lost article detail is.
+The vendor is Odoo's weakest field. Its raw read named the vendor on 0 of
+100 Donut bills and 2 of 23 EN 16931 bills, often returning a heading
+instead ("Invoice no", "Beispiel"), and found the vendor's VAT number on 2%
+and 27% of them.
+
+On the EN 16931 bills half the invoice numbers and dates were wrong. Odoo
+picked another number on the page, a customer or order number, and another
+date, usually the delivery date.
+
+On 93 of 99 Donut bills Odoo returned the total as the untaxed amount and 0
+as the tax: it did not read the VAT column. On the EN 16931 bills it got
+both right on 22 of 23.
+
+Odoo returns one line per VAT rate rather than the article lines (1.4 lines
+per bill against 2.3 printed). Matched line by line that scores low, but as
+a VAT summary it is right on 22 of 23 EN 16931 bills. Odoo itself offers
+"one line per tax" as a booking option, so the merged lines are not the
+problem for an accountant; the lost article detail is.
 
 Totals and currency Odoo reads reliably (96 to 100%).
 
@@ -421,7 +425,7 @@ dates, at EUR 0.01 a bill), Gemini 3.8 Flash the cheapest where dates are
 unambiguous. A follow-up on real Dutch vendor bills will tell for those.
 
 
-### 6.3 The ground truth has errors too
+### 6.6 The ground truth has errors too
 
 In 25 of the 100 Donut bills of our sample, the IBAN in the ground truth
 fails its own checksum ("GB82D)FU82ZI3146210425"): the labels were partly
@@ -431,29 +435,29 @@ that difficulty is in the labels. We exclude such truths from scoring.
 
 ## 7. Limitations
 
-- **Raw read, not the booked bill.** We scored what Odoo's Extract API
+- Raw read, not the booked bill. We scored what Odoo's Extract API
   returns. Inside a database Odoo also searches the vendor in the partner
   list (by VAT number, name, bank account) and applies the vendor's fiscal
   position and default taxes. The bill an accountant finally sees can be
   better than the raw read, or worse where defaults override a correct
   read. A follow-up study books real bills in a real database.
-- **Mostly clean documents.** Both invoice sets are generated PDFs. The SROIE
+- Mostly clean documents. Both invoice sets are generated PDFs. The SROIE
   receipts are real scans, but flatbed scans of Malaysian till receipts, not
   phone photos of European bills. H2 is tested on clean invoices and on these
   scans only.
-- **Small VAT set.** The EN 16931 set has 23 bills, mostly German, and no
+- Small VAT set. The EN 16931 set has 23 bills, mostly German, and no
   reverse-charge sample. Its VAT results show capability, not a rate that
   carries to a company's real mix of bills.
-- **US conventions in Donut.** Donut prints US dates (month first), which
+- US conventions in Donut. Donut prints US dates (month first), which
   European readers, human or model, misread when the day is 12 or less.
   This affects the date field and so the bookable rate.
-- **Model drift.** Hosted models change behind the same name, and
+- Model drift. Hosted models change behind the same name, and
   temperature 0 does not make their output deterministic. The run-to-run
   range shows the second; nothing here guards against the first.
-- **Possible caching at Odoo.** Odoo's two runs were identical to the byte.
+- Possible caching at Odoo. Odoo's two runs were identical to the byte.
   The service may cache results per file, in which case our two runs are
   not independent evidence of determinism.
-- **Scoring rules revised after a first look.** See section 8. Results under
+- Scoring rules revised after a first look. See section 8. Results under
   the original rules are published alongside (`*_strict.*`).
 
 ## 8. Deviations from the plan
@@ -463,7 +467,7 @@ that difficulty is in the labels. We exclude such truths from scoring.
 | Fraunhofer's scanned set inv-cdip (`a889638`) | Not used | Automated download refused by the source library |
 | A synthetic EU VAT set of our own (`ffa4567`) | Built, then removed (`32a3c5f`) | Not a standard set; decided by the research owner before any result on it |
 | Primary outcome: header-field accuracy | Primary outcome: bookable without correction | Header-field accuracy does not answer the practical question; changed at the research owner's request after the first results, before the repeated runs |
-| One run per engine | Three runs per LLM on the invoice sets, one on SROIE | To measure run-to-run variation; SROIE got one run within the budget |
+| One run per engine | Planned three runs per language model; done two on the invoice sets, one on SROIE | Two runs measure run-to-run variation; the third did not fit the OpenRouter credit limit of the study |
 | Two test sets | SROIE receipts added | Requested by the research owner after the first results, for real scanned documents |
 | (not planned) | An exploratory run of all engines with an earlier schema (no VAT summary, no line amount) is not reported | It preceded the final schema; its numbers were within a few points of run 1 and led to the scoring revisions below |
 | Scoring rules as first written | Four rules revised after inspecting the first LLM answers: (1) names match by containment, not prefix ("Au bon moulin" against "Au bon moulin SARL"); (2) amounts by absolute value (credit notes print negative amounts where the XML holds positive ones); (3) truth IBANs failing their checksum not scored; (4) the VAT summary added to the schema, since line amounts computed as quantity × price miss discounts | Each revision corrects a scoring error that marked a right answer wrong for every engine alike. The original rules remain available (`--strict`) and their results are published |
