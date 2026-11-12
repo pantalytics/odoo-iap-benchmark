@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "RESTORAN WAN SHENG",
+  "vendor_vat": "001335787520",
+  "invoice_ref": "1044151",
+  "invoice_date": "2018-03-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 2.17,
+  "tax": 0.13,
+  "total": 2.3,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kopi O (B)",
+    "quantity": 1.0,
+    "unit_price": 1.98,
+    "tax_rate": 6.0,
+    "net": 1.98
+   },
+   {
+    "description": "Take Away",
+    "quantity": 1.0,
+    "unit_price": 0.19,
+    "tax_rate": 6.0,
+    "net": 0.19
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 2.17,
+    "tax": 0.13
+   }
+  ]
+ },
+ "cost_usd": 0.0345175,
+ "raw": {
+  "id": "gen-1794512679-HGW7TSStkDGqWLvybyhV",
+  "object": "chat.completion",
+  "created": 1794512679,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1044151\",\n  \"invoice_date\": \"2018-03-14\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 2.17,\n  \"tax\": 0.13,\n  \"total\": 2.3,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Kopi O (B)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.98,\n      \"tax_rate\": 6.0,\n      \"net\": 1.98\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 1.0,\n      \"unit_price\": 0.19,\n      \"tax_rate\": 6.0,\n      \"net\": 0.19\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 2.17,\n      \"tax\": 0.13\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data**\n\nI've successfully identified \"RESTORAN WAN SHENG\" as the vendor name and \"001335787520\" as the GST REG NO, as per the receipt's information. I'm moving on to extracting other fields now to populate the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the invoice reference \"1044151\" and invoice date \"14-03-2018\", now formatted as \"2018-03-14\". I've set the due date to `null` as it's a cash transaction, and I've identified \"MYR\" as the currency code. I am moving on to extracting the monetary values and tax details to complete the schema.\n\n\n**Completing JSON Extraction**\n\nI'm now focused on extracting the remaining values for the JSON schema. I've successfully identified the \"untaxed\", \"tax\", and \"total\" amounts. Now, I need to extract the line items and address the discrepancy regarding tax inclusion. The line items are \"Kopi O (B)\" and \"Take Away\". I've determined that their totals are tax-inclusive and I'm calculating the net amounts for each to properly represent them in the JSON output. I'm also confirming the tax rate of 6% for both line items. I'm taking the total values and calculating what the net amount for each is, using this formula: total / 1.06 = net.\n\n\n**Finalizing Field Mapping**\n\nI'm now integrating all the data points. I've successfully extracted and formatted the invoice date, and I've confirmed that the due date is null. The currency code is MYR. I'm focusing on the line item details now, calculating the tax-exclusive amounts for `unit_price` and `net` to match the schema's requirements. Specifically, I calculated the net amounts for line items using tax-inclusive totals.\n\n\n**Finalizing Calculations**\n\nI've completed extracting all required data from the receipt to populate the JSON schema. I've focused on calculating the tax-exclusive values for the line items, as the \"U.price\" and \"Total\" values on the receipt are tax-inclusive. I've performed calculations to derive the net amounts for each line and confirmed that they sum up to the total net amount before tax, matching the schema's requirements.\n\nI've clarified that the unit price and net value for each line item need to be tax exclusive. After resolving this ambiguity, I'm confident in the JSON data I have derived from the receipt, and I'm ready to proceed with constructing the final JSON schema.\n\n\n**Finalizing Line Item Details**\n\nI've carefully re-examined the line items and clarified the tax treatment. The provided \"U.price\" and \"Total\" values appear tax-inclusive. I've confirmed they sum to the total on the receipt, and I am now calculating the tax-exclusive `unit_price` and `net` values for each line to align with the schema requirements. I'm also ensuring the total before tax sums correctly.\n\n\n**Finalizing the JSON**\n\nI am now confident in the values extracted and calculated from the receipt. I've re-examined the line items and tax calculations extensively. I'm ready to construct the final JSON output, including the calculated tax-exclusive values for the line items, ensuring it aligns with the schema's requirements.\n\n\n**Refining Calculations**\n\nI've re-examined the line items and the ambiguity surrounding tax inclusion and the schema. Based on the \"Total\" values, the provided figures appear tax-inclusive. I've reconfirmed the total net amount of 2.17 and tax amount of 0.13 by calculating net amounts for each line and have corrected for rounding. I am now confident in using tax-exclusive calculations for unit price and net values to align with the schema.\n\n```json\n{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1044151\",\n  \"invoice_date\": \"2018-03-14\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 2.17,\n  \"tax\": 0.13,\n  \"total\": 2.30,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Kopi O (B)\",\n      \"quantity\": 1,\n      \"unit_price\": 1.98,\n      \"tax_rate\": 6,\n      \"net\": 1.98\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 1,\n      \"unit_price\": 0.19,\n      \"tax_rate\": 6,\n      \"net\": 0.19\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 2.17,\n      \"tax\": 0.13\n    }\n  ]\n}\n```\n\n\n**Refining Schema Completion**\n\nI'm now satisfied with the line item calculations. I am using tax-exclusive values for the unit price and net amounts, derived from the tax-inclusive totals on the receipt. I've re-examined the numbers, ensuring the line item net amounts sum up to the \"Total (Excluding GST)\" value, and that I'm correctly representing the tax in the breakdown.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data**\n\nI've successfully identified \"RESTORAN WAN SHENG\" as the vendor name and \"001335787520\" as the GST REG NO, as per the receipt's information. I'm moving on to extracting other fields now to populate the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the invoice reference \"1044151\" and invoice date \"14-03-2018\", now formatted as \"2018-03-14\". I've set the due date to `null` as it's a cash transaction, and I've identified \"MYR\" as the currency code. I am moving on to extracting the monetary values and tax details to complete the schema.\n\n\n**Completing JSON Extraction**\n\nI'm now focused on extracting the remaining values for the JSON schema. I've successfully identified the \"untaxed\", \"tax\", and \"total\" amounts. Now, I need to extract the line items and address the discrepancy regarding tax inclusion. The line items are \"Kopi O (B)\" and \"Take Away\". I've determined that their totals are tax-inclusive and I'm calculating the net amounts for each to properly represent them in the JSON output. I'm also confirming the tax rate of 6% for both line items. I'm taking the total values and calculating what the net amount for each is, using this formula: total / 1.06 = net.\n\n\n**Finalizing Field Mapping**\n\nI'm now integrating all the data points. I've successfully extracted and formatted the invoice date, and I've confirmed that the due date is null. The currency code is MYR. I'm focusing on the line item details now, calculating the tax-exclusive amounts for `unit_price` and `net` to match the schema's requirements. Specifically, I calculated the net amounts for line items using tax-inclusive totals.\n\n\n**Finalizing Calculations**\n\nI've completed extracting all required data from the receipt to populate the JSON schema. I've focused on calculating the tax-exclusive values for the line items, as the \"U.price\" and \"Total\" values on the receipt are tax-inclusive. I've performed calculations to derive the net amounts for each line and confirmed that they sum up to the total net amount before tax, matching the schema's requirements.\n\nI've clarified that the unit price and net value for each line item need to be tax exclusive. After resolving this ambiguity, I'm confident in the JSON data I have derived from the receipt, and I'm ready to proceed with constructing the final JSON schema.\n\n\n**Finalizing Line Item Details**\n\nI've carefully re-examined the line items and clarified the tax treatment. The provided \"U.price\" and \"Total\" values appear tax-inclusive. I've confirmed they sum to the total on the receipt, and I am now calculating the tax-exclusive `unit_price` and `net` values for each line to align with the schema requirements. I'm also ensuring the total before tax sums correctly.\n\n\n**Finalizing the JSON**\n\nI am now confident in the values extracted and calculated from the receipt. I've re-examined the line items and tax calculations extensively. I'm ready to construct the final JSON output, including the calculated tax-exclusive values for the line items, ensuring it aligns with the schema's requirements.\n\n\n**Refining Calculations**\n\nI've re-examined the line items and the ambiguity surrounding tax inclusion and the schema. Based on the \"Total\" values, the provided figures appear tax-inclusive. I've reconfirmed the total net amount of 2.17 and tax amount of 0.13 by calculating net amounts for each line and have corrected for rounding. I am now confident in using tax-exclusive calculations for unit price and net values to align with the schema.\n\n```json\n{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1044151\",\n  \"invoice_date\": \"2018-03-14\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 2.17,\n  \"tax\": 0.13,\n  \"total\": 2.30,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Kopi O (B)\",\n      \"quantity\": 1,\n      \"unit_price\": 1.98,\n      \"tax_rate\": 6,\n      \"net\": 1.98\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 1,\n      \"unit_price\": 0.19,\n      \"tax_rate\": 6,\n      \"net\": 0.19\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 2.17,\n      \"tax\": 0.13\n    }\n  ]\n}\n```\n\n\n**Refining Schema Completion**\n\nI'm now satisfied with the line item calculations. I am using tax-exclusive values for the unit price and net amounts, derived from the tax-inclusive totals on the receipt. I've re-examined the numbers, ensuring the line item net amounts sum up to the \"Total (Excluding GST)\" value, and that I'm correctly representing the tax in the breakdown.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3412,
+   "total_tokens": 3730,
+   "cost": 0.0345175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0345175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03412
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3097,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.34
+}

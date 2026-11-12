@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "SANYU STATIONERY SHOP",
+  "vendor_vat": "001531760640",
+  "invoice_ref": "CS-SA-0108558",
+  "invoice_date": "2017-09-05",
+  "due_date": "2017-09-05",
+  "currency": "MYR",
+  "untaxed": 14.06,
+  "tax": 0.84,
+  "total": 14.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PUNCH CARD WITH HOLE",
+    "quantity": 1.0,
+    "unit_price": 11.23,
+    "tax_rate": 6.0,
+    "net": 11.23
+   },
+   {
+    "description": "WORKER'S CARD (1-15) 100'S (WOC-115)",
+    "quantity": 1.0,
+    "unit_price": 2.83,
+    "tax_rate": 6.0,
+    "net": 2.83
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 14.06,
+    "tax": 0.84
+   }
+  ]
+ },
+ "cost_usd": 0.0290675,
+ "raw": {
+  "id": "gen-1794512816-TjCuPjGQFpEOb7CHzlIP",
+  "object": "chat.completion",
+  "created": 1794512816,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SANYU STATIONERY SHOP\",\n  \"vendor_vat\": \"001531760640\",\n  \"invoice_ref\": \"CS-SA-0108558\",\n  \"invoice_date\": \"2017-09-05\",\n  \"due_date\": \"2017-09-05\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 14.06,\n  \"tax\": 0.84,\n  \"total\": 14.90,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PUNCH CARD WITH HOLE\",\n      \"quantity\": 1.0,\n      \"unit_price\": 11.23,\n      \"tax_rate\": 6.0,\n      \"net\": 11.23\n    },\n    {\n      \"description\": \"WORKER'S CARD (1-15) 100'S (WOC-115)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.83,\n      \"tax_rate\": 6.0,\n      \"net\": 2.83\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 14.06,\n      \"tax\": 0.84\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Vendor Information**\n\nI've determined the vendor's name is \"SANYU STATIONERY SHOP,\" not the owner's legal entity. This decision prioritizes the most visible information on the receipt to ensure accurate data extraction. I'm focusing on the practical application of the name within the JSON structure.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting specific data points to populate the JSON schema. \"SANYU STATIONERY SHOP\" is the `vendor_name`, and their GST ID is `vendor_vat`. The invoice number is `invoice_ref`, and I've correctly formatted the date as `invoice_date`. I've confirmed the due date is identical to the invoice date, and the currency is MYR, with a value of RM. I am using the tax details to calculate untaxed, tax and total. IBAN is null, the VAT is \"S\", and lines are being parsed.\n\n\n**Populating JSON Schema**\n\nI've extracted the key information for the JSON. The `vendor_name` is \"SANYU STATIONERY SHOP,\" with a GST ID of \"001531760640\" for `vendor_vat`. I've formatted the date correctly for `invoice_date` and `due_date`, and confirmed MYR as the `currency`. The \"GST Summary\" provides numbers for `untaxed`, `tax`, and `total`.  IBAN remains null, `vat_treatment` is \"S,\" and I'm parsing the line items to extract price information.\n\n\n**Finalizing Schema Population**\n\nI'm now populating the JSON schema with the extracted details. I've correctly parsed the line items, including descriptions, quantities, and calculated the untaxed prices and tax rates for each, which involved accounting for the included GST in the provided values. These calculated values match the receipt's totals.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating net prices for each line item. I have determined the values are before tax. Line 1 shows `unit_price` as 11.23, `tax_rate` as 6, and a `net` of 11.23. Line 2 has `unit_price` 2.83, `tax_rate` of 6, and a net of 2.83. Calculations of tax and totals now precisely align with the receipt. The total matches for all items, so I will now build the JSON.\n\n\n**Refining Item Calculation**\n\nI'm now precisely calculating the net prices for each line item, correctly handling tax inclusion. I've confirmed that multiplying each net price by the tax rate produces the exact totals shown on the receipt, and that the untaxed, tax, and total values are correct. I'm building out the final JSON with these figures.\n\n\n**Generating Final JSON**\n\nI am now ready to construct the final JSON output. All data extraction, date formatting, and value calculations have been verified. I will ensure the JSON reflects the calculated net prices, tax rates, and total values, aligning with the receipts.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Vendor Information**\n\nI've determined the vendor's name is \"SANYU STATIONERY SHOP,\" not the owner's legal entity. This decision prioritizes the most visible information on the receipt to ensure accurate data extraction. I'm focusing on the practical application of the name within the JSON structure.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting specific data points to populate the JSON schema. \"SANYU STATIONERY SHOP\" is the `vendor_name`, and their GST ID is `vendor_vat`. The invoice number is `invoice_ref`, and I've correctly formatted the date as `invoice_date`. I've confirmed the due date is identical to the invoice date, and the currency is MYR, with a value of RM. I am using the tax details to calculate untaxed, tax and total. IBAN is null, the VAT is \"S\", and lines are being parsed.\n\n\n**Populating JSON Schema**\n\nI've extracted the key information for the JSON. The `vendor_name` is \"SANYU STATIONERY SHOP,\" with a GST ID of \"001531760640\" for `vendor_vat`. I've formatted the date correctly for `invoice_date` and `due_date`, and confirmed MYR as the `currency`. The \"GST Summary\" provides numbers for `untaxed`, `tax`, and `total`.  IBAN remains null, `vat_treatment` is \"S,\" and I'm parsing the line items to extract price information.\n\n\n**Finalizing Schema Population**\n\nI'm now populating the JSON schema with the extracted details. I've correctly parsed the line items, including descriptions, quantities, and calculated the untaxed prices and tax rates for each, which involved accounting for the included GST in the provided values. These calculated values match the receipt's totals.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating net prices for each line item. I have determined the values are before tax. Line 1 shows `unit_price` as 11.23, `tax_rate` as 6, and a `net` of 11.23. Line 2 has `unit_price` 2.83, `tax_rate` of 6, and a net of 2.83. Calculations of tax and totals now precisely align with the receipt. The total matches for all items, so I will now build the JSON.\n\n\n**Refining Item Calculation**\n\nI'm now precisely calculating the net prices for each line item, correctly handling tax inclusion. I've confirmed that multiplying each net price by the tax rate produces the exact totals shown on the receipt, and that the untaxed, tax, and total values are correct. I'm building out the final JSON with these figures.\n\n\n**Generating Final JSON**\n\nI am now ready to construct the final JSON output. All data extraction, date formatting, and value calculations have been verified. I will ensure the JSON reflects the calculated net prices, tax rates, and total values, aligning with the receipts.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2867,
+   "total_tokens": 3185,
+   "cost": 0.0290675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0290675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02867
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2515,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.01
+}

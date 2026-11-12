@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "1010104759",
+  "invoice_date": "2018-03-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 9.34,
+  "tax": 0.56,
+  "total": 9.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SC Acr Frame S103M",
+    "quantity": 2,
+    "unit_price": 5.5,
+    "tax_rate": 6,
+    "net": 11
+   },
+   {
+    "description": "Member Discount",
+    "quantity": 1,
+    "unit_price": -1.1,
+    "tax_rate": 6,
+    "net": -1.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 9.34,
+    "tax": 0.56
+   }
+  ]
+ },
+ "cost_usd": 0.0146105,
+ "raw": {
+  "id": "gen-1794514096-YNTBdxs6cimQ5wKg5m6D",
+  "object": "chat.completion",
+  "created": 1794514096,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"POPULAR BOOK CO. (M) SDN BHD\",\"vendor_vat\":\"001492992000\",\"invoice_ref\":\"1010104759\",\"invoice_date\":\"2018-03-05\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":9.34,\"tax\":0.56,\"total\":9.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SC Acr Frame S103M\",\"quantity\":2,\"unit_price\":5.5,\"tax_rate\":6,\"net\":11},{\"description\":\"Member Discount\",\"quantity\":1,\"unit_price\":-1.1,\"tax_rate\":6,\"net\":-1.1}],\"vat_breakdown\":[{\"rate\":6,\"base\":9.34,\"tax\":0.56}]}",
+     "refusal": null,
+     "reasoning": "**Evaluating tax values**\n\nI'm noticing that the printed amount values are tax-inclusive, but the schema shows net amounts as line amounts before tax. This might lead to confusion. I should consider using 11 and -1.1 since there aren't any pretax amounts printed. The tax rate is 6, and VAT treatment is S. I need to make sure that everything aligns correctly in the documentation to prevent any misunderstandings. Let's clarify that!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating tax values**\n\nI'm noticing that the printed amount values are tax-inclusive, but the schema shows net amounts as line amounts before tax. This might lead to confusion. I should consider using 11 and -1.1 since there aren't any pretax amounts printed. The tax rate is 6, and VAT treatment is S. I need to make sure that everything aligns correctly in the documentation to prevent any misunderstandings. Let's clarify that!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hy13kd204Q73CLjlzRrwpqjS-eN6sA3TlhNNy-yuIOY9-8-5sjN3q0KIpnMs6GY5OLbhNogBzVm19gZUPQbKo3lsYxrnMOQ47hWYi4HDRywd5J1yyup0QGvHpALYmkAEiXkjL-CsU2lDUXAYvugcseC2WRAs4ax5nVl2dswWYDxGwnBb-kiKtwEniVpuf9kbjo0DoOU7ZcS295yln5CSYEl3knS4jvtGpdUbI2CB4zDW9PYOmpmqjhpYsLYl_P55Cma_M-O9H4hzqLRisVEJ066fK13DKBvRSSd8Ppel_yUDlpUlBxWcnEgpEGq1khs60UrV5BBHl4NbpVRzilpoNRTH8DEQU9x1-AOWdNo7wvUrZrWQ_ao7fz73YYFY_4B1OaZG0rJtMBf4lgCSF57W2dQ2rsK_2CwA52nZvLJU9iM-vSp6BRxJ-0YI9DToljrwObpAX46ppwzbSvcwpeURJGEqA2VpZM2hIa4yhfn23fwD2i6KMLP21qMMgmstfoSyUZ7aV73VlDOXt7Wlh10G05B0wbQT_bhjfK8DONYkZNJBtNddUNeUKrCNEuIogJoIdde8O8UFd7ibEjgWBIjL5M8i2Z4lN8NmxL-YY27z5P7rGX_Qh15LOzLexzbtt4ouwgmhL4Kq3hBNVFn4fY_lQcFb1STcw9cWYxeQOzsAkp9Fk2_M_1Nx4x6TMo3i7RxYEL5bJScNQVjkxRO06B1Dlw1kp13CgGqq3M8jxFBuPGJwX4c_TrSE7EjKh8sRz0e-5ABgt2_-WmhOOmruj_3RdiqETnGduuMwb1-u2mot2gij1qUdSXgc1CbiUasTC717lbB1LZpGTFA2c55KRUs9daogwI3mG6BT4tLswq35nx7gomTkU54uk3FVuUCc164DpU6x3OIkXKYs2mgUwB7PDDBRqtW3ECVYxlOj8Cv03jP1s_FEjlYFx6KgE0O9H50ua6v15l20IUW2uKbsMjimICjbzQuIqEs5GsrR9lPTNJVntD3gxQGOiQfj9DcZtFAQm7REZMSZsK_a5wWvzuP6UAVTO9Lk_OENorIceZ0k9iQP8FQn-KtVKeMyQlbOjo5gt664sIX6bB6YfgBUqQRcTJROqupk3eyVKnjboWs6SqhNhYbNgriMx8dlDqxwCl34lDiQDtVLMNnLCjjVEehpmXwSRc1izjIFHlaFKOmKlr1wIPIUoJbGdZE4cB0AmsMvU48Z4ii4qEBu5vWkEjQM5pxur7VJCET_N5y3sKir7mShKbluj7A9mM6QiV-WMferYTiyjPi_YGOVmqHW1NcQcQOrra68MrcQYzUoa5zKTaECTuvYZbq_wfoCWEK3nndN_BqFOeymX3HF36RCv00s6bAipHu0yEDH1zNBrlUHc0hjdGhak_i7ia1GCYxyvgPuuvKF9IerLBVWxYYifuNGQxCuSnJadUuLyr4DxnaEulzQlLQ2okpehFNoenqmYPgWBT7qpAiV8ZidgIyeaFH5yUHl3g2b3n46ydZRhgbyxrOcZsbqn_L1LEfNotaaM13z9cFoTph3iiDDRDbkHYXu6HTAEbYqIXOmniUiKX6l23OMb3WZyhxbnQr6Z5hGJcv5WjH_BYBBQ3ArzX0eaD8wSbUTxygWV_ONS2bRZGMHT1vL6azSsA0y1Uh1XPtF2hPGzpufYJvk0PZHdKTZ1iE5SB6h01jh3Lfj_-ujp4AGkOZIex9FniGIIDJY3IbunHdo-VSkjk20lmapl-q0SOX8soCccy146_G8sFg95H6f4_lv8nc8aWCVhiAcf7dw-xJBCfk0y6Jq8_eQje6-Bbf3SJsmPvbXzb3HoADRhzo0x7iejw2aP9fitc1VW5oh_RWEsZeMBEkMC4dILHbtntds2jO8eSA7-nr4LMBNoY9HxCp7epKmU7jo0jl-XFMi2Gr2LLdpLFYIajP7ayG7CEUUD4uHy7mjrPN6hIfQRyR0P_VRNFAWgQuC2PMri1XPGFbci50wptmfXEPGdQf0Jvg6XKb8lsiJh4G0VcblCCwf_QoRxZ5qiAjh2dljkq89W474fs1Bz-fRzidnGz-x5r_DvK73h3Q9pHFbaXyZdFtjYAu70zFMJPRH8lu9ZDRPXym-zTWa_QSfogKJQHU5Y1wEomVbR9xa9OfNukAGyJxXYY9cDBhkLwNIytuDEI8Dpi_oWWUYhUFswE3nPJ0WAOla7dE_h4lsq2zEXq6FN988YK8hH8pb4QfRf3Cek7dNc9jDCOdXXoL_OolBATh0xJhJSUDhb7DuDm6euF5w5HzJNEQNGS_TVnrWtYR1AOo2TJhBGQqWcjkspQsK6_k9yFrjr-q1qDzj5SiK1ISkQ_TsQxc5wjAuz8nM8fZ4si7y1XcKATlQhjbhxFtVezSZJ103Jd-PafcKTRIIlBsPlYVgL-h4JDC9wv0kXuAZWSeLp8N38eHJdyRs5WRsjSq_z-eKebwacpRTf_x3LuIohCSkV38SZZejWqHdmb7QwQEXNAxjZrBRup-mbjpLB63JabgfwiH30Z6rZb0tI-TiMENYC9SmTM9IPiHzyJUhy4pmNe2UKW4WMb1rvZwxH3I9Ana7qX7ZCC7E-xib4mtLZb2-FFWVNKIP73BFJTVkiavBDZ-PHowYeJFIQWf7DMhEt2L_FXf37s-UfhyxjvlcxOQyG8FSFusvRnMC27eqTq1HHk4IauYKHyxvj0AZj4nI8OkARawlHseEh8422MV8kJ9l3PN-MmKjg_VeJE5fj7vfPeT8Qg0Z9Z4gTyJq3Qv7FbLs2OAb64P5euZeRiP636g7f70PqlQYh6UyDhSHEclqw5jfzSUtZFYvROIuXIez-FMRtVu1abc3p4yCohuCVKd6WSf6lLeb7jYXqn35m0YRcrmRYUU7WwBx5V1vBOWf23aVIYfuqnyUWcxpfMEM0glSEMA73H_6Dg0GsywL5PUlbeWkXah5EbvugTk-AuDFsu0kMFEDVfpXwPK5FG0pYGSbE2EvC9miMy1CVa_EDCk3Eol2BdsCBp--1eT2YruAWtuxC8dmTFYA66nxfGr2RMv3vh8Nj50rV0jKCoUtKLLqyPEL0R3bCY0jRamJuhUEDtWYFu79GHgG2Xskbld5nqa2oNMXKha26KlWrV5faHGbVdApl5qimq4j13JSnF2YEuU11I70tA7-XK9gMUNQDQ21TgG5Cdk9WId0Zrv_KKBfR-RZ4FmS6QrsiLiSuu3yPjqcnqjAoIeK-zQIxJWmqZ4poEijr8UigX28VaksPc_yy0r663O_mx4qZK_OVJeTdEQmltSnODTTFeN4RZi5ze6FKMcH5a4ip-j0MW8v6VH575IW2e1mpIDNIXhWuvTwjokxKmuEbbEoupytiQecyTj97T3WDRo5YXRF9xsgv6v4dMVYgUgIOD481lo9p0FuRfZHTcPev83oaTPsqaT0BrP2bAnxKoL5r0UtOdzZYlj-Z0NPBr56tNNXchjDiXAVQjKQmkJoljJPtQ4xuC8S3IZJ2lNkJI9jb_jlpSHqdFtKQ0IGDMhT9TLiY1R-r1h2IxOuwQ3w5_w1sHRjdIApvK9tGG6DtVWWZk2VyrPHGgRQklza9K0JvDKT7ZtrfLgqK8fHGO6Qn-Zmhfxz2-S33XqalGVuF5vKX0NWiHtMefDrNP5lEGqh4Ml4ryUUxqv6JyTRp47SwJ5qa8Ojy8GhXAi_YXVSljeZhlmeEgvJSZpF5ujHgxRLLAp2jurPRwvtdU0Cco_QwsEj9RruRRQz92DaVMDN8mC4WX5Uyh8JwQAGgujYoyWasU_cIAExUyur5VCZLMyqE4OHq58jJQ72viqWSElCUazYrpZPoe8DYDoohnNTn4oY53NtWvolPXtzgJPqElK4_Ud6ICsvHbMT9mUOrXgsxlcawhvp7QlD-i_LoBIDj_84Hm-fQH0QsySqpJvpRzE5kf1tE54VTHIT4lvxlV8Lh54L6RcwP6KZSg6LD3XdGFQd6TBnbMLnAU1cOwyelS3jh86IkIgBlv1VKJkOC0b6mQtu6D8W5MnrtLD1dFZCZhDREOArxB-6AVUNfr5jIZwUxMGJ13suSFnLQc6eKHjArhHXVExWPQeU7tUL0N4RQUq75etIX6Ne9AjXp9kn04icaBUqIf7IWVoaqV8Xm2Pb3xmq3nF44g7YbRJMmHU72RT-EUbby80L6QcKpIiFZX_DBn2V0I67RmsI3lR6u7kWSGY8QIA7GfbdiKASnHUmgtjXyzwIAHpX2gjg2N1DIMeVCPA9bsSGcrG-TigiMLQ_MjI4U_CP2zAjxAdDR1tJ6OYxKUbeeZnFeLgYT-epwKuSrMQ-GvwLnlCavsf8satCMkFbMc4yid5RLyUMZYKe9tU1qj_KzRkC7VELNfE7XLmLYE6Vkd5pkiRk38RtrJrAh_dLRb4Jx5gCBzMufMkQXhrTRxtZaRwrdZlRII38P0Y4p_20U9QVUU0lzAef1fGHdlfdJteB-ptfdJlHwUag_O5Y1MpSXgLb_iLbWyNOEEv7ewHMh-E3HVo1knLqdchIpNmSgF9cvtAdjcWeS-Crif-ABHdV9uPZYok7AgTur2jK_kopJj6zOEhqh2YKpWHOKt4d2jZw3V_iHJapx_u_ercO2eIFDfmdi7dVaWl1Uk4ZNl8pFf330BoVy_0FgbdAfQIow6FzagNCYOXNJy6ucQP8q91HygqoKoxkzFJJHjwblKuTyWUekal5fFcc9sOWEKsxgtUQWORx8KHabhi8oLtrCPnW4YB7fj__izSZ3sZ4GGdbThdM4jhW7edXJ8hnQTiJDB02se9-DRW6HMmH9qbhHrZmkDdS3X5Eme-f338G8T3Qafir0T-md8OHEXJ08HAQNoUd6JpL3rWgc-khDPSdwI8rKJdG0TEmq10txzo6QFFqoTJqC9sCSvmrqSuJD7WQKnRs26WKCQXPwXNQiB_hlieH_dYIDMy4Tsrl-7q-Iz7vU5tvS1WBoMeLJVd6kg=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_046d40033bb76183016af61cb191d087d1b5ed390407e0c9e9",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3560,
+   "completion_tokens": 476,
+   "total_tokens": 4036,
+   "cost": 0.0146105,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3557,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0146105,
+    "upstream_inference_prompt_cost": 0.0088985,
+    "upstream_inference_completions_cost": 0.005712
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 301,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.01
+}

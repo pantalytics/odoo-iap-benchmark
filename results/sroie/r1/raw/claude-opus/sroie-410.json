@@ -1,0 +1,123 @@
+{
+ "pred": {
+  "vendor_name": "FACE TO FACE NOODLE HOUSE",
+  "vendor_vat": "001927782400",
+  "invoice_ref": "443181",
+  "invoice_date": "2018-05-21",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 29.81,
+  "tax": 1.79,
+  "total": 31.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "711-Omega Half Boiled Egg",
+    "quantity": 1,
+    "unit_price": 3.2,
+    "tax_rate": 6,
+    "net": 3.2
+   },
+   {
+    "description": "706-Toasted Bread (Homemade Kaya)",
+    "quantity": 1,
+    "unit_price": 4.3,
+    "tax_rate": 6,
+    "net": 4.3
+   },
+   {
+    "description": "837-Honey Lemon (Hot)",
+    "quantity": 1,
+    "unit_price": 3.9,
+    "tax_rate": 6,
+    "net": 3.9
+   },
+   {
+    "description": "838-Honey Lemon (Cold)",
+    "quantity": 1,
+    "unit_price": 4.2,
+    "tax_rate": 6,
+    "net": 4.2
+   },
+   {
+    "description": "2022-House Specialty Hot & Spicy Pan Mee (Dry) (b)",
+    "quantity": 1,
+    "unit_price": 8,
+    "tax_rate": 6,
+    "net": 8
+   },
+   {
+    "description": "2021-House Specialty Hot & Spicy Pan Mee (Dry) (a)",
+    "quantity": 1,
+    "unit_price": 8,
+    "tax_rate": 6,
+    "net": 8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 29.81,
+    "tax": 1.79
+   }
+  ]
+ },
+ "cost_usd": 0.029184,
+ "raw": {
+  "id": "gen-1794514644-TXm54aDVnkh7T3eN0LHK",
+  "object": "chat.completion",
+  "created": 1794514644,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"FACE TO FACE NOODLE HOUSE\",\"vendor_vat\":\"001927782400\",\"invoice_ref\":\"443181\",\"invoice_date\":\"2018-05-21\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":29.81,\"tax\":1.79,\"total\":31.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"711-Omega Half Boiled Egg\",\"quantity\":1,\"unit_price\":3.2,\"tax_rate\":6,\"net\":3.2},{\"description\":\"706-Toasted Bread (Homemade Kaya)\",\"quantity\":1,\"unit_price\":4.3,\"tax_rate\":6,\"net\":4.3},{\"description\":\"837-Honey Lemon (Hot)\",\"quantity\":1,\"unit_price\":3.9,\"tax_rate\":6,\"net\":3.9},{\"description\":\"838-Honey Lemon (Cold)\",\"quantity\":1,\"unit_price\":4.2,\"tax_rate\":6,\"net\":4.2},{\"description\":\"2022-House Specialty Hot & Spicy Pan Mee (Dry) (b)\",\"quantity\":1,\"unit_price\":8,\"tax_rate\":6,\"net\":8},{\"description\":\"2021-House Specialty Hot & Spicy Pan Mee (Dry) (a)\",\"quantity\":1,\"unit_price\":8,\"tax_rate\":6,\"net\":8}],\"vat_breakdown\":[{\"rate\":6,\"base\":29.81,\"tax\":1.79}]}",
+     "refusal": null,
+     "reasoning": "I'm treating the receipt's line amounts as tax-inclusive since GST is 6% and the prices already include it. The schema asks for a pre-tax unit price, but I'm leaning toward keeping the figures as printed, because backing tax out line by line would introduce rounding inconsistencies, and I'm weighing whether to compute the ex-tax values instead.\n\nI'm checking the tax-exclusive values I'd get by dividing each line by 1.06, and they sum to 29.82, just off the 29.81 untaxed total. The vendor is FACE TO FACE NOODLE HOUSE, with VAT number 001927782400 and currency MYR, so I'm noting those details for the record.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating the receipt's line amounts as tax-inclusive since GST is 6% and the prices already include it. The schema asks for a pre-tax unit price, but I'm leaning toward keeping the figures as printed, because backing tax out line by line would introduce rounding inconsistencies, and I'm weighing whether to compute the ex-tax values instead.\n\nI'm checking the tax-exclusive values I'd get by dividing each line by 1.06, and they sum to 29.82, just off the 29.81 untaxed total. The vendor is FACE TO FACE NOODLE HOUSE, with VAT number 001927782400 and currency MYR, so I'm noting those details for the record.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSyAkKEAgTGAI4AUIIdGhpbmtpbmcSDAPb4XC5L8sb9fI+FxoMYHEHbgwiIWDSPck+IjDc26yTP2LbUyfuR6P21lyiC0ZvpLQPYU46sSFSLNeMrAe1zDo96xOLj7/sNwC9oTMq5QgdwzKstBTIFuEZ9SD5qVQ6vzLJHd1bl3P4bncmjXA4WxGQ2et5HorYaKIgM9t2eunkUHDGhoYnMwckXDaRNTl5oZ3CbzkW9YTVK5ChZelRDQxfRK5sJJ+42H7iX8QFhW6MIFyttAOHKJTcDpnahWMvPSvSSTazzR35EmJSByCk9bw30UfmWNRDO85leMpE4UGTTuD5CwTAW+Trq6qtXTOl8ml04+yhr2d70rZSYPtHmfHRfArnZv5mUjb1EDdVTHMnk+aWvgpaP0Kaf5b/fxjl9PNhf12S6469z7TYKoexoMhFREACjRHzk7OlGBp18TZSFAXRUaxLkIZWKn3rOLXi9jIQAwgWAORnwXO/0+20adhbBg+TQL/mpMfWmWiute9/9EPBYK7+pU4EXI/ONaSsEMWnNOr1HR0mVNPtZ2NAEiGbhdXEKa4RRtNQl0joRi+fuyzHlVBctRVCbw2FNqC+RdkLN9yMx1UiESqceQGGMIjHYKzUkhNG32Mlh/p8BJUg6idEUXXwnyh5p5RWM0R9LbiTz+AmIOKEGdSrOB9u5wcATpxWHcAVeao9t0uA9cZ7yNoM0KqInjQ+ayuNK2K78c9jmshVlFb13CZgTuibvsq+p9RIKEsdx+W2zgOMv2omfEqxiU9t928gCxMNMTobqW58liwJqjVkTVUb12N0Tr0wDlDqwYTRqIweTURDrLhNm+dEo3kuPJ1wAm4hAcoqVCSGVWTJncxnxJkqYb2b7wcMMYeq89VSmnwaQPOO9z3eee2+t9D4MdeKwzOIM55HOlN/3DkgJhJ7iAGcxJceG2UJzHO+jywBv1NGXaiR/ZIriK+3PNHOAsJRu23u2iH1fif6URzXlZfSqzr7O/amVQPsWE7y8KcXOJSayCaINztkNIChJcO0PLqbcuZuggQfbqyFwXGrHxgWigcP8rffFUvcCebo1OPNP5Ncp3+uxk/2YLvexzyhIzNNBwxt/7IzLX6HczwYrslk2kI8KRocIDxQfcU0p1rSWoufLplzemXD0W2eh62S4QVyWYnXHh2Vj7aFrydBjmVwha9VrvTMi1ZakcQWvBxDvTbZ+jOJlWObkcSeNoeEygIgxAl0tMo5k89Lmm6z9wIaLeLU4SY5Igd9UA0ayvzzzyjorgoc46vFhWcoamf9IVszp6GBcYcvcZ4d/qvdzxxRpV25F2MK5uMdHOrNM627v6VxLaikF/shzhN8/hiM3/uPCUhaSxxt7KXg0Yeas48NB7Ahga3ZApD8hQdkA8VAywwulqNJ8Q89ralIXG6WeQz9BTGvuifu34ntWnxfH/zrEseFzoWro/24mgnxoq262RNIOsJcxpRLD2ydWknWMBeYiPwJCwCwoN/gbHS2BlqoceEElGwQ/i/P5UWEhdoWLcsx7aV7FRYP5cTm7qKVnj+vtLQXmcSekkti+p0MWclrzjspllnIeDuE8VAmyP3wc4gtUkBlovqw54KGSH85MqVQKLHtD/BvhtpsN1sYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 823,
+   "total_tokens": 4004,
+   "cost": 0.029184,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029184,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01646
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 319,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.51
+}

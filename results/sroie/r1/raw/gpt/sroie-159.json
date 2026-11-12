@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "FUN N CHEER (MALURI)",
+  "vendor_vat": "001439154176",
+  "invoice_ref": "0200419363",
+  "invoice_date": "2018-01-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 28.11,
+  "tax": 1.69,
+  "total": 29.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KAIN BEBOLA(S)SHA BU 0412638",
+    "quantity": 2,
+    "unit_price": 14.055,
+    "tax_rate": 6,
+    "net": 28.11
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 28.11,
+    "tax": 1.69
+   }
+  ]
+ },
+ "cost_usd": 0.021945,
+ "raw": {
+  "id": "gen-1794514220-fmwKWJckZZV9gFZpNEvd",
+  "object": "chat.completion",
+  "created": 1794514220,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"FUN N CHEER (MALURI)\",\"vendor_vat\":\"001439154176\",\"invoice_ref\":\"0200419363\",\"invoice_date\":\"2018-01-05\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":28.11,\"tax\":1.69,\"total\":29.8,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"KAIN BEBOLA(S)SHA BU 0412638\",\"quantity\":2,\"unit_price\":14.055,\"tax_rate\":6,\"net\":28.11}],\"vat_breakdown\":[{\"rate\":6,\"base\":28.11,\"tax\":1.69}]}",
+     "refusal": null,
+     "reasoning": "**Creating JSON Bill Schema**\n\nI’m focused on outputting a JSON bill schema based on a receipt from Malaysia. The vendor is FUN N CHEER, and I need to infer fields like the date, which I think is in DD/MM/YYYY format, likely January 5, 2018. The currency is MYR, with an untaxed amount of 28.11 and total 29.80. The pricing details get a bit tricky because they're tax-inclusive. I need to decide how to present this information accurately in the schema.**Finalizing Bill Format**\n\nI can compute the net amount as 28.11 and the unit price as 14.055. However, I’m considering that the “as printed” net might refer to the total excluding what’s printed on the line. The tax rate is 6%, so I’ll break down the VAT: the base is 28.11, with a tax of 1.69. Now, I need to finalize everything in the proper bill format. It’s essential to get all these details right!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Creating JSON Bill Schema**\n\nI’m focused on outputting a JSON bill schema based on a receipt from Malaysia. The vendor is FUN N CHEER, and I need to infer fields like the date, which I think is in DD/MM/YYYY format, likely January 5, 2018. The currency is MYR, with an untaxed amount of 28.11 and total 29.80. The pricing details get a bit tricky because they're tax-inclusive. I need to decide how to present this information accurately in the schema.**Finalizing Bill Format**\n\nI can compute the net amount as 28.11 and the unit price as 14.055. However, I’m considering that the “as printed” net might refer to the total excluding what’s printed on the line. The tax rate is 6%, so I’ll break down the VAT: the base is 28.11, with a tax of 1.69. Now, I need to finalize everything in the proper bill format. It’s essential to get all these details right!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h025QH500btkM-W4zZ0qq93y86-trXGynsMlQhoR0ENJJafJZ3vbJWeX4AjcnLGpLzxeGR1MyKJcbnvfivLZTtegQj5gwbxbf_0l8RPp-aosGG5XGEgWPx7hk1qJythf0GTEtcJMnR3ak35uijIJbKeTOW61r7NzT8D1G1R7IA9vC_89miogO-4xBHyymZuXnCEBs23XKuR0NTU1sABIED2u7qvfeSWWTYI4iR-BBnMTGDXX5lXH5RQbBd_2ja6IeUfZ-2bvfvAd7FLAmzrIZdrEZb07mHNWScfQsY7Q2RBnIwfKgYh-JKqy2cvInhM8f6pF_H4obgka_DtzJ3V8csY__Z-AwuYcoRVARA3_mFk5ZnYE1DgI1juVmU8HCd_3vRpkGLxlZqStPdNVlY5gOzJpmQPLMuu2VJUjLn37cx_3FNo0sToyDh3Z0dlgHQC3qQm0vw4kpRKDCMX5AV8Ypp9ZsdvcOGcX21pb1mHPzKcrPLod3hBTeOkCdGac_fsxvR0hwCx-uHV6nfxtYJVIYbvkQRsnFIcC_2G1HMpQHRNwu70yBr3n_UE5OV4-bS9OEeTa85hqdXHSt2Pnh4YknXI4v9C3CKDQhcpzrmNuvmJXapPuH8B-wGL4UgkWGh2nJqa5B5iBzI8xG64G_B7KXnms3-Y38VOrFesIZMQhwATrodQ5YF_DC-_FqhwDHwaORKjKd8G_26gUH0hDjyviKsniYHb5ACqHaJRQWzLV8WCTEY3-TgnRX-hrWS-q2g-hxnsVrSM2NAjmM2_UvUm_mFtGJGGxfuBwEdpuEXnWsAxJs4JrHg-q8wA7Tbyf-6Kw4LgfNkHcJ-jiNtWyNyI90JNnXqvQMk3qFTJVpvWKmYl8mT0S6w97WJqODWB83N_YHc3W6ait8MoHjmo0ZedJzlz7Yri4lKeeAn8MFiurZdrhNPKFR1QAqGAxeWFKVs68-q3hn2dwhtOBJhVhLQEH_Bb7e3-op_VQLA10sredPaLx-AClDpYHXweq_17Ja78OLqNdeAAeJLUKe8yVY_zmkLf65rhLQZhd7l-rCuPG2U6DRMcNCT8lfWLte6Amj_w8aXwMnvfbl3YPRXPce2yXJgoO39i8l3FL82BChbfOIugBzkM9Zx8lpMH6rYQuHx4d0MpdBobemb23EFCfKk7fsTRCzwiGBXMRP0pyOiZ2cIW8dPPPyl6ikGzE8Ro7m9P5cXR0yOed77Q6kpz2dHD_OOd5DoZe91Cy9ul2uiIcdoQgUCjF5ESx5E5y7mzGKtFyxx4vOLFR8ZIKY8Xcusy9jAR0Qe9ya5xtmqMPLonwYAe7Q39Od0DaZ_OSavm7n50MDtkNjsfYxXhzUTBITPSWkndciFLsHri8csVjsr43NtGEfgzQwnh4YxDlVSkP8v_xM6KZi51b-xSIC6sqEFejvj891xPseEHZHxbZJtPq8K8td0VqvQGXOo9NOj9rJvUA8paAZBpvXOYEOWW0QYna1B_QJxPYI53PeMzWcv_wDKxGq5aMkAvMUX7WuLvENYKOUykWd1vA8znT9LTNmMUfl7bs7cxeTYzZfWVC9zXZv1X4NKFqofWQeKa8LUIV6D1D0xPNVU_ac32rSWygbfig62uv5Biq3_aW5H-DULytaYO-aOSlgVzpSQcs8aDD_BkLZ_ECFiCUd7XEjCeSgcsS5wGqNjphxmSsfvck1djLudDpWQdXZBND-DLeWeheyHpfSHag0Fb31wKuPj1Kl3QpZ4ZgcpBcqUtk_K5NXOz_suxGFkVD5PER0Hn-Vidle_U_02FRpstUvePqXmbIAgxgBMcSpPQqrimUx0O64ZoRClK-Q-cqdv_xkwF0jOYezHIQUd3w2SSGKY-I_OMZtgbFLld8hZd9lGfJbCBUAAW0PA39vEHWck9SdFdSjPAwmh2Xa-dVGF8utU29rY970judUmkMXzl863SD-HvA1LmdsCWQYQfzOO6Q0jUySABk4DiWxMaIwWFSu0fkAFI7LjC2LWStzzf9rVQVtxZfwlkkmCKkGCAa9S1fpKqXxBJ-Qw4jrB6FqGJk_p9elYNXAz79eTRsux9MZdL9DyVWQx2OLT7fyy-FCwzp-2B81OYZlVs0eOt6iq-S5cQk1BGTUh7NUqwqhiIeg64sItKY5WG2EscQdLFh3-_x3Y30i3zZdhTIJhMPLcIedxQS4u2hThdYTNr1Lbpggg7GDcceByiaBbVIgZEzn3nhoyaJotlfA09bv55V-sOwJaRuZWuJuBW3bSyFD3x-Bq6n13JV__zELYYx0fPdR2HQaJyyim-h6AoDdYqlK44cYgQq5H9X3l3mtJLoXXUg4n710PBw5MDt3UOxItme-Kw5g3dSbzThtIcGAB8AORPPIhWrRcOcEXBYEaZ-9z0JD6cqBG3NFuhPU_CvPJSN_AkAUptfB4VtYY8vIoY_QI5esuh9Fbv95aKN41UQQO5gKDf9hpgz7mD9rU4vwIbDJmQ-Bjwco06iqMIhHOkLLimVJGYdw81eeZaD9AWsT3WhZ5jtMd-QQ3vi90f3XYaO3PVQqN4UYhtbM1CvqJIMyAtjg1JiV4v9ikLDKeRpkDzNXtss3AyEx8oQ6oc_Ec8gUZxMAR_36WU5mDl0xXcF98z6cVqsNQIGUoLidMG4IRKfRKcDaNDkGfNlB_-0NiP-n-C912_fwhv6OEMSIO3hpf3PtQlTZ-reF6nUuO_yPwQWEcNXgdFcTZ28Knh2yD0kh1hvk4cPeqOAeJ2uAgp2JJQd4nrf62obamKxzEHrekNmNnLJ49jzr7oJ3ihiZ_HidyA9OnBFUq9j6z8MRPxPJG6Rlljj-kIm-l1ggQCJjEaI_bUJUYVwfwS3akjdDV-liJuNceVIe5ALNZ92V8BzaRFNjqMIDBPUCQS78HVkLlujM7RNruq8S7oId1lS6hCwP9nm2_hPbHoMCGg1gMPSU9yuserxAsUrLBNxuIkhcE9jl4_Cy_F0_fP_kzvIGkMgJzFt06pGDTsbjc7VTX_teDerNHp7x8cRdHhXBFDhXB1Wwp5hMss2Pzhpq1pUMYT3w0-U78oP0kVyzcHU4rbHw8M3kdbZEo7f0F5oATMSvvzPI2C4ZMKQwkOb7VLiLQ83Mf_msJcHjgU7LjxH6i67BY8-T8OEnmgeje9_F4PhW4Q6J5aRSSc7oE32y43ywXKiH7idOJiHmkRbTcVpGSp4uLLHKSaL1OWxzFOxfLEnPjYqIXhzMwc7D3V2dqY_LNZKm6fsVovQ1vUe8ilcp_z65-3SrVMVNBns2c5fKO6wOa48B61l7RGezeybbqJC7PcxLOj1byjAkpYTR__vBxbaPEKDZkLpVn3-TC31LXiSjIhNpV_k_TtyslWEa6oWc-Ot2Q7WnTVnI2rBm4QYwzbarmtoBkpvyTCIo_c1DzdrmkRHOmRIin-0ZylHJp96xMTB7EIE6uDFylbPkNnCl4--HK1QYWPaKrxsT0DO_yTdNwpjZVVgMndGidgBEYl4SiBMRjv1lpgGKg_KJXMAubUqo9BGJhj4tem5BZUFAU99f5RRNQsX8jB-EbV39uUrcCsiykag6OxYQz-ekuKk7NdRcnvAtxBnBfqmyA59J1PrYKJ3QlK6n6hm-iWi_6EE7KqzkwMiM3aCG8ihcSPJ--6gJcNCQRg9mODK6VCw-VlW9VklwR9TvT3DvVBfBy3qKjF_fbdi3z67aoC-yoErc1iMiLZXeAtqdQrau0k2hGUG1Je5aEhQVQhSm_mrION0V8BVQirjsPhQwp2ImUEhXriDvnjB7d5UV1o20qprFHSf0RWpl3jc986swgYkPE1Gj6-mRBNYEgg9V422F3lwGPesmUopUIqJzhVHnI3y4tz-P4oU85sQGTXpjv308ma5o-R3XDYe5xl0dAH5Y0Pe3LI5LX8dy3rLck5G2_if9a6hNxoIRKuU_zScoB2LTQ4Lh4Ra2sUyVMQMpt7OdCGmDb5FRi-L_dYFJ3fstjETxD95dz191GVAIC9OKmqJnXCGMH_aUCgiBvFyBKa3Eq3Nj2kxim7DqldGcePpXfKlybGzY7wC8efgQvLQDmnYh-fqCYBzzvsrI8CIhni-vgZ7v8fpEpZ2MqRQqFBPJwPAG_wq83jViiihKBrenGo0H6HZCuQmPiDJnTxen7k1J6S0jYJRSIrYJ0XvccWTWHEdX8-Pioy8Zh0el3Uxk-YUak1dLt7lCN0tc_F2kTyoi7hAPdTYbZQYh3q5pjaR4NLeIpWv_6VXoI0G_UhLcMoLOSfu6o2075mgw0ykYrf98loVQ3PQrXOrfhh4iKDTZ52-jlTZ4GxAu0NVKzo76cA5gXzIUhegSmvof2W2tOuqv5YHQnbT-T3vxbcIFI60hXxyvykQnNAYe3cW-mU9pKPRosWUuhNL8FCzp8_ykkbti3TdPhaKkOsMWlfR7LoE4AGgWqZ-UEoqZILO0Q_my0el1P2ErLmGHsUySmfUzBv-toGjixy2L6gp8JNYrRTa9jV0Zh0L2GeeSbBHmzrGBMZM5LrbBuGQ_hgZ5zIrsHA3xHTl8uNvG8XlkSLOTfXizJeLl_Y-3t_4vf_BRKnlaMPRlymF7dgtaY9nj-TOj3EhTAFQklnKO0QkDCgOGSadJJuCXcTorVD-I0rHg27fDS62uns0g_70tY9s2-K6E2ZvchT4KC2186lBEMfDZoiBp2l8O8YUAT7t_JzhOGeW29jSEOfH48xIvAlYnmfNIKQUdVZgBdA9p7ZF3TEMfc0452w6JPv3fBiy3PNfNKzdRYDAc5Rbi2sVBYwbjuEiV-NPtArOARgNvjizVQnEvUjJSf8bhNkcqoBLYombjA69qxoWY-2rIAywOfGJngwaNVMYLhGjtAH4kenMNm7i17boorNEafUaa4aiagtBL4kSsAyfK-_oEXYBvPkjE5raCwYi4CE3bljbH7i6xxzv6vWGHPDgQr9PtYbmspJRtZGZSyfpsvmpWBn3lnYnO5HcDLFSrMVQNNEUcV-HbeGW2So2Fqx2gLw2M_g5jJwErUYelHmVzMY1P0BkhnZtLv_q_620q5FIMVrGMLfkdBcIPLPqa-zCpl93q7tWIW6De_JAQAvSi5AAj8Gm5RA5vRuAQQ26yKcBn_yv6_WQGND9TVIQjX2GvUgWCnGscNYMNS2eQOYHDV-D3RFvm4zwGyDET9XuoT2A7Cqjb43FLf1T73ic39EJxbuqC61PQKRMNbEFJi_c71XuOZxHWesiZRFSjeUHW0tbGl86yCwvZ1xTv9N8z5ZQhyrGg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0702c2fec484a221016af61d2dae0c87d189fc1f0b9766cbc9",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 481,
+   "total_tokens": 1984,
+   "cost": 0.021945,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021945,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.01443
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 328,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.6
+}

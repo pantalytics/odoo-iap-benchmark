@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Watson LLC",
+  "vendor_vat": "903-74-7444",
+  "invoice_ref": "49923258",
+  "invoice_date": "2011-10-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 1075.0,
+  "tax": 107.5,
+  "total": 1182.5,
+  "iban": "GB25DWRK25073532649300",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Original Nintendo Gaming Console with Robot, 9 games & extras",
+    "quantity": 1.0,
+    "unit_price": 475.0,
+    "tax_rate": 10.0,
+    "net": 475.0
+   },
+   {
+    "description": "Nintendo Switch Gaming Console W/ Neon Blue & Red Controllers, Carry Case, Cable",
+    "quantity": 2.0,
+    "unit_price": 300.0,
+    "tax_rate": 10.0,
+    "net": 600.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 1075.0,
+    "tax": 107.5
+   }
+  ]
+ },
+ "cost_usd": 0.0129375,
+ "raw": {
+  "id": "gen-1794515369-apuO5SqWBTeBShl3gAXc",
+  "object": "chat.completion",
+  "created": 1794515369,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Watson LLC\",\n  \"vendor_vat\": \"903-74-7444\",\n  \"invoice_ref\": \"49923258\",\n  \"invoice_date\": \"2011-10-26\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 1075.00,\n  \"tax\": 107.50,\n  \"total\": 1182.50,\n  \"iban\": \"GB25DWRK25073532649300\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Original Nintendo Gaming Console with Robot, 9 games & extras\",\n      \"quantity\": 1.0,\n      \"unit_price\": 475.0,\n      \"tax_rate\": 10.0,\n      \"net\": 475.0\n    },\n    {\n      \"description\": \"Nintendo Switch Gaming Console W/ Neon Blue & Red Controllers, Carry Case, Cable\",\n      \"quantity\": 2.0,\n      \"unit_price\": 300.0,\n      \"tax_rate\": 10.0,\n      \"net\": 600.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 1075.0,\n      \"tax\": 107.5\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Watson LLC\" as the vendor's name and \"903-74-7444\" as their VAT. I'm noting the mention of a prefix within the IBAN line for potential future analysis or handling, as it may be useful.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. I've confirmed \"Watson LLC\" as the vendor and \"903-74-7444\" as their VAT. I've set the invoice reference to \"49923258\" and the issue date to \"2011-10-26\". I'm setting the due date to `null` as it's not present. I've resolved the currency as \"USD\". I've assigned \"1075.00\", \"107.50\", and \"1182.50\" to the untaxed, tax and total amounts, respectively. I am also working on `vat_treatment` , which is a \"S\".\n\n\n**Constructing JSON Object**\n\nNow, I'm forming the JSON object. I'm focusing on number formats and carefully converting OCR-interpreted comma decimals to dots. I've successfully extracted and populated the core fields. The \"lines\" and \"vat_breakdown\" sections are in progress, and I'll carefully check the number values again. I will set the IBAN. The full object is almost ready.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Watson LLC\" as the vendor's name and \"903-74-7444\" as their VAT. I'm noting the mention of a prefix within the IBAN line for potential future analysis or handling, as it may be useful.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. I've confirmed \"Watson LLC\" as the vendor and \"903-74-7444\" as their VAT. I've set the invoice reference to \"49923258\" and the issue date to \"2011-10-26\". I'm setting the due date to `null` as it's not present. I've resolved the currency as \"USD\". I've assigned \"1075.00\", \"107.50\", and \"1182.50\" to the untaxed, tax and total amounts, respectively. I am also working on `vat_treatment` , which is a \"S\".\n\n\n**Constructing JSON Object**\n\nNow, I'm forming the JSON object. I'm focusing on number formats and carefully converting OCR-interpreted comma decimals to dots. I've successfully extracted and populated the core fields. The \"lines\" and \"vat_breakdown\" sections are in progress, and I'll carefully check the number values again. I will set the IBAN. The full object is almost ready.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1254,
+   "total_tokens": 1572,
+   "cost": 0.0129375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0129375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01254
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 884,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.49
+}

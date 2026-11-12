@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "ELEKTRON Industrieservice GmbH",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "181301674",
+  "invoice_date": "2018-04-25",
+  "due_date": "2018-04-25",
+  "currency": "EUR",
+  "untaxed": 252.1,
+  "tax": 47.9,
+  "total": 300.0,
+  "iban": "DE91100000000123456789",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "TGA Obermonteur/Monteur",
+    "quantity": 3.0,
+    "unit_price": 43.2,
+    "tax_rate": 19.0,
+    "net": 129.6
+   },
+   {
+    "description": "Beamer-Deckenhalterung",
+    "quantity": 1.0,
+    "unit_price": 122.5,
+    "tax_rate": 19.0,
+    "net": 122.5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19.0,
+    "base": 252.1,
+    "tax": 47.9
+   }
+  ]
+ },
+ "cost_usd": 0.0168925,
+ "raw": {
+  "id": "gen-1794512590-KzGghLtbLTQBh3QUvJj7",
+  "object": "chat.completion",
+  "created": 1794512590,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ELEKTRON Industrieservice GmbH\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"181301674\",\n  \"invoice_date\": \"2018-04-25\",\n  \"due_date\": \"2018-04-25\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 252.1,\n  \"tax\": 47.9,\n  \"total\": 300.0,\n  \"iban\": \"DE91100000000123456789\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"TGA Obermonteur/Monteur\",\n      \"quantity\": 3.0,\n      \"unit_price\": 43.2,\n      \"tax_rate\": 19.0,\n      \"net\": 129.6\n    },\n    {\n      \"description\": \"Beamer-Deckenhalterung\",\n      \"quantity\": 1.0,\n      \"unit_price\": 122.5,\n      \"tax_rate\": 19.0,\n      \"net\": 122.5\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19.0,\n      \"base\": 252.1,\n      \"tax\": 47.9\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focused on extracting information from the German bill and mapping it to a JSON schema. I've pinpointed the \"Verkäufer\" section and identified the vendor name as \"ELEKTRON Industrieservice GmbH.\" Next, I'll need to locate the vendor's VAT number and then proceed with mapping the remainder of the fields.\n\n\n**Mapping Invoice Data**\n\nNow I've successfully extracted and mapped several key fields. The vendor VAT is \"DE1366 95976,\" and the invoice reference is \"1 81301674.\" The invoice date is \"2018-04-25,\" and the due date is the same. I've also found the currency (EUR), untaxed amount (252.10), tax amount (47.90), and total (300.00). I'm currently working to find the IBAN number.\n\n\n**Analyzing Invoice Data**\n\nI'm now going through the German bill line by line to extract item details. I've started parsing the \"Positionsdaten\" table. For the first line item, I've extracted description, quantity, unit price, tax rate, and net amount. I am extracting line item descriptions and quantities, unit prices, tax rates and net amounts for each line.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, building the JSON output. I've extracted the vendor's IBAN: DE91100000000123456789. I've also parsed the \"Umsatzsteueraufschlüsselung\" table and obtained the VAT breakdown. I've validated the totals, ensuring the data is correct. Now, I'm integrating everything into the structured JSON object.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focused on extracting information from the German bill and mapping it to a JSON schema. I've pinpointed the \"Verkäufer\" section and identified the vendor name as \"ELEKTRON Industrieservice GmbH.\" Next, I'll need to locate the vendor's VAT number and then proceed with mapping the remainder of the fields.\n\n\n**Mapping Invoice Data**\n\nNow I've successfully extracted and mapped several key fields. The vendor VAT is \"DE1366 95976,\" and the invoice reference is \"1 81301674.\" The invoice date is \"2018-04-25,\" and the due date is the same. I've also found the currency (EUR), untaxed amount (252.10), tax amount (47.90), and total (300.00). I'm currently working to find the IBAN number.\n\n\n**Analyzing Invoice Data**\n\nI'm now going through the German bill line by line to extract item details. I've started parsing the \"Positionsdaten\" table. For the first line item, I've extracted description, quantity, unit price, tax rate, and net amount. I am extracting line item descriptions and quantities, unit prices, tax rates and net amounts for each line.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, building the JSON output. I've extracted the vendor's IBAN: DE91100000000123456789. I've also parsed the \"Umsatzsteueraufschlüsselung\" table and obtained the VAT breakdown. I've validated the totals, ensuring the data is correct. Now, I'm integrating everything into the structured JSON object.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 1585,
+   "total_tokens": 2419,
+   "cost": 0.0168925,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0168925,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.01585
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1220,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.61
+}

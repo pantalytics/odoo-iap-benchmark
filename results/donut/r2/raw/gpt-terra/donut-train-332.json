@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-12-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3,
+    "unit_price": 45,
+    "tax_rate": 10,
+    "net": 135
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4,
+    "unit_price": 119.99,
+    "tax_rate": 10,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10",
+    "quantity": 3,
+    "unit_price": 124.95,
+    "tax_rate": 10,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5,
+    "unit_price": 1092.27,
+    "tax_rate": 10,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.0060456,
+ "raw": {
+  "id": "gen-1794515182-B3dkNBVPev1kvJi2lgBk",
+  "object": "chat.completion",
+  "created": 1794515182,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith-Guerrero\",\"vendor_vat\":\"954-91-2300\",\"invoice_ref\":\"39400829\",\"invoice_date\":\"2012-12-01\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":6451.16,\"tax\":645.12,\"total\":7096.28,\"iban\":\"GB81NHIS20902698381776\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\"quantity\":3,\"unit_price\":45,\"tax_rate\":10,\"net\":135},{\"description\":\"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\"quantity\":4,\"unit_price\":119.99,\"tax_rate\":10,\"net\":479.96},{\"description\":\"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10\",\"quantity\":3,\"unit_price\":124.95,\"tax_rate\":10,\"net\":374.85},{\"description\":\"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\"quantity\":5,\"unit_price\":1092.27,\"tax_rate\":10,\"net\":5461.35}],\"vat_breakdown\":[{\"rate\":10,\"base\":6451.16,\"tax\":645.12}]}",
+     "refusal": null,
+     "reasoning": "**Formatting Invoice Data**\n\nI’m thinking about how we need JSON for the invoice details. The date format looks ambiguous with 01/12/2012, so it might be DD/MM rather than MM/DD. The user wants it in YYYY format, so I’d translate that to 2012-12-01. The currency needs to show as ISO USD, indicated by the dollar sign. There's a discrepancy in a line where the gross total matches up. The tax figure also needs to be exact, rounding to the nearest cent. Descriptions will be printed, including vendor tax.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Formatting Invoice Data**\n\nI’m thinking about how we need JSON for the invoice details. The date format looks ambiguous with 01/12/2012, so it might be DD/MM rather than MM/DD. The user wants it in YYYY format, so I’d translate that to 2012-12-01. The currency needs to show as ISO USD, indicated by the dollar sign. There's a discrepancy in a line where the gross total matches up. The tax figure also needs to be exact, rounding to the nearest cent. Descriptions will be printed, including vendor tax.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iDzeKuvn28-qz-Bh1dTmBt-aHKuQUApeKsVegwM0yNszjReP2Iz4uveZPZ4As4ccMDzznJ0xevGZPbY8D-e8vWb0LB_ddfaQlgVNYDOrF6Rwx1zm7FYspdRUXgc_BamecE-cn4x2qEAfYeWvcVAN9pU-pO8LULkz0JWPkDHWXOpwc182xtRHHyul6qmoG3RtsmnjUzlU-IK-IkTXOUTTsr5y5C3p2f6Sz9mC3bGiiHzYwr6WEbZHTAzmpGD0piZMzGabni-S97umJ02B0mbxiS1MpzuZYWgBKeMkji8SbVPXEYZT6VkLitT3YRDAwfzte4DuaMwXOU4IKe3kmXl71RuCVs8PAEekwzbEEr7lLfdCzJUF5aP9liqYmUknJaX0gO_tfUQw0xUGeQHOEHhgAFmkgImvL5JboEEatdfFBm5R7JwWzWMPG51BLDpQ_3IqcNNMZuIlu9VS32CwUR8Ng9Jatvk43eQJm2jb8E0ozSE6OWC8QP1R__ltWwW7HiiWtEwrETUg1ZVEiAW_DaUCKrd2CpoZAL5C78RCR97klzQMW0jfLO0JHxqeq4m4db7g63gA5EtdwYznUQzznigcXCAAaehdcfa_dMzOwUcsPV6UgQNbaWO_UHZs6URFiuUviAfpWUARLkWbyxtCjOeABNWc-MXHS7adiSAjxrLPfVI9OHRJ85rJgIjsy_W_1VifyREYZSVE-gW2mzO1xKKHV91HMq1exDLW26iHk1rku8AB8sBsWv4OVj889SNjh0k5LueKQF-i_Oc2M9eCgoFmT_S9vf-QAY0jIS_Ye06kGOdr0xlpiLpT6OzI3CitkdMDdYV1_Ai7pbo5ca50BbKPxtr8kuU3f_Oflo6LiIUS33ICgxKXfQGujlkGUZfQgmuXhmXcVr_6QzaJlnAaguleSsfb1J9TyJMNesD3s_yKWg3CjiqWASEEegPUxTJiBNBmQjp1W-BZtmgJDcTFaR4_ygVx8M6NWY9AcSaVJQDY9oC8nYwZTasuHhGCfRaN4NSfRY1dcYGVY9DpKI1-T_rpX4thDNDffWLzVPBBAEALn16g2MZ8GVcLH6zlcJ6RMYLeuU1vXXF5JUp5vArUxISMswsGBfNySH1eZ0TMGoCanKQoMHnYsJebyXWoNb9RbH5dUF0CUi5tYGmZIHwYSj4sBYkb51e59AMOdvsLLkPXCGdbPZP3Kj0VsHuZOZaUkiQCZafygtOqaoBBQdDDDZIENFXyL0ad4v8N8LKsHvomKiLZ5oiQ3LMH7TRY35NDwjYF9a5JBocSZpk718fVgH3G8TO1MpqzHitL5xeS-OUaFFblXPZ-YFxpEP4XT4__MbTsYCXbsmY27e9Wy-S7M2aHPE4zsAE3XZ4RAVfdDFXPzylQk66IPjCdQlmr0BDmTBNPzFbdkTEDWj2rLBkdVc1jsw2kCBmF2SZbqnDNX56ZE1GMbWPfR4A_MRyWhx7Ixrx3RoBJ9mEUnXP5oiNctGm4kM9xs5UpBdV-yn2N_ad4lcAIvlx-QNW9ONTCiYzvvkIjLptGLMssL2f65MM2pQW-k9b5fXDrLv-WE7Tu4FU8HiMMnA8nejIQ25NFtM3fKQKQvBnCJ2ZFM6zVj8c7HNnMwSSk2jIsWIMq_79D14B4SZ4HNI7dTzzPh1vixVAPvl4GrdcOMgGwsFQmW6x0kpqIDutbB6x6vteMTGXUI0qnA5CU3SAtdo5daJKYn1HM8NBZjcYCqp1gkIL3V2ZWomQaF0fBucEvN5QDgyVclsdy2_qpttjEdIi9-f1zt1f3dHmMYw7GeQm38ykyxVxRrW32CmnA8F7LrmyqD596aGUkBuK_BO5MxA8Ht4Z_AuJHrWGyQbk_sZgNivt9jRksUIxsv4dtDgKyNsjIecuV7dsx6_umEh2cF0_Ft3GxHqn5jQrJsS2og4MNmessH3TPTQYr-WFRONtmrP7f3tpC7GBuMM4jkqEPs5EhU57S06ofakO8MNCY5rharvseN5GwH8Ymzm6Q7SnbZ265tkJdINM6W1gECDwGJkCXOAp94825yJ0V50zPh3WodSZ7QhbSkdhydcOcURBM8qVacLwwMCNJWH35H9D9pzugODp5tklWm38eff5bAvxX00beYIlv3V5sZsCYLHJGRw0Bv-BZ9YefFkshelP_honsVx-DI1TjzEXo-BYgvARX5KwKhj-06GbOS8DUeHa_Ga7ORFBToSMdvFqH2Kx05n6E3jShPyUlkJx-pom7khoe1StVprzAUeWNyCjCHnUi42yIPm9GEoWOmCCYX4PD2DkjjlufPE4mgmg2a3J9vHQnmhVgTt4624RpINYxx3gDmKDRYyHhluEHKemrmqAo7yw6GHDy0QBJB4duWbAtxAczKj91o2XRENykNm89zU1c4R6pPpUctMcXPyh7gTESTpdp9T7BcpzUWWxxKckwzP_BzH6DH4lbLS9ZnSiVWswofzzhfyFhgApbJMAmNbqwHZpShwJj4wIHNbVQijpj_A9i-LQQkHIO5AGC4ErSr0xI30fJEH9Nihy-gQG_yBqtXCi-Abs5oKhRl4aHJVLdSqxPTbjjEC8d8TmJNEDTBgMenUN4p6lyhpyCDyhcSF8PUzGNXc90mxPcU9wUAop31cKs_pF2saiR1glMR3-I7asUOakM3uc37eIK1hOA0MgsJjjS2wHynGp2eInsNtrbfTLbYh1UNmDpnH8Wdvnwq11M8yVBDWkZ7LtKAW7VZ-V26LFiI2O1RGKF1z2Xl3Leof5vGF51npvflbSr3vq4tDbIdtsMh7j9XMbkV37Ch1QCJXM_ftnxIC1SsOrAp6mFZKPeusvc0F73z-VDtBtW77IT72yxEVg7CDwevlfRjCqWCbTZlhaEAxvAysuOEW8H8DcRf3ICWTE9nhgC_Zb6xFq8_5fNv7wwkj5i8SpRCt8gyVVBiB5KgEkWBu0GuMPvaaiSTM85Wy3KOiiPpbNnjsr6SY3x2Lef3yiMSua4cGWIIBqcZxDSbPf6YRSiKU-A-eoNenSAsedDJBzoVIA2RDwbsh5UV13qwZ4bMZ6SzpqR6RI7R1xsbDorBNiFaF3OilBZKKwuCbSTtwoPjZFIjFpJgohiZA1g6_jelKzk6GMDMdLPj4eQSeMFJ0Ubz57G9qs34BSRZUnboNPZDVVqw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_079ce3442dcc886f016af620f020f887d1a1a1b46e4ce566be",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 444,
+   "total_tokens": 4005,
+   "cost": 0.0060456,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 3558,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0060456,
+    "upstream_inference_prompt_cost": 0.0007176,
+    "upstream_inference_completions_cost": 0.005328
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 130,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.4
+}

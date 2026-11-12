@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18040302160397",
+  "invoice_date": "2018-04-03",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 6.7,
+  "tax": 0.4,
+  "total": 7.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000035-1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.7,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.0201975,
+ "raw": {
+  "id": "gen-1794514171-5xKLM6joyr15n7JWQPfj",
+  "object": "chat.completion",
+  "created": 1794514171,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18040302160397\",\n  \"invoice_date\": \"2018-04-03\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 6.70,\n  \"tax\": 0.40,\n  \"total\": 7.10,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 100100000035-1 Meat + 3 Vege\",\n      \"quantity\": 1,\n      \"unit_price\": 6.70,\n      \"tax_rate\": 6,\n      \"net\": 6.70\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 6.70,\n      \"tax\": 0.40\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and extracted the vendor's VAT registration number, which is \"GST REG #00065619558.\" I'm now cross-referencing these details to ensure accuracy with the JSON schema's requirements.\n\n\n**Populating JSON Fields**\n\nI've extracted the invoice number (\"OR18040302160397\") and its date (\"2018-04-03\"). The due date is null since it's a cash receipt. The currency symbol is '$', but given the ambiguity, I'm marking currency as `null` for now. I am looking into the document to find the best way to represent the currency. I am looking for a definitive currency code.\n\n\n**Finalizing Currency Value**\n\nI've decided to set the currency code to `null`. While I strongly suspect MYR based on the document's origin and context, the schema requires an explicit ISO 4217 code. Since the code is not explicitly mentioned, I've chosen to err on the side of caution and adhere strictly to the information presented. The rest of the fields have been extracted and validated: untaxed is 6.70, tax is 0.40, and total is 7.10. No IBAN is present.\n\n\n**Finalizing Schema Population**\n\nI've extracted the `vendor_vat` as \"000656195584\". The invoice date is confirmed as \"2018-04-03\", and I'll keep the due date as `null`. The currency code remains `null` as it's not explicitly stated. The untaxed value is 6.70, tax is 0.40, and the total is 7.10. No IBAN is present, and so I will keep this as `null`. The VAT treatment code is \"S\" for standard rate, as I've noted. I've now begun populating the \"lines\" section with the description \"1 Meat + 3 Vege,\" the quantity as 1, and the unit price before tax as 6.70. I've set the tax rate to 6. And the net value is 6.70. Now I am working on the vat_breakdown, setting the rate at 6, base at 6.70, and tax at 0.40. I will revisit the currency one more time as requested.\n\n\n**Confirming Final Values**\n\nI'm now satisfied with the final values after the review. I've re-evaluated and confirmed the vendor data, dates, and financial figures. Despite the strong context, I've upheld the schema's requirements by using `null` for the currency. I've successfully populated the lines and vat_breakdown sections according to the specifications. I will now prepare for the next step.\n\n\n**Finalizing Field Values**\n\nI've meticulously reviewed all extracted information. Vendor details, dates, and financial figures are confirmed, including setting the currency code to `null` to ensure compliance with the schema's \"explicit\" requirement. I've populated the \"lines\" and \"vat_breakdown\" sections, confirming the description, quantity, unit price before tax, tax rate, and net values, and the VAT details as specified. I'm now ready to proceed.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and extracted the vendor's VAT registration number, which is \"GST REG #00065619558.\" I'm now cross-referencing these details to ensure accuracy with the JSON schema's requirements.\n\n\n**Populating JSON Fields**\n\nI've extracted the invoice number (\"OR18040302160397\") and its date (\"2018-04-03\"). The due date is null since it's a cash receipt. The currency symbol is '$', but given the ambiguity, I'm marking currency as `null` for now. I am looking into the document to find the best way to represent the currency. I am looking for a definitive currency code.\n\n\n**Finalizing Currency Value**\n\nI've decided to set the currency code to `null`. While I strongly suspect MYR based on the document's origin and context, the schema requires an explicit ISO 4217 code. Since the code is not explicitly mentioned, I've chosen to err on the side of caution and adhere strictly to the information presented. The rest of the fields have been extracted and validated: untaxed is 6.70, tax is 0.40, and total is 7.10. No IBAN is present.\n\n\n**Finalizing Schema Population**\n\nI've extracted the `vendor_vat` as \"000656195584\". The invoice date is confirmed as \"2018-04-03\", and I'll keep the due date as `null`. The currency code remains `null` as it's not explicitly stated. The untaxed value is 6.70, tax is 0.40, and the total is 7.10. No IBAN is present, and so I will keep this as `null`. The VAT treatment code is \"S\" for standard rate, as I've noted. I've now begun populating the \"lines\" section with the description \"1 Meat + 3 Vege,\" the quantity as 1, and the unit price before tax as 6.70. I've set the tax rate to 6. And the net value is 6.70. Now I am working on the vat_breakdown, setting the rate at 6, base at 6.70, and tax at 0.40. I will revisit the currency one more time as requested.\n\n\n**Confirming Final Values**\n\nI'm now satisfied with the final values after the review. I've re-evaluated and confirmed the vendor data, dates, and financial figures. Despite the strong context, I've upheld the schema's requirements by using `null` for the currency. I've successfully populated the lines and vat_breakdown sections according to the specifications. I will now prepare for the next step.\n\n\n**Finalizing Field Values**\n\nI've meticulously reviewed all extracted information. Vendor details, dates, and financial figures are confirmed, including setting the currency code to `null` to ensure compliance with the schema's \"explicit\" requirement. I've populated the \"lines\" and \"vat_breakdown\" sections, confirming the description, quantity, unit price before tax, tax rate, and net values, and the VAT details as specified. I'm now ready to proceed.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1980,
+   "total_tokens": 2298,
+   "cost": 0.0201975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0201975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0198
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1707,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.77
+}

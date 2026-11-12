@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471113",
+  "invoice_date": "2018-06-13",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 22.0,
+  "tax": 1.54,
+  "total": 23.54,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Schweinesteak Bestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet. getLineTradeAgreementBruttopreis : 5,5000 Schweinesteak aus Deutschland",
+    "quantity": 4.0,
+    "unit_price": 5.5,
+    "tax_rate": 7.0,
+    "net": 22.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 22.0,
+    "tax": 1.54
+   }
+  ]
+ },
+ "cost_usd": 0.004854,
+ "raw": {
+  "id": "gen-1794514568-WAVBGZfLspNhdAKDM0DX",
+  "object": "chat.completion",
+  "created": 1794514568,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471113\",\"invoice_date\":\"2018-06-13\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":22.0,\"tax\":1.54,\"total\":23.54,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Schweinesteak Bestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet. getLineTradeAgreementBruttopreis : 5,5000 Schweinesteak aus Deutschland\",\"quantity\":4.0,\"unit_price\":5.5,\"tax_rate\":7.0,\"net\":22.0}],\"vat_breakdown\":[{\"rate\":7.0,\"base\":22.0,\"tax\":1.54}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm processing the invoice, focusing on pulling out the key details required for the JSON output. The vendor name, VAT, reference number, and invoice date are now being targeted.\n\n**Parsing Invoice Details**\n\nI'm now carefully extracting specific line item details, specifically the description for \"Schweinesteak\". I'm considering whether to include the full descriptive text or a more concise version based on the schema.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm processing the invoice, focusing on pulling out the key details required for the JSON output. The vendor name, VAT, reference number, and invoice date are now being targeted.\n\n**Parsing Invoice Details**\n\nI'm now carefully extracting specific line item details, specifically the description for \"Schweinesteak\". I'm considering whether to include the full descriptive text or a more concise version based on the schema.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2217,
+   "completion_tokens": 851,
+   "total_tokens": 3068,
+   "cost": 0.004854,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.004854,
+    "upstream_inference_prompt_cost": 0.00166275,
+    "upstream_inference_completions_cost": 0.00319125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 633,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.79
+}

@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "T.A.S Leisure Sdn Bhd",
+  "vendor_vat": "001042104320",
+  "invoice_ref": "1080323",
+  "invoice_date": "2017-12-30",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 96.58,
+  "tax": 5.81,
+  "total": 102.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PINEAPPLE JUICE",
+    "quantity": 1.0,
+    "unit_price": 12.95,
+    "tax_rate": 6.0,
+    "net": 12.95
+   },
+   {
+    "description": "TOSTADA CHIPS",
+    "quantity": 1.0,
+    "unit_price": 16.95,
+    "tax_rate": 6.0,
+    "net": 16.95
+   },
+   {
+    "description": "CHP_BWL CK",
+    "quantity": 1.0,
+    "unit_price": 29.95,
+    "tax_rate": 6.0,
+    "net": 29.95
+   },
+   {
+    "description": "MARG CK",
+    "quantity": 1.0,
+    "unit_price": 27.95,
+    "tax_rate": 6.0,
+    "net": 27.95
+   },
+   {
+    "description": "10% Srv Chg",
+    "quantity": 1.0,
+    "unit_price": 8.78,
+    "tax_rate": 6.0,
+    "net": 8.78
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 96.58,
+    "tax": 5.81
+   }
+  ]
+ },
+ "cost_usd": 0.0269675,
+ "raw": {
+  "id": "gen-1794512690-orEnISdgZWYzqju4A2m9",
+  "object": "chat.completion",
+  "created": 1794512690,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"T.A.S Leisure Sdn Bhd\",\n  \"vendor_vat\": \"001042104320\",\n  \"invoice_ref\": \"1080323\",\n  \"invoice_date\": \"2017-12-30\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 96.58,\n  \"tax\": 5.81,\n  \"total\": 102.4,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PINEAPPLE JUICE\",\n      \"quantity\": 1.0,\n      \"unit_price\": 12.95,\n      \"tax_rate\": 6.0,\n      \"net\": 12.95\n    },\n    {\n      \"description\": \"TOSTADA CHIPS\",\n      \"quantity\": 1.0,\n      \"unit_price\": 16.95,\n      \"tax_rate\": 6.0,\n      \"net\": 16.95\n    },\n    {\n      \"description\": \"CHP_BWL CK\",\n      \"quantity\": 1.0,\n      \"unit_price\": 29.95,\n      \"tax_rate\": 6.0,\n      \"net\": 29.95\n    },\n    {\n      \"description\": \"MARG CK\",\n      \"quantity\": 1.0,\n      \"unit_price\": 27.95,\n      \"tax_rate\": 6.0,\n      \"net\": 27.95\n    },\n    {\n      \"description\": \"10% Srv Chg\",\n      \"quantity\": 1.0,\n      \"unit_price\": 8.78,\n      \"tax_rate\": 6.0,\n      \"net\": 8.78\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 96.58,\n      \"tax\": 5.81\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Defining Vendor Information**\n\nI've determined the vendor name, going with \"T.A.S Leisure Sdn Bhd\" as the legal entity. I'm focusing on accurately populating the schema, and this seems like the most relevant data point based on the receipt. I'm also ensuring the correct field in the schema is being populated.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting data to populate the JSON schema. \"T.A.S Leisure Sdn Bhd\" is confirmed as the vendor name. I've also identified the VAT ID, invoice reference, and date from the receipt. I've noted the receipt has no due date, and I've ascertained the currency as MYR. Calculating the untaxed amount is the current focus, particularly how the subtotal, service charge, and GST relate to determine the correct value.\n\n\n**Populating Schema Fields**\n\nI'm now populating the JSON schema with extracted information. I've confirmed \"T.A.S Leisure Sdn Bhd\" as the vendor and \"GST ID:001042104320\" as the VAT number. The invoice reference is \"Chk 1 080323,\" and the invoice date is \"2017-12-30.\" The due date is null. The currency is MYR. I've ascertained that the untaxed amount is 96.58, the tax is 5.81, and the total is 102.40. I've set the IBAN to null and determined the VAT treatment as the standard rate. I am now extracting the line items, with prices and rates.\n\n\n**Extracting Relevant Details**\n\nI'm now focused on the final phase, extracting the itemized lines from the receipt. I've broken down each food or drink item, including the service charge, and associated quantities, and prices to add to the JSON schema. All items are at the standard tax rate of 6%. I will be entering the details for all the line items.\n\n\n**Finalizing Data Extraction**\n\nI've now completed data extraction for all essential fields, I've confirmed that the vendor name is \"T.A.S Leisure Sdn Bhd\" and that the VAT number is \"001042104320\". I've extracted the invoice reference \"Chk 1 080323\" and the date of the receipt. The process is complete, and I am ready to assemble the final JSON output.\n\n\n**Finalizing Data and Output**\n\nI've carefully extracted and validated all data points, paying close attention to the subtotals and the application of service charges to the tax base. I've reconciled the calculations with the printed values, resolving a minor rounding discrepancy. All required fields are now populated, and I am preparing the final JSON output, ensuring accuracy and data integrity.\n\n\n**Validating JSON Output**\n\nI'm now cross-referencing all extracted fields with their corresponding locations on the receipt and ensuring they are in the proper JSON schema format. I've validated all the calculations and totals. I'm satisfied that the extracted data is accurate and correctly mapped. I am ready to generate the final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Defining Vendor Information**\n\nI've determined the vendor name, going with \"T.A.S Leisure Sdn Bhd\" as the legal entity. I'm focusing on accurately populating the schema, and this seems like the most relevant data point based on the receipt. I'm also ensuring the correct field in the schema is being populated.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting data to populate the JSON schema. \"T.A.S Leisure Sdn Bhd\" is confirmed as the vendor name. I've also identified the VAT ID, invoice reference, and date from the receipt. I've noted the receipt has no due date, and I've ascertained the currency as MYR. Calculating the untaxed amount is the current focus, particularly how the subtotal, service charge, and GST relate to determine the correct value.\n\n\n**Populating Schema Fields**\n\nI'm now populating the JSON schema with extracted information. I've confirmed \"T.A.S Leisure Sdn Bhd\" as the vendor and \"GST ID:001042104320\" as the VAT number. The invoice reference is \"Chk 1 080323,\" and the invoice date is \"2017-12-30.\" The due date is null. The currency is MYR. I've ascertained that the untaxed amount is 96.58, the tax is 5.81, and the total is 102.40. I've set the IBAN to null and determined the VAT treatment as the standard rate. I am now extracting the line items, with prices and rates.\n\n\n**Extracting Relevant Details**\n\nI'm now focused on the final phase, extracting the itemized lines from the receipt. I've broken down each food or drink item, including the service charge, and associated quantities, and prices to add to the JSON schema. All items are at the standard tax rate of 6%. I will be entering the details for all the line items.\n\n\n**Finalizing Data Extraction**\n\nI've now completed data extraction for all essential fields, I've confirmed that the vendor name is \"T.A.S Leisure Sdn Bhd\" and that the VAT number is \"001042104320\". I've extracted the invoice reference \"Chk 1 080323\" and the date of the receipt. The process is complete, and I am ready to assemble the final JSON output.\n\n\n**Finalizing Data and Output**\n\nI've carefully extracted and validated all data points, paying close attention to the subtotals and the application of service charges to the tax base. I've reconciled the calculations with the printed values, resolving a minor rounding discrepancy. All required fields are now populated, and I am preparing the final JSON output, ensuring accuracy and data integrity.\n\n\n**Validating JSON Output**\n\nI'm now cross-referencing all extracted fields with their corresponding locations on the receipt and ensuring they are in the proper JSON schema format. I've validated all the calculations and totals. I'm satisfied that the extracted data is accurate and correctly mapped. I am ready to generate the final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2657,
+   "total_tokens": 2975,
+   "cost": 0.0269675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0269675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02657
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2149,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.5
+}

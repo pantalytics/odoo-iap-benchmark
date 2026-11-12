@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "ELKEN SERVICE SDN BHD",
+  "vendor_vat": "000154042368",
+  "invoice_ref": "ESS447-004439",
+  "invoice_date": "2017-10-10",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 235.85,
+  "tax": 14.15,
+  "total": 250.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VALUE PACK A - BP SER SR",
+    "quantity": 1.0,
+    "unit_price": 235.85,
+    "tax_rate": 6.0,
+    "net": 235.85
+   },
+   {
+    "description": "-CARBON FILTER - BP SERIES",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": null,
+    "net": null
+   },
+   {
+    "description": "-SEDIMENT FILTER - BP SERIES",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": null,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 235.85,
+    "tax": 14.15
+   }
+  ]
+ },
+ "cost_usd": 0.0105825,
+ "raw": {
+  "id": "gen-1794515811-OuFC939cZ8Sg7nVGqLRk",
+  "object": "chat.completion",
+  "created": 1794515811,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ELKEN SERVICE SDN BHD\",\n  \"vendor_vat\": \"000154042368\",\n  \"invoice_ref\": \"ESS447-004439\",\n  \"invoice_date\": \"2017-10-10\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 235.85,\n  \"tax\": 14.15,\n  \"total\": 250.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"VALUE PACK A - BP SER SR\",\n      \"quantity\": 1.0,\n      \"unit_price\": 235.85,\n      \"tax_rate\": 6.0,\n      \"net\": 235.85\n    },\n    {\n      \"description\": \"-CARBON FILTER - BP SERIES\",\n      \"quantity\": 1.0,\n      \"unit_price\": null,\n      \"tax_rate\": null,\n      \"net\": null\n    },\n    {\n      \"description\": \"-SEDIMENT FILTER - BP SERIES\",\n      \"quantity\": 1.0,\n      \"unit_price\": null,\n      \"tax_rate\": null,\n      \"net\": null\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 235.85,\n      \"tax\": 14.15\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Document Data**\n\nI'm processing the provided text, extracting key details like the company name (ELKEN SERVICE SDN BHD), GST registration, invoice date (2017-10-10), and recipient. My focus is on organizing this structured information efficiently.\n\n**Extracting Line Item Details**\n\nI'm currently scrutinizing the line items. Specifically, I'm focusing on how to represent the sub-components of \"VALUE PACK A - BP SER SR\" and whether their prices are implicitly included or missing.\n\n**Classifying Item Relationships**\n\nI'm analyzing how to best represent bundled items versus individual components. I'm considering whether to treat the \"CARBON FILTER\" and \"SEDIMENT FILTER\" as separate line items with zero value, or to integrate their descriptions into the main \"VALUE PACK A\" line.\n\n**Considering Line Item Representation**\n\nI'm revisiting how to best represent bundled items, particularly how to handle the implicit components of \"VALUE PACK A\". The presence of a blank \"TYPE OF SUPPLY\" is also noted. I'm evaluating options for combining the bundle and its sub-components into a single line versus three distinct lines, while adhering to the constraint of avoiding control tokens like `\\n`. The schema's allowance for `null` or `0` for `unit_price` is also under consideration for the sub-components.\n\n**Deciding Line Item Structure**\n\nI'm weighing whether to represent bundled items as a single line or break them down. The challenge is handling the implicit components of \"VALUE PACK A\" and ensuring the schema's flexibility for null or zero values in `unit_price` and `net` is correctly applied.\n\n**Structuring Line Items**\n\nI've decided to represent the bundled items as separate line items due to distinct quantities. For components with no explicit price or tax details on the bill, I will use `null` for `unit_price`, `net`, and `tax_rate`, aligning with the prompt's guidance for unbilled information.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Document Data**\n\nI'm processing the provided text, extracting key details like the company name (ELKEN SERVICE SDN BHD), GST registration, invoice date (2017-10-10), and recipient. My focus is on organizing this structured information efficiently.\n\n**Extracting Line Item Details**\n\nI'm currently scrutinizing the line items. Specifically, I'm focusing on how to represent the sub-components of \"VALUE PACK A - BP SER SR\" and whether their prices are implicitly included or missing.\n\n**Classifying Item Relationships**\n\nI'm analyzing how to best represent bundled items versus individual components. I'm considering whether to treat the \"CARBON FILTER\" and \"SEDIMENT FILTER\" as separate line items with zero value, or to integrate their descriptions into the main \"VALUE PACK A\" line.\n\n**Considering Line Item Representation**\n\nI'm revisiting how to best represent bundled items, particularly how to handle the implicit components of \"VALUE PACK A\". The presence of a blank \"TYPE OF SUPPLY\" is also noted. I'm evaluating options for combining the bundle and its sub-components into a single line versus three distinct lines, while adhering to the constraint of avoiding control tokens like `\\n`. The schema's allowance for `null` or `0` for `unit_price` is also under consideration for the sub-components.\n\n**Deciding Line Item Structure**\n\nI'm weighing whether to represent bundled items as a single line or break them down. The challenge is handling the implicit components of \"VALUE PACK A\" and ensuring the schema's flexibility for null or zero values in `unit_price` and `net` is correctly applied.\n\n**Structuring Line Items**\n\nI've decided to represent the bundled items as separate line items due to distinct quantities. For components with no explicit price or tax details on the bill, I will use `null` for `unit_price`, `net`, and `tax_rate`, aligning with the prompt's guidance for unbilled information.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 2485,
+   "total_tokens": 4170,
+   "cost": 0.0105825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0105825,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.00931875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2098,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.75
+}

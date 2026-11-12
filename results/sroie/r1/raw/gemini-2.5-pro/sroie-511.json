@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN BHD",
+  "vendor_vat": "000394528768",
+  "invoice_ref": "CSP0422870",
+  "invoice_date": "2017-12-29",
+  "due_date": "2017-12-29",
+  "currency": "MYR",
+  "untaxed": 6.6,
+  "tax": 0.4,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "4060010002913 UMS 13A SWITCH SOCKET(PC-2913A)",
+    "quantity": 2,
+    "unit_price": 3.3,
+    "tax_rate": 6,
+    "net": 6.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.6,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.0184475,
+ "raw": {
+  "id": "gen-1794512948-bk3L9UTTYqCp9041hUEr",
+  "object": "chat.completion",
+  "created": 1794512948,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN BHD\",\n  \"vendor_vat\": \"000394528768\",\n  \"invoice_ref\": \"CSP0422870\",\n  \"invoice_date\": \"2017-12-29\",\n  \"due_date\": \"2017-12-29\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.60,\n  \"tax\": 0.40,\n  \"total\": 7.00,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"4060010002913 UMS 13A SWITCH SOCKET(PC-2913A)\",\n      \"quantity\": 2,\n      \"unit_price\": 3.30,\n      \"tax_rate\": 6,\n      \"net\": 6.60\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 6.60,\n      \"tax\": 0.40\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the `vendor_name` as \"AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN B HD\" from the receipt. I'm now looking for the `vendor_vat` value, it appears to be labeled \"GST NO:\".\n\n\n**Populating Schema Fields**\n\nI've extracted the `vendor_vat` as \"000394528768\" from the \"GST NO:\" field on the receipt. I've also identified the invoice reference number as \"CSP0422870\". The invoice date is \"29/12/2017\", which I'll convert to \"2017-12-29\". Since it's a cash receipt, the due date is the same. I determined the currency is \"MYR\" based on \"(RM)\". I've found the total is 7.00, tax at 0.40, and the untaxed amount to be 6.60, based on the GST breakdown provided on the receipt.\n\n\n**Finalizing Schema Extraction**\n\nI've now completed extraction of all fields. I've successfully determined the tax treatment is \"S\" (standard) from the \"SR\" code on the GST summary. I also populated the \"lines\" array with detailed information: a single line item, description, quantity, and unit price before tax. I've also found the net, the tax rate and the vat breakdown. As there is no IBAN I have set this to null.\n\n\n**Verifying Schema Completion**\n\nI've meticulously reviewed all extracted information and cross-checked calculations, concluding the schema is fully populated. I've confirmed values for all required fields, including vendor details, invoice information, financial figures, and tax breakdown. I've also populated the line item details according to all of the rules.\n\n\n**Confirming Schema Completion**\n\nI've thoroughly reviewed the receipt information again, comparing it against the calculated JSON, and I am satisfied with the mapping. After double-checking all the figures for the amounts, I am confident the extraction and parsing processes are fully accurate. The schema is complete and ready for use.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the `vendor_name` as \"AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN B HD\" from the receipt. I'm now looking for the `vendor_vat` value, it appears to be labeled \"GST NO:\".\n\n\n**Populating Schema Fields**\n\nI've extracted the `vendor_vat` as \"000394528768\" from the \"GST NO:\" field on the receipt. I've also identified the invoice reference number as \"CSP0422870\". The invoice date is \"29/12/2017\", which I'll convert to \"2017-12-29\". Since it's a cash receipt, the due date is the same. I determined the currency is \"MYR\" based on \"(RM)\". I've found the total is 7.00, tax at 0.40, and the untaxed amount to be 6.60, based on the GST breakdown provided on the receipt.\n\n\n**Finalizing Schema Extraction**\n\nI've now completed extraction of all fields. I've successfully determined the tax treatment is \"S\" (standard) from the \"SR\" code on the GST summary. I also populated the \"lines\" array with detailed information: a single line item, description, quantity, and unit price before tax. I've also found the net, the tax rate and the vat breakdown. As there is no IBAN I have set this to null.\n\n\n**Verifying Schema Completion**\n\nI've meticulously reviewed all extracted information and cross-checked calculations, concluding the schema is fully populated. I've confirmed values for all required fields, including vendor details, invoice information, financial figures, and tax breakdown. I've also populated the line item details according to all of the rules.\n\n\n**Confirming Schema Completion**\n\nI've thoroughly reviewed the receipt information again, comparing it against the calculated JSON, and I am satisfied with the mapping. After double-checking all the figures for the amounts, I am confident the extraction and parsing processes are fully accurate. The schema is complete and ready for use.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1805,
+   "total_tokens": 2123,
+   "cost": 0.0184475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0184475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01805
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1509,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.44
+}

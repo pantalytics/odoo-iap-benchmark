@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "99 SPEED MART S/B",
+  "vendor_vat": "000181747712",
+  "invoice_ref": "18291/102/T0163",
+  "invoice_date": "2018-01-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.33,
+  "tax": 1.57,
+  "total": 27.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "973 COKE LIGHT 500ML",
+    "quantity": 2.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "5581 SPRITZER MINERAL WATER",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 26.33,
+    "tax": 1.57
+   }
+  ]
+ },
+ "cost_usd": 0.00835875,
+ "raw": {
+  "id": "gen-1794515779-1FCyhlC5VN3vvFTRShdU",
+  "object": "chat.completion",
+  "created": 1794515779,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"99 SPEED MART S/B\",\"vendor_vat\":\"000181747712\",\"invoice_ref\":\"18291/102/T0163\",\"invoice_date\":\"2018-01-28\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":26.33,\"tax\":1.57,\"total\":27.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"973 COKE LIGHT 500ML\",\"quantity\":2.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"5581 SPRITZER MINERAL WATER\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null}],\"vat_breakdown\":[{\"rate\":6.0,\"base\":26.33,\"tax\":1.57}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Details**\n\nI'm currently focused on extracting specific invoice fields from the provided image. My current progress centers on identifying and confirming the vendor's name as \"99 SPEED MART S/B (519537-X)\" and noting the absence of a vendor VAT/GST ID.\n\n**Interpreting Line Item Data**\n\nI'm now analyzing the individual line items. A key point is understanding how the \"Total/Net\" value relates to tax, especially when the printed amount is inclusive of GST. I'm considering how to reconcile this with the schema's definition of \"net\" as \"before tax, as printed.\"\n\n**Determining Unit Price**\n\nI'm refining the interpretation of line item details, specifically the unit price. I'm exploring how to calculate the pre-GST unit price by dividing the inclusive amount by 1.06, given the quantity and the inclusive total.\n\n**Calculating Net Amounts**\n\nI'm grappling with the interpretation of \"net\" amounts, specifically if they should be printed or calculated. Given the schema's \"as printed\" directive, I'm leaning towards leaving them null if not explicitly stated, but the required fields are causing me to re-evaluate this.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Details**\n\nI'm currently focused on extracting specific invoice fields from the provided image. My current progress centers on identifying and confirming the vendor's name as \"99 SPEED MART S/B (519537-X)\" and noting the absence of a vendor VAT/GST ID.\n\n**Interpreting Line Item Data**\n\nI'm now analyzing the individual line items. A key point is understanding how the \"Total/Net\" value relates to tax, especially when the printed amount is inclusive of GST. I'm considering how to reconcile this with the schema's definition of \"net\" as \"before tax, as printed.\"\n\n**Determining Unit Price**\n\nI'm refining the interpretation of line item details, specifically the unit price. I'm exploring how to calculate the pre-GST unit price by dividing the inclusive amount by 1.06, given the quantity and the inclusive total.\n\n**Calculating Net Amounts**\n\nI'm grappling with the interpretation of \"net\" amounts, specifically if they should be printed or calculated. Given the schema's \"as printed\" directive, I'm leaning towards leaving them null if not explicitly stated, but the required fields are causing me to re-evaluate this.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 1892,
+   "total_tokens": 3577,
+   "cost": 0.00835875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00835875,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.007095
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1681,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.22
+}

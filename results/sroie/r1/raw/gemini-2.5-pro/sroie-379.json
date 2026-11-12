@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "MR. D.I.Y. (KUCHAI) SDN BHD",
+  "vendor_vat": "000473792512",
+  "invoice_ref": "RO00034324",
+  "invoice_date": "2016-04-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 21.6,
+  "tax": 1.3,
+  "total": 22.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PARTITION 1072 10CM",
+    "quantity": 1.0,
+    "unit_price": 6.89,
+    "tax_rate": 6.0,
+    "net": 6.89
+   },
+   {
+    "description": "TELESCOPIC ROD 2PCS 4065#*VS",
+    "quantity": 1.0,
+    "unit_price": 4.53,
+    "tax_rate": 6.0,
+    "net": 4.53
+   },
+   {
+    "description": "CURTAIN BAR-70CM",
+    "quantity": 3.0,
+    "unit_price": 2.92,
+    "tax_rate": 6.0,
+    "net": 8.77
+   },
+   {
+    "description": "D/S TAPE 1.8*15M",
+    "quantity": 1.0,
+    "unit_price": 1.41,
+    "tax_rate": 6.0,
+    "net": 1.41
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 21.6,
+    "tax": 1.3
+   }
+  ]
+ },
+ "cost_usd": 0.0565375,
+ "raw": {
+  "id": "gen-1794514472-tAG1MeH8h60Cck66b2Ni",
+  "object": "chat.completion",
+  "created": 1794514472,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MR. D.I.Y. (KUCHAI) SDN BHD\",\n  \"vendor_vat\": \"000473792512\",\n  \"invoice_ref\": \"RO00034324\",\n  \"invoice_date\": \"2016-04-17\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 21.6,\n  \"tax\": 1.3,\n  \"total\": 22.9,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PARTITION 1072 10CM\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.89,\n      \"tax_rate\": 6.0,\n      \"net\": 6.89\n    },\n    {\n      \"description\": \"TELESCOPIC ROD 2PCS 4065#*VS\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.53,\n      \"tax_rate\": 6.0,\n      \"net\": 4.53\n    },\n    {\n      \"description\": \"CURTAIN BAR-70CM\",\n      \"quantity\": 3.0,\n      \"unit_price\": 2.92,\n      \"tax_rate\": 6.0,\n      \"net\": 8.77\n    },\n    {\n      \"description\": \"D/S TAPE 1.8*15M\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.41,\n      \"tax_rate\": 6.0,\n      \"net\": 1.41\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 21.6,\n      \"tax\": 1.3\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI have successfully identified the vendor name as \"MR. D.I.Y. (KUCHAI) SDN BHD\" from the receipt. Moreover, I've extracted the vendor's GST ID, which is \"000473792\". This fills two crucial fields in the JSON schema.\n\n\n**Populating Receipt Details**\n\nI've extracted the invoice reference, which is \"RO0003 4324,\" and the invoice date, \"17-0 4-16,\" converting it to \"2016-04-17.\"  The due date is null since it's a cash receipt. Currency is \"MYR\" based on the \"RM\" symbol. I've also parsed the \"total\" as 22.90 and \"tax\" as 1.30.  I then calculated the \"untaxed\" amount to be 21.60. Also, there is no IBAN mentioned, so that is null. I've also identified a standard VAT rate.\n\n\n**Refining Data Extraction**\n\nI'm now focusing on calculating the `net` and `unit_price` values for each line item, which requires determining tax-exclusive amounts given the included GST.  I've found a 6% tax rate, so I am dividing the line total by 1.06 to get the pre-tax price, and multiplying by quantity. I'll need to accurately round these values for consistency and precision within the JSON. Also, I've noticed a discrepancy in the GST ID; I'll revisit it to confirm and extract the correct value to avoid errors in the data.\n\n\n**Calculating Line Item Values**\n\nI'm now determining accurate values for `net` and `unit_price` within the JSON. The line item totals include tax, so I am dividing by 1.06 to get the pre-tax amounts, then rounding appropriately. I've re-examined the GST ID and confirmed it as \"000473792\". I am ensuring the extraction of this data is accurate to maintain the integrity of the data. The goal is to get this detail accurately parsed, to fit the defined schema.\n\n\n**Calculating Line Amounts**\n\nI am now focusing on determining the `unit_price` and `net` values for each line item. The prices shown are tax-inclusive, so I'm dividing by 1.06 to get the pre-tax amounts. I then need to ensure these calculated values, and their rounded counterparts, sum accurately. I also noticed that the GST ID has \"512\" at the end, I need to remove this for accuracy. I am making sure the extraction of this data is accurate to fit the defined schema.\n\n\n**Finalizing JSON Values**\n\nI'm now implementing the calculated `net` and `unit_price` values. After revising, it's clear the prices on the receipt are tax-inclusive. I will divide line totals by 1.06 to obtain pre-tax values, then round to two decimal places. Ensuring they sum correctly is important; adjustments will be made to line amounts to ensure this. I'll also ensure accurate values for `vendor_vat`, after removing the extraneous \"512\".\n\n\n**Finalizing JSON Values**\n\nI'm now implementing the calculated `net` and `unit_price` values. After revising, it's clear the prices on the receipt are tax-inclusive. I will divide line totals by 1.06 to obtain pre-tax values, then round to two decimal places. Ensuring they sum correctly is important; adjustments will be made to line amounts to ensure this. I'll also ensure accurate values for `vendor_vat`, after removing the extraneous \"512\".\n\n\n**Refining Value Calculations**\n\nI'm now determining values for the JSON. Based on prior investigations, I know I must extract all values from the receipt. I'm focusing on calculating the pre-tax `net` and `unit_price` values. Line totals are tax-inclusive; the tax rate is 6%. I have also noticed the GST ID has \"512\" after, and I am removing it for accuracy. I aim to ensure all extractions fit the defined schema.\n\n\n**Finalizing Calculation Accuracy**\n\nI am now focusing on accurately calculating the pre-tax `net` and `unit_price` values. Line totals on the receipt include 6% GST, therefore, I'll divide by 1.06 to determine the tax-exclusive amounts for the JSON. My focus is on the correct rounding to ensure the overall total and itemized amounts align precisely. I'm removing the \"512\" from the GST ID to ensure data integrity.\n\n\n**Finalizing Item Amounts**\n\nI am now focusing on refining the calculated values for each line item, prioritizing accuracy to match the overall receipt totals. This involves calculating pre-tax amounts by dividing by 1.06 and adjusting the line item amounts to ensure a consistent untaxed total. Also, I need to clean the GST ID to be \"000473792\". This ensures the final JSON adheres to the defined schema.\n\n\n**Finalizing Schema Adherence**\n\nI'm now implementing the line item calculations, which includes `net` and `unit_price`, ensuring the total equals 21.60 and the JSON is accurate. I'm focusing on ensuring data integrity. I need the information to fit the defined schema. I have also fixed the GST ID, after the fact.\n\n\n**Refining Line Item Calculations**\n\nI am now carefully verifying the accuracy of pre-tax calculations for `unit_price` and `net` values, given tax-inclusive receipt totals.  Rounding to two decimal places is required.  I'm also ensuring all line amounts are derived correctly from the overall untaxed total of 21.60 and the final JSON values reflect a perfect alignment.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI have successfully identified the vendor name as \"MR. D.I.Y. (KUCHAI) SDN BHD\" from the receipt. Moreover, I've extracted the vendor's GST ID, which is \"000473792\". This fills two crucial fields in the JSON schema.\n\n\n**Populating Receipt Details**\n\nI've extracted the invoice reference, which is \"RO0003 4324,\" and the invoice date, \"17-0 4-16,\" converting it to \"2016-04-17.\"  The due date is null since it's a cash receipt. Currency is \"MYR\" based on the \"RM\" symbol. I've also parsed the \"total\" as 22.90 and \"tax\" as 1.30.  I then calculated the \"untaxed\" amount to be 21.60. Also, there is no IBAN mentioned, so that is null. I've also identified a standard VAT rate.\n\n\n**Refining Data Extraction**\n\nI'm now focusing on calculating the `net` and `unit_price` values for each line item, which requires determining tax-exclusive amounts given the included GST.  I've found a 6% tax rate, so I am dividing the line total by 1.06 to get the pre-tax price, and multiplying by quantity. I'll need to accurately round these values for consistency and precision within the JSON. Also, I've noticed a discrepancy in the GST ID; I'll revisit it to confirm and extract the correct value to avoid errors in the data.\n\n\n**Calculating Line Item Values**\n\nI'm now determining accurate values for `net` and `unit_price` within the JSON. The line item totals include tax, so I am dividing by 1.06 to get the pre-tax amounts, then rounding appropriately. I've re-examined the GST ID and confirmed it as \"000473792\". I am ensuring the extraction of this data is accurate to maintain the integrity of the data. The goal is to get this detail accurately parsed, to fit the defined schema.\n\n\n**Calculating Line Amounts**\n\nI am now focusing on determining the `unit_price` and `net` values for each line item. The prices shown are tax-inclusive, so I'm dividing by 1.06 to get the pre-tax amounts. I then need to ensure these calculated values, and their rounded counterparts, sum accurately. I also noticed that the GST ID has \"512\" at the end, I need to remove this for accuracy. I am making sure the extraction of this data is accurate to fit the defined schema.\n\n\n**Finalizing JSON Values**\n\nI'm now implementing the calculated `net` and `unit_price` values. After revising, it's clear the prices on the receipt are tax-inclusive. I will divide line totals by 1.06 to obtain pre-tax values, then round to two decimal places. Ensuring they sum correctly is important; adjustments will be made to line amounts to ensure this. I'll also ensure accurate values for `vendor_vat`, after removing the extraneous \"512\".\n\n\n**Finalizing JSON Values**\n\nI'm now implementing the calculated `net` and `unit_price` values. After revising, it's clear the prices on the receipt are tax-inclusive. I will divide line totals by 1.06 to obtain pre-tax values, then round to two decimal places. Ensuring they sum correctly is important; adjustments will be made to line amounts to ensure this. I'll also ensure accurate values for `vendor_vat`, after removing the extraneous \"512\".\n\n\n**Refining Value Calculations**\n\nI'm now determining values for the JSON. Based on prior investigations, I know I must extract all values from the receipt. I'm focusing on calculating the pre-tax `net` and `unit_price` values. Line totals are tax-inclusive; the tax rate is 6%. I have also noticed the GST ID has \"512\" after, and I am removing it for accuracy. I aim to ensure all extractions fit the defined schema.\n\n\n**Finalizing Calculation Accuracy**\n\nI am now focusing on accurately calculating the pre-tax `net` and `unit_price` values. Line totals on the receipt include 6% GST, therefore, I'll divide by 1.06 to determine the tax-exclusive amounts for the JSON. My focus is on the correct rounding to ensure the overall total and itemized amounts align precisely. I'm removing the \"512\" from the GST ID to ensure data integrity.\n\n\n**Finalizing Item Amounts**\n\nI am now focusing on refining the calculated values for each line item, prioritizing accuracy to match the overall receipt totals. This involves calculating pre-tax amounts by dividing by 1.06 and adjusting the line item amounts to ensure a consistent untaxed total. Also, I need to clean the GST ID to be \"000473792\". This ensures the final JSON adheres to the defined schema.\n\n\n**Finalizing Schema Adherence**\n\nI'm now implementing the line item calculations, which includes `net` and `unit_price`, ensuring the total equals 21.60 and the JSON is accurate. I'm focusing on ensuring data integrity. I need the information to fit the defined schema. I have also fixed the GST ID, after the fact.\n\n\n**Refining Line Item Calculations**\n\nI am now carefully verifying the accuracy of pre-tax calculations for `unit_price` and `net` values, given tax-inclusive receipt totals.  Rounding to two decimal places is required.  I'm also ensuring all line amounts are derived correctly from the overall untaxed total of 21.60 and the final JSON values reflect a perfect alignment.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 5614,
+   "total_tokens": 5932,
+   "cost": 0.0565375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0565375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.05614
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5145,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 44.93
+}

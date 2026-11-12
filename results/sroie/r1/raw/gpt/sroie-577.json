@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "99 SPEED MART S/B",
+  "vendor_vat": "000181747712",
+  "invoice_ref": "18418/102/T0260",
+  "invoice_date": "2018-06-04",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 23.4,
+  "tax": 0,
+  "total": 23.4,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "620 CARNATION SUSU KRIMER S",
+    "quantity": 3,
+    "unit_price": 2.5,
+    "tax_rate": 0,
+    "net": 7.5
+   },
+   {
+    "description": "0715 KNORR CHICKEN STOCK 1K",
+    "quantity": 1,
+    "unit_price": 15.9,
+    "tax_rate": 0,
+    "net": 15.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 23.4,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.022995,
+ "raw": {
+  "id": "gen-1794514786-UnS1fuW9riQXvFVMT15G",
+  "object": "chat.completion",
+  "created": 1794514786,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"99 SPEED MART S/B\",\"vendor_vat\":\"000181747712\",\"invoice_ref\":\"18418/102/T0260\",\"invoice_date\":\"2018-06-04\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":23.4,\"tax\":0,\"total\":23.4,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"620 CARNATION SUSU KRIMER S\",\"quantity\":3,\"unit_price\":2.5,\"tax_rate\":0,\"net\":7.5},{\"description\":\"0715 KNORR CHICKEN STOCK 1K\",\"quantity\":1,\"unit_price\":15.9,\"tax_rate\":0,\"net\":15.9}],\"vat_breakdown\":[{\"rate\":0,\"base\":23.4,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "**Extracting JSON schema**\n\nI need to extract the JSON schema and ensure the response format follows the specific bill structure. It looks like I need a read receipt and some vendor details for \"99 SPEED MART S/B,\" including the GST ID and invoice references. There are specifics about item details, like the quantities and unit prices, with a need to clarify the second item's quantity, which may be implied as 1. I'll format all of this into the required JSON structure.**Interpreting receipt quantity**\n\nSince the receipt doesn’t print any quantity, I can interpret that as a single quantity since there’s no indication otherwise. I need to finalize that decision. The due date and IBAN are both null. I’ll include the VAT breakdown with a rate of 0, base amount of 23.40, and tax of 0. The vendor name is \"99 SPEED MART S/B,\" and I'll include the vendor VAT number as well. Now, I just need to compile everything into the final bill JSON format.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting JSON schema**\n\nI need to extract the JSON schema and ensure the response format follows the specific bill structure. It looks like I need a read receipt and some vendor details for \"99 SPEED MART S/B,\" including the GST ID and invoice references. There are specifics about item details, like the quantities and unit prices, with a need to clarify the second item's quantity, which may be implied as 1. I'll format all of this into the required JSON structure.**Interpreting receipt quantity**\n\nSince the receipt doesn’t print any quantity, I can interpret that as a single quantity since there’s no indication otherwise. I need to finalize that decision. The due date and IBAN are both null. I’ll include the VAT breakdown with a rate of 0, base amount of 23.40, and tax of 0. The vendor name is \"99 SPEED MART S/B,\" and I'll include the vendor VAT number as well. Now, I just need to compile everything into the final bill JSON format.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h9r6FB3JS8IGMho8rAkFkyicuYtYROIW8ZyK3D46hvs-OaR2_qo3EqmL6clKbMv02UjIIA3WYO9ULI88qoLxBHs9rvftm2iZ6F6s0oIoaHjUi_jrZwiuqiUhzWKEkgkSvqkpe1qM_XK5KuxzH_wD_-PN8XwjfwpZU7OGdIhh_2oyPEsj71gEG-jJMPvCq4PFfb-ClRsFJjrBXoQllyn1-XkocbE0vty_VpI0SDYRCjaLMMzDS3Dc93OuX2movB-Opg1961xVPbQNf29Q_iPPcC3QtUePFEYEyGQsuD2BG7GuEtD4Q4WMiMj4tJeUw4vd5au4mw1BaIDQAMz1UQq0TPm6cPb-oYAF5BE4UiClZcyGyr4WUrJAqd31NriHTI9vS4JwuB5clqdj8964JQsX2wEqOosDjdIqgJ2IncOi13oqYSlxxE4iRjWsbP21s7uEKHPZ9AWK-1q9v5yzt-gyiVzEKBlzng43D3ljZojQRw_T89e_CLy_tnZxmHqlfJnRFKa8Yzviav3dE1sFwQ4eoqsHBiWm1Xv3EZlw_Qgdy52_Tax9x6xFKwgGYstbtzmCS6lgIS8KNId3cKq_Nn780CRFs0eKStEvMnGWvlrzozAWI4MzlSDDdG_Thi59H0LrClY4BO7tP7ME1pmep5lzQ9ggSkl3di6p_ECG3zbwBPiJYy-NF4vtTLQG3ZLJ8PSobppDyX8eNE6ls3gn-t9gywB5DBvbCCWzxo_7103Hp_lkt-8Ir4fzww4Bp-GJ5McvuI5G9LIsc3_qNeF6ILvkLkx5XyaRE9y7LwqfBe3YbBltP05G52raf7CupHUesfR2oZ1VphOolilcjJxbYrkDvM3TaHHjSFKrugECnsry01T11HiJ7NrlepfHNkNLWKGbBTuP0E48JQyaJBqi8wiWkW3MZtKoNN07Q5b-yj6wRLCORpdWPcJJxU84QZsrl2quGtn1khSmxOb5i97JYGS3cKAxpzxXRqD0Fg0gmueLYR8EHGKzoNgJW98ppnaYQj2VUE-8-rOQfTK2con6n1tArjlfGpM1lxdGNgX_8149bIs0JAp32JQqpI6HnasHzizEWTUh4e_4Z9gxaaWOvwN-YJIhYPAx6y8zZ55rmc3xaKiof5yj-V5j1ezRwStAfwFcWNSuRDT78RfkyklKRmTjTvmx_nBzI0R5dRn8GJ2-gdRearMWSWQKB7ksdoyVYLbDrMV27QwftkkTBcBaBIeJdO47ZSY4y7moK0OjbmeBNe0OpattzcJkuSZqvl0eLXBmjgcjSaMxqrEUl2fpvaebdmh7XJDevQkNGZ6F4M9x4xb59myVoaqLhU606aoIMdzUHFVcs2CWyJviv68BJcZUtEwWz7hvSL-lp592NgKXzLYE2riNWD0GMyAhAuLDXXuCrFdbz1zU99oitRfAoWIvs5rIpXAqFQyltDuwsDWfRfdj202LXjEPf40TV5yF-khcOQAbeESvTL5JDKYb59ypLrr1UCr5hIn0VgPkIOypDi4XA5F6VO-JRmq657ynw1rN74jKjDGQgl8mvBhwTD-MrcxpLw1HmMvsA8aN7KtABjyYPtRQTLo0pV9Bl9fHFYAw7RP2qE8bRlyyYLGuFP5bAitpB46rkFsxVPdVfKxBhfrlmW95xihsl67b0cll1M10r9Ho268HvGXRfoFP_emK6Lh5SyWFYfVaLuh3mJOsbPzY2JdG7B2W3g0-Hyk9JEo0mfsdqy07oZmYmnO8Wv-Q8lc3v9mBk7j-hVTB6NiUlwwYIZifQvyzQhdObtuPgmcy4ts6qqRAna3Unfqaw1YQEYKxTst6K_VjF9qMhgR627hXwedTkwds7zqeKnLm2jNNGqn7_TjZKXRfCknprwNdkR47i34aYgKXMpMAbWX8vOlao4HOOUrnrE77a5u1-toRpYsEpbksNxyqGpJ4PndWDSqNGLIoDhrLe64o8XDRbhuamj4Sbc6rCX3BxHVelQXmaVZpjUDZmTXNhVSt-ald5DH95YePsDAPDdTqFZdDICCyaXYzICHiHBtaEMmfrb3TTKfwgxU8a4AxHyX8H7_OocEX3SxiM1mx54trCo9wO8EW8Z4o2ekIqLZNTOjKtwPFcUUNYLW4iLtVRhX--gvHFamnL5EkhdcOZSmnHrVKTNZ4tqnGymhifbyPlnlaH7r7FNFWf4hnhfvSDSlBf6lOp7JlgpJnGY9Da_6LPU6XOLxqDAgTPT7BMM5e4MgtDSjZIppPm1c_7Y1Uc6nqEUDXoqzWXjK6BcFWGNNp_tinnKdsrwYRrtSJb1zqgJ4T8AuXN3Aswsi8bsYn5cXxqcAjy22GvuN9KCScB2Ov--99mczPFcD4bcS-pPUSjWt1NWC2Seb5qpV350rdCwpN5wnYG2G_ymNsO5SHeQgNOwznwJXkP3jajgbAOueD2pMD4ZsRvwrsRnyvaFyXg6mVpji6oaptlmgyt6rbJAHels0FinfAunyGyrdatAe2SYHrIRQRSSq3-ouxQGzu5hUCVtCVZgEfz_cfKd0gST2ZUnIgKobvPnJhmcc77OZ7-7BgJWuLt18avdLXxPsXozW7FMYN82G97i5la20SAdgTZr8Zq5W3JTb4cdIBPIcHoBBKJXkG7RGW0pX_e0Rz4O6gykn4Cq5zvz6DXQ7p5v2mR9f6gerhGj-SGGZTg5Bfo7lE1TpO7VZsuHdHlU6o6DVwIRtwNhBD5hB_VOw9E9rL3_AwhY2PYw1QewK0I3qSr4bxRW-KAQb_habY4IkCtzXoAk0dAb0fRko7rTxrbSnX2-OKJzB_HIsSYlVfh4C5BaVRUwLhKQclNkNPHL65OVR-qegfqlP7dQtI8IN0D7mk00sCb9HegY85BF7aw4C4KXH0N0a9qP-2YyWuXLOe-N9_4M2jzvAoYergS7_6lZFLuybtrP0yX2KJONU7Jv0AEChA9rmOvK6VPuqcjH83OReXMpQVZEREGRwFZNqrrAHN2zua4kw4G3ilpL4E24tTaP_sE7JQCcrZmpBMHtoTkIKzWoEgpg67F5dXpUd2dovxGX3jwoe1Kum0QVVWRt837XLvIH-UfdPvZJHcJDi0pMCvhHMe8GuchZaW5ujJp3my7YPzjzG6wMbubY8b7VYERodfaxxnCYH5LsJt6BJsYiX2uV9xXyWrGeZgA6vW9nYs1VXjI2XYEVrd9R2k1cpn5MnagIj8VwEMfx1AMhewV-7J0nyvdH3tNmEjqYzwtXAQh3jWt96kNM7ce8XK8iBSj9WtIyQHZdP7k2uhai5kOQDcM5mQBt9oTtZBQQVt1UHNrm7YmophABC-_HWQFA11niQSagBrGPGkpuOt4ldaOwBxos_vuVm7E9Ku3aXvDCjhEwaUjV-42q1BREgEdFxtdmYZqW0OgoJAnhq6rUCHb8VQk2G-ApOcQMMI38gyt0JnbvmK8-Y8WBuGGIhQVEKbLBFlvpzgVBnZoYA_iin-fesUFpIihCRMolb352cs-xH5UTbzjPQZsAhOxzjl9yKgUmpSX5ZDAxts9_j_LLvR9-7mRhoycY-1NhO_55T44hEslhZ1d3cbPsRefMAReYSXcA4j8mpMZIRDwI6cqi3nbGLuwDDB_draScKq2jkhOnrnAA2C0C-70IRxWCSoypboaeDu8VsZJ-AES_Sf0I3t94gYtK1qI_RG_zEymnltNfLQ43StcY28LIinxTa3w9uH7Fn8q97cJgsZLSYtncG-POjBJzVJDgaddZHOqUFcI0g5A0TXXGmEI2aMKxGfRUhdm4rn1sHQMRz6x80IyrQtFeMuPGIvFeyHddiQO_7O1F8KthuwzSYjEPpUGMkdYG4JjEaYvNzhktnccubiIDBjS9zO0sUHFdG4bleqRhxWQD-RDyxJfRRE-LlZEPpcACXatF4CGS4NmaSlUg4z-9I_SHItJD9ner8plKqUlBLoylSfN3JebpKRY6YYx3AkChjJBoM0TuO_0WQYv36UJaQytKvyxznDbZvml5hEsor8DnT32lkyZPRRyALqu1G--DJqcNUPCML_apPOhpzDai3urfT15kd9l7VwkBs0i-eGg_fFt00QPwSOZ2_i8J8B1whvzFaPSgC3omjlQ2H5L9K3NBVXW9eBFHi4xiwd6i3r5cRdOpO6RxKSK51vXsqxduIEkMBNzR6QkoXwrRvSWFQ6O21yP3iM9g9e_dkTAzq2e0US07aqJ8oDypMp2LLnas-EnJCs9V19HOfYDdAynf-IZJbldvKI7XN3vtKWvDbhJh6lkBes6DaNLoZaNl58G0Gdv7Bya57m6nvaiYzIRQws3yRDiMtrLcNdETTvsa7dK4fqBP79c1r9Q5dYYPio2AZr9t1nAiQFQ6zWPilidFjD_auBtEdqbAqY93nxPchFyIaLSJrFgZ2O48NL9w7aFj-MD7Sfpxj7_aUsjF-ITrqV-SvMD_N77sSzRf9TndySgpCKBbtb15HkGNdyqQzAf525AGyfTQDAKqjVu6miRSZw3_AUp4ry5ANW4UAJpFPbLt9CeoJcBsZ3_B8Itk_Y_J2l07cEv9sMgeSxCbJG4KmnducEy4b6uOQFwTVCs1L4O9okjLnOpqq2528rLdKnAp9-q0JDy48gA0d9_tilwTdBnFNIBCP-jDOQFL00bEr_RZ9HuOLetmEtxUSVQj8q8afc2emKqIYuon-YtmLWrvLx7OnYPoWJz2H60bJ3vr2oVAO-xtZFsoZ-jmHWb0snDyyaLQTf_m3V8AXVRIX-inRni_6FaqbBVkEIRsgxGTu7lpH9yK25xwOvTf2c-ePwE1TLvRbu3ZV_kjARoHvv23xKlqmy502TIWpiPhDj3bvppRpYOPe2myr_UawU7IQQK89GAr0NAFlJYi-6m4SeQE3TbfWZSNRluWnyJ2sT8K6kS52TrT2h3SyQBIMs1nA6Az4Gqztlh6HKOuBkjYzuqesr4rE-mYc8JycJZFlpQEpRqPoBjJuGLGOODoiZQUZV8Hstksdsr_C7jr2Qo7GluN2W-T3bB6G3C3kofUhc0ODS6xuKJy7is1WubDIzC34UOf2aJeMMACGiGkQvKIoPhUL5SM3gwp6tfHVLGxPqQ_uITnEcE8OXGsRccVQvS4SkDMdJzC2w4rp2Yu-lk46GngZBHC4-ErbxL8ayDPnfORscFfxhEcs0Vg4HJvadZQtiWChmcQSLHAeNR9UCC491OLrPFKple_DY37Sc2l2p0XblPZ-ihNDzz0iSzFoLwOmIB2FAHn3wgfuPwfUnz8PolJ6e5sI80osDvrPHKVU5P8WY2rfRUWBhQjhL3zQyDNqIYSFn8DoMFLoX76aj2ChJQGNvfrEwhArH_9M-aVOLiR7tsc6OXfvFzER7HnP_1Zpl0GiVMZYMA7gl-Vlb9ufIZJ8-06iBFyHxEcu7Wrt7GTadRvfDcKbwIVrTU23OoseRv1isCBUoAAh-wMjubbQjYzmvaACn08ELF4NXw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0998dc1f18821f1e016af61f64059487d1b53232466f1db000",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 516,
+   "total_tokens": 2019,
+   "cost": 0.022995,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022995,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.01548
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 335,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.15
+}

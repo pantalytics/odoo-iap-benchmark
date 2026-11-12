@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "SINNATHAMBY HOLDINGS SDN. BHD.",
+  "vendor_vat": "002120876032",
+  "invoice_ref": "T03-18/199913",
+  "invoice_date": "2018-02-06",
+  "due_date": "2018-02-06",
+  "currency": "MYR",
+  "untaxed": 12.74,
+  "tax": 0.76,
+  "total": 13.5,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ROYAL GOLD LUXURIOUS KITCHEN TOWEL 6R*60",
+    "quantity": 1,
+    "unit_price": 12.74,
+    "tax_rate": 6,
+    "net": 12.74
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 12.74,
+    "tax": 0.76
+   }
+  ]
+ },
+ "cost_usd": 0.0147675,
+ "raw": {
+  "id": "gen-1794514499-jKrvUjtD0JgKPYpD17Xl",
+  "object": "chat.completion",
+  "created": 1794514499,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SINNATHAMBY HOLDINGS SDN. BHD.\",\n  \"vendor_vat\": \"002120876032\",\n  \"invoice_ref\": \"T03-18/199913\",\n  \"invoice_date\": \"2018-02-06\",\n  \"due_date\": \"2018-02-06\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 12.74,\n  \"tax\": 0.76,\n  \"total\": 13.5,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"ROYAL GOLD LUXURIOUS KITCHEN TOWEL 6R*60\",\n      \"quantity\": 1,\n      \"unit_price\": 12.74,\n      \"tax_rate\": 6,\n      \"net\": 12.74\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 12.74,\n      \"tax\": 0.76\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"SINNATHAMBY HOLDINGS SDN. BHD.\" and extracted the vendor's GST registration number, which is \"002120876032\". I am proceeding to map these data points to the respective fields in the designated JSON schema.\n\n\n**Populating JSON Fields**\n\nI'm now populating the JSON schema. I've extracted \"T03-18/19 9913\" as the invoice reference, and \"06/02/2018\" as the invoice date. Since it's a cash sale, the due date is also \"2018-02-06.\" The currency is MYR, and the untaxed amount is 12.74, tax is 0.76, and the total is 13.50. I have set the IBAN to null. The tax treatment is \"S.\" There is one line item: \"ROYAL GOLD LUXURIOUS K ITCHEN TOWEL 6R*60\", with a quantity of 1 and a unit price of 13.\n\n\n**Refining Item Details**\n\nI'm now focusing on item details, and have identified that the unit price is 12.74, not the pre-tax price of 13.50 shown on the receipt. This is because I must determine the price *before* the tax, and I can calculate it from the pre-tax total on the GST summary. The GST summary also helps determine tax rates and amounts.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON output. I've re-examined the line item details to confirm consistency. The `unit_price` needs to be before-tax, and after verifying, I'm confident in the values. The tax breakdown and line item details are accurate and derived from the GST summary. Now, I will put it all in the correct format.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"SINNATHAMBY HOLDINGS SDN. BHD.\" and extracted the vendor's GST registration number, which is \"002120876032\". I am proceeding to map these data points to the respective fields in the designated JSON schema.\n\n\n**Populating JSON Fields**\n\nI'm now populating the JSON schema. I've extracted \"T03-18/19 9913\" as the invoice reference, and \"06/02/2018\" as the invoice date. Since it's a cash sale, the due date is also \"2018-02-06.\" The currency is MYR, and the untaxed amount is 12.74, tax is 0.76, and the total is 13.50. I have set the IBAN to null. The tax treatment is \"S.\" There is one line item: \"ROYAL GOLD LUXURIOUS K ITCHEN TOWEL 6R*60\", with a quantity of 1 and a unit price of 13.\n\n\n**Refining Item Details**\n\nI'm now focusing on item details, and have identified that the unit price is 12.74, not the pre-tax price of 13.50 shown on the receipt. This is because I must determine the price *before* the tax, and I can calculate it from the pre-tax total on the GST summary. The GST summary also helps determine tax rates and amounts.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON output. I've re-examined the line item details to confirm consistency. The `unit_price` needs to be before-tax, and after verifying, I'm confident in the values. The tax breakdown and line item details are accurate and derived from the GST summary. Now, I will put it all in the correct format.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1437,
+   "total_tokens": 1755,
+   "cost": 0.0147675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0147675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01437
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1153,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.38
+}

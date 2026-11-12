@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Potter, Jackson and Brooks",
+  "vendor_vat": "941-90-0647",
+  "invoice_ref": "72677375",
+  "invoice_date": "2013-04-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 479.95,
+  "tax": 48.0,
+  "total": 527.95,
+  "iban": "GB57LPIB27874128237321",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,",
+    "quantity": 5.0,
+    "unit_price": 79.99,
+    "tax_rate": 10.0,
+    "net": 399.95
+   },
+   {
+    "description": "Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->",
+    "quantity": 1.0,
+    "unit_price": 80.0,
+    "tax_rate": 10.0,
+    "net": 80.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 479.95,
+    "tax": 48.0
+   }
+  ]
+ },
+ "cost_usd": 0.0136875,
+ "raw": {
+  "id": "gen-1794515586-0NvTjF5dOq6jMSz8UXV9",
+  "object": "chat.completion",
+  "created": 1794515586,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Potter, Jackson and Brooks\",\n  \"vendor_vat\": \"941-90-0647\",\n  \"invoice_ref\": \"72677375\",\n  \"invoice_date\": \"2013-04-08\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 479.95,\n  \"tax\": 48.0,\n  \"total\": 527.95,\n  \"iban\": \"GB57LPIB27874128237321\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,\",\n      \"quantity\": 5.0,\n      \"unit_price\": 79.99,\n      \"tax_rate\": 10.0,\n      \"net\": 399.95\n    },\n    {\n      \"description\": \"Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->\",\n      \"quantity\": 1.0,\n      \"unit_price\": 80.0,\n      \"tax_rate\": 10.0,\n      \"net\": 80.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 479.95,\n      \"tax\": 48.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've begun extracting vendor details. I've successfully identified \"Potter, Jackson and Brooks\" as the vendor_name. I've also found the vendor's VAT ID, which is \"941-90-0647\", and confirmed I can extract the details I need to fill the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted the invoice number (\"72677375\") and date (\"2013-04-08\"). I am handling the missing due date by using 'null'. I'm also addressing the currency ambiguity - I'm assuming USD based on the client location, even though the IBAN suggests GBP. I've extracted the untaxed, tax, and total amounts.\n\n\n**Verifying Calculations & Details**\n\nI've re-examined the numbers, and the totals are correct. My analysis shows that the document's total tax of $48.00 is a rounding of the calculated total tax of $47.995, so I'll handle that rounding discrepancy. I've also confirmed all the other extracted details and their values. I'm satisfied and ready to finalize the schema now.\n\n\n**Finalizing Data & Schema**\n\nI've now extracted all the necessary data points, including the itemized lines and the VAT breakdown. I've reconfirmed the currency as USD, despite the IBAN suggesting GBP, due to the US context. I've accounted for the rounding difference in the total tax amount. The JSON is ready for final generation. I'm proceeding to generate it.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've begun extracting vendor details. I've successfully identified \"Potter, Jackson and Brooks\" as the vendor_name. I've also found the vendor's VAT ID, which is \"941-90-0647\", and confirmed I can extract the details I need to fill the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted the invoice number (\"72677375\") and date (\"2013-04-08\"). I am handling the missing due date by using 'null'. I'm also addressing the currency ambiguity - I'm assuming USD based on the client location, even though the IBAN suggests GBP. I've extracted the untaxed, tax, and total amounts.\n\n\n**Verifying Calculations & Details**\n\nI've re-examined the numbers, and the totals are correct. My analysis shows that the document's total tax of $48.00 is a rounding of the calculated total tax of $47.995, so I'll handle that rounding discrepancy. I've also confirmed all the other extracted details and their values. I'm satisfied and ready to finalize the schema now.\n\n\n**Finalizing Data & Schema**\n\nI've now extracted all the necessary data points, including the itemized lines and the VAT breakdown. I've reconfirmed the currency as USD, despite the IBAN suggesting GBP, due to the US context. I've accounted for the rounding difference in the total tax amount. The JSON is ready for final generation. I'm proceeding to generate it.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1329,
+   "total_tokens": 1647,
+   "cost": 0.0136875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0136875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01329
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 957,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.31
+}

@@ -1,0 +1,127 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7017F714",
+  "invoice_date": "2017-10-17",
+  "due_date": "2017-10-17",
+  "currency": "MYR",
+  "untaxed": 105.43,
+  "tax": 5.03,
+  "total": 110.46,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 3.0,
+    "unit_price": 2.13,
+    "tax_rate": 0.0,
+    "net": 6.39
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": -1.0,
+    "unit_price": 2.78,
+    "tax_rate": 0.0,
+    "net": -2.78
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 6.0,
+    "unit_price": 2.97,
+    "tax_rate": 0.0,
+    "net": 17.82
+   },
+   {
+    "description": "CR-VANILLA",
+    "quantity": 20.0,
+    "unit_price": 0.72,
+    "tax_rate": 6.0,
+    "net": 14.4
+   },
+   {
+    "description": "CR-CORN",
+    "quantity": 20.0,
+    "unit_price": 0.72,
+    "tax_rate": 6.0,
+    "net": 14.4
+   },
+   {
+    "description": "HAZEL CHOC",
+    "quantity": 8.0,
+    "unit_price": 6.9,
+    "tax_rate": 6.0,
+    "net": 55.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 21.43,
+    "tax": 0.0
+   },
+   {
+    "rate": 6.0,
+    "base": 84.0,
+    "tax": 5.03
+   }
+  ]
+ },
+ "cost_usd": 0.0327475,
+ "raw": {
+  "id": "gen-1794514268-BqdqgoNzT5mtJ8e0vlVO",
+  "object": "chat.completion",
+  "created": 1794514268,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"GARDENIA BAKERIES (KL) SDN BHD\",\n  \"vendor_vat\": \"000381399040\",\n  \"invoice_ref\": \"7017F714\",\n  \"invoice_date\": \"2017-10-17\",\n  \"due_date\": \"2017-10-17\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 105.43,\n  \"tax\": 5.03,\n  \"total\": 110.46,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"O.C. WHITE\",\n      \"quantity\": 3.0,\n      \"unit_price\": 2.13,\n      \"tax_rate\": 0.0,\n      \"net\": 6.39\n    },\n    {\n      \"description\": \"WHOLEMEAL\",\n      \"quantity\": -1.0,\n      \"unit_price\": 2.78,\n      \"tax_rate\": 0.0,\n      \"net\": -2.78\n    },\n    {\n      \"description\": \"O.C JUMBO\",\n      \"quantity\": 6.0,\n      \"unit_price\": 2.97,\n      \"tax_rate\": 0.0,\n      \"net\": 17.82\n    },\n    {\n      \"description\": \"CR-VANILLA\",\n      \"quantity\": 20.0,\n      \"unit_price\": 0.72,\n      \"tax_rate\": 6.0,\n      \"net\": 14.4\n    },\n    {\n      \"description\": \"CR-CORN\",\n      \"quantity\": 20.0,\n      \"unit_price\": 0.72,\n      \"tax_rate\": 6.0,\n      \"net\": 14.4\n    },\n    {\n      \"description\": \"HAZEL CHOC\",\n      \"quantity\": 8.0,\n      \"unit_price\": 6.9,\n      \"tax_rate\": 6.0,\n      \"net\": 55.2\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 21.43,\n      \"tax\": 0.0\n    },\n    {\n      \"rate\": 6.0,\n      \"base\": 84.0,\n      \"tax\": 5.03\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Identifying Vendor Information**\n\nI've begun dissecting the document to populate the JSON schema. Currently, I'm focusing on extracting the vendor information. I've successfully pinpointed \"GARDENIA BAKER IES (KL) SDN BHD\" as the `vendor_name`. Next, I'll be working on finding the `vendor_vat`.\n\n\n**Extracting Further Data**\n\nI've successfully identified and extracted the `vendor_name` and `vendor_vat`.  I've now moved on to extracting the `invoice_ref`, `invoice_date` and `due_date`, and formatted them appropriately. I've also inferred the `currency` as MYR, and calculated the `untaxed` and `tax` amounts. I am working to identify the `total`.\n\n\n**Populating the Schema**\n\nI've now successfully extracted all the necessary fields to populate the JSON schema. I've populated the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, and `total`. Additionally, I determined the `vat_treatment` to be 'S' and set `iban` to `null`. I am now focusing on parsing the line items for the `lines` key. I am currently extracting `description`, `quantity`, `unit_price`, `tax_rate`, and `net`.\n\n\n**Parsing Line Items**\n\nI'm now focused on parsing the line items for the `lines` array. I've successfully extracted the details for the first five lines: `description`, `quantity`, `unit_price`, `tax_rate`, and `net`. I'm verifying each data point against the document to ensure accuracy. I'm currently working on the last line item, which I will complete shortly.\n\n\n**Finalizing the Schema**\n\nI've finished extracting and validating all line items, now, I am finalizing the `vat_breakdown` details. I am compiling the JSON object, which is now ready for use.\n\n\n**Finalizing the JSON**\n\nI'm now putting the finishing touches on the JSON object, having successfully extracted and verified all relevant data, including the VAT breakdown. I've cross-referenced the calculations with the document to ensure the integrity of the data. The final JSON is ready to be used.\n\n\n**Finalizing the JSON Output**\n\nI've carefully compiled all the extracted and verified data points into the final JSON object, including the `vat_breakdown` details. The entire schema is now ready for use, with the final JSON structure complete and ready.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Identifying Vendor Information**\n\nI've begun dissecting the document to populate the JSON schema. Currently, I'm focusing on extracting the vendor information. I've successfully pinpointed \"GARDENIA BAKER IES (KL) SDN BHD\" as the `vendor_name`. Next, I'll be working on finding the `vendor_vat`.\n\n\n**Extracting Further Data**\n\nI've successfully identified and extracted the `vendor_name` and `vendor_vat`.  I've now moved on to extracting the `invoice_ref`, `invoice_date` and `due_date`, and formatted them appropriately. I've also inferred the `currency` as MYR, and calculated the `untaxed` and `tax` amounts. I am working to identify the `total`.\n\n\n**Populating the Schema**\n\nI've now successfully extracted all the necessary fields to populate the JSON schema. I've populated the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, and `total`. Additionally, I determined the `vat_treatment` to be 'S' and set `iban` to `null`. I am now focusing on parsing the line items for the `lines` key. I am currently extracting `description`, `quantity`, `unit_price`, `tax_rate`, and `net`.\n\n\n**Parsing Line Items**\n\nI'm now focused on parsing the line items for the `lines` array. I've successfully extracted the details for the first five lines: `description`, `quantity`, `unit_price`, `tax_rate`, and `net`. I'm verifying each data point against the document to ensure accuracy. I'm currently working on the last line item, which I will complete shortly.\n\n\n**Finalizing the Schema**\n\nI've finished extracting and validating all line items, now, I am finalizing the `vat_breakdown` details. I am compiling the JSON object, which is now ready for use.\n\n\n**Finalizing the JSON**\n\nI'm now putting the finishing touches on the JSON object, having successfully extracted and verified all relevant data, including the VAT breakdown. I've cross-referenced the calculations with the document to ensure the integrity of the data. The final JSON is ready to be used.\n\n\n**Finalizing the JSON Output**\n\nI've carefully compiled all the extracted and verified data points into the final JSON object, including the `vat_breakdown` details. The entire schema is now ready for use, with the final JSON structure complete and ready.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3235,
+   "total_tokens": 3553,
+   "cost": 0.0327475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0327475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03235
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2612,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.02
+}

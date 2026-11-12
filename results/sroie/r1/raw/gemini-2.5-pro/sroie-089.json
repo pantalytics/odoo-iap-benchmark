@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "FY EAGLE ENTERPRISE",
+  "vendor_vat": "001663156224",
+  "invoice_ref": "CS00031180",
+  "invoice_date": "2017-12-04",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.6,
+  "tax": 0.4,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "12089 SR:TAPE OPP 48MMX8OY CLEAR(B.PY)-ECS",
+    "quantity": 2,
+    "unit_price": 3.3,
+    "tax_rate": 6,
+    "net": 6.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.6,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.0229875,
+ "raw": {
+  "id": "gen-1794512708-wrpcMYhjBbWubfZ3rx5f",
+  "object": "chat.completion",
+  "created": 1794512708,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"FY EAGLE ENTERPRISE\",\n  \"vendor_vat\": \"001663156224\",\n  \"invoice_ref\": \"CS00031180\",\n  \"invoice_date\": \"2017-12-04\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.60,\n  \"tax\": 0.40,\n  \"total\": 7.00,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"12089 SR:TAPE OPP 48MMX8OY CLEAR(B.PY)-ECS\",\n      \"quantity\": 2,\n      \"unit_price\": 3.3,\n      \"tax_rate\": 6,\n      \"net\": 6.60\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 6.60,\n      \"tax\": 0.40\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"FY EAGLE ENTERPRISE\" as the vendor, correcting the OCR omission of \"FY\". This detail will populate the `vendor_name` field in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The vendor VAT is \"0016631562 24,\" while the invoice reference is \"CS0 0031180\". The invoice date is \"2017-12-04\" after conversion. I've set the due date and IBAN to `null` as they are not provided, and the currency is \"MYR.\" The untaxed, tax and total amounts are 6.60, 0.40, and 7.00 respectively. Also, the VAT treatment is \"S.\"\n\n\n**Defining Line Items**\n\nI'm now focusing on defining the line item details. I am extracting \"12089 SR:TAPE OPP 48 MMX8OY CLEAR(B.PY)-ECS\" as the description, with a quantity of \"2\", a unit price of \"3.50\", and a tax rate of \"6\" percent. I am still uncertain about the line `net` amount due to an inconsistency where the line amount is shown as \"7.00,\" but the sub-total is \"6.60\". It seems the unit price of 3.50 may include tax.\n\n\n**Analyzing Line Item Data**\n\nI'm now diving deeper into the line item calculations. There's a discrepancy: the line amount is shown as 7.00, but the sub-total is 6.60. After careful review, I believe the \"AMOUNT (RM)\" for the line is the total (tax-inclusive), meaning the sub-total is the net amount, so I'll set it as such for consistency. Using the GST summary, I've calculated the net unit price and confirmed the VAT calculations. I now have confidence in these calculations and the VAT breakdown.\n\n\n**Finalizing Extraction Details**\n\nI have now finalized the information needed for all JSON fields. All the fields in the schema are populated. I've rechecked calculations and confirmed consistency between sub-total, tax, total, and line item amounts. I'm now certain about all values and can proceed with assembling the final JSON structure. I now have the data ready to be output in the correct JSON format.\n\n\n**Confirming All Calculations**\n\nI've completed the extraction of all data points and constructed the final JSON structure. I've re-reviewed all calculations, ensuring consistency between sub-total, tax, total, and individual line item amounts. All fields are populated, and I am confident that the extracted information accurately reflects the document. I am now ready to output the fully formed JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"FY EAGLE ENTERPRISE\" as the vendor, correcting the OCR omission of \"FY\". This detail will populate the `vendor_name` field in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The vendor VAT is \"0016631562 24,\" while the invoice reference is \"CS0 0031180\". The invoice date is \"2017-12-04\" after conversion. I've set the due date and IBAN to `null` as they are not provided, and the currency is \"MYR.\" The untaxed, tax and total amounts are 6.60, 0.40, and 7.00 respectively. Also, the VAT treatment is \"S.\"\n\n\n**Defining Line Items**\n\nI'm now focusing on defining the line item details. I am extracting \"12089 SR:TAPE OPP 48 MMX8OY CLEAR(B.PY)-ECS\" as the description, with a quantity of \"2\", a unit price of \"3.50\", and a tax rate of \"6\" percent. I am still uncertain about the line `net` amount due to an inconsistency where the line amount is shown as \"7.00,\" but the sub-total is \"6.60\". It seems the unit price of 3.50 may include tax.\n\n\n**Analyzing Line Item Data**\n\nI'm now diving deeper into the line item calculations. There's a discrepancy: the line amount is shown as 7.00, but the sub-total is 6.60. After careful review, I believe the \"AMOUNT (RM)\" for the line is the total (tax-inclusive), meaning the sub-total is the net amount, so I'll set it as such for consistency. Using the GST summary, I've calculated the net unit price and confirmed the VAT calculations. I now have confidence in these calculations and the VAT breakdown.\n\n\n**Finalizing Extraction Details**\n\nI have now finalized the information needed for all JSON fields. All the fields in the schema are populated. I've rechecked calculations and confirmed consistency between sub-total, tax, total, and line item amounts. I'm now certain about all values and can proceed with assembling the final JSON structure. I now have the data ready to be output in the correct JSON format.\n\n\n**Confirming All Calculations**\n\nI've completed the extraction of all data points and constructed the final JSON structure. I've re-reviewed all calculations, ensuring consistency between sub-total, tax, total, and individual line item amounts. All fields are populated, and I am confident that the extracted information accurately reflects the document. I am now ready to output the fully formed JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2259,
+   "total_tokens": 2577,
+   "cost": 0.0229875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0229875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02259
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1998,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.06
+}

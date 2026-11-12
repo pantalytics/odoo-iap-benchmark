@@ -1,0 +1,144 @@
+{
+ "pred": {
+  "vendor_name": "CHEF LEE SDN BHD",
+  "vendor_vat": "001406865408",
+  "invoice_ref": "039170",
+  "invoice_date": "2016-02-13",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 90.75,
+  "tax": 5.45,
+  "total": 96.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SEAFOOD FRIED PRICE",
+    "quantity": 1,
+    "unit_price": 13.5,
+    "tax_rate": 6,
+    "net": 13.5
+   },
+   {
+    "description": "FISH HEAD",
+    "quantity": 1,
+    "unit_price": 11.5,
+    "tax_rate": 6,
+    "net": 11.5
+   },
+   {
+    "description": "FISH CAKE",
+    "quantity": 1,
+    "unit_price": 7.9,
+    "tax_rate": 6,
+    "net": 7.9
+   },
+   {
+    "description": "G. CRISPY CHIC RICE",
+    "quantity": 1,
+    "unit_price": 15.9,
+    "tax_rate": 6,
+    "net": 15.9
+   },
+   {
+    "description": "V. GRILL CHIC RICE",
+    "quantity": 1,
+    "unit_price": 16.5,
+    "tax_rate": 6,
+    "net": 16.5
+   },
+   {
+    "description": "W/MELON JUICE",
+    "quantity": 1,
+    "unit_price": 7.5,
+    "tax_rate": 6,
+    "net": 7.5
+   },
+   {
+    "description": "RIBENA",
+    "quantity": 1,
+    "unit_price": 5.9,
+    "tax_rate": 6,
+    "net": 5.9
+   },
+   {
+    "description": "ICED CHINESE TEA",
+    "quantity": 2,
+    "unit_price": 1.9,
+    "tax_rate": 6,
+    "net": 3.8
+   },
+   {
+    "description": "SERV. CHG. 10%",
+    "quantity": 1,
+    "unit_price": 8.25,
+    "tax_rate": 6,
+    "net": 8.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 90.75,
+    "tax": 5.45
+   }
+  ]
+ },
+ "cost_usd": 0.019562,
+ "raw": {
+  "id": "gen-1794514569-hWIrIIlWFHcuUvUprymg",
+  "object": "chat.completion",
+  "created": 1794514569,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"CHEF LEE SDN BHD\",\"vendor_vat\":\"001406865408\",\"invoice_ref\":\"039170\",\"invoice_date\":\"2016-02-13\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":90.75,\"tax\":5.45,\"total\":96.2,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SEAFOOD FRIED PRICE\",\"quantity\":1,\"unit_price\":13.5,\"tax_rate\":6,\"net\":13.5},{\"description\":\"FISH HEAD\",\"quantity\":1,\"unit_price\":11.5,\"tax_rate\":6,\"net\":11.5},{\"description\":\"FISH CAKE\",\"quantity\":1,\"unit_price\":7.9,\"tax_rate\":6,\"net\":7.9},{\"description\":\"G. CRISPY CHIC RICE\",\"quantity\":1,\"unit_price\":15.9,\"tax_rate\":6,\"net\":15.9},{\"description\":\"V. GRILL CHIC RICE\",\"quantity\":1,\"unit_price\":16.5,\"tax_rate\":6,\"net\":16.5},{\"description\":\"W/MELON JUICE\",\"quantity\":1,\"unit_price\":7.5,\"tax_rate\":6,\"net\":7.5},{\"description\":\"RIBENA\",\"quantity\":1,\"unit_price\":5.9,\"tax_rate\":6,\"net\":5.9},{\"description\":\"ICED CHINESE TEA\",\"quantity\":2,\"unit_price\":1.9,\"tax_rate\":6,\"net\":3.8},{\"description\":\"SERV. CHG. 10%\",\"quantity\":1,\"unit_price\":8.25,\"tax_rate\":6,\"net\":8.25}],\"vat_breakdown\":[{\"rate\":6,\"base\":90.75,\"tax\":5.45}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling out the fields now. The vendor name is \"OLD ASIA,\" but the header says it's owned by CHEF LEE SDN BHD, so I'm weighing which of the two counts as the issuing company.\n\nI'm settling on CHEF LEE SDN BHD as the issuer, then pulling the GST number, the invoice reference and the date. Working through the line items, the subtotal lands at 82.50 once the 10% service charge is added, which gives a taxable base of 90.75 and 5.45 GST for a total of 96.20.\n\nI'm checking the service charge line next, treating it as 8.25 net at a 6% tax rate, and I'm noting that every line uses that same rate. The VAT breakdown should come out to 6% on a 90.75 base with 5.45 tax, under the standard treatment.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling out the fields now. The vendor name is \"OLD ASIA,\" but the header says it's owned by CHEF LEE SDN BHD, so I'm weighing which of the two counts as the issuing company.\n\nI'm settling on CHEF LEE SDN BHD as the issuer, then pulling the GST number, the invoice reference and the date. Working through the line items, the subtotal lands at 82.50 once the 10% service charge is added, which gives a taxable base of 90.75 and 5.45 GST for a total of 96.20.\n\nI'm checking the service charge line next, treating it as 8.25 net at a 6% tax rate, and I'm noting that every line uses that same rate. The VAT breakdown should come out to 6% on a 90.75 base with 5.45 tax, under the standard treatment.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 1320,
+   "total_tokens": 4501,
+   "cost": 0.019562,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.019562,
+    "upstream_inference_prompt_cost": 0.006362,
+    "upstream_inference_completions_cost": 0.0132
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 728,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.27
+}

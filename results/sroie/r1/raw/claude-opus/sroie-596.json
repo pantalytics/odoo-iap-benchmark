@@ -1,0 +1,109 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001-539829",
+  "invoice_date": "2018-06-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 52.0,
+  "tax": 0.0,
+  "total": 52.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Omellete Item",
+    "quantity": 1,
+    "unit_price": 15.0,
+    "tax_rate": 0,
+    "net": 15.0
+   },
+   {
+    "description": "Vege Item (S)",
+    "quantity": 1,
+    "unit_price": 10.0,
+    "tax_rate": 0,
+    "net": 10.0
+   },
+   {
+    "description": "Rice w Seafood /Meat Item Single",
+    "quantity": 1,
+    "unit_price": 22.0,
+    "tax_rate": 0,
+    "net": 22.0
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1,
+    "unit_price": 5.0,
+    "tax_rate": 0,
+    "net": 5.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 52.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.024084,
+ "raw": {
+  "id": "gen-1794514440-tGz06eyS20WQL4mTaseg",
+  "object": "chat.completion",
+  "created": 1794514440,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\"vendor_vat\":\"000670224384\",\"invoice_ref\":\"V001-539829\",\"invoice_date\":\"2018-06-05\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":52.0,\"tax\":0.0,\"total\":52.0,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"Omellete Item\",\"quantity\":1,\"unit_price\":15.0,\"tax_rate\":0,\"net\":15.0},{\"description\":\"Vege Item (S)\",\"quantity\":1,\"unit_price\":10.0,\"tax_rate\":0,\"net\":10.0},{\"description\":\"Rice w Seafood /Meat Item Single\",\"quantity\":1,\"unit_price\":22.0,\"tax_rate\":0,\"net\":22.0},{\"description\":\"Beverage\",\"quantity\":1,\"unit_price\":5.0,\"tax_rate\":0,\"net\":5.0}],\"vat_breakdown\":[{\"rate\":0,\"base\":52.0,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm working out the tax treatment: at 0% during the June 2018 holiday period, the rate is zero, so this falls under category Z rather than S. Then I'm reading the receipt layout, where each description sits below its quantity and price line, and matching the items to their prices: Omellete 15, Vege 10, Rice 22, Beverage 5. The date reads 05-06-2018.\n\nI'm converting the date from the Malaysian DD-MM-YYYY format to 2018-06-05, and noting the vendor's GST registration number 000670224384 with the currency as MYR.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working out the tax treatment: at 0% during the June 2018 holiday period, the rate is zero, so this falls under category Z rather than S. Then I'm reading the receipt layout, where each description sits below its quantity and price line, and matching the items to their prices: Omellete 15, Vege 10, Rice 22, Beverage 5. The date reads 05-06-2018.\n\nI'm converting the date from the Malaysian DD-MM-YYYY format to 2018-06-05, and noting the vendor's GST registration number 000670224384 with the currency as MYR.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSnggKEAgTGAI4AUIIdGhpbmtpbmcSDO4ttYkr4tOGPKW3vBoMILyMO3P+VF2jKBtCIjBPcQlfH+9BTbf7Jxz1fDBibatKxl9G76W//3xzZCDKxRzPS4YGhLH2Fyb1KWacLNQquwdcGmsHfn4SmKNqHBvip+GIfCFwREvKYsbjjzof7kUAR9ZxHz1MQmJAQNfOCcAT0vmu8rfTQIbmef8XdW2eJdtt+vmCKym9WSJwxMPVLz5kXG97k2xgF1WLufGLOkHoKyN9MMNQwygJZdv1feGowdm/lA/gTe02pqP01l1orxn17gu16Pndpuh0hi0ABwJENvW5UhkFGj6kE6QY0F8F7Lx/Mox9uqEnOES0zinRDEwyXaYDmF9WrgXYwOz48CtVMTJxJmmwW9RCW/gpNVOXSVmTa3O85Wc54kciX3cHlZMFLV+lGCWZ5PmhmPV0p+kTPORKBbRU4uQIS8oKIi5MPM1iZHJU/vDqagzrU4CiKtd1a9ewoB6COL+MBuLD2cE8moIhqW+Myqb9TotlUhBpHS78g9qklLw3k58WuzIvO2UD6ddnoOBJpz28TY4vmYkaae1EnK0lK6kDwUeainD/EW7wbBgE7x1/J8XE3VH27VJ8ANmUpJ3cyw8VIxH0fKJ/9/nmMM5zTGYR3egZXOY9YqRNI/hEHzqQ9lYCHIOAgXrb5PRSlK6P8s2exMIcE6X0fEwaJsI/MTDU4x6cszUv6r0fB1QtLoyHlKzxX8iOszMxTm92gKPfmxWWmetOmp9iFXq5hdZSjFtHESpMT33WIejcP+G4GSB1EMFJzf+NhJnRIKYMosBa4m7xXie3Fr0g/dwdppqGYMxruC9ugDPdHAsrQdR2O9blC+qi9rMViOQou4VVICIw4pWla0jjEmZTG/cfxrYMc8I03w1FpCWO1Gxijuvq0DQ739VLsgS9hiwoCQIpJ6ykfxt21sBCD0Z8MPboct6T40L/8wgT3syptnjVREDBjiWkb8mbEKZsoO7E2qzdZRIqIA1Fz1Rn+PpAj7Kxk79NKHyZylMNjN1Y8ENRRzrRM4a5TNut1nOm0H7kxz+RojLjmGD4K705CfPS5JZngSmcp/7mJNi0pYZITDIK4V0MF2iXgaazJVHeIua20d2gPGRLu7to+qtAkKYMPFW+zrVeBUamN9QzVeFPtcbxAZfneVr6eaYt/cLPEEhmxGCZN2LbQ2bM5yCeZIIVsllW2OzUFcC5N1IY6sm8Z+kgIe8UEhUQKekU6GYS1kgEvEkHfkUJROuxzcgpiB2c3JTk4QBINQAfmiAgkaJOxH5mU96wNMDE5l8PEkRkibvE9zgp81B6+COyk9g//eOcnvePOkMV/kK3fMKNMRlHDaqinrSNfoXiGoy42PkQ8lzkB8EOilsVwhpbuBa5GAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 568,
+   "total_tokens": 3749,
+   "cost": 0.024084,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024084,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01136
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 204,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.72
+}

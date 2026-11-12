@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Baker, Michael and Martin",
+  "vendor_vat": "986-85-0797",
+  "invoice_ref": "36279024",
+  "invoice_date": "2014-08-18",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 1141.06,
+  "tax": 114.11,
+  "total": 1255.17,
+  "iban": "GB83KADG62149078164489",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Oomphies Boys Ankle Boots Shoes Gray Green Kids Size 2 EUC",
+    "quantity": 3.0,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 35.97
+   },
+   {
+    "description": "Adult Girl Version Hermione Granger Cosplay Costume Gryffindor Kid size In Stock",
+    "quantity": 5.0,
+    "unit_price": 64.16,
+    "tax_rate": 10,
+    "net": 320.8
+   },
+   {
+    "description": "Boys water/beach/pool black orange and blue hook and loop size 13-1 shoes",
+    "quantity": 5.0,
+    "unit_price": 1.18,
+    "tax_rate": 10,
+    "net": 5.9
+   },
+   {
+    "description": "INC International Concepts Children Shoes nvyzc7, Black, Size Little Kid 2.5",
+    "quantity": 3.0,
+    "unit_price": 73.48,
+    "tax_rate": 10,
+    "net": 220.44
+   },
+   {
+    "description": "Nautica Kids Boys Navy & Red with White Rubber Sole Running Sneakers Shoes US 10",
+    "quantity": 1.0,
+    "unit_price": 500.0,
+    "tax_rate": 10,
+    "net": 500.0
+   },
+   {
+    "description": "Beyblade Burst B-163 Superking Brave Valkyrie.Ev' 2A Top /Launcher /Grip Kid Toy",
+    "quantity": 5.0,
+    "unit_price": 11.59,
+    "tax_rate": 10,
+    "net": 57.95
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 1141.06,
+    "tax": 114.11
+   }
+  ]
+ },
+ "cost_usd": 0.033616,
+ "raw": {
+  "id": "gen-1794515533-fDqq8P7bQFW6NAWwa3Je",
+  "object": "chat.completion",
+  "created": 1794515533,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Baker, Michael and Martin\",\n  \"vendor_vat\": \"986-85-0797\",\n  \"invoice_ref\": \"36279024\",\n  \"invoice_date\": \"2014-08-18\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 1141.06,\n  \"tax\": 114.11,\n  \"total\": 1255.17,\n  \"iban\": \"GB83KADG62149078164489\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Oomphies Boys Ankle Boots Shoes Gray Green Kids Size 2 EUC\",\n      \"quantity\": 3.0,\n      \"unit_price\": 11.99,\n      \"tax_rate\": 10,\n      \"net\": 35.97\n    },\n    {\n      \"description\": \"Adult Girl Version Hermione Granger Cosplay Costume Gryffindor Kid size In Stock\",\n      \"quantity\": 5.0,\n      \"unit_price\": 64.16,\n      \"tax_rate\": 10,\n      \"net\": 320.8\n    },\n    {\n      \"description\": \"Boys water/beach/pool black orange and blue hook and loop size 13-1 shoes\",\n      \"quantity\": 5.0,\n      \"unit_price\": 1.18,\n      \"tax_rate\": 10,\n      \"net\": 5.9\n    },\n    {\n      \"description\": \"INC International Concepts Children Shoes nvyzc7, Black, Size Little Kid 2.5\",\n      \"quantity\": 3.0,\n      \"unit_price\": 73.48,\n      \"tax_rate\": 10,\n      \"net\": 220.44\n    },\n    {\n      \"description\": \"Nautica Kids Boys Navy & Red with White Rubber Sole Running Sneakers Shoes US 10\",\n      \"quantity\": 1.0,\n      \"unit_price\": 500.0,\n      \"tax_rate\": 10,\n      \"net\": 500.0\n    },\n    {\n      \"description\": \"Beyblade Burst B-163 Superking Brave Valkyrie.Ev' 2A Top /Launcher /Grip Kid Toy\",\n      \"quantity\": 5.0,\n      \"unit_price\": 11.59,\n      \"tax_rate\": 10,\n      \"net\": 57.95\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 1141.06,\n      \"tax\": 114.11\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` fields, looking for their presence and type within the invoice data. My next steps involve mapping these identified values to the appropriate schema keys.\n\n**Mapping Identified Data**\n\nI've successfully extracted and parsed the vendor name and VAT. Now, I'm mapping these and other identified fields, such as invoice reference and dates, to their corresponding schema definitions.\n\n**Calculating Vat Totals**\n\nI've finished parsing the invoice lines and have identified the VAT treatment and breakdown. My current focus is on consolidating the base amounts for each VAT rate and preparing to calculate the total VAT due.\n\n**Validating Output Structure**\n\nI'm now focusing on ensuring all numerical and date formats are precise and that the final JSON adheres strictly to the schema, including validating the list of invoice lines.\n\n**Aggregating VAT Calculations**\n\nI'm now consolidating the base amounts for each VAT rate based on the parsed invoice lines, focusing on the `vat_breakdown` to accurately sum up the total VAT.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` fields, looking for their presence and type within the invoice data. My next steps involve mapping these identified values to the appropriate schema keys.\n\n**Mapping Identified Data**\n\nI've successfully extracted and parsed the vendor name and VAT. Now, I'm mapping these and other identified fields, such as invoice reference and dates, to their corresponding schema definitions.\n\n**Calculating Vat Totals**\n\nI've finished parsing the invoice lines and have identified the VAT treatment and breakdown. My current focus is on consolidating the base amounts for each VAT rate and preparing to calculate the total VAT due.\n\n**Validating Output Structure**\n\nI'm now focusing on ensuring all numerical and date formats are precise and that the final JSON adheres strictly to the schema, including validating the list of invoice lines.\n\n**Aggregating VAT Calculations**\n\nI'm now consolidating the base amounts for each VAT rate based on the parsed invoice lines, focusing on the `vat_breakdown` to accurately sum up the total VAT.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2540,
+   "total_tokens": 4108,
+   "cost": 0.033616,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.033616,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.03048
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1838,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.28
+}

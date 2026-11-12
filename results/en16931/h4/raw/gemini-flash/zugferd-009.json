@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Physiotherapeutin",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "R18-31",
+  "invoice_date": "2018-10-03",
+  "due_date": "2018-11-21",
+  "currency": "EUR",
+  "untaxed": 380.0,
+  "tax": 0.0,
+  "total": 380.0,
+  "iban": "DE02120300000000202051",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Physiotherapie Behandlungen aufgrund der Verordnung von Frau Dr. Heilerin vom 05.09.2018 an folgenden Terminen: 11.09.2018; 14.09.2018; 19.09.2018; 24.09.2018; 27.09.2018; 11.10.2018; 15.10.2018; 17.10.2018; 22.10.2018; 30.10.2018",
+    "quantity": 10.0,
+    "unit_price": 26.0,
+    "tax_rate": 0.0,
+    "net": 260.0
+   },
+   {
+    "description": "Hausbesuch An folgenden Terminen: 11.09.2018; 14.09.2018; 19.09.2018; 24.09.2018; 27.09.2018; 11.10.2018; 15.10.2018; 17.10.2018; 22.10.2018; 30.10.2018",
+    "quantity": 10.0,
+    "unit_price": 12.0,
+    "tax_rate": 0.0,
+    "net": 120.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 380.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.00822375,
+ "raw": {
+  "id": "gen-1794514713-dbHWog85F17a1tb1cW9I",
+  "object": "chat.completion",
+  "created": 1794514713,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Physiotherapeutin\",\"vendor_vat\":\"DE136695976\",\"invoice_ref\":\"R18-31\",\"invoice_date\":\"2018-10-03\",\"due_date\":\"2018-11-21\",\"currency\":\"EUR\",\"untaxed\":380.0,\"tax\":0.0,\"total\":380.0,\"iban\":\"DE02120300000000202051\",\"vat_treatment\":\"E\",\"lines\":[{\"description\":\"Physiotherapie Behandlungen aufgrund der Verordnung von Frau Dr. Heilerin vom 05.09.2018 an folgenden Terminen: 11.09.2018; 14.09.2018; 19.09.2018; 24.09.2018; 27.09.2018; 11.10.2018; 15.10.2018; 17.10.2018; 22.10.2018; 30.10.2018\",\"quantity\":10.0,\"unit_price\":26.0,\"tax_rate\":0.0,\"net\":260.0},{\"description\":\"Hausbesuch An folgenden Terminen: 11.09.2018; 14.09.2018; 19.09.2018; 24.09.2018; 27.09.2018; 11.10.2018; 15.10.2018; 17.10.2018; 22.10.2018; 30.10.2018\",\"quantity\":10.0,\"unit_price\":12.0,\"tax_rate\":0.0,\"net\":120.0}],\"vat_breakdown\":[{\"rate\":0.0,\"base\":380.0,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm currently refining the extraction logic for the vendor name on the invoice. My focus is on accurately identifying \"Physiotherapeutin\" as the core name, even when additional contact details like \"Tanja Tinder\" are present.\n\n**Differentiating Vendor Name**\n\nI'm evaluating the \"Verkäufer\" block. While \"Physiotherapeutin\" is listed under \"Name,\" \"Tanja Tinder\" is under \"Ansprechpartner.\" Based on general ZUGFeRD invoice structures, \"Physiotherapeutin\" appears to be the primary vendor identifier, and I'm leaning towards using that.\n\n**Processing Line Items**\n\nI'm now examining the individual line items. The \"Physiotherapie Behandlungen\" description is extensive, and I'm ensuring all date entries are correctly parsed and captured. I've noted that the \"Hausbesuch\" description is incomplete in the provided data.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm currently refining the extraction logic for the vendor name on the invoice. My focus is on accurately identifying \"Physiotherapeutin\" as the core name, even when additional contact details like \"Tanja Tinder\" are present.\n\n**Differentiating Vendor Name**\n\nI'm evaluating the \"Verkäufer\" block. While \"Physiotherapeutin\" is listed under \"Name,\" \"Tanja Tinder\" is under \"Ansprechpartner.\" Based on general ZUGFeRD invoice structures, \"Physiotherapeutin\" appears to be the primary vendor identifier, and I'm leaning towards using that.\n\n**Processing Line Items**\n\nI'm now examining the individual line items. The \"Physiotherapie Behandlungen\" description is extensive, and I'm ensuring all date entries are correctly parsed and captured. I've noted that the \"Hausbesuch\" description is incomplete in the provided data.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2450,
+   "completion_tokens": 1703,
+   "total_tokens": 4153,
+   "cost": 0.00822375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00822375,
+    "upstream_inference_prompt_cost": 0.0018375,
+    "upstream_inference_completions_cost": 0.00638625
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1202,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.51
+}

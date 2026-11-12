@@ -1,0 +1,113 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7008F710",
+  "invoice_date": "2017-10-08",
+  "due_date": "2017-10-08",
+  "currency": "MYR",
+  "untaxed": 46.1,
+  "tax": -0.04,
+  "total": 46.06,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 7.0,
+    "unit_price": 2.13,
+    "tax_rate": 0.0,
+    "net": 14.91
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": 4.0,
+    "unit_price": 2.78,
+    "tax_rate": 0.0,
+    "net": 11.12
+   },
+   {
+    "description": "0.C JUMBO",
+    "quantity": 7.0,
+    "unit_price": 2.97,
+    "tax_rate": 0.0,
+    "net": 20.79
+   },
+   {
+    "description": "CR-B'SCOTCH",
+    "quantity": -1.0,
+    "unit_price": 0.72,
+    "tax_rate": 6.0,
+    "net": -0.72
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 46.82,
+    "tax": 0.0
+   },
+   {
+    "rate": 6.0,
+    "base": -0.72,
+    "tax": -0.04
+   }
+  ]
+ },
+ "cost_usd": 0.0195375,
+ "raw": {
+  "id": "gen-1794514456-x4G24niAENcOPBe3Dd6f",
+  "object": "chat.completion",
+  "created": 1794514456,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"GARDENIA BAKERIES (KL) SDN BHD\",\n  \"vendor_vat\": \"000381399040\",\n  \"invoice_ref\": \"7008F710\",\n  \"invoice_date\": \"2017-10-08\",\n  \"due_date\": \"2017-10-08\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 46.1,\n  \"tax\": -0.04,\n  \"total\": 46.06,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"O.C. WHITE\",\n      \"quantity\": 7.0,\n      \"unit_price\": 2.13,\n      \"tax_rate\": 0.0,\n      \"net\": 14.91\n    },\n    {\n      \"description\": \"WHOLEMEAL\",\n      \"quantity\": 4.0,\n      \"unit_price\": 2.78,\n      \"tax_rate\": 0.0,\n      \"net\": 11.12\n    },\n    {\n      \"description\": \"0.C JUMBO\",\n      \"quantity\": 7.0,\n      \"unit_price\": 2.97,\n      \"tax_rate\": 0.0,\n      \"net\": 20.79\n    },\n    {\n      \"description\": \"CR-B'SCOTCH\",\n      \"quantity\": -1.0,\n      \"unit_price\": 0.72,\n      \"tax_rate\": 6.0,\n      \"net\": -0.72\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 46.82,\n      \"tax\": 0.0\n    },\n    {\n      \"rate\": 6.0,\n      \"base\": -0.72,\n      \"tax\": -0.04\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Identifying Vendor Details**\n\nI've pinpointed the vendor name as \"GARDEN IA BAKERIES (KL) SDN BHD,\" located at the document's top. I'm now focusing on extracting the vendor's VAT information; my next step is locating the value within the text, as it's not immediately apparent.\n\n\n**Extracting Bill Data**\n\nI've extracted the key fields now. I have determined that the `vendor_name` is \"GARDEN IA BAKERIES (KL) SDN BHD,\" and the `vendor_vat` is \"000381399040.\" \"7008F710\" is the `invoice_ref`, and \"2017-10-08\" is the `invoice_date`. Since it's a cash invoice, `due_date` is also \"2017-10-08\". I've set the `currency` to \"MYR\" and calculated the `untaxed` amount at 46.10, matching the line totals. Finally I found that the amount labeled 'GST' is the tax.\n\n\n**Analyzing Line Items**\n\nI'm now deep-diving into the line items. I've successfully extracted and validated the details for the first two lines, including descriptions, quantities, unit prices, and tax rates. Now, I'm working through the remaining line items, checking if their values correspond to the total before-tax, as a way to validate my logic. I've also verified that the tax rate is correct for the 0% supplies.\n\n\n**Finalizing Invoice Details**\n\nI'm now putting the finishing touches on the schema, having extracted all necessary information. I've validated the line item calculations. I've also incorporated the tax breakdown and determined the VAT treatment. I've also set IBAN to null as it's not present. Now, I'm ready to finalize the extraction.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, I'm integrating all extracted data into the JSON schema and cross-checking data integrity, ensuring everything aligns perfectly. I'm focusing on crafting the correct JSON structure. With all fields populated, I am finalizing the output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Identifying Vendor Details**\n\nI've pinpointed the vendor name as \"GARDEN IA BAKERIES (KL) SDN BHD,\" located at the document's top. I'm now focusing on extracting the vendor's VAT information; my next step is locating the value within the text, as it's not immediately apparent.\n\n\n**Extracting Bill Data**\n\nI've extracted the key fields now. I have determined that the `vendor_name` is \"GARDEN IA BAKERIES (KL) SDN BHD,\" and the `vendor_vat` is \"000381399040.\" \"7008F710\" is the `invoice_ref`, and \"2017-10-08\" is the `invoice_date`. Since it's a cash invoice, `due_date` is also \"2017-10-08\". I've set the `currency` to \"MYR\" and calculated the `untaxed` amount at 46.10, matching the line totals. Finally I found that the amount labeled 'GST' is the tax.\n\n\n**Analyzing Line Items**\n\nI'm now deep-diving into the line items. I've successfully extracted and validated the details for the first two lines, including descriptions, quantities, unit prices, and tax rates. Now, I'm working through the remaining line items, checking if their values correspond to the total before-tax, as a way to validate my logic. I've also verified that the tax rate is correct for the 0% supplies.\n\n\n**Finalizing Invoice Details**\n\nI'm now putting the finishing touches on the schema, having extracted all necessary information. I've validated the line item calculations. I've also incorporated the tax breakdown and determined the VAT treatment. I've also set IBAN to null as it's not present. Now, I'm ready to finalize the extraction.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, I'm integrating all extracted data into the JSON schema and cross-checking data integrity, ensuring everything aligns perfectly. I'm focusing on crafting the correct JSON structure. With all fields populated, I am finalizing the output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1914,
+   "total_tokens": 2232,
+   "cost": 0.0195375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0195375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01914
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1411,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.35
+}

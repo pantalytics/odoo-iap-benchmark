@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Jones-Frazier",
+  "vendor_vat": "937-84-4041",
+  "invoice_ref": "15801054",
+  "invoice_date": "2015-09-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 246.31,
+  "tax": 24.63,
+  "total": 270.94,
+  "iban": "GB29ITRF67964142047762",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes",
+    "quantity": 4.0,
+    "unit_price": 44.99,
+    "tax_rate": 10.0,
+    "net": 179.96
+   },
+   {
+    "description": "10\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock",
+    "quantity": 1.0,
+    "unit_price": 26.99,
+    "tax_rate": 10.0,
+    "net": 26.99
+   },
+   {
+    "description": "Boys Kids Printed Cotton Slippers Zip Fastening 350172494",
+    "quantity": 2.0,
+    "unit_price": 19.68,
+    "tax_rate": 10.0,
+    "net": 39.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 246.31,
+    "tax": 24.63
+   }
+  ]
+ },
+ "cost_usd": 0.00799125,
+ "raw": {
+  "id": "gen-1794515117-IBct1TWtReRPSZGh1YMP",
+  "object": "chat.completion",
+  "created": 1794515117,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Jones-Frazier\",\n  \"vendor_vat\": \"937-84-4041\",\n  \"invoice_ref\": \"15801054\",\n  \"invoice_date\": \"2015-09-08\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 246.31,\n  \"tax\": 24.63,\n  \"total\": 270.94,\n  \"iban\": \"GB29ITRF67964142047762\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes\",\n      \"quantity\": 4.0,\n      \"unit_price\": 44.99,\n      \"tax_rate\": 10.0,\n      \"net\": 179.96\n    },\n    {\n      \"description\": \"10\\\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock\",\n      \"quantity\": 1.0,\n      \"unit_price\": 26.99,\n      \"tax_rate\": 10.0,\n      \"net\": 26.99\n    },\n    {\n      \"description\": \"Boys Kids Printed Cotton Slippers Zip Fastening 350172494\",\n      \"quantity\": 2.0,\n      \"unit_price\": 19.68,\n      \"tax_rate\": 10.0,\n      \"net\": 39.36\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 246.31,\n      \"tax\": 24.63\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've successfully parsed the invoice number, issue date, seller and client names and addresses, and tax IDs. The IBAN for the seller has also been identified.\n\n**Investigating Ambiguities**\n\nI'm re-evaluating country and date formats. The presence of a GB IBAN alongside US-style state abbreviations and a '$' currency symbol is creating confusion. I'm also working to confirm whether the date is MM/DD/YYYY or DD/MM/YYYY based on the available location and currency clues.\n\n**Clarifying Country and Date**\n\nI've identified \"DE\" in the vendor address not as Germany, but as Delaware, confirming a US vendor. This means dates should be read month-first, so 09/08/2015 is September 8, 2015. I'm now proceeding with this corrected interpretation for all date fields.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've successfully parsed the invoice number, issue date, seller and client names and addresses, and tax IDs. The IBAN for the seller has also been identified.\n\n**Investigating Ambiguities**\n\nI'm re-evaluating country and date formats. The presence of a GB IBAN alongside US-style state abbreviations and a '$' currency symbol is creating confusion. I'm also working to confirm whether the date is MM/DD/YYYY or DD/MM/YYYY based on the available location and currency clues.\n\n**Clarifying Country and Date**\n\nI've identified \"DE\" in the vendor address not as Germany, but as Delaware, confirming a US vendor. This means dates should be read month-first, so 09/08/2015 is September 8, 2015. I'm now proceeding with this corrected interpretation for all date fields.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 1794,
+   "total_tokens": 3479,
+   "cost": 0.00799125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00799125,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.0067275
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1328,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.33
+}

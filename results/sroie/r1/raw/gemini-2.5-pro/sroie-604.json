@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "KEDAI PAPAN YEW CHUAN",
+  "vendor_vat": "000781500416",
+  "invoice_ref": "CS00013125",
+  "invoice_date": "2018-05-26",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 115.0,
+  "tax": 6.9,
+  "total": 121.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SILING PRIMP 1X9 (B)",
+    "quantity": 5.0,
+    "unit_price": 23.0,
+    "tax_rate": 6.0,
+    "net": 115.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 115.0,
+    "tax": 6.9
+   }
+  ]
+ },
+ "cost_usd": 0.0112975,
+ "raw": {
+  "id": "gen-1794512713-tFEXQXiGYCCVy1NmbDHC",
+  "object": "chat.completion",
+  "created": 1794512713,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"KEDAI PAPAN YEW CHUAN\",\n  \"vendor_vat\": \"000781500416\",\n  \"invoice_ref\": \"CS00013125\",\n  \"invoice_date\": \"2018-05-26\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 115.00,\n  \"tax\": 6.90,\n  \"total\": 121.90,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SILING PRIMP 1X9 (B)\",\n      \"quantity\": 5.0,\n      \"unit_price\": 23.00,\n      \"tax_rate\": 6.0,\n      \"net\": 115.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 115.00,\n      \"tax\": 6.90\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm focusing on extracting the vendor information. I've identified \"KEDAI PAPAN Y EW CHUAN\" as the vendor name from the OCR output. I'm now looking for the vendor's VAT number, which seems to be labeled as such in the document.\n\n\n**Analyzing Bill Details**\n\nI've successfully identified and extracted all the key data points from the bill to populate the JSON schema. I've located the vendor's name (\"KEDAI PAPAN Y EW CHUAN\"), VAT number (\"000781500416\"), invoice reference (\"CS000 13125\"), and the invoice date (\"2018-05-26\"). I have set `due_date` and `iban` to `null` as they're not provided. I've also found that the currency is MYR, and calculated untaxed, tax and total amounts. I've also found the VAT rate. Finally, I've confirmed one line item exists, with a description of \"S\".\n\n\n**Constructing JSON Schema**\n\nI've now populated the JSON schema with all extracted data. I've included the vendor name (\"KEDAI PAPAN Y EW CHUAN\"), VAT number (\"000781500416\"), invoice details, and the currency (\"MYR\"). I've set the missing fields like `due_date` and `iban` to `null`. I have also completed the line item details and the VAT breakdown, including rates and amounts, and added all the calculated fields.\n\n\n**Populating JSON Object**\n\nNow, I'm integrating the extracted data into the JSON object. I'm focusing on populating the `lines` array and the `vat_breakdown` section, ensuring the values are accurate and the schema is well-formed. I've finished extracting data and calculating values for the line item and GST breakdown. The document shows one item, I'll add the necessary fields to the schema accordingly. Finally, I've confirmed all calculations, and am ready to assemble the final object.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm focusing on extracting the vendor information. I've identified \"KEDAI PAPAN Y EW CHUAN\" as the vendor name from the OCR output. I'm now looking for the vendor's VAT number, which seems to be labeled as such in the document.\n\n\n**Analyzing Bill Details**\n\nI've successfully identified and extracted all the key data points from the bill to populate the JSON schema. I've located the vendor's name (\"KEDAI PAPAN Y EW CHUAN\"), VAT number (\"000781500416\"), invoice reference (\"CS000 13125\"), and the invoice date (\"2018-05-26\"). I have set `due_date` and `iban` to `null` as they're not provided. I've also found that the currency is MYR, and calculated untaxed, tax and total amounts. I've also found the VAT rate. Finally, I've confirmed one line item exists, with a description of \"S\".\n\n\n**Constructing JSON Schema**\n\nI've now populated the JSON schema with all extracted data. I've included the vendor name (\"KEDAI PAPAN Y EW CHUAN\"), VAT number (\"000781500416\"), invoice details, and the currency (\"MYR\"). I've set the missing fields like `due_date` and `iban` to `null`. I have also completed the line item details and the VAT breakdown, including rates and amounts, and added all the calculated fields.\n\n\n**Populating JSON Object**\n\nNow, I'm integrating the extracted data into the JSON object. I'm focusing on populating the `lines` array and the `vat_breakdown` section, ensuring the values are accurate and the schema is well-formed. I've finished extracting data and calculating values for the line item and GST breakdown. The document shows one item, I'll add the necessary fields to the schema accordingly. Finally, I've confirmed all calculations, and am ready to assemble the final object.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1090,
+   "total_tokens": 1408,
+   "cost": 0.0112975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0112975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0109
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 813,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.68
+}

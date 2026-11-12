@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "Murphy-Sanders",
+  "vendor_vat": "917-83-2356",
+  "invoice_ref": "46301857",
+  "invoice_date": "2017-04-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 59.35,
+  "tax": 5.94,
+  "total": 65.29,
+  "iban": "GB24OZUP84517588674217",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Care & Repair of Furniture",
+    "quantity": 5,
+    "unit_price": 4.25,
+    "tax_rate": 10,
+    "net": 21.25
+   },
+   {
+    "description": "Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The",
+    "quantity": 5,
+    "unit_price": 7.62,
+    "tax_rate": 10,
+    "net": 38.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 59.35,
+    "tax": 5.94
+   }
+  ]
+ },
+ "cost_usd": 0.011898,
+ "raw": {
+  "id": "gen-1794515355-8SDkTJH5DRtgH30BX2kF",
+  "object": "chat.completion",
+  "created": 1794515355,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Murphy-Sanders\",\"vendor_vat\":\"917-83-2356\",\"invoice_ref\":\"46301857\",\"invoice_date\":\"2017-04-08\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":59.35,\"tax\":5.94,\"total\":65.29,\"iban\":\"GB24OZUP84517588674217\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Care & Repair of Furniture\",\"quantity\":5,\"unit_price\":4.25,\"tax_rate\":10,\"net\":21.25},{\"description\":\"Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The\",\"quantity\":5,\"unit_price\":7.62,\"tax_rate\":10,\"net\":38.1}],\"vat_breakdown\":[{\"rate\":10,\"base\":59.35,\"tax\":5.94}]}",
+     "refusal": null,
+     "reasoning": "I'm treating 04/08/2017 as US-style, month first, since no part of the date exceeds 12, so it reads as April 8, 2017. Next I'm pulling out the vendor's name, tax ID, and IBAN, then checking the two line items and the totals.\n\nI'm checking the totals now: the tax of 5.94 brings the sum to 65.29, and the VAT treatment is marked S.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating 04/08/2017 as US-style, month first, since no part of the date exceeds 12, so it reads as April 8, 2017. Next I'm pulling out the vendor's name, tax ID, and IBAN, then checking the two line items and the totals.\n\nI'm checking the totals now: the tax of 5.94 brings the sum to 65.29, and the VAT treatment is marked S.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0wcKEAgTGAI4AUIIdGhpbmtpbmcSDOdtjuSwKhctDlY6nhoMvosE1W5NxpWKPBxbIjAz1SbMkAUuR1gu8g2Y1a+mZUx7VuKJoTmR4Dabv7jifOcE6HdXFlsgR3/SAR+cMRsq8AZAHNVQt9rsJn1AgpO/I+auZRELhwb0/3rk7Ng0t21O+9YA8h72z4aH+J3sbilChTS+WqVsrAibamFXnFHmvzCPU5YJFddy47RWbuxe/qmASsc4XKx5DJVwX7rlWGVYG7Tje6beFbaOSxdLUuKLvjC73MRCHtoDKM6X9j8cSTnhcQa7UGZlfbdxKdRP4RB+AW95CzwFPglAxb8w16Bxo7SrRTvtC1mMrXrrjfJFY2OualgDyHH96+WkNclXGRfitrc1B1EHAAJlDaIHIhm46N1B8JiakQcshV8TceA3PGDViIlyf8vmlASZfShJqD3M8m/cIhy78oFC9CZ+F+I3pc6vh7jQIrWMsBuxt7c/fOH4hqJxazGUl0u6wmh+Lsj/Ts2HeBy43cqa7muJ1vtAONqg361c1w41cPLtB4WUQtt3yp5E64lK2wjG3ymQ3Zi913nXe/KQlBVQoy33PKiKoq6u1h648ChMDrIrcoxxfFKbM/wIO7lyJf+QbY+sSwtBr/L/8XNjCG4TA5Q4aHEBwR/QRwOP0mvLJ2sRtq77MN+j44AwuAnfnaIIqDy/JjiVNmfypmUXS1AwQhbtzt5mvuhug2rs1Z1T1zNtRYlCkAdoN6ZHfwHyMmbS5qUMfciJBTiqM0nUouxDsBwAIqhlLnPGX1qOFd7zfy+cyS/fMpEjNysU/juBMYZFOsuWEfnDgwW9FqTw4xb4sjqUDcebbNLDFrfIGEr/riS4kWmesH+8Byqhkx/ezhXeqOs670RNrsqqw/6moVvu/+SdCWQIh5ynIoO3JK6oTNBQQnoflX7mem0gvLY2GjhP5w0MJB3mb/dZxKW1nPCzsTfH1ETxA5Q+ToaMhs44cn0koLTPsX4LWNhUtg8pbCeWR5IjzDD0ksKdXj6EhfuRmIw7R6IOQpsdYxL9y6iWsULPflUoQYTuYljFI7OKas9PZhrFHeOzYAjRFUQ1X77xMoAsrDW5Rl6HK/pIWgNOpYFpntTaKl7cKJTKdQajsjBJ79iNubfQWhzDDzJILo0OUXqxGui5utZryxZc5DUfMgN4svoLdA31r15+mFaagyp51ahnoXW2FnytFAdXjcUgprnQaJZ4TLHD9yAGjzj+D+wEYgTUviANJDWXJI6vpoHcvxq5y2JB6uJU1F0gAlUoFnXVUW/ZnG5KGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 463,
+   "total_tokens": 4097,
+   "cost": 0.011898,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011898,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.00463
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 171,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.85
+}

@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Verkehrsbetriebe GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "E2018092011804",
+  "invoice_date": "2018-09-20",
+  "due_date": "2018-10-03",
+  "currency": "EUR",
+  "untaxed": 8.41,
+  "tax": 0.59,
+  "total": 9.0,
+  "iban": "DE12123456789012345678",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "4-Fahrten-Karte Berlin AB",
+    "quantity": 1,
+    "unit_price": 8.41,
+    "tax_rate": 7,
+    "net": 8.41
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 8.41,
+    "tax": 0.59
+   }
+  ]
+ },
+ "cost_usd": 0.0151,
+ "raw": {
+  "id": "gen-1794512617-klJlp3XggnvHBA6kxAhf",
+  "object": "chat.completion",
+  "created": 1794512617,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Verkehrsbetriebe GmbH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"E2018092011804\",\n  \"invoice_date\": \"2018-09-20\",\n  \"due_date\": \"2018-10-03\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 8.41,\n  \"tax\": 0.59,\n  \"total\": 9.00,\n  \"iban\": \"DE12123456789012345678\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"4-Fahrten-Karte Berlin AB\",\n      \"quantity\": 1,\n      \"unit_price\": 8.41,\n      \"tax_rate\": 7,\n      \"net\": 8.41\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7,\n      \"base\": 8.41,\n      \"tax\": 0.59\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Bill Data**\n\nI'm currently focused on extracting information from the bill. My primary task is to identify and extract the vendor's name, specifically looking under \"Verkäufer\" -> \"Name\" for the value. I've located \"Ver\" as the beginning of that value, and am planning to determine the rest. Once I'm able to get the right name, the next step will be mapping other items of data as well.\n\n\n**Mapping Bill Data**\n\nI've got the data points I need now, and the formatting is underway. I've successfully extracted the vendor name (\"Verkehrsbetriebe GmbH\") and VAT number (\"DE123 456789\"). I've pinpointed the invoice number (\"Nr. E2018092011804\"), invoice date (\"2018-09-20\"), and due date (\"2018-10-03\"). I've also identified the currency (EUR), subtotals (8,41), tax amount (0,59), and total (9,00), as well as the IBAN.\n\n\n**Finalizing Bill Data**\n\nI've completed extracting and formatting all necessary data points. I have the vendor information, invoice details, payment information, VAT breakdown, and line item details, formatted as a JSON object, according to the provided schema. I've double-checked all values to confirm accuracy. I think I've got a complete package now.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, generating the JSON output. I've extracted all the data points, including vendor details, invoice information, payment terms, and VAT breakdowns, and validated each one. I'm now putting them into the required JSON object structure and ensuring everything is correctly formatted.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Bill Data**\n\nI'm currently focused on extracting information from the bill. My primary task is to identify and extract the vendor's name, specifically looking under \"Verkäufer\" -> \"Name\" for the value. I've located \"Ver\" as the beginning of that value, and am planning to determine the rest. Once I'm able to get the right name, the next step will be mapping other items of data as well.\n\n\n**Mapping Bill Data**\n\nI've got the data points I need now, and the formatting is underway. I've successfully extracted the vendor name (\"Verkehrsbetriebe GmbH\") and VAT number (\"DE123 456789\"). I've pinpointed the invoice number (\"Nr. E2018092011804\"), invoice date (\"2018-09-20\"), and due date (\"2018-10-03\"). I've also identified the currency (EUR), subtotals (8,41), tax amount (0,59), and total (9,00), as well as the IBAN.\n\n\n**Finalizing Bill Data**\n\nI've completed extracting and formatting all necessary data points. I have the vendor information, invoice details, payment information, VAT breakdown, and line item details, formatted as a JSON object, according to the provided schema. I've double-checked all values to confirm accuracy. I think I've got a complete package now.\n\n\n**Constructing JSON Output**\n\nI'm now in the final phase, generating the JSON output. I've extracted all the data points, including vendor details, invoice information, payment terms, and VAT breakdowns, and validated each one. I'm now putting them into the required JSON object structure and ensuring everything is correctly formatted.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 576,
+   "completion_tokens": 1438,
+   "total_tokens": 2014,
+   "cost": 0.0151,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0151,
+    "upstream_inference_prompt_cost": 0.00072,
+    "upstream_inference_completions_cost": 0.01438
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1152,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.73
+}

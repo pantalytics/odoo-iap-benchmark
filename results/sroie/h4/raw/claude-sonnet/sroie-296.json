@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "DOMINO'S PIZZA",
+  "vendor_vat": "001694261248",
+  "invoice_ref": null,
+  "invoice_date": "2018-04-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 3.68,
+  "tax": 0.22,
+  "total": 3.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6\"HT (TE) FPP-FREE",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "6\"HT (BP) WTUE1A-I",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 3.68,
+    "tax": 0.22
+   }
+  ]
+ },
+ "cost_usd": 0.015168,
+ "raw": {
+  "id": "gen-1794516151-SSbKVcSxZSBtzgbXbsdM",
+  "object": "chat.completion",
+  "created": 1794516151,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"DOMINO'S PIZZA\",\"vendor_vat\":\"001694261248\",\"invoice_ref\":null,\"invoice_date\":\"2018-04-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":3.68,\"tax\":0.22,\"total\":3.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"6\\\"HT (TE) FPP-FREE\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"6\\\"HT (BP) WTUE1A-I\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8}],\"vat_breakdown\":[{\"rate\":6,\"base\":3.68,\"tax\":0.22}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date as 17/04/18, day-first, so it becomes 2018-04-17. The vendor is DOMINO'S PIZZA, and I'm checking the issuer block for the GST reference and the outlet name.\n\nThe vendor name is still open between \"DOMINO'S PIZZA\" and the longer \"DOMINO'S PIZZA PERMAS JAYA\", and I'm leaning toward the shorter form. The totals check out: 3.90 grand total with 0.22 GST included gives an untaxed 3.68, and both lines are 12.80 at a 6% rate. For the invoice reference there's no printed number, only a handwritten annotation, so I'm weighing whether to leave it null.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date as 17/04/18, day-first, so it becomes 2018-04-17. The vendor is DOMINO'S PIZZA, and I'm checking the issuer block for the GST reference and the outlet name.\n\nThe vendor name is still open between \"DOMINO'S PIZZA\" and the longer \"DOMINO'S PIZZA PERMAS JAYA\", and I'm leaning toward the shorter form. The totals check out: 3.90 grand total with 0.22 GST included gives an untaxed 3.68, and both lines are 12.80 at a 6% rate. For the invoice reference there's no printed number, only a handwritten annotation, so I'm weighing whether to leave it null.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 790,
+   "total_tokens": 4424,
+   "cost": 0.015168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.015168,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.0079
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 525,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.3
+}

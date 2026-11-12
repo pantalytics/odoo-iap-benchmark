@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "Williams-Odom",
+  "vendor_vat": "908-80-0834",
+  "invoice_ref": "74576933",
+  "invoice_date": "2018-02-20",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 656.12,
+  "tax": 65.61,
+  "total": 721.73,
+  "iban": "GB92BAIN95242302828660",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display",
+    "quantity": 1.0,
+    "unit_price": 16.99,
+    "tax_rate": 10,
+    "net": 16.99
+   },
+   {
+    "description": "Keep the Boos Coming Stainless Steel Stemless Wine Tumbler, 12 oz.",
+    "quantity": 2.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 39.98
+   },
+   {
+    "description": "BLACK Butterfly Winged Corkscrew WINE BOTTLE OPENER Swing-a-Way",
+    "quantity": 5.0,
+    "unit_price": 8.95,
+    "tax_rate": 10,
+    "net": 44.75
+   },
+   {
+    "description": "EU Blichmann Riptide Brewing Pump - Hombrew Beer Wine Food Grade Stainless Steel",
+    "quantity": 2.0,
+    "unit_price": 200.0,
+    "tax_rate": 10,
+    "net": 400.0
+   },
+   {
+    "description": "Sitting Deer Wine Bottle Holder Decoration New",
+    "quantity": 5.0,
+    "unit_price": 30.88,
+    "tax_rate": 10,
+    "net": 154.4
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 656.12,
+    "tax": 65.61
+   }
+  ]
+ },
+ "cost_usd": 0.030772,
+ "raw": {
+  "id": "gen-1794515185-jeDKBeOLqSXZY0Ws0RAE",
+  "object": "chat.completion",
+  "created": 1794515185,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Williams-Odom\",\n  \"vendor_vat\": \"908-80-0834\",\n  \"invoice_ref\": \"74576933\",\n  \"invoice_date\": \"2018-02-20\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 656.12,\n  \"tax\": 65.61,\n  \"total\": 721.73,\n  \"iban\": \"GB92BAIN95242302828660\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display\",\n      \"quantity\": 1.00,\n      \"unit_price\": 16.99,\n      \"tax_rate\": 10,\n      \"net\": 16.99\n    },\n    {\n      \"description\": \"Keep the Boos Coming Stainless Steel Stemless Wine Tumbler, 12 oz.\",\n      \"quantity\": 2.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 39.98\n    },\n    {\n      \"description\": \"BLACK Butterfly Winged Corkscrew WINE BOTTLE OPENER Swing-a-Way\",\n      \"quantity\": 5.00,\n      \"unit_price\": 8.95,\n      \"tax_rate\": 10,\n      \"net\": 44.75\n    },\n    {\n      \"description\": \"EU Blichmann Riptide Brewing Pump - Hombrew Beer Wine Food Grade Stainless Steel\",\n      \"quantity\": 2.00,\n      \"unit_price\": 200.00,\n      \"tax_rate\": 10,\n      \"net\": 400.00\n    },\n    {\n      \"description\": \"Sitting Deer Wine Bottle Holder Decoration New\",\n      \"quantity\": 5.00,\n      \"unit_price\": 30.88,\n      \"tax_rate\": 10,\n      \"net\": 154.40\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 656.12,\n      \"tax\": 65.61\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Mapping Key Invoice Details**\n\nI've successfully extracted and mapped the invoice reference and date, transforming the date format as required. The process for vendor details and IBAN is also complete.\n\n**Extracting Line Item Data**\n\nI'm now processing the individual line items, extracting descriptions, quantities, net prices, and net worth. I'm also capturing the VAT percentage for each item. The summary calculations for totals are also being incorporated.\n\n**Finalizing Invoice Totals**\n\nI'm currently integrating the calculated invoice totals (`untaxed`, `tax`, `total`) and the VAT breakdown, including the standard rate treatment. I'm also ensuring numerical and date formats are correct before constructing the final JSON output.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Mapping Key Invoice Details**\n\nI've successfully extracted and mapped the invoice reference and date, transforming the date format as required. The process for vendor details and IBAN is also complete.\n\n**Extracting Line Item Data**\n\nI'm now processing the individual line items, extracting descriptions, quantities, net prices, and net worth. I'm also capturing the VAT percentage for each item. The summary calculations for totals are also being incorporated.\n\n**Finalizing Invoice Totals**\n\nI'm currently integrating the calculated invoice totals (`untaxed`, `tax`, `total`) and the VAT breakdown, including the standard rate treatment. I'm also ensuring numerical and date formats are correct before constructing the final JSON output.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2303,
+   "total_tokens": 3871,
+   "cost": 0.030772,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.030772,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.027636
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1699,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.17
+}

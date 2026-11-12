@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18040302160397",
+  "invoice_date": "2018-04-03",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.7,
+  "tax": 0.4,
+  "total": 7.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "I00100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.7,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.021444,
+ "raw": {
+  "id": "gen-1794514173-iqMBlW7x1HdeHADSOHOE",
+  "object": "chat.completion",
+  "created": 1794514173,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18040302160397\",\"invoice_date\":\"2018-04-03\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.7,\"tax\":0.4,\"total\":7.1,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"I00100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":6.7,\"tax_rate\":6,\"net\":6.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.7,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "The receipt is Malaysian, so the \"$\" is ambiguous, but GST points to MYR, and I'll go with that. The line shows 7.10 as the price including tax, so I need to work out whether 6.70 is the pre-tax amount before settling on the unit price.\n\nI'm settling on the item description as \"1 Meat + 3 Vege\" and the code I00100000035, with the 6.70 net amount being the one to keep.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "The receipt is Malaysian, so the \"$\" is ambiguous, but GST points to MYR, and I'll go with that. The line shows 7.10 as the price including tax, so I need to work out whether 6.70 is the pre-tax amount before settling on the unit price.\n\nI'm settling on the item description as \"1 Meat + 3 Vege\" and the code I00100000035, with the 6.70 net amount being the one to keep.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSiAgKEAgTGAI4AUIIdGhpbmtpbmcSDABoYQZgVX/jWumpBRoMi8cunofA8MqSJqKqIjDm5fYC5sxsIohdHqlbagy5KW7WYFbvlhLpffFhiH6w2L+eA1Pa5glbqaEvyfgw2n8qpQcg6fTgQ2IrpbsQweZD0Tj4h+b3tm+Iv918h7ISmfxwCm1OcquybwBuldjeiBwp6lYUF3Omu4CesZewGJBq7NNnB5mrN+DXVKVf61wsge28t4pYx7dIfn9pHr0Vf4Peb+9W7a41vP7mMo1lOBZW+WI9dVVulzUPQvKpzTnQTQIRKzzhimJ4+wHG+w8bh3Bm7f/b/79HQ2AuIwlKClHUxab/3sdu1FninRddoJlc1aadVuAy72Qx90p21lRXSQazQ0olpNA27U9riQyWxGg5NJQIGewnS/ePQZPcy9wlPdmxUlfpA0O6JK0Jlo+8JEsvgBdzpp5FBZnAkjCAmQOemXjhVHP9NUyK0qYdaYwUsWQA/nNu37tCZ0WUjQ0eL6RiiCY6KzGukotOtxTagW0DkAAoEFgb4BvMsJmugZU6xWcoMUiSDICKk64TJEtGlunh627crb0SHA3Yn90Sv8je/r1zzJ8T4c9yG94iKrNQKt0p4z7Wcx3lZ2LOm2EbqDGpIr1c/fnPH/ZQlsTnWtg0DtLtRL3ZvG5+abapDexPRuakd1dGssX5d/0ujxshtLPuBTft39sXBJV59jOkXOIIGL22A4Q3NJAl8AJka6t5451Ngp17ll+ecWLiNgVpg/ltxNNAk2MmB3gtR5sbGIwMr7Zi8pNziANv/I+bUu+1DFgYL96eh78krd3yaxnb3sEJ5+12OWWxU06d8Gy75/O3otmsBcx9VYxvtlgiWTpT0lWCFv/W/KnFCYsVC+lxQH7uhtV1YXOZGHDc7SjfDUypIvIu2C8Kqxt38ZcKpSK3nxgLBly6bqE2WWPIin0Zni8bkp6m2aGbslYI7AqP2gYtnvHdsVnS1w1fq2NbGdAOHOi/RMI/Fry+wF3XofwVrKnMyOZfJQw28byfu0HmRMOevyzBXXzp7AQ9vrRjF4gl+GnZxTXmqxvqwhIdLYNWW1GmTUtUR949PRJtzmoOHsxiSTzIG53y4pAHcB9aWwtW16h6qVajxOxcxB5rSS3dM2bFpKMcc7y1A0S5pbjVT7nnFYD6apZajyIY8XxCVMwLm7m1oCH9NErnD4CrHYY9AMIf/tBKTlVt5AP0z3w7p7yq527Aq74pUNABZEtl8ZQ4iN4rEX5elWVo1CWIaIYjv5z9/0xMRS+UzRuqlRhFygZJg9f6Nq1WAwxrDqjUe5DmOvPTxudrhfrPzcPPn025ILezpxNvCmMP0LNG0sR+9Ud/tmxfeZjoLycYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 436,
+   "total_tokens": 3617,
+   "cost": 0.021444,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021444,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.00872
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 206,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.55
+}

@@ -170,7 +170,7 @@ def fig_fields(root: Path, out: Path) -> None:
                 ax.annotate(f"{v:.0f}", (v, y), xytext=(0, 8), textcoords="offset points",
                             ha="center", fontsize=8, color=INK)  # fmt: skip
         ax.set_yticks(range(len(FIELDS)), labels)
-        ax.invert_yaxis()
+        ax.set_ylim(len(FIELDS) - 0.5, -1.0)  # room above the top row for its labels
         ax.set_xlim(-4, 104)
         ax.set_xticks([0, 50, 100], ["0", "50", "100%"])
         ax.grid(axis="x", color=GRID, lw=0.8)

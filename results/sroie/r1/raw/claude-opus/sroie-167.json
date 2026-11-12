@@ -1,0 +1,137 @@
+{
+ "pred": {
+  "vendor_name": "LITTLE CRAVINGS SDN BHD",
+  "vendor_vat": "001382293504",
+  "invoice_ref": "000001",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.57,
+  "tax": 3.03,
+  "total": 53.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KUIH KETAYAP",
+    "quantity": 1,
+    "unit_price": 2.55,
+    "tax_rate": 6,
+    "net": 2.55
+   },
+   {
+    "description": "ONDEH ONDEH",
+    "quantity": 1,
+    "unit_price": 2.78,
+    "tax_rate": 6,
+    "net": 2.78
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "AIR SEJUK",
+    "quantity": 1,
+    "unit_price": 0.61,
+    "tax_rate": 6,
+    "net": 0.61
+   },
+   {
+    "description": "CENDOL",
+    "quantity": 1,
+    "unit_price": 5.0,
+    "tax_rate": 6,
+    "net": 5.0
+   },
+   {
+    "description": "CHEE CHEONG FUN (SOS)",
+    "quantity": 1,
+    "unit_price": 6.79,
+    "tax_rate": 6,
+    "net": 6.79
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 50.57,
+    "tax": 3.03
+   }
+  ]
+ },
+ "cost_usd": 0.034864,
+ "raw": {
+  "id": "gen-1794514550-B3dpWJmyiOW7qVOG2p8Z",
+  "object": "chat.completion",
+  "created": 1794514550,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LITTLE CRAVINGS SDN BHD\",\"vendor_vat\":\"001382293504\",\"invoice_ref\":\"000001\",\"invoice_date\":\"2018-03-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.57,\"tax\":3.03,\"total\":53.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"KUIH KETAYAP\",\"quantity\":1,\"unit_price\":2.55,\"tax_rate\":6,\"net\":2.55},{\"description\":\"ONDEH ONDEH\",\"quantity\":1,\"unit_price\":2.78,\"tax_rate\":6,\"net\":2.78},{\"description\":\"YELLOW LAKSA\",\"quantity\":1,\"unit_price\":10.94,\"tax_rate\":6,\"net\":10.94},{\"description\":\"YELLOW LAKSA\",\"quantity\":1,\"unit_price\":10.94,\"tax_rate\":6,\"net\":10.94},{\"description\":\"YELLOW LAKSA\",\"quantity\":1,\"unit_price\":10.94,\"tax_rate\":6,\"net\":10.94},{\"description\":\"AIR SEJUK\",\"quantity\":1,\"unit_price\":0.61,\"tax_rate\":6,\"net\":0.61},{\"description\":\"CENDOL\",\"quantity\":1,\"unit_price\":5.0,\"tax_rate\":6,\"net\":5.0},{\"description\":\"CHEE CHEONG FUN (SOS)\",\"quantity\":1,\"unit_price\":6.79,\"tax_rate\":6,\"net\":6.79}],\"vat_breakdown\":[{\"rate\":6,\"base\":50.57,\"tax\":3.03}]}",
+     "refusal": null,
+     "reasoning": "I'm summing the line items, which are already GST-inclusive, and find they come to RM52.95, so the missing AIR SEJUK line must be RM0.65 against the RM53.60 total. Now I'm weighing whether the schema wants the amounts net of tax, since the printed figures are gross.\n\nI'm checking whether the net-of-tax figures I worked out actually sum to the untaxed total, and they come to 50.55 rather than 50.57, so there's a two-cent gap to sort out. I'm also settling on the vendor name and an invoice reference of 000001 in MYR.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm summing the line items, which are already GST-inclusive, and find they come to RM52.95, so the missing AIR SEJUK line must be RM0.65 against the RM53.60 total. Now I'm weighing whether the schema wants the amounts net of tax, since the printed figures are gross.\n\nI'm checking whether the net-of-tax figures I worked out actually sum to the untaxed total, and they come to 50.55 rather than 50.57, so there's a two-cent gap to sort out. I'm also settling on the vendor name and an invoice reference of 000001 in MYR.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 1107,
+   "total_tokens": 4288,
+   "cost": 0.034864,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.034864,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.02214
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 560,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.65
+}

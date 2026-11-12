@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "TIMES BOOKSTORES",
+  "vendor_vat": "000423100416",
+  "invoice_ref": "199176",
+  "invoice_date": "2017-04-23",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 11.68,
+  "tax": 0.69,
+  "total": 12.37,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PILOT BP-1RT BALLPOINT PE",
+    "quantity": 1.0,
+    "unit_price": 1.41,
+    "tax_rate": 6.0,
+    "net": 1.41
+   },
+   {
+    "description": "PILOT FUDE MAKASE BRUSH P",
+    "quantity": 1.0,
+    "unit_price": 5.56,
+    "tax_rate": 6.0,
+    "net": 5.56
+   },
+   {
+    "description": "PILOT M.PENCIL S.GRIP 05#",
+    "quantity": 1.0,
+    "unit_price": 4.71,
+    "tax_rate": 6.0,
+    "net": 4.71
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 11.68,
+    "tax": 0.69
+   },
+   {
+    "rate": 0.0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0166875,
+ "raw": {
+  "id": "gen-1794514742-rmOPONp3Og27BDQ6eWSr",
+  "object": "chat.completion",
+  "created": 1794514742,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"TIMES BOOKSTORES\",\n  \"vendor_vat\": \"000423100416\",\n  \"invoice_ref\": \"199176\",\n  \"invoice_date\": \"2017-04-23\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 11.68,\n  \"tax\": 0.69,\n  \"total\": 12.37,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PILOT BP-1RT BALLPOINT PE\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.41,\n      \"tax_rate\": 6.0,\n      \"net\": 1.41\n    },\n    {\n      \"description\": \"PILOT FUDE MAKASE BRUSH P\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.56,\n      \"tax_rate\": 6.0,\n      \"net\": 5.56\n    },\n    {\n      \"description\": \"PILOT M.PENCIL S.GRIP 05#\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.71,\n      \"tax_rate\": 6.0,\n      \"net\": 4.71\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 11.68,\n      \"tax\": 0.69\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified and extracted the vendor's name as \"TIMES BOOKSTORES\". I've also pinpointed the \"GST Reg No,\" which I'm confident corresponds to the vendor's VAT number, and extracted the number \"000423100416\". Finally, I've located the \"Cash Sales No,\" and that is the invoice reference \"199176\".\n\n\n**Populating The Schema**\n\nNow, I've filled the JSON schema with more detail. I've accurately extracted and formatted the invoice date as \"2017-04-23,\" and set the due date to null since it's a cash sale. I've also identified the currency as MYR, and extracted the untaxed amount (11.68), tax amount (0.69) and total (12.37). IBAN is null, and the VAT treatment is \"S.\" Finally, I started processing product lines, extracting the details for Line 1.\n\n\n**Refining Line Item Details**\n\nI've moved on to meticulously processing each line item. I've successfully extracted descriptions, quantities, and unit prices for all three lines. The tax rates for each line are confirmed at 6%. The net amounts are the unit price multiplied by quantity. Now, I'm focusing on the VAT breakdown, summarizing the 6% rate and the zero rate, along with the corresponding base amounts and tax amounts.\n\n\n\n**Finalizing Schema Details**\n\nI have now completed the data extraction and schema population. I've double-checked all calculations, ensuring the untaxed amount, tax, and total align with the receipt. I confirmed the rounding discrepancy is related to payment processing, and does not affect the invoice total. The currency, VAT treatment, due date, and IBAN are correctly populated. My focus is now on constructing the finalized JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified and extracted the vendor's name as \"TIMES BOOKSTORES\". I've also pinpointed the \"GST Reg No,\" which I'm confident corresponds to the vendor's VAT number, and extracted the number \"000423100416\". Finally, I've located the \"Cash Sales No,\" and that is the invoice reference \"199176\".\n\n\n**Populating The Schema**\n\nNow, I've filled the JSON schema with more detail. I've accurately extracted and formatted the invoice date as \"2017-04-23,\" and set the due date to null since it's a cash sale. I've also identified the currency as MYR, and extracted the untaxed amount (11.68), tax amount (0.69) and total (12.37). IBAN is null, and the VAT treatment is \"S.\" Finally, I started processing product lines, extracting the details for Line 1.\n\n\n**Refining Line Item Details**\n\nI've moved on to meticulously processing each line item. I've successfully extracted descriptions, quantities, and unit prices for all three lines. The tax rates for each line are confirmed at 6%. The net amounts are the unit price multiplied by quantity. Now, I'm focusing on the VAT breakdown, summarizing the 6% rate and the zero rate, along with the corresponding base amounts and tax amounts.\n\n\n\n**Finalizing Schema Details**\n\nI have now completed the data extraction and schema population. I've double-checked all calculations, ensuring the untaxed amount, tax, and total align with the receipt. I confirmed the rounding discrepancy is related to payment processing, and does not affect the invoice total. The currency, VAT treatment, due date, and IBAN are correctly populated. My focus is now on constructing the finalized JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1629,
+   "total_tokens": 1947,
+   "cost": 0.0166875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0166875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01629
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1204,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.25
+}

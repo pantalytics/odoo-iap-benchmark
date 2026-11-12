@@ -5,9 +5,55 @@ Pantalytics B.V., Rotterdam. Working paper, version 1, November 2026.
 Code, data manifests and every raw answer are in this repository
 ([README](README.md)): github.com/pantalytics/odoo-iap-benchmark.
 
+## Executive summary
+
+Odoo can read supplier bills and receipts for you, at about EUR 0.15 a
+document. We measured how often the result can be booked without
+correction, on 223 public test documents, and compared Odoo with eight AI
+language models.
+
+- **Odoo got 0 to 9% of documents fully right.** It often takes a heading
+  as the supplier, picks the wrong number or date, misses the VAT on simple
+  invoices, and on scanned receipts gets the total right only half the time.
+- **The AI models got 61 to 100% fully right**, at a fifth of Odoo's price
+  or less (EUR 0.004 to 0.03 a document).
+- **Correcting costs more than reading.** Per 100 documents Odoo leaves
+  about 3 hours of corrections, the best models 10 to 20 minutes. The AI
+  cost differs by a few euros.
+- **Best choices:** Claude Sonnet 5.5 (right without help, EUR 0.01 a
+  document), or Gemini 3.8 Flash with four simple reading rules in its
+  instructions (as accurate here, at half that price). Bigger, dearer models
+  were not better.
+- **VAT is read well:** VAT rates per line and VAT categories were right on
+  practically every test invoice, though the public test set is small and
+  has no reverse-charge invoice.
+- **Self-learning is not free:** rules a model wrote from its own mistakes
+  did not help, and one made things worse. Learning from corrections needs
+  the document and its context, not just the error.
+
+Caveat: we tested what Odoo's reading service returns, not the finished
+bill inside an Odoo database, where Odoo also matches the supplier from
+your contacts. A follow-up on real Dutch bills tests that.
+
 ## Abstract
 
-<!-- RESULTS:ABSTRACT -->
+Odoo's document digitization extracts vendor-bill fields with Google Cloud
+Vision OCR followed by Odoo's own model; no accuracy figure has been
+published. We compared it with eight multimodal language models on three
+public sets: 100 Donut synthetic invoices, the 23 official EN 16931
+(Factur-X) sample invoices with machine-readable VAT truth, and 100 scanned
+SROIE receipts. The primary outcome was whether a document can be booked
+without correction (vendor, number, date, currency, amounts and the base
+per VAT rate all right). Odoo's Extract API reached 0%, 9% and 8%; the
+language models 61 to 97%, 91 to 100% and 84 to 94%. Language-model errors
+were mostly US dates read day first; one prompt rule about date
+conventions raised Gemini 3.8 Flash from 64% to 97% on Donut. Rules learned
+automatically from a training sample's errors did not help and lowered one
+result, because the errors lacked the documents' context. AI cost per 100
+documents was EUR 15 for Odoo against EUR 0.44 to 3.03 for the models;
+correction time, at two minutes per document, was about 3 hours against 0.1
+to 1.3. Code, data, every raw answer and the pre-registered plan are
+published.
 
 ## 1. Introduction
 
@@ -249,7 +295,7 @@ currency sign counts as its ISO code. Names count when one contains the
 other (after lower-casing and removing punctuation) or when their
 similarity ratio is at least 0.9, and the prediction is at least 4
 characters. Truth IBANs that fail the ISO 13616 checksum are not scored
-(section 6.6).
+(section 6.7).
 
 **Statistics.** Proportions carry a 95% Wilson score interval. For field
 accuracy the interval treats fields as independent, which they are not
@@ -262,115 +308,198 @@ receipts.
 
 ## 5. Results
 
-Numbers below are from run 1 of 2. Square brackets give the 95% Wilson
-interval of the bookable rate. "Line VAT rate" is the share of lines whose
-VAT rate is right, matched by position; "VAT summary" the share of bills
-whose base amount per VAT rate is right. When run 2 is in, the
-tables give the mean, with the range over runs in round brackets
-(`results/<set>/aggregate.md`).
+Square brackets give the 95% Wilson interval of the bookable rate. "Line
+VAT rate" is the share of lines whose VAT rate is right, matched by
+position; "VAT summary" the share of bills whose base amount per VAT rate is
+right. The invoice sets were read twice by every language model, the
+receipts once; the tables give the mean, the run range is in
+`results/<set>/aggregate.md`. Figure 1 shows the bookable rate, figure 2
+where Odoo and the models differ field by field, figure 4 three examples.
 
-### 5.1 Donut invoices (100 bills)
+![Figure 1. Bills bookable without correction](figures/fig1_bookable.png)
 
-| Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
-|---|---|---|---|---|---|---|
-| Odoo digitization | 0.0 [0 to 4] | 51.5 | 4.2 | 6.2 | 0.150 | 8 |
-| Claude Sonnet 5.5 | 97.0 [92 to 99] | 99.5 | 100.0 | 99.0 | 0.009 | 4 |
-| Gemini 3.1 Pro | 69.0 [59 to 77] | 96.1 | 100.0 | 99.0 | 0.026 | 21 |
-| GPT-5.5 | 73.0 [64 to 81] | 96.2 | 100.0 | 99.0 | 0.022 | 9 |
-| Gemini 2.5 Pro | 70.0 [60 to 78] | 96.1 | 100.0 | 99.0 | 0.017 | 16 |
-| Gemini 3.8 Flash | 64.0 [54 to 73] | 95.5 | 100.0 | 99.0 | 0.004 | 10 |
-| Mistral OCR → Mistral Medium 3.5 | 61.0 [51 to 70] | 95.0 | 100.0 | 99.0 | 0.006 | 4 |
+![Figure 2. Share of fields read right](figures/fig2_fields.png)
 
-Per field, % right:
+![Figure 4. Three bills, what is printed and what was read](figures/fig4_examples.png)
 
-| Field | Odoo | Claude | Gem 3.1 Pro | GPT-5.5 | Gem 2.5 Pro | Gem Flash | Mistral |
+### 5.1 Donut invoices (100 bills, 2 runs)
+
+| Engine | Bookable % [95% CI] | Range over runs | Header fields % | Line VAT rate % | VAT summary % | EUR per bill | Seconds per bill |
 |---|---|---|---|---|---|---|---|
-| vendor_name | 0 | 98 | 98 | 98 | 98 | 98 | 98 |
-| vendor_vat | 2 | 100 | 100 | 100 | 100 | 100 | 95 |
-| invoice_ref | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
-| invoice_date | 69 | 100 | 70 | 75 | 73 | 65 | 66 |
-| currency | 100 | 100 | 100 | 100 | 98 | 100 | 100 |
-| untaxed | 6 | 99 | 99 | 99 | 99 | 99 | 99 |
-| tax | 6 | 100 | 100 | 100 | 100 | 100 | 100 |
-| total | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
-| iban | 92 | 99 | 99 | 93 | 97 | 99 | 99 |
+| Odoo digitization | 0 [0 to 4] | 0 to 0 | 51.5 | 4 | 6 | 0.150 | 8 |
+| Claude Opus 5.5 | 97 [92 to 99] | 97 to 97 | 99.5 | 100 | 99 | 0.019 | 6 |
+| Claude Sonnet 5.5 | 97 [92 to 99] | 97 to 97 | 99.5 | 100 | 99 | 0.009 | 4 |
+| GPT-5.5 | 72 [63 to 80] | 70 to 73 | 96.1 | 100 | 99 | 0.022 | 9 |
+| GPT-5.6 Terra | 70 [60 to 78] | 66 to 74 | 96.0 | 100 | 99 | 0.008 | 5 |
+| Gemini 3.1 Pro | 70 [60 to 78] | 69 to 71 | 96.2 | 100 | 99 | 0.026 | 21 |
+| Gemini 2.5 Pro | 68 [58 to 76] | 66 to 70 | 95.9 | 100 | 99 | 0.017 | 16 |
+| Gemini 3.8 Flash | 64 [54 to 73] | 64 to 64 | 95.4 | 100 | 99 | 0.004 | 9 |
+| Mistral OCR → Mistral Medium 3.5 | 61 [51 to 70] | 61 to 61 | 95.0 | 100 | 99 | 0.006 | 5 |
 
-### 5.2 EN 16931 sample invoices (23 bills)
+Per field, % right (mean over runs):
 
-| Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
-|---|---|---|---|---|---|---|
-| Odoo digitization | 8.7 [2 to 27] | 66.8 | 37.7 | 95.7 | 0.150 | 7 |
-| Claude Sonnet 5.5 | 95.7 [79 to 99] | 99.1 | 98.1 | 100.0 | 0.014 | 3 |
-| Gemini 3.1 Pro | 100.0 [86 to 100] | 100.0 | 100.0 | 100.0 | 0.029 | 25 |
-| GPT-5.5 | 100.0 [86 to 100] | 100.0 | 98.1 | 100.0 | 0.021 | 7 |
-| Gemini 2.5 Pro | 95.7 [79 to 99] | 99.1 | 100.0 | 100.0 | 0.017 | 17 |
-| Gemini 3.8 Flash | 100.0 [86 to 100] | 100.0 | 100.0 | 100.0 | 0.005 | 10 |
-| Mistral OCR → Mistral Medium 3.5 | 91.3 [73 to 98] | 97.8 | 98.1 | 100.0 | 0.008 | 4 |
+| Field | Odoo | Opus | Sonnet | Terra | GPT-5.5 | Gem 3.1 Pro | Gem 2.5 Pro | Gem Flash | Mistral |
+|---|---|---|---|---|---|---|---|---|---|
+| Vendor name | 0 | 98 | 98 | 97 | 98 | 98 | 98 | 98 | 98 |
+| Vendor VAT number | 2 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 95 |
+| Invoice number | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Invoice date | 69 | 100 | 100 | 72 | 74 | 71 | 71 | 65 | 66 |
+| Currency | 100 | 100 | 100 | 100 | 100 | 100 | 98 | 100 | 100 |
+| Untaxed | 6 | 99 | 99 | 99 | 99 | 99 | 99 | 99 | 99 |
+| Tax | 6 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Total | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| IBAN | 92 | 99 | 99 | 97 | 94 | 99 | 97 | 98 | 98 |
 
-Per field, % right:
+### 5.2 EN 16931 sample invoices (23 bills, 2 runs)
 
-| Field | Odoo | Claude | Gem 3.1 Pro | GPT-5.5 | Gem 2.5 Pro | Gem Flash | Mistral |
+| Engine | Bookable % [95% CI] | Range over runs | Header fields % | Line VAT rate % | VAT summary % | EUR per bill | Seconds per bill |
 |---|---|---|---|---|---|---|---|
-| vendor_name | 9 | 100 | 100 | 100 | 100 | 100 | 100 |
-| vendor_vat | 27 | 100 | 100 | 100 | 100 | 100 | 100 |
-| invoice_ref | 52 | 100 | 100 | 100 | 100 | 100 | 100 |
-| invoice_date | 52 | 96 | 100 | 100 | 96 | 100 | 96 |
-| currency | 96 | 100 | 100 | 100 | 100 | 100 | 100 |
-| untaxed | 96 | 100 | 100 | 100 | 100 | 100 | 100 |
-| tax | 96 | 100 | 100 | 100 | 100 | 100 | 100 |
-| total | 100 | 100 | 100 | 100 | 100 | 100 | 96 |
-| due_date | 83 | 92 | 100 | 100 | 92 | 100 | 92 |
-| iban | 57 | 100 | 100 | 100 | 100 | 100 | 71 |
-| vat_treatment | - | 100 | 100 | 100 | 100 | 100 | 100 |
+| Odoo digitization | 9 [2 to 27] | 9 to 9 | 66.8 | 38 | 96 | 0.150 | 7 |
+| Claude Opus 5.5 | 100 [86 to 100] | 100 to 100 | 100.0 | 100 | 100 | 0.028 | 5 |
+| GPT-5.5 | 100 [86 to 100] | 100 to 100 | 100.0 | 98 | 100 | 0.019 | 7 |
+| Gemini 3.1 Pro | 100 [86 to 100] | 100 to 100 | 100.0 | 99 | 100 | 0.029 | 23 |
+| Gemini 3.8 Flash | 100 [86 to 100] | 100 to 100 | 100.0 | 100 | 100 | 0.005 | 11 |
+| Claude Sonnet 5.5 | 96 [79 to 99] | 96 to 96 | 99.1 | 98 | 100 | 0.014 | 3 |
+| Gemini 2.5 Pro | 96 [79 to 99] | 96 to 96 | 99.1 | 100 | 100 | 0.017 | 17 |
+| GPT-5.6 Terra | 93 [79 to 99] | 91 to 96 | 98.4 | 100 | 100 | 0.010 | 4 |
+| Mistral OCR → Mistral Medium 3.5 | 91 [73 to 98] | 91 to 91 | 97.8 | 98 | 100 | 0.008 | 4 |
 
-VAT category (EN 16931 code per bill) was right on 23 of 23 bills for every
-language model. Odoo's API does not return it.
+Per field, % right (mean over runs):
 
-### 5.3 SROIE receipts (100 receipts)
+| Field | Odoo | Opus | Sonnet | Terra | GPT-5.5 | Gem 3.1 Pro | Gem 2.5 Pro | Gem Flash | Mistral |
+|---|---|---|---|---|---|---|---|---|---|
+| Vendor name | 9 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Vendor VAT number | 27 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Invoice number | 52 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Invoice date | 52 | 100 | 96 | 96 | 100 | 100 | 96 | 100 | 96 |
+| Currency | 96 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Untaxed | 96 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Tax | 96 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Total | 100 | 100 | 100 | 98 | 100 | 100 | 100 | 100 | 96 |
+| Due date | 83 | 100 | 92 | 92 | 100 | 100 | 92 | 100 | 92 |
+| IBAN | 57 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 71 |
+| VAT category | - | 100 | 100 | 96 | 100 | 100 | 100 | 100 | 100 |
 
-<!-- RESULTS:SROIE -->
+### 5.3 SROIE receipts (100 receipts, 1 run)
+
+| Engine | Bookable % [95% CI] | Header fields % | Line VAT rate % | VAT summary % | EUR per bill | Seconds per bill |
+|---|---|---|---|---|---|---|
+| Odoo digitization | 8 [4 to 15] | 48.0 | - | - | 0.150 | 8 |
+| Gemini 3.8 Flash | 94 [88 to 97] | 97.3 | - | - | 0.006 | 15 |
+| Claude Sonnet 5.5 | 91 [84 to 95] | 96.3 | - | - | 0.009 | 3 |
+| GPT-5.5 | 91 [84 to 95] | 96.3 | - | - | 0.024 | 11 |
+| Claude Opus 5.5 | 90 [83 to 94] | 96.0 | - | - | 0.019 | 7 |
+| Gemini 3.1 Pro | 90 [83 to 94] | 96.0 | - | - | 0.030 | 26 |
+| Gemini 2.5 Pro | 90 [83 to 94] | 96.0 | - | - | 0.022 | 21 |
+| Mistral OCR → Mistral Medium 3.5 | 88 [80 to 93] | 95.0 | - | - | 0.004 | 4 |
+| GPT-5.6 Terra | 84 [76 to 90] | 94.0 | - | - | 0.013 | 7 |
+
+Per field, % right (mean over runs):
+
+| Field | Odoo | Opus | Sonnet | Terra | GPT-5.5 | Gem 3.1 Pro | Gem 2.5 Pro | Gem Flash | Mistral |
+|---|---|---|---|---|---|---|---|---|---|
+| Vendor name | 20 | 97 | 97 | 90 | 94 | 96 | 96 | 96 | 94 |
+| Invoice date | 69 | 99 | 98 | 99 | 98 | 99 | 99 | 99 | 97 |
+| Total | 55 | 92 | 94 | 93 | 97 | 93 | 93 | 97 | 94 |
 
 ### 5.4 Under the original scoring rules
 
-The same answers scored with the rules as first written (`--strict`, see
-section 8). The ranking does not change; the language models lose 2 to 4
-points on header fields, mostly on vendor names that carry a legal form,
-Odoo loses 1 to 4.
+The same answers scored with the rules as first written (`--strict`, section 8), mean over runs.
 
 **Donut**
 
-| Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
-|---|---|---|---|---|---|---|
-| Odoo digitization | 0.0 [0 to 4] | 50.1 | 4.2 | 6.2 | 0.150 | 8 |
-| Claude Sonnet 5.5 | 97.0 [92 to 99] | 96.9 | 100.0 | 99.0 | 0.009 | 4 |
-| Gemini 3.1 Pro | 69.0 [59 to 77] | 93.5 | 100.0 | 99.0 | 0.026 | 21 |
-| GPT-5.5 | 73.0 [64 to 81] | 93.6 | 100.0 | 99.0 | 0.022 | 9 |
-| Gemini 2.5 Pro | 70.0 [60 to 78] | 93.5 | 100.0 | 99.0 | 0.017 | 16 |
-| Gemini 3.8 Flash | 64.0 [54 to 73] | 92.9 | 100.0 | 99.0 | 0.004 | 10 |
-| Mistral OCR → Mistral Medium 3.5 | 61.0 [51 to 70] | 92.5 | 100.0 | 99.0 | 0.006 | 4 |
+| Engine | Bookable % | Header fields % |
+|---|---|---|
+| Odoo digitization | 0 | 50.1 |
+| Claude Opus 5.5 | 97 | 96.9 |
+| Claude Sonnet 5.5 | 97 | 96.9 |
+| GPT-5.6 Terra | 70 | 93.4 |
+| GPT-5.5 | 72 | 93.5 |
+| Gemini 3.1 Pro | 70 | 93.6 |
+| Gemini 2.5 Pro | 68 | 93.3 |
+| Gemini 3.8 Flash | 64 | 92.9 |
+| Mistral OCR → Mistral Medium 3.5 | 61 | 92.5 |
 
 **EN 16931**
 
-| Engine | Bookable % | Header fields % | Line VAT rate % | VAT summary % | EUR / bill | s / bill |
-|---|---|---|---|---|---|---|
-| Odoo digitization | 8.7 [2 to 27] | 62.9 | 37.7 | 95.7 | 0.150 | 7 |
-| Claude Sonnet 5.5 | 91.3 [73 to 98] | 95.6 | 98.1 | 100.0 | 0.014 | 3 |
-| Gemini 3.1 Pro | 95.7 [79 to 99] | 96.5 | 100.0 | 100.0 | 0.029 | 25 |
-| GPT-5.5 | 95.7 [79 to 99] | 96.5 | 98.1 | 100.0 | 0.021 | 7 |
-| Gemini 2.5 Pro | 91.3 [73 to 98] | 95.6 | 100.0 | 100.0 | 0.017 | 17 |
-| Gemini 3.8 Flash | 95.7 [79 to 99] | 96.1 | 100.0 | 100.0 | 0.005 | 10 |
-| Mistral OCR → Mistral Medium 3.5 | 82.6 [63 to 93] | 93.9 | 98.1 | 100.0 | 0.008 | 4 |
+| Engine | Bookable % | Header fields % |
+|---|---|---|
+| Odoo digitization | 9 | 62.9 |
+| Claude Opus 5.5 | 96 | 96.5 |
+| Claude Sonnet 5.5 | 91 | 95.6 |
+| GPT-5.6 Terra | 89 | 95.0 |
+| GPT-5.5 | 96 | 96.5 |
+| Gemini 3.1 Pro | 96 | 96.5 |
+| Gemini 2.5 Pro | 91 | 95.6 |
+| Gemini 3.8 Flash | 96 | 96.3 |
+| Mistral OCR → Mistral Medium 3.5 | 85 | 94.1 |
 
-### 5.5 Hypotheses
+**SROIE**
+
+| Engine | Bookable % | Header fields % |
+|---|---|---|
+| Odoo digitization | 10 | 48.7 |
+| Claude Opus 5.5 | 90 | 96.0 |
+| Claude Sonnet 5.5 | 90 | 95.7 |
+| GPT-5.6 Terra | 83 | 93.7 |
+| GPT-5.5 | 90 | 96.0 |
+| Gemini 3.1 Pro | 84 | 94.0 |
+| Gemini 2.5 Pro | 90 | 96.0 |
+| Gemini 3.8 Flash | 93 | 97.0 |
+| Mistral OCR → Mistral Medium 3.5 | 85 | 94.0 |
+
+### 5.5 Reading rules and the learning loop (H3, H4)
+
+Bookable without correction, %, on the same test samples. Baseline: mean of
+the runs above; H3 and H4: one run each (`results/prompting.md`,
+`results/<set>/h3`, `h4`).
+
+| Set | Model | Baseline | + hand-written rules (H3) | + learned rules (H4) |
+|---|---|---|---|---|
+| Donut | Gemini 3.8 Flash | 64 | **97** | 64 |
+| Donut | Claude Sonnet 5.5 | 97 | 97 | 97 |
+| EN 16931 | Gemini 3.8 Flash | 100 | 100 | **83** |
+| EN 16931 | Claude Sonnet 5.5 | 96 | 96 | 100 |
+| SROIE | Gemini 3.8 Flash | 94 | 95 | 91 |
+| SROIE | Claude Sonnet 5.5 | 91 | 89 | 91 |
+
+![Figure 5. Reading rules in the prompt](figures/fig5_prompting.png)
+
+The hand-written rules lifted Gemini 3.8 Flash on Donut from 64% to 97%,
+all of it on the date: 65% of its dates were right without the rule, 100%
+with it. Claude Sonnet 5.5, already at 97%, did not move. On the other sets
+nothing moved by more than 2 points.
+
+The learned rules did not help. Gemini 3.8 Flash read the 100 training
+documents with 22 wrong header fields: 18 dates with day and month swapped,
+one vendor name, and three empty fields from one call that failed (the
+failure counted as an error, a flaw in our loop). Claude Opus 5.5 turned
+them into ten rules (`results/rules_learned.txt`). The error list showed the
+swaps but not the documents, so the teacher could not see that the bills
+were American; its rule says "do not assume month first", the opposite of
+what these bills need, and the Donut dates stayed wrong. And one rule hurt: "for the
+total, take the final amount payable (total, grand total, nett or amount
+due)", right for receipts, made Gemini 3.8 Flash return the amount still
+due instead of the invoice total on 4 EN 16931 bills with a prepayment,
+which dropped it from 100% to 83%.
+
+### 5.6 Hypotheses
 
 - **H1 supported.** Every language model produced more bookable bills than
-  Odoo on both invoice sets, by a margin far outside the intervals: 0% for
-  Odoo against 61 to 97% on Donut, 9% against 91 to 100% on EN 16931.
-- **H2 weakly supported.** The OCR-first pipeline (Mistral OCR, then
-  Mistral Medium) had the lowest bookable rate of the language models on
-  both invoice sets (61% and 91%), but its intervals overlap those of most
-  image-in models; only Claude Sonnet 5.5 is clearly ahead on Donut.
-
+  Odoo on all three sets, far outside the intervals: Odoo 0%, 9% and 8%;
+  the models 61 to 97%, 91 to 100% and 84 to 94%.
+- **H2 partly supported.** The OCR-first pipeline was the least accurate
+  language model on both invoice sets (61% and 91%), but not on the
+  receipts (88%, above GPT-5.6 Terra). Its intervals overlap those of most
+  image-in models; on Donut only the two Claude models are clearly ahead.
+- **H3 supported for one model.** The rules lifted Gemini 3.8 Flash by 33
+  points on Donut and cost no model more than 2 points elsewhere. They did
+  nothing for Claude Sonnet 5.5, which read the dates right without them.
+  The rules were written after seeing the baseline errors on these test
+  sets, so this is the best case for hand-written rules.
+- **H4 not supported.** Rules learned from a disjoint training sample did
+  not improve the test results and lowered one model on one set by 17
+  points.
 
 ## 6. Discussion
 
@@ -395,74 +524,103 @@ a VAT summary it is right on 22 of 23 EN 16931 bills. Odoo itself offers
 "one line per tax" as a booking option, so the merged lines are not the
 problem for an accountant; the lost article detail is.
 
-Totals and currency Odoo reads reliably (96 to 100%).
+Totals and currency Odoo reads reliably on the invoices (96 to 100%). On
+the scanned receipts it does not: it got the total on 55 of 100 and the shop
+name on 20, returning fragments such as "SR", "CASH" or "GST Summary" as
+the vendor.
 
 ### 6.2 Where the language models go wrong
 
-Almost every language-model error on Donut is a date. Donut prints US dates,
-month first (09/10/2015). Claude Sonnet 5.5 read all 100 correctly; the
-others read 25 to 35 of them day first. That alone makes the gap between
-Claude (97% bookable) and the rest (61 to 73%). The same happened on the one
-French EN 16931 sample that prints a US date. On European bills, where day
-first is the norm, this costs little; telling the model the vendor's country
-would likely remove most of it.
+Almost every language-model error on Donut is a date. Donut prints US
+dates, month first (09/10/2015). Claude Sonnet 5.5 and Claude Opus 5.5 read
+all of them correctly; the other six read 26 to 35 of 100 day first. That
+alone makes the gap between Claude (97% bookable) and the rest (61 to 72%).
+The same happened on the one French EN 16931 sample that prints a US date.
+One sentence in the prompt about date conventions closes most of that gap
+(section 5.5).
 
-Apart from dates the models differ little on these clean documents: vendor,
-VAT number, invoice number, amounts and VAT summary are at 98 to 100% for
-all of them.
+Apart from dates the models differ little on the clean invoices: vendor,
+VAT number, invoice number, amounts and VAT summary are at 95 to 100% for
+all of them. On the scanned receipts they spread more (84 to 94%), with
+GPT-5.6 Terra last on the vendor name; the cheapest model, Gemini 3.8 Flash,
+was the most accurate there.
+
+The bigger model did not help. Claude Opus 5.5 scored the same as Claude
+Sonnet 5.5 on Donut, 4 points higher on EN 16931 and 1 point lower on the
+receipts, at twice the price. GPT-5.6 Terra, the newer OpenAI model, scored
+the same as or below GPT-5.5 on all three sets.
 
 ### 6.3 VAT
 
 Every language model read the VAT rate of practically every line (98 to
-100%), the VAT summary of every bill, and the EN 16931 VAT category of all
-23 bills, including the mixed-rate, exempt, intra-community and export
-cases. The set is small and has no reverse-charge bill, so this shows that
-the models can read VAT, not how often they will on a company's real mix.
+100%), the VAT summary of every bill, and the EN 16931 VAT category of
+practically every bill, including the mixed-rate, exempt, intra-community
+and export cases. The set is small and has no reverse-charge bill, so this
+shows that the models can read VAT, not how often they will on a company's
+real mix.
 
 ### 6.4 Cost and time
 
-Per bill a language model cost EUR 0.004 (Gemini 3.8 Flash) to EUR 0.03
-(Gemini 3.1 Pro); Odoo about EUR 0.13. Claude Sonnet 5.5 and the Mistral
-pipeline answered in 3 to 4 seconds, Gemini 3.1 Pro in about 20. Odoo took 7
-to 8 seconds, mostly waiting on its queue.
+AI cost and human time are reported apart (figure 3). AI cost is what was
+billed: OpenRouter's reported cost per call for the language models, and
+the list price of Odoo's smallest credit pack (100 credits for EUR 15) for
+Odoo. Human time is the number of documents that are not bookable as read,
+times an assumed two minutes to correct one (`results/<set>/aggregate.md`).
 
-AI cost and human time are reported apart. AI cost is what was billed:
-OpenRouter's reported cost per call for the language models, and the list
-price of Odoo's smallest credit pack (100 credits for EUR 15) for Odoo.
-Human time is the number of bills that are not bookable as read, times an
-assumed two minutes to correct one (`results/<set>/aggregate.md`):
+![Figure 3. AI cost and correction time per 100 bills](figures/fig3_cost_time.png)
 
-| Per 100 bills, run 1 | AI cost, Donut | To correct, Donut | AI cost, EN 16931 | To correct, EN 16931 |
+| Per 100 documents | AI cost | To correct: Donut | EN 16931 | SROIE |
 |---|---|---|---|---|
-| Odoo | EUR 15.00 | 100 bills, 3.3 h | EUR 15.00 | 91 bills, 3.0 h |
-| Claude Sonnet 5.5 | EUR 0.92 | 3 bills, 0.1 h | EUR 1.41 | 4 bills, 0.1 h |
-| Gemini 3.8 Flash | EUR 0.44 | 36 bills, 1.2 h | EUR 0.50 | 0 bills |
-| GPT-5.5 | EUR 2.19 | 27 bills, 0.9 h | EUR 2.12 | 0 bills |
-| Gemini 3.1 Pro | EUR 2.55 | 31 bills, 1.0 h | EUR 2.93 | 0 bills |
-| Gemini 2.5 Pro | EUR 1.66 | 30 bills, 1.0 h | EUR 1.72 | 4 bills, 0.1 h |
-| Mistral OCR → Medium | EUR 0.56 | 39 bills, 1.3 h | EUR 0.81 | 9 bills, 0.3 h |
+| Odoo | EUR 15.00 | 100, 3.3 h | 91, 3.0 h | 92, 3.1 h |
+| Claude Sonnet 5.5 | EUR 0.86 to 1.41 | 3, 0.1 h | 4, 0.1 h | 9, 0.3 h |
+| Claude Opus 5.5 | EUR 1.89 to 2.83 | 3, 0.1 h | 0 | 10, 0.3 h |
+| Gemini 3.8 Flash | EUR 0.44 to 0.64 | 36, 1.2 h | 0 | 6, 0.2 h |
+| Gemini 3.8 Flash with the H3 rules | about the same | 3, 0.1 h | 0 | 5, 0.2 h |
+| GPT-5.6 Terra | EUR 0.75 to 1.26 | 30, 1.0 h | 7, 0.2 h | 16, 0.5 h |
+| GPT-5.5 | EUR 1.87 to 2.37 | 29, 1.0 h | 0 | 9, 0.3 h |
+| Gemini 3.1 Pro | EUR 2.57 to 3.03 | 30, 1.0 h | 0 | 10, 0.3 h |
+| Gemini 2.5 Pro | EUR 1.65 to 2.22 | 32, 1.1 h | 4, 0.1 h | 10, 0.3 h |
+| Mistral OCR → Medium | EUR 0.45 to 0.82 | 39, 1.3 h | 9, 0.3 h | 12, 0.4 h |
 
-The AI cost differs by a few euros per 100 bills; the time spent correcting
-differs by hours. Unless an hour of correcting is worth less than a few
-euros, the engine that is right most often is also the cheapest in total.
-Between engines that are equally right, the AI cost decides (on EN 16931:
-Gemini 3.8 Flash).
+The AI cost differs by a few euros per 100 documents; the correcting differs
+by hours. Unless an hour of correcting is worth less than a few euros, the
+engine that is right most often is also the cheapest in total. Between
+engines that are equally right, the AI cost decides.
+
+Time per document: Claude Sonnet 5.5, GPT-5.6 Terra and the Mistral pipeline
+answered in 3 to 7 seconds, Gemini 3.1 Pro in 20 to 26. Odoo took 7 to 8,
+mostly waiting on its queue.
 
 ### 6.5 What this means for an Odoo user
 
 Read raw, Odoo's digitization gives a draft that needs correcting on nearly
-every bill in these sets, mostly the vendor, the number and the date, and on
-US-style bills the tax. Inside a database the vendor lookup will recover part
-of the vendor errors (section 7), but not the numbers, dates and taxes. A
-current language model gets most of these bills right as read, at a quarter
-of the price per call or less, and it saves hours of correcting per hundred
-bills. Which model to pick depends on the
-bills: on these sets Claude Sonnet 5.5 was the safest choice (best on the US
-dates, at EUR 0.01 a bill), Gemini 3.8 Flash the cheapest where dates are
-unambiguous. A follow-up on real Dutch vendor bills will tell for those.
+every document in these sets: the vendor, the number and the date, the tax
+on US-style bills, and the total on scanned receipts. Inside a database the
+vendor lookup will recover part of the vendor errors (section 7), but not
+the numbers, dates and amounts.
 
+A current language model gets most of these documents right as read, at a
+fifth of Odoo's price or less, and saves around three hours of correcting
+per hundred documents. On these sets two choices stand out: Claude Sonnet
+5.5 (right without help, EUR 0.01 a document) and Gemini 3.8 Flash with the
+four reading rules of H3 (as accurate on these sets, at half the price).
+The larger models (Claude Opus 5.5, Gemini 3.1 Pro) cost more and were not
+more accurate. A follow-up on real Dutch vendor bills will tell for those.
 
-### 6.6 The ground truth has errors too
+### 6.6 Learning from corrections
+
+A loop that turns errors into rules is attractive: every correction a
+bookkeeper makes could teach the reader. Our simplest version failed in an
+instructive way. Errors without the document lose the cause: the teacher
+saw day and month swapped but not that the vendor was American, and wrote
+the opposite rule. And rules travel: a rule that is right for receipts
+("the total is the amount due") is wrong for invoices with a prepayment. A
+working loop would pass the document, or at least its country and type,
+with each error, and keep rules per document type or per vendor. That is,
+in effect, what Odoo does inside a database when it remembers a vendor's
+accounts and taxes from earlier bills.
+
+### 6.7 The ground truth has errors too
 
 In 25 of the 100 Donut bills of our sample, the IBAN in the ground truth
 fails its own checksum ("GB82D)FU82ZI3146210425"): the labels were partly
@@ -494,6 +652,12 @@ that difficulty is in the labels. We exclude such truths from scoring.
 - Possible caching at Odoo. Odoo's two runs were identical to the byte.
   The service may cache results per file, in which case our two runs are
   not independent evidence of determinism.
+- H3 is a best case. The hand-written rules were written after seeing the
+  baseline errors on the same test sets, so their effect is an upper bound
+  for rules written in advance; H4 is the held-out version.
+- H3 and H4 ran once, with two models. A difference of a few points between
+  arms is within run-to-run noise (up to 8 points for one model on Donut).
+- One failed call counted as errors in the H4 training sample (section 5.5).
 - Scoring rules revised after a first look. See section 8. Results under
   the original rules are published alongside (`*_strict.*`).
 
@@ -519,7 +683,9 @@ provider, time, cost, tokens) and scores are also given as CSV; `DATA.md`
 describes every file and column. Scores can be recomputed from the
 raw answers at no cost; the full study can be repeated with an OpenRouter
 key and an Odoo IAP account (README). Runs took place on 2026-11-12 with
-Python 3.13.18 and pypdf 7.0.1. Total cost: <!-- RESULTS:COST -->.
+Python 3.13.18 and pypdf 7.0.1. Total cost of the study: USD 70.11 on
+OpenRouter (every language-model call, failed ones included) and about 350
+Odoo IAP credits (EUR 50 bought).
 
 ## 10. Conflict of interest
 

@@ -1,0 +1,113 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7928F713",
+  "invoice_date": "2017-09-28",
+  "due_date": "2017-09-28",
+  "currency": "MYR",
+  "untaxed": 47.03,
+  "tax": 1.01,
+  "total": 48.04,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 2.0,
+    "unit_price": 2.13,
+    "tax_rate": 0.0,
+    "net": 4.26
+   },
+   {
+    "description": "WHOL EMEAL",
+    "quantity": 4.0,
+    "unit_price": 2.78,
+    "tax_rate": 0.0,
+    "net": 11.12
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 5.0,
+    "unit_price": 2.97,
+    "tax_rate": 0.0,
+    "net": 14.85
+   },
+   {
+    "description": "BUN-SBILIS",
+    "quantity": 20.0,
+    "unit_price": 0.84,
+    "tax_rate": 6.0,
+    "net": 16.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 16.8,
+    "tax": 1.01
+   },
+   {
+    "rate": 0.0,
+    "base": 30.23,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0230475,
+ "raw": {
+  "id": "gen-1794514200-Gkz08avzt8Pdx9F34RB9",
+  "object": "chat.completion",
+  "created": 1794514200,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"GARDENIA BAKERIES (KL) SDN BHD\",\n  \"vendor_vat\": \"000381399040\",\n  \"invoice_ref\": \"7928F713\",\n  \"invoice_date\": \"2017-09-28\",\n  \"due_date\": \"2017-09-28\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 47.03,\n  \"tax\": 1.01,\n  \"total\": 48.04,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"O.C. WHITE\",\n      \"quantity\": 2.0,\n      \"unit_price\": 2.13,\n      \"tax_rate\": 0.0,\n      \"net\": 4.26\n    },\n    {\n      \"description\": \"WHOL EMEAL\",\n      \"quantity\": 4.0,\n      \"unit_price\": 2.78,\n      \"tax_rate\": 0.0,\n      \"net\": 11.12\n    },\n    {\n      \"description\": \"O.C JUMBO\",\n      \"quantity\": 5.0,\n      \"unit_price\": 2.97,\n      \"tax_rate\": 0.0,\n      \"net\": 14.85\n    },\n    {\n      \"description\": \"BUN-SBILIS\",\n      \"quantity\": 20.0,\n      \"unit_price\": 0.84,\n      \"tax_rate\": 6.0,\n      \"net\": 16.8\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 16.8,\n      \"tax\": 1.01\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 30.23,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Identifying Vendor Information**\n\nI've begun to extract the necessary data for the JSON schema. Specifically, I've identified the vendor name as \"GARDENIA BAKER IES (KL) SDN BHD,\" which seems to be the issuer of the bill. I am now looking for the vendor's tax ID.\n\n\n**Extracting More Details**\n\nI have successfully extracted the vendor's VAT ID, which is \"000381399040\". Moving forward, I identified the invoice number \"7928 F713,\" the invoice date \"2017-09-28,\" and the delivery/due date, also \"2017-09-28.\" I've specified the currency as \"MYR.\" I've also calculated the untaxed amount (47.03), the tax (1.01), and the total payable (48.04).\n\n\n**Analyzing Line Items**\n\nI'm now focused on extracting line-item details to populate the `lines` array. I've begun parsing the item descriptions, quantities, unit prices, and tax rates. I'm checking their calculations for accuracy.\n\nI've got the first line's description, which is \"O.C. WHITE\", quantity is \"2\", unit price \"U.P\" is 2.13, tax rate is 0, and the net amount is 4.26, where `net=quantity*unit_price`.\n\nI've got the second line's description as \"WHOL EMEAL\", which should be \"WHOLEMEAL\". Quantity is \"4\", unit price is \"U.P\" as 2.78, tax rate is 0, and the net amount is 11.12.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the required information. I've calculated and verified all values, and I've prepared all extracted fields: vendor details, invoice and payment information, and line items. The VAT breakdown, including 0% and 6% rates, has been finalized, completing the entire extraction process. Now, I will assemble the JSON object.\n\n\n**Compiling Data Now**\n\nI'm now putting it all together. I've successfully extracted and validated all the necessary data points, from the vendor's information down to the individual line item details. I'm preparing to convert it into the final JSON structure, including the VAT breakdown, which has two rates: 0% and 6%. I will assemble the JSON object now.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Identifying Vendor Information**\n\nI've begun to extract the necessary data for the JSON schema. Specifically, I've identified the vendor name as \"GARDENIA BAKER IES (KL) SDN BHD,\" which seems to be the issuer of the bill. I am now looking for the vendor's tax ID.\n\n\n**Extracting More Details**\n\nI have successfully extracted the vendor's VAT ID, which is \"000381399040\". Moving forward, I identified the invoice number \"7928 F713,\" the invoice date \"2017-09-28,\" and the delivery/due date, also \"2017-09-28.\" I've specified the currency as \"MYR.\" I've also calculated the untaxed amount (47.03), the tax (1.01), and the total payable (48.04).\n\n\n**Analyzing Line Items**\n\nI'm now focused on extracting line-item details to populate the `lines` array. I've begun parsing the item descriptions, quantities, unit prices, and tax rates. I'm checking their calculations for accuracy.\n\nI've got the first line's description, which is \"O.C. WHITE\", quantity is \"2\", unit price \"U.P\" is 2.13, tax rate is 0, and the net amount is 4.26, where `net=quantity*unit_price`.\n\nI've got the second line's description as \"WHOL EMEAL\", which should be \"WHOLEMEAL\". Quantity is \"4\", unit price is \"U.P\" as 2.78, tax rate is 0, and the net amount is 11.12.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the required information. I've calculated and verified all values, and I've prepared all extracted fields: vendor details, invoice and payment information, and line items. The VAT breakdown, including 0% and 6% rates, has been finalized, completing the entire extraction process. Now, I will assemble the JSON object.\n\n\n**Compiling Data Now**\n\nI'm now putting it all together. I've successfully extracted and validated all the necessary data points, from the vendor's information down to the individual line item details. I'm preparing to convert it into the final JSON structure, including the VAT breakdown, which has two rates: 0% and 6%. I will assemble the JSON object now.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2265,
+   "total_tokens": 2583,
+   "cost": 0.0230475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0230475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02265
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1763,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.51
+}

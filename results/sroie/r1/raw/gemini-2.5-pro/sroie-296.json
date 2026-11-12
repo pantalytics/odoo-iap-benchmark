@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "DOMINO'S PIZZA",
+  "vendor_vat": "001694261248",
+  "invoice_ref": "A04079",
+  "invoice_date": "2018-04-17",
+  "due_date": "2018-04-17",
+  "currency": "MYR",
+  "untaxed": 3.68,
+  "tax": 0.22,
+  "total": 3.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6\"HT (TE) FPP-FREE",
+    "quantity": 1.0,
+    "unit_price": 1.84,
+    "tax_rate": 6.0,
+    "net": 1.84
+   },
+   {
+    "description": "6\"HT (BP) WTUE1A-F",
+    "quantity": 1.0,
+    "unit_price": 1.84,
+    "tax_rate": 6.0,
+    "net": 1.84
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 3.68,
+    "tax": 0.22
+   }
+  ]
+ },
+ "cost_usd": 0.0315275,
+ "raw": {
+  "id": "gen-1794514403-1l3de7Jp3gyGbQb3bdvo",
+  "object": "chat.completion",
+  "created": 1794514403,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"DOMINO'S PIZZA\",\n  \"vendor_vat\": \"001694261248\",\n  \"invoice_ref\": \"A04079\",\n  \"invoice_date\": \"2018-04-17\",\n  \"due_date\": \"2018-04-17\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 3.68,\n  \"tax\": 0.22,\n  \"total\": 3.9,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"6\\\"HT (TE) FPP-FREE\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.84,\n      \"tax_rate\": 6.0,\n      \"net\": 1.84\n    },\n    {\n      \"description\": \"6\\\"HT (BP) WTUE1A-F\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.84,\n      \"tax_rate\": 6.0,\n      \"net\": 1.84\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 3.68,\n      \"tax\": 0.22\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've started extracting information to populate the JSON schema. For the `vendor_name` field, I've decided on \"DOMINO'S PIZZA\" from the document, ignoring the owner details. I'm moving on to the `vendor_vat` field now.\n\n\n**Populating the Schema Now**\n\nI've determined the values for several fields. I have \"DOMINO'S PIZZA\" for the vendor name. For `vendor_vat`, I've got \"001694261248\" from the \"GST REF NO\". \"A04079\" seems right for the invoice reference. I've translated \"17 /04/18\" to \"2018-04-17\" for the invoice date, and I'll use that as the due date since it was paid in cash. I'm assuming MYR currency and calculating untaxed as 3.68 and tax as 0.22.\n\n\n**Analyzing Line Item Details**\n\nI'm now diving deeper into the line item details. I'm focusing on \"6\\\"HT (TE) FPP-FREE\" specifically. It seems tricky to represent the discount correctly. There are two line items, each with a listed price of 12.80, summing to 25.60. But then there's a coupon discount of 21.70 applied to the total, resulting in 3.90. The schema demands a `unit_price`, which is not clearly defined here.\n\n\n**Finalizing Schema Population**\n\nI've made my decisions on the line items. The unit price for each \"6\\\"HT (TE) FPP-FREE\" line will be 12.80, with a tax rate of 6% and a net amount of 12.80. Though the overall discount is significant, the schema's structure requires this representation, and I'll account for the discrepancy with the coupon discount later. I have now populated the entire schema.\n\n\n**Finalizing Schema Extraction**\n\nNow I'm ready to populate the final fields. I will use \"12.08\" for `unit_price` of the line items, and I will define `net` for each line as 12.08, even though the price on the document appears as 12.80. This value will be calculated based on the discount. I'm now certain that the remaining values are the correct ones. The schema will be complete once this information is entered.\n\n\n**Calculating Line Item Prices**\n\nI've revised the line item net calculations. To resolve how to account for the total discount, I've split the calculated untaxed amount (3.68) evenly across the two lines. Each line's `net` and `unit_price` are now 1.84. I've reconfirmed that this aligns with the total untaxed amount.\n\n\n\n**Refining Line Item Calculations**\n\nI've made revisions to the line item's calculations. To accommodate the total discount, I've split the calculated untaxed amount (3.68) evenly across both lines. Each line's `net` and `unit_price` are now 1.84. This aligns with the total untaxed amount and accounts for the complexities of the discount structure, with the overall schema ready for complete population.\n\n\n**Finalizing Schema Extraction**\n\nI've decided on the final values for the line items' `unit_price` and `net`. Though the document lists 12.80 as the original price, I am calculating the net price as 1.84 for each line item, to address the document level discount. This approach ensures accuracy in total calculations, with schema population now complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've started extracting information to populate the JSON schema. For the `vendor_name` field, I've decided on \"DOMINO'S PIZZA\" from the document, ignoring the owner details. I'm moving on to the `vendor_vat` field now.\n\n\n**Populating the Schema Now**\n\nI've determined the values for several fields. I have \"DOMINO'S PIZZA\" for the vendor name. For `vendor_vat`, I've got \"001694261248\" from the \"GST REF NO\". \"A04079\" seems right for the invoice reference. I've translated \"17 /04/18\" to \"2018-04-17\" for the invoice date, and I'll use that as the due date since it was paid in cash. I'm assuming MYR currency and calculating untaxed as 3.68 and tax as 0.22.\n\n\n**Analyzing Line Item Details**\n\nI'm now diving deeper into the line item details. I'm focusing on \"6\\\"HT (TE) FPP-FREE\" specifically. It seems tricky to represent the discount correctly. There are two line items, each with a listed price of 12.80, summing to 25.60. But then there's a coupon discount of 21.70 applied to the total, resulting in 3.90. The schema demands a `unit_price`, which is not clearly defined here.\n\n\n**Finalizing Schema Population**\n\nI've made my decisions on the line items. The unit price for each \"6\\\"HT (TE) FPP-FREE\" line will be 12.80, with a tax rate of 6% and a net amount of 12.80. Though the overall discount is significant, the schema's structure requires this representation, and I'll account for the discrepancy with the coupon discount later. I have now populated the entire schema.\n\n\n**Finalizing Schema Extraction**\n\nNow I'm ready to populate the final fields. I will use \"12.08\" for `unit_price` of the line items, and I will define `net` for each line as 12.08, even though the price on the document appears as 12.80. This value will be calculated based on the discount. I'm now certain that the remaining values are the correct ones. The schema will be complete once this information is entered.\n\n\n**Calculating Line Item Prices**\n\nI've revised the line item net calculations. To resolve how to account for the total discount, I've split the calculated untaxed amount (3.68) evenly across the two lines. Each line's `net` and `unit_price` are now 1.84. I've reconfirmed that this aligns with the total untaxed amount.\n\n\n\n**Refining Line Item Calculations**\n\nI've made revisions to the line item's calculations. To accommodate the total discount, I've split the calculated untaxed amount (3.68) evenly across both lines. Each line's `net` and `unit_price` are now 1.84. This aligns with the total untaxed amount and accounts for the complexities of the discount structure, with the overall schema ready for complete population.\n\n\n**Finalizing Schema Extraction**\n\nI've decided on the final values for the line items' `unit_price` and `net`. Though the document lists 12.80 as the original price, I am calculating the net price as 1.84 for each line item, to address the document level discount. This approach ensures accuracy in total calculations, with schema population now complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3113,
+   "total_tokens": 3431,
+   "cost": 0.0315275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0315275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03113
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2775,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.0
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Jones-Frazier",
+  "vendor_vat": "937-84-4041",
+  "invoice_ref": "15801054",
+  "invoice_date": "2015-09-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 246.31,
+  "tax": 24.63,
+  "total": 270.94,
+  "iban": "GB29ITRF67964142047762",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes",
+    "quantity": 4.0,
+    "unit_price": 44.99,
+    "tax_rate": 10.0,
+    "net": 179.96
+   },
+   {
+    "description": "10\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock",
+    "quantity": 1.0,
+    "unit_price": 26.99,
+    "tax_rate": 10.0,
+    "net": 26.99
+   },
+   {
+    "description": "Boys Kids Printed Cotton Slippers Zip Fastening 350172494",
+    "quantity": 2.0,
+    "unit_price": 19.68,
+    "tax_rate": 10.0,
+    "net": 39.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 246.31,
+    "tax": 24.63
+   }
+  ]
+ },
+ "cost_usd": 0.0168875,
+ "raw": {
+  "id": "gen-1794512834-DSoNLnnUqefDoZAjKGbY",
+  "object": "chat.completion",
+  "created": 1794512834,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Jones-Frazier\",\n  \"vendor_vat\": \"937-84-4041\",\n  \"invoice_ref\": \"15801054\",\n  \"invoice_date\": \"2015-09-08\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 246.31,\n  \"tax\": 24.63,\n  \"total\": 270.94,\n  \"iban\": \"GB29ITRF67964142047762\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes\",\n      \"quantity\": 4.0,\n      \"unit_price\": 44.99,\n      \"tax_rate\": 10.0,\n      \"net\": 179.96\n    },\n    {\n      \"description\": \"10\\\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock\",\n      \"quantity\": 1.0,\n      \"unit_price\": 26.99,\n      \"tax_rate\": 10.0,\n      \"net\": 26.99\n    },\n    {\n      \"description\": \"Boys Kids Printed Cotton Slippers Zip Fastening 350172494\",\n      \"quantity\": 2.0,\n      \"unit_price\": 19.68,\n      \"tax_rate\": 10.0,\n      \"net\": 39.36\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 246.31,\n      \"tax\": 24.63\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data**\n\nI've successfully identified and extracted the vendor's name as \"Jones-Frazier\", and their tax ID is \"937-84-4041\". I have also obtained the invoice number, which is \"15801054\". I am now focusing on identifying the next relevant data point within the document.\n\n\n**Analyzing Further Data Points**\n\nI have now processed the date of the invoice, interpreting it as \"09/08/2015\", or 2015-09-08, based on the MM/DD/YYYY format. The due date, not present, will be set to `null`. I have considered the currency, and despite conflicting clues with the IBAN, I am assuming it is USD, based on the US addresses and tax ID format, which I'll represent as \"USD\" according to the schema. I've also parsed the amounts for untaxed value ($246.31), tax ($24.63), and the total ($270.94) and seller's IBAN.\n\n\n**Constructing JSON Output**\n\nI'm now populating the JSON object with the extracted data. I've included the vendor details, invoice information (date, reference), and currency as USD. Additionally, I've filled in the untaxed value, tax amount, total, IBAN, and VAT treatment details. I'm proceeding to integrate the line items and VAT breakdown.\n\n\n**Finalizing JSON Structure**\n\nI have completed the extraction of all data points and have meticulously cross-referenced the calculations. Despite the initial ambiguity around the currency and date format, my analysis led me to assume USD and MM/DD/YYYY, respectively, and all calculations validate this. The JSON structure is complete with all details including the line items and VAT breakdown, ready for final integration.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data**\n\nI've successfully identified and extracted the vendor's name as \"Jones-Frazier\", and their tax ID is \"937-84-4041\". I have also obtained the invoice number, which is \"15801054\". I am now focusing on identifying the next relevant data point within the document.\n\n\n**Analyzing Further Data Points**\n\nI have now processed the date of the invoice, interpreting it as \"09/08/2015\", or 2015-09-08, based on the MM/DD/YYYY format. The due date, not present, will be set to `null`. I have considered the currency, and despite conflicting clues with the IBAN, I am assuming it is USD, based on the US addresses and tax ID format, which I'll represent as \"USD\" according to the schema. I've also parsed the amounts for untaxed value ($246.31), tax ($24.63), and the total ($270.94) and seller's IBAN.\n\n\n**Constructing JSON Output**\n\nI'm now populating the JSON object with the extracted data. I've included the vendor details, invoice information (date, reference), and currency as USD. Additionally, I've filled in the untaxed value, tax amount, total, IBAN, and VAT treatment details. I'm proceeding to integrate the line items and VAT breakdown.\n\n\n**Finalizing JSON Structure**\n\nI have completed the extraction of all data points and have meticulously cross-referenced the calculations. Despite the initial ambiguity around the currency and date format, my analysis led me to assume USD and MM/DD/YYYY, respectively, and all calculations validate this. The JSON structure is complete with all details including the line items and VAT breakdown, ready for final integration.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1649,
+   "total_tokens": 1967,
+   "cost": 0.0168875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0168875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01649
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1192,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.49
+}

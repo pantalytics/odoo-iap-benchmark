@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "MVM Musterhafter Versicherungsverein Musterstadt a.G.",
+  "vendor_vat": "DE234567891",
+  "invoice_ref": "00.123.456.7-2018-1",
+  "invoice_date": "2018-03-11",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 220,
+  "tax": 0,
+  "total": 220,
+  "iban": "DE75123456780000001234",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9",
+    "quantity": 1,
+    "unit_price": 67.2244,
+    "tax_rate": 0,
+    "net": 80
+   },
+   {
+    "description": "Vollkasko SF25 (30 %) Typkl. 21 Regio R4",
+    "quantity": 1,
+    "unit_price": 117.6471,
+    "tax_rate": 0,
+    "net": 140
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 220,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.027691,
+ "raw": {
+  "id": "gen-1794512611-CEZD82QGtGHrHekv4V4w",
+  "object": "chat.completion",
+  "created": 1794512611,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MVM Musterhafter Versicherungsverein Musterstadt a.G.\",\"vendor_vat\":\"DE234567891\",\"invoice_ref\":\"00.123.456.7-2018-1\",\"invoice_date\":\"2018-03-11\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":220,\"tax\":0,\"total\":220,\"iban\":\"DE75123456780000001234\",\"vat_treatment\":\"E\",\"lines\":[{\"description\":\"Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9\",\"quantity\":1,\"unit_price\":67.2244,\"tax_rate\":0,\"net\":80},{\"description\":\"Vollkasko SF25 (30 %) Typkl. 21 Regio R4\",\"quantity\":1,\"unit_price\":117.6471,\"tax_rate\":0,\"net\":140}],\"vat_breakdown\":[{\"rate\":0,\"base\":220,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "**Analyzing invoice data**\n\nI need to output JSON per schema for the invoice details. There’s inconsistency regarding totals: Bruttosumme is 220, but Zahlbetrag is 440. It seems the total including tax is probably 220, and I need to clarify open payments. The invoice mentions two due dates for installments, with no single due date provided. The invoice date is 11.03.2018, and the vendor has a specific VAT reference. I must double-check these amounts and align with the schema accurately.**Clarifying invoice calculations**\n\nI'm examining the invoice and noticing that the Nettopreis values are 67.2244 and 117.6471, while the Nettobetrag shows 80 and 140. It indicates an insurance tax of 19%, but VAT is listed as 0. So, is the Nettopreis excluding the insurance tax? The printed line net amount is 80, which seems to complicate things. The quantity is 1, but if I use the printed unit price, it doesn't match up correctly with the net calculations. I need to figure out if the gross price aligns with these net amounts.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Analyzing invoice data**\n\nI need to output JSON per schema for the invoice details. There’s inconsistency regarding totals: Bruttosumme is 220, but Zahlbetrag is 440. It seems the total including tax is probably 220, and I need to clarify open payments. The invoice mentions two due dates for installments, with no single due date provided. The invoice date is 11.03.2018, and the vendor has a specific VAT reference. I must double-check these amounts and align with the schema accurately.**Clarifying invoice calculations**\n\nI'm examining the invoice and noticing that the Nettopreis values are 67.2244 and 117.6471, while the Nettobetrag shows 80 and 140. It indicates an insurance tax of 19%, but VAT is listed as 0. So, is the Nettopreis excluding the insurance tax? The printed line net amount is 80, which seems to complicate things. The quantity is 1, but if I use the printed unit price, it doesn't match up correctly with the net calculations. I need to figure out if the gross price aligns with these net amounts.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hbuejEEfN51SSuVEZDHgnuBmjo8BkxIQo34zRnO5tXVll7dzDthsMMt0YxBdIQoi00D2lXlqIFRvn3HXQswsuJNuUjpanyMf3lYqvN-A9C3OIHsiZ2Nvjgxi3QB9NtT7FL5QDHR59ONXrf4ZNVKRRGVNvwt-9nEHc6DXr0Ha3oHrRQvNseFSGmSqFiL8C0FqA8G29XFphvK5UJr8vI3JIZ9daPI4TeaLnrE1nHS4gdM271jf2fXbbRhgFOdwFgClOMDmExMVskUT0rnYGVUsynkeLwIPYcKHboFKudUz2WyZlGAKQ-3IaLajfg8SzFo6K0Y-BGpC-73CBD-epvw9CkGaCtbDtewE3o8QInav3E2Wf8HPrE-OGXiLouKO2MPa-Xv_Vp2r-C5e2AY03jC_1l0NQbHz02MN-tEwGh1g21bbVaQ57WdowVqa7HwyotcazYzXjdP7rQCI_HPuPpuzeq9PNrsrgtLDPMz6hz3iR4VeNX0fqdzxbtnyLWAVAx7MDI2_uQTTt0svo1e8gXe28lSkiBUoR1yE0vhevt1zaEsIvySj-Jf8019mzZ5rJ3qs75-yWcbyMMeQBTSi8loZCMge46PNxo2LI70MQw73HKXs8pBsKbgRmbBe02CtHfWScORjSIaIEiQWD9AYgubXvRz_nq06fm7-3lqXTW0Yz5z4g8hErLdfBUo1BRP0WwSZ4ejkFuwBcmnqgtQm-D5XZ2_QS7xcM9MrZCwFO-twWcR3SozHRTx_bnLfcf02JKuuJ5O7lVhPDvJXKAVEbTPlXFCVy9zx4QyJ4yvzETUX-rKfIElml4NuJyg-Yzd4yhlyXvbyZxV7rmI_dsxZS6rWD8j_QUwS9eddWac6dUhgiZX9hvpHKz8W7JWW3vtKDqG0riim95IntnhXqzU9--amN-acBLVLkwevNBFeQ-29Cx7jS5cEf7teH61tS5g5RzcoQowR7L8478VlIofF7HdA4xAFuacMsNnejvXrKqlREh0jM7ygwijEcYl_uDX7bEXQvodkp6qYPY7myHNPsaYz4CF0FogHueOrVl-vTolpOcpZHU159qShkj9O2ykEkgLpT_VKh4Nx_yjkn8H69LiByHEm-KfBY1KcuIUXot1WqRVV3BRb02y-eiuuGMCR6NEdHcywXTeKuUwLB6cMsLljFZKdjcYCmYYxAgEdGsbSUkuNxHwbrylUAeTim8BdxqdmO1K_0XXi58INsOPoPN81vP4byVXDNQ3Am1K-J1IoqmcQr027igP4v6NOBuoHqqbaRzhr84iNAZhOrY589MnDyXNFSSL_K2KOU1duqKRb7iLPVGHGdwCSMowsgKx9d4DKTn-e-y6qYFMoJguPk-y_xjyFtVTeN58Ikc_UOG-DgMPEtr3afNsyiz0l-UcBGmkLCc4TP56TvsLPA7jGSueBymHSt7r92PHiSyYL2arfJQv52yWeDbQp9HMjoP6kiLl0dGALvMqIi7U7lpxXwCTL2BAw_aFo6UBWCzduH6t9g6yDdsJiZouyqicWVfaTcZuZq5azg0INp2KDga-1Wl-ErNxzHERo6AqMSlk81hRwXGUXL2h2MhsaAqR68KNTjhxGcFURayiJqil_5gcd2VP-7mYOvi-kP0Va4WdRe5uJRV3yRNmA0ZTzQIPgxeKf9nxPyZtB3sR_D-g-mbesGbSIVDvkifUx49K89d-Z8S1YVry3KNLYlz3uIh4d6ias5hKJlTZRFpAAEjnYq0xU6WFz660IciHooKBdKrjxcCYLORHxOrromhD9wUEYvYZVIFkGe5_m_cqi74kP_HEg1UNH-lsVy3wbPbX7NaNGI8sp6SZmzWoQ700z0izTGGGtpWEduOUo12q5G3xcQ3PbxqSAWFqzVfTi-2rB8gndTn-gQPHDY4XENikAJoyn0ZTcgY912F3sDKIAqONFYhktYk8_Dg-IBb3iBbG6wU5M6zL_8QETR8MSr4GPQ4-UGp0sKiRITIbmieejhwcqg4xqlUhg9SuVhwxjExLsl9GFu_7Yx39mJZjDZGV51DARR_aWu5QpaWihwTv6zXIQc2aBdlAVP4Rpnj3M8LGsFT1uRlA1WT7gDUuxAcXKKwq4Cg4EYWueck0OpzMFt8NgGKKVIEWT9VhocGuIaXYs14M4akfi2Ji5yiHqDBgNR5SN-AI_rfoWDHDq15GemHfOgmfS5eQQ3R2H-ADWAg5XAkoQ4BYiQ_ZX0PNbWBPxlKctqcHb76mlUDgckOiW8wU5a-VP1wCtlzlhb8kHK5i8A3Uu-pyt4sTsMvoOZ4U3beBuGG6leDmHftkIa06OyjOuUb8cNmAVxMmnhBk7HaXyQE02fKm3BJZi4n97rkDJoli7EcndVB_b-tur3x9bUSz_dDIGl4fpZKUYE5U_2AcLfuQ7wHb1Kr-cKwztxltTQFTfS8AUPvlL95mjytPDtFQTgnDL9VqiY0H_MHMuMoVV5-vF_xoHE223rkGjNN7gI9KlqLWflNxsl8z9RYjdBhe8WDlD_IJK3ngnO4famvK2o8HN4jodUdZVyYo5kx92A1wdR7x6OO0Btr3pydE-N_aL_XjNkdSRKv_8Tk2CfrwWFkl6lnIqbxvPplt4aPYraKpLixCBy5f71qmTPk1x3SFuRQ9_Kw_9zM6HAJqgiikIBb7y62vRCxZGczdb7UGTwnHQPxOypU8WAgUorNBABwqzDJjmCL7pTfkEfi08qd9pxabIZbNSeuAjA8J2w34oY3neIYaYbQ-xUxIiqnMIwmL4Wy7hVrTMgL6zvXZNhOJhbUZBkf1Ug0l9n7z7yPKtIoBQDpvt5h2ggmsEdKQPcs7yzTno2NaahxtqZGVr31otUc0eXYuWPoViPxln6mCNF1_fK6NkUvmNm1yJ_lgU0vRk8NrgNOJLZvSPY0yHiDLapBBB2mhuB7yvKV8cJnP6sgAJYzhfqQaBoVmjek17NT_bMjrKNE_kZfWp3ykPwBjKWAzZdNZmmubdSHKEHosRFx4A24KAjILRqAdb8dQ2GEooO17DnkiJgVyPoIOY4T9VhXqtVF7plkLUCEyveIh4womEpqqWePR-qVl3n3f6sfpwnzuhKk4cOP-pSzN8alWQaaYLkzRMEKJVcIgfLZkbu9V4V5m1-4suQ9PLMxJ9bIfxQ7lh1dtjIffMhuceEWjoc8f2UFFMnKioZodw3RZt5cHyD3YvuWX4WTvBntTgqK7OIZ8a63zG6O4rsoPUDlNF5j287ofUOzFeBOq9Rx1xoRwiFbXxh1TP4E7IgnxVuObJtIaVo31CQjzB-AA8Hj2al2yyoGw_i4zNbs3d8NRmsBo7T_Rswe0xO93JOBQb0A4sIBFRZNa9eVkyot8uyVDC5rNSW2es0PM9jVCogOm67AQHMycdgNRJHSWPJro40S3Ez9a4G2pfwnlLVFdQrw9VK6tMXbaWlRkpAis2OpUI1_1zTeHWXDuCs9rmYFa8cmKc1tNjfoBwWK95Eu5lhGIprPw1iOSXkx7CAmUpgl78lKfxZx092GhsX3XSFjBbuv3IUyWFwNxuCisaDVl6rTk_RvpMlMYyuPtm4mEmsGLGvmTM7LKojVy9JAlvGBtWQUQFwuTuPVFM6NjLZ67KvFg4Rnl-GsOu5h9YRDseRSQwNBC4h_nDXVgbla42BO6D2ct-UqYBS3ubrcK6h6se_fqQBOmLDLIYxH-QoZgzCSxWeqjU1lYpvx4dYH-4psZvZVRERRVwz-H2HTKJQN09IoDq7AljyS2xbhzCjAwKX2JJauAApa4jYs6RvTJuRWTNmXKttCcwUbZjZpBqvRwkM_wrIcz2pDdKk9ArKNuRtB90sE0xkot2mWPkk3ZlMyIu2T9Of2l-GAn9UCAcH9slfHM1_HItRXzXQvUaGNGBx4J5BIz54fLQJe2siKG-cNnMWQYNoOQnJJ53V6VFKRar-yKxVBmI5Idq5BVv6Prd1Owy-KXSsN7p07gp3r5WgIy1lnFGr0HI0_fMgoqVeDYQbZBBCdk9AZuBQNPzqj4qdTzAK259wBGsYaywPAW8LMwMGN2bWuMWjwcqWMj9i1mDleIIY4btQcJTnv1lZkWmi1bAkYyRiquOePj3_lRoHagFOsrEFWx_5JEhjz3dTjEeWZwtyVIhhz3Nzv-M8FlFFqeY-wu45cM1ivVjKwRGW8-vkhYjRC2Ff8TLvB7rwz4PVHlGsPbcdaAHLWTpPEdl-hk7bQSrGzF0zi-1EyO3RUE6JGuNBNGSLrMPAzMiOHiBt5wwzn2UTonK3g98aHOBHpJJWTDLspTTMWQMdYrZLeRbd4Wv5Tlyf_iKR0-dLbgqnxfkBRbTk0R3nj3EfhwIFwaZDaNVQPvVK0mSm4zDujKp4tg5dzh7C-lk0XJaqoDsPY_qJJCBxtbX44XHwSKrjQ8Ti1qEkDODKdYqSyhlx1f9uYP-h9Jq6eggmTpeM_a3Vro6wD4kHzI3lSuFxn4G8VMogyqA5lWbCFYrQNcmUl1AwejU38VmyaddbPB6depM78YSn_tu1n2ia6sk3u_OWSqyPhoxUVfmcfgtalPeIaceFvWsbInfmGDcekwN082itNwJ16JMuqh9admYUtZWFG9eJiW72kRjhFZNLG5Zhk_QegbeLbWFY8dlH8MvckvM3g8v8aqg0N6ebH4Xi1TPJpmMQHHSvMEpXZrH0n73vbv8ynD6efHlvjEvVF5GZZ_t86QA0mqwpoCTCF5zFMawo8p8MJxnHu-lmP2txI9TX1GenmDHoEX4X15GwpW3yykR7YOk1wy5WLS0vVxwWmqlpH3pzJgmlQ5at1i9Lx5Bx-CcC8CnDb6_jZFaJ5bAo0A2BfR3SRG_0QusVexMlHHNGBy-7_5I84rhv8wWlWRidisMegRAyphibekp5Vxo52xKbbocnzqwphGa3MXVm2m3gyuwh-LS6fF2tfK2GtE_w8q1wXbhe4ya1bKF9wAzsCn22CFJOWVBWbkwj1EwUirAKKQF6-3OP9tDHDC9Z9wAB-chFE_RZbUestZL8sf4huLEU1zsjy1aO_8lN6hVFVW3WQFEuCZkqZBHN60llq5Vtp5afCRAhJCbBSIf9eJEkyXnhNLMjL3bhKSGXHbhgiwWQ300zK5RUHtni8xjTbLFdhwJuLmKIg-S211gobrjBR-1_QbS2zdjTJld-ASC-uCTcwh3N8U7_Q7_PaM7517PUQNOegJIsSef8qvefp9Lek2ue4_2Hkr-TlNfKXM0QIwZOQlDuBYjRYmHJzyIbCM6PoPG9LqJfzPAI4M4CNAzXmkYNNPO_aMYnPluVzKWZRnUgRob5fEXscKmN_gq8wTAE3E1fGrnaIh5uHdibddn8LqFrgms0zKTELeuSl3ywlJOVD1zOilQEzzFLpJX3SuRjl5-X99dvfx4Xqi5IlVfy1aDdjrN7ioutqa7YKslF4vzQPvQArdiRImEVvo9OLe5HCsTzJihczvxFUGNb8_tcvv9kI853iFm_o--QfKnFVdSYDKAnSPI5N-EOOoGGSzv3uqus4Urp05BANIwFGmphGYQKy_wgQackSF5iX34_OdkVH58xcpmvVP3_CknFGTlzisVq8pUsn0rv6gtP9gwdIhwDvnVk83UuQ6igfzQnHgEvM-pecAu5AybBUvIDy2uqTzBKoosN-l4k54Olm9udw7uBxxF1SknCYQb-pc3GmDZpsUJ3SKu-hLIYD4GiePgY1RP3ajTRSMOmrjeVPaxfdmNr7EUxSAKauLMZTzzKqlvdweeuXS83PmD1nCHZ-OnORYaKD7EuMqOuv8y9F47LKQJE0RNwKeEpQinXEfwdr542j5-tgJLp9rNzG9iKXEiPLEna4gV6jDs2zKE0X4LO91ZtTaSrx-oUpAfO6viRnbHaW1Nnmm_ZI7oSzu-6BjcnDEl4NS3XRAzafBMPyX_bWIgPQUJDrRVfA10vrjKdJpB9xfR_xV3ybjZF2GwsxTwY8ixWE3sj1uM6AKpKaX0Mpl_vcBfZcfeG6AII0IsFWAbwk-eZNQ2fgue5HLDrp2fnAOMOwm5eF3U3jPQB-BHiGHmxTQDgri17mas6s0l2JZW6_XzSZx_IDs1kPjy20d1dVdPFKp4thCzsSFEYXDxVLMk7MO-NWvRhP4HKOD5JaPbxgPV5cpZMsJMjGfLIom7-OrbWT3C2Kw0bpuLxvU7hi-xesUTuoKIhslQreaev72MBS1Z8bfmpfvD4iyT8LBf9IUMrsWj8y581ubbNu3p31HtYt4usUKnENyOQn_SfTmFMlZ8t0blJWKwRV8gkzDui9UcTQoSkbQq_3J4nvHlPAQ1W0Nl5loQ2YaLzFezRXOhHZqCads4aisjIFvm1tEIJBMR1Mh8hnO_bvInJeD4Uqnvui-VA6iZ3e9DGqEWOEb8CMRLDdfrYS4BSv8ExoZLN6LRKgaXfG-Fy8JidOI8-o-E6X0e3RIAVirlwul0r90-HdGKCpMrY27bDhYQVopWm0TjSoOC8GR0Y4-55-kfrS5sOtMwBt3el_XSIdrG2V6ajcfWsdW5NGglSTnps4eVeXP2yNTOAZOP8K-cbV0RSo6HpWy8cfoGr5ijbwBsZ-CaObEQcL1JFQ1YDCUEkj41eYdHZ2KLN5LG9Y6IC7dKbBg62gwMOuQ2kzlMESDbh6AgiR8vFQ8mWNtF9pwytT41AZ3AnxmMR34GvKpfN2ADB9W9mxSWV8JsdymoJP5ZXecFghwhyDagtsC7clvU_1KK7JYiJGRTlj5dMI0EARHRDZPNIlSXO32BOyq_Up0O_SwMSe7X-gKIV3ysCzRveDf0jo92CN9LSRj6IC19W2rRpVW2sSWVLOOf8yW_giOa4_0QTFyXxoXKBZ9h6ko6_otb_4GLoRjEN-J16Ke0x8fJghxjp0Jp0kTSMoSErUIhd7ZlaEksm5wroRGMCSHR5S386WhMap-smynKsrbgEiVqb1ARyMhXByFYahlAqj8fd1EqxUZovxXyVe-pGt34D1d8hi5P0Yf9U6q1MGvUXZXiu7ISq1U5g440ntJ1dBSjwfe9b0MvGuCg74sUd4gbs-gKpNJ9GR5OXv5fpXTlStvRfDo-TbX9g4kyg5Z_3RjoMHJB3l1bKEvPjnk5pw7i9d-lBV5Frvxa_qfzjZEVA19NWJqA8Mb-pZqRybykRkii_MLSA3uJMGeMURsv_U96OzZZzbLEso7i32PJMH-TdylApyMkBfar87I2EDe57JDvB-R5UnfXsQ0KQ8T-o8XQ7luis6XbpXM-GnIVbXqTQs0sB5-e3DhpUagX8la52KGQQR4-rWd2hqKKuljUIt3GV4E6Sh8Jz6bLp3qSRpvPWt3pn2_8d2YDkxkASOJPgN9vV2WD2ozozU6uUFqeAL9OoVCqDMDlHky3cAVbd7q9yup3g==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0dc8e3c134f17331016af616e524f487d1bde6c2d2e1557a60",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2813,
+   "completion_tokens": 723,
+   "total_tokens": 3536,
+   "cost": 0.027691,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.027691,
+    "upstream_inference_prompt_cost": 0.006001,
+    "upstream_inference_completions_cost": 0.02169
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.39
+}

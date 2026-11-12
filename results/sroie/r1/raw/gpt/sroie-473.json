@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "SANYU STATIONERY SHOP",
+  "vendor_vat": "001531760640",
+  "invoice_ref": "CS-SA-0078908",
+  "invoice_date": "2017-04-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 2.83,
+  "tax": 0.17,
+  "total": 3,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "LAMINATING FILM A4 SIZE (220MMX310MM)",
+    "quantity": 1,
+    "unit_price": 2.83,
+    "tax_rate": 6,
+    "net": 2.83
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 2.83,
+    "tax": 0.17
+   }
+  ]
+ },
+ "cost_usd": 0.024135,
+ "raw": {
+  "id": "gen-1794514562-nkIPc5hqf4L6f2QdI6wD",
+  "object": "chat.completion",
+  "created": 1794514562,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SANYU STATIONERY SHOP\",\"vendor_vat\":\"001531760640\",\"invoice_ref\":\"CS-SA-0078908\",\"invoice_date\":\"2017-04-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":2.83,\"tax\":0.17,\"total\":3,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"LAMINATING FILM A4 SIZE (220MMX310MM)\",\"quantity\":1,\"unit_price\":2.83,\"tax_rate\":6,\"net\":2.83}],\"vat_breakdown\":[{\"rate\":6,\"base\":2.83,\"tax\":0.17}]}",
+     "refusal": null,
+     "reasoning": "**Parsing invoice details**\n\nI need to extract the bill schema and parse the image. The vendor appears to be SANYU STATIONERY SHOP, but it's actually issued by SANYU SUPPLY SDN BHD. The invoice reference is CS-SA-0078908, dated 18/04/2017, with a total of RM 3.00, which includes a GST of 0.17 and untaxed amount of 2.83. The line item is LAMINATING FILM A4 SIZE (220MMX310MM), with a quantity of 1. The unit price is likely tax inclusive at 3.0000.**Structuring invoice format**\n\nThe schema indicates that the unit price and line amount are before tax, and I need to determine if the net is 2.83. The item description states a quantity of 1 with a unit price of 2.83, tax rate of 6%, and a net of 2.83. The displayed line amount is 3.00, which includes tax, but I should use the derived net. The invoice number is at the bottom, and the vendor's GST ID is 001531760640. I'll prepare the JSON output for the bill.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Parsing invoice details**\n\nI need to extract the bill schema and parse the image. The vendor appears to be SANYU STATIONERY SHOP, but it's actually issued by SANYU SUPPLY SDN BHD. The invoice reference is CS-SA-0078908, dated 18/04/2017, with a total of RM 3.00, which includes a GST of 0.17 and untaxed amount of 2.83. The line item is LAMINATING FILM A4 SIZE (220MMX310MM), with a quantity of 1. The unit price is likely tax inclusive at 3.0000.**Structuring invoice format**\n\nThe schema indicates that the unit price and line amount are before tax, and I need to determine if the net is 2.83. The item description states a quantity of 1 with a unit price of 2.83, tax rate of 6%, and a net of 2.83. The displayed line amount is 3.00, which includes tax, but I should use the derived net. The invoice number is at the bottom, and the vendor's GST ID is 001531760640. I'll prepare the JSON output for the bill.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h6MXcOks-D8_6LjjsXrZEkwCpM6iIbSc84dG6Ej6GOKIngugJAkliIZyERJd2ZjfL2dZxRfZpC390EhXBOM2P_hUVHfPxSW9XArv20vQuKrrzfO2BEegptgVnj5LW8I0UuW3uy4R92SrZJHIurWD_Ol74dZ00vVK2izTDqmyuiFsd2ExQPGMeuIhyjpSID2_hfS-aJe4aGDiVsxF-XgnvSglc48TbFJxH8Cp1nGTXaMm0OgPk7X9UpckCjSIRzZFfXDm_s9z0YFv1s9r7HttMYIpM98Rw7g1wiTEoO-Xa37XDnT34Q_lwn2w6TXfS78xsiMVpKv6tGCjuTBur3ProBrros_XoO4mgav2-PRRf_mrDxsmn8KTYnOjpd0UewnkhasXmkh04KRkJO1P_81q8Xe2Iv1bCQHuQYdSvDF_vQ7Kkntgc5EwwZG9U3LssY8-vnFgjB8VUouLr_R-nmjTBZicSGM4y5lhbeeoSK2n7cU9ogA0oUK-e7MEGkHqiGQTlLgIY0q7X3yQy-EAYWjKdJqDQXUsKpSDeruXKz89HLxLhdNv4NfpP18ldJulYVeP84dH9pQewnEf8BdU11Eh6em90zpEtV840sOMr1gs2Q1lLlzOk_eFuVyWyo8Ohy6LTSw4ZcoLPmldHld7BBYnCJ7FdtrElO-v2fCWPALz2y7S8eglrARPq5hV8OCV1TnGJev1-qf6usNAla-SmCzo1tfY5jNZ6JCnIXCjFpTp5X2TMWtFm5GDcO9YgMST8snv8mWThNIuFAotmsyJHVTzyJpBi6ZLCyqLHbwksi9Zxl2WL1684KTXML2-lXCZBi5NHZRbt92Ej5W1h6J2VkcBW2hNnDeIWblToaPCHJQc9-6oFwIXs_95-NafLgOb8F40zI8XVesVL3UqUDUgV9S-_RDvUq_vK31WYaMfDtbHL1Aq0r70Ew9VjydnbZTkckX74zEGH2ibJrhxMI4C62J8KlVbPVr90fCWNu31pfaA3tYu1FCtaMn-u7qO6uR9BapsFB0Uhlj_ntdOA0_RYeG-KeLj6qNV2Z_dc_E37-HE6p_6BcgLdMqVYbi2Nu7V7rClAApAdOOQZJBurPqWefOnuhZKMm2pP22xkoGIe-FneMmmRwCh_XHpWgwDlDrY-rOOndcrTc2-9Q1dmli5AP2VTqH04RyEFaSNUwpvYtqkiQN_L39QiirFdRbt2Y77xvrhnqLblqfTvNHtCVKoiPMhfXkDq_szud2aYB3TW4xPuvezl1jwmfMXDruQZVwpPdhucwGukMY5hBWiRMUKw8rHBm2VjjFknrG3osaBIOMmvHtaX1Nz26NMzBLkL4nTZE9_nFUTWkAuKSzyCOdMr34Ehj7CwTcJhoj3CvmfrDnFyhjaw2XMgj6-jMKzFxc89GFE81EvFGhnU9t_gEYACfRi-sRPaeb4PTJt0cHc2nwFidLHMmj6bnq1o0c_cFvNz3zdPp3iHRboZITrtcPCc_m-BgPlqQ1tTQo4hhPb8bP9lasXk7IMPcDSUoPO9tmwWdzcj26kQPTr15R99vvqms-lm6k_CrYHwtLZ16MtXupEDIuegQFgUo-bfWZD4jPfqEVvHcZAxgeRde2qI67XfLNQcqyoiySD9NKJA_RUmWjbxgLyfVEbyhS0xSebQF6uk8xZdcRoylJx_dHj0uWn60fjKTAizdcd3JmeVv4k-TkF7OpY0dhZ0mi4F_B2OUNrYGInq5U8Wom517RizMO5VIVSCVvUIV6aonUUXso-ciAfJBA7XcHOP_35MVa2UmNxEIkkjv1YgVN9G0pqDkF1gBqZpzN_uAh0hruwE-DkQCZysk7bmJybSwBsJjwZC-RfDje2-o2_9Zs7_fyZjgx1pUfYtUkzud-QaniauYVfo3nDc3hiRTwXmu3Na_S8svj99RrJGdEy7tPLRR1OhwIn1YaSuXGDAPMOg7L5TbUL1R6vKyeNCc0HIfgYmSmoODQbPHZQC_zvuxdfji2QAPBVO5f3APbkR1k76015HeuxFr1mTfAo-TmUwGMQgiT0BLJIPmUgq5nIciye2bcVp7LvNIFTwriAePdRgYXMeJg7CDKOvpMZDLS-j2ZNlOZItMTmA1JX__d-GiyXxjXInPedRU8ekTVl7idjsgfTsvARbKDisy7Ani2M8SBfjTaYVxKwVQGmm0TB9EqUh_AdLHgwol_xhLSoflj77KqxKTuj--HhMi-R8m05YtcNfL2f7WKZHRdC92hs0cAeyHBBvOEkC4Rkab5gqp46T_rTAzEXFqqVfTO2Nm7viPIdSAYJJGTrA-6e0MPRlCWieSbbLJEivzFCWwWYstHjYI6H8CImjK2V-uhx-Ry1AdOzeY-lJWzlWsvxXz_5ZseH94sfL-QiDMkT1u0PPfiIC___rv8iOKRJ58YyNK9fyVz1Mw_JuWDrPn5H7ouWzw4jUJ6vu-rVULGHHPcYoj8hibwR3fnT3V9zSJNgUW-DivgMLQMpAR5_xR0dnlMKmYjcyyBP1Olby47M7CbDCJVmZSNBiQhh5SjggrqxDNZJTJjZksP9ccHD53rBNlpppvIQ8vut_3M4zZLMdhbJDw95HssVDfMyNyJQGYUwxe62TiiQdbM-6FGv-0by5EsiQFAaRsh3lKDNbjMaTSd_xqF9kZGzIEwKp7IX6n0zPPsr22jMUsdJgAZ7_3SmA_qgGon7SgikZIyGmAYPK-c4Qohbv6nPrwnCcgmm4_adJ1S-vFhDwcf0EhxIzKE52aEGyvEPLRGWog_i9hy1ZWfOtMGZlwWO-ru64wdB2GOijqA9fBxukNtzKymTLfk2UJrKA9vG45uhJQuPvteJIq5BWxC6W51nZh1kC3nzoY0ReEflTWG4EaKz9CejCLDp0pjz5MHtwOdD841B1_XxhO9DFY1sDNPki9wALGVpJVSuF_ZIBjBTmsSxJ8cph27avZztaMOkIcBupVeqa8_zsnEKWAwF20Rze3Rx6ehtSDtN0tP85-2YsPP-TKzuasMuKFSdU_y7G4gDg3KdORwy21wzKKOnutGLahhGOCtEGcML_nhsbs0nSk1YxP1MPR1mXmG1oC4YUEjgdx5cJSzB9jbojixbzBUY4hO1JfGZ6NZwW83sTP7gJ3W1M0OffjqYxm2SdHbnHSoN7Y3yRBbKE1kKz7oDrF5B85kzP2-TzdSnNLJhlbn8pSvDTDYP7ZrV_9zw6a374YH2U5BOCVptWYWcVr-i3tRzq0wvZ0B-JV0E5-swnVy0-BRQM9mImyxTZyFbNmGDctYYT-cH50rdfes6suLMHMf_Udyfb5zujUTV_nOXXhs5l8d2DxET9GrQvhHQk8DHp3GYxaDRuiVCoCIOd-L0L2UZZy6ObsphPR3Gr1EGemsPIUjv1ogOO38MlQSkz4s_EvChy7UUGkIVryRQ9-JPy82G5gNEzJMdyym41Dk2gWl6TJpjvPUx2CjtYiYEQK7-UTI9tKRI8vWox7dcZn94ks4hfb_j829Oi3E1bnXKU-Q1uXXTLl4ZghKhFwug9imIO69Fox-Gwj72Yka1MVkGk_IhLY6zjws5a8QOitErMZW5qhrpT98iarjWGT9Dc7VBcn3eZg8sNWz-s0vkd-uc3yO__IxMthBL7zXTMqP9aLI7YDB5ef1ifx2XZsnW5xyRLl9ZHsSTKQRmbvPG8gqlt-IcZNH_fdW_Qf6XEfGCwQ70HQli6q0krNlluhCbzPvxGpP5xXhBVi3mga4H82KMP_4MWjcYrhPeSRsii95BoxrBsbFwJvrsWxQiC87aNaHg79sUD3r5-Z34mNSgF9gWt2m0gc6a8h9Bcm-qR59X_70KUwQdUBZieYrH-Ja9AN1-O_eDbklzCb8MFWWTWsR22HM0UidicGudwKnkSwKN2J8fVANtQD-uNmyWEZRxkACNzf6DPsIpeEtDsqADDLfp26VApSX1jxqFbD0P4uISSx3tuzI4pr4GaIN3YfXpNd3GMy7LtRpPQBhHsQOK2Q-ySUQ7wyp7YBuzyrKpA0A1jG7NvedoShySFJg5OhNtpGB5Pu_uM_g0IhamHVVRNoogvK8qAoC7sxOxgFhJs5EieP3IF-3Jy8yTS-3FoZqxC_DzgRlUuVHf17iMi6PSnQAnsuk2eWjy6ezrfNMmtexMQd-MSQ8-dUtY9RdDLPFmoHmOKtjtUmnTmdPBh-aq1L5YhnuKJ0j6dRe83P4wOh3yZlNUM3RcrwP4DUecf8vMJEjIwwV79bdY0NPEL-J9F21dTupkubDhkCsr5KEwGIB16KL6m7CAmT6rfyRE5P1ts3ISDMUjbMA9gKvIvNsccldnY04z8p7wNnzDlzqBeUle94p0PhSj5QvnNhfZEz2ZyTYpRkaR7G8CeSKpyV-R_J1wQzEX_rpWfwxbHoYRannC9f3Aj6usBIdIfQwAflNc2IlMgKlIgx3yVBDKGhZUB-2xiPA_gygglKDbQ91_DOrRYn-TsWMnRfY_8jz6d9McuO4LJ9HGUgFVptZrtu6cme-1l7b8AsgwISvxAjiv7ftSH9IXPRfy8jvnNjPVxTZbWix9L5Tf6lhknNEjz50k9botOZ3I01Cba8uJH5nlp29pATftbwenvBzYLdrlNa5uc2wwQrBdUaXyueLt8YSd86BO4Jp8kmWogrUO8NN4oV7OHDfE3PxdIrPTu5CeNxkp1dRQ-MuLXuPKPtw5Di2wsWW8sR_9Z6LIgeCY9BMoSzmjqNzeP8RjwGBi5V0IfY_Uk-lupFLRgdDS7Uw4xM5bJ-F3O92tmEvFKPni8FEFA4wZESYb09xeS6xZ0xSDS34rTz3u2Wmhn_VMLFM-DZ8H2GSWNAEFWX-r8mD2GrLAtxmEk9sKq4B1j8cthEBDvkOrrYfW9vVaJwlNp4wiwYODWJXnpH8mRMZPbhBwgs0R0qv8UxzvTw4YhdE_RtnQBHDJ6a6hy2-N9XoVUduCUOC1EF1VgsBBLJE4ZRaKkecAkZk6RzVw79hzsh0xNuXkHZKg2gxtROJoXtptZIqAC435hCPzqaVfziahon85OVV6BmoQeGYzbuK8sUfv-8iNVAt2W5_IshB01JPIDoTKLEwvWympfVc3xvrxSrV3asMMhVj8CmAywNZEa67FRZ1nCB4KJe5Yxb9PhDvO28NH4vBIV7Xb9nQCAnYi0Yfx82btj8MiVZtkM8cs2cjyeDu7K4jxhe9Rw28Adx8PmhSr9O0KYU_arYgYfianHh3ZT2WsuxR5F-MiydzPzEEvNvM82U0yMLSkvHbeCwBCGnnCEDYYPBfkskga9-xhcth_DFPU7MlcBwIPVOVnPJxoswIRPgSZr7A-M_w3Tmt9LEm9RTH4tDH4U-kEBgJ9aC7cnsNhFfYX2bVWw7ZAos0xyXYdA--5cI8fsvnyiew_dF9cpnbrz0ttuZLh_S2CxEc_Fs2vFcwTQJ7n8RykGH9lNE9CsJeOmbE9wjGdgi1sAE-6rq5aIDvN9F4f70yZEc4Hjh0jjzeVSc8dCX3Ya9EEfq3tcCKnjtwxa6lzBdMjy7NZ7GdLeaAdbfrfaoTYbouCy20AaiqqI6bX35CFV9FbMlcDguFZBGkeB7ADscMSlNIzWqrpfq7j4NAC6XFQcc3BM1r73XJIq1EzUZC3FGQ8rhP0BYw1t5WscSGPRwi1NHvwpVvwA3tqYoHPB-Uam1Uzl6UoQjpVM1ollYmhye0v4FYn3C5uuPlaI1m19phdDIO1E8ol7w8HH32Uw9mmZ5M2ZFkz5kFblh669HRBx71EEREKd-im2A6GkyMeeoF-6eXq5cxYPCX2JSXp1sYAoljhFivbBLtaE6nRjX6Xl3Xe_kNu6lquVhlg5ChTq5D5grrxM5hWmVGJDbAgj6vaYlU2a4LQv-mFtf9vt_rra3x8WaPvvdtqqa-KWvfSFcbYUQF9xdpMEtF2Tb_DokEy_wxD5QctTbiifFPGEyXfh_VhZnJ0Zh1xQORiNhwcC5udHFznsn29PG4CrJtF2xZV0miF_nA-JDIDGBmkXOIKAlNU5qbz8gVGNEcTA0zFvDNGJyIKnfu76jKiiuDyYD-2mR7qvQhw9oagaWl3qrZYaX_xiZwNquqftWdlrJy020orpLkZHFIxw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0bd2e36bd609134d016af61e844f3487d1a4d407bf1016bd2a",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 554,
+   "total_tokens": 2057,
+   "cost": 0.024135,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024135,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.01662
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 401,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.27
+}

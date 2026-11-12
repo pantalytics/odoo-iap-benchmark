@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Lopez-Fitzgerald",
+  "vendor_vat": "904-80-7663",
+  "invoice_ref": "38557956",
+  "invoice_date": "2013-08-16",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 531.35,
+  "tax": 53.13,
+  "total": 584.48,
+  "iban": "GB53SDQN59731106306440",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "All Mattel Disney Pixar Model Cars McQueen 1:55 Diecast Lot Choose Loose Kid Toy",
+    "quantity": 5.0,
+    "unit_price": 12.99,
+    "tax_rate": 10,
+    "net": 64.95
+   },
+   {
+    "description": "Nike Air Max 90 All Black Leather Running Shoes 833412-001 Size 7Y (Women's 8.5)",
+    "quantity": 5.0,
+    "unit_price": 74.99,
+    "tax_rate": 10,
+    "net": 374.95
+   },
+   {
+    "description": "Timberland brown slip on shoes size 4.5 juniors",
+    "quantity": 1.0,
+    "unit_price": 2.0,
+    "tax_rate": 10,
+    "net": 2.0
+   },
+   {
+    "description": "Lego Star Wars Minifigures Stormtrooper Darth Vader Yoda Obi Van Mandalorian New",
+    "quantity": 5.0,
+    "unit_price": 2.98,
+    "tax_rate": 10,
+    "net": 14.9
+   },
+   {
+    "description": "Sperry Boys shoes Size 2M",
+    "quantity": 5.0,
+    "unit_price": 4.99,
+    "tax_rate": 10,
+    "net": 24.95
+   },
+   {
+    "description": "Children Place Boys Snow Boots",
+    "quantity": 4.0,
+    "unit_price": 12.4,
+    "tax_rate": 10,
+    "net": 49.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 531.35,
+    "tax": 53.13
+   }
+  ]
+ },
+ "cost_usd": 0.030856,
+ "raw": {
+  "id": "gen-1794515436-2T0MDv3U1aR57KIRD8km",
+  "object": "chat.completion",
+  "created": 1794515436,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Lopez-Fitzgerald\",\n  \"vendor_vat\": \"904-80-7663\",\n  \"invoice_ref\": \"38557956\",\n  \"invoice_date\": \"2013-08-16\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 531.35,\n  \"tax\": 53.13,\n  \"total\": 584.48,\n  \"iban\": \"GB53SDQN59731106306440\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"All Mattel Disney Pixar Model Cars McQueen 1:55 Diecast Lot Choose Loose Kid Toy\",\n      \"quantity\": 5.00,\n      \"unit_price\": 12.99,\n      \"tax_rate\": 10,\n      \"net\": 64.95\n    },\n    {\n      \"description\": \"Nike Air Max 90 All Black Leather Running Shoes 833412-001 Size 7Y (Women's 8.5)\",\n      \"quantity\": 5.00,\n      \"unit_price\": 74.99,\n      \"tax_rate\": 10,\n      \"net\": 374.95\n    },\n    {\n      \"description\": \"Timberland brown slip on shoes size 4.5 juniors\",\n      \"quantity\": 1.00,\n      \"unit_price\": 2.00,\n      \"tax_rate\": 10,\n      \"net\": 2.00\n    },\n    {\n      \"description\": \"Lego Star Wars Minifigures Stormtrooper Darth Vader Yoda Obi Van Mandalorian New\",\n      \"quantity\": 5.00,\n      \"unit_price\": 2.98,\n      \"tax_rate\": 10,\n      \"net\": 14.90\n    },\n    {\n      \"description\": \"Sperry Boys shoes Size 2M\",\n      \"quantity\": 5.00,\n      \"unit_price\": 4.99,\n      \"tax_rate\": 10,\n      \"net\": 24.95\n    },\n    {\n      \"description\": \"Children Place Boys Snow Boots\",\n      \"quantity\": 4.00,\n      \"unit_price\": 12.40,\n      \"tax_rate\": 10,\n      \"net\": 49.60\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 531.35,\n      \"tax\": 53.13\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the `vendor_name`, `vendor_vat`, and `invoice_ref` from the provided invoice image. My analysis of the schema is complete, and I'm now processing the image content to locate these specific fields.\n\n**Parsing Extracted Values**\n\nI've successfully identified and extracted the `vendor_name`, `vendor_vat`, and `invoice_ref`. I am now parsing the extracted date formats and resolving the currency symbol to its ISO 4217 code.\n\n**Validating IBAN and Lines**\n\nI've confirmed the IBAN and am now meticulously validating each line item. This involves checking the quantities, unit prices, net amounts, and tax rates against the overall invoice schema. I'm also continuing to parse descriptions for any ambiguities.\n\n**Formatting Final Output**\n\nI'm finalizing the data, ensuring all numerical values and dates adhere to the specified plain number and YYYY-MM-DD formats respectively. My focus is now on generating a valid JSON output that precisely matches the defined schema.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the `vendor_name`, `vendor_vat`, and `invoice_ref` from the provided invoice image. My analysis of the schema is complete, and I'm now processing the image content to locate these specific fields.\n\n**Parsing Extracted Values**\n\nI've successfully identified and extracted the `vendor_name`, `vendor_vat`, and `invoice_ref`. I am now parsing the extracted date formats and resolving the currency symbol to its ISO 4217 code.\n\n**Validating IBAN and Lines**\n\nI've confirmed the IBAN and am now meticulously validating each line item. This involves checking the quantities, unit prices, net amounts, and tax rates against the overall invoice schema. I'm also continuing to parse descriptions for any ambiguities.\n\n**Formatting Final Output**\n\nI'm finalizing the data, ensuring all numerical values and dates adhere to the specified plain number and YYYY-MM-DD formats respectively. My focus is now on generating a valid JSON output that precisely matches the defined schema.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2310,
+   "total_tokens": 3878,
+   "cost": 0.030856,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.030856,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.02772
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1630,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.97
+}

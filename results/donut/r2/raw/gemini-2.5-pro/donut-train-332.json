@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-01-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3.0,
+    "unit_price": 45.0,
+    "tax_rate": 10.0,
+    "net": 135.0
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4.0,
+    "unit_price": 119.99,
+    "tax_rate": 10.0,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10",
+    "quantity": 3.0,
+    "unit_price": 124.95,
+    "tax_rate": 10.0,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5.0,
+    "unit_price": 1092.27,
+    "tax_rate": 10.0,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.0231275,
+ "raw": {
+  "id": "gen-1794512770-VG8So8Onpi5EF4jHqTkD",
+  "object": "chat.completion",
+  "created": 1794512770,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith-Guerrero\",\n  \"vendor_vat\": \"954-91-2300\",\n  \"invoice_ref\": \"39400829\",\n  \"invoice_date\": \"2012-01-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 6451.16,\n  \"tax\": 645.12,\n  \"total\": 7096.28,\n  \"iban\": \"GB81NHIS20902698381776\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\n      \"quantity\": 3.0,\n      \"unit_price\": 45.0,\n      \"tax_rate\": 10.0,\n      \"net\": 135.0\n    },\n    {\n      \"description\": \"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\n      \"quantity\": 4.0,\n      \"unit_price\": 119.99,\n      \"tax_rate\": 10.0,\n      \"net\": 479.96\n    },\n    {\n      \"description\": \"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10\",\n      \"quantity\": 3.0,\n      \"unit_price\": 124.95,\n      \"tax_rate\": 10.0,\n      \"net\": 374.85\n    },\n    {\n      \"description\": \"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\n      \"quantity\": 5.0,\n      \"unit_price\": 1092.27,\n      \"tax_rate\": 10.0,\n      \"net\": 5461.35\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 6451.16,\n      \"tax\": 645.12\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data Points**\n\nI've successfully identified the necessary data fields within the document and have begun mapping them to the JSON schema. \"Smith-Guerrero\" is the vendor name. I've located the vendor's Tax ID as \"954-91-2300\". Finally, the invoice reference is \"39400829\". The extraction is proceeding according to plan.\n\n\n**Refining Data Extraction**\n\nI'm now integrating more complex data points. I've successfully formatted the invoice date as \"2012-01-12\" and determined the due date to be null. I've also identified the currency as USD, despite the conflicting IBAN information; I'm using addresses and the \"$\" symbol as the deciding factors. The untaxed, tax, and total amounts are captured. Finally, I've identified the seller's IBAN. Next, I need to look at the tax information.\n\n\n**Populating Line Items**\n\nI'm now populating the line items within the JSON. I've successfully extracted the description, quantity, unit price, tax rate, and net amount for each line item, covering four lines in total. Each line item has a 10% tax. I've successfully extracted this for all line items. Now, I will look to extract the seller's VAT treatment.\n\n\n**Finalizing Data Mapping**\n\nNow I'm finalizing the JSON mapping. I've double-checked all fields, especially the date format (2012-01-12) and the currency (USD) which had conflicting data but I've confirmed by the addresses and the \"$\" sign. I have extracted the seller VAT treatment as \"S\" for the standard rate. The line items and VAT breakdown have been confirmed.\n\n\n**Confirming Data Accuracy**\n\nNow, I'm performing a final, comprehensive verification of all extracted information. I'm cross-referencing each data point, including the date (2012-01-12) and currency (USD), with the source document. The ambiguous IBAN has been confirmed to be a seller detail. All line item details are also verified. I'm now fully confident in the accuracy of the completed JSON schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data Points**\n\nI've successfully identified the necessary data fields within the document and have begun mapping them to the JSON schema. \"Smith-Guerrero\" is the vendor name. I've located the vendor's Tax ID as \"954-91-2300\". Finally, the invoice reference is \"39400829\". The extraction is proceeding according to plan.\n\n\n**Refining Data Extraction**\n\nI'm now integrating more complex data points. I've successfully formatted the invoice date as \"2012-01-12\" and determined the due date to be null. I've also identified the currency as USD, despite the conflicting IBAN information; I'm using addresses and the \"$\" symbol as the deciding factors. The untaxed, tax, and total amounts are captured. Finally, I've identified the seller's IBAN. Next, I need to look at the tax information.\n\n\n**Populating Line Items**\n\nI'm now populating the line items within the JSON. I've successfully extracted the description, quantity, unit price, tax rate, and net amount for each line item, covering four lines in total. Each line item has a 10% tax. I've successfully extracted this for all line items. Now, I will look to extract the seller's VAT treatment.\n\n\n**Finalizing Data Mapping**\n\nNow I'm finalizing the JSON mapping. I've double-checked all fields, especially the date format (2012-01-12) and the currency (USD) which had conflicting data but I've confirmed by the addresses and the \"$\" sign. I have extracted the seller VAT treatment as \"S\" for the standard rate. The line items and VAT breakdown have been confirmed.\n\n\n**Confirming Data Accuracy**\n\nNow, I'm performing a final, comprehensive verification of all extracted information. I'm cross-referencing each data point, including the date (2012-01-12) and currency (USD), with the source document. The ambiguous IBAN has been confirmed to be a seller detail. All line item details are also verified. I'm now fully confident in the accuracy of the completed JSON schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2273,
+   "total_tokens": 2591,
+   "cost": 0.0231275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0231275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02273
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1700,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.19
+}

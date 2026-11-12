@@ -1,0 +1,120 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-06-05",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 177.49,
+  "tax": 20.16,
+  "total": 197.65,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kunstrasen grün 3m breit",
+    "quantity": 3,
+    "unit_price": 3.3333,
+    "tax_rate": 19,
+    "net": 10
+   },
+   {
+    "description": "Schweinesteak",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 7,
+    "net": 5.5
+   },
+   {
+    "description": "Mineralwasser Medium 12 x 1,0l PET",
+    "quantity": 20,
+    "unit_price": 5.49,
+    "tax_rate": 7,
+    "net": 109.8
+   },
+   {
+    "description": "Pfand",
+    "quantity": 20,
+    "unit_price": 2.77,
+    "tax_rate": 19,
+    "net": 55.46
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 113.03,
+    "tax": 7.91
+   },
+   {
+    "rate": 19,
+    "base": 64.46,
+    "tax": 12.25
+   }
+  ]
+ },
+ "cost_usd": 0.0059122,
+ "raw": {
+  "id": "gen-1794513624-ZtjLViFVRq2kiljgQW19",
+  "object": "chat.completion",
+  "created": 1794513624,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471102\",\"invoice_date\":\"2018-06-05\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":177.49,\"tax\":20.16,\"total\":197.65,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Kunstrasen grün 3m breit\",\"quantity\":3,\"unit_price\":3.3333,\"tax_rate\":19,\"net\":10},{\"description\":\"Schweinesteak\",\"quantity\":1,\"unit_price\":5.5,\"tax_rate\":7,\"net\":5.5},{\"description\":\"Mineralwasser Medium 12 x 1,0l PET\",\"quantity\":20,\"unit_price\":5.49,\"tax_rate\":7,\"net\":109.8},{\"description\":\"Pfand\",\"quantity\":20,\"unit_price\":2.77,\"tax_rate\":19,\"net\":55.46}],\"vat_breakdown\":[{\"rate\":7,\"base\":113.03,\"tax\":7.91},{\"rate\":19,\"base\":64.46,\"tax\":12.25}]}",
+     "refusal": null,
+     "reasoning": "**Evaluating invoice details**\n\nI need to make sure my JSON is exact. The question refers to an untaxed amount of $177.49, while the total invoice gross is perhaps $197.65, and the payable amount is $147.65 due for prepayment. Normally, the total, including tax, is $197.65. The payment term suggests the due date is July 4. I'm noticing that there’s no IBAN provided, and I should check if the line values and discounts are accurate. Four invoice positions are stated, with a price of 3.3333 for a quantity of 3, leading to 9.9999, which suggests 10. I'm also noting the tax rate and VAT treatment details to ensure everything is aligned correctly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating invoice details**\n\nI need to make sure my JSON is exact. The question refers to an untaxed amount of $177.49, while the total invoice gross is perhaps $197.65, and the payable amount is $147.65 due for prepayment. Normally, the total, including tax, is $197.65. The payment term suggests the due date is July 4. I'm noticing that there’s no IBAN provided, and I should check if the line values and discounts are accurate. Four invoice positions are stated, with a price of 3.3333 for a quantity of 3, leading to 9.9999, which suggests 10. I'm also noting the tax rate and VAT treatment details to ensure everything is aligned correctly.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hrdJwpgGS19HLR8BRvy37IGwBLhdMFmEZK5fG6oDM9UbhQuaMvx7Kf5_dRk7SsxAdT_0gvb3Ekn5mj5r3F41JIRORnKdN0syiv9L3yeUICoFG2EGvqOVJNkx5xkrnSiBj9O9ASbrAmcTK3S9KZflVphf4kgGdJ3QarTH14eDZ4xeJgl0K7DVIZ849WoZ754VkjXaezCkOqIk6bpfyHlk7gfSrBtAtlXHjK--VIeHcVAUT52YcKYHGMvkTNdVM-zJ6acgmrxwnRWZqjjEkuEZLiEqXWvgy1qM6bDuOJK-0gxPg-84L8o193mZk7XvPVeEZQMLpXv0LCKl6fYPwnAamHnW14maf-1PHadbORbTiSxifXItyQw-hAv6cg0URL1s3WEzIjYxCDG3XI8ZMxG3K_jVL1SE_hoTIMWJr3Co2C_MYlQoQYrMSWAFcTZarjbE2zFWES__QhziQgLid9JOCYcxjsy5hqDBj4z553QiMv14JTLnYtqP2ch26-OD4WjJUPmz9FqQnn6d6hb9g0CCaa8DbtGO9yAqWs03EoyFyeBjutPwk7TJxFg4WKCQteoNzLakmniEmXwisn3b985lpxoE-JLmgjkJnlHAj592rmFRhpoIxSeXOmZ6BjSs3czS4xQVMnTL2oz-VaQex-Mdt-f4KuREggwerCzEmsyR62BaxLDBXcSNa_mklAy-VHzxutoXJorHo74Ebl3cQ9dkKQWoFh5UCcohdgyf4-eQYZrBbJutUPlHklR8MkwAgkzUWsjaUhOVOWocmHwifiFiWHRJ-pQTm_xUN1fx2HnHhghZbe7KOLK7zTjlotI6vCZ9tAHohTffOIYC6pX65Bw7FH--S5mpXflvV-1Ea7NnIngjTYzHpun6kBo8MAHK4LPsI8PSWPT-V59I89wth2zXtsI3FrPNvVomZ-IPO2JmQzOnb3mv9kUNx_6fLn06z4kzodNb_mc3XdkaBrP-sZq3gOA0Nomi7pz2emlSxL-TSIfjlTP-rQ5UAuP5-dL6z-LYmNYLKOT6tKGnfM8PvIOggoVSZG2Z9OzOOUcK1hBGDa6j36NQNgdP-iFeWvVUaS6_WBvDXeGTIvdowx_dbZ3_wUrZSNil_rQ5gdJBBVPzoQex0T6khF9bqtiUGOU7JdtINmqpV-aphUJVoRcl8_DiQ76_--jgV1Y-93JI564E_lXHgAjD9yfekbFdP-vDmQTPI6mRtCJyne6p7EXgQxvm9ZO43sGQWUjFiqmrLQw0yKXXVG3oaGpb81UHaOTUaAF2rzJRQXnuwMzcq96_Q8FyJBItdB_Nw4cC8Eg138WWmzIp1vja0_M94t2EIpEf88u2ICs81hOtmocUpE3gQctzWmub_X9FSD-BwOTMDseT1v41qZyt1aGrFDKRBeXzi9LiIoCP-16WLUZuw-RL2tVA_5hEByuuz48bgNbWqt_1w9S_flv-VUGU1QU1BfE7NETg-nAJbUopLfXfghL_ET6i80_TjLFG97bPw25yNM3FCl2AYgY_h3ktLXyftXYVwRloLVq8JXtviMwixKw68OgHRd7jmalylm2xnEpVMYm71f7V_wVi2xl3JDzvc9DXPKIJgST2_RUQvYn3lKmmjfO_8EPTltyRpCtwW8opmkLwBmry4E4Nr3aJ3czqrh_8C4e6o8quahn3ipl8r22Kka9VumyjPv4RXczvNPCI7XbjciVWBZMGG6P8caLzWbzJ5-hHxA4pQ2VDjfpZKWBg0Id-JZUIkrkO2bdNe8WlvWNYIcLFYKo1Iz_g7qruEuElsK4JVSHqfH0j_QpWQy8J2hcieiJSi0mASwgLYjhnRATM4JbZ8jHGCdU6ik9qql9m8DoyVdk7OusqjmAF7hH4eJ8ya6jD4V8wppKVNATuxDJ929Us0Hi4E3V_32c_PgX1Ya7HBnVBlkhSsj_Ly_SUK5BrBUnGb8QL8Qkk-ehIyTS7eDCcn5EHaaRdDXAmI_hPMmwO8tbxZlDJP69ALM44_8KRq1kw2OfkEdWJvnB5BpYDpKK1NZHhEtQgzcSnAqxBXE_wNtSgPrdBIzZV6WgogmZRmR_-yqBN-NZNs9BvEWnmRr3-Dha-2NJCpo-s8fW8w5cTDMrR1xrhAN9hfeeM5IS8YWwHgQleZ-jd_1uEoS2mh7LTkOqq4NnvbLSD7sWkuV4jhu_4EL6GfpPml13tPsW_-pUHq6EU7WC01_jCOq6Q9xdAZJOv_aEqPQNVuw8q05ns3P5bnUaTdCzZTcgofteAI-pp-_yStToWh6TSwZTn-SOYiyIa85ON9uCZGzSZioMhtdy1qukBmHi1exgc6faiAYrqoFgNDcKb1Wl4YJab2EJJ5grF8Bc3MCYwg7hGHxgNPcLwogRf1R-4UyORhpq25cw94YpIMihb48AOU_DyFqZ3CiBpn2mHBBpFt3zvtCXZJywMurVdL9IDu8zPrFnMDb3BP7eYn2FwbRYI9owf5JpfvRWJFmgs3V8IcAhouSETvieVREf_6xOmTd28ibk6WCUFXxZWhOEXPKaIcdtcZod65CcxoWDyDPHl2o_pTNXMPX0z-VSZ3PKM4l8Lwi4nrgtodam4R9dLEh9N70owDc53Hy52mw5d0AhNkZSvWZWI_fbxRDDEjag0dkIE1g6ezAgrs3jqJ7YDjvLSt2X0QryENuvZ4x257jwBkBiXsbJsUH4mjMyL51T8Lt74ZT5UYjDkHwFEsu0zVnz0NuBUiFocaji4PY-Wg8_b9GpxPCLWVsdjiOPkDJxYJihQXgozxyCZWpITcHYRUzsOLjPFPy1yW8KO7Ky7rUG2lqDgF1OvJXvoniOQCZ2IAxQLCdGsdX4Zz7nlk_6__avIxbm0cR3fHlgiXukNACOglS4nQShpaNu485nKxADa5PPlTjJ1GUKLmiWYS3qyuboHzfGFq773vxZtqn8LpV8xbu6yH9z5ChKWCGPFuCM0WUVQjH9sjAgLFW54mMSKC5rwDmJ9I4H7QKbyixG05IxAnCO4JAKzyTPWWhsObUPkp9Cjfzy2GWEgDRje6eCK_qwBNJTVfHV1EnOw_esrhf8qUXqCoLX_ff7qdoVdhmDF747B88ewPNT1lRdeu48y8xRpfDFF1k8HWb9-MW2yLbM-1HqdUYqTVIGRvustAYJtMpV3IuFQrzYQFV68xumoubPBJ5oUdMPkAVVI7TG1IYlLCe8xawehbcbuYdCDFgarQs_RUPq4RpIIX2aNJHLFp1dHobakkBrhWo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0abca9486586b766016af61ad9e79c87d1929efb4fb1d2dba7",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 6734,
+   "completion_tokens": 380,
+   "total_tokens": 7114,
+   "cost": 0.0059122,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 6731,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0059122,
+    "upstream_inference_prompt_cost": 0.0013522,
+    "upstream_inference_completions_cost": 0.00456
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 124,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.23
+}

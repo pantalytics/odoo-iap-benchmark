@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "6030098553",
+  "invoice_date": "2018-02-11",
+  "due_date": "2018-02-11",
+  "currency": "MYR",
+  "untaxed": 11.13,
+  "tax": 0.67,
+  "total": 11.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PB D/S Tape 12mm",
+    "quantity": 1,
+    "unit_price": 1.79,
+    "tax_rate": 6,
+    "net": 1.79
+   },
+   {
+    "description": "H/C A4 400'S",
+    "quantity": 1,
+    "unit_price": 9.34,
+    "tax_rate": 6,
+    "net": 9.34
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 11.13,
+    "tax": 0.67
+   }
+  ]
+ },
+ "cost_usd": 0.0130375,
+ "raw": {
+  "id": "gen-1794512872-f6cM4Wk95t40WgPwh5Ni",
+  "object": "chat.completion",
+  "created": 1794512872,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"POPULAR BOOK CO. (M) SDN BHD\",\n  \"vendor_vat\": \"001492992000\",\n  \"invoice_ref\": \"6030098553\",\n  \"invoice_date\": \"2018-02-11\",\n  \"due_date\": \"2018-02-11\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 11.13,\n  \"tax\": 0.67,\n  \"total\": 11.8,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PB D/S Tape 12mm\",\n      \"quantity\": 1,\n      \"unit_price\": 1.79,\n      \"tax_rate\": 6,\n      \"net\": 1.79\n    },\n    {\n      \"description\": \"H/C A4 400'S\",\n      \"quantity\": 1,\n      \"unit_price\": 9.34,\n      \"tax_rate\": 6,\n      \"net\": 9.34\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 11.13,\n      \"tax\": 0.67\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"POPULAR BOOK CO. (M) SDN BHD\" as the vendor name from the receipt. I've also extracted the vendor's VAT registration number; the value is \"001492992000\". This information seems relevant to accurately populate the schema.\n\n\n**Populating Schema Fields**\n\nI've now parsed additional data points. I've successfully extracted the `invoice_ref` as \"60300 98553\" and the `invoice_date` as \"2018-02-11.\" Since it's a cash receipt, I've set the `due_date` to the invoice date. The currency code `MYR` and the untaxed amount (11.13) and tax amount (0.67) are now in the schema. The Total (11.80) is also parsed. I've decided to set IBAN to `null` as it's not present. I've also inferred the VAT treatment as 'S' and, based on the description, there are 2 lines.\n\nI'm now going to start extraction of line-items.\n\n\n**Calculating Line Item Prices**\n\nI've tackled the line item details. I've deduced the net prices by dividing the gross amounts by 1.06, factoring in the 6% VAT. I'm now certain about the net and gross values for each item, as well as the VAT rate of 6%. The quantity is 1 in both cases. I will map these to their fields in the schema.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together. I've successfully extracted and processed all the necessary data points, including the line items with net and gross amounts, and I am now ready to generate the final JSON output. The structure will be clean and accurate, ready for use.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"POPULAR BOOK CO. (M) SDN BHD\" as the vendor name from the receipt. I've also extracted the vendor's VAT registration number; the value is \"001492992000\". This information seems relevant to accurately populate the schema.\n\n\n**Populating Schema Fields**\n\nI've now parsed additional data points. I've successfully extracted the `invoice_ref` as \"60300 98553\" and the `invoice_date` as \"2018-02-11.\" Since it's a cash receipt, I've set the `due_date` to the invoice date. The currency code `MYR` and the untaxed amount (11.13) and tax amount (0.67) are now in the schema. The Total (11.80) is also parsed. I've decided to set IBAN to `null` as it's not present. I've also inferred the VAT treatment as 'S' and, based on the description, there are 2 lines.\n\nI'm now going to start extraction of line-items.\n\n\n**Calculating Line Item Prices**\n\nI've tackled the line item details. I've deduced the net prices by dividing the gross amounts by 1.06, factoring in the 6% VAT. I'm now certain about the net and gross values for each item, as well as the VAT rate of 6%. The quantity is 1 in both cases. I will map these to their fields in the schema.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together. I've successfully extracted and processed all the necessary data points, including the line items with net and gross amounts, and I am now ready to generate the final JSON output. The structure will be clean and accurate, ready for use.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1264,
+   "total_tokens": 1582,
+   "cost": 0.0130375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0130375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01264
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 928,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.75
+}

@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "AEON CO. (M) BHD",
+  "vendor_vat": "002017394688",
+  "invoice_ref": "2018021951320026157",
+  "invoice_date": "2018-02-19",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 16.71,
+  "tax": 0.99,
+  "total": 17.7,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "000004089728 SAKUMASHIKIDROP",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "000007572029 BINDER CLIP -BL",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "000006731878 150YEN CAR NECK",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 16.71,
+    "tax": 0.99
+   }
+  ]
+ },
+ "cost_usd": 0.0048435,
+ "raw": {
+  "id": "gen-1794513119-XTdBPsOi7MkMJFOHpVDw",
+  "object": "chat.completion",
+  "created": 1794513119,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"AEON CO. (M) BHD\",\"vendor_vat\":\"002017394688\",\"invoice_ref\":\"2018021951320026157\",\"invoice_date\":\"2018-02-19\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":16.71,\"tax\":0.99,\"total\":17.7,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"000004089728 SAKUMASHIKIDROP\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"000007572029 BINDER CLIP -BL\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"000006731878 150YEN CAR NECK\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null}],\"vat_breakdown\":[{\"rate\":6.0,\"base\":16.71,\"tax\":0.99}]}",
+     "refusal": null,
+     "reasoning": "**Analyzing Vendor Details**\n\nI'm currently focused on extracting key vendor information from the receipt. I've identified the vendor as AEON CO. (M) BHD, along with their GST ID and invoice details, including the date and reference number. The currency is confirmed as MYR.\n\n**Processing Line Items**\n\nI'm delving into the specifics of each line item. A key challenge is determining the 'net' value for items where only the tax-inclusive price is printed. I'm considering setting 'unit_price' and 'net' to null in these cases, aligning with the schema's \"before tax\" requirement.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Vendor Details**\n\nI'm currently focused on extracting key vendor information from the receipt. I've identified the vendor as AEON CO. (M) BHD, along with their GST ID and invoice details, including the date and reference number. The currency is confirmed as MYR.\n\n**Processing Line Items**\n\nI'm delving into the specifics of each line item. A key challenge is determining the 'net' value for items where only the tax-inclusive price is printed. I'm considering setting 'unit_price' and 'net' to null in these cases, aligning with the schema's \"before tax\" requirement.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 978,
+   "total_tokens": 2546,
+   "cost": 0.0048435,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0048435,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.0036675
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 695,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.4
+}

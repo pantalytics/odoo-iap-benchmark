@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Kemp and Sons",
+  "vendor_vat": "957-75-0578",
+  "invoice_ref": "65673716",
+  "invoice_date": "2017-12-24",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 7933.79,
+  "tax": 793.38,
+  "total": 8727.17,
+  "iban": "GB33DHDN31437695958879",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Gaming PC Desktop Computer Intel i7 RGB GTX 1660, 16GB RAM, 2TB HDD, 240GB SSD",
+    "quantity": 4.0,
+    "unit_price": 779.99,
+    "tax_rate": 10.0,
+    "net": 3119.96
+   },
+   {
+    "description": "Desktop Computer AMD Sempron LE1250 No HDD No OS",
+    "quantity": 3.0,
+    "unit_price": 9.99,
+    "tax_rate": 10.0,
+    "net": 29.97
+   },
+   {
+    "description": "Nexlink DG41RQ Desktop Computer Windows 10 w/DVD/CD Rom Drive",
+    "quantity": 2.0,
+    "unit_price": 11.95,
+    "tax_rate": 10.0,
+    "net": 23.9
+   },
+   {
+    "description": "Intel core i7 Geforce GTX1060 Super Game Gamer Master Gaming Desktop Computer PC",
+    "quantity": 4.0,
+    "unit_price": 689.99,
+    "tax_rate": 10.0,
+    "net": 2759.96
+   },
+   {
+    "description": "SAMA RGB Gaming PC Desktop Computer i5 3.7GHz Nvidia GTX 1060 16GB Windows 10",
+    "quantity": 5.0,
+    "unit_price": 400.0,
+    "tax_rate": 10.0,
+    "net": 2000.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 7933.79,
+    "tax": 793.38
+   }
+  ]
+ },
+ "cost_usd": 0.0273775,
+ "raw": {
+  "id": "gen-1794515760-nf5LwSvm2mgzx7WcPXzo",
+  "object": "chat.completion",
+  "created": 1794515760,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Kemp and Sons\",\n  \"vendor_vat\": \"957-75-0578\",\n  \"invoice_ref\": \"65673716\",\n  \"invoice_date\": \"2017-12-24\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 7933.79,\n  \"tax\": 793.38,\n  \"total\": 8727.17,\n  \"iban\": \"GB33DHDN31437695958879\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Gaming PC Desktop Computer Intel i7 RGB GTX 1660, 16GB RAM, 2TB HDD, 240GB SSD\",\n      \"quantity\": 4.0,\n      \"unit_price\": 779.99,\n      \"tax_rate\": 10.0,\n      \"net\": 3119.96\n    },\n    {\n      \"description\": \"Desktop Computer AMD Sempron LE1250 No HDD No OS\",\n      \"quantity\": 3.0,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10.0,\n      \"net\": 29.97\n    },\n    {\n      \"description\": \"Nexlink DG41RQ Desktop Computer Windows 10 w/DVD/CD Rom Drive\",\n      \"quantity\": 2.0,\n      \"unit_price\": 11.95,\n      \"tax_rate\": 10.0,\n      \"net\": 23.9\n    },\n    {\n      \"description\": \"Intel core i7 Geforce GTX1060 Super Game Gamer Master Gaming Desktop Computer PC\",\n      \"quantity\": 4.0,\n      \"unit_price\": 689.99,\n      \"tax_rate\": 10.0,\n      \"net\": 2759.96\n    },\n    {\n      \"description\": \"SAMA RGB Gaming PC Desktop Computer i5 3.7GHz Nvidia GTX 1060 16GB Windows 10\",\n      \"quantity\": 5.0,\n      \"unit_price\": 400.0,\n      \"tax_rate\": 10.0,\n      \"net\": 2000.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 7933.79,\n      \"tax\": 793.38\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Seller Information**\n\nOkay, I've got the seller's name as \"Kemp and Sons\", and the VAT number is \"957-75-0578\". I'm starting to map the document data to the JSON schema fields. Next, I need to find the invoice reference.\n\n\n**Mapping Data Points**\n\nI've successfully extracted the invoice number as \"65673716\" and the invoice date as \"2017-12-24\" in the required YYYY-MM-DD format. The due date is absent, so it will be set to `null`. I am now focusing on the currency.\n\n\n**Finalizing Field Extractions**\n\nI've determined the currency as USD, confirming the choice given the conflicting IBAN and addresses. I am now confident about extracting \"USD\" as the ISO 4217 code. I've also extracted the untaxed amount as `7933.79`, the VAT at `793.38`, and the total as `8727.17`. The IBAN is confirmed as \"GB33DHDN31437695958879\" and the VAT treatment is \"S\" for standard rate. I am now working through the line items for extraction.\n\n\n**Finalizing Schema Population**\n\nI've extracted all required fields from the document and mapped them to the schema. The vendor's name is \"Kemp and Sons\", VAT number is \"957-75-0578\", and IBAN is \"GB33DHDN31437695958879\". I've set the invoice number to \"65673716\", with an issue date of \"2017-12-24\", and a null due date. The currency, despite conflicting information, is \"USD\". The untaxed, tax and total amounts are `7933.79`, `793.38`, and `8727.17`, respectively, and the VAT treatment is \"S\". I've begun to extract line item data now.\n\n\n**Finalizing Currency Decision**\n\nDespite conflicting information, I'm confident in settling on \"USD\" for the currency, prioritizing the dollar symbol and US addresses. I have extracted all data points and mapped them to the schema. Now, I will start by extracting the line item information.\n\nI have completed the line item extractions. The \"vat_breakdown\" items are also completed. All fields are now complete.\n\nI have assembled the final JSON.\n\n\n**Finalizing Document Data**\n\nI have now extracted all the required data, including vendor and client information, amounts, and dates. I have now completed extraction of all the line items, too, along with the VAT breakdown. With all the required data points, I am finalizing construction of the final JSON schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Seller Information**\n\nOkay, I've got the seller's name as \"Kemp and Sons\", and the VAT number is \"957-75-0578\". I'm starting to map the document data to the JSON schema fields. Next, I need to find the invoice reference.\n\n\n**Mapping Data Points**\n\nI've successfully extracted the invoice number as \"65673716\" and the invoice date as \"2017-12-24\" in the required YYYY-MM-DD format. The due date is absent, so it will be set to `null`. I am now focusing on the currency.\n\n\n**Finalizing Field Extractions**\n\nI've determined the currency as USD, confirming the choice given the conflicting IBAN and addresses. I am now confident about extracting \"USD\" as the ISO 4217 code. I've also extracted the untaxed amount as `7933.79`, the VAT at `793.38`, and the total as `8727.17`. The IBAN is confirmed as \"GB33DHDN31437695958879\" and the VAT treatment is \"S\" for standard rate. I am now working through the line items for extraction.\n\n\n**Finalizing Schema Population**\n\nI've extracted all required fields from the document and mapped them to the schema. The vendor's name is \"Kemp and Sons\", VAT number is \"957-75-0578\", and IBAN is \"GB33DHDN31437695958879\". I've set the invoice number to \"65673716\", with an issue date of \"2017-12-24\", and a null due date. The currency, despite conflicting information, is \"USD\". The untaxed, tax and total amounts are `7933.79`, `793.38`, and `8727.17`, respectively, and the VAT treatment is \"S\". I've begun to extract line item data now.\n\n\n**Finalizing Currency Decision**\n\nDespite conflicting information, I'm confident in settling on \"USD\" for the currency, prioritizing the dollar symbol and US addresses. I have extracted all data points and mapped them to the schema. Now, I will start by extracting the line item information.\n\nI have completed the line item extractions. The \"vat_breakdown\" items are also completed. All fields are now complete.\n\nI have assembled the final JSON.\n\n\n**Finalizing Document Data**\n\nI have now extracted all the required data, including vendor and client information, amounts, and dates. I have now completed extraction of all the line items, too, along with the VAT breakdown. With all the required data points, I am finalizing construction of the final JSON schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2698,
+   "total_tokens": 3016,
+   "cost": 0.0273775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0273775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02698
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2058,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.42
+}

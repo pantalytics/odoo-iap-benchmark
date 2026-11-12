@@ -1,0 +1,127 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "R87654321012345",
+  "invoice_date": "2018-08-06",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 448.99,
+  "tax": 70.0,
+  "total": 518.99,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": 100.0,
+    "unit_price": 1.0,
+    "tax_rate": 19.0,
+    "net": 100.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 50.0,
+    "unit_price": 1.45,
+    "tax_rate": 7.0,
+    "net": 72.5
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 10.0,
+    "unit_price": 0.0,
+    "tax_rate": 7.0,
+    "net": 0.0
+   },
+   {
+    "description": "Bierbrau Pils 20/0500",
+    "quantity": 15.0,
+    "unit_price": 12.0,
+    "tax_rate": 19.0,
+    "net": 180.0
+   },
+   {
+    "description": "Leergutpfand 20 x 0,51",
+    "quantity": 15.0,
+    "unit_price": 3.1,
+    "tax_rate": 19.0,
+    "net": 46.5
+   },
+   {
+    "description": "Mischpalette Joghurt Karton 3 x 20",
+    "quantity": 2.0,
+    "unit_price": 29.1,
+    "tax_rate": 7.0,
+    "net": 58.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19.0,
+    "base": 321.4,
+    "tax": 61.07
+   },
+   {
+    "rate": 7.0,
+    "base": 127.59,
+    "tax": 8.93
+   }
+  ]
+ },
+ "cost_usd": 0.0290925,
+ "raw": {
+  "id": "gen-1794512690-UrwfTEliHKOf2hCwGy2o",
+  "object": "chat.completion",
+  "created": 1794512690,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MUSTERLIEFERANT GMBH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"R87654321012345\",\n  \"invoice_date\": \"2018-08-06\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"untaxed\": 448.99,\n  \"tax\": 70.0,\n  \"total\": 518.99,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Zitronensäure 100ml\",\n      \"quantity\": 100.0,\n      \"unit_price\": 1.0,\n      \"tax_rate\": 19.0,\n      \"net\": 100.0\n    },\n    {\n      \"description\": \"Gelierzucker Extra 250g\",\n      \"quantity\": 50.0,\n      \"unit_price\": 1.45,\n      \"tax_rate\": 7.0,\n      \"net\": 72.5\n    },\n    {\n      \"description\": \"Gelierzucker Extra 250g\",\n      \"quantity\": 10.0,\n      \"unit_price\": 0.0,\n      \"tax_rate\": 7.0,\n      \"net\": 0.0\n    },\n    {\n      \"description\": \"Bierbrau Pils 20/0500\",\n      \"quantity\": 15.0,\n      \"unit_price\": 12.0,\n      \"tax_rate\": 19.0,\n      \"net\": 180.0\n    },\n    {\n      \"description\": \"Leergutpfand 20 x 0,51\",\n      \"quantity\": 15.0,\n      \"unit_price\": 3.1,\n      \"tax_rate\": 19.0,\n      \"net\": 46.5\n    },\n    {\n      \"description\": \"Mischpalette Joghurt Karton 3 x 20\",\n      \"quantity\": 2.0,\n      \"unit_price\": 29.1,\n      \"tax_rate\": 7.0,\n      \"net\": 58.2\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19.0,\n      \"base\": 321.4,\n      \"tax\": 61.07\n    },\n    {\n      \"rate\": 7.0,\n      \"base\": 127.59,\n      \"tax\": 8.93\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Data**\n\nI'm currently focused on extracting crucial information from a German invoice and structuring it as a JSON object adhering to the specified schema. My initial step involves identifying the vendor name, which is clearly labeled under \"Verkäufer,\" and I've found it to be \"M\". I will move onto the other data fields soon.\n\n\n**Extracting Key Invoice Details**\n\nI've successfully identified and extracted several key data points. The vendor name is \"M USTERLIEFERANT GMBH\" and their VAT ID is \"DE123456789\". The invoice reference number is \"R87654321012345\", and the invoice date is \"2018-08-06\". I've also determined the due date is null as no explicit date is provided. I will move on to extracting the currency information.\n\n\n**Identifying Invoice Details**\n\nI'm now focusing on the currency, untaxed amount, tax amount, and total. \"EUR\" is the currency. The untaxed sum is 448,99, the tax is 70,00 and the gross is 518,99. The vendor's IBAN isn't present, so this will be null. I'll need to determine the VAT treatment.\n\n\n**Determining VAT Treatment**\n\nI've determined the VAT treatment is \"S\" as the invoice uses standard VAT rates. Now, I'm shifting focus to extracting the line items and associated details from the invoice table. I've begun parsing the first few items, grabbing descriptions, quantities, unit prices, tax rates, and net amounts. The first line is complete.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now completing the extraction of line item details. All six lines are parsed, each with descriptions, quantities, unit prices, tax rates, and net amounts. The VAT breakdown is extracted, and the values are validated. I've re-read the document for any oversights. I'm ready to finalize the JSON structure.\n\n\n**Finalizing Invoice Structure**\n\nI've completed the JSON structure, including all line item details, VAT breakdown, and validated totals. The final structure aligns perfectly with the specified schema. I've re-reviewed the data, and I'm confident in the extraction and formatting. The JSON is ready for use.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Data**\n\nI'm currently focused on extracting crucial information from a German invoice and structuring it as a JSON object adhering to the specified schema. My initial step involves identifying the vendor name, which is clearly labeled under \"Verkäufer,\" and I've found it to be \"M\". I will move onto the other data fields soon.\n\n\n**Extracting Key Invoice Details**\n\nI've successfully identified and extracted several key data points. The vendor name is \"M USTERLIEFERANT GMBH\" and their VAT ID is \"DE123456789\". The invoice reference number is \"R87654321012345\", and the invoice date is \"2018-08-06\". I've also determined the due date is null as no explicit date is provided. I will move on to extracting the currency information.\n\n\n**Identifying Invoice Details**\n\nI'm now focusing on the currency, untaxed amount, tax amount, and total. \"EUR\" is the currency. The untaxed sum is 448,99, the tax is 70,00 and the gross is 518,99. The vendor's IBAN isn't present, so this will be null. I'll need to determine the VAT treatment.\n\n\n**Determining VAT Treatment**\n\nI've determined the VAT treatment is \"S\" as the invoice uses standard VAT rates. Now, I'm shifting focus to extracting the line items and associated details from the invoice table. I've begun parsing the first few items, grabbing descriptions, quantities, unit prices, tax rates, and net amounts. The first line is complete.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now completing the extraction of line item details. All six lines are parsed, each with descriptions, quantities, unit prices, tax rates, and net amounts. The VAT breakdown is extracted, and the values are validated. I've re-read the document for any oversights. I'm ready to finalize the JSON structure.\n\n\n**Finalizing Invoice Structure**\n\nI've completed the JSON structure, including all line item details, VAT breakdown, and validated totals. The final structure aligns perfectly with the specified schema. I've re-reviewed the data, and I'm confident in the extraction and formatting. The JSON is ready for use.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2805,
+   "total_tokens": 3639,
+   "cost": 0.0290925,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0290925,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.02805
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2150,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.05
+}

@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "Watkins Inc",
+  "vendor_vat": "942-95-3896",
+  "invoice_ref": "56418581",
+  "invoice_date": "2013-01-25",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 39566.73,
+  "tax": 3956.67,
+  "total": 43523.4,
+  "iban": "GB80EJHH36308848007839",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "24\"x24\" Marble Black Top Coffee Table Inlaid Floral Art Christmas Gift Home Deco",
+    "quantity": 5.0,
+    "unit_price": 1150.0,
+    "tax_rate": 10,
+    "net": 5750.0
+   },
+   {
+    "description": "6'x3' Elegant Marble Black Top Dining Table Italian Inlay Furniture Decor E964B",
+    "quantity": 4.0,
+    "unit_price": 5469.38,
+    "tax_rate": 10,
+    "net": 21877.52
+   },
+   {
+    "description": "54 Inches Marble Dinning Table Top Hand Crafted Reception Table Home Furniture",
+    "quantity": 2.0,
+    "unit_price": 4452.0,
+    "tax_rate": 10,
+    "net": 8904.0
+   },
+   {
+    "description": "15\"x15\" White Marble Coffee Table Top With 15\" Tall Stand Semi Precious Art Deco",
+    "quantity": 4.0,
+    "unit_price": 575.99,
+    "tax_rate": 10,
+    "net": 2303.96
+   },
+   {
+    "description": "25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home",
+    "quantity": 1.0,
+    "unit_price": 731.25,
+    "tax_rate": 10,
+    "net": 731.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 39566.73,
+    "tax": 3956.67
+   }
+  ]
+ },
+ "cost_usd": 0.030448,
+ "raw": {
+  "id": "gen-1794512958-1NcuKTrREdK8B6QFg0Ai",
+  "object": "chat.completion",
+  "created": 1794512958,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Watkins Inc\",\n  \"vendor_vat\": \"942-95-3896\",\n  \"invoice_ref\": \"56418581\",\n  \"invoice_date\": \"2013-01-25\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 39566.73,\n  \"tax\": 3956.67,\n  \"total\": 43523.40,\n  \"iban\": \"GB80EJHH36308848007839\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"24\\\"x24\\\" Marble Black Top Coffee Table Inlaid Floral Art Christmas Gift Home Deco\",\n      \"quantity\": 5.00,\n      \"unit_price\": 1150.00,\n      \"tax_rate\": 10,\n      \"net\": 5750.00\n    },\n    {\n      \"description\": \"6'x3' Elegant Marble Black Top Dining Table Italian Inlay Furniture Decor E964B\",\n      \"quantity\": 4.00,\n      \"unit_price\": 5469.38,\n      \"tax_rate\": 10,\n      \"net\": 21877.52\n    },\n    {\n      \"description\": \"54 Inches Marble Dinning Table Top Hand Crafted Reception Table Home Furniture\",\n      \"quantity\": 2.00,\n      \"unit_price\": 4452.00,\n      \"tax_rate\": 10,\n      \"net\": 8904.00\n    },\n    {\n      \"description\": \"15\\\"x15\\\" White Marble Coffee Table Top With 15\\\" Tall Stand Semi Precious Art Deco\",\n      \"quantity\": 4.00,\n      \"unit_price\": 575.99,\n      \"tax_rate\": 10,\n      \"net\": 2303.96\n    },\n    {\n      \"description\": \"25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home\",\n      \"quantity\": 1.00,\n      \"unit_price\": 731.25,\n      \"tax_rate\": 10,\n      \"net\": 731.25\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 39566.73,\n      \"tax\": 3956.67\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the vendor's name and VAT number. My process involves identifying these specific fields from the invoice image and mapping them to the corresponding keys in the JSON schema.\n\n**Refining Invoice Data Extraction**\n\nI've successfully pinpointed the vendor's name and VAT number, along with the invoice reference and date. Currency determination is also complete. My current focus is on handling the untaxed total, which requires careful parsing of the numerical format.\n\n**Parsing Numeric Invoice Values**\n\nI'm now adeptly handling numeric fields, including tax and total amounts, by correctly parsing decimal separators and thousands separators. This also extends to extracting IBAN and determining the VAT treatment.\n\n**Mapping Invoice Details**\n\nI'm now correlating identified invoice elements with the JSON schema, specifically assigning extracted values like vendor name, VAT number, invoice reference, and date. Currency determination is also finalized.\n\n**Processing Line Items**\n\nI've successfully extracted and structured the details for each line item, including descriptions, quantities, unit prices, and tax rates. This allows for accurate net calculation per item.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the vendor's name and VAT number. My process involves identifying these specific fields from the invoice image and mapping them to the corresponding keys in the JSON schema.\n\n**Refining Invoice Data Extraction**\n\nI've successfully pinpointed the vendor's name and VAT number, along with the invoice reference and date. Currency determination is also complete. My current focus is on handling the untaxed total, which requires careful parsing of the numerical format.\n\n**Parsing Numeric Invoice Values**\n\nI'm now adeptly handling numeric fields, including tax and total amounts, by correctly parsing decimal separators and thousands separators. This also extends to extracting IBAN and determining the VAT treatment.\n\n**Mapping Invoice Details**\n\nI'm now correlating identified invoice elements with the JSON schema, specifically assigning extracted values like vendor name, VAT number, invoice reference, and date. Currency determination is also finalized.\n\n**Processing Line Items**\n\nI've successfully extracted and structured the details for each line item, including descriptions, quantities, unit prices, and tax rates. This allows for accurate net calculation per item.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2276,
+   "total_tokens": 3844,
+   "cost": 0.030448,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.030448,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.027312
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1631,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.19
+}

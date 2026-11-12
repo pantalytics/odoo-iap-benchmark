@@ -1,0 +1,127 @@
+{
+ "pred": {
+  "vendor_name": "PappaRich BMC",
+  "vendor_vat": "000164270080",
+  "invoice_ref": "263370",
+  "invoice_date": "2018-03-24",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 68.82,
+  "tax": 4.13,
+  "total": 72.95,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "D28 MILO DINO(I) E",
+    "quantity": 1.0,
+    "unit_price": 7.45,
+    "tax_rate": 6.0,
+    "net": 7.45
+   },
+   {
+    "description": "R03 N' LEMAK+fc E @17.83",
+    "quantity": 2.0,
+    "unit_price": 17.83,
+    "tax_rate": 6.0,
+    "net": 35.66
+   },
+   {
+    "description": "N22 SPRG NDL+su+cr E",
+    "quantity": 1.0,
+    "unit_price": 9.34,
+    "tax_rate": 6.0,
+    "net": 9.34
+   },
+   {
+    "description": "B02 HALF BL EGG E",
+    "quantity": 1.0,
+    "unit_price": 4.53,
+    "tax_rate": 6.0,
+    "net": 4.53
+   },
+   {
+    "description": "D19 CHAM (I) E",
+    "quantity": 1.0,
+    "unit_price": 5.57,
+    "tax_rate": 6.0,
+    "net": 5.57
+   },
+   {
+    "description": "10% Srv Chg",
+    "quantity": 1.0,
+    "unit_price": 6.25,
+    "tax_rate": 6.0,
+    "net": 6.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 68.82,
+    "tax": 4.13
+   },
+   {
+    "rate": 0.0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0754875,
+ "raw": {
+  "id": "gen-1794514718-mbXIHPGYQ09YuanM5Y0N",
+  "object": "chat.completion",
+  "created": 1794514718,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"PappaRich BMC\",\n  \"vendor_vat\": \"000164270080\",\n  \"invoice_ref\": \"263370\",\n  \"invoice_date\": \"2018-03-24\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 68.82,\n  \"tax\": 4.13,\n  \"total\": 72.95,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"D28 MILO DINO(I) E\",\n      \"quantity\": 1.0,\n      \"unit_price\": 7.45,\n      \"tax_rate\": 6.0,\n      \"net\": 7.45\n    },\n    {\n      \"description\": \"R03 N' LEMAK+fc E @17.83\",\n      \"quantity\": 2.0,\n      \"unit_price\": 17.83,\n      \"tax_rate\": 6.0,\n      \"net\": 35.66\n    },\n    {\n      \"description\": \"N22 SPRG NDL+su+cr E\",\n      \"quantity\": 1.0,\n      \"unit_price\": 9.34,\n      \"tax_rate\": 6.0,\n      \"net\": 9.34\n    },\n    {\n      \"description\": \"B02 HALF BL EGG E\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.53,\n      \"tax_rate\": 6.0,\n      \"net\": 4.53\n    },\n    {\n      \"description\": \"D19 CHAM (I) E\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.57,\n      \"tax_rate\": 6.0,\n      \"net\": 5.57\n    },\n    {\n      \"description\": \"10% Srv Chg\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.25,\n      \"tax_rate\": 6.0,\n      \"net\": 6.25\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 68.82,\n      \"tax\": 4.13\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI'm focusing on parsing the receipt data to match the JSON schema. I've located the vendor name, \"PappaRich BMC.\" Next, I'm working to extract the vendor's VAT number or tax ID, which appears on the receipt. I'm looking for the text following \"GST ID:\".\n\n\n**Analyzing Receipt Data**\n\nI've successfully identified and extracted the vendor's VAT number (\"000164 270080\") and the invoice reference number (\"Chk 263370\"). I have also converted the receipt date \"24 Mar 18\" to the standard ISO format (\"2018-03-24\"). I've now determined that the due date is null since it's a point-of-sale receipt. Malaysian Ringgit (\"MYR\") is confirmed as the currency. I'm calculating the untaxed amount, considering the \"PRICE IS GST INCLUSIVE\" note, service charge, and GST details, arriving at a subtotal of 62.55, matching the sum of items.\n\n\n**Refining Calculations**\n\nI'm focused on accurately determining the untaxed amount.  While I initially believed the subtotal was the untaxed value, the \"PRICE IS GST INCLUSIVE\" note requires recalculation. I've re-evaluated considering the GST summary, reconciling the total amount subject to GST with the actual tax paid and service charge. I believe the base amount might be 68.82 and I need to confirm its impact on the items.\n\n\n**Finalizing Value Extraction**\n\nI'm now determining the final, accurate \"untaxed\" amount for the schema. After reconsidering, I've confirmed it's the sum of the \"Subtotal\" (62.55) and the \"10% Srv Chg\" (6.25), resulting in 68.80. The tax total is 4.13, based on the 6% GST applied to a base of 68.80. The grand total of 72.93 is the sum of subtotal, service charge, and GST.\n\n\n**Finalizing Value Extraction**\n\nI've determined that \"untaxed\" should be 68.80 (Subtotal + Service Charge). Tax is 4.13, and the grand total is 72.93. The line item extraction is underway, with unit prices calculated before tax for each item. The calculations are complex since prices are inclusive of GST, so I'm converting the prices into before-tax amounts.\n\n\n**Calculating Line Items**\n\nI'm now calculating the unit prices and net amounts for each line item, remembering prices are GST-inclusive. The description, quantity, tax rate (6%), and net amounts have been determined. While I need to work out the unit prices before tax for each item, some complexity arises, because the prices are inclusive of GST.\n\n\n**Finalizing Line Item Calculations**\n\nI'm now extracting the line items, meticulously calculating unit prices before tax. I've successfully determined the description, quantity, and tax rate (6%) for each item. The net amounts are calculated from the unit prices before tax to align with the schema. I'm carefully reconciling the total amounts with the initial subtotal. I need to convert prices into before-tax amounts, since they are GST-inclusive.\n\n\n**Refining Extraction Logic**\n\nI'm now iterating my interpretation of the line items. I have reviewed all existing assumptions, to ensure my calculations match the schema requirements. I've re-examined the 'PRICE IS GST INCLUSIVE' statement and will need to recalculate values. I'm focusing on reconciling the line item totals with the overall subtotal and GST.\n\n\n**Finalizing Extraction Logic**\n\nI'm now iterating through the receipt data, re-evaluating calculations, especially regarding the 'PRICE IS GST INCLUSIVE' note. After comparing with the existing data and considering the final schema, I've confirmed that the correct value for 'untaxed' is 68.80 (subtotal + service charge). This leads to a tax of 4.13, totaling 72.93, with each of these totals matching. I'm extracting each line item to prepare for final entry into the data schema.\n\n\n**Refining Extracted Amounts**\n\nI'm now carefully analyzing the calculated values. I've confirmed that \"untaxed\" should be 68.80 (Subtotal plus Service Charge), leading to 4.13 in tax. The grand total aligns at 72.93, with each of these values consistent with the receipt and calculations. I've re-examined and revised some assumptions about how the items relate to the \"subtotal\", \"service charge\", and GST.\n\n\n**Finalizing Amount Adjustments**\n\nI'm now determining the final \"untaxed\" amount and tax total. After careful review, I've decided it's 68.80 (subtotal + service charge) with 4.13 in tax. The total is 72.93, a match! I will now finish by extracting the line items into the schema.\n\n\n**Refining Invoice Values**\n\nI've determined that the \"untaxed\" amount is 68.80 (Subtotal + Service Charge), leading to a tax of 4.13. The grand total is 72.93, all consistent.  The process of item extraction is well underway and on-track, with the prices being inclusive of GST.\n\n\n**Finalizing Schema Interpretation**\n\nAfter detailed analysis, the values are locked down. \"Untaxed\" is 68.82, tax is 4.13, and the total is 72.95.  I'm now focused on final adjustments to line items and preparing the output, with the goal of minimizing inconsistencies and ensuring full schema compatibility.\n\n\n**Finalizing Calculations**\n\nI've decided on the final values for the schema. \"Untaxed\" is 68.82, and Tax is 4.13. With these figures, the total is 72.95.  I'm now fully confident about my analysis, and I'll now populate the schema with the final values. I've re-reviewed the extracted amounts to make sure they're consistent.\n\n\n**Finalizing Amount Adjustments**\n\nI've re-examined and locked in my final analysis. I've decided \"untaxed\" should be 68.82, tax is 4.13, and the total is 72.95, as calculated. I'm now certain about my analysis and prepared to finalize the data schema extraction. I've re-reviewed the extracted amounts to ensure consistency.\n\n\n**Finalizing Amount Extraction**\n\nI'm now certain about my final values: an \"untaxed\" amount of 68.82, tax of 4.13, and a total of 72.95. I'll finish up by extracting all of the line items.\n\n\n**Finalizing the Analysis**\n\nI'm now certain about all the extracted values and the schema interpretation, and I'm ready to finalize all the results. I've re-reviewed the calculations, and I'll now populate the schema with the final amounts, making sure everything is consistent.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI'm focusing on parsing the receipt data to match the JSON schema. I've located the vendor name, \"PappaRich BMC.\" Next, I'm working to extract the vendor's VAT number or tax ID, which appears on the receipt. I'm looking for the text following \"GST ID:\".\n\n\n**Analyzing Receipt Data**\n\nI've successfully identified and extracted the vendor's VAT number (\"000164 270080\") and the invoice reference number (\"Chk 263370\"). I have also converted the receipt date \"24 Mar 18\" to the standard ISO format (\"2018-03-24\"). I've now determined that the due date is null since it's a point-of-sale receipt. Malaysian Ringgit (\"MYR\") is confirmed as the currency. I'm calculating the untaxed amount, considering the \"PRICE IS GST INCLUSIVE\" note, service charge, and GST details, arriving at a subtotal of 62.55, matching the sum of items.\n\n\n**Refining Calculations**\n\nI'm focused on accurately determining the untaxed amount.  While I initially believed the subtotal was the untaxed value, the \"PRICE IS GST INCLUSIVE\" note requires recalculation. I've re-evaluated considering the GST summary, reconciling the total amount subject to GST with the actual tax paid and service charge. I believe the base amount might be 68.82 and I need to confirm its impact on the items.\n\n\n**Finalizing Value Extraction**\n\nI'm now determining the final, accurate \"untaxed\" amount for the schema. After reconsidering, I've confirmed it's the sum of the \"Subtotal\" (62.55) and the \"10% Srv Chg\" (6.25), resulting in 68.80. The tax total is 4.13, based on the 6% GST applied to a base of 68.80. The grand total of 72.93 is the sum of subtotal, service charge, and GST.\n\n\n**Finalizing Value Extraction**\n\nI've determined that \"untaxed\" should be 68.80 (Subtotal + Service Charge). Tax is 4.13, and the grand total is 72.93. The line item extraction is underway, with unit prices calculated before tax for each item. The calculations are complex since prices are inclusive of GST, so I'm converting the prices into before-tax amounts.\n\n\n**Calculating Line Items**\n\nI'm now calculating the unit prices and net amounts for each line item, remembering prices are GST-inclusive. The description, quantity, tax rate (6%), and net amounts have been determined. While I need to work out the unit prices before tax for each item, some complexity arises, because the prices are inclusive of GST.\n\n\n**Finalizing Line Item Calculations**\n\nI'm now extracting the line items, meticulously calculating unit prices before tax. I've successfully determined the description, quantity, and tax rate (6%) for each item. The net amounts are calculated from the unit prices before tax to align with the schema. I'm carefully reconciling the total amounts with the initial subtotal. I need to convert prices into before-tax amounts, since they are GST-inclusive.\n\n\n**Refining Extraction Logic**\n\nI'm now iterating my interpretation of the line items. I have reviewed all existing assumptions, to ensure my calculations match the schema requirements. I've re-examined the 'PRICE IS GST INCLUSIVE' statement and will need to recalculate values. I'm focusing on reconciling the line item totals with the overall subtotal and GST.\n\n\n**Finalizing Extraction Logic**\n\nI'm now iterating through the receipt data, re-evaluating calculations, especially regarding the 'PRICE IS GST INCLUSIVE' note. After comparing with the existing data and considering the final schema, I've confirmed that the correct value for 'untaxed' is 68.80 (subtotal + service charge). This leads to a tax of 4.13, totaling 72.93, with each of these totals matching. I'm extracting each line item to prepare for final entry into the data schema.\n\n\n**Refining Extracted Amounts**\n\nI'm now carefully analyzing the calculated values. I've confirmed that \"untaxed\" should be 68.80 (Subtotal plus Service Charge), leading to 4.13 in tax. The grand total aligns at 72.93, with each of these values consistent with the receipt and calculations. I've re-examined and revised some assumptions about how the items relate to the \"subtotal\", \"service charge\", and GST.\n\n\n**Finalizing Amount Adjustments**\n\nI'm now determining the final \"untaxed\" amount and tax total. After careful review, I've decided it's 68.80 (subtotal + service charge) with 4.13 in tax. The total is 72.93, a match! I will now finish by extracting the line items into the schema.\n\n\n**Refining Invoice Values**\n\nI've determined that the \"untaxed\" amount is 68.80 (Subtotal + Service Charge), leading to a tax of 4.13. The grand total is 72.93, all consistent.  The process of item extraction is well underway and on-track, with the prices being inclusive of GST.\n\n\n**Finalizing Schema Interpretation**\n\nAfter detailed analysis, the values are locked down. \"Untaxed\" is 68.82, tax is 4.13, and the total is 72.95.  I'm now focused on final adjustments to line items and preparing the output, with the goal of minimizing inconsistencies and ensuring full schema compatibility.\n\n\n**Finalizing Calculations**\n\nI've decided on the final values for the schema. \"Untaxed\" is 68.82, and Tax is 4.13. With these figures, the total is 72.95.  I'm now fully confident about my analysis, and I'll now populate the schema with the final values. I've re-reviewed the extracted amounts to make sure they're consistent.\n\n\n**Finalizing Amount Adjustments**\n\nI've re-examined and locked in my final analysis. I've decided \"untaxed\" should be 68.82, tax is 4.13, and the total is 72.95, as calculated. I'm now certain about my analysis and prepared to finalize the data schema extraction. I've re-reviewed the extracted amounts to ensure consistency.\n\n\n**Finalizing Amount Extraction**\n\nI'm now certain about my final values: an \"untaxed\" amount of 68.82, tax of 4.13, and a total of 72.95. I'll finish up by extracting all of the line items.\n\n\n**Finalizing the Analysis**\n\nI'm now certain about all the extracted values and the schema interpretation, and I'm ready to finalize all the results. I've re-reviewed the calculations, and I'll now populate the schema with the final amounts, making sure everything is consistent.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 7509,
+   "total_tokens": 7827,
+   "cost": 0.0754875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0754875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.07509
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6890,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 62.36
+}

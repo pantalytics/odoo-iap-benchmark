@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18052402170329",
+  "invoice_date": "2018-05-24",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.92,
+  "tax": 0.48,
+  "total": 8.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "I00100000025- 1 Meat + 2 Vege",
+    "quantity": 1,
+    "unit_price": 6.0,
+    "tax_rate": 6,
+    "net": 6.0
+   },
+   {
+    "description": "I00100000170- Imported Veggies",
+    "quantity": 1,
+    "unit_price": 1.6,
+    "tax_rate": 6,
+    "net": 1.6
+   },
+   {
+    "description": "I00100000149- Add Vegetable (X)",
+    "quantity": 1,
+    "unit_price": 0.8,
+    "tax_rate": 6,
+    "net": 0.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 7.92,
+    "tax": 0.48
+   }
+  ]
+ },
+ "cost_usd": 0.024004,
+ "raw": {
+  "id": "gen-1794514765-69cv7Uzy8BiSS56BjA2u",
+  "object": "chat.completion",
+  "created": 1794514765,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18052402170329\",\"invoice_date\":\"2018-05-24\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.92,\"tax\":0.48,\"total\":8.4,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"I00100000025- 1 Meat + 2 Vege\",\"quantity\":1,\"unit_price\":6.0,\"tax_rate\":6,\"net\":6.0},{\"description\":\"I00100000170- Imported Veggies\",\"quantity\":1,\"unit_price\":1.6,\"tax_rate\":6,\"net\":1.6},{\"description\":\"I00100000149- Add Vegetable (X)\",\"quantity\":1,\"unit_price\":0.8,\"tax_rate\":6,\"net\":0.8}],\"vat_breakdown\":[{\"rate\":6,\"base\":7.92,\"tax\":0.48}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the receipt's currency and tax details: it's in MYR, the printed prices already include GST, and the GST registration number is the one to use rather than the company registration number.\n\nI'm weighing whether to put the item description with its code on the line, and whether the unit price should stay as printed since it already includes tax, even though the schema asks for a pre-tax figure. I'll keep the printed amounts.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the receipt's currency and tax details: it's in MYR, the printed prices already include GST, and the GST registration number is the one to use rather than the company registration number.\n\nI'm weighing whether to put the item description with its code on the line, and whether the unit price should stay as printed since it already includes tax, even though the schema asks for a pre-tax figure. I'll keep the printed amounts.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS5AgKEAgTGAI4AUIIdGhpbmtpbmcSDJWqCDAFdh+oL3w5qxoMAjSg7WV+bGJ6qOgnIjDEnNl502ZUCyLu9poUYhr0BGJCFSvJJFAB4I0b+dUyGeGQj3EyjNEqVf/AeqRMuMwqgQjr/SSHLuypa7UM2CrKFyO7YMmYrZ5G3+jx596unnS6mSBpSXcyLK4M8i6aNfLWg1+YDn4xIupfqpuQ65jaL9kUlNX6Ljqey/yA3RWf2ZzaYbT+OI7rg9lB6ewYffTm194ZWH9h5tsHVNr6xBvvBxt/jv0JidBYAHiYvoj6OQpEkBnidYqJNO6KIz/aGzRSYT3kioFUQBaEz0U7SN/FD2l+OnBmL5ppcYJ+aHfHh4xvpojK8z6F56e43O24N0vvQx+yMRjcN+9Hdts9DeZwubuCTpLQZnYmZ+qYVVEgtai9NOFcFgtXGTBklK0eU7kcIUh9Y2HZOTKrqKefB7xB1c1e4phETM87ZSPkO+vHrDdbff+6WAITdl4aeqQQNgphlCdX0bkc3U069u5GBiBC9EvfQJJMh2KNHGxlf7QQQusw8quaqWv6ZBF/QKRrH4xBvjwZIDfz7UgDDZkr/EwKajR46zjHpIOLSHub+sgcaat6PaHGYUF5+Iv03bqDKpqo0y6Ap/fuo2G8dk0hh538R0QG14Cb3yfdzFmc9j5++oep8gVdw1PmM1SkQSg7M/57TvnjWVeGDAFhfFC2kXunh47qPjCUEiCVfMmKhuNAGqMVTuEzSFBUirbCEcF75BLsWf0Tf2ME7DJEPIxnC7z6yNE7Ak161Xchuy61diRpUKYbkc7hTQHw5k6MaonnLAwcz+1ib2xO6Bx4ptKqQHyMcCbdssgYB27UsoZC0K6I+SqTGZJAYrXYDnUawcJNi0q1xHI51Dk5+svfYPF37ybnZtQZtgnSlqOrYtn12eehEXEMjc9cKBvFljj+YRMl+2/7ly3vEcmShoCT8N/AnB7mr2y7w9Rmz3eLXBh2SRxEzFT5Y1FI2zsS6VwjDTwCcP8zTdvLkryAYW5pZvloP3qPW0ELGCCmL37GfjC+Z2nLUiuXQq38zxtQ59ln4hdDAKOWngTN46cf2K2upHKt2/kD0eM+5RUJfbv/mbVPKrVQhE30JK3Y5Mpt+dWYroXV6bRJcVasevhVajGqpJO1nPh9wB4UnGMev2QY5VkgEmMDkhGA5+zKrEm7kZvoIzFC4mCh0vKHVFviRGF/slZ6SclzuGTEYXujy5LIyl4WYbgHiV9XU557BfgvYBd0qkUtSilRNXswIvZqjL1MkVH3+hHNNuBsw7n4Gu8aQxgdTXdEvDZgrxi0Wpl1VYjYJBQSR/DrnsX81WmS2R+Po5ItdJrMChquC8vjDwUnXcl42Poo59Yh3O/ml3gyCDk/pjihz5xzVJiB5q4uAPObmRgmKAZbCvtNV8bqorYB4YncjmZlXZynvQ3vddqVpr5yXAQJa8PQKwKVcemNDoIlde1OvtwmP6462BgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 564,
+   "total_tokens": 3745,
+   "cost": 0.024004,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024004,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01128
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 229,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.97
+}

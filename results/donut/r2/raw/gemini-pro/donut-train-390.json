@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Arnold, Mercer and Shelton",
+  "vendor_vat": "938-99-2312",
+  "invoice_ref": "37995856",
+  "invoice_date": "2017-05-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 79.98,
+  "tax": 8.0,
+  "total": 87.98,
+  "iban": "GB15WYGM00923783631136",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300",
+    "quantity": 1,
+    "unit_price": 59.99,
+    "tax_rate": 10,
+    "net": 59.99
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 79.98,
+    "tax": 8.0
+   }
+  ]
+ },
+ "cost_usd": 0.036988,
+ "raw": {
+  "id": "gen-1794515280-vK2akUNVNvEZkSIuxG6I",
+  "object": "chat.completion",
+  "created": 1794515280,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Arnold, Mercer and Shelton\",\n  \"vendor_vat\": \"938-99-2312\",\n  \"invoice_ref\": \"37995856\",\n  \"invoice_date\": \"2017-05-06\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 79.98,\n  \"tax\": 8.00,\n  \"total\": 87.98,\n  \"iban\": \"GB15WYGM00923783631136\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300\",\n      \"quantity\": 1,\n      \"unit_price\": 59.99,\n      \"tax_rate\": 10,\n      \"net\": 59.99\n    },\n    {\n      \"description\": \"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW\",\n      \"quantity\": 1,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 19.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 79.98,\n      \"tax\": 8.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Interpreting Invoice Dates**\n\nI'm working on parsing the `invoice_date`. The format \"06/05/2017\" is ambiguous; considering the US address context, I'm leaning towards MM/DD/YYYY, thus 2017-06-05, but I'm still evaluating this conversion.\n\n**Resolving Date Ambiguity**\n\nFurther analysis of the provided US state abbreviations confirms the MM/DD/YYYY interpretation for the `invoice_date`. I've now definitively parsed \"06/05/2017\" as 2017-06-05, resolving that ambiguity.\n\n**Updating Date Interpretation**\n\nI've identified an inconsistency in the `invoice_date` interpretation. Initial thoughts leaned towards MM/DD/YYYY due to US address context, but further examination of the IBAN indicates a UK origin, strongly suggesting DD/MM/YYYY. This means \"06/05/2017\" is likely May 6th, 2017, not June 5th.\n\n**Revising Date Interpretation**\n\nMy previous decision on the `invoice_date` format was indeed incorrect. The presence of a UK IBAN alongside US dollar currency has prompted me to re-evaluate. I am now confident that \"06/05/2017\" represents May 6th, 2017 (2017-05-06) given the strong UK influence suggested by the IBAN.\n\n**Assembling Final JSON**\n\nI am now constructing the complete JSON output. All previously identified and refined data points, including the vendor details, the corrected invoice date of May 6th, 2017, and the itemized line details, are being integrated into the final structure.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Interpreting Invoice Dates**\n\nI'm working on parsing the `invoice_date`. The format \"06/05/2017\" is ambiguous; considering the US address context, I'm leaning towards MM/DD/YYYY, thus 2017-06-05, but I'm still evaluating this conversion.\n\n**Resolving Date Ambiguity**\n\nFurther analysis of the provided US state abbreviations confirms the MM/DD/YYYY interpretation for the `invoice_date`. I've now definitively parsed \"06/05/2017\" as 2017-06-05, resolving that ambiguity.\n\n**Updating Date Interpretation**\n\nI've identified an inconsistency in the `invoice_date` interpretation. Initial thoughts leaned towards MM/DD/YYYY due to US address context, but further examination of the IBAN indicates a UK origin, strongly suggesting DD/MM/YYYY. This means \"06/05/2017\" is likely May 6th, 2017, not June 5th.\n\n**Revising Date Interpretation**\n\nMy previous decision on the `invoice_date` format was indeed incorrect. The presence of a UK IBAN alongside US dollar currency has prompted me to re-evaluate. I am now confident that \"06/05/2017\" represents May 6th, 2017 (2017-05-06) given the strong UK influence suggested by the IBAN.\n\n**Assembling Final JSON**\n\nI am now constructing the complete JSON output. All previously identified and refined data points, including the vendor details, the corrected invoice date of May 6th, 2017, and the itemized line details, are being integrated into the final structure.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2821,
+   "total_tokens": 4389,
+   "cost": 0.036988,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.036988,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.033852
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2437,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.89
+}

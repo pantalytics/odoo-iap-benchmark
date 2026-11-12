@@ -1,0 +1,120 @@
+{
+ "pred": {
+  "vendor_name": "SOON FATT S/B",
+  "vendor_vat": "000788250624",
+  "invoice_ref": "C02102772",
+  "invoice_date": "2017-02-09",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 347.64,
+  "tax": 14.86,
+  "total": 362.5,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "A1 BIHUN ISTIMEWA 3KG",
+    "quantity": 10,
+    "unit_price": 10.0,
+    "tax_rate": 0,
+    "net": 100.0
+   },
+   {
+    "description": "YSF BUAH KERAS 3KG",
+    "quantity": 1,
+    "unit_price": 34.72,
+    "tax_rate": 6,
+    "net": 34.72
+   },
+   {
+    "description": "HOBE RED KIDNEY BEAN 425GM",
+    "quantity": 1,
+    "unit_price": 54.72,
+    "tax_rate": 6,
+    "net": 54.72
+   },
+   {
+    "description": "CAP LANG JAGUNG MANIS 425GM",
+    "quantity": 1,
+    "unit_price": 50.75,
+    "tax_rate": 6,
+    "net": 50.75
+   },
+   {
+    "description": "DAIRY CHAMP EVAP 390GM",
+    "quantity": 1,
+    "unit_price": 107.45,
+    "tax_rate": 6,
+    "net": 107.45
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 100.0,
+    "tax": 0.0
+   },
+   {
+    "rate": 6,
+    "base": 247.64,
+    "tax": 14.86
+   }
+  ]
+ },
+ "cost_usd": 0.0453275,
+ "raw": {
+  "id": "gen-1794514388-ddcR1CVLAO6SBS7OYNfr",
+  "object": "chat.completion",
+  "created": 1794514388,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SOON FATT S/B\",\n  \"vendor_vat\": \"000788250624\",\n  \"invoice_ref\": \"C02102772\",\n  \"invoice_date\": \"2017-02-09\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 347.64,\n  \"tax\": 14.86,\n  \"total\": 362.5,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"A1 BIHUN ISTIMEWA 3KG\",\n      \"quantity\": 10,\n      \"unit_price\": 10.0,\n      \"tax_rate\": 0,\n      \"net\": 100.0\n    },\n    {\n      \"description\": \"YSF BUAH KERAS 3KG\",\n      \"quantity\": 1,\n      \"unit_price\": 34.72,\n      \"tax_rate\": 6,\n      \"net\": 34.72\n    },\n    {\n      \"description\": \"HOBE RED KIDNEY BEAN 425GM\",\n      \"quantity\": 1,\n      \"unit_price\": 54.72,\n      \"tax_rate\": 6,\n      \"net\": 54.72\n    },\n    {\n      \"description\": \"CAP LANG JAGUNG MANIS 425GM\",\n      \"quantity\": 1,\n      \"unit_price\": 50.75,\n      \"tax_rate\": 6,\n      \"net\": 50.75\n    },\n    {\n      \"description\": \"DAIRY CHAMP EVAP 390GM\",\n      \"quantity\": 1,\n      \"unit_price\": 107.45,\n      \"tax_rate\": 6,\n      \"net\": 107.45\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0,\n      \"base\": 100.0,\n      \"tax\": 0.0\n    },\n    {\n      \"rate\": 6,\n      \"base\": 247.64,\n      \"tax\": 14.86\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"SOON FATT S/B\" as the vendor name and \"000788250624\" as their VAT registration number, which I labeled as the \"GST REG NO\". I also located the invoice number, which is \"C021027\". Now I'm moving on to extracting the remaining information needed for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've successfully extracted the invoice date (2017-02-09), set the due date to null, identified \"MYR\" as the currency, and calculated the untaxed amount (347.64), tax amount (14.86), and total (362.50). The VAT treatment is \"S\" due to multiple rates.  I'm now working on extracting the line items, starting with the description, quantity, unit price, tax rate, and net amount.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the finishing touches on the JSON schema, focusing on the line items and VAT breakdown. I've extracted all line item details: descriptions, quantities, unit prices, net amounts, and tax rates (0% or 6%). Additionally, I've captured the VAT breakdown, confirming the 0% and 6% rates and associated base amounts. Finally, I've addressed the missing IBAN by setting it to null.\n\n\n**Revising Line Item Calculations**\n\nI'm revisiting the line item calculations. I initially misattributed the \"AMOUNT (RM)\" column; it appears to include tax for lines with a 6% tax rate.  This explains the discrepancy between the line item net totals and the GST summary for the 6% rate. Now, I have correctly identified the \"AMOUNT (RM)\" column as the total amount for each line item. I have updated the net amounts for the 6% lines.\n\n\n**Refining Value Extraction**\n\nI'm now refining the value extraction, primarily focusing on correctly interpreting the \"AMOUNT (RM)\" column. Initial assumptions about this field were incorrect; it includes tax for lines with a 6% tax rate. I've updated my process to reflect this and have recalculated the net amounts accordingly, ensuring consistency with the GST summary. The invoice number has been correctly identified as C021027, as has the invoice date (2017-02-09). The vendor name is \"SOON FATT S/B\". The Vendor VAT is \"000788250624\".\n\n\n**Interpreting Amount Column**\n\nI've re-evaluated the \"AMOUNT (RM)\" column; I now believe it's the total *including* tax for lines with a 6% tax rate. I've updated my calculations accordingly, adjusting the line item `unit_price` and `net` values to reflect this understanding and keep consistent with GST summary totals.\n\n\n\n**Finalizing Extraction and Calculations**\n\nI've now finalized my understanding of the \"AMOUNT (RM)\" column; it includes tax for 6% lines. I have updated the calculations to reflect this interpretation. This understanding allows me to correctly calculate the unit prices and net amounts for all the line items. All line items are now correctly extracted, validated, and incorporated. I have verified the totals and the GST summary matches. I believe I have now completed all required tasks.\n\n\n**Refining Invoice Details**\n\nI'm now extracting and verifying the remaining data. I have correctly identified the invoice number (C021027), vendor details (\"SOON FATT S/B\" with VAT \"000788250624\"), and the invoice date (2017-02-09). The currency is \"MYR.\" The IBAN field is set to `null` due to missing IBAN information.\n\n\n**Finalizing VAT Calculations**\n\nI've now finalized all calculations, understanding that the \"AMOUNT (RM)\" column represents the total including tax for the 6% lines. I have updated the calculations for `unit_price` and `net` accordingly and confirmed they are correct. The final extraction and calculations have been validated, the totals and GST summary match, so I believe I've completed all required tasks.\n\n**Extracting Invoice Details**\n\nI'm now extracting the remaining invoice details, and I have determined that the invoice number is C021027, the vendor is \"SOON FATT S/B\" with a VAT of \"000788250624\", and the invoice date is 2017-02-09. The currency is \"MYR,\" and the IBAN field will be null due to missing data. I'm double checking now.\n\n\n**Finalizing Value Interpretation**\n\nI'm now certain about the \"AMOUNT (RM)\" field; it represents the total, including tax, for lines taxed at 6%. With this understanding, I have accurately calculated the `unit_price` and `net` amounts for all line items. I'm cross-verifying the calculations against the GST summary to validate that my work is correct. I believe I have now successfully extracted, validated and incorporated all the necessary information, and that I am complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"SOON FATT S/B\" as the vendor name and \"000788250624\" as their VAT registration number, which I labeled as the \"GST REG NO\". I also located the invoice number, which is \"C021027\". Now I'm moving on to extracting the remaining information needed for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've successfully extracted the invoice date (2017-02-09), set the due date to null, identified \"MYR\" as the currency, and calculated the untaxed amount (347.64), tax amount (14.86), and total (362.50). The VAT treatment is \"S\" due to multiple rates.  I'm now working on extracting the line items, starting with the description, quantity, unit price, tax rate, and net amount.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the finishing touches on the JSON schema, focusing on the line items and VAT breakdown. I've extracted all line item details: descriptions, quantities, unit prices, net amounts, and tax rates (0% or 6%). Additionally, I've captured the VAT breakdown, confirming the 0% and 6% rates and associated base amounts. Finally, I've addressed the missing IBAN by setting it to null.\n\n\n**Revising Line Item Calculations**\n\nI'm revisiting the line item calculations. I initially misattributed the \"AMOUNT (RM)\" column; it appears to include tax for lines with a 6% tax rate.  This explains the discrepancy between the line item net totals and the GST summary for the 6% rate. Now, I have correctly identified the \"AMOUNT (RM)\" column as the total amount for each line item. I have updated the net amounts for the 6% lines.\n\n\n**Refining Value Extraction**\n\nI'm now refining the value extraction, primarily focusing on correctly interpreting the \"AMOUNT (RM)\" column. Initial assumptions about this field were incorrect; it includes tax for lines with a 6% tax rate. I've updated my process to reflect this and have recalculated the net amounts accordingly, ensuring consistency with the GST summary. The invoice number has been correctly identified as C021027, as has the invoice date (2017-02-09). The vendor name is \"SOON FATT S/B\". The Vendor VAT is \"000788250624\".\n\n\n**Interpreting Amount Column**\n\nI've re-evaluated the \"AMOUNT (RM)\" column; I now believe it's the total *including* tax for lines with a 6% tax rate. I've updated my calculations accordingly, adjusting the line item `unit_price` and `net` values to reflect this understanding and keep consistent with GST summary totals.\n\n\n\n**Finalizing Extraction and Calculations**\n\nI've now finalized my understanding of the \"AMOUNT (RM)\" column; it includes tax for 6% lines. I have updated the calculations to reflect this interpretation. This understanding allows me to correctly calculate the unit prices and net amounts for all the line items. All line items are now correctly extracted, validated, and incorporated. I have verified the totals and the GST summary matches. I believe I have now completed all required tasks.\n\n\n**Refining Invoice Details**\n\nI'm now extracting and verifying the remaining data. I have correctly identified the invoice number (C021027), vendor details (\"SOON FATT S/B\" with VAT \"000788250624\"), and the invoice date (2017-02-09). The currency is \"MYR.\" The IBAN field is set to `null` due to missing IBAN information.\n\n\n**Finalizing VAT Calculations**\n\nI've now finalized all calculations, understanding that the \"AMOUNT (RM)\" column represents the total including tax for the 6% lines. I have updated the calculations for `unit_price` and `net` accordingly and confirmed they are correct. The final extraction and calculations have been validated, the totals and GST summary match, so I believe I've completed all required tasks.\n\n**Extracting Invoice Details**\n\nI'm now extracting the remaining invoice details, and I have determined that the invoice number is C021027, the vendor is \"SOON FATT S/B\" with a VAT of \"000788250624\", and the invoice date is 2017-02-09. The currency is \"MYR,\" and the IBAN field will be null due to missing data. I'm double checking now.\n\n\n**Finalizing Value Interpretation**\n\nI'm now certain about the \"AMOUNT (RM)\" field; it represents the total, including tax, for lines taxed at 6%. With this understanding, I have accurately calculated the `unit_price` and `net` amounts for all line items. I'm cross-verifying the calculations against the GST summary to validate that my work is correct. I believe I have now successfully extracted, validated and incorporated all the necessary information, and that I am complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 4493,
+   "total_tokens": 4811,
+   "cost": 0.0453275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0453275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.04493
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3931,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 32.48
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Hines, Stevens and Wong",
+  "vendor_vat": "971-90-7409",
+  "invoice_ref": "94914402",
+  "invoice_date": "2016-05-25",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 232.4,
+  "tax": 23.24,
+  "total": 255.64,
+  "iban": "GB17VCKB95228636038037",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off",
+    "quantity": 5.0,
+    "unit_price": 9.5,
+    "tax_rate": 10.0,
+    "net": 47.5
+   },
+   {
+    "description": "Wonder Nation Kids Blue Mout Alien Slippers House Shoes Size 5",
+    "quantity": 5.0,
+    "unit_price": 16.99,
+    "tax_rate": 10.0,
+    "net": 84.95
+   },
+   {
+    "description": "adidas Youth Boys Soccer Cleats 4.5 F5 TRX FG J Vivid Yellow Black NEW G65429",
+    "quantity": 5.0,
+    "unit_price": 19.99,
+    "tax_rate": 10.0,
+    "net": 99.95
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 232.4,
+    "tax": 23.24
+   }
+  ]
+ },
+ "cost_usd": 0.0141975,
+ "raw": {
+  "id": "gen-1794515417-HXeI6ocApHH7OzCIapYj",
+  "object": "chat.completion",
+  "created": 1794515417,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hines, Stevens and Wong\",\n  \"vendor_vat\": \"971-90-7409\",\n  \"invoice_ref\": \"94914402\",\n  \"invoice_date\": \"2016-05-25\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 232.4,\n  \"tax\": 23.24,\n  \"total\": 255.64,\n  \"iban\": \"GB17VCKB95228636038037\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off\",\n      \"quantity\": 5.0,\n      \"unit_price\": 9.5,\n      \"tax_rate\": 10.0,\n      \"net\": 47.5\n    },\n    {\n      \"description\": \"Wonder Nation Kids Blue Mout Alien Slippers House Shoes Size 5\",\n      \"quantity\": 5.0,\n      \"unit_price\": 16.99,\n      \"tax_rate\": 10.0,\n      \"net\": 84.95\n    },\n    {\n      \"description\": \"adidas Youth Boys Soccer Cleats 4.5 F5 TRX FG J Vivid Yellow Black NEW G65429\",\n      \"quantity\": 5.0,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10.0,\n      \"net\": 99.95\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 232.4,\n      \"tax\": 23.24\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Hines, Stevens and Wong\" as the vendor and extracted \"971-90-7409\" as their Tax ID. These details directly satisfy the JSON schema's \"vendor_name\" and \"vendor_vat\" fields, so that's a good step forward. Now, let's move on to the next set of fields.\n\n\n**Populating More Details**\n\nI've successfully extracted the invoice reference \"9491 4402\" and the issue date \"2016-05-25\" for the `invoice_ref` and `invoice_date` fields, respectively. The due date is null, and the currency is USD based on the \"$\" symbol. The untaxed amount is 232.40, the tax amount is 23.24, and the total is 255.64. I've also found the seller's IBAN (GB17VCKB 95228636038037) and VAT treatment code \"S\". Now I am beginning to look at extracting the line items.\n\n\n**Constructing JSON Output**\n\nI'm now putting together the JSON object using all the extracted information. I've been meticulous about data types and formats, especially with the numeric fields. The currency inferred is USD, based on the \"$\" symbol. The VAT breakdown, with its rate, base, and tax, is also incorporated. Line item details are populated as required in the schema.\n\n\n**Finalizing JSON Structure**\n\nI'm now in the final phase, meticulously constructing the complete JSON output. I've taken special care to ensure data type correctness and appropriate formatting, paying close attention to numeric fields and the currency indicator, which I've confidently inferred as \"USD\" based on the \"$\" symbol. The VAT breakdown is fully integrated, including the relevant rate, base, and tax amounts. All line items are correctly populated, as required. The IBAN is included, and the VAT is provided. I'm satisfied.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Hines, Stevens and Wong\" as the vendor and extracted \"971-90-7409\" as their Tax ID. These details directly satisfy the JSON schema's \"vendor_name\" and \"vendor_vat\" fields, so that's a good step forward. Now, let's move on to the next set of fields.\n\n\n**Populating More Details**\n\nI've successfully extracted the invoice reference \"9491 4402\" and the issue date \"2016-05-25\" for the `invoice_ref` and `invoice_date` fields, respectively. The due date is null, and the currency is USD based on the \"$\" symbol. The untaxed amount is 232.40, the tax amount is 23.24, and the total is 255.64. I've also found the seller's IBAN (GB17VCKB 95228636038037) and VAT treatment code \"S\". Now I am beginning to look at extracting the line items.\n\n\n**Constructing JSON Output**\n\nI'm now putting together the JSON object using all the extracted information. I've been meticulous about data types and formats, especially with the numeric fields. The currency inferred is USD, based on the \"$\" symbol. The VAT breakdown, with its rate, base, and tax, is also incorporated. Line item details are populated as required in the schema.\n\n\n**Finalizing JSON Structure**\n\nI'm now in the final phase, meticulously constructing the complete JSON output. I've taken special care to ensure data type correctness and appropriate formatting, paying close attention to numeric fields and the currency indicator, which I've confidently inferred as \"USD\" based on the \"$\" symbol. The VAT breakdown is fully integrated, including the relevant rate, base, and tax amounts. All line items are correctly populated, as required. The IBAN is included, and the VAT is provided. I'm satisfied.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1380,
+   "total_tokens": 1698,
+   "cost": 0.0141975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0141975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0138
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 930,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.36
+}

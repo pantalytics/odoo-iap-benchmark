@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "Domino's Pizza",
+  "vendor_vat": "001694261248",
+  "invoice_ref": "8554",
+  "invoice_date": "2018-04-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 29.15,
+  "tax": 1.75,
+  "total": 30.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6\"HT (KB) LSF1-PSI",
+    "quantity": 1.0,
+    "unit_price": 15.6,
+    "tax_rate": 6.0,
+    "net": 15.6
+   },
+   {
+    "description": "6\"HT (KB) LSF1-PSI",
+    "quantity": 1.0,
+    "unit_price": 15.6,
+    "tax_rate": 6.0,
+    "net": 15.6
+   },
+   {
+    "description": "CWAH AOA1-ADI",
+    "quantity": 1.0,
+    "unit_price": 14.5,
+    "tax_rate": 6.0,
+    "net": 14.5
+   },
+   {
+    "description": "Coupon Discount",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": -14.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 29.15,
+    "tax": 1.75
+   }
+  ]
+ },
+ "cost_usd": 0.005886,
+ "raw": {
+  "id": "gen-1794514537-GaJdQyydHJwjq3sB7He4",
+  "object": "chat.completion",
+  "created": 1794514537,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Domino's Pizza\",\"vendor_vat\":\"001694261248\",\"invoice_ref\":\"8554\",\"invoice_date\":\"2018-04-28\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":29.15,\"tax\":1.75,\"total\":30.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"6\\\"HT (KB) LSF1-PSI\",\"quantity\":1.0,\"unit_price\":15.6,\"tax_rate\":6.0,\"net\":15.6},{\"description\":\"6\\\"HT (KB) LSF1-PSI\",\"quantity\":1.0,\"unit_price\":15.6,\"tax_rate\":6.0,\"net\":15.6},{\"description\":\"CWAH AOA1-ADI\",\"quantity\":1.0,\"unit_price\":14.5,\"tax_rate\":6.0,\"net\":14.5},{\"description\":\"Coupon Discount\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6.0,\"net\":-14.8}],\"vat_breakdown\":[{\"rate\":6.0,\"base\":29.15,\"tax\":1.75}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm currently analyzing the invoice to pinpoint the vendor name. It appears \"Dommal Food Services Sdn Bhd\" is the registered entity, while \"DOMINO'S PIZZA\" is the brand. My focus is on determining which is the most appropriate field value for the vendor.\n\n**Deciding Vendor Identity**\n\nI'm prioritizing the legal entity, \"Dommal Food Services Sdn Bhd,\" as the primary vendor identifier, though \"Domino's Pizza\" is the brand presented. This distinction is crucial for accurate record-keeping.\n\n**Calculating Item Details**\n\nI'm dissecting the line items and discounts now. The initial thought was to sum up items and then apply the discount, but the coupon discount of 14.80 seems to directly affect the total, leading to a sub-total calculation of 29.15 before tax. I'm re-evaluating how the discount is applied to the individual line items.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm currently analyzing the invoice to pinpoint the vendor name. It appears \"Dommal Food Services Sdn Bhd\" is the registered entity, while \"DOMINO'S PIZZA\" is the brand. My focus is on determining which is the most appropriate field value for the vendor.\n\n**Deciding Vendor Identity**\n\nI'm prioritizing the legal entity, \"Dommal Food Services Sdn Bhd,\" as the primary vendor identifier, though \"Domino's Pizza\" is the brand presented. This distinction is crucial for accurate record-keeping.\n\n**Calculating Item Details**\n\nI'm dissecting the line items and discounts now. The initial thought was to sum up items and then apply the discount, but the coupon discount of 14.80 seems to directly affect the total, leading to a sub-total calculation of 29.15 before tax. I'm re-evaluating how the discount is applied to the individual line items.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1256,
+   "total_tokens": 2824,
+   "cost": 0.005886,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.005886,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.00471
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 970,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.12
+}

@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "Domino's Pizza",
+  "vendor_vat": "001694261248",
+  "invoice_ref": "6224",
+  "invoice_date": "2018-04-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 3.68,
+  "tax": 0.22,
+  "total": 3.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6\"HT (TE) FPP-FREE",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "6\"HT (BP) WTUE1A-I",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "Coupon Discount",
+    "quantity": 1,
+    "unit_price": -21.7,
+    "tax_rate": 6,
+    "net": -21.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 3.68,
+    "tax": 0.22
+   }
+  ]
+ },
+ "cost_usd": 0.027364,
+ "raw": {
+  "id": "gen-1794514403-gdywjhCNnNA8XDi6qHdq",
+  "object": "chat.completion",
+  "created": 1794514403,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Domino's Pizza\",\"vendor_vat\":\"001694261248\",\"invoice_ref\":\"6224\",\"invoice_date\":\"2018-04-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":3.68,\"tax\":0.22,\"total\":3.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"6\\\"HT (TE) FPP-FREE\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"6\\\"HT (BP) WTUE1A-I\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"Coupon Discount\",\"quantity\":1,\"unit_price\":-21.7,\"tax_rate\":6,\"net\":-21.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":3.68,\"tax\":0.22}]}",
+     "refusal": null,
+     "reasoning": "I'm settling on the vendor name for this receipt. The issuing outlet is Domino's Pizza Permas Jaya, owned by Dommal Food Services Sdn Bhd, and I'm weighing whether to use the parent company name or the brand name.\n\nI'm going with \"Domino's Pizza\" as the vendor name, since the printed header uses it, even though the legal entity is Dommal Food Services Sdn Bhd. Next I'm pulling the invoice details: GST ref 001694261248, order 6224, dated 2018-04-17, in MYR. The totals are 3.90 with 0.22 GST included and 3.68 untaxed, at a 6% rate, and I'm working out how to list the two 12.80 items against the 21.70 discount.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm settling on the vendor name for this receipt. The issuing outlet is Domino's Pizza Permas Jaya, owned by Dommal Food Services Sdn Bhd, and I'm weighing whether to use the parent company name or the brand name.\n\nI'm going with \"Domino's Pizza\" as the vendor name, since the printed header uses it, even though the legal entity is Dommal Food Services Sdn Bhd. Next I'm pulling the invoice details: GST ref 001694261248, order 6224, dated 2018-04-17, in MYR. The totals are 3.90 with 0.22 GST included and 3.68 untaxed, at a 6% rate, and I'm working out how to list the two 12.80 items against the 21.70 discount.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSsAsKEAgTGAI4AUIIdGhpbmtpbmcSDEnUYkikoO4ihq39EBoM4etxZgCQPxvs91+1IjCwY6NkUgolUK5MBkuPcrbeIHsqLBIVAVlKM9LYTHLx73N8J8k3AKWHx3nDJvX9hM0qzQr/sqqIEhEFWDHk4XBa0GEz5r++4BxyN7Bdfi12qV6v5t9SWlvAQpPIOCiWzMT1pztjYASGYXutr1C5KdG1pOitd/+RA3L3BBNMdro6WhrhRlI6+Dr2qZUUoF7ICyWcjdu0i9G9ObeXTHmaSyOJlBKbKpweoFc9WjFOdaRB3/fX7Je65EQ4/RMWeFhxEP0NghOZ9Va5Kmby7EPocwmCurjbU4n7lcB1Tu8KLOLi7N6YfX9RQe4wCRfbpy8rTw4IESKPVXRI26XHqHLLDpsD+ChWT+wxLRXLEmXvpv8R5XNFFEaQuB0PvG5ehRoq19X6c8ohPF7/5e0Eiy6tANXeCy8kxbG92qUkHYCNJux/qesWOt23k4eMH/aJ9RGOf/Jbq+za37i73U9HzLJyHw08kt3ulr2Bci3W2YZW/r8GzxJHfOhpzHhPa4gh+ZfYN3mPza26xs1CnAQj2FDVyXvcSqcJGJl+b/lDm7x97qSfiJTiC9rwuhhzspW1pqiAcrTIV5G/dtrOPgDCabDmM+XJaN+J6NxJJf9wflEnsBivYSDk+ysABw0a1TUf2uOwtLlPwZVYosRsKwmiE6NgZCvST+rxkOK/qjm9sbdUWP84bGEiCer0yCnlAtu1Ji+mfR5xElZGC43PmXMa5jRDwtfuof3F9GSct6zqMKke7jnEmyXYurgQwyEtdjRwnWQnCRDLLwYQ/2QFmm631lN59mmQLc6iejKLpRSLEMpI5Mr94KKVWOBu5GMkh5ZksA+Txkbj6XS7NvyeDC++2/99tYZxj5ECTnPGqPrRbTaotNRir/St7gtq+jc+wlU1qOVo0lRsCm9OXxGB/cKJk2L1Kf8B7ydwkTz/AFs6RwhBTVewlxfefzO91L7N24BXRWT/G/K+/i+dc1mhlReZpKH10TFo5V4UlrFnh5SgROfia/NiAu37O57s63X5qa6P+tZMm+A+vKnG0Jkl9tcRn1Qpbd7mBgGyG9RxgxuKNcc+vKY0C8lFzBCcynL/2NQe8PWxn1W91aW1cMSqX4Ve+1fpXDFhHa12iKETbxxnHSGiOrNQkOB+T92eC1SL2gm3dBlWYoXoFKG7ZSQLYAdHXByXQAy8JqmbL/e/XtLhvzY+0nOiVSmcgr8PDglGvSdKWSVh7Licm8+7LMdbQ3dsXP1s8rh4UUSKGYKGCGx8psjBOhn53rYQe95ERVx0gzxTPstLuR/yGIYDFgnSJkN3XlWGhQ5LjEYqHQ8XSfNkEtBM8nDn9uIRHieyR+9a06OaaShuMSNzC4TGNbjVkaqGS4h00APWQsnt2QKmCA3gdCwNtQ6Chm8j3H5qHdPzYqICAo//4PqoAknKHP1ADNjp9/i8rGK/DukDydB0ruZWg8FyjxJb1rQgijGOOSu73nVfAEf7h+Gw8ZsZBpOjoBeGmuI6oSklj1tch4rdRVVxHiqot52rICczo/zr+m+whrzRxqiv6bZRo6m3XK8GdsbSHZoxizkOFzB+N5k/aeQBwFfv2ZUf/pS3tZNcIEmiK8x/WKAxCO1OmTyA4SXvXPbuEjvm+7xoh2p82IebL58i2EQB+TY1EzUpQkd2W50iCUEpDkH+UbhNDALqAVICeA5TF7o5UaKQ/lcqpFegUcZcCYk6IDDM2NkCcBT65VpWRHt8UEXpBW/i3m11FZTmpaBWjF4Ose1vJyWhK45gzLuAp0+cF5my0bcgOc/6eN25FoxRZHM3XmmSbliwEJYWm6Y+WcH9rSR1xjsWWDBTX0EqP/iQ1olM4FOWSzEN/h+MVYIkdQuEMT+6hqy8Fj55ulmxCSRdZ6V2GAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 732,
+   "total_tokens": 3913,
+   "cost": 0.027364,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.027364,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01464
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 423,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.66
+}

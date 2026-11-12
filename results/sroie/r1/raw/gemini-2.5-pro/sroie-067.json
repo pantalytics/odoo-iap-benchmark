@@ -1,0 +1,113 @@
+{
+ "pred": {
+  "vendor_name": "LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD",
+  "vendor_vat": "001147416576",
+  "invoice_ref": null,
+  "invoice_date": "2018-01-06",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.67,
+  "tax": 2.86,
+  "total": 53.55,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "CURRY MIXED VEGE",
+    "quantity": 1,
+    "unit_price": 16.85,
+    "tax_rate": 6,
+    "net": 16.85
+   },
+   {
+    "description": "'XINGHUA' SPRING ROLL",
+    "quantity": 1,
+    "unit_price": 14.73,
+    "tax_rate": 6,
+    "net": 14.73
+   },
+   {
+    "description": "TI GUAN YIN TEA",
+    "quantity": 1,
+    "unit_price": 12.72,
+    "tax_rate": 6,
+    "net": 12.72
+   },
+   {
+    "description": "PLAIN RICE",
+    "quantity": 2,
+    "unit_price": 1.59,
+    "tax_rate": 6,
+    "net": 3.18
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2.87,
+    "tax": 0.0
+   },
+   {
+    "rate": 6,
+    "base": 47.8,
+    "tax": 2.86
+   }
+  ]
+ },
+ "cost_usd": 0.0616375,
+ "raw": {
+  "id": "gen-1794512924-wCrGtFp7Gdz08mfo0Smr",
+  "object": "chat.completion",
+  "created": 1794512924,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\",\n  \"vendor_vat\": \"001147416576\",\n  \"invoice_ref\": null,\n  \"invoice_date\": \"2018-01-06\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 50.67,\n  \"tax\": 2.86,\n  \"total\": 53.55,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"CURRY MIXED VEGE\",\n      \"quantity\": 1,\n      \"unit_price\": 16.85,\n      \"tax_rate\": 6,\n      \"net\": 16.85\n    },\n    {\n      \"description\": \"'XINGHUA' SPRING ROLL\",\n      \"quantity\": 1,\n      \"unit_price\": 14.73,\n      \"tax_rate\": 6,\n      \"net\": 14.73\n    },\n    {\n      \"description\": \"TI GUAN YIN TEA\",\n      \"quantity\": 1,\n      \"unit_price\": 12.72,\n      \"tax_rate\": 6,\n      \"net\": 12.72\n    },\n    {\n      \"description\": \"PLAIN RICE\",\n      \"quantity\": 2,\n      \"unit_price\": 1.59,\n      \"tax_rate\": 6,\n      \"net\": 3.18\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0,\n      \"base\": 2.87,\n      \"tax\": 0.0\n    },\n    {\n      \"rate\": 6,\n      \"base\": 47.8,\n      \"tax\": 2.86\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified and extracted the vendor name as \"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\". I've also found the GST ID, \"00114\".\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted \"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\" as the vendor name and \"00114 7416576\" as the GST ID. I've decided to use `null` for the invoice reference and due date since they are not explicitly mentioned on this receipt. The date \"06/01/18\" is interpreted as 2018-01-06. \"RM\" indicates MYR as the currency. I'm working through the tax details. The \"Gross Amt\" is 47.80. The 6% GST is calculated on 47.80. \"Svr Tax\" is 2.87 with 0% GST. So the total before tax is the sum of those values.\n\n\n**Completing JSON Schema**\n\nI've finished populating the core JSON fields: vendor details, date, currency, and total amount. I've calculated the untaxed amount based on the base amounts for GST and service tax and finalized the tax amount, which is only GST. I am now working on extracting and structuring the line items for the schema. I'm taking a close look at the confusing line item pricing format.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the finishing touches on the JSON schema, focusing specifically on the line items. I've successfully extracted and validated all the necessary fields: vendor details, date, currency, total amount, and tax information. I've double-checked the calculations for the untaxed amount and tax amount to ensure accuracy. I'm now certain of the structure of the line items. I'm satisfied with the JSON output.\n\n\n**Refining Schema Population**\n\nI'm now methodically extracting and organizing all necessary fields to fit within the JSON schema. I've successfully extracted key details like vendor name, GST ID, date, currency, and calculated the untaxed amount and tax amount, confirming that only the GST of 2.86 is the only tax. I am now accurately structuring the line items for the schema. I've double-checked all the values of the items and corrected an item.\n\n\n**Refining Item Extraction**\n\nI'm now carefully extracting the line item details. I've re-examined the receipt image, and I think I understand the line item structure now. I've corrected the previous misinterpretations of the line item descriptions and quantities. I'm focusing now on the accuracy of unit prices, and I will cross-reference with the totals. I'm now certain of the structure of all the item's details.\n\n\n\n**Refining Item Details**\n\nI'm now carefully extracting the line items, having re-examined the receipt. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n\n**Refining Item Extraction**\n\nI'm now extracting data for the JSON schema, working on the item lines, and fixing some issues in OCR interpretation. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n**Refining Item Details**\n\nI'm now carefully extracting the line items, having re-examined the receipt. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n**Finalizing Tax and Lines**\n\nI've carefully revisited the tax calculations. I'm now certain about \"untaxed\" amount of 50.67, tax amount of 2.86 (the only tax), and a total of 53.55, which is what the receipt states. I'm also now confident in listing the individual items, their quantities, prices, and applicable tax rates. I'm taking a close look at potential OCR errors.\n\n\n**Finalizing Details Extraction**\n\nI'm now certain about my data extraction from the receipt. I have all fields for the JSON schema: vendor details, date, currency, and total amount. I've re-calculated the untaxed amount (50.67), tax (2.86), and the total (53.55), accounting for potential OCR errors. I've focused on the format of the line items, and the pricing structure. I'm now certain about all values. I am ready to finalize and output the JSON.\n\n\n**Refining Data Extraction**\n\nI'm now confidently synthesizing the core data, validating the calculations, and preparing to build the JSON. I'm taking another pass to reconcile values, particularly on the tax and subtotal. I have cross-checked amounts and tax rates. I'm focusing on the format for the itemized lines for the JSON.\n\n\n**Validating Line Item Details**\n\nI've carefully extracted and validated all data, including line item descriptions, quantities, and unit prices. I'm focusing specifically on reconciling the individual line item amounts with the overall totals to ensure the JSON structure is accurate and the final tax calculations are correct. I'm taking another pass at the data.\n\n\n**Refining Final Data**\n\nI'm now satisfied with the data I've extracted, including vendor details, date, currency, and financial figures like untaxed amount, tax, and total. I've reconciled discrepancies between the line items and the gross amount, understanding there may be OCR errors. I've re-reviewed the tax breakdown. I will finalize and output the JSON.\n\n\n**Reviewing and Validating**\n\nI've carefully revisited the item lines and calculations, focusing on potential OCR misinterpretations. I am now confident in the core data: vendor details, date, currency, and the calculated untaxed amount, tax, and total. I'm focusing specifically on the structural integrity of the line item format to ensure JSON compatibility and data accuracy.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified and extracted the vendor name as \"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\". I've also found the GST ID, \"00114\".\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted \"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\" as the vendor name and \"00114 7416576\" as the GST ID. I've decided to use `null` for the invoice reference and due date since they are not explicitly mentioned on this receipt. The date \"06/01/18\" is interpreted as 2018-01-06. \"RM\" indicates MYR as the currency. I'm working through the tax details. The \"Gross Amt\" is 47.80. The 6% GST is calculated on 47.80. \"Svr Tax\" is 2.87 with 0% GST. So the total before tax is the sum of those values.\n\n\n**Completing JSON Schema**\n\nI've finished populating the core JSON fields: vendor details, date, currency, and total amount. I've calculated the untaxed amount based on the base amounts for GST and service tax and finalized the tax amount, which is only GST. I am now working on extracting and structuring the line items for the schema. I'm taking a close look at the confusing line item pricing format.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the finishing touches on the JSON schema, focusing specifically on the line items. I've successfully extracted and validated all the necessary fields: vendor details, date, currency, total amount, and tax information. I've double-checked the calculations for the untaxed amount and tax amount to ensure accuracy. I'm now certain of the structure of the line items. I'm satisfied with the JSON output.\n\n\n**Refining Schema Population**\n\nI'm now methodically extracting and organizing all necessary fields to fit within the JSON schema. I've successfully extracted key details like vendor name, GST ID, date, currency, and calculated the untaxed amount and tax amount, confirming that only the GST of 2.86 is the only tax. I am now accurately structuring the line items for the schema. I've double-checked all the values of the items and corrected an item.\n\n\n**Refining Item Extraction**\n\nI'm now carefully extracting the line item details. I've re-examined the receipt image, and I think I understand the line item structure now. I've corrected the previous misinterpretations of the line item descriptions and quantities. I'm focusing now on the accuracy of unit prices, and I will cross-reference with the totals. I'm now certain of the structure of all the item's details.\n\n\n\n**Refining Item Details**\n\nI'm now carefully extracting the line items, having re-examined the receipt. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n\n**Refining Item Extraction**\n\nI'm now extracting data for the JSON schema, working on the item lines, and fixing some issues in OCR interpretation. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n**Refining Item Details**\n\nI'm now carefully extracting the line items, having re-examined the receipt. I'm focusing on quantity, unit price, and descriptions to ensure accuracy in the line amounts. I will cross-reference with the totals for each item. I need to be exact.\n\n\n**Finalizing Tax and Lines**\n\nI've carefully revisited the tax calculations. I'm now certain about \"untaxed\" amount of 50.67, tax amount of 2.86 (the only tax), and a total of 53.55, which is what the receipt states. I'm also now confident in listing the individual items, their quantities, prices, and applicable tax rates. I'm taking a close look at potential OCR errors.\n\n\n**Finalizing Details Extraction**\n\nI'm now certain about my data extraction from the receipt. I have all fields for the JSON schema: vendor details, date, currency, and total amount. I've re-calculated the untaxed amount (50.67), tax (2.86), and the total (53.55), accounting for potential OCR errors. I've focused on the format of the line items, and the pricing structure. I'm now certain about all values. I am ready to finalize and output the JSON.\n\n\n**Refining Data Extraction**\n\nI'm now confidently synthesizing the core data, validating the calculations, and preparing to build the JSON. I'm taking another pass to reconcile values, particularly on the tax and subtotal. I have cross-checked amounts and tax rates. I'm focusing on the format for the itemized lines for the JSON.\n\n\n**Validating Line Item Details**\n\nI've carefully extracted and validated all data, including line item descriptions, quantities, and unit prices. I'm focusing specifically on reconciling the individual line item amounts with the overall totals to ensure the JSON structure is accurate and the final tax calculations are correct. I'm taking another pass at the data.\n\n\n**Refining Final Data**\n\nI'm now satisfied with the data I've extracted, including vendor details, date, currency, and financial figures like untaxed amount, tax, and total. I've reconciled discrepancies between the line items and the gross amount, understanding there may be OCR errors. I've re-reviewed the tax breakdown. I will finalize and output the JSON.\n\n\n**Reviewing and Validating**\n\nI've carefully revisited the item lines and calculations, focusing on potential OCR misinterpretations. I am now confident in the core data: vendor details, date, currency, and the calculated untaxed amount, tax, and total. I'm focusing specifically on the structural integrity of the line item format to ensure JSON compatibility and data accuracy.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 6124,
+   "total_tokens": 6442,
+   "cost": 0.0616375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0616375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.06124
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5670,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 43.72
+}

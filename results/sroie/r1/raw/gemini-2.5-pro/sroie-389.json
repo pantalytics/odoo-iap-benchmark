@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "MR. D.I.Y. (M) SDN BHD",
+  "vendor_vat": "000306020352",
+  "invoice_ref": "R000276342",
+  "invoice_date": "2016-01-25",
+  "due_date": "2016-01-25",
+  "currency": "MYR",
+  "untaxed": 19.81,
+  "tax": 1.19,
+  "total": 21.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "BASKET W/HOOK 9314#",
+    "quantity": 1.0,
+    "unit_price": 3.3,
+    "tax_rate": 6.0,
+    "net": 3.3
+   },
+   {
+    "description": "TOILET PAPER HOLDER BWJ-2503#",
+    "quantity": 1.0,
+    "unit_price": 16.51,
+    "tax_rate": 6.0,
+    "net": 16.51
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 19.81,
+    "tax": 1.19
+   }
+  ]
+ },
+ "cost_usd": 0.0287875,
+ "raw": {
+  "id": "gen-1794512803-Z6xd2rUGyGWrV2rISUiQ",
+  "object": "chat.completion",
+  "created": 1794512803,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MR. D.I.Y. (M) SDN BHD\",\n  \"vendor_vat\": \"000306020352\",\n  \"invoice_ref\": \"R000276342\",\n  \"invoice_date\": \"2016-01-25\",\n  \"due_date\": \"2016-01-25\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 19.81,\n  \"tax\": 1.19,\n  \"total\": 21.00,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"BASKET W/HOOK 9314#\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.3,\n      \"tax_rate\": 6.0,\n      \"net\": 3.3\n    },\n    {\n      \"description\": \"TOILET PAPER HOLDER BWJ-2503#\",\n      \"quantity\": 1.0,\n      \"unit_price\": 16.51,\n      \"tax_rate\": 6.0,\n      \"net\": 16.51\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 19.81,\n      \"tax\": 1.19\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"MR. D.I.Y. (M) SDN BHD\". I've also found the GST ID, which should populate the `vendor_vat` field as \"000306020 352\". Finally, I've located the receipt number, \"R0002\", that I'll use as the `invoice_ref`. The information seems well-structured.\n\n\n**Populating Key Fields**\n\nI'm now populating the JSON schema with extracted data. The date is \"2016-01-25\", and as it's a cash receipt, the due date is the same. The currency is MYR (RM), the total is RM 21.00, and the GST amount (tax) is RM 1.19. I've calculated the untaxed amount to be 19.81. No IBAN is listed. I've classified this receipt as having the standard GST rate, 'S'. Now I'm extracting the line item information.\n\n\n**Refining Item Details**\n\nI'm now zeroing in on the line items, calculating net prices from the tax-inclusive totals. For each, I've derived the net amounts, accounting for the 6% GST and adjusting them to match the overall untaxed total of RM 19.81. The first item \"BASKET W/HOOK 93 14#\" has a net of 3.30 and the second \"TOILET PAPER HOLDER BWJ-2503#\" has a net of 16.51.\n\n\n**Finalizing Data Population**\n\nI'm now putting the finishing touches on the data. I've re-reviewed all calculations, and confirmed the accuracy of each field. Specifically, I've adjusted the invoice reference to \"R0002\" and double checked all figures, and verified the line item breakdown and VAT rates to ensure compliance with the schema, with a focus on matching the total sums. This should be ready to populate the database with the finalized data.\n\n\n\n**Finalizing Data Validation**\n\nI'm now cross-referencing all calculated and extracted values against each other to ensure consistency and a high degree of confidence. Specifically, I'm verifying the total tax amount calculated against each line item, reviewing the untaxed amount from line items, and validating the final total to ensure that the data adheres to the JSON schema, and is ready for database population. I've corrected the invoice reference number to \"R0002\", as I identified the relevant section.\n\n\n**Finalizing JSON Data**\n\nI'm now integrating all extracted and calculated data into the JSON schema, including all line items. I've re-checked everything, including calculations of net and unit prices, and ensured data aligns with the overall totals. The invoice reference is updated to \"R0002\", and the descriptions are confirmed. I'm verifying the GST details to prepare for database population.\n\n\n**Finalizing Data Population**\n\nI've now incorporated the calculated values, including net prices for line items, and confirmed consistency across all fields. The line items' unit prices and descriptions are aligned, and the invoice reference is now \"R0002\". I'm validating the VAT breakdown to ensure its match with the total figures, ensuring that the data adheres to the JSON schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"MR. D.I.Y. (M) SDN BHD\". I've also found the GST ID, which should populate the `vendor_vat` field as \"000306020 352\". Finally, I've located the receipt number, \"R0002\", that I'll use as the `invoice_ref`. The information seems well-structured.\n\n\n**Populating Key Fields**\n\nI'm now populating the JSON schema with extracted data. The date is \"2016-01-25\", and as it's a cash receipt, the due date is the same. The currency is MYR (RM), the total is RM 21.00, and the GST amount (tax) is RM 1.19. I've calculated the untaxed amount to be 19.81. No IBAN is listed. I've classified this receipt as having the standard GST rate, 'S'. Now I'm extracting the line item information.\n\n\n**Refining Item Details**\n\nI'm now zeroing in on the line items, calculating net prices from the tax-inclusive totals. For each, I've derived the net amounts, accounting for the 6% GST and adjusting them to match the overall untaxed total of RM 19.81. The first item \"BASKET W/HOOK 93 14#\" has a net of 3.30 and the second \"TOILET PAPER HOLDER BWJ-2503#\" has a net of 16.51.\n\n\n**Finalizing Data Population**\n\nI'm now putting the finishing touches on the data. I've re-reviewed all calculations, and confirmed the accuracy of each field. Specifically, I've adjusted the invoice reference to \"R0002\" and double checked all figures, and verified the line item breakdown and VAT rates to ensure compliance with the schema, with a focus on matching the total sums. This should be ready to populate the database with the finalized data.\n\n\n\n**Finalizing Data Validation**\n\nI'm now cross-referencing all calculated and extracted values against each other to ensure consistency and a high degree of confidence. Specifically, I'm verifying the total tax amount calculated against each line item, reviewing the untaxed amount from line items, and validating the final total to ensure that the data adheres to the JSON schema, and is ready for database population. I've corrected the invoice reference number to \"R0002\", as I identified the relevant section.\n\n\n**Finalizing JSON Data**\n\nI'm now integrating all extracted and calculated data into the JSON schema, including all line items. I've re-checked everything, including calculations of net and unit prices, and ensured data aligns with the overall totals. The invoice reference is updated to \"R0002\", and the descriptions are confirmed. I'm verifying the GST details to prepare for database population.\n\n\n**Finalizing Data Population**\n\nI've now incorporated the calculated values, including net prices for line items, and confirmed consistency across all fields. The line items' unit prices and descriptions are aligned, and the invoice reference is now \"R0002\". I'm validating the VAT breakdown to ensure its match with the total figures, ensuring that the data adheres to the JSON schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2839,
+   "total_tokens": 3157,
+   "cost": 0.0287875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0287875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02839
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2483,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.79
+}

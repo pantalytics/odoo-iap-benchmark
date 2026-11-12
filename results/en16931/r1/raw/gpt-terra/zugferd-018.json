@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1,
+    "tax_rate": 19,
+    "net": -5
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.0295675,
+ "raw": {
+  "id": "gen-1794514867-jLOKvoJk2emzFL6LfzB9",
+  "object": "chat.completion",
+  "created": 1794514867,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"RK21012345\",\"invoice_date\":\"2018-09-16\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":-7.67,\"tax\":-1.12,\"total\":-8.79,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Zitronensäure 100ml\",\"quantity\":-5,\"unit_price\":1,\"tax_rate\":19,\"net\":-5},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":-2,\"unit_price\":1.45,\"tax_rate\":7,\"net\":-2.9}],\"vat_breakdown\":[{\"rate\":19,\"base\":-4.85,\"tax\":-0.92},{\"rate\":7,\"base\":-2.82,\"tax\":-0.2}]}",
+     "refusal": null,
+     "reasoning": "**Reviewing invoice details**\n\nI see that I need to format the information into JSON. There's a tax shown of -0.92 and -0.20, which adds up to a total tax of -1.12, even though the layout looks a bit strange. The VAT treatment descriptions should include the full product name, like \"Zitronensäure 100ml.\" The unit price is showing as positive, but the quantity is negative, leading to a net negative value. I also notice that the IBAN is missing, and there's an invoice correction referencing RK.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Reviewing invoice details**\n\nI see that I need to format the information into JSON. There's a tax shown of -0.92 and -0.20, which adds up to a total tax of -1.12, even though the layout looks a bit strange. The VAT treatment descriptions should include the full product name, like \"Zitronensäure 100ml.\" The unit price is showing as positive, but the quantity is negative, leading to a net negative value. I also notice that the IBAN is missing, and there's an invoice correction referencing RK.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h-38Z25o-rej8CorlwzLHEmgzXXGKoY6_j2zm1KCBCm8KRlL6sYlGUu--ydJTUAUXp8dj328a1QFdWTJpIKbTouN34ztANpMEPoWW62adSEvIZDK_GXFzT6YKVj7LeHQobI1lO7kOddQ1ZWAgC1S3RZTaPwL5Y48z-ExXrXs7eiTUm_Xb3TN4lq8sbckW7aNVMQ5bzbu2jVK5s2LMQe3nocTG9kAS5uvWqNF3td4tHfjCV7Ei-ATxGdcMUUKRfOrqG9IjO9Htu4eEEUqV29Uj3-gMt-nd_L5kxjBqxweA_vXiDxTjZ70UO5RGf-DuG6-Np7yJdFwQ4irJWwqksO1cWTqUC43eUXUaqDKnvZ5C1J4p5xoAkkWIsHb1XaFIcx0GCumMMWePjUppvqk5sqx2HCCBhday5N9XQb37w9bfYtdmWJLwzbt24KAcbM_ot6E3-RtseNK2Am9EVkG8WwufXSXRX5cPnRsnKfR6SLVz7tBjCPM8yivp02vllKsYv995cGb83XjNqQ-kTqwavWWTkO9OT3V5MucWDc0ncMAFrcUF4RgvcLHu0QRm4MO0RIw8YKG60WyeAqvhtiM1e-JKGaFr0Q2evy7qeuPpdB-7KuQvL73N4SchQG0IOE8qwM2r3lY5KfKITmJFNEOWsmeHm-gOZQV6nkydFxMIa_zjmhtFIWlkrRYUJAceukWRr4xDOPa7I6EZBlv3vuezsIny48l9WfNHZJApgE1lVlay7bPIq4UCBf3puP-ua-z78-Z94OzPzSh8nSzJ7Q9LOWcciYDGrTfL6p9XojZVUEMsEVBu0pplPMzX-UzC7lFfcDde4Ec99he0pCQerDhy-4mBG4lFD7WkFuCq1hHggYkEmYB5O67G7IUOSFaD-PBTbFr1wjRQqTP19u9sflsTf6-dQUVw2mPohctqaEyWqjaa036Tcn0cbB5ma0gBwAntuV4Q58kcjDNrx6-Z1vpHgwBC_9UT8YwWzHhphfMNXBTKqKuvwaJfi__ZMeyeqMzEgrxnXOtxfc9FN85eVBPnO0WOd9ZkxqnI9SDWKvbXXyfdiPzasikFBNUq1Sz5b3Sg9bfGRGfZmAKCz0P32RL0gz3aPf6BSFk5dJSh2J3968LdgXnFSgU2uEyx-W_6ty0gpFN_b7Fij3jHdGU5kpFc30322jY7ZXabMTn7xCdGCG9hhM8Q1ge2QH0bcWG1Z8ZeVi3mZE0U7itpQddFwcLNpJBLVGZZs68SKvPax0ioJ0DTC3ik3PnMWN6antWTV-wKOIngqYadMqBHn_6l92aNI6qA4drO35DQifJlZXF9CiY1Mv8RZrQALxUHtKUFsSGljHNYNryd7kQDdA4AwcJZZX-Svc71e-d0uJu72Dc2rmVYvvMS917UcxD9Sft7cHHGamnnCa90lgeOx7HkzedEP-ZlCpgb63HjY0r_h-BAR6H4CI4W6Y12PfKmoErUeQ3i9VabKzviMMX5a_QqouaSjDSnOrEBWheR0s6XxqA0VNOb_FWqd0UMOEXcHGJROp6rJWIQDbezqjAGcwT1ZXOKLvRbuot-uqs6KToazpvQOwGtlrwHQBQDTE6Xh95pAdbiHLTFyJmNTCQt-uGDbD4an9Ddo-EqdDXsvGFHW8fkNllyU0mDaS0M3CeAiJkS1N-BUojEFFKKNZGU5-SY_bFCt9Y5-TF_WF9PDVGL7Nphy2CKamztzqUmwhY7C8jnKs55M2AhhgiuApm-xGoyE7D2S2mHVZmR3Age9WgG_Dr7UVrEypK1OZf5COG5BDV2eunVHWYGW6VnqgB0ytwbWZL9JcSdzbb4WqvgqNWFvbIWvLZSPz6BPdj83MaO7vvNm08PiHhlm4eMDhYqvRnF_5FP96gkANAIEie022zsjczX5kR-dIYZzjHJB-hRgdF_tmI0KhgeFmA9LtAhp_0UtPIJJSWGjdMOz7MKTUrOik_dPIBQN_prSolplKmnKB1CCMsJrnx3mTJpqecV7IAyg6VOPsq_QFbP-tsiMPXwoI8QtRjBUcuNIZhO0Y4S_1gjiAr2vhFWZ_WL9NBPlGqT8gONSvbuI9Xf9FFCOTk_g6E_mNFcMDmFTxfF0bHg5ho-wNkgrDAGUykuYkkUdM-Vlokl0DacjivT_bd9u41LE5upw160givvakNM0KZkJWDJW1U2Mm1U5L7LoOe9HLR2x6aHxRkolMw7ekCDV4zARzjd0lZqJV29p4JBo-ytrsMHN7JRVG8wxVHvuLRCDbAlwfEmUoZMRnh45ZP8OCyaayKRMFmrDlj41xdA6HhdnrtK-DGEQeFX7hdMGD7eS8YlfmCHYkOrFEs0YbWLpx7nSfLbUYie6bC-SLP1tXPStv0310QvNm64m94mlWoxSPBQp48jpu23UOCLChfrLMEkMdt4QNPOhFHettaiDmIOavKl_CEoI_WbDaTws0NkwskA_ae_3CHZ3KIVngnI4f_izpKwHNZ4-5HRrkWKjedp7i8xjwGt6IoqSjNDBpXdP_XzP6GKXjZb3z0n5Zyvvk1EBdf52nnYEN3e00O3nYWLkWBRAQGfsqM9w9LnPksrBJN3zCvzAe6JQjlliYUP-HL4R_tbmfdwTGScrG39VoSWcV1_gbogvtwIZM.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0db6a65c338e373b016af61fb464b487d190ecf5e981ca6c53",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 10498,
+   "completion_tokens": 277,
+   "total_tokens": 10775,
+   "cost": 0.0295675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 10495,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0295675,
+    "upstream_inference_prompt_cost": 0.0262435,
+    "upstream_inference_completions_cost": 0.003324
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 74,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.3
+}

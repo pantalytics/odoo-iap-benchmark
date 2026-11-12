@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "Rodriguez and Sons",
+  "vendor_vat": "943-82-3154",
+  "invoice_ref": "76229289",
+  "invoice_date": "2018-12-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5149.91,
+  "tax": 514.99,
+  "total": 5664.9,
+  "iban": "GB62DPIQ05886436296811",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram",
+    "quantity": 3,
+    "unit_price": 400,
+    "tax_rate": 10,
+    "net": 1200
+   },
+   {
+    "description": "GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB",
+    "quantity": 5,
+    "unit_price": 549.99,
+    "tax_rate": 10,
+    "net": 2749.95
+   },
+   {
+    "description": "computer",
+    "quantity": 4,
+    "unit_price": 299.99,
+    "tax_rate": 10,
+    "net": 1199.96
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 5149.91,
+    "tax": 514.99
+   }
+  ]
+ },
+ "cost_usd": 0.023464,
+ "raw": {
+  "id": "gen-1794514904-PWTg3HxkDCcwOS2clKX1",
+  "object": "chat.completion",
+  "created": 1794514904,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Rodriguez and Sons\",\"vendor_vat\":\"943-82-3154\",\"invoice_ref\":\"76229289\",\"invoice_date\":\"2018-12-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":5149.91,\"tax\":514.99,\"total\":5664.9,\"iban\":\"GB62DPIQ05886436296811\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Gaming PC Computer RX 580 8GB Ryzen 5 2x8GB Ram\",\"quantity\":3,\"unit_price\":400,\"tax_rate\":10,\"net\":1200},{\"description\":\"GAMING PC Desktop Computer RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB\",\"quantity\":5,\"unit_price\":549.99,\"tax_rate\":10,\"net\":2749.95},{\"description\":\"computer\",\"quantity\":4,\"unit_price\":299.99,\"tax_rate\":10,\"net\":1199.96}],\"vat_breakdown\":[{\"rate\":10,\"base\":5149.91,\"tax\":514.99}]}",
+     "refusal": null,
+     "reasoning": "I'm deciding how to read the date 12/04/2018, since the dollar sign points to a US format but the comma-decimal style hints at Europe. The invoices look synthetic, and the Kaggle dataset I'm recalling generally uses MM/DD/YYYY, so I'll settle on 2018-12-04. The currency is USD, and I'm checking the line items: 1200 + 2749.95 + 1199.96 comes to 5149.91.\n\nI'm working out the tax and total now: 10% of 5149.91 gives 514.99, which brings the invoice to 5664.90.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm deciding how to read the date 12/04/2018, since the dollar sign points to a US format but the comma-decimal style hints at Europe. The invoices look synthetic, and the Kaggle dataset I'm recalling generally uses MM/DD/YYYY, so I'll settle on 2018-12-04. The currency is USD, and I'm checking the line items: 1200 + 2749.95 + 1199.96 comes to 5149.91.\n\nI'm working out the tax and total now: 10% of 5149.91 gives 514.99, which brings the invoice to 5664.90.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSywcKEAgTGAI4AUIIdGhpbmtpbmcSDEurOacKkxLniATXpxoMJyY0o2tpmspobKBxIjDvcWWIjMmu8vVuFp+hK6oLgprXITwXmE7hikiGWx1baEssOeM78R4B+w39WX4FjCsq6Aa6KqZFHJFddBtt0CeGlOB+4MK21N1WwJUVHXdtZZ66YBk9nRcG/ZMK5qCrBDtNq9HPyveH3Dlt3vWirxEVXoNuGKKyH0g3+RSWQTI7meNiwnoI60ill1ahiP/cZbwq2bbyhE3/7gGQpH8nMMEz3JN940BR86bw7HUffWsC9e4XTu8OpLHzi4KvL8L4u8uWBpF2z/8iY5vhwBI3tJztEBY4ZbPBT+9SeajLKiEkJ59MAUka2GZpT9CDwHqGfhnWwc/bCUJv5QcWumIduXN3mZDxiRuutNONfd1n5ydleh9nqtMwDf39SP1MiYHFYqFIjdWDotB0HUAbfDiQ0PBV5beKOQOJb24fU4szwUFE5A/5zbSgQXrWGI6B0hCpk0bQEEBEmngMJvVQ8+J4Rjag6kSibGgu+uG2u3NucJy3HbcKSyr/i/gZcO+seVhpZEu3Ln6pCz81NjZOB+mxTpXXxbqQqleY5BmxcpJj3YY4pfzDGF1nZ94BzwmIvSi+JJSRdDd16RPEsq+HBgsWXLDy4snpyCl2f6JoxmbQKalqgHMK6U+Zp30cGUWcsyg8/Tf8XlU+1DqtTfjGlfvs7bM7mmEPgSdhuqsTOse5fOUSAZ9QzDWmj/ZSXt9eaCABx83079FOo/tQhxluETpe1nsgzCn5zQFnr/ND6Xo9CYZbt63ZTU8PsecqBOaGWEvdR+qT1Zl3r+MwlSvxX1wRLbD+s9WvVDFfko03mykyiaAqu1BVaaYjpreOAaKeFLF/PyW0QOR2RS3iH7wZQw10YuAYgscYqFD/pOG/2x05T38Gr7AgXLXzymxukNSCeip8pCKVzF3HTJIaZCoY5R1n0y2H0jECQuEziIG6B76GHXbU+HPoJE5ayUiVvTuMyAmuLkAT/cNp3n2oP83jhALXADnRT0KmSt+limMHICCSFSMn29MbXYhksqwKJtoI91T3IqKmlEHi2YIEYPiP1WcP2IWFCnlhQDo+0iV7Tq1wmhH7V57n8HjJ7PbWpGUNDOJw9HHevP/JVBMVP8R8pob70JnUGst4+yHc2kvD2PWEsAdDo4CkTAn709Jo9dUWtJ4i84hT1/c64IVEhhqazMO1ynVi0NqER3gBFSGGBaNHEY4/CJRGQ5pfFuBxnbeqxjrYfzAS9kUYSdmNFt+FKxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 537,
+   "total_tokens": 3718,
+   "cost": 0.023464,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023464,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01074
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 165,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.32
+}

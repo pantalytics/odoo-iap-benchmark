@@ -1,0 +1,109 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-01-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3,
+    "unit_price": 45,
+    "tax_rate": 10,
+    "net": 135
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4,
+    "unit_price": 119.99,
+    "tax_rate": 10,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10",
+    "quantity": 3,
+    "unit_price": 124.95,
+    "tax_rate": 10,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5,
+    "unit_price": 1092.27,
+    "tax_rate": 10,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.025024,
+ "raw": {
+  "id": "gen-1794515178-zzyrG57hViPj5OHYEE5U",
+  "object": "chat.completion",
+  "created": 1794515178,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith-Guerrero\",\"vendor_vat\":\"954-91-2300\",\"invoice_ref\":\"39400829\",\"invoice_date\":\"2012-01-12\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":6451.16,\"tax\":645.12,\"total\":7096.28,\"iban\":\"GB81NHIS20902698381776\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\"quantity\":3,\"unit_price\":45,\"tax_rate\":10,\"net\":135},{\"description\":\"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\"quantity\":4,\"unit_price\":119.99,\"tax_rate\":10,\"net\":479.96},{\"description\":\"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10\",\"quantity\":3,\"unit_price\":124.95,\"tax_rate\":10,\"net\":374.85},{\"description\":\"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\"quantity\":5,\"unit_price\":1092.27,\"tax_rate\":10,\"net\":5461.35}],\"vat_breakdown\":[{\"rate\":10,\"base\":6451.16,\"tax\":645.12}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date 01/12/2012 as ambiguous, since it could be January 12 or December 1. The synthetic invoices here usually follow MM/DD/YYYY, so I'll take it as 2012-01-12. Then I'm checking that the line items add up: 135 + 479.96 + 374.85 + 5461.35 = 6451.16, which matches.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date 01/12/2012 as ambiguous, since it could be January 12 or December 1. The synthetic invoices here usually follow MM/DD/YYYY, so I'll take it as 2012-01-12. Then I'm checking that the line items add up: 135 + 479.96 + 374.85 + 5461.35 = 6451.16, which matches.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQStQYKEAgTGAI4AUIIdGhpbmtpbmcSDAg7HmTVKLwg5HgT6BoMyrL3dE7yneFXugNDIjA9lHhp4A2MEzShOrossosaSH7v3tYSgW6SXSJk6VohsnZWyDkvunmZUAExDXyl93Uq0gWmBlWr29W5oiQTtEIcdFZSCl9ozh1X7VCu9Y1BEC5Ya3/fmTSdaXfZCqU9jea9q47NuIR8KmW8aAf6n6KMiM2KIggWeki6FNLLK2PRwsZVSxMeh0mDMXXswWi5p/R5J/sYzIcP4yolFgs87UPHq1N+zB0zM4HaK+pqep8bKZ/p3evhVwlUlOglNuftA5lAQOKilPJ7wLPoMnNJrOKoH1OZS6R2DkGT9UcWofCgI0Gmn+LMg3DTVnP4iH38QcDy7GN3fRJptqR52p0C+f7wiUCBlRJtpHxUuQiZkrtKX9sVdFCW4l8kXlbvDY2FNblX3F5HZWqlcli07woKYEv5Mamdrn2nEhyYTsE0S15g9MnLITnzuj+bVk7vn/yWJyk/sOL07ThYFGAV+BaS+u7jbwJKOcrMy5TUipVYQdb/rkCKHxTX54n/Yi7jBtNbOFvmjkq+xLa+jEHsiVoDZzvC+8LPyetumozR+P9mqC4sVZztC8RV05dZcar3qz7MGsafBQ0nvlT/hvYhIIbZw8ZrENHdfIk8E3GpRAFNqvxarcGM2AgHY4/h9iRXhRPaj0aBSxMTm7dZ0P6mfoPzyaiHUy1A6H8T4dFZ8H+IYlA/8/Eb0rOu09RdJPcPpUyEdevxrvo1zaW51u6XHXrxRQgcnZnIqkIdPgSQYn5rHa2jLHygh0J9+KHilfdfcVmwJIiCxnMXEqNGQQp80Sdr51SOT2t6xeaPJJ2eDkMcQqiwHgu8snIYe4/+wHXJ8JTip7bK7kXWydKAV6qT1uMM5oRyyWzJA++hXmOSTAw//oHWQrN2qoO5NZrEVSdyEkNlKVsT12NYDAk1pdzbuuSHGnpYwI/56sGlmZ04TXwFI/WDryY9Ge0U545b+2lZ/zxlXEcZPUVwpU8gjt+qZmhIqMxBjD7OuyG2q5FlsDAOFO9rU2b3EhJQd7J3bploms3nRUaWix+uFxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 615,
+   "total_tokens": 3796,
+   "cost": 0.025024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025024,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.0123
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 105,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.85
+}

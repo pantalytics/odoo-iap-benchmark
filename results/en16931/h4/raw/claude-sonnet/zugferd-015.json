@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0008",
+  "invoice_date": "2017-11-03",
+  "due_date": "2017-12-03",
+  "currency": "EUR",
+  "untaxed": 2076.76,
+  "tax": 0.0,
+  "total": 2076.76,
+  "iban": "FR20124212421242124212421 24",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 8,
+    "unit_price": 4.55,
+    "tax_rate": 0,
+    "net": 32.76
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 20,
+    "unit_price": 3.2,
+    "tax_rate": 0,
+    "net": 64.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 100,
+    "unit_price": 19.8,
+    "tax_rate": 0,
+    "net": 1980.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2076.76,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.01533,
+ "raw": {
+  "id": "gen-1794514766-1CGKkgNPJq1hoApIQZb2",
+  "object": "chat.completion",
+  "created": 1794514766,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Au bon moulin SARL\",\"vendor_vat\":\"FR11999999998\",\"invoice_ref\":\"FA-2017-0008\",\"invoice_date\":\"2017-11-03\",\"due_date\":\"2017-12-03\",\"currency\":\"EUR\",\"untaxed\":2076.76,\"tax\":0.0,\"total\":2076.76,\"iban\":\"FR20124212421242124212421 24\",\"vat_treatment\":\"K\",\"lines\":[{\"description\":\"Nougat de l'Abbaye 250g\",\"quantity\":8,\"unit_price\":4.55,\"tax_rate\":0,\"net\":32.76},{\"description\":\"Biscuits aux raisins 300g\",\"quantity\":20,\"unit_price\":3.2,\"tax_rate\":0,\"net\":64.0},{\"description\":\"Huile d'olive à l'ancienne\",\"quantity\":100,\"unit_price\":19.8,\"tax_rate\":0,\"net\":1980.0}],\"vat_breakdown\":[{\"rate\":0,\"base\":2076.76,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm settling on month-first for every date, since the 11/17/2017 payment date can only be read that way. That makes the invoice date November 3 and the due date December 3, which fits a 30-day term. Next I'm going through the line items, starting with the Nougat entry at 8 units at 4.55.\n\nNext I'm checking the line-level figures: the 10% discount brings the Nougat line to 32.76 net, with a unit price of 4.55 and a tax rate of 0. I'm treating the VAT as an intra-community supply, and the vendor VAT number is FR11999999998. For the IBAN I'll drop the spaces and keep it compact. The VAT breakdown shows a base of 2076.76 at rate 0, with no tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm settling on month-first for every date, since the 11/17/2017 payment date can only be read that way. That makes the invoice date November 3 and the due date December 3, which fits a 30-day term. Next I'm going through the line items, starting with the Nougat entry at 8 units at 4.55.\n\nNext I'm checking the line-level figures: the 10% discount brings the Nougat line to 32.76 net, with a unit price of 4.55 and a tax rate of 0. I'm treating the VAT as an intra-community supply, and the vendor VAT number is FR11999999998. For the IBAN I'll drop the spaces and keep it compact. The VAT breakdown shows a base of 2076.76 at rate 0, with no tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS7gkKEAgTGAI4AUIIdGhpbmtpbmcSDFPK9BwlA6r/JuohThoMhXfCd6byQBxoYAcKIjCrDwarYep5zHyHRaXmd6SNa1t5ykLR1J8OjjCEA4elROI0sGb1HpqblMeykGzjw0Iqiwm9S0d9rNsidHKO/h1fAbfxgqWcBk8nakkFYPeYDztEIQFFbyceU4P1iDC8ZU++6TySGSTHkuh0OnsmH33JIxcxylUjD7O4YM8+yC62GRaT+eFfcWgdc7gWRhNU71h1Jp1gxq5CGrQuiyCfee/VZfdALc7JxQULZOcbHv3TecXKMQvHtgJfMMMOxZYQAB3AhXgIJ9dpviy7ovjzImvYBpYmJ0ZniuXlLoxfvZt5ehLmm+8BgSOA+xROP22kfoAw7XV6kTEOFOagAYC/1yX644vKRUGF/fxe4OYS1LSDCMLeofrONJI2cMiXrwr9vLazw40PXPuKE/delpRlWEtLjOlrnoiqNN2CIcJBFNfmB/yzGZ5iC8bawjjaodpjtadtO82bUrrJk0cKyufTf6I27IPnLdqhV50JZnDTqKC9TZ6CP4yiDiQSGZNvs8c+svEABVsUiZLXblh0FVhuID7yF+mKkP+KjZfUYt8MD70aguHAaJ925AlLim9u2Jd25N/kRW+fmts9b8gLlnhNpH8GPwpJmwQIvSJeS0jdWVDm7vTVSwAVaYMmwEkn9Fr0qd7y+jlPOV10ahm+4Yb76QpRby1MNfVGX+6z7Zw8ynoCIqdOZIbmtW0peMYpPFW8B+czkdnGeC/xiqbfnoUkCRugaT2oc0+x+q/uNTHCnLvL7nNWJFRMg/dWqj4kzDXqNMq8irWOQLO6JXPtdP4ZIUigMpUakuhX7Qap54dJHxBjStyBZ4ZOxVCaN75LGf7Lk1+dYVtDihEup2vIKlKjOGPnGvTT1xVUtN070NFIbB5YfIskRIHjM2ATmhWX+llC2IHVvBUoxF/RJYFpXduGyZnvhk9GdqFu6oTRnNJZcPdgIZV98V2C5FW/Y721mzB+5lkqT7Qe9mQueaATNZ56d8MGq63pald2P+QjsQHYkrxW5+tIuTWlO1msCaCfA0lBAeJzQsPs6MpJJqmTvIB/eO03+jhNfHLcKKSELRs0I9VZsTEexlv3m8B7nwpu6ihV36Ld/sf7Uw+vyC+6auuvKIqBSiQmGzc+VCK6arGtlVIm0LqQo3FEMeBZwKexuOcTxpDqE+kEthfEs+o9vWUs7O8X5j09lsN8HguxzZhA4zlwR3mR1zJQqXRmAUUegYasEe9dG2cJvI5j/l1WoHz5TdS64oQ+Nu9LL/8HveGVvimSbVCZ2+aEYrmbz67Q+HWkDdbRpodcEd4IeHb4vnZMaCVPiL5Ndr0W37Nx1iJ4UyHGzO3MQ20INyTyhz+AEHD4pjqevHxst2ehsMzIIZRK1j7i3EKj5cQEAlhQJmvMzX5GMQu49E/QolGDFu/ioVsS0AHEaXlqT6J61SJ2hmb1s+MMlpuiQFd9I9g1WssPMgRkbUya3zM5wlMDLTA3tkFog+q7Av6xkpGHi6RjFmXNvoXu2KiNUSxFzmLtYhpbsPC8uSHwuwAOEvgn+hQhQn+k9Zgek7rRvt03GI1gyTUe8eYFyMh3OUYMp269TAQFg3tMdfipX8hU73S9aq8MReSSiv22kP0y7exdAkKZINZAWhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4460,
+   "completion_tokens": 641,
+   "total_tokens": 5101,
+   "cost": 0.01533,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01533,
+    "upstream_inference_prompt_cost": 0.00892,
+    "upstream_inference_completions_cost": 0.00641
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 302,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.16
+}

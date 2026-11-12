@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "ADVANCO COMPANY",
+  "vendor_vat": "001658445824",
+  "invoice_ref": "389720",
+  "invoice_date": "2018-01-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.6,
+  "tax": 0.4,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "UNICORN-20CM HALF WHITE RULER A15961",
+    "quantity": 1,
+    "unit_price": 0.75,
+    "tax_rate": 6,
+    "net": 0.75
+   },
+   {
+    "description": "CBE-S217 CBE 7\" SCISSORS (2.0MM A27269",
+    "quantity": 1,
+    "unit_price": 5.85,
+    "tax_rate": 6,
+    "net": 5.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.6,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.023724,
+ "raw": {
+  "id": "gen-1794514670-DZMXFfQyvWuaEwynw84m",
+  "object": "chat.completion",
+  "created": 1794514670,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"ADVANCO COMPANY\",\"vendor_vat\":\"001658445824\",\"invoice_ref\":\"389720\",\"invoice_date\":\"2018-01-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.6,\"tax\":0.4,\"total\":7.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"UNICORN-20CM HALF WHITE RULER A15961\",\"quantity\":1,\"unit_price\":0.75,\"tax_rate\":6,\"net\":0.75},{\"description\":\"CBE-S217 CBE 7\\\" SCISSORS (2.0MM A27269\",\"quantity\":1,\"unit_price\":5.85,\"tax_rate\":6,\"net\":5.85}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.6,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the Malaysian receipt, where the 6% GST is already included in the printed line prices. Backing it out, 0.80 becomes about 0.75 and 6.20 about 5.85, which sums to 6.60 and matches the total. Now I'm weighing whether to use these computed net amounts, since the schema asks for the line amount before tax.\n\nI'm settling on pre-tax values of 0.75 and 5.85 for the line amounts, since the printed figures include GST and the schema wants amounts before tax. Those still sum to 6.60, which keeps them consistent with the receipt total. I'm also noting the vendor's GST registration number, the invoice reference, the date, and the currency.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the Malaysian receipt, where the 6% GST is already included in the printed line prices. Backing it out, 0.80 becomes about 0.75 and 6.20 about 5.85, which sums to 6.60 and matches the total. Now I'm weighing whether to use these computed net amounts, since the schema asks for the line amount before tax.\n\nI'm settling on pre-tax values of 0.75 and 5.85 for the line amounts, since the printed figures include GST and the schema wants amounts before tax. Those still sum to 6.60, which keeps them consistent with the receipt total. I'm also noting the vendor's GST registration number, the invoice reference, the date, and the currency.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSqQkKEAgTGAI4AUIIdGhpbmtpbmcSDCsQpnTYftxOKTLjdxoM8yYT0a0NOKyfUb5iIjD1mSL+zlAKfBRNhGjJnFP2jFqUzlBqp3bU2s59dIyyXLodI1plc0VrXGt6IVz9qwEqxgjZxv96tzj+gIbE8u6TAdbLnJ5VjJgNgqTxuT4mlmzk/c1wjgJSr2NyF7XsabEzIWGM5Xj57K5qtXZj4ebMT5edsWDA6JZYokpW83sE0/vXJ8BQJD8aqo7Cwey7XjiPQwnAkpToD6UkjTgSiaMC0pflewPHr1X7RWKe+C5DSDl/zLJI6ERb3evK9R0fusXzwt31GaLiz7wRyw7dgThOnihzzOm5t73eWxzqkHs/saQqSPJ0GHOwWUVfyvWcoTlXQFEmvJVOlDpQpudRR88cGkV/s9dq3ogDYXib5xHwDW2RMXOiQXWt/bvUtIFrB1wASLr67YC86Gaw42wCTtoigpZcsqpOpb4A2ZvjEDDhZqhLmiVfc4nyftdqHJB/UpAzyMQJQdktWuZm5vly+Ip9C10U3CdQBo+r7E2QzPdMHBYW+B24zTzpgbJ7Fd4jCRT6VGFKDhmaXW9IVaQisQYoWy2LE3WIQrsktPxcQqZW5cnXtMc+aqK+a9L6/2sya1TcbOrk5CmGTLWo0CPoTRTjkIpnP1vGfVWpVhLpIkCmjsSlQ81/aGIdJZmOjPGk6blRhSFDRbhvjo8E2nfavTKa90a+CywrFtlgokktJrikqAv6HxOg1c0FwkxBeyJtGUhgDTpEx6Zhun5IYNFd5ksmhFG3UYjf31AZYxBLhXGeliyTSWdq/tUqSdMCvK58e8irfK1nhXaF1ZlaTfMtIW6PevUTR1DZv8Rcrpxhl9w1RtCNoNXJJhzFf9Rqlb220FVEGwwT8utNx5iK+IvcSKER6ceM0Hzi51o49cJVTI/t0zrJ44PCFbjrujPUFoquK2qxQpYSBQwe4o3sR0K/mTcJXYUaeFHr+qCe5U72ZZYFDF13FdFj824fQyFZXv3D31bB5rkWrjdAAQmAN6xS7I82KS5nTcdfJBteqDW74PGAsa7A1YnwOGEzbrXAthdwHoqORas21W1ZwheLVvRJu8Rb86untvZEZ8CHkpGCjxS2iX1A1Dc3Huhx1U3ZtKL5SelnhL+bVVMRztjlx6XAXbDHNHz5Jl9FCh0ag4zPuvr9pv9NCpU/xcWYFbA4axYHqu8jSl8ag78TQu5mUIRag6qXbgWL9bEUqL0Z83Zxej8GYZuaQmSaVYQcC7qZqc9RQtgGGDaf7okbgwThwt1ZGzp+IbklHy1+4S9ngTDSkPKZMfpqVICS2l/sgVFNSnQrLPApo0bP0UmqDRF2YX1B3l2k+iqDPQEtSLtFdzlvuBiftJ8cvG2eaLk9Z5Xk9UER0DIsuXazW4bnDwn/MQrmoJiTucRAj1xnKb+ZL0Xwa3jUtmPRSz0VXs7Z21sW6Guz8Ypf2MdS8BbS0VNQxeDhgHt06fVAn27tLmY2lD5Nq3L3gSX6o0k5cS2GJqic01zDxjWTUT0TLOXNoRN6OFt8IwYgfvC7PR6mnNo3KMrKqwk3tJVEs6wjJtuL6BgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 550,
+   "total_tokens": 3731,
+   "cost": 0.023724,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023724,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.011
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 267,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.35
+}

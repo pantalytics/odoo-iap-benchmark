@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "THE STORE (MALAYSIA) SDN BHD",
+  "vendor_vat": "000364929024",
+  "invoice_ref": "1012-3001-0094",
+  "invoice_date": "2018-01-14",
+  "due_date": "2018-01-14",
+  "currency": "MYR",
+  "untaxed": 33.82,
+  "tax": 1.98,
+  "total": 35.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "UNI WORKER'S CARD (1-31) 100'S",
+    "quantity": 4,
+    "unit_price": 2.93,
+    "tax_rate": 6,
+    "net": 11.72
+   },
+   {
+    "description": "UNI A6 NOTE BOOK 120'S",
+    "quantity": 18,
+    "unit_price": 1.2278,
+    "tax_rate": 6,
+    "net": 22.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 33.82,
+    "tax": 1.98
+   },
+   {
+    "rate": 0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0688375,
+ "raw": {
+  "id": "gen-1794514463-F0gjbyiqBk5jl9hZ84xJ",
+  "object": "chat.completion",
+  "created": 1794514463,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"THE STORE (MALAYSIA) SDN BHD\",\n  \"vendor_vat\": \"000364929024\",\n  \"invoice_ref\": \"1012-3001-0094\",\n  \"invoice_date\": \"2018-01-14\",\n  \"due_date\": \"2018-01-14\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 33.82,\n  \"tax\": 1.98,\n  \"total\": 35.80,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"UNI WORKER'S CARD (1-31) 100'S\",\n      \"quantity\": 4,\n      \"unit_price\": 2.93,\n      \"tax_rate\": 6,\n      \"net\": 11.72\n    },\n    {\n      \"description\": \"UNI A6 NOTE BOOK 120'S\",\n      \"quantity\": 18,\n      \"unit_price\": 1.2278,\n      \"tax_rate\": 6,\n      \"net\": 22.1\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 33.82,\n      \"tax\": 1.98\n    },\n    {\n      \"rate\": 0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"THE STORE (MALAYSIA) SDN BHD\" as the vendor name. Additionally, I've located the vendor's VAT registration number, which is \"000364929\" under \"GST REG. NO\". I'm now moving on to parse further fields from this receipt.\n\n\n**Analyzing Receipt Details**\n\nI've extracted crucial details to populate the JSON schema. I found the receipt number to be \"1012 -3001-0094\" and the date as \"14-01-2018,\" which I will format as \"2018-01-14\". Since this is a cash receipt, the due date is the same as the invoice date. The currency is Malaysian Ringgit (MYR), indicated by \"RM\". I've parsed the tax information as well: untaxed is 33.82, tax is 1.98, and the total is 35.80, and the VAT treatment is \"S.\"\n\n\n**Completing Field Extraction**\n\nI'm now extracting remaining fields to complete the schema, specifically focusing on the GST details and the line items. I have the vendor VAT as \"000364929 024\", which I will process for cleaning. I've set the IBAN to null as it's not present. I'm calculating the pre-tax values for the lines. I am still evaluating the line item details.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction, focusing on the line items and tax calculations. I have confirmed the structure and values for vendor details, receipt number, date, due date, and currency. Also, I've resolved the vat treatment and iban to meet the required criteria. I've calculated the net values and unit prices for each line item. I've reevaluated the tax values, and now I'm incorporating this into the line items. I have made the final selection for the correct interpretation for the calculations of the unit price. All values have been accounted for, and I am satisfied with the mapping.\n\n\n**Interpreting Line Item Details**\n\nI'm now focusing on the line items, meticulously evaluating the unit prices and total values. Based on the \"GST 6%\" indication, I have concluded that the printed line item amounts are tax-inclusive. I am recalculating values to align with this interpretation, reconciling differences caused by rounding between the line-item and the summary. I'm choosing the summary as the source of truth, and deriving values from there. I am ready to finalize the data structure.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the correct interpretation of the line item data. I've re-evaluated the tax implications, and I am choosing to use the provided summary figures as the truth, recalculating line item net values. Also, I am going to re-read the OCR. I have also decided on the proper mapping and selection of the values.\n\n\n**Deriving Pre-Tax Calculations**\n\nI'm now focusing on deriving precise pre-tax calculations for line items, prioritizing consistency with the overall summary. I will derive net amounts and unit prices for the line items and validate the GST breakdown for a refined structure. I've re-examined the tax implications and am confident in the calculation approach.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the line item details. After re-evaluating the tax implications, I've decided to prioritize the summary figures as the truth, recalculating each line item's net values accordingly. Also, I am planning to re-read the OCR. Furthermore, I have finalized the proper selection and mapping for the values.\n\n\n**Refining Calculation Accuracy**\n\nI'm now prioritizing the summary values for overall accuracy. I've re-examined and confirmed the details for each field. I will allocate the total base amount to the line items. Also, I have derived the net amounts and unit prices for the line items by assigning them a portion of the summary totals. After further review, I am satisfied with the mapping.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the correct interpretation of the line item data. I've re-evaluated the tax implications, and I am choosing to use the provided summary figures as the truth, recalculating line item net values. Also, I am going to re-read the OCR. I have also decided on the proper mapping and selection of the values.\n\n\n**Refining Value Allocation**\n\nI'm now determining how to handle discrepancies between line item calculations and summary totals due to rounding. I've re-assessed that prioritizing the summary is the most consistent approach, distributing values proportionally to the line items. This includes ensuring all the values align with the overall receipt data.\n\n\n**Refining Allocation Strategy**\n\nI'm now prioritizing the summary values, as the original values, though internally consistent, do not align with the overall receipt totals, particularly regarding line item calculations. I have reassessed and confirmed the structure for all the fields and values. I am choosing a method where each line item is allocated a portion of the total based on its contribution to the overall amount.\n\n\n**Refining Allocation Strategy**\n\nI'm now determining the most effective strategy for reconciling discrepancies, focusing on consistent alignment with summary values. I've reevaluated, recognizing the significance of maintaining the total consistency and am confident now in making the mapping.\n\n\n\n**Refining Calculations & Structure**\n\nI've re-examined the line item calculations and resolved the inconsistencies by prioritizing the summary totals. I'm now deriving line item net values directly from the summary, ensuring the untaxed total aligns perfectly. I'm also recalculating unit prices to two decimals, and accepting minor discrepancies for the line totals. I have cleaned up the data structure and will continue to evaluate the output.\n\n\n**Refining Line Item Derivation**\n\nI'm now focusing on ensuring line item values accurately reflect summary totals after re-examining the calculations, opting to derive pre-tax line item amounts from the summary. After determining that the summary is more reliable, I'll calculate accurate unit prices. After re-evaluating the approach, I'm confident in refining the final output.\n\n\n**Refining Value Consistency**\n\nI'm now prioritizing the summary values and calculating net and unit prices for the line items accordingly, to ensure complete consistency. After prioritizing summary values and performing all calculations, I'm now fine-tuning the line item values to ensure all the calculations match the overall totals. I have the desired result.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"THE STORE (MALAYSIA) SDN BHD\" as the vendor name. Additionally, I've located the vendor's VAT registration number, which is \"000364929\" under \"GST REG. NO\". I'm now moving on to parse further fields from this receipt.\n\n\n**Analyzing Receipt Details**\n\nI've extracted crucial details to populate the JSON schema. I found the receipt number to be \"1012 -3001-0094\" and the date as \"14-01-2018,\" which I will format as \"2018-01-14\". Since this is a cash receipt, the due date is the same as the invoice date. The currency is Malaysian Ringgit (MYR), indicated by \"RM\". I've parsed the tax information as well: untaxed is 33.82, tax is 1.98, and the total is 35.80, and the VAT treatment is \"S.\"\n\n\n**Completing Field Extraction**\n\nI'm now extracting remaining fields to complete the schema, specifically focusing on the GST details and the line items. I have the vendor VAT as \"000364929 024\", which I will process for cleaning. I've set the IBAN to null as it's not present. I'm calculating the pre-tax values for the lines. I am still evaluating the line item details.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction, focusing on the line items and tax calculations. I have confirmed the structure and values for vendor details, receipt number, date, due date, and currency. Also, I've resolved the vat treatment and iban to meet the required criteria. I've calculated the net values and unit prices for each line item. I've reevaluated the tax values, and now I'm incorporating this into the line items. I have made the final selection for the correct interpretation for the calculations of the unit price. All values have been accounted for, and I am satisfied with the mapping.\n\n\n**Interpreting Line Item Details**\n\nI'm now focusing on the line items, meticulously evaluating the unit prices and total values. Based on the \"GST 6%\" indication, I have concluded that the printed line item amounts are tax-inclusive. I am recalculating values to align with this interpretation, reconciling differences caused by rounding between the line-item and the summary. I'm choosing the summary as the source of truth, and deriving values from there. I am ready to finalize the data structure.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the correct interpretation of the line item data. I've re-evaluated the tax implications, and I am choosing to use the provided summary figures as the truth, recalculating line item net values. Also, I am going to re-read the OCR. I have also decided on the proper mapping and selection of the values.\n\n\n**Deriving Pre-Tax Calculations**\n\nI'm now focusing on deriving precise pre-tax calculations for line items, prioritizing consistency with the overall summary. I will derive net amounts and unit prices for the line items and validate the GST breakdown for a refined structure. I've re-examined the tax implications and am confident in the calculation approach.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the line item details. After re-evaluating the tax implications, I've decided to prioritize the summary figures as the truth, recalculating each line item's net values accordingly. Also, I am planning to re-read the OCR. Furthermore, I have finalized the proper selection and mapping for the values.\n\n\n**Refining Calculation Accuracy**\n\nI'm now prioritizing the summary values for overall accuracy. I've re-examined and confirmed the details for each field. I will allocate the total base amount to the line items. Also, I have derived the net amounts and unit prices for the line items by assigning them a portion of the summary totals. After further review, I am satisfied with the mapping.\n\n\n**Refining Line Item Calculations**\n\nI'm now zeroing in on the correct interpretation of the line item data. I've re-evaluated the tax implications, and I am choosing to use the provided summary figures as the truth, recalculating line item net values. Also, I am going to re-read the OCR. I have also decided on the proper mapping and selection of the values.\n\n\n**Refining Value Allocation**\n\nI'm now determining how to handle discrepancies between line item calculations and summary totals due to rounding. I've re-assessed that prioritizing the summary is the most consistent approach, distributing values proportionally to the line items. This includes ensuring all the values align with the overall receipt data.\n\n\n**Refining Allocation Strategy**\n\nI'm now prioritizing the summary values, as the original values, though internally consistent, do not align with the overall receipt totals, particularly regarding line item calculations. I have reassessed and confirmed the structure for all the fields and values. I am choosing a method where each line item is allocated a portion of the total based on its contribution to the overall amount.\n\n\n**Refining Allocation Strategy**\n\nI'm now determining the most effective strategy for reconciling discrepancies, focusing on consistent alignment with summary values. I've reevaluated, recognizing the significance of maintaining the total consistency and am confident now in making the mapping.\n\n\n\n**Refining Calculations & Structure**\n\nI've re-examined the line item calculations and resolved the inconsistencies by prioritizing the summary totals. I'm now deriving line item net values directly from the summary, ensuring the untaxed total aligns perfectly. I'm also recalculating unit prices to two decimals, and accepting minor discrepancies for the line totals. I have cleaned up the data structure and will continue to evaluate the output.\n\n\n**Refining Line Item Derivation**\n\nI'm now focusing on ensuring line item values accurately reflect summary totals after re-examining the calculations, opting to derive pre-tax line item amounts from the summary. After determining that the summary is more reliable, I'll calculate accurate unit prices. After re-evaluating the approach, I'm confident in refining the final output.\n\n\n**Refining Value Consistency**\n\nI'm now prioritizing the summary values and calculating net and unit prices for the line items accordingly, to ensure complete consistency. After prioritizing summary values and performing all calculations, I'm now fine-tuning the line item values to ensure all the calculations match the overall totals. I have the desired result.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 6844,
+   "total_tokens": 7162,
+   "cost": 0.0688375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0688375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.06844
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6466,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 57.47
+}

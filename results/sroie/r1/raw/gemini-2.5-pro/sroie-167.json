@@ -1,0 +1,136 @@
+{
+ "pred": {
+  "vendor_name": "LITTLE CRAVINGS SDN BHD",
+  "vendor_vat": "001382293504",
+  "invoice_ref": "000001",
+  "invoice_date": "2018-03-18",
+  "due_date": "2018-03-18",
+  "currency": "MYR",
+  "untaxed": 50.57,
+  "tax": 3.03,
+  "total": 53.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KUIH KETAYAP",
+    "quantity": 1,
+    "unit_price": 2.55,
+    "tax_rate": 6,
+    "net": 2.55
+   },
+   {
+    "description": "ONDEH ONDEH",
+    "quantity": 1,
+    "unit_price": 2.78,
+    "tax_rate": 6,
+    "net": 2.78
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": 1,
+    "unit_price": 10.94,
+    "tax_rate": 6,
+    "net": 10.94
+   },
+   {
+    "description": "AIR SEJUK",
+    "quantity": 1,
+    "unit_price": 0.61,
+    "tax_rate": 6,
+    "net": 0.61
+   },
+   {
+    "description": "CENDOL",
+    "quantity": 1,
+    "unit_price": 5.0,
+    "tax_rate": 6,
+    "net": 5.0
+   },
+   {
+    "description": "CHEE CHEONG FUN (SOS)",
+    "quantity": 1,
+    "unit_price": 6.79,
+    "tax_rate": 6,
+    "net": 6.79
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 50.57,
+    "tax": 3.03
+   }
+  ]
+ },
+ "cost_usd": 0.0454575,
+ "raw": {
+  "id": "gen-1794514547-WK2wsgsinnecUby4cJVr",
+  "object": "chat.completion",
+  "created": 1794514547,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"LITTLE CRAVINGS SDN BHD\",\n  \"vendor_vat\": \"001382293504\",\n  \"invoice_ref\": \"000001\",\n  \"invoice_date\": \"2018-03-18\",\n  \"due_date\": \"2018-03-18\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 50.57,\n  \"tax\": 3.03,\n  \"total\": 53.6,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"KUIH KETAYAP\",\n      \"quantity\": 1,\n      \"unit_price\": 2.55,\n      \"tax_rate\": 6,\n      \"net\": 2.55\n    },\n    {\n      \"description\": \"ONDEH ONDEH\",\n      \"quantity\": 1,\n      \"unit_price\": 2.78,\n      \"tax_rate\": 6,\n      \"net\": 2.78\n    },\n    {\n      \"description\": \"YELLOW LAKSA\",\n      \"quantity\": 1,\n      \"unit_price\": 10.94,\n      \"tax_rate\": 6,\n      \"net\": 10.94\n    },\n    {\n      \"description\": \"YELLOW LAKSA\",\n      \"quantity\": 1,\n      \"unit_price\": 10.94,\n      \"tax_rate\": 6,\n      \"net\": 10.94\n    },\n    {\n      \"description\": \"YELLOW LAKSA\",\n      \"quantity\": 1,\n      \"unit_price\": 10.94,\n      \"tax_rate\": 6,\n      \"net\": 10.94\n    },\n    {\n      \"description\": \"AIR SEJUK\",\n      \"quantity\": 1,\n      \"unit_price\": 0.61,\n      \"tax_rate\": 6,\n      \"net\": 0.61\n    },\n    {\n      \"description\": \"CENDOL\",\n      \"quantity\": 1,\n      \"unit_price\": 5.0,\n      \"tax_rate\": 6,\n      \"net\": 5.0\n    },\n    {\n      \"description\": \"CHEE CHEONG FUN (SOS)\",\n      \"quantity\": 1,\n      \"unit_price\": 6.79,\n      \"tax_rate\": 6,\n      \"net\": 6.79\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 50.57,\n      \"tax\": 3.03\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Identifying Legal Entity**\n\nI have successfully identified the legal entity, which I will use for `vendor_name`. It appears to be \"LITTLE CRAVINGS SDN BHD\", rather than the more prominent \"NYONYA COLORS @ 1 UTAMA\" on the receipt.\n\n\n**Extracting Invoice Details**\n\nNow I am extracting the remaining details from the receipt to populate the JSON schema. I've successfully identified the vendor VAT number as \"001382293504\" and the invoice reference as \"0000 01\". I've correctly formatted the invoice date as \"2018-03-18\" and will use that as the due date as well. The currency is \"MYR\", and I have \"50.57\", \"3.03\", and \"53.60\" for the untaxed amount, tax, and total, respectively. Since it's a standard 6% GST, the VAT treatment is \"S\", and there's no IBAN on this receipt, so that will be set to `null`.\n\n\n**Analyzing Receipt Details**\n\nI'm now focusing on parsing the itemized lines from the receipt. I've calculated the net price for each item, accounting for the 6% GST. I'm verifying the total by summing the net amounts, which closely matches the provided taxable amount. I will now map these details to the JSON schema, and focus on extracting the `unit_price` and `net` values for each line item.\n\n\n**Finalizing Line Item Amounts**\n\nI am now focusing on determining the `unit_price` and `net` values for each line item. The prices provided on the receipt are inclusive of tax. Consequently, the calculations from the previous analysis are confirmed, and I will be using those calculated prices for `net`. I now understand the `net` value should be the pre-tax price per line item, and the same will hold true for the `unit_price`, since there's one quantity per item. The JSON schema will soon be populated.\n\n\n**Finalizing Details Extraction**\n\nI'm now populating the JSON schema with the line item details, and working out how to represent the item quantities. After reviewing the receipt and confirming my calculations, the values for `unit_price`, `net`, and `tax_rate` for each item are confirmed. I'm focusing on ensuring all item quantities are accurately captured.\n\n\n**Calculating Line Item Prices**\n\nI'm now implementing the calculation of line item values from the receipt details. I've re-examined the receipt and my prior conclusions, and am confirming that the `unit_price` and `net` values must be the pre-tax amounts. The calculated values for each item, derived from the inclusive prices on the receipt, are ready for the schema.\n\n\n**Finalizing Calculations**\n\nI've determined that the `unit_price` and `net` amounts should reflect pre-tax values, using the calculations from before. My earlier approach of using an inclusive price directly is incorrect; pre-tax values were crucial. I'm now certain the calculated values are correct, and I'll use those to populate the schema.\n\n\n**Refining Value Calculations**\n\nI'm now certain about my method for line item value determination. My earlier approach of using the inclusive prices was incorrect, so I'm now recalculating the `unit_price` and `net` values using the pre-tax method I described earlier. These values are ready to be used to populate the schema.\n\n\n**Refining Calculation Accuracy**\n\nI have made progress in refining calculations, after recalculating line item values. I am now confident that the `unit_price` and `net` amounts represent pre-tax values, using values from the receipt. The process for determining line item `net` and `unit_price` is now established. The schema values are now confirmed and ready.\n\n\n**Confirming Values Accuracy**\n\nI'm now certain about all the required calculations and that I'm correctly extracting information to build the JSON schema. I've recalculated net line item prices, ensuring they reflect pre-tax values. The quantities and descriptions are now accurate and ready. The total untaxed amount is correct, and I've verified the VAT breakdown. I will now finalize the structure.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Identifying Legal Entity**\n\nI have successfully identified the legal entity, which I will use for `vendor_name`. It appears to be \"LITTLE CRAVINGS SDN BHD\", rather than the more prominent \"NYONYA COLORS @ 1 UTAMA\" on the receipt.\n\n\n**Extracting Invoice Details**\n\nNow I am extracting the remaining details from the receipt to populate the JSON schema. I've successfully identified the vendor VAT number as \"001382293504\" and the invoice reference as \"0000 01\". I've correctly formatted the invoice date as \"2018-03-18\" and will use that as the due date as well. The currency is \"MYR\", and I have \"50.57\", \"3.03\", and \"53.60\" for the untaxed amount, tax, and total, respectively. Since it's a standard 6% GST, the VAT treatment is \"S\", and there's no IBAN on this receipt, so that will be set to `null`.\n\n\n**Analyzing Receipt Details**\n\nI'm now focusing on parsing the itemized lines from the receipt. I've calculated the net price for each item, accounting for the 6% GST. I'm verifying the total by summing the net amounts, which closely matches the provided taxable amount. I will now map these details to the JSON schema, and focus on extracting the `unit_price` and `net` values for each line item.\n\n\n**Finalizing Line Item Amounts**\n\nI am now focusing on determining the `unit_price` and `net` values for each line item. The prices provided on the receipt are inclusive of tax. Consequently, the calculations from the previous analysis are confirmed, and I will be using those calculated prices for `net`. I now understand the `net` value should be the pre-tax price per line item, and the same will hold true for the `unit_price`, since there's one quantity per item. The JSON schema will soon be populated.\n\n\n**Finalizing Details Extraction**\n\nI'm now populating the JSON schema with the line item details, and working out how to represent the item quantities. After reviewing the receipt and confirming my calculations, the values for `unit_price`, `net`, and `tax_rate` for each item are confirmed. I'm focusing on ensuring all item quantities are accurately captured.\n\n\n**Calculating Line Item Prices**\n\nI'm now implementing the calculation of line item values from the receipt details. I've re-examined the receipt and my prior conclusions, and am confirming that the `unit_price` and `net` values must be the pre-tax amounts. The calculated values for each item, derived from the inclusive prices on the receipt, are ready for the schema.\n\n\n**Finalizing Calculations**\n\nI've determined that the `unit_price` and `net` amounts should reflect pre-tax values, using the calculations from before. My earlier approach of using an inclusive price directly is incorrect; pre-tax values were crucial. I'm now certain the calculated values are correct, and I'll use those to populate the schema.\n\n\n**Refining Value Calculations**\n\nI'm now certain about my method for line item value determination. My earlier approach of using the inclusive prices was incorrect, so I'm now recalculating the `unit_price` and `net` values using the pre-tax method I described earlier. These values are ready to be used to populate the schema.\n\n\n**Refining Calculation Accuracy**\n\nI have made progress in refining calculations, after recalculating line item values. I am now confident that the `unit_price` and `net` amounts represent pre-tax values, using values from the receipt. The process for determining line item `net` and `unit_price` is now established. The schema values are now confirmed and ready.\n\n\n**Confirming Values Accuracy**\n\nI'm now certain about all the required calculations and that I'm correctly extracting information to build the JSON schema. I've recalculated net line item prices, ensuring they reflect pre-tax values. The quantities and descriptions are now accurate and ready. The total untaxed amount is correct, and I've verified the VAT breakdown. I will now finalize the structure.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 4506,
+   "total_tokens": 4824,
+   "cost": 0.0454575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0454575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.04506
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3842,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 30.23
+}

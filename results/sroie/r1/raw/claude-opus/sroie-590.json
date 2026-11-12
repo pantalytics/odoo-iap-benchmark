@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "OGN GROUP SDN BHD",
+  "vendor_vat": "002077622272",
+  "invoice_ref": "SP3-01-147902",
+  "invoice_date": "2018-06-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 28.31,
+  "tax": 0,
+  "total": 28.3,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Kitchen Lighter 2015",
+    "quantity": 5,
+    "unit_price": 3.68,
+    "tax_rate": 0,
+    "net": 18.4
+   },
+   {
+    "description": "Cotton White Mop 450 W.HDL",
+    "quantity": 1,
+    "unit_price": 9.91,
+    "tax_rate": 0,
+    "net": 9.91
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 28.31,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.022844,
+ "raw": {
+  "id": "gen-1794514434-a0DeuClY9oYmfbMNsFnv",
+  "object": "chat.completion",
+  "created": 1794514434,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"OGN GROUP SDN BHD\",\"vendor_vat\":\"002077622272\",\"invoice_ref\":\"SP3-01-147902\",\"invoice_date\":\"2018-06-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":28.31,\"tax\":0,\"total\":28.3,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"Kitchen Lighter 2015\",\"quantity\":5,\"unit_price\":3.68,\"tax_rate\":0,\"net\":18.4},{\"description\":\"Cotton White Mop 450 W.HDL\",\"quantity\":1,\"unit_price\":9.91,\"tax_rate\":0,\"net\":9.91}],\"vat_breakdown\":[{\"rate\":0,\"base\":28.31,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm working out the Malaysian GST side first: goods were zero-rated from 1 June 2018, so the SR code gets 0% and maps to Z. The printed total is 28.30, which is what I'll use. Next I'm pulling the vendor details, OGN Group Sdn Bhd with its GST registration number, and noting that the currency is MYR.\n\nI'm going to use \"Kitchen Lighter 2015\" as the line description, which is how the product is printed on the receipt.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working out the Malaysian GST side first: goods were zero-rated from 1 June 2018, so the SR code gets 0% and maps to Z. The printed total is 28.30, which is what I'll use. Next I'm pulling the vendor details, OGN Group Sdn Bhd with its GST registration number, and noting that the currency is MYR.\n\nI'm going to use \"Kitchen Lighter 2015\" as the line description, which is how the product is printed on the receipt.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSwwgKEAgTGAI4AUIIdGhpbmtpbmcSDKn/BecRF1AffptlpxoMXxFu7kcoSssUTVamIjCtNwTMmA6uU+KLzYcp88cFFQ/GeewnmxGJvI1DxLqHyq72vkZ6bfK7qCZiN6s/FDAq4AcrME6Pqwz7JF/YX1L+KujJFjKz0cDE4l1qxJb83kQtf6lcld+fWaSxz0D+ZAzEWnWLHfJAMVqu6iFB6Zi9+l06j7MzmFFD6FcqQhaAOQ7vNevX0GOvGxF80eihbxLgFhC45sOFkzBlY47UzD1FJluScGTeNeJOZa30i0cxff3G8F6d071EUNK4hmJz20OmJC8hr517vcXErCQ5YshrWiKvNSbiKFwM+K8Dk+ngYn5zyGlIu/KBAPQuaWunCyVRFp60KXv6fsgxWb9uocJvycoHTfDYLHP9h4aNpRz7Yny6NOdyJcUiivA5Bpxy72R0vqHvtK7RTCpH/GYLzbBGjiUKs6USVlwjOMR+crsKulQwiUGBtVVYmWs1v0tKEtTMYDwBF5tgiSMG35i08EsFT8617g0St3OIgmkdqn1XvlL3sq+LHG5wmuo3fncPC17l6pTVF1nh8c3IGiEjJz6qauRgO0XSlUgcZIk35U1LFMgODPqvGAuo3VzpUyR2yDFDqVXFLaCZQ8l8KYhxzAix9qPrOmaRMmsckS6RX0UCj00lAxDd5HNNaND0vu6eqpS0AzYomfJUfbOy8oenHz/i6nX00Cl8F4QPL/0psumdhJGtgCrCoF5WXMjYyAx9fwP4FUKEkRqr1yOAsEk6el5OxYbtzZyYMIO474WagKNBmJeSBvDIyTPgxUsa1cu8qtKxGT86RcG8Uhu2Fcz3d9Rn1u5J/TZN6+xtn50Fozg4vrnB69DnsY8J+/+AHUTtiN9PP386uWwV/n7fOtaBlGdNSW7WIpJzjLxZTcEAq5ekBbOhyufiFAzXE3kwj6uReY8GxQTqmpo/vB36rJWz7bUTIQLEmy2NBQX0g/ZFAG1qVf74VGfJXWp/v8Oou2InnusMUV0s26upZZN24PcI+bvQSZ6tZ7dDrS4KgiTVCxeycJ6HZto2k8MRsnCuqAcOwGlBw0+qecGK0lXiiv3t6ZRkUKhXrNmUMwWhaltv2aYFwYQSALifn7sAKMfFidIWrGwtKZtSvhOqrNMEPXKUzdxT4IsPoT8kQFoEX1RSAhGMeOEhyuEC2v1mi46M7lWM306LqpupaeCjXSpD/xZCVpo00tNhkw8L+iWu2RwbeIw5TBzoaTNluDTMgyNZ5xnBfhj2M7M/0sbkkmoEMFSHs3XZ9SLqfCJMwyJsAAa5uNPnsBvZFMoTpBqFn6BlW6vjRMy6IoU9q0tf7wht+R7K4gAjdx9PSkqtaj7zpBPrYgl/9ptp4UALZUvp2TGxdM/9UvAnhfuyVjcUZwTMHuf1o2jm7UiEwCsNMMel6aiSXANqpf+qZhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 506,
+   "total_tokens": 3687,
+   "cost": 0.022844,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022844,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01012
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 241,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.22
+}

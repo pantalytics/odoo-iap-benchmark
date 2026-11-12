@@ -1,0 +1,164 @@
+{
+ "pred": {
+  "vendor_name": "99 SPEED MART S/B",
+  "vendor_vat": "000181747712",
+  "invoice_ref": "17664/103/T0027",
+  "invoice_date": "2016-05-11",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 167.19,
+  "tax": 10.03,
+  "total": 177.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ANCHOR SERBUK CUCI 4KG",
+    "quantity": 2,
+    "unit_price": 9.4,
+    "tax_rate": 6,
+    "net": 18.8
+   },
+   {
+    "description": "DOVE CREAM BAR SOAP 100",
+    "quantity": 10,
+    "unit_price": 2.65,
+    "tax_rate": 6,
+    "net": 26.5
+   },
+   {
+    "description": "FERNLEAF FULL CRM MILK",
+    "quantity": 1,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 40.95
+   },
+   {
+    "description": "COLGATE GREAT REGULAR",
+    "quantity": 2,
+    "unit_price": 7.99,
+    "tax_rate": 6,
+    "net": 15.98
+   },
+   {
+    "description": "LEE KUM KEE SOS TIRAM C",
+    "quantity": 3,
+    "unit_price": 7.6,
+    "tax_rate": 6,
+    "net": 22.8
+   },
+   {
+    "description": "CHEONG CHAN SOS KARAMEL",
+    "quantity": 1,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 5.09
+   },
+   {
+    "description": "MISTER POTATO CHIPS BB",
+    "quantity": 2,
+    "unit_price": 3.95,
+    "tax_rate": 6,
+    "net": 7.9
+   },
+   {
+    "description": "MARIGOLD HL MILK 1L",
+    "quantity": 2,
+    "unit_price": 6.35,
+    "tax_rate": 6,
+    "net": 12.7
+   },
+   {
+    "description": "BINTANG TEPUNG JAGUNG 4",
+    "quantity": 1,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 1.35
+   },
+   {
+    "description": "NUTELLA FERRERO HAZELN",
+    "quantity": 1,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 14.65
+   },
+   {
+    "description": "NUTRIPLUS CHEESE CHICK",
+    "quantity": 2,
+    "unit_price": 5.25,
+    "tax_rate": 6,
+    "net": 10.5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 167.19,
+    "tax": 10.03
+   }
+  ]
+ },
+ "cost_usd": 0.037365,
+ "raw": {
+  "id": "gen-1794514701-k4MqyGGUI8eXzniUMvVq",
+  "object": "chat.completion",
+  "created": 1794514701,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"99 SPEED MART S/B\",\"vendor_vat\":\"000181747712\",\"invoice_ref\":\"17664/103/T0027\",\"invoice_date\":\"2016-05-11\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":167.19,\"tax\":10.03,\"total\":177.2,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"ANCHOR SERBUK CUCI 4KG\",\"quantity\":2,\"unit_price\":9.4,\"tax_rate\":6,\"net\":18.8},{\"description\":\"DOVE CREAM BAR SOAP 100\",\"quantity\":10,\"unit_price\":2.65,\"tax_rate\":6,\"net\":26.5},{\"description\":\"FERNLEAF FULL CRM MILK\",\"quantity\":1,\"unit_price\":null,\"tax_rate\":6,\"net\":40.95},{\"description\":\"COLGATE GREAT REGULAR\",\"quantity\":2,\"unit_price\":7.99,\"tax_rate\":6,\"net\":15.98},{\"description\":\"LEE KUM KEE SOS TIRAM C\",\"quantity\":3,\"unit_price\":7.6,\"tax_rate\":6,\"net\":22.8},{\"description\":\"CHEONG CHAN SOS KARAMEL\",\"quantity\":1,\"unit_price\":null,\"tax_rate\":6,\"net\":5.09},{\"description\":\"MISTER POTATO CHIPS BB\",\"quantity\":2,\"unit_price\":3.95,\"tax_rate\":6,\"net\":7.9},{\"description\":\"MARIGOLD HL MILK 1L\",\"quantity\":2,\"unit_price\":6.35,\"tax_rate\":6,\"net\":12.7},{\"description\":\"BINTANG TEPUNG JAGUNG 4\",\"quantity\":1,\"unit_price\":null,\"tax_rate\":6,\"net\":1.35},{\"description\":\"NUTELLA FERRERO HAZELN\",\"quantity\":1,\"unit_price\":null,\"tax_rate\":6,\"net\":14.65},{\"description\":\"NUTRIPLUS CHEESE CHICK\",\"quantity\":2,\"unit_price\":5.25,\"tax_rate\":6,\"net\":10.5}],\"vat_breakdown\":[{\"rate\":6,\"base\":167.19,\"tax\":10.03}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract the JSON schema from this bill, which comes from a vendor named 99 SPEED MART S/B. The invoice number is 17664/103/T0027 dated 2016-05-11. The currency is RM, and the total sales including GST amounts to RM177.22, though after rounding it adjusts to RM177.20. I should also extract the item descriptions, quantities, unit prices, and tax rates as printed. The GST summary suggests the totals are all inclusive of tax.**Determining invoice schema**\n\nI’m figuring out how to structure the invoice schema. The unit price and net amount before tax aren’t directly printed on the bill, so I might need to compute them. Since the line amounts likely include GST, I can't simply rely on them being \"before tax.\" Instructions suggest using printed amounts, but I have to be careful. Maybe I should set the printed amounts as is, and if there’s a quantity multiplier, indicate that; otherwise, just use one for quantity. However, setting unit price to null might lose essential info.**Extracting line items from receipts**\n\nI’m working on a task involving scanned receipts, and it’s common to expect line items to include both quantity and unit price as they appear on the receipts. This means I’ll need to carefully extract this information while ensuring accuracy so it reflects what’s printed. I want to make sure I capture all the necessary details properly, so the end result is clear and usable for the user. It’s all about clarity and precision!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract the JSON schema from this bill, which comes from a vendor named 99 SPEED MART S/B. The invoice number is 17664/103/T0027 dated 2016-05-11. The currency is RM, and the total sales including GST amounts to RM177.22, though after rounding it adjusts to RM177.20. I should also extract the item descriptions, quantities, unit prices, and tax rates as printed. The GST summary suggests the totals are all inclusive of tax.**Determining invoice schema**\n\nI’m figuring out how to structure the invoice schema. The unit price and net amount before tax aren’t directly printed on the bill, so I might need to compute them. Since the line amounts likely include GST, I can't simply rely on them being \"before tax.\" Instructions suggest using printed amounts, but I have to be careful. Maybe I should set the printed amounts as is, and if there’s a quantity multiplier, indicate that; otherwise, just use one for quantity. However, setting unit price to null might lose essential info.**Extracting line items from receipts**\n\nI’m working on a task involving scanned receipts, and it’s common to expect line items to include both quantity and unit price as they appear on the receipts. This means I’ll need to carefully extract this information while ensuring accuracy so it reflects what’s printed. I want to make sure I capture all the necessary details properly, so the end result is clear and usable for the user. It’s all about clarity and precision!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h8ZtxlV2U2QMcTrr9EpMKgLZr2MdSsnN8DUEWT6j0209UNRbpvW5fSR_1DETXDd7YuCwyvvK4mr5Kq2nq8XbRlCNuDX5wtai4OixOosPNalJZBQRMrNzB17ZR0S5jRPwXDzTl67Isp0EXHBToq2nVvyZrJt88ZOD2tPlrRPqAZGAO46gkhyE_4v1IOocWtuJOgyh-yZJZqxQIjTrKJZdIReCrLx0I5u8u73SICrWjZ5DfbiDtnZ14kPmvGc0A_WG7tEvElsQW16175qJvDUfFPhD5bzS86-USo0YKXgLUswSnmDLRQtwB5_IzuVbKfc2-BDlre5vCzIckxuW_obf0dAj3J2gs5FKmTCu6LNTjc38d1pLXNipex2aS-emzatM2P9-9FxEBxFkMbw9K7jzVcHi3ch3Jk7PwVaSBo2kYacIL2auEYxPHJnQBOZ89VXnGOsRKtdaQPI4RAh-Q53AfK9KdKXyacFsm6P44dNszxKk1-k9gf7izD27PTteyY_mq3y7jn_N1GesY6jIzM4sGdvGGbcfK8xHVTOCUgXEOUD85B6bfdYFH83A6jQVd-7NCIZsv1P1ZvEgrqmzC31JLXiN3rtSV0fQeeTruBdxhees2ktnshv9VGu0iTfK2gDeOXYz0mYXNqqyt6233l3fyxvxIqG8A-VWitjQA7CExAmuiLBVOfCeQRlE9kP9Yeam9Fzf5s0shT3rTaDpwWDoqpjH5nmLG_pvW8NWsvWvLjB55M4r5zn5sfj4hxQsbGUzdnAPyI6mP0Fk39JCAfTKU96-0K2CQpkPQnI5SsuzB0I97QQ2r3GVN70nKpPkhnaO0nXb7-xcCntrIxAM_w6AhdbLtZDkY_MV9MgTTNJk_ViVebuuqIXcbV2GV3QagAc9wd6qtg71Fup1j0KJqDMtPDTgUqVE0N7T3SuCUIQi8VIORXj11zc39GZnVQmXCWudcWoObyea2MMkiWGPsOi0Bveknco2DaxJjLugri2YyKJFjh_fSAezJG3aFdkDZzGZVPyZIJdGg_lVDGvxdOTuFYV16HogbozX_JT12y4cc-4ABJ9BHS1op6vKcJhHk9I_H-a4eFQudRi8zpkcC1HcNg04FsNPvJ6vAYiOeoADR74ACq1KHsiErFdLIUMckack-ok-eLcLzMDr1DKImMrfdOmIqOwOKnSln0YxLWuoao7Ptu9D5B-MryQloPt8WrZcrkGhxrdYhm5dMpYhMGnoFUqzRAy44tISyLeiPBtuFbf6tSkdEEbM9R4HWOzxKKeAVQ9n966TzOeL6nfU9aRavW1i8e2UrvLgTVaZB5UvJi4LohYDl0rKgVBQxEiPndE4DLSNMKo4-mwQ6jhWZ-xT00KDn-eWKExtLh2PXn05hKEbj99wz2zPUFPBCKHZWQFVDNRhqJurYmCnSG6AIEAsG5WAEsQ61dZqJn4O-nH3lPCS75ZG1iEPkVjQSVDd32lukrDOMmpcAW8Z1Mb3gRu-UK-enbZseMCq5FWKOKpo1_XdY_WoLmYKA_AxsIQrgkFxSFXU0bIGmz_nx6rVha5s5esQ5WEBkqGNmYHcbCVJD7EdUrDAdyhcmmTD6yWSzZJ_viaT0wTlxzagCedZD-_wQdfSVLoO2OuJE8s9g91sGV1XHKoKYI1Q-AuKAsI7oHG_aTLtfYkp1kVtyjSmvo5WR6t6nkPPaV1lpbjbFOm1oT2h_kcmrLxbYnkGd34794JpX0OkNGnKEXD7p-h6MowAzD5wqRMzSD08jxPyHOXCv96fU2t92rhEqcvVB3PP1ZTLnNtZHfrKAjrDs26h5Tr54elxnBZRcILhEnXitl5f7FwJb8upaWFQZhxoipnaYJOASxspTIRumDw0KwILP-La1QnW0p0W3VcaTGYa8gZqDsdLsT4KNnHb2OdSbdgi--04RlZ8jNC01sXoOYkCHaeYTT7uKG0qqQ7qSEj-EXT_7_7Onm4Jyy1LbCED-RqgLM4sh9syNiUq1oHcmSJP00WLJgX2bC9Zy2tPvKRFOaL_MfxiRiwQfI6NmTc8Mq3Tq6HP2tRFxjlWPDE5izN8kJqXXN9w3g1XyW8K0EcapmBdBhqfiqzmbvbkzYkKkEBEC7vSFoVzd6LXdbhmrxUSgmb4o4GQeVNZOETUYpWMtOJ3EcGgTJ2FGhtg1znrDTyHVIkE6CUmakPKbsiZludZs7eLVPmnvyLohMvUlZeAaS7chu8R0PlUSmfx1PmlxSxjFLbUaJM-Iafz-tk-lEWw-bxVq9iLUWiyJSFXXkSDglfwt5LIH5jocMp_zD__sSUV7Br34JPIxBoJd938GpVzB3nCSZ3QvEsA8yVk_hne2xpvF-KBURhDMVdL-OizcdCiWpb_L_Xf6PwxlBfCf0Zu7aWU94Oy02p7WzwufxraW3JL9JO_hUKTtzbqEc1HUQbMSV4AWGxd6VaGXO2xk0Foqcu7Uge9pkthcWZlk4czc2WXdKqQKRIA2GaHs273HYF7sjXbuYtdz2oIXGe1HhOm6LxqW1SImYTtRunmgWxTsGRdf-OiLaGoQiKj4XtOVZb39IQen2rt_DIEmDqErPz3Ygi1BlsyLnLJ_OGndO8Ldvyl0WdWpOL-lQywY97AS7G_04ncDlmtKjeDWFOsiLAs3st2vaDU_D6tOQnJ-1JCgMwHUTQigf6TuUJdVbAnGQCeR31WEHOJknncWt-2E9DnUgNO42D1KPDkR8hvpPoxCzbVibJKm5lnPjPg2OTNnwu0n9mLWTYHLsq7UkQgcfMYZ9VHrJxIt3ljymN_RO4lQK09omRZC1ymGTb6Fg3TeRkB8qp2oc96msXMBbOMWMrIw3iUFvnLcoD6RuQcvzFLjlrw60X8yIfAETt00lnNCypXteVP6_TreLz_NqX1OO-l73_oXRZTNqXkBqLhuRZlpVtxRAlOtvokuiGiK4Y3dItS-OFiQ5dCTh3QS4nUqqiW6o1VChVCOc6cu146q6UOEyiLmsZKvJzudUWhkppJv8J8W5spbnHNTXVxVvvJy25CfXX7IM-i40wWii0WZgrqGzz-YqpIPlKqLHKXrzJbW88EG4dWRQGIrVYnugajaPUo2asMzMhXJvGlQZbT_IksgPkEMI4TU2ZDAiDBY0X9iVZV43ZrWI_BpWGqDjCw5MUZsMBWDOiaOd_Kf4Dvcmb5LyUc4aPhTMqM9iYQ5x4GnC7HwBSeqKuumSLbl7iIviW_hp9YCYwP7prbsTQe1tfhNfYj8wA321FYYJXBeDHGKe8gEuqBsAxqv1KLpH-5hFLw-KDIMunyiO7dk4LHtSH9ouw2K37Lww0tHuSMx0tNYflj611RrmacLWpb1VEqgk-mHdig2fJVQFL6uMDz197-kmHrvqZefsiXWQQ5t2imHVkcHFL3kvBxl3MLrANCvlizusQmfd8Tx-K8OJCWfN5hQAKVIaOR2C99-OmbDHSPkT_jypcGBh-mScp8QHtCZEYec9Q2acGFWRTe1A5ItbmSuSsWzNtD4LbTanESXGEleoK_nMKMpkXX7o4I52ia3fMGqPO9NVZ-naqTKHxsIsN641DRNghqHcVaGBZbJRklxskohz55tJAuLhRIDYbVsaTdvZS6GrTGmgU186j5xxydAGAuwCbEbjvGekUOQgR2NdNZMDxgl8kor5-eaeDQVHdTGDOpj9KTWaFEgXlhYN-RcCOtb1bWYIKKeCX7hXE7mysVJGgkxitWvBobWg1iPraPt1pnQM5BWG1S8NqGLONQdoQvEnVS61ioKzGBdfN4w6xAWyp5If4AsPFo37chF4uRi0osEtLC7Cnmhy7k0YHWjAvcPupOYLR2UQMfEYN-dFv3KFL7F6dJJZXMRfzBBMzrJzz3hALiTmj2x-SF3J2XpVXzfp2xwjHzsipBYfcGQDoaS_VtRghtlHw6iYORvPGbwqeER090a3xaSqqyTSKX-56kD4iJav-Sl-sD85HUifp5RZKkvZvVn-RbrgUdUeN9mqySaRg2CLFQIkSx28Kzt_F3RxiEz5-YfeUkSDGnVWTt3aamwOQyXYgMESkP1_lL7-QNd3olGwvj_BwtUj1LNYYKr15luyoCNf3P5FVU1BKoC9d6bu3XDHEFWU5I85_6qyi26aeO4Y135WF8-clS9nERpynn8H9uA27aGXMAefPstA4ith7Fhodn6yDPs2HRdlPmt-hyg1gCs5wn3qru2MGKUTtN7iiJCpNZzlSYoDaUG491GZrvmJZNgD5GekBhuxwNXb09ta6ZPdd7o2FgkL6t5DqBqVW7t3BuZXEiy8sOnqu08DRF00p2KfCwHjfkAzCBWrmy2w5AAQW8VDPLnn2o36zt3SsEXN3uxz4sCGP9fWPGADlAGmFOfDr4nx9kwBZI0rhPczwEi7v52YnyTgdmDL-GK8nAfQ5hkFkhEe7zfb620XwU5G04JASm-nOj4cC4DqJhZCgHGflIZO7_pm6FjU4PhP-rdNI_4kbNhs4WtEne7VgtQlZkCVlBxaeUzGaixm00cEWMCOBXjUGPbR0MW98Qrv3n4qCOZEUOHCdpzYW-U7jH_eoUZpQN2tMKx96MLPqxxH55qXRFrqO42r3OmvA3b1cXfQnxYlY117TH4KJYRO71I2P3xGWP8rCgKec4izfve3Pu4vrObfMyoqI3kaKtBXLxQUgsT8zh6iBdxpJKfUVXhlniNPlPciWbebhsr3SPDTCS-21DmEgzqu1bwtEaxX-EVxMxSQiHH0uwC2ZzccFSn5PqgZ1jcqTMB9GJ5XMxiqlTU20-0Fx8xa7Yw20srX9hyhh583iWpPr76CUbQpq09lLLMHrtk3OkFVU_K8WKm0JZis4mAsc6yTW9XTHTeFo6CSfY2EqrTa2zWE5Fj5dlpc0Bez8Cb5dC_OWn1GBO8NeZ3voA-yJtkzBfzuHBu6THOGy9BG5kvOSob-1F0jvJeIH-zUDNufALXH9tHkwjZkY1N93wl7FE4AAeC51TtbndOsE1ARwpVGNbGN1FTWcbJzaaGHGbpHBb1q7MhlL2uZ9jIC1lp_PuLxoWtRLZL7XwTFmBGn7MRGO0vbYDzke_7Yz8P0TeFJHb4POWRnLIOxnjKl8YHTpiqZwJxHBTUB7AMLA8fWWJohLsBF-6ob5M9E8-tUEu4qqeWe_R8LjbK9DaMwTdD2ES_W_0abWrEqSFFNfPabjI-0kK8zWlNH5YuGbg-uv1F7gWkDxrVDxGrSLocHzKr4M5cBPowurTEY3OOloKlWT5bBxUp1bdsAnc0Y95T_siRnNGXGr7HfhsS0r0ngInqodmrdRViPLq_QU29th6gfA_F9dtPmZFYQLaDNiw72vH264o8vQ4nHXkde2fDJOKQxBMTkzGd6Jjvh_N9VrMJe6Ewpsky_Q4-_DcSUmGwl_UKf0DxN1kvldabup-FB36MmP8hornoFR3xown26Xljdsn93oZjvXS0uDINik3ldj8k3xyksjg-60_DN0W1-6Nyag6pCOMLTFunnFQyfOQzbB2K5VeG4Nu9sZQ42KGfNWG7kTjloXdaaG91bbes2EqMfhgqyL1GTymXZotBcnRxtOHbPQmBUr3m1PBKWruZhfPdjcR_mkFZKO8x_FPvEcTyFW4xrvDbbGVI8km74iU2BVxrJiJW_vMDtS5BHXbRFWfpcXiwTyihyCAYGI_0RpR4zt96KEAeIrYO46-aoMsKe2j6SUorMdTgQU7tOv2DtLIrO89_c4hm9s57YqP2Q6VmP2w9KbJyi5EGPMTtH3ghb2Y6ZL5ozqX5oE2i_LwtYkT2VBMEES_qPyQq8uj0VgjhL0yKA8rLVCjVTlUdp-oBbpRPKm4kOBx447gT6RTMJe-KNks0aBQK2Ye56cFfkzlhsqjsjyXbfcbYi8AT9C2kWCYBpOgojVXe9zOyQEFBtG9wLTollFVdM-XyoAWFGoZrijNe972DSdkGPUnlWZgT_DUc0uEUWSRJx53T2qidJ7Pd-ATcvG8tKfHdVL8OLECjLmpLz8WqWjMFhSEzicTorWgbuxP_KPiquZcehWXIVVLOvvA1hPQYWCpMvL9XVidb0CXIYI3-KL-mkDcYepW6S95lnUYRvKcy5joyl_B9lXpZ_aRRsWKB6gGEa5o1ULocRp4mgkobxnFkJ5ojtBGAslF_97zNu2tF2XWQXjTGScgUyKrG638sS7vIehIoDRYE84j_bdm0MTQVLt8QHFOGnPwnsyw72Bosf0sXsrm8Usxdn7rnhCIyd2H3jFRSNy9E2Vml5kL_5Bh24nrdQbj4See_k4Rf5m7sQ_lSrOdZgBGXDgoCXzlnmlax7OCzMdXXZE-GLonPqnqHFPJPiciTyV9fHwnhnCzpo-1Er8RW2SdxldRUsPLOfjSlRcgh12sTweOfxEaN1RMSfiyNtaQeWLDfLLUNeECycrW8rgjCGNX_esT4UlPWvKgj7irbTBEk2dIZj_5_T9xsnQceCauWEBpXWEh9d9ca76r1pRyRoSIdTCNwDfV2uJjPP7I9bJTwemGm8fJ6z-bj3GujkgWoo4RVAA9O_DwMbI1r1JguMpBtM9WM9V0Wq4swF3vVre3gkxcFI-13fRasBj2BRrXjUpPn2GiAcMUNjK2assngwbhtT6JmwnICZGE3xQ-Xnfxpx2kh1lwGix0KlFPimcRAmGp5Epij3JftgvCXb-h77zEsWvhyT8GaLexEd47pWaJ6wzyT9m6cZvnNdmOA9ptD7oJW6yDjTsGts9zVMRNjJoqm7glh7DqaYrl-2cwlwpb-dbcjchWg8CgFdM-uTD755DR4l8AS5fDczFIvoYAXN_Rx0a1zd56CImg8KvupmZnPHOrKJOyrEKnkBLb2K8E4Q6x7h155ZCrTqQGtTKy0mAury_-jYFFRl7FaLWMXGiYJOlPQbHwu3UyE0IiJJWa3s347H8eDWx_HnW606T9kg89WWYsSGSuffPJpY0_XqtiysSQTaaDdLNpIBpiC8a_nf4_Fsa929KOXiD69-GKsUGg3zxAxhjF1bvl_Y-HuMcQ3HwB_AhFzHjMCMVJU-i34-EBMd7nazWR0ehkux4r6h1QfP1RvWodZnnAbc9FLFR2nfAMO7bl01FVJZGlj9wP6B3cztI478fSmcx3h3EtmMEw7A4nwE5eFuUhyGJHekxTo4UFxiDYVBbyaBGqJqXUuGI-ovo8GHVS9HM3DqNTnIDu3Dzfto2eUeq7B1nbM7-XX5bq-QPPWhBQ4sgh-KsyL2nOZ3vzW9hMZWFLMFQo-i-E1r7ldaneGbK4DAF5xA1nZQoin_ln8c8IcORmAGT85YsaVUBoTdk7v98mgbWSywi8qw7WXBpcFlHPZ6lIJtnFNDMf_FQSodiGwzZjM285T0C1lapxxto1aM05qez4iBDBF9ZzZpBFnob0OvvvCyi9NrC9akUVn5vbBYdxQ6oPrg63hNc9MFwJxoabc3aZTGoDlocCmMQDb9k0BCZQISmIqCErVk-SJhHga1csHW9A6zzHRmBI6dFC67o5HkeM-dutHwVfcnVjoewOvbw3exmk3GbrwjvPYjEuNoo2wmgMZd9RnjG3DhzeBimNjoaA1ZI_2yagUpgUZ8w7pIafUJFglc-F0Wd1_aAXT2NvgbWy7qJlcv0JXQegPnTtOoyxU_xrTLeXjYUHvT6zFddcA45C9-M-sBElDoouDYu4-hfkM7ggkKDX5APq2jVBqZWHPEaBOrlhexYVQv-NCDfn3QVURVPyqyWyYgYGQwEm3h7ct7N02TCAzI9Ur2lr0CgyfOzQkCSxKo1PDQJQ-tB1W4eQNcFVYGNEmElLRLlp7VlbbTF6wlIFPhTgSP3LIqOcoQGSbEk2DYzD3nmwyo2QPWHotBqC2PIvjDqvjk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_05bb4d3322d55359016af61f0e8fac87d18106e05bfdeecaf0",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 995,
+   "total_tokens": 2498,
+   "cost": 0.037365,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.037365,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.02985
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.8
+}

@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Carpenter, Robinson and Jackson",
+  "vendor_vat": "940-95-2437",
+  "invoice_ref": "41389063",
+  "invoice_date": "2021-03-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 14.67,
+  "tax": 1.47,
+  "total": 16.14,
+  "iban": "GB47PCJH31839415874046",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Haida: Their Art and Culture",
+    "quantity": 3.0,
+    "unit_price": 4.89,
+    "tax_rate": 10.0,
+    "net": 14.67
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 14.67,
+    "tax": 1.47
+   }
+  ]
+ },
+ "cost_usd": 0.0194675,
+ "raw": {
+  "id": "gen-1794512993-oY2Oqg3VyJghulQCM03l",
+  "object": "chat.completion",
+  "created": 1794512993,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Carpenter, Robinson and Jackson\",\n  \"vendor_vat\": \"940-95-2437\",\n  \"invoice_ref\": \"41389063\",\n  \"invoice_date\": \"2021-03-17\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 14.67,\n  \"tax\": 1.47,\n  \"total\": 16.14,\n  \"iban\": \"GB47PCJH31839415874046\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Haida: Their Art and Culture\",\n      \"quantity\": 3.0,\n      \"unit_price\": 4.89,\n      \"tax_rate\": 10.0,\n      \"net\": 14.67\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 14.67,\n      \"tax\": 1.47\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified \"Carpenter, Robinson and Jackson\" as the vendor and extracted \"940-95-2437\" as their VAT identification number. I am now proceeding to fill in the JSON schema based on the extracted data.\n\n\n**Refining Data Extraction**\n\nI am now extracting more invoice data. I've identified \"Carpenter, Robinson and Jackson\" as the vendor and \"940-95-2437\" as their VAT identification number. I've extracted invoice number \"4138 9063\" and \"2021-03-17\" as the invoice date. The due date is null. I'm now wrestling with the currency, given the mix of US addresses and a UK IBAN. I'll stick with USD for now, but I will investigate further. The schema wants ISO 4217, not the symbol.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data points. I confirmed that \"Carpenter, Robinson and Jackson\" is the vendor with VAT \"940-95-2437\". The invoice number is \"4138 9063\", dated \"2021-03-17\", with a null due date. The total amounts are 14.67 (untaxed), 1.47 (tax), and 16.14 (total). The IBAN is GB47PCJH31839415874046. VAT is \"S\" with a 10% rate. The line item details are extracted: \"Haida: Their Art and Culture,\" quantity 3.00, unit price 4.89, 10% tax, and a net of 14.67. I've used USD, as indicated in the prior extraction. I'll move on to the next task.\n\n\n**Confirming Data Accuracy**\n\nNow I have a completed schema and I am doing a final check of all extracted values. I've re-reviewed the USD currency decision, even with the UK IBAN. The addresses strongly support USD, so I will stick with that. All fields are now filled: Vendor, VAT, invoice number, date, due date (null), currency, untaxed total, tax, total, IBAN, VAT treatment, line item details, and VAT breakdown. I'm satisfied.\n\n\n**Confirming Data Accuracy**\n\nNow, I've confirmed all extracted values. I'm satisfied the schema is complete and accurate. The most significant challenge was the currency, where the conflicting UK IBAN and US addresses required careful consideration. I decided to stick with USD. All numeric values were carefully parsed to ensure correct formatting and interpretation. I am now ready to generate the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified \"Carpenter, Robinson and Jackson\" as the vendor and extracted \"940-95-2437\" as their VAT identification number. I am now proceeding to fill in the JSON schema based on the extracted data.\n\n\n**Refining Data Extraction**\n\nI am now extracting more invoice data. I've identified \"Carpenter, Robinson and Jackson\" as the vendor and \"940-95-2437\" as their VAT identification number. I've extracted invoice number \"4138 9063\" and \"2021-03-17\" as the invoice date. The due date is null. I'm now wrestling with the currency, given the mix of US addresses and a UK IBAN. I'll stick with USD for now, but I will investigate further. The schema wants ISO 4217, not the symbol.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data points. I confirmed that \"Carpenter, Robinson and Jackson\" is the vendor with VAT \"940-95-2437\". The invoice number is \"4138 9063\", dated \"2021-03-17\", with a null due date. The total amounts are 14.67 (untaxed), 1.47 (tax), and 16.14 (total). The IBAN is GB47PCJH31839415874046. VAT is \"S\" with a 10% rate. The line item details are extracted: \"Haida: Their Art and Culture,\" quantity 3.00, unit price 4.89, 10% tax, and a net of 14.67. I've used USD, as indicated in the prior extraction. I'll move on to the next task.\n\n\n**Confirming Data Accuracy**\n\nNow I have a completed schema and I am doing a final check of all extracted values. I've re-reviewed the USD currency decision, even with the UK IBAN. The addresses strongly support USD, so I will stick with that. All fields are now filled: Vendor, VAT, invoice number, date, due date (null), currency, untaxed total, tax, total, IBAN, VAT treatment, line item details, and VAT breakdown. I'm satisfied.\n\n\n**Confirming Data Accuracy**\n\nNow, I've confirmed all extracted values. I'm satisfied the schema is complete and accurate. The most significant challenge was the currency, where the conflicting UK IBAN and US addresses required careful consideration. I decided to stick with USD. All numeric values were carefully parsed to ensure correct formatting and interpretation. I am now ready to generate the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1907,
+   "total_tokens": 2225,
+   "cost": 0.0194675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0194675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01907
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1627,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.36
+}

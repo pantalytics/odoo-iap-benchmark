@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "MVM Musterhafter Versicherungsverein Musterstadt a.G.",
+  "vendor_vat": "DE234567891",
+  "invoice_ref": "01.234.567.8-2018-1",
+  "invoice_date": "2018-12-06",
+  "due_date": "2018-12-06",
+  "currency": "EUR",
+  "untaxed": 50.0,
+  "tax": 0.0,
+  "total": 50.0,
+  "iban": "DE75123456780000001234",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Privathaftpflicht",
+    "quantity": 1.0,
+    "unit_price": 50.0,
+    "tax_rate": 0.0,
+    "net": 50.0
+   },
+   {
+    "description": "Lebensgefährte/in zur Privathaftpflicht",
+    "quantity": 1.0,
+    "unit_price": 0.0,
+    "tax_rate": 0.0,
+    "net": 0.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 50.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0143825,
+ "raw": {
+  "id": "gen-1794512599-gT8Uc9gflyWSaqkfrv2I",
+  "object": "chat.completion",
+  "created": 1794512599,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MVM Musterhafter Versicherungsverein Musterstadt a.G.\",\n  \"vendor_vat\": \"DE234567891\",\n  \"invoice_ref\": \"01.234.567.8-2018-1\",\n  \"invoice_date\": \"2018-12-06\",\n  \"due_date\": \"2018-12-06\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 50.0,\n  \"tax\": 0.0,\n  \"total\": 50.0,\n  \"iban\": \"DE75123456780000001234\",\n  \"vat_treatment\": \"E\",\n  \"lines\": [\n    {\n      \"description\": \"Privathaftpflicht\",\n      \"quantity\": 1.0,\n      \"unit_price\": 50.0,\n      \"tax_rate\": 0.0,\n      \"net\": 50.0\n    },\n    {\n      \"description\": \"Lebensgefährte/in zur Privathaftpflicht\",\n      \"quantity\": 1.0,\n      \"unit_price\": 0.0,\n      \"tax_rate\": 0.0,\n      \"net\": 0.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 50.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Bill Information**\n\nOkay, I'm working on extracting information from the bill. My first task is the vendor's name, which I've located under \"Verkäufer\" -> \"Name\": \"MVM Muster\". Next, I'll identify and format this information into the corresponding JSON field, `vendor_name`. I will continue to process the document and extract information as needed.\n\n\n**Extracting Bill Data**\n\nI've got the extraction plan finalized and am now starting the data mining process, focusing on populating the JSON object. I have successfully located and formatted the `vendor_name`, the VAT number (`vendor_vat`), the invoice number (`invoice_ref`), the invoice date (`invoice_date`), the due date (`due_date`), and the currency (`currency`). I will now move to finding the untaxed, tax, and total amounts.\n\n\n**Compiling All Bill Data**\n\nI have a finalized JSON schema that I am now filling. I have found and formatted the vendor's IBAN (`iban`) and VAT treatment, which is exempt. The lines and the VAT breakdown were located. I will now assemble the entire JSON object.\n\n\n**Finalizing JSON Assembly**\n\nOkay, I've gathered all the required data points and am nearly done. I'm now focusing on constructing the final JSON object. I'm double-checking the data types of each field, ensuring the dates are formatted correctly, and that numbers are represented consistently. The line items and VAT breakdown have been compiled. I'm assembling the final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Bill Information**\n\nOkay, I'm working on extracting information from the bill. My first task is the vendor's name, which I've located under \"Verkäufer\" -> \"Name\": \"MVM Muster\". Next, I'll identify and format this information into the corresponding JSON field, `vendor_name`. I will continue to process the document and extract information as needed.\n\n\n**Extracting Bill Data**\n\nI've got the extraction plan finalized and am now starting the data mining process, focusing on populating the JSON object. I have successfully located and formatted the `vendor_name`, the VAT number (`vendor_vat`), the invoice number (`invoice_ref`), the invoice date (`invoice_date`), the due date (`due_date`), and the currency (`currency`). I will now move to finding the untaxed, tax, and total amounts.\n\n\n**Compiling All Bill Data**\n\nI have a finalized JSON schema that I am now filling. I have found and formatted the vendor's IBAN (`iban`) and VAT treatment, which is exempt. The lines and the VAT breakdown were located. I will now assemble the entire JSON object.\n\n\n**Finalizing JSON Assembly**\n\nOkay, I've gathered all the required data points and am nearly done. I'm now focusing on constructing the final JSON object. I'm double-checking the data types of each field, ensuring the dates are formatted correctly, and that numbers are represented consistently. The line items and VAT breakdown have been compiled. I'm assembling the final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 1334,
+   "total_tokens": 2168,
+   "cost": 0.0143825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0143825,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.01334
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 964,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.28
+}

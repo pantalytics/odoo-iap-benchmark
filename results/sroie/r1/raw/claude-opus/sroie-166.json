@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "THE STORE (MALAYSIA) SDN BHD",
+  "vendor_vat": "000364929024",
+  "invoice_ref": "1012-3001-0094",
+  "invoice_date": "2018-01-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 33.82,
+  "tax": 1.98,
+  "total": 35.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "UNI WORKER'S CARD (1-31) 100'S",
+    "quantity": 4,
+    "unit_price": 2.92,
+    "tax_rate": 6,
+    "net": 11.7
+   },
+   {
+    "description": "UNI A6 NOTE BOOK 120'S",
+    "quantity": 18,
+    "unit_price": 1.23,
+    "tax_rate": 6,
+    "net": 22.08
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 33.82,
+    "tax": 1.98
+   },
+   {
+    "rate": 0,
+    "base": 0,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.027064,
+ "raw": {
+  "id": "gen-1794514465-tqBpmgIsw2t9bc5bAawF",
+  "object": "chat.completion",
+  "created": 1794514465,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"THE STORE (MALAYSIA) SDN BHD\",\"vendor_vat\":\"000364929024\",\"invoice_ref\":\"1012-3001-0094\",\"invoice_date\":\"2018-01-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":33.82,\"tax\":1.98,\"total\":35.8,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"UNI WORKER'S CARD (1-31) 100'S\",\"quantity\":4,\"unit_price\":2.92,\"tax_rate\":6,\"net\":11.7},{\"description\":\"UNI A6 NOTE BOOK 120'S\",\"quantity\":18,\"unit_price\":1.23,\"tax_rate\":6,\"net\":22.08}],\"vat_breakdown\":[{\"rate\":6,\"base\":33.82,\"tax\":1.98},{\"rate\":0,\"base\":0,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm checking whether the receipt's printed line amounts already include GST, since they seem to. Dividing each line by 1.06 to back out the tax gives totals of 33.78, which doesn't quite match the 33.82 printed, so I'm working out which way to convert.\n\nI'm settling on the converted figures: unit prices of 2.92 and 1.23, with line nets of 11.70 and 22.08. The totals still differ by 0.04 from the printed 33.82, and the tax works out to 1.98, so I'll record the VAT breakdown at 6% and note the receipt reference and vendor VAT number.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking whether the receipt's printed line amounts already include GST, since they seem to. Dividing each line by 1.06 to back out the tax gives totals of 33.78, which doesn't quite match the 33.82 printed, so I'm working out which way to convert.\n\nI'm settling on the converted figures: unit prices of 2.92 and 1.23, with line nets of 11.70 and 22.08. The totals still differ by 0.04 from the printed 33.82, and the tax works out to 1.98, so I'll record the VAT breakdown at 6% and note the receipt reference and vendor VAT number.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSkwsKEAgTGAI4AUIIdGhpbmtpbmcSDCDlb4obUQrUMkUcsBoMV75qMpsyNum2xIysIjDmIhIDDYPVGafLK6xYi3uXDYzrPTOCM4yDQzK/N7fOU585XCsdQJt2EeRnhb4WQfMqsAryeZFfgs5nyP+tar4szZq0EV46k7OMvjBihdge+Tiz9X93bK8w/nJIXOaL1zaUJ+lfEyutuoRSPG+9QfYjsISsoXE6zYtCAWgKV7ukzTcDBhxQ36sG5JJ3dLvNiuI3o9kqY0N/K9FFQfNbRRDHhGLuwZJfNwv9kAmpnKrUk5ZaQyjCLAHcbXEWDUr1NfmswRxdjPaGPvKS+YDPuFAzZwXdoGYvbvXPDpDB2+HXEaUw2+2WEfKCkbn3+FyuNFDyR//GlauyryLp4ncVTFSQ1WJWN+BR/VtRqOu2GKVEHx3YkOjQOR43fxNHbkvqF4yHKQlbdi9W8a7AC3ftorvroDJarpd+bOjA765ohBNKdr4XrEHgqHJWDX4IwKF+fnXxFwwUiqFwgYEFDQ5VOYKVuNTJyylo32KnC3tmtuxG+gS05L2LFmH9NMYbGggcJywCRcaEw7HObh/QRKVf4iZDmbXie0jtW/p+UnZnTI6to/86fWzcHyu+Zw+ObXJR1ciMCmxfh0mvTKDZ/vFSWSdy0J6k9bAifoHurfookUz1Owj/cOkdSqefmyFW3QkwwNj6BKA8McK93Unrs2GDo22co6+nOPbTd3lKoE12EHdG+UmQeehQ39zMI9iMtJsAJp374nBM5wCLwtRIXYJ3OvsxcuwUpgutWSvMSQD6iED4ZMg7R8KRcp8vmI8EtJnsHUb9OhkpZPk/T0EqI2jiDHzCvpjZFvmJiwKZmC/mPTWEK9BCu1yjgsF0XYfJwTH/XNgF7zQn+YGeYGLYDlJnJz8P6WntbqB4Mj16k0YPOXbwMMqWCTbSzQHRO5ikhsj40HttiSkp6Ig52itYx655VBO5h5mGke2fPv1aOzTu49jsrHMgaARPYunks5E3S2P425j0BS7gjuUiYjSRFRxb0v4xy5OR6hKKAHrX60jziFou48ZO/5WhAtZiN+73fHQgVPQc8r0vBvQtnG0B0lKQqh4gtqCULaPuLD5CkpJSZP7yX6/jx2yh+njBEPGEk2ZsB1uW7vu5lKGHds2S7j4hnucCrNriJqFA7oDGycyn2Pa5SUzt4PLo60lBVkM04HQPWzHwjw8RkfdQmVNKQauXNzArLmvvPzCmo6Rj7p/f1kICwzBKz2DuWKfKXDSQz/CdTsi6rV9fU2T47YFZa86clg58hKY1pPJOPW76wAb9tt2MibTqf27AqO1kkWZhElOOpqjiV13SQ2RSPg8+HENA09Amqu3Ctqevswmy2GCCvgBEE7gWU6gJngx64MuZ4ko73o+ptkuJSGYVWzb0DM5JffmXZ6mon+n3u5NwPlDiH69+Ln4JUzvtOrvVbICPq+mFn+ucqpMR06qZLICv/zHXiR4wFUxG5fn/XyPcAeqr00Sluzj8xIYH8cBb6t4gZV1IDHCus8Vb1nhRUIhVgQNpM8zVXdIx6Q/5rz+CDIg/yaHOQgyrlPllT6+Il9UeEYtYw3k3wV+Qtag5+UPgY+TrB+brHLynZhvZNopbS8590gHp3nvj3CdP4Otu0SihGjlfAUNC6m2x+CUSDsvHYA6d8/DFlmxXdAGtcSjSYx2mnqhxK4MbN8ZTRQf5Hv+Mk795AkQuFUvRE4nUXwm1AwEyDbvcE0MhyH2/iyM9n0UE0cm/b0wJMB3PAn+qgwi810t44Z/lrcLBew+TrIgjCwx38k7m0hzl0xswkqvM7HV4ryQia9oUWPXWYLsPPbvK+FbjCwaNeB2GzZROx7XKfYRYYnpWysR2V6DDxnXD/38/Kc7sCUez1hgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 717,
+   "total_tokens": 3898,
+   "cost": 0.027064,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.027064,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01434
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 413,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.91
+}

@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+  "vendor_vat": "000750673920",
+  "invoice_ref": "CS00012543",
+  "invoice_date": "2018-01-04",
+  "due_date": "2018-01-04",
+  "currency": "MYR",
+  "untaxed": 42.2,
+  "tax": 2.53,
+  "total": 44.73,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "25MM GI NIPPLE",
+    "quantity": 1,
+    "unit_price": 3.5,
+    "tax_rate": 6,
+    "net": 3.5
+   },
+   {
+    "description": "SEAL TAPE",
+    "quantity": 2,
+    "unit_price": 0.6,
+    "tax_rate": 6,
+    "net": 1.2
+   },
+   {
+    "description": "32MM POLY SOCKET",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 6,
+    "net": 5.5
+   },
+   {
+    "description": "1\" BALL VALVE",
+    "quantity": 1,
+    "unit_price": 32.0,
+    "tax_rate": 6,
+    "net": 32.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 42.2,
+    "tax": 2.53
+   }
+  ]
+ },
+ "cost_usd": 0.0505975,
+ "raw": {
+  "id": "gen-1794512634-uvH8HCSSyJYvWzRnDnck",
+  "object": "chat.completion",
+  "created": 1794512634,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SYARIKAT PERNIAGAAN GIN KEE\",\n  \"vendor_vat\": \"000750673920\",\n  \"invoice_ref\": \"CS00012543\",\n  \"invoice_date\": \"2018-01-04\",\n  \"due_date\": \"2018-01-04\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 42.20,\n  \"tax\": 2.53,\n  \"total\": 44.73,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"25MM GI NIPPLE\",\n      \"quantity\": 1,\n      \"unit_price\": 3.5,\n      \"tax_rate\": 6,\n      \"net\": 3.5\n    },\n    {\n      \"description\": \"SEAL TAPE\",\n      \"quantity\": 2,\n      \"unit_price\": 0.6,\n      \"tax_rate\": 6,\n      \"net\": 1.2\n    },\n    {\n      \"description\": \"32MM POLY SOCKET\",\n      \"quantity\": 1,\n      \"unit_price\": 5.5,\n      \"tax_rate\": 6,\n      \"net\": 5.5\n    },\n    {\n      \"description\": \"1\\\" BALL VALVE\",\n      \"quantity\": 1,\n      \"unit_price\": 32.0,\n      \"tax_rate\": 6,\n      \"net\": 32.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 42.20,\n      \"tax\": 2.53\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data Points**\n\nI've successfully identified the vendor name as \"SYARIKAT PERNIAGAAN GIN KEE\" and the GST ID, which I've labeled as the vendor's VAT, is \"000750673920\". I've also found the invoice reference, which corresponds to \"Doc No.\", and is \"CS00012\". I'm on track to mapping the rest of the relevant data for the JSON schema.\n\n\n**Mapping Relevant Data**\n\nI've now mapped the invoice date (\"04/01/2018\") and due date (same as invoice date for cash invoices) to \"2018-01-04\". I've determined the currency as MYR, and extracted untaxed (42.20), tax (2.53), and total (44.73) amounts. I'm also confirming no IBAN is present, so null is appropriate. Finally, I've confirmed that the tax treatment for \"SR\" is \"S\" and extracted the initial item details for parsing.\n\n\n**Refining Document Details**\n\nI'm now zeroing in on the invoice reference, finding it's actually \"CS00012 543,\" including the space. The invoice date and due date are confirmed as \"2018-01-04.\" The currency is definitively MYR, and I've extracted the core financial figures: untaxed at 42.20, tax at 2.53, and the total at 44.73. I am setting the IBAN as null. I've confirmed \"SR\" means \"S.\" I've begun parsing the line items for final integration.\n\n\n**Finalizing Line Item Calculations**\n\nI've determined I need to adjust my approach to the line items. It seems the \"S/Price\" and \"Amount\" columns include tax. The \"Amount\" column appears to be the total line amount, including tax. So I am re-evaluating the formula for net. For a 6% tax rate (\"SR\"), the net price per line item = (tax-inclusive amount) / 1.06. I am now proceeding with the line item extraction, re-calculating the unit prices and net amounts accordingly.\n\n\n**Reconciling Line Item Figures**\n\nI'm now focusing on resolving inconsistencies within the line item data. I've re-examined the tax calculations, and suspect that the \"S/Price\" column is the pre-tax unit price. The \"Amount\" column appears to be the line total, *including* tax. I'll need to double check the figures for validation, but for now, I will treat S/Price as the pre-tax unit price, and Amounts as the post-tax amount, and recalculate accordingly. I am proceeding to extract and calculate for each line to resolve the inconsistencies.\n\n\n**Calculating Tax-Adjusted Values**\n\nI'm now focusing on the final calculations, specifically how tax is handled in the line items. It seems I made an incorrect assumption. While I've verified most values, including the vendor's details and total amounts, I'm now revisiting how to derive the net values and the unit prices before tax. I will now re-process the data in accordance with the new data insights.\n\nI am re-examining the line item data. I believe \"S/Price\" contains tax. I will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\n\n\n**Refining Item Calculation**\n\nI'm now zeroing in on the correct method for line item values. I've re-examined the tax calculations, and I've verified most values, including the vendor's details and total amounts, but I now have new insights on how to correctly derive the net values and the unit prices before tax. I will proceed with recalculations.\n\nI am re-examining the line item data. I believe \"S/Price\" contains tax. I will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\n\n\n**Refining Unit Calculations**\n\nI've made a crucial shift: I now understand the S/Price column likely includes tax and that the Amount column represents the total line amount, also inclusive of tax. So, I need to recalculate the unit prices and net amounts for line items using the formula: net price = inclusive amount / 1.06. I'm verifying all calculations to ensure everything aligns with totals, which appear sound.\n\n\n**Refining Unit Calculations**\n\nI've determined that \"S/Price\" contains tax. I'll utilize the formula: net price = inclusive amount / 1.06 to derive the pre-tax amounts. I am now proceeding with calculating unit prices and net amounts for line items, and the totals look good.\n\nI have updated the line item figures, using the totals to derive the net value.\nI will proceed with the updated calculations and values for the schema.\n\n\n**Finalizing Invoice Calculations**\n\nI'm now integrating all the information. I have finalized calculations for net and unit prices and confirmed the approach, based on tax-inclusive amounts from the document. I will now extract values in a consistent manner and populate the JSON schema.\n\nI have updated the values to reflect that the S/Price is the tax inclusive unit price. The \"Amount\" column is the line total, *including* tax. I will proceed with the updated calculations.\n\n\n**Finalizing Calculated Line Totals**\n\nI've updated my approach. The analysis is complete, and the final calculations for net and unit prices are derived from tax-inclusive amounts. Now, I have confirmed the method, which is based on the tax-inclusive values found in the document. With the values re-calculated, I'm prepared to finalize the data extraction and populate the JSON schema.\n\n\n**Refining Calculation Accuracy**\n\nI'm now zeroing in on accurate values, especially for line items. After careful analysis, I've confirmed that the \"Amount\" column represents the total line item cost *including* tax. I'll use the formula net price = (tax-inclusive amount) / 1.06 to derive the net values. I am updating my processing logic to incorporate this crucial insight. I am calculating line item net values using the total and unit prices, and verifying totals.\n\nI am re-examining the line item data.\nI will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\nI have updated the values to reflect that the S/Price is the tax inclusive unit price.\nThe \"Amount\" column is the line total, *including* tax.\nI have finalized the schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data Points**\n\nI've successfully identified the vendor name as \"SYARIKAT PERNIAGAAN GIN KEE\" and the GST ID, which I've labeled as the vendor's VAT, is \"000750673920\". I've also found the invoice reference, which corresponds to \"Doc No.\", and is \"CS00012\". I'm on track to mapping the rest of the relevant data for the JSON schema.\n\n\n**Mapping Relevant Data**\n\nI've now mapped the invoice date (\"04/01/2018\") and due date (same as invoice date for cash invoices) to \"2018-01-04\". I've determined the currency as MYR, and extracted untaxed (42.20), tax (2.53), and total (44.73) amounts. I'm also confirming no IBAN is present, so null is appropriate. Finally, I've confirmed that the tax treatment for \"SR\" is \"S\" and extracted the initial item details for parsing.\n\n\n**Refining Document Details**\n\nI'm now zeroing in on the invoice reference, finding it's actually \"CS00012 543,\" including the space. The invoice date and due date are confirmed as \"2018-01-04.\" The currency is definitively MYR, and I've extracted the core financial figures: untaxed at 42.20, tax at 2.53, and the total at 44.73. I am setting the IBAN as null. I've confirmed \"SR\" means \"S.\" I've begun parsing the line items for final integration.\n\n\n**Finalizing Line Item Calculations**\n\nI've determined I need to adjust my approach to the line items. It seems the \"S/Price\" and \"Amount\" columns include tax. The \"Amount\" column appears to be the total line amount, including tax. So I am re-evaluating the formula for net. For a 6% tax rate (\"SR\"), the net price per line item = (tax-inclusive amount) / 1.06. I am now proceeding with the line item extraction, re-calculating the unit prices and net amounts accordingly.\n\n\n**Reconciling Line Item Figures**\n\nI'm now focusing on resolving inconsistencies within the line item data. I've re-examined the tax calculations, and suspect that the \"S/Price\" column is the pre-tax unit price. The \"Amount\" column appears to be the line total, *including* tax. I'll need to double check the figures for validation, but for now, I will treat S/Price as the pre-tax unit price, and Amounts as the post-tax amount, and recalculate accordingly. I am proceeding to extract and calculate for each line to resolve the inconsistencies.\n\n\n**Calculating Tax-Adjusted Values**\n\nI'm now focusing on the final calculations, specifically how tax is handled in the line items. It seems I made an incorrect assumption. While I've verified most values, including the vendor's details and total amounts, I'm now revisiting how to derive the net values and the unit prices before tax. I will now re-process the data in accordance with the new data insights.\n\nI am re-examining the line item data. I believe \"S/Price\" contains tax. I will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\n\n\n**Refining Item Calculation**\n\nI'm now zeroing in on the correct method for line item values. I've re-examined the tax calculations, and I've verified most values, including the vendor's details and total amounts, but I now have new insights on how to correctly derive the net values and the unit prices before tax. I will proceed with recalculations.\n\nI am re-examining the line item data. I believe \"S/Price\" contains tax. I will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\n\n\n**Refining Unit Calculations**\n\nI've made a crucial shift: I now understand the S/Price column likely includes tax and that the Amount column represents the total line amount, also inclusive of tax. So, I need to recalculate the unit prices and net amounts for line items using the formula: net price = inclusive amount / 1.06. I'm verifying all calculations to ensure everything aligns with totals, which appear sound.\n\n\n**Refining Unit Calculations**\n\nI've determined that \"S/Price\" contains tax. I'll utilize the formula: net price = inclusive amount / 1.06 to derive the pre-tax amounts. I am now proceeding with calculating unit prices and net amounts for line items, and the totals look good.\n\nI have updated the line item figures, using the totals to derive the net value.\nI will proceed with the updated calculations and values for the schema.\n\n\n**Finalizing Invoice Calculations**\n\nI'm now integrating all the information. I have finalized calculations for net and unit prices and confirmed the approach, based on tax-inclusive amounts from the document. I will now extract values in a consistent manner and populate the JSON schema.\n\nI have updated the values to reflect that the S/Price is the tax inclusive unit price. The \"Amount\" column is the line total, *including* tax. I will proceed with the updated calculations.\n\n\n**Finalizing Calculated Line Totals**\n\nI've updated my approach. The analysis is complete, and the final calculations for net and unit prices are derived from tax-inclusive amounts. Now, I have confirmed the method, which is based on the tax-inclusive values found in the document. With the values re-calculated, I'm prepared to finalize the data extraction and populate the JSON schema.\n\n\n**Refining Calculation Accuracy**\n\nI'm now zeroing in on accurate values, especially for line items. After careful analysis, I've confirmed that the \"Amount\" column represents the total line item cost *including* tax. I'll use the formula net price = (tax-inclusive amount) / 1.06 to derive the net values. I am updating my processing logic to incorporate this crucial insight. I am calculating line item net values using the total and unit prices, and verifying totals.\n\nI am re-examining the line item data.\nI will treat \"S/Price\" as the unit price inclusive of tax, and \"Amount\" as the line total, *including* tax.\nI have updated the values to reflect that the S/Price is the tax inclusive unit price.\nThe \"Amount\" column is the line total, *including* tax.\nI have finalized the schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 5020,
+   "total_tokens": 5338,
+   "cost": 0.0505975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0505975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0502
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4595,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 42.37
+}

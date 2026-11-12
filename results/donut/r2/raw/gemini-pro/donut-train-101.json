@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Hernandez Ltd",
+  "vendor_vat": "992-82-2992",
+  "invoice_ref": "10823698",
+  "invoice_date": "2020-09-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 52257.34,
+  "tax": 5225.73,
+  "total": 57483.07,
+  "iban": "GB18PQYJ80406485504853",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "YILONG 5'x7.5' Handknotted Silk Carpet Whirlwind Home Decor Classic Rug 0807",
+    "quantity": 3,
+    "unit_price": 2800.0,
+    "tax_rate": 10,
+    "net": 8400.0
+   },
+   {
+    "description": "Yilong 8x10ft Hand knotted Wool Carpets Home Decor Modern Villa Area Rug P39",
+    "quantity": 2,
+    "unit_price": 5040.0,
+    "tax_rate": 10,
+    "net": 10080.0
+   },
+   {
+    "description": "Yilong 5'x7' Handknotted Silk Carpet Home Interior Classic Luxury Area Rug 1047",
+    "quantity": 4,
+    "unit_price": 8400.0,
+    "tax_rate": 10,
+    "net": 33600.0
+   },
+   {
+    "description": "Leopard Printed Rug Skin Mat Leather Faux Fur Animals Area Rugs Home Carpets",
+    "quantity": 4,
+    "unit_price": 19.49,
+    "tax_rate": 10,
+    "net": 77.96
+   },
+   {
+    "description": "Black+White Rectangle Shape Area Rug Carpet Floor Pad Doormat Mats Non-slip Z4F9",
+    "quantity": 3,
+    "unit_price": 21.1,
+    "tax_rate": 10,
+    "net": 63.3
+   },
+   {
+    "description": "Philadelphia Eagles Anti-Skid Area Rug Soft Floor Mat Carpet Living Room Bedroom",
+    "quantity": 2,
+    "unit_price": 18.04,
+    "tax_rate": 10,
+    "net": 36.08
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 52257.34,
+    "tax": 5225.73
+   }
+  ]
+ },
+ "cost_usd": 0.033736,
+ "raw": {
+  "id": "gen-1794512968-9GuliecU6DPeM4YpiqCK",
+  "object": "chat.completion",
+  "created": 1794512968,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hernandez Ltd\",\n  \"vendor_vat\": \"992-82-2992\",\n  \"invoice_ref\": \"10823698\",\n  \"invoice_date\": \"2020-09-26\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 52257.34,\n  \"tax\": 5225.73,\n  \"total\": 57483.07,\n  \"iban\": \"GB18PQYJ80406485504853\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"YILONG 5'x7.5' Handknotted Silk Carpet Whirlwind Home Decor Classic Rug 0807\",\n      \"quantity\": 3,\n      \"unit_price\": 2800.00,\n      \"tax_rate\": 10,\n      \"net\": 8400.00\n    },\n    {\n      \"description\": \"Yilong 8x10ft Hand knotted Wool Carpets Home Decor Modern Villa Area Rug P39\",\n      \"quantity\": 2,\n      \"unit_price\": 5040.00,\n      \"tax_rate\": 10,\n      \"net\": 10080.00\n    },\n    {\n      \"description\": \"Yilong 5'x7' Handknotted Silk Carpet Home Interior Classic Luxury Area Rug 1047\",\n      \"quantity\": 4,\n      \"unit_price\": 8400.00,\n      \"tax_rate\": 10,\n      \"net\": 33600.00\n    },\n    {\n      \"description\": \"Leopard Printed Rug Skin Mat Leather Faux Fur Animals Area Rugs Home Carpets\",\n      \"quantity\": 4,\n      \"unit_price\": 19.49,\n      \"tax_rate\": 10,\n      \"net\": 77.96\n    },\n    {\n      \"description\": \"Black+White Rectangle Shape Area Rug Carpet Floor Pad Doormat Mats Non-slip Z4F9\",\n      \"quantity\": 3,\n      \"unit_price\": 21.10,\n      \"tax_rate\": 10,\n      \"net\": 63.30\n    },\n    {\n      \"description\": \"Philadelphia Eagles Anti-Skid Area Rug Soft Floor Mat Carpet Living Room Bedroom\",\n      \"quantity\": 2,\n      \"unit_price\": 18.04,\n      \"tax_rate\": 10,\n      \"net\": 36.08\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 52257.34,\n      \"tax\": 5225.73\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My aim is to accurately identify and capture these specific fields for further processing, ensuring we get the core vendor information.\n\n**Refining Data Extraction**\n\nI've successfully extracted the vendor name and VAT, and am now working on normalizing dates and currency. I'm also converting numerical values, handling missing data like the due date, and identifying the IBAN.\n\n**Processing Invoice Line Items**\n\nI've finished refining date and currency normalization, and now I'm diligently processing each line item. This involves cleaning quantities, unit prices, and net amounts, while also categorizing the VAT treatment. I'm also capturing detailed descriptions for each item.\n\n**Finalizing Data Formatting**\n\nI've completed the detailed processing of line items and the VAT breakdown. My focus is now on ensuring all extracted data, including numerical values and the VAT breakdown, adheres to the specified output format, with dates standardized to YYYY-MM-DD.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My aim is to accurately identify and capture these specific fields for further processing, ensuring we get the core vendor information.\n\n**Refining Data Extraction**\n\nI've successfully extracted the vendor name and VAT, and am now working on normalizing dates and currency. I'm also converting numerical values, handling missing data like the due date, and identifying the IBAN.\n\n**Processing Invoice Line Items**\n\nI've finished refining date and currency normalization, and now I'm diligently processing each line item. This involves cleaning quantities, unit prices, and net amounts, while also categorizing the VAT treatment. I'm also capturing detailed descriptions for each item.\n\n**Finalizing Data Formatting**\n\nI've completed the detailed processing of line items and the VAT breakdown. My focus is now on ensuring all extracted data, including numerical values and the VAT breakdown, adheres to the specified output format, with dates standardized to YYYY-MM-DD.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2550,
+   "total_tokens": 4118,
+   "cost": 0.033736,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.033736,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.0306
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1831,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.6
+}

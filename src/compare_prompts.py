@@ -82,22 +82,23 @@ def figure(data: dict, out: Path) -> None:
     colors = {"base": "#8a9396", "h3": "#5b58d8", "h4": "#0f8f6a"}
     markers = {"base": "o", "h3": "s", "h4": "^"}
     present = [(k, t) for k, t in SETS if data[k]["h3"] or data[k]["h4"]]
-    fig, axes = plt.subplots(1, len(present), figsize=(4.2 * len(present), 2.8), sharey=True)
+    fig, axes = plt.subplots(1, len(present), figsize=(4.2 * len(present), 3.2), sharey=True)
     axes = axes if len(present) > 1 else [axes]
     for ax, (key, title) in zip(axes, present, strict=True):
         for y, (engine, _) in enumerate(MODELS):
             pts = [(arm, rate(data[key][arm], engine)) for arm, _ in ARMS]
-            xs = [v for _, v in pts if v is not None]
-            if xs:
-                ax.plot([min(xs), max(xs)], [y, y], color=GRID, lw=3, zorder=1)
+            offsets = {"base": -0.22, "h3": 0.0, "h4": 0.22}  # dodge, so no marker hides another
             for arm, v in pts:
                 if v is not None:
-                    ax.scatter(v, y, color=colors[arm], marker=markers[arm], s=70,
-                               edgecolor="white", lw=1.5, zorder=3)  # fmt: skip
+                    yy = y + offsets[arm]
+                    ax.scatter(v, yy, color=colors[arm], marker=markers[arm], s=60,
+                               edgecolor="white", lw=1.2, zorder=3)  # fmt: skip
+                    ax.annotate(f"{v:.0f}", (v, yy), xytext=(-8, 0), textcoords="offset points",
+                                ha="right", va="center", fontsize=8, color=INK)  # fmt: skip
         ax.set_yticks(range(len(MODELS)), [name for _, name in MODELS])
         ax.set_ylim(-0.6, len(MODELS) - 0.4)
-        ax.set_xlim(0, 104)
-        ax.set_xticks([0, 50, 100], ["0", "50", "100%"])
+        ax.set_xlim(40, 104)
+        ax.set_xticks([50, 75, 100], ["50", "75", "100%"])
         ax.grid(axis="x", color=GRID, lw=0.8)
         ax.set_axisbelow(True)
         ax.tick_params(axis="y", length=0)

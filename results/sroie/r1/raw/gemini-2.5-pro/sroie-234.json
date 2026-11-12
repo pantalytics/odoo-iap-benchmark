@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "BEMED (SP) SDN. BHD.",
+  "vendor_vat": "001734164480",
+  "invoice_ref": "58273599475",
+  "invoice_date": "2017-01-02",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 155.66,
+  "tax": 9.34,
+  "total": 165.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALPHA LIPID LIFE LINE 450MG 450G",
+    "quantity": 1.0,
+    "unit_price": 155.66,
+    "tax_rate": 6.0,
+    "net": 155.66
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 155.0,
+    "tax": 9.34
+   }
+  ]
+ },
+ "cost_usd": 0.0284675,
+ "raw": {
+  "id": "gen-1794512896-FwlK01uVtAuVAMniTD9O",
+  "object": "chat.completion",
+  "created": 1794512896,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"BEMED (SP) SDN. BHD.\",\n  \"vendor_vat\": \"001734164480\",\n  \"invoice_ref\": \"58273599475\",\n  \"invoice_date\": \"2017-01-02\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 155.66,\n  \"tax\": 9.34,\n  \"total\": 165.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"ALPHA LIPID LIFE LINE 450MG 450G\",\n      \"quantity\": 1.0,\n      \"unit_price\": 155.66,\n      \"tax_rate\": 6.0,\n      \"net\": 155.66\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 155.0,\n      \"tax\": 9.34\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI've successfully identified \"BEMED (SP) SDN . BHD.\" as the `vendor_name` from the receipt. Now, I need to pinpoint the vendor's VAT number or tax ID, which I'll map to `vendor_vat` in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the `vendor_vat` as \"001734164480\" from the GST registration number. The receipt's bill number, \"CB#: 58273 599475\", will be the `invoice_ref`. I've determined `invoice_date` is \"2017-01-02\", setting `due_date` to null as it's a cash receipt. The currency is \"MYR\" and now I'm working on `untaxed` which is proving tricky, as the GST seems to be included in the SubTotal. I'll need to double check how the figures work.\n\n\n**Determining Key Variables**\n\nI'm now confidently assigning values to most of the JSON fields. I've confirmed `untaxed` as 155.00 MYR, `tax` as 9.34 MYR, and `total` as 165.00 MYR. The VAT treatment is \"S\" based on \"SR\" and \"GST\". I am also comfortable that IBAN does not exist on this receipt, so `iban` is null. The final step is populating the line items.\n\n\n**Finalizing Field Values**\n\nI've just finished assigning values to all the JSON fields. I've confirmed that the 'untaxed' amount is indeed 155.00 MYR, with tax at 9.34 MYR, making the total 165.00 MYR. The VAT treatment is \"S\" based on \"SR\" and \"GST\". Additionally, the receipt lacks an IBAN, so `iban` remains null. Now, I'm carefully constructing the line item details. The line item description is \"ALPHA LIPID LIFE LINE 450MG 450 G\". I'm populating values for the JSON file now and validating the overall data to ensure completeness and accuracy.\n\n\n**Reconciling Discrepancies**\n\nI'm now grappling with an inconsistency in the receipt data. While the printed \"Amount (MYR)\" is 155.00, calculation based on the total and tax rate (6%) yields 155.66. The printed values for tax (9.34) and total (165.00) are correct, and the values in the JSON are updated. I'll need to figure out which value to map and why. The value in the line item is 165.00 which is total including the GST.\n\n\n**Resolving Value Inconsistencies**\n\nI'm now struggling to deal with the inconsistencies in untaxed amounts. The receipt's printed \"Amount (MYR)\" doesn't align with the calculation based on the total and tax. I've chosen to calculate the untaxed amount from the total and tax as the most consistent approach for the schema. I'm now populating the line item detail with `unit_price` at 155.66 MYR and the `vat_breakdown`.\n\n\n**Finalizing Tax Calculations**\n\nI'm now satisfied with the overall data integrity. I calculated the `untaxed` amount at 155.66 MYR based on the total and tax, reconciling it to the line item's price. I confirmed a 6% tax rate for `vat_breakdown` using a total of 9.34 MYR and a total amount of 165.00 MYR. I've populated the line item and finalized values across all the JSON fields, with `unit_price` at 155.66, and `vat_breakdown` set for a rate of 6% and tax of 9.34.\n\n\n**Refining Final Calculations**\n\nI'm now satisfied after recalculating and reconciling. The `untaxed` amount is derived from the total and tax, ensuring the schema's consistency. The `unit_price` of the line item is 155.66 MYR with `vat_breakdown` at 6% (9.34 MYR tax for a total of 165.00 MYR). All fields are now complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI've successfully identified \"BEMED (SP) SDN . BHD.\" as the `vendor_name` from the receipt. Now, I need to pinpoint the vendor's VAT number or tax ID, which I'll map to `vendor_vat` in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the `vendor_vat` as \"001734164480\" from the GST registration number. The receipt's bill number, \"CB#: 58273 599475\", will be the `invoice_ref`. I've determined `invoice_date` is \"2017-01-02\", setting `due_date` to null as it's a cash receipt. The currency is \"MYR\" and now I'm working on `untaxed` which is proving tricky, as the GST seems to be included in the SubTotal. I'll need to double check how the figures work.\n\n\n**Determining Key Variables**\n\nI'm now confidently assigning values to most of the JSON fields. I've confirmed `untaxed` as 155.00 MYR, `tax` as 9.34 MYR, and `total` as 165.00 MYR. The VAT treatment is \"S\" based on \"SR\" and \"GST\". I am also comfortable that IBAN does not exist on this receipt, so `iban` is null. The final step is populating the line items.\n\n\n**Finalizing Field Values**\n\nI've just finished assigning values to all the JSON fields. I've confirmed that the 'untaxed' amount is indeed 155.00 MYR, with tax at 9.34 MYR, making the total 165.00 MYR. The VAT treatment is \"S\" based on \"SR\" and \"GST\". Additionally, the receipt lacks an IBAN, so `iban` remains null. Now, I'm carefully constructing the line item details. The line item description is \"ALPHA LIPID LIFE LINE 450MG 450 G\". I'm populating values for the JSON file now and validating the overall data to ensure completeness and accuracy.\n\n\n**Reconciling Discrepancies**\n\nI'm now grappling with an inconsistency in the receipt data. While the printed \"Amount (MYR)\" is 155.00, calculation based on the total and tax rate (6%) yields 155.66. The printed values for tax (9.34) and total (165.00) are correct, and the values in the JSON are updated. I'll need to figure out which value to map and why. The value in the line item is 165.00 which is total including the GST.\n\n\n**Resolving Value Inconsistencies**\n\nI'm now struggling to deal with the inconsistencies in untaxed amounts. The receipt's printed \"Amount (MYR)\" doesn't align with the calculation based on the total and tax. I've chosen to calculate the untaxed amount from the total and tax as the most consistent approach for the schema. I'm now populating the line item detail with `unit_price` at 155.66 MYR and the `vat_breakdown`.\n\n\n**Finalizing Tax Calculations**\n\nI'm now satisfied with the overall data integrity. I calculated the `untaxed` amount at 155.66 MYR based on the total and tax, reconciling it to the line item's price. I confirmed a 6% tax rate for `vat_breakdown` using a total of 9.34 MYR and a total amount of 165.00 MYR. I've populated the line item and finalized values across all the JSON fields, with `unit_price` at 155.66, and `vat_breakdown` set for a rate of 6% and tax of 9.34.\n\n\n**Refining Final Calculations**\n\nI'm now satisfied after recalculating and reconciling. The `untaxed` amount is derived from the total and tax, ensuring the schema's consistency. The `unit_price` of the line item is 155.66 MYR with `vat_breakdown` at 6% (9.34 MYR tax for a total of 165.00 MYR). All fields are now complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2807,
+   "total_tokens": 3125,
+   "cost": 0.0284675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0284675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02807
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2530,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.09
+}

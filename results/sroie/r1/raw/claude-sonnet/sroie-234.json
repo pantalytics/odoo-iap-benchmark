@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "BEMED (SP) SDN. BHD.",
+  "vendor_vat": "001734164460",
+  "invoice_ref": "58273599475",
+  "invoice_date": "2017-01-02",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 155.66,
+  "tax": 9.34,
+  "total": 165.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALPHA LIPID LIFE LINE 450MG 450G",
+    "quantity": 1,
+    "unit_price": 165.0,
+    "tax_rate": 6,
+    "net": 165.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 155.66,
+    "tax": 9.34
+   }
+  ]
+ },
+ "cost_usd": 0.013342,
+ "raw": {
+  "id": "gen-1794514627-gXbpGaXQwLJha4RwxiTr",
+  "object": "chat.completion",
+  "created": 1794514627,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"BEMED (SP) SDN. BHD.\",\"vendor_vat\":\"001734164460\",\"invoice_ref\":\"58273599475\",\"invoice_date\":\"2017-01-02\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":155.66,\"tax\":9.34,\"total\":165.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"ALPHA LIPID LIFE LINE 450MG 450G\",\"quantity\":1,\"unit_price\":165.0,\"tax_rate\":6,\"net\":165.0}],\"vat_breakdown\":[{\"rate\":6,\"base\":155.66,\"tax\":9.34}]}",
+     "refusal": null,
+     "reasoning": "I'm reading this Malaysian receipt, where the total including GST is 165.00. The GST summary shows an SR amount of 155.00 and tax of 9.34, but 165 divided by 1.06 gives 155.66, which would make the figures add up to 165.00, so I'm weighing whether the printed 155.00 is an OCR misread of 155.66.\n\nI'm settling on 155.66 for the untaxed amount and 9.34 for the tax, since those are the figures that add up to 165.00 at a 6% rate. The invoice reference and VAT details are still a bit unclear to me, but I'm going with the numbers that look most consistent.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading this Malaysian receipt, where the total including GST is 165.00. The GST summary shows an SR amount of 155.00 and tax of 9.34, but 165 divided by 1.06 gives 155.66, which would make the figures add up to 165.00, so I'm weighing whether the printed 155.00 is an OCR misread of 155.66.\n\nI'm settling on 155.66 for the untaxed amount and 9.34 for the tax, since those are the figures that add up to 165.00 at a 6% rate. The invoice reference and VAT details are still a bit unclear to me, but I'm going with the numbers that look most consistent.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 698,
+   "total_tokens": 3879,
+   "cost": 0.013342,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013342,
+    "upstream_inference_prompt_cost": 0.006362,
+    "upstream_inference_completions_cost": 0.00698
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 474,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.48
+}

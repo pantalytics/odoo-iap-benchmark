@@ -1,0 +1,109 @@
+{
+ "pred": {
+  "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+  "vendor_vat": "000750673920",
+  "invoice_ref": "CS00012543",
+  "invoice_date": "2018-01-04",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 42.2,
+  "tax": 2.53,
+  "total": 44.73,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "25MM GI NIPPLE",
+    "quantity": 1,
+    "unit_price": 3.5,
+    "tax_rate": 6,
+    "net": 3.5
+   },
+   {
+    "description": "SEAL TAPE",
+    "quantity": 2,
+    "unit_price": 0.6,
+    "tax_rate": 6,
+    "net": 1.2
+   },
+   {
+    "description": "32MM POLY SOCKET",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 6,
+    "net": 5.5
+   },
+   {
+    "description": "1\" BALL VALVE",
+    "quantity": 1,
+    "unit_price": 32,
+    "tax_rate": 6,
+    "net": 32
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 42.2,
+    "tax": 2.53
+   }
+  ]
+ },
+ "cost_usd": 0.025224,
+ "raw": {
+  "id": "gen-1794513466-wJncd3WHlZyVx6b4Adbo",
+  "object": "chat.completion",
+  "created": 1794513466,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SYARIKAT PERNIAGAAN GIN KEE\",\"vendor_vat\":\"000750673920\",\"invoice_ref\":\"CS00012543\",\"invoice_date\":\"2018-01-04\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":42.2,\"tax\":2.53,\"total\":44.73,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"25MM GI NIPPLE\",\"quantity\":1,\"unit_price\":3.5,\"tax_rate\":6,\"net\":3.5},{\"description\":\"SEAL TAPE\",\"quantity\":2,\"unit_price\":0.6,\"tax_rate\":6,\"net\":1.2},{\"description\":\"32MM POLY SOCKET\",\"quantity\":1,\"unit_price\":5.5,\"tax_rate\":6,\"net\":5.5},{\"description\":\"1\\\" BALL VALVE\",\"quantity\":1,\"unit_price\":32,\"tax_rate\":6,\"net\":32}],\"vat_breakdown\":[{\"rate\":6,\"base\":42.2,\"tax\":2.53}]}",
+     "refusal": null,
+     "reasoning": "I'm checking whether the printed line amounts already include GST, and they do: the four lines add to the total. The schema wants the amount before tax, so I'm working out the net of each line by dividing by 1.06.\n\nI'm dividing the remaining line amounts by 1.06 to get net values of 3.50, 0.60, 5.50 and 32.00, which sum to 42.20. I'm also reading the date as 4 January 2018 in DD/MM order and noting the GST ID and the MYR currency.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking whether the printed line amounts already include GST, and they do: the four lines add to the total. The schema wants the amount before tax, so I'm working out the net of each line by dividing by 1.06.\n\nI'm dividing the remaining line amounts by 1.06 to get net values of 3.50, 0.60, 5.50 and 32.00, which sum to 42.20. I'm also reading the date as 4 January 2018 in DD/MM order and noting the GST ID and the MYR currency.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS4wgKEAgTGAI4AUIIdGhpbmtpbmcSDLoLWfNnYXm8N+jzTRoMGm5jsKMkKsixcExtIjAViZMy7Zwh+Z/Uzo2/pwe4DyOqeVi2ua8gE4HoNNJnd7AQg8lk0VrtglvbBslK34EqgAi7J7O+BCpUaHXjgVFzPTO019EzKPRZAS3qmr1v/QR8dPdiVTBKDvuKauXagFUI80EP0djU4BUCYyrgCHK9heN/9Ovr9K/b3ClLJPzm5zPYH2mPO/6c432lMJlvrVkLvd3SDnAoC/iWiTZFGiSnbRpAKgTTG1bsUYwG/A4hiSvCL2IR/9R/bvC85lIqpd9XI6Inu2B5N+NhBID0GSo+SUrMbYmtbD1BEH64K1nNSxActCs+z0hiCAuez6c0103Qnvz1mjAp3KZJPYCJzcvTUajZTmP5UnpcwPp7ce7AqAkPu4U1WZ3ZZcDB6xaMNz85ZmYbFOq6V6UJnvd7SqWFzt34ptnNBeO8sPQCUMtEfJYv1Fm/wQzOTOS1bGVwJDxNIJ3RcoVgmbeu2Xuw/7BJvofPsq5c00PxZWO6F/i5MEL51pR+NKwusB4zkuatKiLOBvnZIu4LsWhR/Jt4/jbku6gF98ZtuHLb61U/6WJ5ifzjE0L0cHj7VuVCgmc3TqSwVbqmDjmQAFPUdgpw8rkI+iAppWcFSltezY8TMBwxhoIT+2XMOkwFRbMZ8zM4m6JONlZafqVdBrXqR2/kgdadBQsSQzoVfljEY+AOnHnQus6F2Sav4wVspn26TZ7NHHzBAsEtAJtPUu3yrun4tQIkMN+Gj1IcT8bq3NpZEyv4EgHSxDPtYr2VusblDMXW0C4YFnAWtqYdhPR0WmPO+F7+3HNWUTafrs5ohRn9NIpU4LAgxXLDVut1cjzLPjcnUNfrkYJgA8baty0g9KB4XpayZI8g/D/M2e9+1U8vsJuTUWZnMq9FFqsGR8lScAaV6FRKXfcWRTujk+vBU94hhlmz37B0Wt3HpLN7LYqnN13uOWJ89q8HCHLXdpwj+CL2hCqHkS2k0WFA9/PFCUaAPHboK/pKQ7Ss1A3dv91xUbAInpe+SgipycpqWI9wm+AsrbuUI3SA19kCqgxzcj2RkQKgRpSkPQtqKPdsrU+nRBamfEiAigm239j4ZtxywXNniyIYw/9BhPXKuxDIfgpiEsbev6QXrZMUoQrvt8oa4lgSPxsUFUqmEMiMtQWOaUJUWY9LMqGIbI3gjSiuEkmopQD8MPCA37EvvjL9O6LNcpu4x2ysK4sOlvOiOe8Onsm78Iek/PFoC5rZgxBjDFP2+28mXToCGd/uORI/8oKY3D/VzErBIknpoZEaRi76nM5lgQBInAwZzeRQTuDKih+f0pEI5hk827zxsr7M2bsqc134oyYSzBZPK3ZGVSTcnxgOYPVdoFUJ4lURsBfqvrp0tcOGC0bTkzwI6IvBO3Zivi2if5c5/xoQgWmR2qpoHIwaJgiMDL73CaH4SYECG4Ql4Hg49PvEGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 625,
+   "total_tokens": 3806,
+   "cost": 0.025224,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025224,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.0125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 267,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.91
+}

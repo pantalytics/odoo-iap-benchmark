@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "Mckenzie, Clay and Campos",
+  "vendor_vat": "973-94-2620",
+  "invoice_ref": "77658002",
+  "invoice_date": "2014-01-21",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 293.76,
+  "tax": 29.38,
+  "total": 323.14,
+  "iban": "GB69HUXE82460947316450",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Divided Black Asymmetrical Dress -size 8 - NWT",
+    "quantity": 1.0,
+    "unit_price": 7.99,
+    "tax_rate": 10,
+    "net": 7.99
+   },
+   {
+    "description": "Eileen Fisher Women's Long Sleeve Fleece Lined Front Pockets Dress XS Gray",
+    "quantity": 4.0,
+    "unit_price": 15.99,
+    "tax_rate": 10,
+    "net": 63.96
+   },
+   {
+    "description": "db Yellow Link Print Fit and Flare Sleeveless Dress Sz M/L",
+    "quantity": 3.0,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 44.97
+   },
+   {
+    "description": "womens sparkle dress size 2X Holiday Party RED metallic",
+    "quantity": 5.0,
+    "unit_price": 9.99,
+    "tax_rate": 10,
+    "net": 49.95
+   },
+   {
+    "description": "Lands End Womens 3/4 Sleeve Dress Plus 3X Navy Blue Floral Cotton Knit 482038",
+    "quantity": 4.0,
+    "unit_price": 21.23,
+    "tax_rate": 10,
+    "net": 84.92
+   },
+   {
+    "description": "Liza Byrd Dress Sz L- Coral Green Medallion Print Short Sleeve 100% Cotton Line",
+    "quantity": 2.0,
+    "unit_price": 17.99,
+    "tax_rate": 10,
+    "net": 35.98
+   },
+   {
+    "description": "CLIFFORD & WILLS BLACK NET/MESH OVER TAUPE LONG DRESS SIZE 4",
+    "quantity": 1.0,
+    "unit_price": 5.99,
+    "tax_rate": 10,
+    "net": 5.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 293.76,
+    "tax": 29.38
+   }
+  ]
+ },
+ "cost_usd": 0.031972,
+ "raw": {
+  "id": "gen-1794515079-m9SlQ63tMRGyIGObfXh4",
+  "object": "chat.completion",
+  "created": 1794515079,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Mckenzie, Clay and Campos\",\n  \"vendor_vat\": \"973-94-2620\",\n  \"invoice_ref\": \"77658002\",\n  \"invoice_date\": \"2014-01-21\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 293.76,\n  \"tax\": 29.38,\n  \"total\": 323.14,\n  \"iban\": \"GB69HUXE82460947316450\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Divided Black Asymmetrical Dress -size 8 - NWT\",\n      \"quantity\": 1.00,\n      \"unit_price\": 7.99,\n      \"tax_rate\": 10,\n      \"net\": 7.99\n    },\n    {\n      \"description\": \"Eileen Fisher Women's Long Sleeve Fleece Lined Front Pockets Dress XS Gray\",\n      \"quantity\": 4.00,\n      \"unit_price\": 15.99,\n      \"tax_rate\": 10,\n      \"net\": 63.96\n    },\n    {\n      \"description\": \"db Yellow Link Print Fit and Flare Sleeveless Dress Sz M/L\",\n      \"quantity\": 3.00,\n      \"unit_price\": 14.99,\n      \"tax_rate\": 10,\n      \"net\": 44.97\n    },\n    {\n      \"description\": \"womens sparkle dress size 2X Holiday Party RED metallic\",\n      \"quantity\": 5.00,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10,\n      \"net\": 49.95\n    },\n    {\n      \"description\": \"Lands End Womens 3/4 Sleeve Dress Plus 3X Navy Blue Floral Cotton Knit 482038\",\n      \"quantity\": 4.00,\n      \"unit_price\": 21.23,\n      \"tax_rate\": 10,\n      \"net\": 84.92\n    },\n    {\n      \"description\": \"Liza Byrd Dress Sz L- Coral Green Medallion Print Short Sleeve 100% Cotton Line\",\n      \"quantity\": 2.00,\n      \"unit_price\": 17.99,\n      \"tax_rate\": 10,\n      \"net\": 35.98\n    },\n    {\n      \"description\": \"CLIFFORD & WILLS BLACK NET/MESH OVER TAUPE LONG DRESS SIZE 4\",\n      \"quantity\": 1.00,\n      \"unit_price\": 5.99,\n      \"tax_rate\": 10,\n      \"net\": 5.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 293.76,\n      \"tax\": 29.38\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Identifying Invoice Data**\n\nI've successfully identified and extracted the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `currency`, `untaxed`, `tax`, and `total` from the provided invoice details. The `due_date` was not explicitly found.\n\n**Parsing Itemized Invoice Details**\n\nI have successfully parsed the individual line items from the invoice. This includes extracting descriptions, quantities, unit prices, net amounts, and tax rates for each product, confirming the application of a standard 10% VAT rate across these items.\n\n**Formatting Invoice Details**\n\nI'm now focused on standardizing the numerical and date formats, ensuring precision and consistency. My goal is to convert all monetary values to plain numbers and dates to the YYYY-MM-DD format before constructing the final JSON output.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Identifying Invoice Data**\n\nI've successfully identified and extracted the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `currency`, `untaxed`, `tax`, and `total` from the provided invoice details. The `due_date` was not explicitly found.\n\n**Parsing Itemized Invoice Details**\n\nI have successfully parsed the individual line items from the invoice. This includes extracting descriptions, quantities, unit prices, net amounts, and tax rates for each product, confirming the application of a standard 10% VAT rate across these items.\n\n**Formatting Invoice Details**\n\nI'm now focused on standardizing the numerical and date formats, ensuring precision and consistency. My goal is to convert all monetary values to plain numbers and dates to the YYYY-MM-DD format before constructing the final JSON output.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2403,
+   "total_tokens": 3971,
+   "cost": 0.031972,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.031972,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.028836
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1638,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.17
+}

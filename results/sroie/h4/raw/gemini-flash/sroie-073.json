@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "LIAN HING STATIONERY SDN BHD",
+  "vendor_vat": "002139201536",
+  "invoice_ref": "CS-20242",
+  "invoice_date": "2018-03-27",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 75.0,
+  "tax": 4.5,
+  "total": 79.5,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Durafile H399 (110 x 95mm) Name Badge (H) @ 0.5500",
+    "quantity": 100.0,
+    "unit_price": 0.55,
+    "tax_rate": 6.0,
+    "net": 55.0
+   },
+   {
+    "description": "809 Metal Name Badge Clip - 100's @ 20.0000",
+    "quantity": 1.0,
+    "unit_price": 20.0,
+    "tax_rate": 6.0,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 75.0,
+    "tax": 4.5
+   }
+  ]
+ },
+ "cost_usd": 0.00770475,
+ "raw": {
+  "id": "gen-1794516176-oDH3oCiVq6G3GGWuz1H7",
+  "object": "chat.completion",
+  "created": 1794516176,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"LIAN HING STATIONERY SDN BHD\",\n  \"vendor_vat\": \"002139201536\",\n  \"invoice_ref\": \"CS-20242\",\n  \"invoice_date\": \"2018-03-27\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 75.00,\n  \"tax\": 4.50,\n  \"total\": 79.50,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Durafile H399 (110 x 95mm) Name Badge (H) @ 0.5500\",\n      \"quantity\": 100.0,\n      \"unit_price\": 0.55,\n      \"tax_rate\": 6.0,\n      \"net\": 55.00\n    },\n    {\n      \"description\": \"809 Metal Name Badge Clip - 100's @ 20.0000\",\n      \"quantity\": 1.0,\n      \"unit_price\": 20.00,\n      \"tax_rate\": 6.0,\n      \"net\": 20.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 75.00,\n      \"tax\": 4.50\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Bill Details**\n\nI'm processing the bill image now, focusing on extracting crucial data points. Specifically, I've identified the vendor as LIAN HING STATIONERY SDN BHD, captured their GST ID, and noted the invoice number CS-20242. I've also accurately parsed the date, converting 27/03/2018 into the standard YYYY-MM-DD format: 2018-03-27.\n\n**Validating Line Item Calculations**\n\nI'm double-checking the line item calculations. It appears the 'net' amount for the first item is printed inclusively of tax, which conflicts with my understanding of the schema. I'm working to reconcile this discrepancy by confirming if the printed amount represents the pre-tax value or the gross value.\n\n**Resolving Net Amount Ambiguity**\n\nI'm wrestling with the \"Line amount before tax, as printed\" field. While the unit price and quantity suggest a pre-tax value of 55.00, the total amount includes GST. I'm trying to determine if this 55.00 should be considered \"as printed\" or left as null, given the ambiguity.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Bill Details**\n\nI'm processing the bill image now, focusing on extracting crucial data points. Specifically, I've identified the vendor as LIAN HING STATIONERY SDN BHD, captured their GST ID, and noted the invoice number CS-20242. I've also accurately parsed the date, converting 27/03/2018 into the standard YYYY-MM-DD format: 2018-03-27.\n\n**Validating Line Item Calculations**\n\nI'm double-checking the line item calculations. It appears the 'net' amount for the first item is printed inclusively of tax, which conflicts with my understanding of the schema. I'm working to reconcile this discrepancy by confirming if the printed amount represents the pre-tax value or the gross value.\n\n**Resolving Net Amount Ambiguity**\n\nI'm wrestling with the \"Line amount before tax, as printed\" field. While the unit price and quantity suggest a pre-tax value of 55.00, the total amount includes GST. I'm trying to determine if this 55.00 should be considered \"as printed\" or left as null, given the ambiguity.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1918,
+   "completion_tokens": 1671,
+   "total_tokens": 3589,
+   "cost": 0.00770475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00770475,
+    "upstream_inference_prompt_cost": 0.0014385,
+    "upstream_inference_completions_cost": 0.00626625
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1289,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.82
+}

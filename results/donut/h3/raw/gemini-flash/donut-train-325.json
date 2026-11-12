@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Jones Ltd",
+  "vendor_vat": "946-87-1305",
+  "invoice_ref": "62481750",
+  "invoice_date": "2014-04-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 601.49,
+  "tax": 60.15,
+  "total": 661.64,
+  "iban": "GB90NNEL09660394093814",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome",
+    "quantity": 3.0,
+    "unit_price": 22.99,
+    "tax_rate": 10.0,
+    "net": 68.97
+   },
+   {
+    "description": "NEW 6 Pcs Rabbit Wine Opener Set With Accessories Tools Gift Box #A16",
+    "quantity": 4.0,
+    "unit_price": 19.95,
+    "tax_rate": 10.0,
+    "net": 79.8
+   },
+   {
+    "description": "Whiskey Glass Mountain Wooden Bottom Wine Transparent",
+    "quantity": 5.0,
+    "unit_price": 19.48,
+    "tax_rate": 10.0,
+    "net": 97.4
+   },
+   {
+    "description": "Alcoholmeter Alcohol Meter Wine 0-100%+Thermometer Set Bar Tools Vintage Tester",
+    "quantity": 4.0,
+    "unit_price": 14.08,
+    "tax_rate": 10.0,
+    "net": 56.32
+   },
+   {
+    "description": "Vintage wine 2 bottles holder Iron & rattan rack",
+    "quantity": 5.0,
+    "unit_price": 55.0,
+    "tax_rate": 10.0,
+    "net": 275.0
+   },
+   {
+    "description": "Vintage Set of 3 Cobalt Blue Glass Wine Glasses / Water Goblets Barware Stemware",
+    "quantity": 1.0,
+    "unit_price": 24.0,
+    "tax_rate": 10.0,
+    "net": 24.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 601.49,
+    "tax": 60.15
+   }
+  ]
+ },
+ "cost_usd": 0.0090525,
+ "raw": {
+  "id": "gen-1794515208-fwIcJx9jzxaYY89M9sP0",
+  "object": "chat.completion",
+  "created": 1794515208,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Jones Ltd\",\n  \"vendor_vat\": \"946-87-1305\",\n  \"invoice_ref\": \"62481750\",\n  \"invoice_date\": \"2014-04-03\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 601.49,\n  \"tax\": 60.15,\n  \"total\": 661.64,\n  \"iban\": \"GB90NNEL09660394093814\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome\",\n      \"quantity\": 3.0,\n      \"unit_price\": 22.99,\n      \"tax_rate\": 10.0,\n      \"net\": 68.97\n    },\n    {\n      \"description\": \"NEW 6 Pcs Rabbit Wine Opener Set With Accessories Tools Gift Box #A16\",\n      \"quantity\": 4.0,\n      \"unit_price\": 19.95,\n      \"tax_rate\": 10.0,\n      \"net\": 79.80\n    },\n    {\n      \"description\": \"Whiskey Glass Mountain Wooden Bottom Wine Transparent\",\n      \"quantity\": 5.0,\n      \"unit_price\": 19.48,\n      \"tax_rate\": 10.0,\n      \"net\": 97.40\n    },\n    {\n      \"description\": \"Alcoholmeter Alcohol Meter Wine 0-100%+Thermometer Set Bar Tools Vintage Tester\",\n      \"quantity\": 4.0,\n      \"unit_price\": 14.08,\n      \"tax_rate\": 10.0,\n      \"net\": 56.32\n    },\n    {\n      \"description\": \"Vintage wine 2 bottles holder Iron & rattan rack\",\n      \"quantity\": 5.0,\n      \"unit_price\": 55.00,\n      \"tax_rate\": 10.0,\n      \"net\": 275.00\n    },\n    {\n      \"description\": \"Vintage Set of 3 Cobalt Blue Glass Wine Glasses / Water Goblets Barware Stemware\",\n      \"quantity\": 1.0,\n      \"unit_price\": 24.00,\n      \"tax_rate\": 10.0,\n      \"net\": 24.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 601.49,\n      \"tax\": 60.15\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focusing on identifying and extracting key information from the document. So far, I've successfully parsed the invoice number as \"62481750\" and noted the issue date as \"04/03/2014\". I've also begun to isolate vendor details, including their name, address, and tax ID.\n\n**Resolving Inconsistencies**\n\nI'm actively reconciling conflicting data points. The US address format and Tax ID suggest an American vendor, but the GB IBAN raises questions. I'm also examining the currency and decimal comma usage to confirm the vendor's origin and determine the correct date interpretation based on established rules.\n\n**Determining Vendor Origin**\n\nI'm re-evaluating the vendor's location. The US address format and dollar currency strongly suggest a US origin. This leads me to interpret the date as MM/DD/YYYY, confirming 2014-04-03 as the issue date, despite the GB IBAN.\n\n**Validating Line Items**\n\nI'm now verifying each line item against the overall invoice totals. I've confirmed the calculations for net amounts and am cross-referencing the tax rates and their application to ensure consistency across all products listed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focusing on identifying and extracting key information from the document. So far, I've successfully parsed the invoice number as \"62481750\" and noted the issue date as \"04/03/2014\". I've also begun to isolate vendor details, including their name, address, and tax ID.\n\n**Resolving Inconsistencies**\n\nI'm actively reconciling conflicting data points. The US address format and Tax ID suggest an American vendor, but the GB IBAN raises questions. I'm also examining the currency and decimal comma usage to confirm the vendor's origin and determine the correct date interpretation based on established rules.\n\n**Determining Vendor Origin**\n\nI'm re-evaluating the vendor's location. The US address format and dollar currency strongly suggest a US origin. This leads me to interpret the date as MM/DD/YYYY, confirming 2014-04-03 as the issue date, despite the GB IBAN.\n\n**Validating Line Items**\n\nI'm now verifying each line item against the overall invoice totals. I've confirmed the calculations for net amounts and am cross-referencing the tax rates and their application to ensure consistency across all products listed.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 2077,
+   "total_tokens": 3762,
+   "cost": 0.0090525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0090525,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.00778875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1398,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.76
+}

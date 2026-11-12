@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "Baker-Wagner",
+  "vendor_vat": "971-99-0928",
+  "invoice_ref": "79587541",
+  "invoice_date": "2014-08-02",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 9.99,
+  "tax": 1.0,
+  "total": 10.99,
+  "iban": "GB24KUOP15238222815223",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Bottle tops lid reusable vacuume sealer stopper flip cap cork wine beer",
+    "quantity": 1.0,
+    "unit_price": 9.99,
+    "tax_rate": 10,
+    "net": 9.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 9.99,
+    "tax": 1.0
+   }
+  ]
+ },
+ "cost_usd": 0.02038,
+ "raw": {
+  "id": "gen-1794515621-D1pE5wvBJSaZNP60YDDt",
+  "object": "chat.completion",
+  "created": 1794515621,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Baker-Wagner\",\n  \"vendor_vat\": \"971-99-0928\",\n  \"invoice_ref\": \"79587541\",\n  \"invoice_date\": \"2014-08-02\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 9.99,\n  \"tax\": 1.00,\n  \"total\": 10.99,\n  \"iban\": \"GB24KUOP15238222815223\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Bottle tops lid reusable vacuume sealer stopper flip cap cork wine beer\",\n      \"quantity\": 1.00,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10,\n      \"net\": 9.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 9.99,\n      \"tax\": 1.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Validating Invoice Details**\n\nI'm now verifying the extracted `invoice_ref` and `invoice_date`. The date format \"08/02/2014\" requires careful parsing to confirm if it's DD/MM/YYYY or MM/DD/YYYY for accurate conversion to YYYY-MM-DD.\n\n**Interpreting Financial Data**\n\nI'm now processing the financial aggregates, noting the untaxed, tax, and total amounts. I've also captured the IBAN and confirmed the VAT treatment as standard. The line item details, including description, quantity, unit price, and tax rate, are being parsed.\n\n**Standardizing Output Formats**\n\nMy current focus is on ensuring all numerical values are plain numbers and dates are in YYYY-MM-DD format. I'm also committed to producing strictly valid JSON that precisely adheres to the defined schema for all extracted and transformed data.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Validating Invoice Details**\n\nI'm now verifying the extracted `invoice_ref` and `invoice_date`. The date format \"08/02/2014\" requires careful parsing to confirm if it's DD/MM/YYYY or MM/DD/YYYY for accurate conversion to YYYY-MM-DD.\n\n**Interpreting Financial Data**\n\nI'm now processing the financial aggregates, noting the untaxed, tax, and total amounts. I've also captured the IBAN and confirmed the VAT treatment as standard. The line item details, including description, quantity, unit price, and tax rate, are being parsed.\n\n**Standardizing Output Formats**\n\nMy current focus is on ensuring all numerical values are plain numbers and dates are in YYYY-MM-DD format. I'm also committed to producing strictly valid JSON that precisely adheres to the defined schema for all extracted and transformed data.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1437,
+   "total_tokens": 3005,
+   "cost": 0.02038,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02038,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.017244
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1149,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.99
+}

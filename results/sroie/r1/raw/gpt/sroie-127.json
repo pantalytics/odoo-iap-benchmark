@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+  "vendor_vat": "000750673920",
+  "invoice_ref": "CS00012693",
+  "invoice_date": "2018-01-12",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.5,
+  "tax": 0.45,
+  "total": 7.95,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "1 1/2\" SANCORA PAINT BRUSH",
+    "quantity": 1,
+    "unit_price": 7.5,
+    "tax_rate": 6,
+    "net": 7.5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 7.5,
+    "tax": 0.45
+   }
+  ]
+ },
+ "cost_usd": 0.022155,
+ "raw": {
+  "id": "gen-1794515708-ZE0EMTrrKpqtBWSNAiRb",
+  "object": "chat.completion",
+  "created": 1794515708,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SYARIKAT PERNIAGAAN GIN KEE\",\"vendor_vat\":\"000750673920\",\"invoice_ref\":\"CS00012693\",\"invoice_date\":\"2018-01-12\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.5,\"tax\":0.45,\"total\":7.95,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"1 1/2\\\" SANCORA PAINT BRUSH\",\"quantity\":1,\"unit_price\":7.5,\"tax_rate\":6,\"net\":7.5}],\"vat_breakdown\":[{\"rate\":6,\"base\":7.5,\"tax\":0.45}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract key details from a JSON bill, ensuring the currency is MYR. The vendor name and VAT GST ID are needed, along with the invoice reference \"Doc No CS00012693.\" The date appears to be 12/01/2018, likely formatted as DD/MM/YYYY. Malaysia receipts often use this format, so it translates to 2018-01-12. The total amount is 7.95, with an untaxed sum of 7.50 and a tax of 0.45, applying a 6% GST. The item description includes \"1 1/2\\\" SANCORA PAINT BRUSH,\" with a quantity of 1.**Formatting invoice data**\n\nI'm noting that the unit price displayed is 7.95, but it might be inclusive of tax. However, according to the schema, the price before tax should be 7.50. The VAT breakdown should be a 6% rate on the base amount of 7.50, leading to a tax of 0.45. I also want to include the vendor VAT number, which might be \"000750673920,\" but there's no IBAN provided. I need to return this response in a JSON bill format only.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract key details from a JSON bill, ensuring the currency is MYR. The vendor name and VAT GST ID are needed, along with the invoice reference \"Doc No CS00012693.\" The date appears to be 12/01/2018, likely formatted as DD/MM/YYYY. Malaysia receipts often use this format, so it translates to 2018-01-12. The total amount is 7.95, with an untaxed sum of 7.50 and a tax of 0.45, applying a 6% GST. The item description includes \"1 1/2\\\" SANCORA PAINT BRUSH,\" with a quantity of 1.**Formatting invoice data**\n\nI'm noting that the unit price displayed is 7.95, but it might be inclusive of tax. However, according to the schema, the price before tax should be 7.50. The VAT breakdown should be a 6% rate on the base amount of 7.50, leading to a tax of 0.45. I also want to include the vendor VAT number, which might be \"000750673920,\" but there's no IBAN provided. I need to return this response in a JSON bill format only.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iMGaLbbZ4RZcVnK7DRG12_AD51GO8mHtkc0-uQQB5YgVW4QbqPiwUHN5CC1sq2dPntNdTyQBPaNFMMsB-M4ueGlFqZpV3PHoLrrqGwC9kh2M_kwtYqJCGcQdKhVLjQZWhsETX06Av9lHiqnr4Bb187RmlIOapKiGlVkd0BYen959m4CpwLUN0lgFXGDSU0dXRb1kl74nWgllCWJN35XTQbXndKh6qWOOjCnJn89gb02hSjXcsaJSfw3jbKf43CMSfgHb5GIy-EzvGtBKj5jYGr0eLb4GOanguVNHrG8StjJckgIFY9j5fODqIDjPhiP2KDA9P6PHpoxRWSBkgN9geoqFgfB0nC_T67sbwsKD-hkugD9Uk57QQjHl3XOrjzvIbqUOroNgZ1SOrUvsjfr7xpb9YWaUeBHbkWPfbRYzaeg-0RBu-ggpbzdCWYOPU9olq6X9flc27Z4n8Prrax1KqxSOafgmErS6bb8nwMY8Sp9pDf5EfMfJTXap14PwuAXZaG_EnLekqK1xM0e7Ww3e5JzA4hMmqo0mLosp8KjdsjN0A63mFZBLTgkTy_akb9LPXAESExDS7xDtbJZQmx0qXPqeo3Gbc77KkczhiXa3wmNSpA8y3_7Ph5WqS607xxvqgtXZlP3FsfwF3N21kWKTOdHL1aQeRVMto997VtHiCC0gEJCnBwrcxRxBApoMA4nxEvyGdjYr1mWVhIgeMDDoajY_gmBTIH9dUK43CWzEdQaA4XVZLKKhN9MJE4yXcmMplOFaV2bRNocFmz-7PGqF5i9lTfdjq1h7SeH3hby-KCrPi_8HYysOUoQsjtFqFVB6nNHFTUdfX8374eFb5OKEzRa95OMTdbaXe9gSJpl83PVfkzuf1dqJBSSLZyQCj_jC6sH6BtQrkVxhJIrPsgyOl9K2v_OGgsRI0Vcq-etGde-EZAW6Zgm5V0uA_co-Qe6FSUR-ZLCveJubYoPIDzsw6mUm-Moi8gV9coS5SsiCYxqZyC6FQgXuBa-J64TJoMKjNEpp0-LebZM7L7tbR37Q6KEz-BMqsikaSChn_KtusuvNd0EfryGExBDqbg4kZtqE4fO7IK_HlgSmlrkS3-op8OdDWB45v60b2GBMcfCuOJYj64QRILavKYuFEWiMyqN6En_LzC8MOjdeifcyG-ILoawok4I8L_7UBw10brIXn6f8WROcEWSCsa984qA23AeVNbvVTx05PIwUK3Pktvv4Aw4H0IecOVVGQtttWzgeCooe_ugxyPsudeR0p-gW-3PUqjMGoD9uD6tXp9VQlDIT6w2UIGHJi6kILNYlyomlGeyDUZRALd7yepy76omApsOwXt6e1nx2jcghagZ0gTIB7b4PjpgAWQEA6SuDykAAStMzu52IMRUS_elUMf1LyLnCJ0QY9kSsjwJNWHpAmDKF0kzAwV23TolHw5xpoMIkrG2n0I7aS0YLkeAVWwXHh48hm6tO6vjCc5u7MQRKs2RPazfmOMXcq8o9cUaEdRPmsz7cRxRps0WGMrPGXnuJHz87v7biF-vX9lZK41hGKJz3PQXuHl9LGr70u4uqHdIfVQ3qXrPYJzChErkV6qX2WL4P-6w3UOJa2svthNCBjzKJxU4AAW-qyPf7tOBEBd0Grcn9YCif9KDMiySgup7GYhMhlL1RCTuBoV3wI1lOL09i37wXaGHmkX8HIpt2RiSjt6oqrWe33Yr5pYjaxqaU2zPYoGRe_B5hamj3dIHY_rBesM5ce6OgmtxHrZze8bpXKb_AwO2nFs560vMQZsNU605yFnj7uxK14BGxgPpOCwu8oqn7i6_p7K90FLPqDc_-WGvXdzBqX6GoQCyPwhkk9fQW86F_q96Jp8yzAnuJATZAZuiDQykTKwBHZiBrNnAq-7Ixv4YwfobzFrlrq0xknttfd-mTtChsmoC3AQkOJ7sTALR4YIsr5oSVZjd7FtQyn7wAmanAt9NYdzDcjldY7ncxkftOHqJOED5LXPL5DXK09j1p6mt8_DzmiE7KYhRlwVLkyvfzqHVSbzLN7ebo6XvUX4_ny63WwLBHZE3qo9viFe7MwK6gzlF9_4apEwLXfenX87pvvnYG03tUMVb-5ecobkQBl00SWhdyJ9UZ3mZkLY1bdsJ0BsUuw46T0OGy5eSbYwvsIELszJ1Zax7Hborn6vpAHjdjuK7MMoXdzaRYSX_bMVi26VSFbhws0F-F2lTjaN_76rThCyKwV3LkH4gDhudZE710PcwfCM9F-r4ZhEjFuguhFPnkC3dq2sxBTQRgu0YUehhIEU4E0fWJy_EnqaGu-EfLkIt6voJ2LI1InWMmtznoYT1HG--cgZvVCk4F7W92s8rp95UCtX8wgTIqiol8CR8HZgdQ0c1HtbJ4M0nBlglEHkNxJhEEoK5B55QKsLhjJTxWT0cdPpbtmGdC-0E2LnDjj2ira_iX7LfAzw_KQY06TkNlif9eaPyhJz2ES3VAoSlaoOtmOWkqcXTwK1QUlv6LrMcb5CHsUzqPc2YuVAM3cOXsimOFF00eTIaOueT11tM_dKYNltbeKREmsAWU6-btAdFjK2ox3G7JpdHAs_1Vh5_QF-wqan4PVqSqe308UB8Rv6HUN19JznjFjtzcLeQkMhJRo4IG8dSE8T3KZl5PEB6CxaKrHYP6jhpimfZEdNTRd_ydRMiUdzHJC8P9Sr4kJp9s7SUPVntTBeQwhOFY0QXiO29omFkvz88aO2EebEEW68zEeSZb3o6CI-rrkRdgXR23-s0yJlZKDpxwDoyvGWLdw-v1DgpYjLLpqacnWglvUJizL_HsyTZfLnAp3tl8LXQnIZkzsSifrtJH4PgZwHdA7DwJSNorAjoUq5spMEaRUiP-ZRjFU5x5VkUOJ4GbzJ1zf1X2F8DqO9pL_YRAsadDSohl056awFkMYxUFqqDQmXBqckp7XsE60CwO_UrNBktrJnFT8BtT0oJpxrNeAT8HQxCWM7WJcw00l2rL2G_8AeQG0_ANbvcsSGKS9b9xQgJ5Sdbq5ViuoGk7bmIt27tpD1ywEUnjgN13A80PZmFLOVn5kcm5a_S9TwqcZVlsPrYLbmX8yrWxo29ZZiH4B42RbkosFFcd2qvGq4EK70Ue4kHksnxHOd-mRJVyTf6vfTbvvGfUJa_WWK7sxJpk_qPW1FB_RMFQnJZS99HDM0j9sSrlGTcTgBecQaNJNZa1XSjRYluHFMIIHwhpbOA8Hlu_CK7yA8xqcornLmPr_uwJdCMpluZw1eSVUG-Rs4jZCZSkDTQRBT53KJzpaCrz4zl0k-4WrowmGp7ZMpHW1DqMoms10jmG4qXnmEKhMNcrzfwtXVDjXA5Tstzejf58n_jfxAHwzOfPzSJCxUZ2UCVE90hrqmQLo_7XBIuOuefY9aiFA0TghGnPxNvxgT4rtTGCVVN0Um7WV51cHWBeNziiEujPUyA2braGtSQNCtHI57pp9a1lysvasCo8hPR58atyTgdcvAydytPXjVfL4YGJ8KE759nBvxQhUtoVMAugngIGrcaq8lJ5C1fbWdKqUc4dqmspHMwFVjoCMjhOzibAUeqvNeB5lJ78923PQArBB2ATA7rg-wSpVfwPHyrthPlg18n5k0is0i-wlsKGTKy7dlq9Ly8UOL-sxtHoLMJalKbsQSKNrnnhnjDhXK_cLrWjDn7oBuKzXNtu3gFS_Ztx18KsnSUAEtnshtWu-xg7AiuaW2A1vh15tzl5iJdYwD7g6Kc2Wyb2nAHE-c1YhmvK76bvvqjUyG93S54U6ex0wVaUrajLEiN59fzMb641wKk2wjFI56QOHlsGaBR_3IVmwwPmNAWjQz9v906LhzLKCVA2rzQ1tyiRuqXA34I-yGdOHi52wlYuygcL5elG29hnpAogDbJ2ZpSSACf0l7kfD0nUtuIu_pc7xV4xQbZnIwird1ZHMUbXrhK8fz0nR1_-oAqrlgB5g9JmfPNKlBJJHyN1PcdCMsbHIq7IeNnDVyiFjsaD96zYAv8qST3LVcCutQZuKsTp5etFVb2lk6adLUSlnMcdC8-k8s4mSoezMNLFvc4QrGdSk4xHQVxJoC94upSiBPfmzEAO1cwuODImkQlnTT27y3BuZ4CqF9OlU-gnbW0kZzJQNnLDWfyLti9TEFiv9vQYGq_BOQ-zP_OypMV4jriHXc6NyYNi4LqvV7xX7oIMaLfnh27Cb1FrC0rPCYgU40lVTmfGYKxkdS0a-4hlgFD7bBwmZd9OMu3DW6rLnoupLQZlDUTItVGa-Vh2EgKyOjuv9Ed5Cfssd4OBoCem0gX3lbsrspsQFmTX1mI9HVGnzufGHY3G8TOTYaB2ReskC1M_2hzsmU2SxOCAsbnTouRV6xFuXfR1tWM-lPn8-aLowWzksoVCgpsTRCMnI58WuY9xDdvp-0wyoP06NeudX06fqp-PS8wHu5oSRwIxk8CCLWDaTsbBx4QtZSSEixvuai20fQVERF6VMpIiC4aUOPbolHY1kJeVwvmCc0pOXH3NGfchEJJrMZkob2ChQRdkW5fCgmTQBOqugpi3wk5_h3_pi5CmW6qlKKfuoUQo2-PVramCnBq4eWfGF7NNDmoNEQARTIEcUD9fRKc4CnlUfkpAXbifw5iH4But9CFaPCCECqjIa2xhDIzaE06KD6ixvBHris_CXedYQoaiCIp3Z3nEunqnhnJNW9U3EpkdMRQgRtkSIFe7t6977o9w-WNwmt1fGNrAG5QgaOh2fshEXdQ29zw6wppp__rS9QR8OJYVyXr0BQQyXmV5uiF_5K1de6GwG-fuoosni5-o9BFs_B37cb1Q3S4XDCN7rNpaYG9owpNUubVhYxHVkuwkpoIfHLSM7MJ0ujX_r50XH-0_Anc1bz4DGDdqZNzsfI_vFgOQJVDw1kpngRxcBmMOR-DZLUUhoVnPaNM0ZhA1EFa0H5UV0yc-xSgiQEc_8tiv8FFsbJM030cEEUysNs6ULf3yWHGaxyjH7baW0rAD7OkjH5ThVZ7Tx3viFyC_7cfh2nqiugnKN7E7JMQMuprSyLCwU3aw95Ocy7Go_78hPnQhuz3e3tjhG6seVey7BFbowDPs5pB1Hi8kxrhcm-g725z3m558kx5xLQWiZUyjmliyj7Bg13RZywgHNfVi1Lr4hSaeqL5dam889DclhHTVFa9qK-LOxSqvnlZUmyCNgZwZ-XwbrRCbG3CReNfmOGcapCGBFC8QY9hDTEsje3Okzw6ibfvH1ltCGWp4RjzrrKhXRf8-k9Ab7hLjW-hPOOubv3Rvjv2ngs_KD0XNe1lVwBmX7ZOf3PB2snk.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0e9fb8282a41cd6c016af622fd9b5087d183166f6aaab1b077",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 488,
+   "total_tokens": 1991,
+   "cost": 0.022155,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022155,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.01464
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 332,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.9
+}

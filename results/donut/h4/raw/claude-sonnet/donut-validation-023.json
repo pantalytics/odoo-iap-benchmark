@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "Garcia, Stewart and Payne",
+  "vendor_vat": "949-78-5411",
+  "invoice_ref": "34528548",
+  "invoice_date": "2015-11-02",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 729.75,
+  "tax": 72.98,
+  "total": 802.73,
+  "iban": "GB60LAOW81233191361598",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\" LCD",
+    "quantity": 2,
+    "unit_price": 139.95,
+    "tax_rate": 10,
+    "net": 279.9
+   },
+   {
+    "description": "Dell Optiplex Desktop Computer with Dual 19\" LCD Monitors Windows 10 Pro",
+    "quantity": 3,
+    "unit_price": 149.95,
+    "tax_rate": 10,
+    "net": 449.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 729.75,
+    "tax": 72.98
+   }
+  ]
+ },
+ "cost_usd": 0.012788,
+ "raw": {
+  "id": "gen-1794515640-Ds4eYUlWXTO1TiKYsYV4",
+  "object": "chat.completion",
+  "created": 1794515640,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Garcia, Stewart and Payne\",\"vendor_vat\":\"949-78-5411\",\"invoice_ref\":\"34528548\",\"invoice_date\":\"2015-11-02\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":729.75,\"tax\":72.98,\"total\":802.73,\"iban\":\"GB60LAOW81233191361598\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\\\" LCD\",\"quantity\":2,\"unit_price\":139.95,\"tax_rate\":10,\"net\":279.9},{\"description\":\"Dell Optiplex Desktop Computer with Dual 19\\\" LCD Monitors Windows 10 Pro\",\"quantity\":3,\"unit_price\":149.95,\"tax_rate\":10,\"net\":449.85}],\"vat_breakdown\":[{\"rate\":10,\"base\":729.75,\"tax\":72.98}]}",
+     "refusal": null,
+     "reasoning": "I'm treating the date 11/02/2015 as ambiguous at first, but the US-style cues (dollars, Alabama addresses, an FPO AE military address) point to month-first, so I'll read it as 2015-11-02. The comma decimals are a bit off for US format, but the dataset convention is MM/DD/YYYY, so I'll keep that reading. Next, the two line items: 2 × 139.95 = 279.\n\nNext I'm working through the line totals: the 3-item line is 3 × 149.95 = 449.85, and the tax rate is 10%. That gives an untaxed subtotal of 729.75, tax of 72.98, and a total of 802.73, with VAT treatment S and no due date listed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating the date 11/02/2015 as ambiguous at first, but the US-style cues (dollars, Alabama addresses, an FPO AE military address) point to month-first, so I'll read it as 2015-11-02. The comma decimals are a bit off for US format, but the dataset convention is MM/DD/YYYY, so I'll keep that reading. Next, the two line items: 2 × 139.95 = 279.\n\nNext I'm working through the line totals: the 3-item line is 3 × 149.95 = 449.85, and the tax rate is 10%. That gives an untaxed subtotal of 729.75, tax of 72.98, and a total of 802.73, with VAT treatment S and no due date listed.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0wgKEAgTGAI4AUIIdGhpbmtpbmcSDLbQbIyDpGcQ82FT4BoMehVWZloquqH3FXFdIjCMov6wgji79GqVB4sNLrvnb6MuvCdsh53QW4Xf2ZL0xD/D9i3VPcEorPYTLt3sj84q8AeGnMC45ySk99Rh8TbZjygdmV/mxj1aLmRUzSCzqBeUZNyXvTSEqOKr8+tOJErq0LIwjGWq0XMQ6zPlRB7gm60kxdYhe0eVCnjFcgoeH1tJoHTmD3ZXNuqSWzBuNcxIzZwsB+P8OFcUgJ0Vvg89czdCub3BzgvMiJtjWT5ZORmHf8VVC/mv4OU4bK17J7uGY+N2N2nuBLkpbYxItNm45AAu88NSR7Pkmkg70drcUZt0HBmWn4LehIMnsmAzZBcoXqdnb74u/1F7xGqkc8jek1E76eY4V5yQSqR4IwxJZjo4bcGf3+obEct7qVmmecs6o0P0/xdBDDiB7LAhxR9fRVUCGHA628xsaWyJh6SaHcxydCZqlLgh0HdR5560Jqka7ecisnBORJyT8bC2NFZncJWBr+1IzK5jrwqpriCA7UwXgVMr7f96c1ogJIac/+LLyPFDEPAoXi2wksaWKs/isP1lG65xj2u8jg31R3crgIrkwiUN+3Akh1mfHchF9b/lSDebe8FeALDOQ3A2t7Ymh50Er2/7XU7IdZEzlOUoV6RJqnYqqIb2vx0Eehcy0EBktPKS5f+5WUvlfArZkxeJw4B+jcB6boMa5099OgpQZ1zX15aJn80BScF+aABzZwN+KsYOsvfsxdzQrT8ar5w6m5NYFNg+Qg7KZ3v2YSXO+5PhBGX1uvmp83e/gyPc6jPDfFQuxs2dhfHYeyzmY4G11Y65JcaFbhMvAu+Q7A4LMdQ6t4q7YJMpSGegcorro2JueEXKmU4h4uiDky/fN9lHOxzndEhoywUDqaGtigjtgAKyEdrchDPIpqM2AFnogaNlJ8qHl/oO7uZhhubGVBfzppwS3ibzaveGRctL+aZqn9aJN29B4MdNA5SFf1IvOCPD3yg+14lRG+A1nSbYjPaAQGq7/UEICh02AWyblII1OEEjei98UePktWGFE+kaZLw1V+hfz4PZrYgQwQwYYAkfAeJ39FC9h4fBNwdGZFGz3RXYSkIfzMUyAYOndGQa6gTf8EDUd5MXvoj5XToWmIMoRfCCS8QMt/DoAz0WAUl6SDklMJS+ZGW3nssgA9T9SnZ9PYd7acSUuPoXYmYDloHRQNkCzj1C5h2/J+YgNSHdVsTB9dgCi5wafptV5rpt+2W9UUj/etpC1zurDCsRv3c67c9jBh8D1BOLzq5JyeYmyCVnIPT36npluoJXCY65FgiTqBIini4E6jI7NyjkZ9GClamBSRXlVQV6TVnj8eOXHgs6g78R8ECYjXF/s1PBBKpGdYUnfXQBjJvr65csjNDc5EacaUsLNjuMmM/2VJRRXS0z4W/pOBuKPacbBKCIXuLiaGkYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 552,
+   "total_tokens": 4186,
+   "cost": 0.012788,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012788,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.00552
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 220,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.74
+}

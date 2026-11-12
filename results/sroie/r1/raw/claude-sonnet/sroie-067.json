@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD",
+  "vendor_vat": "001147416576",
+  "invoice_ref": null,
+  "invoice_date": "2018-01-06",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.67,
+  "tax": 2.86,
+  "total": 53.55,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "CURRY MIXED VEGE (S)",
+    "quantity": 1,
+    "unit_price": 16.85,
+    "tax_rate": 6,
+    "net": 16.85
+   },
+   {
+    "description": "517 (S)",
+    "quantity": 1,
+    "unit_price": 14.73,
+    "tax_rate": 6,
+    "net": 14.73
+   },
+   {
+    "description": "'XINGHUA' SPRING ROLL (12 PCS)",
+    "quantity": 1,
+    "unit_price": 12.72,
+    "tax_rate": 6,
+    "net": 12.72
+   },
+   {
+    "description": "TI GUAN YIN TEA (POT)",
+    "quantity": 1,
+    "unit_price": 3.18,
+    "tax_rate": 6,
+    "net": 3.18
+   },
+   {
+    "description": "PLAIN RICE (B)",
+    "quantity": 2,
+    "unit_price": 1.59,
+    "tax_rate": 6,
+    "net": 3.18
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2.87,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 47.8,
+    "tax": 2.86
+   }
+  ]
+ },
+ "cost_usd": 0.023632,
+ "raw": {
+  "id": "gen-1794514654-XQ8JO0DOU4OMkyTtZftq",
+  "object": "chat.completion",
+  "created": 1794514654,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\",\"vendor_vat\":\"001147416576\",\"invoice_ref\":null,\"invoice_date\":\"2018-01-06\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.67,\"tax\":2.86,\"total\":53.55,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"CURRY MIXED VEGE (S)\",\"quantity\":1,\"unit_price\":16.85,\"tax_rate\":6,\"net\":16.85},{\"description\":\"517 (S)\",\"quantity\":1,\"unit_price\":14.73,\"tax_rate\":6,\"net\":14.73},{\"description\":\"'XINGHUA' SPRING ROLL (12 PCS)\",\"quantity\":1,\"unit_price\":12.72,\"tax_rate\":6,\"net\":12.72},{\"description\":\"TI GUAN YIN TEA (POT)\",\"quantity\":1,\"unit_price\":3.18,\"tax_rate\":6,\"net\":3.18},{\"description\":\"PLAIN RICE (B)\",\"quantity\":2,\"unit_price\":1.59,\"tax_rate\":6,\"net\":3.18}],\"vat_breakdown\":[{\"rate\":0,\"base\":2.87,\"tax\":0},{\"rate\":6,\"base\":47.8,\"tax\":2.86}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this Malaysian receipt: the vendor name and GST ID, and the date 06/01/18, which in dd/mm/yy format is 2018-01-06. The currency is MYR, and I'm starting on the untaxed amounts, the gross of 47.80 and the service tax of 2.87.\n\nI'm working through the totals, and the bases don't add up cleanly against the printed net of 53.55, so I'm settling on an untaxed figure of 50.67 with 2.86 tax. Next I'm checking the line items, where the prices look tax-inclusive at 6%, and the item amounts don't yet match the gross.\n\nI'm checking whether the line items include GST: 15.90 times 1.06 comes to about 16.85, and the item amounts sum to roughly 47.80 plus the 2.86 GST. That suggests the printed prices are tax-inclusive, so the untaxed base stays at 47.80.\n\nI'm now deciding between an untaxed base of 47.80 and 50.67, and I'm settling on 50.67 with 2.86 tax, since that matches the breakdown bases. Then I'm moving on to the line items, using their printed unit prices, the 6% tax rate, and the printed net amounts.\n\nI'm settling the line item descriptions, using \"517 (S)\" for the item whose name is missing. The VAT treatment is S, with a 0% base of 2.87 and tax of 0, and a 6% base of 47.80 with tax of 2.86.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this Malaysian receipt: the vendor name and GST ID, and the date 06/01/18, which in dd/mm/yy format is 2018-01-06. The currency is MYR, and I'm starting on the untaxed amounts, the gross of 47.80 and the service tax of 2.87.\n\nI'm working through the totals, and the bases don't add up cleanly against the printed net of 53.55, so I'm settling on an untaxed figure of 50.67 with 2.86 tax. Next I'm checking the line items, where the prices look tax-inclusive at 6%, and the item amounts don't yet match the gross.\n\nI'm checking whether the line items include GST: 15.90 times 1.06 comes to about 16.85, and the item amounts sum to roughly 47.80 plus the 2.86 GST. That suggests the printed prices are tax-inclusive, so the untaxed base stays at 47.80.\n\nI'm now deciding between an untaxed base of 47.80 and 50.67, and I'm settling on 50.67 with 2.86 tax, since that matches the breakdown bases. Then I'm moving on to the line items, using their printed unit prices, the 6% tax rate, and the printed net amounts.\n\nI'm settling the line item descriptions, using \"517 (S)\" for the item whose name is missing. The VAT treatment is S, with a 0% base of 2.87 and tax of 0, and a 6% base of 47.80 with tax of 2.86.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 1727,
+   "total_tokens": 4908,
+   "cost": 0.023632,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023632,
+    "upstream_inference_prompt_cost": 0.006362,
+    "upstream_inference_completions_cost": 0.01727
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1269,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.8
+}

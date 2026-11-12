@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18051402170467",
+  "invoice_date": "2018-05-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 8.4,
+  "tax": 0.5,
+  "total": 8.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "I00100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   },
+   {
+    "description": "I00100000065-Add Meats",
+    "quantity": 2,
+    "unit_price": 0.85,
+    "tax_rate": 6,
+    "net": 1.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 8.4,
+    "tax": 0.5
+   }
+  ]
+ },
+ "cost_usd": 0.024184,
+ "raw": {
+  "id": "gen-1794514154-jAaOMbFPkmUXOCyquD1O",
+  "object": "chat.completion",
+  "created": 1794514154,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18051402170467\",\"invoice_date\":\"2018-05-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":8.4,\"tax\":0.5,\"total\":8.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"I00100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":6.7,\"tax_rate\":6,\"net\":6.7},{\"description\":\"I00100000065-Add Meats\",\"quantity\":2,\"unit_price\":0.85,\"tax_rate\":6,\"net\":1.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":8.4,\"tax\":0.5}]}",
+     "refusal": null,
+     "reasoning": "Checking the receipt's figures: the line amounts are already tax-inclusive, and the untaxed subtotal is 8.40 with 0.50 tax and 8.90 total. The GST registration number is the vendor's, while the company registration number isn't a VAT number. I'm weighing whether to also give the net-of-tax line amounts.\n\nI'm working out the net amounts by dividing each printed line by 1.06 to strip the GST: 6.70 and 1.70, which sum back to the 8.40 untaxed subtotal. That makes the unit prices 6.70 and 0.85, and the VAT treatment is S with currency MYR.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Checking the receipt's figures: the line amounts are already tax-inclusive, and the untaxed subtotal is 8.40 with 0.50 tax and 8.90 total. The GST registration number is the vendor's, while the company registration number isn't a VAT number. I'm weighing whether to also give the net-of-tax line amounts.\n\nI'm working out the net amounts by dividing each printed line by 1.06 to strip the GST: 6.70 and 1.70, which sum back to the 8.40 untaxed subtotal. That makes the unit prices 6.70 and 0.85, and the VAT treatment is S with currency MYR.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSxwkKEAgTGAI4AUIIdGhpbmtpbmcSDPLt/si63S2pOHKsexoMRkQE4F4bD1klthQEIjCoVBLuEUjFA/iaS27DKsV08YJ/DRV1OdwJ6r23Hoo2s9k0eJa3polc16fJV3fAniYq5AhWV459kfN03lL0OPxMt+enbN1VfVfBQqBLoJvbYUoexIKXD0Gk0OpJyoH0vxdjQoNAHxRn/d+DnFpNBpIeuqpQ+i5llM/vxxIb+2LjL6lJexPs5CiApmC7hNDN7YKyO5H9auGkHAseNtjQTqtnuOciGlOEWubXKuzXaUq2V+Jh3H81d4oKOUpwdSxtnv7ZerZuzLRhdJHGz2b2evsSdMeoyhX5I4cLaNZyqo6qK2Lb53y+xXiHJY/q7Eai3YZyah0xEVYTL24UIRvqNxYge3xEf/1E0KOBPMec+8ObaoOsjmrT6zJoeBUcxyMdnDJaFGEN3uqgGnUZFZa6Sj9tQrGjbH4KzsXyDAS5rdCIW4cTdEpPnrYci3W/f9xAq1jWUDb+Lo/K4w6BEIjLda+Mhd2xssM0tlP4q3hseFLE8+XiAGGxDbW68mI9S5bWyCFZh8EtmnVoFc+e/QIE8kmyQz3GbMLBqvUjP2chYN6OKoFD2QvbapYLTgWZw1RrWNFDo1gtENhs5LDz/fXGB3chxupIenJDGtsIrM+qO67qxJ1moa9yE8QiIzavLGB3Gw4vPx2jquAp6AFiopgXUJsgFVnoXrAyXdUhTI6Eb4H3VxLLC8N3eJy4ABiguZpiu7YvCCrhaudxuLlfLGH3P6PgVU4mqKnPQghn0QpR2E+mk4hCBEH0jzZuoMt/JzL+N0fGzQo91gWVAWWXv6sQTbYcYYNQ452FKV1IOW37+yQU317QGE4H4wqLQ7aew2E1lcufPgLnJh21FhwKzaBIxA8Eakoq+0Q0xWuTtmY1nAshD14qlYE4S0iDGhk2/O+ypKysYrZoCob7Ig5JB09Ta3NboYmcrOrH+2MwoEjS6K1ms16zDMgr51p8FY5nghQ6GqswtnwxH3bX2EXlX4fiHSymRTcGwIt+85lp8mBhfrDBH/G/UScYK6QZTtPoy/2XFjhhMsN/tfaujrubLn/aEGaeyih9bPsrc92K/pWnwlaEXoKfOFnnvWyiEXj9/kqVst7qLijrkjma0vWAF0dggaWp/S3utvavvBi+pqt4Gn8qa7BEv2dtnb/HtkQ2GAlXef6DQfecnBK/wnWHi2ybCiv6qMQZxri2CsiKd6ErxXdLc2v17tuJF4I2tbYCiolskzvaoGwWUp26Drz+lNuZbXWsckpqj5Mm4NYkJF8p44G+ImoOjFFmbtfHdz8nJ/1dHyYcHrdZdoLNgQSIcif3ZliUqj1wqf/78hAxMgZzHj1QyVZWUqIMxBMublVagOdnm8hYO16WihwSqcIq4ryfFgRdKBkhIjNybCbbrusEPPOn/dVsNNyE2hNyicmyzwS3nRiABAyDfbDt0jSIXCDxLEWvAluQLqNgh0hpjwgxPh89CyAKD4X4h+M9zD+vXWVpy61k2xRX9zqrEDqXjI8xBC2Y7dYtksc1AXhaQQSneHYgNu23V9FEjkevfA3tP6i4ulWYMUSotFhpEC3vS84yKT4Jv3QIcRHSlRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 573,
+   "total_tokens": 3754,
+   "cost": 0.024184,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024184,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01146
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 294,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.65
+}

@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "Maxincome Resources Sdn Bhd",
+  "vendor_vat": "000468594688",
+  "invoice_ref": "002348863",
+  "invoice_date": "2018-04-16",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 17.74,
+  "tax": 1.06,
+  "total": 18.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "MarlboroMegaIceBlstBox",
+    "quantity": 1,
+    "unit_price": 16.04,
+    "tax_rate": 6,
+    "net": 16.04
+   },
+   {
+    "description": "Alladdin Silk Logo 2.58",
+    "quantity": 1,
+    "unit_price": 1.7,
+    "tax_rate": 6,
+    "net": 1.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 17.74,
+    "tax": 1.06
+   }
+  ]
+ },
+ "cost_usd": 0.023344,
+ "raw": {
+  "id": "gen-1794514679-XXQAUWO3sIuWS2tYDpGc",
+  "object": "chat.completion",
+  "created": 1794514679,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Maxincome Resources Sdn Bhd\",\"vendor_vat\":\"000468594688\",\"invoice_ref\":\"002348863\",\"invoice_date\":\"2018-04-16\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":17.74,\"tax\":1.06,\"total\":18.8,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"MarlboroMegaIceBlstBox\",\"quantity\":1,\"unit_price\":16.04,\"tax_rate\":6,\"net\":16.04},{\"description\":\"Alladdin Silk Logo 2.58\",\"quantity\":1,\"unit_price\":1.7,\"tax_rate\":6,\"net\":1.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":17.74,\"tax\":1.06}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the invoice header first: vendor Maxincome Resources, invoice 002348863 dated 2018-04-16 in MYR. The printed line amounts already include GST, so I need to back the tax out of them before comparing against the untaxed total.\n\nI'm weighing whether to use the computed net amounts of 16.04 and 1.70 or keep the printed figures, since the printed amounts already include tax. I lean toward the computed nets for consistency, and I'm also unsure whether \"Alladdin Silk Logo 2.58\" is part of the description, so I'll keep the line as printed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the invoice header first: vendor Maxincome Resources, invoice 002348863 dated 2018-04-16 in MYR. The printed line amounts already include GST, so I need to back the tax out of them before comparing against the untaxed total.\n\nI'm weighing whether to use the computed net amounts of 16.04 and 1.70 or keep the printed figures, since the printed amounts already include tax. I lean toward the computed nets for consistency, and I'm also unsure whether \"Alladdin Silk Logo 2.58\" is part of the description, so I'll keep the line as printed.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSkgkKEAgTGAI4AUIIdGhpbmtpbmcSDHMjg7KXfCAykfHGUxoM4rIi3XTgVcWQ55gKIjDkxxd80DLuvzrAUrfZFcEIRPrHdbfidTQwKNA9fppnJz//xFKij/MYf86y7UkgCIkqrwjG5wKLb21MpIA8m5IV2LKHfZma2MDDodKVAmzZVFLZPPheTmJakXuAxsbhDFh2WYKdYCq0kD5NtXVN2t2OgaTVg1+z+CZmL6DKA6ZaDvxHj09zhazPMA1uQuYb/DY/Teni7K17LIbJegOeOd2bzmu1bFinpeBzoclw6MOBHGPdc3I9R9HUgtJcATqK+c51p096z8OP1nE6JgwuOU1qplap7ohyHkEk9PFvtUwLhxU6vxmtd4m8IB/zih1fp+rdeSoVKH7KT2wrZ5Zw6G9N+1R5An3edyiOmLn703ue0RWwoxk94VgfrN4+DB13jI9e3OsI6CfJg1Osp8ThowouU24dk5LIOyxdH7BkWHvWTu4S5dhdJJFkRwzBYNz6UmhmFDvMCkHAlDmjNYjcarCkQ+d4qdKXmVTkXMEb5MXCuU1gJICkpO77cAPgcgcpy3MJKg4YLBjJPoIiWj4oxf75hGyPKRJMkm3csMcZE/V7VQgZMg5jmS0fusU7m0dI02lrDKxhBzL2vBpqmhpUAghAMYVfeKFG7YDdYe9LE0RF81pNKpkic2MyB9wF1JZ/1Win6U4A4yTlw6UUjL/Pvpf4EglRZyI7U4pjn4P0WngCZCk1oeyIU4kLfLfEMoNR7O5beH6f526Ms0P4ftP1wlq5GEPSNzGpTP+1G9SkA6w0yEXP6fgoN4xLpWbXa3YZ38B9qFKXpv669B2MHe5stwn6j4Vqp5xZFePZvvOall6W5TeoUfHIb9GxBuzkOvjxllGkk+HbUTtGol7hgZMofXSvFzKmrTxkLGWsotI66/vh7o9TQcEW6rEQLWK/Z4WcOsBhZjT++yK2Dauk3KJ6trNuncJoIYyW1R3UuJxv8gNnuP5saCAi7nOuQ0NtspLR/tm+oymcnsw9QtXlB32niC3DiXnFiBxmuM7GCDV5r2/8jO58OWmz3+0vJPs+MM5z4/rAucqdtVM2v5YaNi8Bo8Qe19zOfW9J4CD0HI9F8+qG/Ct6/g7oFhBjIu6wE0OK4hws/1KMjmOZ/zzC8YxfugDMV2dnLK3DfUr/0LZ+V7cNlkRAT53zvd0aFATvaRnbb/SsgnMo9oszzaBT6QJrMmurKfSMVgpgssny8/JhqN5guGYy4F0dzKebeAcgrrkHzut+AEdlbQvx6Bg3nztKWF6+Gb+bZIOjGj4uIREJUWq2JRCxbFwEldJV4pqLQM7tfMs1Y7C+BCfh5s3ab3JyJBspxejENS891qgMGePy14dbIzupuCYY6ybt5J7PPZeqVXnF/8NmFM5RKmNUdUDCg2DtuhI0tDcBHdrOlnEgd1p9TehqupQcZwggjFI41DF9CGSHesHRm6dp0XWV4RwuxOK09+9RR9KbRSiZ6ebcAFJAXJMp39FR+8YnFY8brM4hLB+Kxg8uOj5QIXguebViH7wt4nIYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 531,
+   "total_tokens": 3712,
+   "cost": 0.023344,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023344,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01062
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 263,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.4
+}

@@ -1,0 +1,156 @@
+{
+ "pred": {
+  "vendor_name": "99 SPEED MART S/B",
+  "vendor_vat": "000181747712",
+  "invoice_ref": "18028/103/T0369",
+  "invoice_date": "2017-05-10",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 70.0,
+  "tax": 2.74,
+  "total": 72.74,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "2174 A&W SARSAPARILLA 1.5L",
+    "quantity": 1,
+    "unit_price": 2.69,
+    "tax_rate": 6,
+    "net": 2.69
+   },
+   {
+    "description": "2502 COKE ZERO 1.25L STOP",
+    "quantity": 1,
+    "unit_price": 2.36,
+    "tax_rate": 6,
+    "net": 2.36
+   },
+   {
+    "description": "261 HELANG MINYAK MASAK 5KG",
+    "quantity": 1,
+    "unit_price": 24.4,
+    "tax_rate": 0,
+    "net": 24.4
+   },
+   {
+    "description": "325 CINTAN MI PERISA ASLI 5",
+    "quantity": 1,
+    "unit_price": 3.44,
+    "tax_rate": 6,
+    "net": 3.44
+   },
+   {
+    "description": "311 MAMEE EXPRESS MI CAWAN",
+    "quantity": 1,
+    "unit_price": 1.22,
+    "tax_rate": 6,
+    "net": 1.22
+   },
+   {
+    "description": "5425 MAGGI HOT CUP MEE TOM",
+    "quantity": 2,
+    "unit_price": 1.65,
+    "tax_rate": 6,
+    "net": 3.3
+   },
+   {
+    "description": "066 MILO FUZE 3IN1 ORIGINAL",
+    "quantity": 1,
+    "unit_price": 12.88,
+    "tax_rate": 6,
+    "net": 12.88
+   },
+   {
+    "description": "1821 JULIES SUGAR CRACKERS",
+    "quantity": 2,
+    "unit_price": 3.16,
+    "tax_rate": 6,
+    "net": 6.32
+   },
+   {
+    "description": "6059 SBB TWISTIES COOKIES 1",
+    "quantity": 1,
+    "unit_price": 2.17,
+    "tax_rate": 6,
+    "net": 2.17
+   },
+   {
+    "description": "371 BIN BIN RICE CRACKER 15",
+    "quantity": 2,
+    "unit_price": 5.61,
+    "tax_rate": 6,
+    "net": 11.23
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 45.6,
+    "tax": 2.74
+   },
+   {
+    "rate": 0,
+    "base": 24.4,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.041844,
+ "raw": {
+  "id": "gen-1794514583-xjx0wWwuvurjS7wqSB23",
+  "object": "chat.completion",
+  "created": 1794514583,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"99 SPEED MART S/B\",\"vendor_vat\":\"000181747712\",\"invoice_ref\":\"18028/103/T0369\",\"invoice_date\":\"2017-05-10\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":70.0,\"tax\":2.74,\"total\":72.74,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"2174 A&W SARSAPARILLA 1.5L\",\"quantity\":1,\"unit_price\":2.69,\"tax_rate\":6,\"net\":2.69},{\"description\":\"2502 COKE ZERO 1.25L STOP\",\"quantity\":1,\"unit_price\":2.36,\"tax_rate\":6,\"net\":2.36},{\"description\":\"261 HELANG MINYAK MASAK 5KG\",\"quantity\":1,\"unit_price\":24.4,\"tax_rate\":0,\"net\":24.4},{\"description\":\"325 CINTAN MI PERISA ASLI 5\",\"quantity\":1,\"unit_price\":3.44,\"tax_rate\":6,\"net\":3.44},{\"description\":\"311 MAMEE EXPRESS MI CAWAN\",\"quantity\":1,\"unit_price\":1.22,\"tax_rate\":6,\"net\":1.22},{\"description\":\"5425 MAGGI HOT CUP MEE TOM\",\"quantity\":2,\"unit_price\":1.65,\"tax_rate\":6,\"net\":3.3},{\"description\":\"066 MILO FUZE 3IN1 ORIGINAL\",\"quantity\":1,\"unit_price\":12.88,\"tax_rate\":6,\"net\":12.88},{\"description\":\"1821 JULIES SUGAR CRACKERS\",\"quantity\":2,\"unit_price\":3.16,\"tax_rate\":6,\"net\":6.32},{\"description\":\"6059 SBB TWISTIES COOKIES 1\",\"quantity\":1,\"unit_price\":2.17,\"tax_rate\":6,\"net\":2.17},{\"description\":\"371 BIN BIN RICE CRACKER 15\",\"quantity\":2,\"unit_price\":5.61,\"tax_rate\":6,\"net\":11.23}],\"vat_breakdown\":[{\"rate\":6,\"base\":45.6,\"tax\":2.74},{\"rate\":0,\"base\":24.4,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the receipt's GST breakdown: the total is 72.74, with 45.60 at the 6% rate and 24.40 at 0%. The untaxed amount and tax add up to 72.74, but the payable total shows 72.75 after rounding, so I still need to decide which figure to go with.\n\nI'm working out the receipt's date, invoice reference, vendor, and VAT number, and noting the currency is MYR with a mixed S and Z treatment, so S. For the line items, the printed prices include GST, so I'm backing the tax out of each one by dividing by 1.06 to get the pre-tax amounts. The rough sum comes to about 45.61, which lines up with the 45.60 base.\n\nI'm now converting the 5.95 unit price to its pre-tax value by dividing by 1.06, which gives 5.61. I'm going with the ex-tax figure here, since the field definition asks for amounts before tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the receipt's GST breakdown: the total is 72.74, with 45.60 at the 6% rate and 24.40 at 0%. The untaxed amount and tax add up to 72.74, but the payable total shows 72.75 after rounding, so I still need to decide which figure to go with.\n\nI'm working out the receipt's date, invoice reference, vendor, and VAT number, and noting the currency is MYR with a mixed S and Z treatment, so S. For the line items, the printed prices include GST, so I'm backing the tax out of each one by dividing by 1.06 to get the pre-tax amounts. The rough sum comes to about 45.61, which lines up with the 45.60 base.\n\nI'm now converting the 5.95 unit price to its pre-tax value by dividing by 1.06, which gives 5.61. I'm going with the ex-tax figure here, since the field definition asks for amounts before tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 1456,
+   "total_tokens": 4637,
+   "cost": 0.041844,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.041844,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.02912
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 701,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.12
+}

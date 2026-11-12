@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Harris and Sons",
+  "vendor_vat": "975-96-8439",
+  "invoice_ref": "99106655",
+  "invoice_date": "2017-12-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5221.54,
+  "tax": 522.15,
+  "total": 5743.69,
+  "iban": "GB26VMRU44682967112758",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Precision Workstation Computer Intel Xeon Quad Core 16GB 1TB Windows 10 Pro",
+    "quantity": 3.0,
+    "unit_price": 139.0,
+    "tax_rate": 10.0,
+    "net": 417.0
+   },
+   {
+    "description": "gaming pc desktop computer intel i5",
+    "quantity": 2.0,
+    "unit_price": 850.0,
+    "tax_rate": 10.0,
+    "net": 1700.0
+   },
+   {
+    "description": "Sentry Gaming Computer | Ryzen 3 3200G | 16 GB Ram | Build-to-Order",
+    "quantity": 3.0,
+    "unit_price": 594.99,
+    "tax_rate": 10.0,
+    "net": 1784.97
+   },
+   {
+    "description": "Dell Desktop Computer Intel Core 2 Duo 8GB 1TB HD Windows 10 PC 22\" LCD Wifi",
+    "quantity": 3.0,
+    "unit_price": 69.95,
+    "tax_rate": 10.0,
+    "net": 209.85
+   },
+   {
+    "description": "Dell Desktop Computer Tower Quad Intel Core i5 8GB 1TB HD DVD Wifi Windows 10 PC",
+    "quantity": 5.0,
+    "unit_price": 149.95,
+    "tax_rate": 10.0,
+    "net": 749.75
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 3.0,
+    "unit_price": 119.99,
+    "tax_rate": 10.0,
+    "net": 359.97
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 5221.54,
+    "tax": 522.15
+   }
+  ]
+ },
+ "cost_usd": 0.01019475,
+ "raw": {
+  "id": "gen-1794514191-d7KnIezTA8HxXkLjSDYw",
+  "object": "chat.completion",
+  "created": 1794514191,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Harris and Sons\",\n  \"vendor_vat\": \"975-96-8439\",\n  \"invoice_ref\": \"99106655\",\n  \"invoice_date\": \"2017-12-06\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 5221.54,\n  \"tax\": 522.15,\n  \"total\": 5743.69,\n  \"iban\": \"GB26VMRU44682967112758\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Dell Precision Workstation Computer Intel Xeon Quad Core 16GB 1TB Windows 10 Pro\",\n      \"quantity\": 3.0,\n      \"unit_price\": 139.0,\n      \"tax_rate\": 10.0,\n      \"net\": 417.0\n    },\n    {\n      \"description\": \"gaming pc desktop computer intel i5\",\n      \"quantity\": 2.0,\n      \"unit_price\": 850.0,\n      \"tax_rate\": 10.0,\n      \"net\": 1700.0\n    },\n    {\n      \"description\": \"Sentry Gaming Computer | Ryzen 3 3200G | 16 GB Ram | Build-to-Order\",\n      \"quantity\": 3.0,\n      \"unit_price\": 594.99,\n      \"tax_rate\": 10.0,\n      \"net\": 1784.97\n    },\n    {\n      \"description\": \"Dell Desktop Computer Intel Core 2 Duo 8GB 1TB HD Windows 10 PC 22\\\" LCD Wifi\",\n      \"quantity\": 3.0,\n      \"unit_price\": 69.95,\n      \"tax_rate\": 10.0,\n      \"net\": 209.85\n    },\n    {\n      \"description\": \"Dell Desktop Computer Tower Quad Intel Core i5 8GB 1TB HD DVD Wifi Windows 10 PC\",\n      \"quantity\": 5.0,\n      \"unit_price\": 149.95,\n      \"tax_rate\": 10.0,\n      \"net\": 749.75\n    },\n    {\n      \"description\": \"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\n      \"quantity\": 3.0,\n      \"unit_price\": 119.99,\n      \"tax_rate\": 10.0,\n      \"net\": 359.97\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 5221.54,\n      \"tax\": 522.15\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm currently parsing the invoice to isolate Harris and Sons' address, tax ID, and IBAN. The client, Thomas-Vazquez, has also been identified.\n\n**Reconciling Date Formats**\n\nI'm wrestling with the date ambiguity: 06/12/2017. Given the European-style decimal and thousands separators, and the presence of an IBAN, DD/MM/YYYY seems more probable, suggesting December 6th, 2017. However, the Tax ID resembles a US EIN, creating a conflict.\n\n**Interpreting Date and Currency**\n\nI've settled on December 6th, 2017 for the invoice date, aligning with European conventions. The currency symbol \"$\" definitively points to USD. I'll continue parsing the itemized list, paying close attention to the descriptions for potential OCR discrepancies.\n\n**Detailing Item Descriptions**\n\nI'm carefully transcribing the line item descriptions, grappling with special characters like the replacement box which seems to indicate a pipe or newline. I'm aiming for faithful representation, likely substituting spaces for these ambiguities.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm currently parsing the invoice to isolate Harris and Sons' address, tax ID, and IBAN. The client, Thomas-Vazquez, has also been identified.\n\n**Reconciling Date Formats**\n\nI'm wrestling with the date ambiguity: 06/12/2017. Given the European-style decimal and thousands separators, and the presence of an IBAN, DD/MM/YYYY seems more probable, suggesting December 6th, 2017. However, the Tax ID resembles a US EIN, creating a conflict.\n\n**Interpreting Date and Currency**\n\nI've settled on December 6th, 2017 for the invoice date, aligning with European conventions. The currency symbol \"$\" definitively points to USD. I'll continue parsing the itemized list, paying close attention to the descriptions for potential OCR discrepancies.\n\n**Detailing Item Descriptions**\n\nI'm carefully transcribing the line item descriptions, grappling with special characters like the replacement box which seems to indicate a pipe or newline. I'm aiming for faithful representation, likely substituting spaces for these ambiguities.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2405,
+   "total_tokens": 3973,
+   "cost": 0.01019475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01019475,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.00901875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1672,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.48
+}

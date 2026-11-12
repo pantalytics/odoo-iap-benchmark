@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "SANYU STATIONERY SHOP",
+  "vendor_vat": "001531760640",
+  "invoice_ref": "CS-SA-0086229",
+  "invoice_date": "2017-05-22",
+  "due_date": "2017-05-22",
+  "currency": "MYR",
+  "untaxed": 33.02,
+  "tax": 1.98,
+  "total": 35.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SONOFAX - EC THERMAL ROLL (BLUE) - (57MMX60MMX12MM) (10ROLL/PKT)",
+    "quantity": 1.0,
+    "unit_price": 33.02,
+    "tax_rate": 6.0,
+    "net": 33.02
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 33.02,
+    "tax": 1.98
+   }
+  ]
+ },
+ "cost_usd": 0.0136475,
+ "raw": {
+  "id": "gen-1794512963-5DZHwuwPXYGH8lfeNzOt",
+  "object": "chat.completion",
+  "created": 1794512963,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SANYU STATIONERY SHOP\",\n  \"vendor_vat\": \"001531760640\",\n  \"invoice_ref\": \"CS-SA-0086229\",\n  \"invoice_date\": \"2017-05-22\",\n  \"due_date\": \"2017-05-22\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 33.02,\n  \"tax\": 1.98,\n  \"total\": 35.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SONOFAX - EC THERMAL ROLL (BLUE) - (57MMX60MMX12MM) (10ROLL/PKT)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 33.02,\n      \"tax_rate\": 6.0,\n      \"net\": 33.02\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 33.02,\n      \"tax\": 1.98\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm now focusing on extracting the vendor information. I've decided to use \"SANYU STATIONERY SHOP\" for `vendor_name` despite the mention of the parent company. I am also currently working through the next fields, considering how to interpret ambiguous values.\n\n\n**Defining Data Fields**\n\nI've made progress on several data fields. The VAT number is straightforward. The invoice reference and date are clear, and I've converted the date to the desired format. Also, I have set the due date to match the invoice date, and identified the currency as MYR.\nI'm also identifying values for untaxed, tax and total amounts. I have also inferred an IBAN should be `null` and the VAT treatment as 'S'.\n\n\n**Finalizing Value Extraction**\n\nI've now completed extraction of all fields. My calculations for untaxed, tax, and total amounts are validated. I've also confirmed the breakdown of the line item and GST calculation. My current logic determines the value to use for each JSON element based on the document's contents.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON format. The logic I developed works through all the data points and I am making sure the keys and values match the schema exactly. Calculations have been validated, the correct values have been identified. I am confident that the extraction is complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm now focusing on extracting the vendor information. I've decided to use \"SANYU STATIONERY SHOP\" for `vendor_name` despite the mention of the parent company. I am also currently working through the next fields, considering how to interpret ambiguous values.\n\n\n**Defining Data Fields**\n\nI've made progress on several data fields. The VAT number is straightforward. The invoice reference and date are clear, and I've converted the date to the desired format. Also, I have set the due date to match the invoice date, and identified the currency as MYR.\nI'm also identifying values for untaxed, tax and total amounts. I have also inferred an IBAN should be `null` and the VAT treatment as 'S'.\n\n\n**Finalizing Value Extraction**\n\nI've now completed extraction of all fields. My calculations for untaxed, tax, and total amounts are validated. I've also confirmed the breakdown of the line item and GST calculation. My current logic determines the value to use for each JSON element based on the document's contents.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON format. The logic I developed works through all the data points and I am making sure the keys and values match the schema exactly. Calculations have been validated, the correct values have been identified. I am confident that the extraction is complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1325,
+   "total_tokens": 1643,
+   "cost": 0.0136475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0136475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01325
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1024,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.22
+}

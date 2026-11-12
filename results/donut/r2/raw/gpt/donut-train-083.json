@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Lambert-Murphy",
+  "vendor_vat": "983-75-3868",
+  "invoice_ref": "62312762",
+  "invoice_date": "2019-03-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 981.89,
+  "tax": 98.19,
+  "total": 1080.08,
+  "iban": "GB02NXHR06400921861370",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Fluffy Floor Mat Anti-Skid Shaggy Area Rugs Dining Living Room Carpet Home Decor",
+    "quantity": 5,
+    "unit_price": 3.89,
+    "tax_rate": 10,
+    "net": 19.45
+   },
+   {
+    "description": "Handmade Tribal Geometric Design 4X6 Indo-Gabbeh Oriental Rug Kids Room Carpet",
+    "quantity": 2,
+    "unit_price": 272.6,
+    "tax_rate": 10,
+    "net": 545.2
+   },
+   {
+    "description": "Striped Contemporary Gabbeh Kashkoli Oriental Area Rug Handmade Wool Carpet 6x8",
+    "quantity": 1,
+    "unit_price": 417.24,
+    "tax_rate": 10,
+    "net": 417.24
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 981.89,
+    "tax": 98.19
+   }
+  ]
+ },
+ "cost_usd": 0.02843,
+ "raw": {
+  "id": "gen-1794515580-ZLxRHKU6Ubhblk8hGZV9",
+  "object": "chat.completion",
+  "created": 1794515580,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lambert-Murphy\",\"vendor_vat\":\"983-75-3868\",\"invoice_ref\":\"62312762\",\"invoice_date\":\"2019-03-08\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":981.89,\"tax\":98.19,\"total\":1080.08,\"iban\":\"GB02NXHR06400921861370\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Fluffy Floor Mat Anti-Skid Shaggy Area Rugs Dining Living Room Carpet Home Decor\",\"quantity\":5,\"unit_price\":3.89,\"tax_rate\":10,\"net\":19.45},{\"description\":\"Handmade Tribal Geometric Design 4X6 Indo-Gabbeh Oriental Rug Kids Room Carpet\",\"quantity\":2,\"unit_price\":272.6,\"tax_rate\":10,\"net\":545.2},{\"description\":\"Striped Contemporary Gabbeh Kashkoli Oriental Area Rug Handmade Wool Carpet 6x8\",\"quantity\":1,\"unit_price\":417.24,\"tax_rate\":10,\"net\":417.24}],\"vat_breakdown\":[{\"rate\":10,\"base\":981.89,\"tax\":98.19}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract and format the JSON for the invoice, especially since the date format is ambiguous. The invoice number is 62312762 with an issue date of 03/08/2019, which is likely in mm/dd/yyyy but needs to be converted to YYYY-MM-DD. The vendor seems to be a US fictional company, yet the invoice uses European decimal commas for amounts. \n\nSo, I must convert these to use decimal points while keeping an eye on the total being in USD, given the $ symbol and tax identification details.**Formatting invoice details**\n\nI'm working on extracting details for the invoice, including specifics like the handmade rugs and their quantities. I've got two Handmade Tribal Geometric rugs priced at $272.60 each, totaling $545.20, and one Striped Contemporary rug at $417.24, net total of $981.89. \n\nThe VAT is calculated at 10%, giving a tax of $98.19, leading to a gross total of $1080.08. I need to ensure the output JSON is valid and includes the vendor's tax ID and IBAN as printed.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract and format the JSON for the invoice, especially since the date format is ambiguous. The invoice number is 62312762 with an issue date of 03/08/2019, which is likely in mm/dd/yyyy but needs to be converted to YYYY-MM-DD. The vendor seems to be a US fictional company, yet the invoice uses European decimal commas for amounts. \n\nSo, I must convert these to use decimal points while keeping an eye on the total being in USD, given the $ symbol and tax identification details.**Formatting invoice details**\n\nI'm working on extracting details for the invoice, including specifics like the handmade rugs and their quantities. I've got two Handmade Tribal Geometric rugs priced at $272.60 each, totaling $545.20, and one Striped Contemporary rug at $417.24, net total of $981.89. \n\nThe VAT is calculated at 10%, giving a tax of $98.19, leading to a gross total of $1080.08. I need to ensure the output JSON is valid and includes the vendor's tax ID and IBAN as printed.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iKGYiilI1CLuR9Cz0duSguxU1IC3WMxztxFiSHf37-svxhvXX6UfeawcoT_c4O9ZcwwpohmSe3RlkAvyQ6AA9TksH1tlJmE3RT9M5_eDU7zTRYfv4tmovEu6amvGI7cldz6ux4-rkmdGYfbuQSChgKPOhCHec574__wYOUXbgWU5hQv0gQW2aq7HAOzpN2HHG06ek8UIBgz3tlJTHkwGUqQVYxh4DrGSxjZfFCv-sdkyolmU2kGid3DJBgQfqAzTFWcUNVBnNf4akOlov-iySGWixh9yiCgAshzWpt5ZPa4RwrN9yd82mcpWvnCfydCVeT4KAWbyv8O8a3MFHXWf7gSbXDsPtDrr4rdzIqfzrMs4unwXJ-WV7z1-A7aXR4I9wQd7daIpoNkIh3vW4egx6Nvy8neX1woun3HDBsupiulW3tluv87v5kvIvgSSFi_HjV7nUeGzZ7siTHM7EaQ_-p5KXn66RpY4L4uNvlq8NUdWzOk08j3pVZKHw78-qQQXMNh6byHokdjehZVfNc6KWiaKB7CFpbTjjtkNU2lIY4sk-p8LBHGXzTdPVTeTPy3A1Cgdgmgg-On3Gwg6XadibMvDOrJB4vBJNybQuzlSWy8xTj6dC0tm4dfaVdP2DEmUZPlkum7AkEh8aWlif0m3C74pMB73XEBduso91_CbI8GWyrYOqkqBXzKFXFVX3habgw446tSuje6Q6WQIMIXgojGrbHdjh3lYspOkp8aMtlRHUTrgIXdJfp6-JMRxqFiPm5JbaruXiIdAPVNg6xJ2aOrU_sMy81gYr4rwaejYTSpZ7-LiCKqHu259x2k4oYp8euZF66nU8-vqbNpgQ-xPjXmOuBbvfvoiUlta4rgC9hQbf_W_kDWX9dIyEGbcq91j89Qo-WqQiO2xiH465xtq5m2KEf5ezK-Rrb2P2zQeInK2UV99QCaB5FP1_TIChtNZJGsA-l1aWTXXAWBQsWkrGDl7teeLLUK2jobAMJhJBU7eOtS_GX7lWn1dwQyRj7xlAN502OZrutlWnvV9F4oZ-TRN3jP2Z_paetMYWpQ-ypIhVhhJvKUL4BdMMdK3wiqozLtQlrORUTmsZPl2djaWCeVV9vVu4_BXyWN609b9rIUFRidzarsOUEV4Mk9eDCsvLPeOoPaoXxdz-JQFGQ2XMi0LDC9JsBW8KejsK0iIntks-9Sm8HgBv1SQ-NPqlY3N-dp3aQNbX1CdMgBLSwOCaIiqgwxpq5yQCr4bVXJwgJMKFREvpy-0RreAg6RRDcQRxChJFiFXW6aHBF2QGPfPmZ99oZunTlL79S8XTg5BdFEVCfwwpoezTBNqeFhNKB8eExTs9u7jDJ-BgTfa4Lp0mSb2L1GRpa0cl_DYt2jcA-8tSSdxmbRAhUb4gfG5xZIt5QhHHFhMhSdJYBaP0hLCJIqIrk7m-cHG9p3lPFDR0x57ZvrRXJwzaalyo9B9XwH8Vp233hf6JaYwvJCWsT5simQWIM2iMJN9owbe-XY8-wRxn1pBJs2uaqW1Clws8RQCJ_KiOVoPRMeDxkmyuLCfPkpKm55P_hKPxAK9SzXdagAxPx0Jh80EzMOFN-DNFCC2KnZzu5HXZ4O3Lgh5lXkoJg-E1Pl3zxxcP73cQjxSIJqgwM3H0Xk6L-BHP3sDpSW3GlARgJ3q7YEYjwoaUxmv-U-3pX25k2g7Nr9iQzfAf8bPz-tevB3KnzNjLZjsLvFavMzqA6d75YtMcLhOer5Ga4oW80wnn4UpbVZ6j0m3FSNW1w23930djJmSzL09ZqQ8qi1xAdLe1k8Mj12ZzKjNdpik71RTw6Fe1uc02jLf6aAlHgvYmV_6aBsXNegvYIqwQsD_GK4s9D6aRy2JNpIdTAIOb9b4vMbjO_ib5CSmYPaKnr_vV4jG_n1GaNeYf_gh4NpPLe-KgWBCTk0Fo3kyf2IYLgjd8GERa_2yAAI3u3p-UdwwE75x_UrAdVME2pwJcz-VCTLWZFB64MYc_eDm_YZbosGPrdqQmP6A4YRSf9yv0iOp7sIHk0xCi-Ij2K_e7UbeFSqJbVPRdgApXnf6LEqNjISSL2x3IQGfCvlaF-lhYXzRvys2qNAcKE16EW_RIuzL2dQhYe4eXl_piihBp0aerVNInpxk7otw7pH0UrO_-3tv88YlFez28BGVKDJixfGzZdyKe1hRHoF9PXUHxoG6yTbhyrsPMq8QUmdbgqm8FBMS0oiS3MNFcZ1whuLm7W2A2bqec8fSx_P8VFLfrok-piPOHf3-HEQE6-IIoacM7_AD7wSp46SmhE0c3CMXcv8pcI5EyDdGczL7xjtwvUGmNi-Fme-Br9FnhYWcQ771bWE6jG2mi_bJXVWwVIn0QlfbsTELzhiij1wKlEu97eAWKoXDDAk6rrET0xCvrLFsDGh4vmJ-ApZpKlMADrCfNuq6XyVHdYz-_ByyCxowGvYZrOH236MoB8Hl64In_aKcSa70wFIibrGFGYkXI0dqzdklXD320wT4knNur8psmw4c2lx09kDRw1aJJHoRqaCMRxKkXo7oNYYpn3jwOaXy40I-eyYIFiIs4METTKQC0jIj8QWKO9i45BQXurp2t6SQsim06dqc-UJyW-QygaYM3wqcnbc0Z5cI6Qn3-ugjZlFg3iud2MEevfxlOUfC-pmmImxiDx_FRRcCUx4zhx9-W-SfA_eo7U5Aa2GBCWzVbsZnK3Juhu_tsl0Vuf37wsHnOEBHRMvfAfMAzO-JCp0seBz_GDJgbN4X4QWFdpIGjuPiBdTZm177ZOvHkt_Jr-lgLqhJXUOsdrCRkB1h8UxWIscGNqIdnilnBivK62yDkSWIUD-b3OhAFsA04qaivYg4JGG7S2IOs1ZNLritAJm8eS6i9XdWPHJeGWbMiYWZ3HIvprfyWvdYQQm9a1VxKvMMYCufhwf9oUHchsdrlldhqv6_oHmr8s3zFm3HsU4K4jOKYtnDpSlcSKtFPkct-bbQFjBXjfsdo5hbswlks2jnNrTgxC1l0KSOIz7BY9nxNRW6Lfe4U2_sOyuw-cipQwesDbdTlkE-xcx0HHD_xI1CkzSe19dUvtuKOwS-rUwvUwLz5HEGJBF-UDaVW2WWbJXcCUY0YoCaSH6y8yRnOVfOHdrb5Xpn6I84wNMmg3D8TJ5TNpcdUyXVk3yxLj3ENDLicg3IiopSnfnHNDKJf6I5jTSsMCZ8tvenmgjqZxyJNSiXCsxMG4IpuDiVvPVJVOK_G5jtqTLxfVoZwLXuVmUr-tck6wNjDS1Vcj-PEw2ImMCrCWGsVWguRv_-PaKobQznhLsJkFu82pFFN6PC-szn8CzNfKs3yUX26JvTyeqUczYGAuPCyPJqdIc366xQulwlPt9THhCQNkiPVsoHLzq80e5iNpxVlMmJc-BueFKOkRFTj6kVjiIIwWLT-kubBKFb7CXe_SxZB_MbBhSx6yjKGJ0Rg2qanOZIZ0cWizRfw7b2Jnhzac2LllY7JfJeyP0_P9karoQtH-SSb51iRg0QF4LipGWg_FzfeM8AvAykmaa6KXBQSq7jDT9hC56moIKg5m41ypptOP9Q3OOUHt5T3NBAc7WrFJunJ4oTH06klvvK1z0jVs8tkXz-jYywZGpiIs895GiZU4cU2NZnqV0-CJqblTfD_VcwD6pvhaf5JCigafihc3rKJ4roE60CdBy1f9sbwWH1teAvsTZOBk9hSJWuG9yW2_2dcNWddrFY9JJlFYwO70Prl1JkSWEkNftGUAFzvXOi0OSZHx8FyGNtMKZqYv9H5J8JOfMJ1Am4rrR81nOP10sUc1tCrhAQ7FLJO6Hfjyg-8XfWBWoOxuL9iK2gMAhxv7_hanEJjq-jwRbMR5M3DMTGP5oUGhmesRHeYyIzgt0PH38wSESNVZSyImA9tZ8i5aYjI8FMNCaE58Wdg0niu_JsZ5_1pVMbpWBcslLQI09A9eJpqu81e89O4Qrdt-wD0EyqP8ypzPXKmX6ywGySi0pKhE4fuilrnoTP8sb8DOBiWHrmSjoLcmWwFXwVBzV53R6AQmpXi36T65fVHBgXeH9K4CcrhVE3IgXw66chps_KKRGzluvUVnbkJLGZos2K89b7FgPVezzO3447BC6Tq3wPOgc22JQ4vJfVCl-4hadBQejY_lEeb31TBJIz5OcvD8NbKqAwq3FG1lpDbmgAnXybK_2mRejN9BEFJVtm4BU1gp3-j7ZySS7RjF8aZs5HJ8h1ZAwX7Wpgt9wCkstY_0H1ZXls9FXG29Nsd9hJkO7ECrHp8gqU2YKQQwfbM8zPO2z-jp5RC0TsDUfANCVD74G7I1FEcix30i0jirIWyZ9B4dkquSHy6GSBrfXQSmxD_TYDjmbsCHCqWp25jNBNnn176p06argoLYQKOcpe3FBoS8o6lVMu_rwIMDpR0JUxop1GhpaK95TapqWVXAhEwwLR82WZsdbXiKD5mnsAJwkrrikOq9uNkHTA84ig9TtaIM31VIv6YheTUHGpBFzSYK9baYl8VsfJrCnB4Y0Zm5r8h8cx-j7LdK3y3LiWXS9PaH2ULiJUPDzzjrvGFaiL-CD-MsfLoA-qrPu0nMoYI3RduSBFnu8hNRkvHINNXjOZg8br8mLNjasA58Ndx3sfvPKlf20qrflqmcIc2P6NU2OM3JEnQEDR86JbiEUG5WiPciUn8Lfm0O6LKhpPLamgHB6tNZsYvawzR2wS73lcAQgTro0nxhzpV-ORIil75htF2vx3ThLCuIuRIaBOfWJqGIvf0YASpFCzQxpjtVKwoglJ973pg6Vv6HzpUetPyLl4lRiLy7HpZp2F26EbwpaXOmOqP9kAJLsbXZsM-s4cWZqXY9iKz1Vm4FURK5XZ8bJYlCBNsQnUDvzqqPJwMw4n2xUTsA3_fJ77r4zRqAvkeyDDIycLB0vzrv0ZOfd9_ZL-FJXPRXeLyHI9ISbcRRiGP6bkNdswj_0b888YpIDL2j7g2nTpJC8q9EFp6AOM5VY3JuzXDhrXiWJEEL64iVfJofXdkgSbHov5AmvE7wlOWGyiY25o1SqqS7NeEVeGZBIkuItQbU3oE3EXmGyFTNVox_eYY4sC3PI4b8ALZnxc-JOJb8rL8Kj62kUjPfA04PciHKzlFUxeGujMKPpzyLO0QimlOYeooApSy3Hx8EM4ZdMLh15d006Zp_Q2oNgz3441AqntTnhq66XoE9ibvbdexOg4GnfMH31U3HYu9wpFW5Y6Z6IxbRiI9T3PUqrehmdvoDBWVDYpYUApl7uAc1Ri14feTR_nj0MMgV-6kVfB14nfw6ZWELBi9kTKALd03V8kqhKR8Y-VWRkEume7XZuXOPtEcIV_nU9kCb391u3bS-pqc_eClNO06iutBtfN0E0C8YVbFIPQJpijB8Mv1HmVDGtAde1IGBM6DRxciU5_UYVtEiVFUKUdbgegtm2vZnL4-pGZDbVxmPZtUXuIuz3mk27TSc-IQalQ0PL5MI8NNSjWtiy-rsguPXVU4GoztxT6yiVwY-GJ9H1LMQsiB5XrqPyeKm3eUIO-Y9pPyqUSgPGLwojwxVTKJcMQBsSkdZSGPH2rkArrwzpTm0MosNNVL29J0449iL89ShT0bCz_9rKxH9IgFNqpoPOcq5QHX5MdPImPhm-Mqgeua6kGvYHYSsu2csLBhDU-weXGXmaZie10EoIL7JEhSVgNB2d_ECSXK9CUSj8VM9hq5y2n5zBoGMD3zMPAvbedsaHNnp6BlG-VqoFh23Wld3gDQHwoedSqtObA13gB0IQA6hHfmUGTCz2qZLC6-N0AjpHCzontxHo_Hj7QUIiLwh3A6oN8LRlbaLVkyQxQ_bt3oHt-33OJ7JG98j0MJbF815EjSzEyBmHTH2a_RVStm7WfyPoYkh2N45TWNZj0MUgILDqjEjaXsQVGtDUqbdwbRXPa66Uox1w5wS_kO8-cDoKgntabKh--bYhcjPalMbmXtD6WyTVLkBaYzUnyWC9U5kQmVdu0LqLS5KgDgYXNcoalIWprHpfwuHTfXLGDJdnikdLJA9Q8oEf8D3lue9-XccVoiDBVw-ZmBHqH_aOK-ec0ofuTR8Nne2Cx6JJR6RebcOAQKX7wI6w93NV9KodDJngwyNUQeAQlNk9IEj54AHo2ng7qqUlmtumn_ZROwBL-gYCEJZZaJtcMdE3MZsWwU1iLApJ1XyJsgIF-lJAYuEMGBR5WYp3NS_EhGhcC9Cfm8dKbyWdkSSnJysieoyli8ams8smShfSSS_5su_zZz_WpZnsPY12z1HB4c19lWpivAfaed7h8qq7txrShl7Ed7mtFj_uE8dv6mojP8yOJhIrMZE-grMbGP4gBP6sUUSyObeRGkinz5oFsgAlFUow5dwY1-qxhdtIZddTl7HsqX0BHu9uQVQEKaZm595addKReky4m3y-fycFEYQ0yI2FM9_O1QRo0t7FqAXbM86-hUfGXSi1kOZnxEhw9bsIBSSFip6MxBoSHVeCXyeOnuoMG2Io3xZk48RvkflGIMSbrrjdB7UtOc0xt4gQZRr_P1fauNshoSED2mgOUjqCC2G2_pLL41IQp9du0dsAIhwZQd7tCrfj3kmDjp7RvbZtjXjuufGD4KWN7FHN_VHFxMKheP8V_Wc-0Z83KGqyTvS51ixen6ib.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0fc9ebc1d36cd0eb016af6227d8ed887d18585c2d8f070adcd",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 697,
+   "total_tokens": 2201,
+   "cost": 0.02843,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02843,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02091
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 447,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.53
+}

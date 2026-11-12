@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Smith and Sons",
+  "vendor_vat": "912-86-5998",
+  "invoice_ref": "20653012",
+  "invoice_date": "2013-03-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 581.95,
+  "tax": 58.2,
+  "total": 640.15,
+  "iban": "GB46MLEX00282137220677",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 1,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 14.99
+   },
+   {
+    "description": "Nintendo 64 Console with Box, Foam and extra oem controller",
+    "quantity": 4,
+    "unit_price": 120,
+    "tax_rate": 10,
+    "net": 480
+   },
+   {
+    "description": "B311 Nintendo 3DS console Cosmo Black Japan x",
+    "quantity": 4,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 47.96
+   },
+   {
+    "description": "PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display",
+    "quantity": 1,
+    "unit_price": 39,
+    "tax_rate": 10,
+    "net": 39
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 581.95,
+    "tax": 58.2
+   }
+  ]
+ },
+ "cost_usd": 0.03104,
+ "raw": {
+  "id": "gen-1794515498-IK4B2qdHNKWigHoBbMhD",
+  "object": "chat.completion",
+  "created": 1794515498,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith and Sons\",\"vendor_vat\":\"912-86-5998\",\"invoice_ref\":\"20653012\",\"invoice_date\":\"2013-03-08\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":581.95,\"tax\":58.2,\"total\":640.15,\"iban\":\"GB46MLEX00282137220677\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Sony PlayStation 1 PS1 Console model scph-7501\",\"quantity\":1,\"unit_price\":14.99,\"tax_rate\":10,\"net\":14.99},{\"description\":\"Nintendo 64 Console with Box, Foam and extra oem controller\",\"quantity\":4,\"unit_price\":120,\"tax_rate\":10,\"net\":480},{\"description\":\"B311 Nintendo 3DS console Cosmo Black Japan x\",\"quantity\":4,\"unit_price\":11.99,\"tax_rate\":10,\"net\":47.96},{\"description\":\"PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display\",\"quantity\":1,\"unit_price\":39,\"tax_rate\":10,\"net\":39}],\"vat_breakdown\":[{\"rate\":10,\"base\":581.95,\"tax\":58.2}]}",
+     "refusal": null,
+     "reasoning": "**Parsing invoice details**\n\nI need to output a JSON bill after parsing the invoice information. The invoice number is 20653012, dated 08/03/2013, which is likely in MM/DD/YYYY format, meaning I should convert it to YYYY-MM-DD — that would be 2013-08-03. The seller is from Michigan, the client is in Utah, and payments are in USD. They are listed as Smith and Sons, with a total of $640.15, which includes tax. I need to be careful with these details!**Structuring invoice items**\n\nI need to format the details of several items, including a Sony PlayStation 1, a Nintendo 64, a Nintendo 3DS, and a PocketGo console. Each has a quantity, unit price, and net amount. For the response format, it should likely be a final JSON structure. The invoice date is ambiguous; it says \"08/03/2013,\" which could mean different formats, so I need to assume DD/MM/YYYY. The use of commas suggests a European formatting style despite the US addresses. I’ll handle these carefully!**Clarifying date format**\n\nI need to figure out the date format for the invoice, which says \"Date of issue: 08/03/2013.\" It could be dd/mm/yyyy, making it March 8, 2013. The use of commas for decimals alongside the dollar sign suggests a synthetic format, possibly linked to a generator from Poland that uses European styling. Given these clues, I'm leaning towards recognizing the date as 2013-03-08. The presence of \"VAT\" and \"IBAN\" further hints at this European influence!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Parsing invoice details**\n\nI need to output a JSON bill after parsing the invoice information. The invoice number is 20653012, dated 08/03/2013, which is likely in MM/DD/YYYY format, meaning I should convert it to YYYY-MM-DD — that would be 2013-08-03. The seller is from Michigan, the client is in Utah, and payments are in USD. They are listed as Smith and Sons, with a total of $640.15, which includes tax. I need to be careful with these details!**Structuring invoice items**\n\nI need to format the details of several items, including a Sony PlayStation 1, a Nintendo 64, a Nintendo 3DS, and a PocketGo console. Each has a quantity, unit price, and net amount. For the response format, it should likely be a final JSON structure. The invoice date is ambiguous; it says \"08/03/2013,\" which could mean different formats, so I need to assume DD/MM/YYYY. The use of commas suggests a European formatting style despite the US addresses. I’ll handle these carefully!**Clarifying date format**\n\nI need to figure out the date format for the invoice, which says \"Date of issue: 08/03/2013.\" It could be dd/mm/yyyy, making it March 8, 2013. The use of commas for decimals alongside the dollar sign suggests a synthetic format, possibly linked to a generator from Poland that uses European styling. Given these clues, I'm leaning towards recognizing the date as 2013-03-08. The presence of \"VAT\" and \"IBAN\" further hints at this European influence!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iI3hKjSALbcaWznCHY3ZvW8VsNlQoAyBTVBj3XPGfjLsChPMOj2ZCVL7vrJ9X1dWAxIyGHPfTqqq5BH1YOBqMmXkCyg7FZm3_VdT27QGLmiOXb0VbCxXTvhoBQ-d5aXBqxLiO6VdRKln0dKcYT7NLM_iSeTDINFWKgUo3FLP8wt11__lqYbfI3Qf5-ZZPpzFwBZGO5JoBu_KiILitBjA7JxFBxAANhg3mq4naQikQf6xCbHuDOmevO1F0aaswCwA1B96Yel05vZC4tfyRCVJvgHr3os-OVVPUSMvLpzSY_sAwSrUIBnoxy00-wIFsdBmDIXYGsHcb_jIlWOUZ1KkbEBP6dffPsaB7UE1zGvd539bTZi5t7cok8TLXLE4kcCw6s-jTtMIN7hAwXPvE0IfwOaOQjryg3aDc1_pJvA8jTSA7JXkrZrxiJYDjHi6K8Y8kat8gWWuYqcZC4bUqqhUmllmP_-E9gG0SAlN1dqu-BzPI1J9dvPSRvW-D3GP8eHtqDiwj-nbQu9kTSchbdybegmKDeETMTNMGbPAH07jZIGPioZtSyj2G8TdTgAn9XFmfH5jE2H7eW5ZeYFaJE8i8zY8qrbQaZwa021gTzwElSpiyb8KcftdWe_FmLZSbmcFNjumzlce5f35BtpXDPF8pfXsZbLA6eumusT7h84MylMFPt2xIGtPp8RQxbdK5yEiPflwxypWmwIEyYwxcRrbvCVORItmrd0me2-aX6mREL-1XZHboyl4SqqIPTJJBvMzw0h2maYrpZKlWyBL1_WvHzlZuF13BOp4reN_XneQM-O-YzrxOFBHO99_dovmgkMiBL--4_NWRtiXnHuDybgRow2DMrjzvqkiJNROynvJMbaTddMGY_BNj6roMCMSY8y1Swtmf4dpYDVuattw3k61A6D7m9-P5LoG5eE3Xqxd1HVfTojC3StfKiAugknHjSU4Grp6-fPaXJ_KNPkaVjPZdTe2TCCv9PeEf3zSUNBy3KhQJpjUN8EwUmo5oRFE8hj4w6spYd-HvsC_hfu4UbRgn8l-xd1pC1CGHwqJKHYGmBOhIcmHnSHi-sne_tsk9XOZiw-y8sx1P4K407o92AIB60oxdLUDsqDqc7xoDTzwvQft6zm5wXAEAtgsRYZNo3jKd76E3rAeW0mlH-_ysOii9rGwSTWkZRMLQJ5-prOdVAkbkfb3ktXAIowB_ZIYHcv5xFJ-3zh7iu9iiOQxL5u8LkxI9tht-roAG-LkC47GF2uex1_elDDFKQUtgqqEOQw8tJN-oerHRKyitI7LhtRijXneKsytUce37fK3KX9Ba8e6DXdXB0z-NuWgWLGODKWObpcQz7jQhDMgtfDeFbdJwec2Ht3pBfB78U10vASKfmhYTjwVIURUIecbjswBFYdIMHbezptGu_QNhpZANgqyQSrxgDBnTTwI--9njBq7NH5y2QA6RhTosofyY1lhV2hM35xI0b2QmeadGg-thGXSCeRvaiB2ElJmq2_WcsyonTSENE2comitOfdIbiLl9wiah2L4qC0SeCQAP8RbszKLXX77asLob-ZyxZpprxcrfFULqKE9EfUYoIRmE2ZxzDMby3NBjRNAxoaYlxjX4bIT-7GnHs7-Y8QADLAfzcG43USDGkrBm9PW5CjrS7tQFRTvLJD-W5q-LaEx7iKcYyT6aCAMlT1lC7H4oLB2CMzJMcWYO4IKDQgcIy_gGRcJTSpqWMZiC7TTglA6HVO2LSi9O5pKhH1plx2YH8HDbCtBSbCKYWgrqGDb_vKjdFhmOL0rAOc1MeJMavm4z9UwupWRUPxYiqFSLM0o0j1dfreOUUEQ9UOpWigm1Gv_DsKlH76SAnjjduonai5gYsDGBkWwakkuQ2rVZKOV-tE1Au7ylm2-MjbQbqnc-dWVm2s0RXahprkodnW5xLKrggahvLq85S5p-Ud4Z5dIxs7jeffmLCvovgT2vZYvmzKq6miLT27RFzFJqv70xZ1aRCj05MZC6NYimyeHwedmF9_gIQzucUWlO_k3aA51BDPsLfAivuujezm_yb3Jz1Tdz8UpMN24Xk9EhOcIyYV2CX4I1uNY0Swf5gcDMW4IJNJ8JWj10ZAh3-j-oaBug-wSRCjCcpxG1DBrI8sQQQN2EbNCWpzBMGecVHuFSt8SfC-73SIBBPk3KhfJZvHVb4B71IkJ_PNCckSggKHWSOgCuSdOnAxQke_lEa0D3hduE-_035fxUpFKymjPb4NZehQtNbC-z7VGAwnSB_8I32SugQT65pIqrgaGHwA1eIx1qNwmwgNHnQK6xQJkpkwqzhRrztyAmLlzyEtzqdnOhJApWMJpQbyeRHUItr6yzNfrzXQKN-bTNfWkji0CtbrfEH01-Y0DVoPbvDccPW4W62bGQvpv18lm8Pyxh_I-KrcZQyPbHHdH_Eru8qqksvr5p78LNOJKG5xnFUFZ7yaMFVjd9Bmf6mmc4kdj9yrgxv9vDkfNnPMcGL9H0_Dv1_2HAJvgZBTAPiIDVPfSq0-9bB-xJdp3LBMtPqWX4MCqYiA-gYvCLSvQnHECyUmEDK0A2Jc6TQqWN716i9lOM_uJqjTOKOKO0WUBZmGfdJfjGi34yHZEJkEKay7YxHsPYhrWv94vtQ4yaRTrNxQzyt3hMVAWw0QOT4PQKf-xvNBBjNiaKpEWMzDPS2P9mXEvyZyBxNCE5MoABK6uwYsjV2yFKD7qwEpUN3BXH52MuWMWkLdemjTgANZl_pvq2K5k3c_BtBuvTMAxdSk6SWA2bQytlEVSwzk9c0whSNkP8XRq68_yv8cj472Wj3_K1FGz5kQdZDvHiJSc-8lvfXxGyL97GBqyVG_qvlpnkox1Ux1ARzU7EAzGgwajsJbZDcSiDsFro1okJre0M_jqvy0jDLCeQVhAdPH5OJhPHkmCGE4ZxXzKpDe61v5029V6BIErtulMZ0JrXawYDrY6etuH-BqzlEAYyFh8ukdroING48cH04cOuFBiUIPT5GwdWysMtJcVnt6ve9hZVjVgfPFltwYGAvA1fg_X2N7XCjG7YmCmw_8U5z83y4-rozpdgLjKJG27ACGcsi6lcJri_jm7lD0I3pSC9ebzqjgeFBYty92lkk-hFQF74U0tcSwWWjf_qNMS8jtjCLToLfzVlrD_WBqInsTRgMmNiAVDTNXkA9X5397ZxF3v4uEvqgTuBlSLOOY-Xa7k7oqZCH2Miq7Coif-A2-wFWMPyJGeUs38R_3Gq8LxFFd2OmZZHQf9ZiKmQDRhcZ2xz-k-yb_OuJbLiO5zTkGLtKBGySsSLaLSx7Qmku8EVf6PvkThraOAej4tLPHwAu-eWXSuS0a9Uw3sSuYYhz_iatowtctB9zyzoQNi47LqH6vFVSBBtoogRSnHi-uonSjFchZT_cvHiA3lFvyudjCuBBRbGj3NnW5AIQ38aiWWIS38Q8LH1Opu2XfsY0_CgKpietP3UYq47o7us5TyM_WvTkNRRCbSETTSxO4Gi1Y80UAWDAUF8TLGZv4x5vK_5sRi8MhShEY0BaHp2cVPzFRillgnIh06rjrMi3V6Lq0axeWE8-dkC6-lLHEWzBDgALB-Mu_itnMUf_U_jJQVFyF7iGqYvEqZfTjbHIciPGnPsq7i6D1n6c0i9yuto9pZhx0vYJXHdJEwzwyMEe3xkLZu7LgdhygdD7UQp37i4eEsJoXarn5IaIsO53X_5oebjd22FwKH-7JW9pLBzM4jx_xpWhNsSdFiFSnumznVK9pcJlXV7QpTI3OrsgcctDaKCoLLJPtqcyW96BoG9oN4zrEKbyEz5c2NXwLlRgaEB610TzqDfoo1vL5aanh64fX71Q3Ha0LnVlzltE8NU464lIA3oYyscoQN40EyxWRfv9jpb5MIySRzPR5nBbytqsV8jzQCNEYdveQsmHR_jh_bfEqXYmXILGb7mP_id_G6RgRiACMYhQN2FmR_kJbcZCxNZvJtt8esrsaQ2BoN0BD4b1w_t5erDnDhmqxB56KH5eFYFkMdeoOFyUeYQZ6bNeyMFqpEf5bMv8wwT5rVbCcjz8JPKdkOlL39DTcxUEX_WQti1fbJMUNuMpOKohGyHpEe6_yvMHmjSvJEUzKuQrXdQojpBnMRnoIcOgsKLvc8R0bCriTzhYxogpdW9ao7BDZatI8r5zKfaJbAzD9crrawJdgb02eepd7HJpqfMuj4-OonV1y78cgSf4_iUgWhlupBhzIMqj0gTdHt0FR7zjsvEbOD6IaK55jJJW67HbeKjCuq1gGfYvbnWVCW9hnG1yC6i1-1oo8iGk40_BHzo6cHJUTX42MoV-PBAYFByWrgSMyBRmpcX6Ipjzmx4zA7CR21FHCgpwezikH7ViR57lFqif2Q4vN9TxEoOrgY7vZwF0Vl1nWBmVJ1Sf1aU76Fm_G5-T5tV3uZvDBAWrMCW-VdNx9FYIKLPhVug-0u3RdvVzcp4H6ytvrZoizbRv2Nkp0Q5gzki6qYUvijz1yPuh9m10pXBOTvoWWU14MkVZW2cqo5ymWn2GHLZM5clofJwvBToNb35BlOCrvoggHG5sFTaZK3WQweCHN2nz9Oa8_4psWZgkHu1RQue5_ctZdYgnJBuLC4bnuK3iG5ZDPcbSXGOpnVJpSGs0q99RgUn1e2tjbN0-EdCGt-77L5_DSml-9y2DIeeECXqPqbnY10Q2u67g5S2cGRzJGLgjxMkraAZGWNfzQaf5etj8sXg1SRKBhRgb4BPLbHL-impOYTqxhIxhNj_uqO0uyo8gST6ceEAjP8g0wmvBkNyx401qvTrHfCfwWasi6ErSJKwyFfcC0CDVoVEVm9b_CsPmv4w0kwsBRwbOC_UICfrzJHHE_vQ8lKkU1Wa_oMc7IxN1N5L6ELzlXpyH8Fx--6vcEFdJMBoJoTCFFo3yiwuCd_-JvMtx8JelLH_LqzLRMaL076wSQl9Mrwj6Q1pX3jIjugAXyyNEP044PB6it-akRfxmSSCDLaa30eNZFyJOA-USD1HcgBMtRlV0DJNdq3A_S3Fs9DhSHORbQz3I8abDUQe2yB8KEJ0fzNPPy7Ej9zi4g_vI3E33QmTE1PP56C_SQ47RkbTytPQ_b_bCr5aMOzqn43wRLBFtdWoy3RYAuqzqpvo-5yKid4AyO2Dy2w7n7fXkSo0lZo56RMpjSl0c8XdKYBKb-hpvZ7kfpSc-g-1kUZ47V0ZjDwg3SVk3oOEKVyY1wD8aMAcp6Yl6TleWqsq3XmN6ilKOMGZ4vzInEO5A8smlhiAJElqNDZguBapEUjjqxap7-xZarXI6gkpS_X4cim1_6aC42otT5juSDYNc19oUf6J2ec64iAfXFLGvx1l598JcaQU2cmI1ys7_4Zrk5yaEtUw3MNypS96sEHh2oOmMa6XwM4S3SaHnJG2x6KvnOiecfgNo0kJvsxwnQwEVh3RDgcgtv-CIP0R4i7NgmFQJKj_yeqvyqhthR-JHZ3e-YOB-6N_BYtr8xdEQCk0gKD8u6N_6zWKj40xZ50oxs0Eb1LYka6_mE38fnXgO3G_IQw95ItgR8ysV3oGBNZLehWDCehnyr2DRs1AP3bE7pjQYXwsXo65uINAGFNr6tDrj35GZHoLWA5smCmpFrDxNJAlYFB4rKmQB-tEkT30Mp3xVLCe34XN9N4G1zVfWX_KynItGGXOLmiITPu2t_ACZHTvME9kSghe-e8NKlnccI-Eo9vh2X-X0w3ypdfgrE-x-ScEJEVtkIi9_PVqfdusiurwlzxL-uY0Ys1J1op87r-MsiLr4maZ0DX5YlrCgOyHShWl2m6I1WkaJj7zTCJ6BM7ywPHTADptNeujkZabnzXKCOFUr6N7OPyuM11rBMyvON-IuEwqwYmeScTnTXOswFbijgUspV5jljvar2GLBB5vmF-oMJ_v9IbKU0OCd0tIdI9AREEIvqCdDxZOPgIIto5XHi8g4X40N-sP4qeARIWr8dnOuH66nODwHlMhIslWl1NJO0fap1FE9NYUefRB08YYIy3QSXHE1d4A7sh_iJX6seCawpSHPA4onVCgKG1u3Y9ynBUEvDrk1ZU8KPtzWaskTqwvlqI5KWjD5HKb14uBnI6AVS2KBdNZF1-9PTtCow1LpUUYFcn5IcoN-anQu4OD7M0bTT9b0I3lnf4gsMgrRwKVOmV_zagc4EmuPSC-wEsG5oFKJori_sifqFPfDJM_IreFVYU-O8fH_sTTCiPHHei3IcayCORFrg4F01pPOVolBZUbMIGcmnUrFqfke6VfxKPZoKZdX0oHtfYKNrz-MeZulbLoOs1GuCFsRTodWrZ_S6sIGuUBC-BoVtiriLMyX_8CMj0tCjpNv-FcmS-Ov34RghJq1kOwbNTQLAoSwpXapZU2K8AVi6IMwIoiMUNaamGKw5pCuFOgWrLHgDg4jwo1-P0TFvqYfiiTpuk1sjeoWiEI1o4T862PefLPkDF8WEhPzYHxzNGRTbzVqn1iXMfOQM6FAHriuA-VzehqBLGXWpcXIZRRGhDHZ0RNs9T9gsJJrLeSWdyThjnXWQdmCuzlg6XAL5oeHJtDwGaxRpgbrG_oWOpoNX-aVWEGiT2Z519AUotG8oRyNmtpWivkrvcup8orrtt3qQRSUHKTBfnpuRy7xihVrC7zoQmgCWcl6G87SYfTmywf_Es9GSh7ihX-Z-3Pqh7JUtILTE918x_WH0LvpTxLnqndf2MquXGlm1CzOgxcs7kaM4qjioZX_ZsLXpCV-8gc2iMHjiRdbxNuqGJt7e1qvvRLvuLUaiVkPG_UB8HwhvLe6xsfQHsvMI1TLk99qzqGDYfeDvEhSzdnpSr-k98zHtIg9AtM_DwAKJPazr0ETYLFDfMgChN6ptu-LiDC33KI-PjOwxJDN6HSiRX3ch7JLcaMr4bs_S8VeCNNJY8-U-LeBZvOfVAtCvtncAFD2Vkd_UUOKW1mH-1BeRBfxLeNYVlkDeP1M154bJDVS8JvebrE33YOfRCSOBzdETEO3l9s4Ag5dkMEQ8Sa1I42VzVnITEzVPcDNTz7235S-otcLve523JCblZsRV0Y0UMA6ka6TcrfnIxvtIWoQAO5Wrx_33jYVQ8s8NmAw0zxODJkwfwBCppGmEyA5BY1bXW-QxgR136IC2gbjbSi3nV6kOnvP3KyrXl1IUkJuEiLAy-j1Y0LooHpgHKH1WFUlbvFAr8DX2lnixkbLEh27LE-i_GMgMdwiILzAXfzN9EWKr-hmh7HejkfDxCB-taOxlBFDhsvNoyOc4V1TrlPzsFPlyrPIfXbGZg9qfqPXFgrGWfdiXSLp4jRW_QB_SzS48NRDTFSfz0OUnRRXu1XUpXxdSZSj_8A9CAprMfmUIqfdriBYcz9ln_i5r5Yvx6FUMBpsnt8eCQxevg-5DB1vk4vtWomvqZc_k61aXfYgw1cZqQpHs65zyfyYnTQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_08a033564a16bcac016af6222c326887d1985a9ffed0ae5be3",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 784,
+   "total_tokens": 2288,
+   "cost": 0.03104,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03104,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02352
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.09
+}

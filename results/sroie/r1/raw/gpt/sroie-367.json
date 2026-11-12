@@ -1,0 +1,134 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7017F714",
+  "invoice_date": "2017-10-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 105.43,
+  "tax": 5.03,
+  "total": 110.46,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C WHITE",
+    "quantity": 3,
+    "unit_price": 2.13,
+    "tax_rate": 0,
+    "net": 6.39
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": -1,
+    "unit_price": 2.78,
+    "tax_rate": 0,
+    "net": -2.78
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 6,
+    "unit_price": 2.97,
+    "tax_rate": 0,
+    "net": 17.82
+   },
+   {
+    "description": "CR-VANILLA",
+    "quantity": 20,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 14.4
+   },
+   {
+    "description": "CR-CORN",
+    "quantity": 20,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 14.4
+   },
+   {
+    "description": "HAZEL CHOC",
+    "quantity": 8,
+    "unit_price": 6.9,
+    "tax_rate": 6,
+    "net": 55.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 21.43,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 84,
+    "tax": 5.03
+   }
+  ]
+ },
+ "cost_usd": 0.032235,
+ "raw": {
+  "id": "gen-1794514273-sPWQHzzIF4MdgMC2kukQ",
+  "object": "chat.completion",
+  "created": 1794514273,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GARDENIA BAKERIES (KL) SDN BHD\",\"vendor_vat\":\"000381399040\",\"invoice_ref\":\"7017F714\",\"invoice_date\":\"2017-10-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":105.43,\"tax\":5.03,\"total\":110.46,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"O.C WHITE\",\"quantity\":3,\"unit_price\":2.13,\"tax_rate\":0,\"net\":6.39},{\"description\":\"WHOLEMEAL\",\"quantity\":-1,\"unit_price\":2.78,\"tax_rate\":0,\"net\":-2.78},{\"description\":\"O.C JUMBO\",\"quantity\":6,\"unit_price\":2.97,\"tax_rate\":0,\"net\":17.82},{\"description\":\"CR-VANILLA\",\"quantity\":20,\"unit_price\":0.72,\"tax_rate\":6,\"net\":14.4},{\"description\":\"CR-CORN\",\"quantity\":20,\"unit_price\":0.72,\"tax_rate\":6,\"net\":14.4},{\"description\":\"HAZEL CHOC\",\"quantity\":8,\"unit_price\":6.9,\"tax_rate\":6,\"net\":55.2}],\"vat_breakdown\":[{\"rate\":0,\"base\":21.43,\"tax\":0},{\"rate\":6,\"base\":84,\"tax\":5.03}]}",
+     "refusal": null,
+     "reasoning": "**Extracting billing details**\n\nI need to extract the bill's JSON and identify key fields from an image of a receipt. The vendor is possibly Gardeni Bakeries in Kuala Lumpur, and it includes a GST ID, invoice number 7017F714, and a date of October 17, 2017. There’s no clear due date, and the currency is likely MYR. \n\nFor items, I’m looking to capture descriptions exactly as printed, with specific columns for unit price, issued, excise, discounts, and sale amounts. Some items seem to show a return or negative sales amount.**Calculating taxable items**\n\nI'm working through taxable items, like CR-VANILLA and CR-CORN, with specified prices and quantities. The total for these items adds up clearly. I also have HAZEL CHOC, which contributes significantly to the total. \n\nThe total supplies before GST is 84.00, with a GST of 5.03, leading to an inclusive total of 89.03. I need to determine the VAT treatment since I'm dealing with both standard and zero rates. \n\nThe total amount payable reflects the calculations accurately, and I'm ensuring each line's tax rate matches correctly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting billing details**\n\nI need to extract the bill's JSON and identify key fields from an image of a receipt. The vendor is possibly Gardeni Bakeries in Kuala Lumpur, and it includes a GST ID, invoice number 7017F714, and a date of October 17, 2017. There’s no clear due date, and the currency is likely MYR. \n\nFor items, I’m looking to capture descriptions exactly as printed, with specific columns for unit price, issued, excise, discounts, and sale amounts. Some items seem to show a return or negative sales amount.**Calculating taxable items**\n\nI'm working through taxable items, like CR-VANILLA and CR-CORN, with specified prices and quantities. The total for these items adds up clearly. I also have HAZEL CHOC, which contributes significantly to the total. \n\nThe total supplies before GST is 84.00, with a GST of 5.03, leading to an inclusive total of 89.03. I need to determine the VAT treatment since I'm dealing with both standard and zero rates. \n\nThe total amount payable reflects the calculations accurately, and I'm ensuring each line's tax rate matches correctly.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h1r12cTXDUr_YkCzrPPFcZ9Xhi16QR0cI3csyDve3UtfsyP9LM1IWMpWLpTArutJCI5xLxWhqi-0G919gJKb7Yh8qgAj5CTB3uyAiO05NS2ZE5xde3eRfBIunG8qucyw6eeSkNErRh6EXKtadC6FUkVarMS4rxQARTuHSNV1lGeIc3okHLoh0JCyaecDTU1_DUn1kh7oUcbkAJ4Z3-w4f9dn4Y7KJgGgbLZlWEYKP9y5GEzunUmQVsvGoR4oYpYjp--zyywSJ61FjiQi3QqOCYFx0R8UPcojNFWJaUmP02R2DlXzC7lcyocq7Pri545u5KqZbTEDgSceASjukkp4V4Pk7T382P2YTqkoFdtOOpF9-NRQYmof4KlE_jqXMs5uWuoIOnbbqivJ15ngYXxOD-1a5AnAGw4QFmRhZFnlrNuMLl5SthqSP3V9-YmfVKgt7H_HHkm5zkWpLUCMf8hbGQa0f5z5cPFaYPt6nnyG8-Xy9DFUUR5MyRzctd3hIAq_EkU0F9ylPWHbYMz6qtaphzRWPr_MNU8HmPRtJo5kZSTuHMUeEVHjWuFsCPbOPLEBB6WiqcXtPDwG_b8VXUXyQ_EVAEpspaduL2Stu_vQVxQBz8DaUG_QjA21DwYV4osvlOsoLDfNfgqj9mR1aThXARtZXN7PTVRzy4gHT8lMQVBJSzTESxFT7P9F5cy6ienK4A93mUl4qeWVKLaaLE1Y8zlJLu7LglJzmTO0Fc5TDFh07gpbaJcR2EZV5rQL6mWhpmWQF-srcLy41vcPXsVmtvIgjuVe2TLkS2-4XroCSdU51s9_za61qsibMbz_6_UZ24potbwvLouyDYCm_juRqaIzUbpU6tRevt7xxnG28BV81x4AddRkXSkEkUN7tccFTREfofX9InhRU-fVIL65gpudLvD4kwyPm-hUPd5-4KYs2p833uah3UOE0EzbZ6aikBlC4KWRZ4AkOE6R-xc72F_LfMo8QF-6VHxUt_vV7bi6Wtwdw5oCoEYymGvJ6drN3-YuBv9Tej7khxa6XSpR4tKuRGbXC6dfdIueYwyHa5rPXuFGK0TRZcqd5incRpdnnytuYS8l3oyCbW1J2bwJ0xRQg4acwKUow2G_jwdv8Jp7X0QqZQxf4Y6oRgGlWWlV22607V0iZUyuHT95bmEKREcG41FPftU9MFn3iPEdghGv7qOZPOEcQjF535TXv95mCev3UfXzROyneRaF7wxhKbQdR7ofqF0A3WEvmgsNnM957NJ-4I_Pj36MsqXorjCa4WOLca4zUiJIIbtm7FyEqLJeWofaWyiV0T7ev9AyzGmkco76WDeD9iRq3u-UkcXHe_aoN57qn09rTN-bVVOsyPyQXCKQqwtNsRQ10cmaNCt3062-lsYulgUN_DtG400RSMhRQOQbeTRZbCjGpaTxXprbZo7Up8z4tQex0exPtg4ElMwP4Kd_GsbGhnibGMX13DosequWPEhg3tG2NBSlhx1PgWqfmIorqneNH9Hset8W7IYUkW3ChvDwb6jE-N_EmEzoJ6qaUNK0BBSPgZQO2uUdar842QaPlY6heN7MgtEQ8n6DapZKHFaUh1VyTpp7C4OzzzQdCbm7c8S5BkDXZ78WZ4dMwH9oSs8kAbhBRP0i__CivVVvx94-L4D4Wgdr3i6uf0IwLLYj44QWRn-LHAZq91yp4bfmHuNOeeTMYiwFZmAbNawmWLYLD8kiY1BE7VU3d2-DNUTuLTTvEviUzz0_UaDqi_FgvRpQavIcCyIQIDi8dhK8iNARYmPUKsgBwixmzLuErWHy_DsfxSNNerjTUrdn4kVKzc-XBp7myDYAFal1kEpgRY38kFE67LNaH3suuKnsIWFpsqUqKn4IBYc_JZOqnoWLBVzgq-gwWAdG2geLMMKht5CgP3a4-0x6-8efUwtkELpZGFeHG5-F2qsnZ2oPCT6jrRBelZcPIVCUXUE6DSi4ijSuXhuCBXnhRH8xCwccCJU9jqZEEBGTjahuOki_yukCRq1ZbbmNNpvIZQFO4zNd3534oyPjKY_J48BOriZIwkhxHhq-VBtp07SeAuKdaRV8tT3blY7Rill0RyzuY0fOx7JvdPCcGH_VwG-_BO0mKKsXCEw6q8IG7IRVDJnYtF2hnDmP-ID2x1khCrAAZfdbrJU2kQ85buuhNvyQbVJc2lzYRiIFH0fAMqsNL5-apJ4o6kxAZfxp4siaBrEW6sMZ_TGCqDqfKHsS7tYcwgkq9L7ZC80SUENFt6DvCAJnZete5IUTJtwK4mxZdzo1UdBOjYX7v4NYjANQFgboDFTwxuv6ytfzao3bLLeLSrCyajI8Y6LTq3MIGLostet7QeY5QFxwB3U7bPIqHzv2m3ymDuGOQkgkNuqmi0g4ZXM_-vRTk3SpjkTHC1qXkQFOnjzczcpXuUMqlHYslJOB-_jmNy7JRHqMF-TkqrIWJ5mXlrfhRTAVJPwMkwYxs6ugT8s8vQA-z88_3U-fCVtVnLehch8uMlAlyDCQtg3yMQHzTCUKQ4Cp7U-_DX5QGSTA2qbEGD7pGWiq7orwZp7Vz2tOEa90E-5MMpPfs4GtFwjKOCQ6MTY2HvjRQ8uRt7xIZLoQKbkYvS96FUzsTJUoB4FMS60moikHJaVuHQwFHyjd0JZ39xy6LQM8EwzTUrUXIMkxEUhdX8ag5twMueH6iPOEsIfSeynzj_1e3zDGBkvXLZ0HCMa-9jfBECDFddmtJsMiFpRkUw5i6rTjyV3bOjWEBDqIaRZL23Xe82yMyTg3S60caNMjYiP7su4CrQh3YLOb4rsi0VfKcgW6EdhkZ30FK5-Ao3jJ_PE_uIOedVSLnT_g1SB3IvJKsoT6PkLcYilB-48UVe71o0tloS9LG5rNgnaMgPdApfpie9whfOKhLMTLdgJlBWSIj11zo9O-dXQ0VOPpDraLzCIPtKYk4QwToyJ_pNYVgTUMUez4t1CutbwBSqMZ-vhlHQuuq7cMf4lwbiyEWFO4Md0qBOe8DHXyFqtIN4Cjgjc6fQsBPktlPkfN-eBnMXMf91PG1qR1GVe_szrjlLUQvdt3Pd1HBrusvco-9gxd6hKYBn6vNbmTczIuajnu4C9ktIE9HcnX19B5K5ldWyNXSGKxMHYqgrfUAbieDAe_3cOPoL0O2DqFCTRR6C-h2IN9Efsfvvu0CDukYCIW2MifevQaTIbW6_4rD5ZxRrm6raw-wSnPMSl2aZfKalcZHeyI6z_-DaR0OWLnoqeqg8xUXxjWmqS7gT5dVaMLxQA3TJ7JOkLOdNd-zanqIupCGBV-Mkdsa7i0Wa7esGHvLUYrQ1RV2R33wPk4dG-GIcsZgII0o5Vxn3TVB0GFo_8witAT-RqJ9RUyKyoLFu8vFMIAy7AIrzrIPAxo7uzHQYXRNqFz3QJeD0_8It4RvsbQxp-TohTnvQN0gZU9EuJMms7AwyVhgU6LnkLrN_KJPXs5czrTxnxoOeuAAxeZHSOcad6hVqDo_cdlu4-PGIZnaYlSkw6ZBNg1Dah3rl64mkGf4Q4-10QpCQBEfKrKz_MYbF89emQ3XDJ0oyf4o07l6lxGXqNrdXl7P50d1a_59ps460-2GHY3DMTn8860obKwWoi0gSAYqrcfCKQSKizRzzy-w_gXQ4o-AdzdyB9HjO0OAagmk2Aw5zZJt8yq0Oej5SrbEF9kHpdZnm5SAoUpgnvSOn4RsQUcO8ySArLMWyd4jfLEh627ca1WYwq6qAgNwhGKqn159F3tJK2uHEZRqnX63RLfMjKVUuQnX-lptd_3Lbp9kCp1-DS3qfmBCU_cMqL5NRub-IfdGW98BUdDCXMBc6yrojFm3mPQvsY4q7szk7vfNXJhtwHQqRK86kqanHu9lF22vB4QMjfmmU-rhzUbYqM4rQODbm8tR2bRrk4w7J65C-ZQwDubcLtqY0sRT2bWbXA5xjZK2bLg697fZCEBE_eV8idr5CUijdTgNXK7paAfoxwrj-A-Jc5QP5zqJ9w9wOQLF96ubYY7pJi_RD3yiGePz6j-LmGTiH2Jg6fnDuqFIFN_1UjvT5BP4K_beoWbanZV4lLM-EpGEEvexkGB-4L_LZONHKxSX_v5cZIRYGOYTI65apb3l3D2-6IDBVoBEchX32qC2vdvcNUC0nxFIp3TmIEfHzjKlhU4ZOsPKWKX_UkA0yhTm9Rq8R61UAciIj7rAo-_6zbdM6c7fOBa8VJObGC9ohuFtCc-eLaIra1SM6UiIkCtVnSqhvGshkvfdIPra_vrHyT0VWtypeS3_Znz2LygN2DzvW9Jg7SzHjc_n6yKxOceRCj4AI9K7XcNUeMZO-TbaZ_f6iiKnOXIgne5HqmiZ5H-qONYfrBMeOcVLbA1aS92zoI08BpU4UlsSvcYchDV46TO4rSj6v0x0FF10GgYytEbmNHqUPgCyXbGBu9oihasYneJj_5hscJ8Kru_Tn9hh_U9O_S0siGLQAfHaWKEgBC66hSH3hXXKxoiOVpWKvXxjEPw-I_bBqu518lv3a3W6LCw9nH-pm5QOxe8_bQ8Hf6wquuyX_k0Wuf3elgagkfzjfD_hKn-6EhJ6TyIZdQ_263kKC058YVHftPB5EOfJ3xxHWkjD_KUz9UEfrrnjAduNyg_TNkDNS-L3shc7BYWuC2KQ2MehA1LFdkc4_JcRdkAKVXvwz9P12dQKYVlrQiC2Z0GYCdIdDzubR6-QI4q-1baodzzqoWW3M3FUIHSe63z2vXYVH2fgNSzUW_F0XHr_lG_LBILdYTrBA7rl_PI50m6JvlQYlORGZLECj5Tl9vyYBQqbZB4t_vq8klp1Wp0zbMBNGRImlvRCwvRanRNchn8fyCblYcjyg22iHBNy6zRUf2yRVQOl_jfawxE3T1g4yN-E38WdlYWKaJesAMwBRmml6vMfrRrzxdC1X6ST4-DxEHFDYW_tYT6zb6-eS2wTQEz9AbUNJ_9ahh5wiLxltwxlT1vOSmE_ZxNlnoEQG9QKkddDTHaMaBB-PgaHczLKrAoYiltBpSgkd6Px1Yt7qtlwinJAqqk2dhF2TzsdiXTcONU4kM9PZbjxv1vlroIDD2IumQ_isFmut0MFvJf9dh55m3nM2RV5yFfEBmJ-Vrz3YoErH0l6dpBqnMjXjRczwhgHoFSJA7oRJMJYzTevjUp6mRNXNKsdLEccrglen9HBzKsW0-8fAlbIDJYxwr8RoRsG7vSvA33AX4-3gkwpqKlnZXOFCQe73blsFPnGW-qyySWLWBR3ee4KLan0Aar19jUpuLyD8k_FaiwenzroKaSXxXKLb4aye3iHuvrX16VANDRrehpDIpx4nTdBkrU6thmn6uBQfA2xJJLWeCG8OMJYFn96O_LaySAvurzKSkoqCxzEORiw0YIiLGU9x5gyirKsIP8KDlHhqxCKmJ4RRWcHAZMceTLbS8GXBhpOGR9PzijT9XulyRZREJWStkF2kHtRkOEEM5eocLB_kUGGqVN6bgcukSMJbFkVBAY28bqeVeH3lA8RYCXllaU-ameDv7ggagoZQgm1TOBjJs-RXv78Xq_Uto0D71nvZ3c9wwndcnltHSxbzDQ2RfGKedFzSuxZKcGtpG2ZCvNROarrzQw5cxBz5hndkHRDkcYruieQv4FEcnjOsGTobq9i-YDWlBQJs7P8jrDcTnoGroWbOTyd2fuOJqvMdNH1jke0vTG_y0aJzn2HbooWjtc8W-BYio1Hh8HWoaZAwoR4JtJ-sTn5vwSh27JmRxE8K28Ccy7Px4kDUctUHrK6K9DZM1aYQL4EdD_QaUtViuVaQmg3SX85dPDr0UthaDHiW2q85h5b8zKzUVU2lkq2PawsQpcrJSrJ-nggSq2YNCpbvVA_O_L9ewM2K_rBQeLF1Y-MJET47Wr8s6Lb_xqjTCQnDOJe3njNlEqQytPhffTZ2skCXxeAYHoZlmQ83ejPEyAk7_HEivMR5-lDMkGUzS1jKXBEtN5SkMineX-Bo4qRFbEo8VrdY54BoRJlapX_MmuQXDZZff4KWGsPIUZhXRHTdgV9Z5ZkXuRet85WuHniGpVRmRIUvEczcwRg12Io2zrDOftnCCZv2_jTA38uhhB6uEr-bLRI_O2E__Eb99s70JiMsl9NtVZBl6DvO_nCQkKZ4KD4dqiXNhdS_H_Bym7ctHoJ0Bqu60SG40dhl6tCPiTbmMSCkyFFfZ8xA40LdVPZTiYbwBiBhASC-9txHziAOFgvb52o0pdwVSKn5eFhO1ycV9vu-DwMSsaQADKZ2T3C4e1BJwM3bzbJYbFCH93Rft45nqZrl5D8Gi3KfRxepZwLLpM4X_IsnbFd7wz9uRlnExjgobAeSc6CrEhoTiNRN-V7chkFdAME2u0MmRw8x4mxoAZRrYhse4M2lDR_4xlJHc5N--rOeXjWRXYVLa9t8bgOZ22p0Zqt1xX1uzqhAYMzwuGR4hrhlx__1rAAnEKICVL5NQ37tkYsq6ovvz5oVcV0xUjzqnuqZnb-27IAjJ8plPYbgCoNDWGWad_neg-mIf7r_3CUnIo_sWAJ1iIOM3zXuW2dCoz1v8uE-CmRJQ6bgtwHRZnQucMxk-bzTq0gJGj2v_Jg-Y8lG8rOIle7ycS2SIM6g3WrlTqhPBrVOSLGOVyUL_ewZNdgP3eNiKRBAU6N7PnfzsV3kUlWlcM0q4IV5P64RQxEqtYLABLasApMfYD0wJB9cqUZRcJ8oGbFuS2S9We760FaQ-q1BVz1cXl0CTknGnlCTwdrWvxAk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_00bcba8c637c7b30016af61d63678487d1b442652212bd11b1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 824,
+   "total_tokens": 2327,
+   "cost": 0.032235,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.032235,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.02472
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.08
+}

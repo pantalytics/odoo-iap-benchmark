@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "Bennett, Chavez and Vazquez",
+  "vendor_vat": "971-80-5191",
+  "invoice_ref": "96430839",
+  "invoice_date": "2019-01-13",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 4507.42,
+  "tax": 450.74,
+  "total": 4958.16,
+  "iban": "GB90RYME18980824175499",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Optiplex 990 MT Computer PC Quad Core i7 3.4GHz 16GB 2TB HD Windows 10 Pro",
+    "quantity": 4.0,
+    "unit_price": 269.95,
+    "tax_rate": 10.0,
+    "net": 1079.8
+   },
+   {
+    "description": "Open Box: Dell XPS 8930 Desktop Computer Intel Core i7 8GB RAM 1TB HDD Black - 8",
+    "quantity": 1.0,
+    "unit_price": 718.11,
+    "tax_rate": 10.0,
+    "net": 718.11
+   },
+   {
+    "description": "Dell 9020 i5-4570 | 16GB | 2TB | SSD Windows 10 Pro Desktop Computer PC WiFi DVD",
+    "quantity": 5.0,
+    "unit_price": 349.95,
+    "tax_rate": 10.0,
+    "net": 1749.75
+   },
+   {
+    "description": "Dell Optiplex 7040 SFF PC Computer Intel Core i5-6500 3.2GHz 4GB RAM 500GB HDD",
+    "quantity": 4.0,
+    "unit_price": 99.99,
+    "tax_rate": 10.0,
+    "net": 399.96
+   },
+   {
+    "description": "HP Desktop Computer PC ▯ Core i5 16GB 2TB HD 256GB SSD 22\" LCD ▯ Windows 10",
+    "quantity": 4.0,
+    "unit_price": 139.95,
+    "tax_rate": 10.0,
+    "net": 559.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 4507.42,
+    "tax": 450.74
+   }
+  ]
+ },
+ "cost_usd": 0.0119025,
+ "raw": {
+  "id": "gen-1794515235-yYlkDnMzblVBXeRPbbnK",
+  "object": "chat.completion",
+  "created": 1794515235,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Bennett, Chavez and Vazquez\",\n  \"vendor_vat\": \"971-80-5191\",\n  \"invoice_ref\": \"96430839\",\n  \"invoice_date\": \"2019-01-13\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 4507.42,\n  \"tax\": 450.74,\n  \"total\": 4958.16,\n  \"iban\": \"GB90RYME18980824175499\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Dell Optiplex 990 MT Computer PC Quad Core i7 3.4GHz 16GB 2TB HD Windows 10 Pro\",\n      \"quantity\": 4.0,\n      \"unit_price\": 269.95,\n      \"tax_rate\": 10.0,\n      \"net\": 1079.8\n    },\n    {\n      \"description\": \"Open Box: Dell XPS 8930 Desktop Computer Intel Core i7 8GB RAM 1TB HDD Black - 8\",\n      \"quantity\": 1.0,\n      \"unit_price\": 718.11,\n      \"tax_rate\": 10.0,\n      \"net\": 718.11\n    },\n    {\n      \"description\": \"Dell 9020 i5-4570 | 16GB | 2TB | SSD Windows 10 Pro Desktop Computer PC WiFi DVD\",\n      \"quantity\": 5.0,\n      \"unit_price\": 349.95,\n      \"tax_rate\": 10.0,\n      \"net\": 1749.75\n    },\n    {\n      \"description\": \"Dell Optiplex 7040 SFF PC Computer Intel Core i5-6500 3.2GHz 4GB RAM 500GB HDD\",\n      \"quantity\": 4.0,\n      \"unit_price\": 99.99,\n      \"tax_rate\": 10.0,\n      \"net\": 399.96\n    },\n    {\n      \"description\": \"HP Desktop Computer PC ▯ Core i5 16GB 2TB HD 256GB SSD 22\\\" LCD ▯ Windows 10\",\n      \"quantity\": 4.0,\n      \"unit_price\": 139.95,\n      \"tax_rate\": 10.0,\n      \"net\": 559.8\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 4507.42,\n      \"tax\": 450.74\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Details**\n\nI'm currently focused on identifying and extracting specific fields from the provided invoice image. My progress involves pinpointing the invoice number, issue date, and seller's information, including their name and address.\n\n**Refining Extracted Data**\n\nI've now confirmed the currency as USD and accurately parsed the invoice and due dates, noting the absence of a due date. I've also organized the vendor and invoice reference details, along with the summary totals and VAT information. The itemized lines are also being processed.\n\n**Analyzing Item Descriptions**\n\nI'm investigating an anomaly in item description 5, where square boxes appear instead of expected separators like pipes or dashes. I'm comparing this to item 3 to understand the OCR or rendering difference.\n\n**Investigating Description Characters**\n\nI'm scrutinizing the discrepancy in item description 5, particularly the presence of `▯` characters. I'm testing whether these represent actual missing glyphs, a hyphen, or an em/en dash, and determining the best way to represent them as printed.\n\n**Re-evaluating Character Encoding**\n\nI'm exploring how PDF generation libraries handle special characters like en dashes and bullets, specifically with fonts like Helvetica that may not support them. I'm considering if `▯` represents missing glyphs or encoded characters, and checking synthetic datasets for similar patterns in item descriptions.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Details**\n\nI'm currently focused on identifying and extracting specific fields from the provided invoice image. My progress involves pinpointing the invoice number, issue date, and seller's information, including their name and address.\n\n**Refining Extracted Data**\n\nI've now confirmed the currency as USD and accurately parsed the invoice and due dates, noting the absence of a due date. I've also organized the vendor and invoice reference details, along with the summary totals and VAT information. The itemized lines are also being processed.\n\n**Analyzing Item Descriptions**\n\nI'm investigating an anomaly in item description 5, where square boxes appear instead of expected separators like pipes or dashes. I'm comparing this to item 3 to understand the OCR or rendering difference.\n\n**Investigating Description Characters**\n\nI'm scrutinizing the discrepancy in item description 5, particularly the presence of `▯` characters. I'm testing whether these represent actual missing glyphs, a hyphen, or an em/en dash, and determining the best way to represent them as printed.\n\n**Re-evaluating Character Encoding**\n\nI'm exploring how PDF generation libraries handle special characters like en dashes and bullets, specifically with fonts like Helvetica that may not support them. I'm considering if `▯` represents missing glyphs or encoded characters, and checking synthetic datasets for similar patterns in item descriptions.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 2837,
+   "total_tokens": 4522,
+   "cost": 0.0119025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0119025,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.01063875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2123,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.75
+}

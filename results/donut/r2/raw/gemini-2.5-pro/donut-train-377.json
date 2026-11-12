@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Davis, Evans and Cooper",
+  "vendor_vat": "933-70-8828",
+  "invoice_ref": "24342647",
+  "invoice_date": "2020-07-05",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 4112.98,
+  "tax": 411.3,
+  "total": 4524.28,
+  "iban": "GB05CPFN10349037207241",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "15\"x15\" White Marble Coffee Table Top With 15\" Tall Stand Semi Precious Art Deco",
+    "quantity": 4.0,
+    "unit_price": 575.99,
+    "tax_rate": 10.0,
+    "net": 2303.96
+   },
+   {
+    "description": "12\" Marble Lapis Inlay Chess Table Top With 2\" Pieces & 15\" Wooden Stand W537",
+    "quantity": 3.0,
+    "unit_price": 444.6,
+    "tax_rate": 10.0,
+    "net": 1333.8
+   },
+   {
+    "description": "18\"x18\" White Hand Curved Top Coffee Table Inlay Decorative Gift For Her Wedding",
+    "quantity": 1.0,
+    "unit_price": 475.22,
+    "tax_rate": 10.0,
+    "net": 475.22
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 4112.98,
+    "tax": 411.3
+   }
+  ]
+ },
+ "cost_usd": 0.0190575,
+ "raw": {
+  "id": "gen-1794512890-qdYi5CE33AxMFtRvJ5kq",
+  "object": "chat.completion",
+  "created": 1794512890,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Davis, Evans and Cooper\",\n  \"vendor_vat\": \"933-70-8828\",\n  \"invoice_ref\": \"24342647\",\n  \"invoice_date\": \"2020-07-05\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 4112.98,\n  \"tax\": 411.3,\n  \"total\": 4524.28,\n  \"iban\": \"GB05CPFN10349037207241\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"15\\\"x15\\\" White Marble Coffee Table Top With 15\\\" Tall Stand Semi Precious Art Deco\",\n      \"quantity\": 4.0,\n      \"unit_price\": 575.99,\n      \"tax_rate\": 10.0,\n      \"net\": 2303.96\n    },\n    {\n      \"description\": \"12\\\" Marble Lapis Inlay Chess Table Top With 2\\\" Pieces & 15\\\" Wooden Stand W537\",\n      \"quantity\": 3.0,\n      \"unit_price\": 444.6,\n      \"tax_rate\": 10.0,\n      \"net\": 1333.8\n    },\n    {\n      \"description\": \"18\\\"x18\\\" White Hand Curved Top Coffee Table Inlay Decorative Gift For Her Wedding\",\n      \"quantity\": 1.0,\n      \"unit_price\": 475.22,\n      \"tax_rate\": 10.0,\n      \"net\": 475.22\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 4112.98,\n      \"tax\": 411.3\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Davis, Evans and Cooper\" as the vendor. I've also found the vendor's Tax ID: \"933-70-8828\". I'm now moving on to parse other critical information within this invoice, according to the predefined JSON schema.\n\n\n**Parsing Invoice Details**\n\nI'm now focusing on extracting further data points per the JSON schema. I've successfully pinpointed the invoice number as \"24342647\" and the issue date, which I've formatted to \"2020-07-05\". There's no due date specified, so I've set it to `null`. I'm leaning toward USD as the currency, despite the IBAN starting with \"GB\", given the addresses. I've also parsed the net, VAT, and gross totals, and the VAT treatment. Now, I will start line-item parsing.\n\n\n**Confirming USD Assumption**\n\nI've re-evaluated the currency determination, focusing on potential discrepancies. Although the IBAN begins with \"GB\", indicating GBP, the presence of US addresses for both the client and seller, coupled with the USD currency symbol, makes USD the most probable currency for this transaction. I've reconfirmed the vendor's Tax ID. I'm now moving on to parse line item details.\n\n\n\n**Refining Invoice Data**\n\nI'm now focusing on the final extraction step, after careful checks. I've corrected the invoice date to 2020-05-07, and reconfirmed USD as the currency, despite the IBAN's \"GB\" prefix, due to the presence of US addresses and the dollar symbol. I've re-checked all the fields, confirming the vendor name, VAT, invoice details, dates, and amounts. I'm now certain about all parsed information. I am extracting line item details, and the VAT breakdown.\n\n\n**Finalizing Invoice Extraction**\n\nI've performed a final, comprehensive verification of all data points. I corrected the invoice date to 2020-05-07, and re-confirmed USD as the currency. The vendor name, Tax ID, and all invoice details have also been verified. I am ready to assemble the complete JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Davis, Evans and Cooper\" as the vendor. I've also found the vendor's Tax ID: \"933-70-8828\". I'm now moving on to parse other critical information within this invoice, according to the predefined JSON schema.\n\n\n**Parsing Invoice Details**\n\nI'm now focusing on extracting further data points per the JSON schema. I've successfully pinpointed the invoice number as \"24342647\" and the issue date, which I've formatted to \"2020-07-05\". There's no due date specified, so I've set it to `null`. I'm leaning toward USD as the currency, despite the IBAN starting with \"GB\", given the addresses. I've also parsed the net, VAT, and gross totals, and the VAT treatment. Now, I will start line-item parsing.\n\n\n**Confirming USD Assumption**\n\nI've re-evaluated the currency determination, focusing on potential discrepancies. Although the IBAN begins with \"GB\", indicating GBP, the presence of US addresses for both the client and seller, coupled with the USD currency symbol, makes USD the most probable currency for this transaction. I've reconfirmed the vendor's Tax ID. I'm now moving on to parse line item details.\n\n\n\n**Refining Invoice Data**\n\nI'm now focusing on the final extraction step, after careful checks. I've corrected the invoice date to 2020-05-07, and reconfirmed USD as the currency, despite the IBAN's \"GB\" prefix, due to the presence of US addresses and the dollar symbol. I've re-checked all the fields, confirming the vendor name, VAT, invoice details, dates, and amounts. I'm now certain about all parsed information. I am extracting line item details, and the VAT breakdown.\n\n\n**Finalizing Invoice Extraction**\n\nI've performed a final, comprehensive verification of all data points. I corrected the invoice date to 2020-05-07, and re-confirmed USD as the currency. The vendor name, Tax ID, and all invoice details have also been verified. I am ready to assemble the complete JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1866,
+   "total_tokens": 2184,
+   "cost": 0.0190575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0190575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01866
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1391,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.51
+}

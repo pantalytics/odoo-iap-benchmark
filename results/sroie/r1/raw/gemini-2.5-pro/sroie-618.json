@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001-540338",
+  "invoice_date": "2018-06-13",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 35.0,
+  "tax": 0.0,
+  "total": 35.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Rice w Seafood /Meat Item Single",
+    "quantity": 1.0,
+    "unit_price": 15.0,
+    "tax_rate": 0.0,
+    "net": 15.0
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1.0,
+    "unit_price": 5.0,
+    "tax_rate": 0.0,
+    "net": 5.0
+   },
+   {
+    "description": "Noodle Item Single",
+    "quantity": 1.0,
+    "unit_price": 15.0,
+    "tax_rate": 0.0,
+    "net": 15.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 35.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0204075,
+ "raw": {
+  "id": "gen-1794513229-16iGaMUdPddRYidsxMIT",
+  "object": "chat.completion",
+  "created": 1794513229,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\n  \"vendor_vat\": \"000670224384\",\n  \"invoice_ref\": \"V001-540338\",\n  \"invoice_date\": \"2018-06-13\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 35.0,\n  \"tax\": 0.0,\n  \"total\": 35.0,\n  \"iban\": null,\n  \"vat_treatment\": \"Z\",\n  \"lines\": [\n    {\n      \"description\": \"Rice w Seafood /Meat Item Single\",\n      \"quantity\": 1.0,\n      \"unit_price\": 15.0,\n      \"tax_rate\": 0.0,\n      \"net\": 15.0\n    },\n    {\n      \"description\": \"Beverage\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.0,\n      \"tax_rate\": 0.0,\n      \"net\": 5.0\n    },\n    {\n      \"description\": \"Noodle Item Single\",\n      \"quantity\": 1.0,\n      \"unit_price\": 15.0,\n      \"tax_rate\": 0.0,\n      \"net\": 15.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 35.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified the vendor name as \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\" and extracted the vendor's VAT registration number, \"0006702243.\" Now, I can move on to extracting other fields required for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The invoice reference is \"V001- 540338\", and the date is \"13 -06-2018\". The currency is MYR, and the receipt has no due date or IBAN, so both are null. I've found \"Total (Excluding GST):\" is 35.00, GST is 0.00, and \"TOTAL (Inclusive of GST):\" is also 35.00. The vat_treatment is Z, as the tax rate is 0%. I've started extracting the line items as well.\n\nI need to extract the following:\n\n*   **Line 1**:\n    *   `description`: \" Rice w Seafood /Meat Item Single\"\n    *   `quantity`: 1 (implied from the layout, though not explicitly in the Qty column for this line)\n    *   `unit_price`: 15.00 (Total is 15.00, Qty is 1, so unit price is 15.00)\n    *   `tax_rate`: 0 (The GST summary shows 0% rate for SR items)\n\n\n**Completing Field Extraction**\n\nI'm now focusing on completing the JSON schema population. I've re-examined the line items due to OCR discrepancies, confirming quantities for all three as 1 and updated the lines accordingly. The \"net\" amounts for each line have also been added. I've double-checked all other required data points and confirmed each to be correct.\n\n\n**Finalizing JSON Schema**\n\nI've now completed extraction of all fields and constructed the complete JSON schema. I've re-examined the receipt to verify all values for accuracy, including the currency, dates, tax details and line items, as a result of earlier OCR discrepancies. All fields for the JSON schema have been populated.\n\n\n**Constructing JSON Output**\n\nI'm now putting the final touches on the JSON. I've re-examined and confirmed every detail, including line item quantities and the appropriate tax treatment for each line. I am satisfied with the output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified the vendor name as \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\" and extracted the vendor's VAT registration number, \"0006702243.\" Now, I can move on to extracting other fields required for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The invoice reference is \"V001- 540338\", and the date is \"13 -06-2018\". The currency is MYR, and the receipt has no due date or IBAN, so both are null. I've found \"Total (Excluding GST):\" is 35.00, GST is 0.00, and \"TOTAL (Inclusive of GST):\" is also 35.00. The vat_treatment is Z, as the tax rate is 0%. I've started extracting the line items as well.\n\nI need to extract the following:\n\n*   **Line 1**:\n    *   `description`: \" Rice w Seafood /Meat Item Single\"\n    *   `quantity`: 1 (implied from the layout, though not explicitly in the Qty column for this line)\n    *   `unit_price`: 15.00 (Total is 15.00, Qty is 1, so unit price is 15.00)\n    *   `tax_rate`: 0 (The GST summary shows 0% rate for SR items)\n\n\n**Completing Field Extraction**\n\nI'm now focusing on completing the JSON schema population. I've re-examined the line items due to OCR discrepancies, confirming quantities for all three as 1 and updated the lines accordingly. The \"net\" amounts for each line have also been added. I've double-checked all other required data points and confirmed each to be correct.\n\n\n**Finalizing JSON Schema**\n\nI've now completed extraction of all fields and constructed the complete JSON schema. I've re-examined the receipt to verify all values for accuracy, including the currency, dates, tax details and line items, as a result of earlier OCR discrepancies. All fields for the JSON schema have been populated.\n\n\n**Constructing JSON Output**\n\nI'm now putting the final touches on the JSON. I've re-examined and confirmed every detail, including line item quantities and the appropriate tax treatment for each line. I am satisfied with the output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2001,
+   "total_tokens": 2319,
+   "cost": 0.0204075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0204075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02001
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1612,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.82
+}

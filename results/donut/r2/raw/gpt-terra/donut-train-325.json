@@ -1,0 +1,129 @@
+{
+ "pred": {
+  "vendor_name": "Jones Ltd",
+  "vendor_vat": "946-87-1305",
+  "invoice_ref": "62481750",
+  "invoice_date": "2014-03-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 601.49,
+  "tax": 60.15,
+  "total": 661.64,
+  "iban": "GB90NNEL09660394093814",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome",
+    "quantity": 3,
+    "unit_price": 22.99,
+    "tax_rate": 10,
+    "net": 68.97
+   },
+   {
+    "description": "NEW 6 Pcs Rabbit Wine Opener Set With Accessories Tools Gift Box #A16",
+    "quantity": 4,
+    "unit_price": 19.95,
+    "tax_rate": 10,
+    "net": 79.8
+   },
+   {
+    "description": "Whiskey Glass Mountain Wooden Bottom Wine Transparent",
+    "quantity": 5,
+    "unit_price": 19.48,
+    "tax_rate": 10,
+    "net": 97.4
+   },
+   {
+    "description": "Alcoholmeter Alcohol Meter Wine 0-100%+Thermometer Set Bar Tools Vintage Tester",
+    "quantity": 4,
+    "unit_price": 14.08,
+    "tax_rate": 10,
+    "net": 56.32
+   },
+   {
+    "description": "Vintage wine 2 bottles holder Iron & rattan rack",
+    "quantity": 5,
+    "unit_price": 55,
+    "tax_rate": 10,
+    "net": 275
+   },
+   {
+    "description": "Vintage Set of 3 Cobalt Blue Glass Wine Glasses / Water Goblets Barware Stemware",
+    "quantity": 1,
+    "unit_price": 24,
+    "tax_rate": 10,
+    "net": 24
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 601.49,
+    "tax": 60.15
+   }
+  ]
+ },
+ "cost_usd": 0.0088656,
+ "raw": {
+  "id": "gen-1794515559-JBmmP2w6m4V4rqXue8Op",
+  "object": "chat.completion",
+  "created": 1794515559,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Jones Ltd\",\"vendor_vat\":\"946-87-1305\",\"invoice_ref\":\"62481750\",\"invoice_date\":\"2014-03-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":601.49,\"tax\":60.15,\"total\":661.64,\"iban\":\"GB90NNEL09660394093814\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome\",\"quantity\":3,\"unit_price\":22.99,\"tax_rate\":10,\"net\":68.97},{\"description\":\"NEW 6 Pcs Rabbit Wine Opener Set With Accessories Tools Gift Box #A16\",\"quantity\":4,\"unit_price\":19.95,\"tax_rate\":10,\"net\":79.8},{\"description\":\"Whiskey Glass Mountain Wooden Bottom Wine Transparent\",\"quantity\":5,\"unit_price\":19.48,\"tax_rate\":10,\"net\":97.4},{\"description\":\"Alcoholmeter Alcohol Meter Wine 0-100%+Thermometer Set Bar Tools Vintage Tester\",\"quantity\":4,\"unit_price\":14.08,\"tax_rate\":10,\"net\":56.32},{\"description\":\"Vintage wine 2 bottles holder Iron & rattan rack\",\"quantity\":5,\"unit_price\":55,\"tax_rate\":10,\"net\":275},{\"description\":\"Vintage Set of 3 Cobalt Blue Glass Wine Glasses / Water Goblets Barware Stemware\",\"quantity\":1,\"unit_price\":24,\"tax_rate\":10,\"net\":24}],\"vat_breakdown\":[{\"rate\":10,\"base\":601.49,\"tax\":60.15}]}",
+     "refusal": null,
+     "reasoning": "**Determining invoice format**\n\nI need to clarify the exact JSON schema for the invoice, since there’s some date ambiguity with 04/03/2014 likely being in DD/MM format. The invoice suggests euro decimals, a British IBAN, and possibly an address from the Cayman Islands. \n\nThe expected normalized date is probably 2014-03-04. Currency signs are tricky; the bill shows a dollar sign without the ISO code. It's safest to assume the currency is USD based on common practice, but it could be null if not explicitly defined.**Parsing quantities and calculations**\n\nI need to handle quantities and parse numbers with commas and decimals. For instance, the unit prices multiplied by their quantities give us totals like:\n\n- 22.99 * 3 = 68.97\n- 19.95 * 4 = 79.80\n- 19.48 * 5 = 97.40\n- 14.08 * 4 = 56.32\n- 55 * 5 = 275.00\n- 24 * 1 = 24.00\n\nAlso, I need to calculate the tax, which at 10% for a total of 601.49 gives 60.15. The gross total should be confirmed at 661.64. I’ll ensure all these figures are clearly outputted!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Determining invoice format**\n\nI need to clarify the exact JSON schema for the invoice, since there’s some date ambiguity with 04/03/2014 likely being in DD/MM format. The invoice suggests euro decimals, a British IBAN, and possibly an address from the Cayman Islands. \n\nThe expected normalized date is probably 2014-03-04. Currency signs are tricky; the bill shows a dollar sign without the ISO code. It's safest to assume the currency is USD based on common practice, but it could be null if not explicitly defined.**Parsing quantities and calculations**\n\nI need to handle quantities and parse numbers with commas and decimals. For instance, the unit prices multiplied by their quantities give us totals like:\n\n- 22.99 * 3 = 68.97\n- 19.95 * 4 = 79.80\n- 19.48 * 5 = 97.40\n- 14.08 * 4 = 56.32\n- 55 * 5 = 275.00\n- 24 * 1 = 24.00\n\nAlso, I need to calculate the tax, which at 10% for a total of 601.49 gives 60.15. The gross total should be confirmed at 661.64. I’ll ensure all these figures are clearly outputted!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iJ34daK-zZehechgI4XFb0M-vB0OMA_inIDeqGbpdXg36Hzmd8PGUcdyGvfWKapiiYOLbewC5yiG596L_bUgueb95-F8Z4Rn9pCwsp32h4HaJHPZpCfK6rdhUHdLTg2_VNOqoKKFEDJILzk54UDLeIUj-Sw_5OeQYAlvZb6Xnj6U4I4RRZOUCgjk0cvQW0DgPj0Op3gu5VIQQZvM7o1tOTLisRvX2BbElldCqMtYg7zkGBRgmj4QEu2IoPsIXrJ8rbJhlnW-PWw1g7k9TNlJrK4yUzinSYXLB5_6IGrCUKoUAgOTp_S82GM3nVrr_Nu_z5oFvGxozdKgdKWULszq_UBsTF2SP7EVqH8NRJ0AE2hfhkZq86cXjj3W7Hkt1c8kD9-xad9-qqtUXRnsE9t9vEhzrHlBLXOtV3-vNNnz_03uIc5gVlaadUsjBaE6bFhVnXX0_vhuOegwiH8xKfm6lYeuoJ1rDPr4nWGBunJgrjozLozyYG4b2BB4RSe6a0eiIxQK9acFEfnk_6VNQX13hwIan3Mwl9PCtXoNXKtBya3wtfZ0CAESFwnOmZLIQ3KkAye4G0hsZ8Iq_OxvLw_jL1S8bZPlJAu40gxKOg-shJgNoIfdP3D8-keA_QYl712OJ1tN5ShQ3--tYAXYWinkRqOW3jWWVmj4jEeHEqqkMDN2sKhFeeE6uUqrC0ueKO19KnZlBa0THUCsnMtvkNQsqsPqWdtTHeQK27X-wI8KE-DnJVxZDFSvXV_CYfu2Rl0e0E1qwPj8R6qpgc-R-kIw7wIz67zB9xHPLg3PtUlPhtqvkZFctBLtXxhapxD_44Xx41hG7N6RpQXHGXxkpKPQnYmehTMJoGiMjFnTsHD8JCE-KeMWfW49JbcQHazBsz0Fv5KwnjibnkuxpRyVLUOMXtZkbsS3ahnjVaHHCzFhFr4DrKbHOtFXO8avmdSp3RYHXsxd0Lpeax9QEBcWzfl37GduN1OXNKXJnIhJxYvFZWwkkkLG4-hpvlMl8EgUHIPElGUM1EvYBeBqu6DMlLTrPDvj1wtICBBpohjFsPxJ-6YOCpvgfxE2tz62UIt7V5sXYt3pIGMqUbr_NTW_ppXK_FMuZeh-HTVw-KuqqEVwpdqSAThn6RWggFkLE97Rm346Yf_S2cWHKOPdsaVzaHQlzv_YtkcUNBOeu2zoyemxdh7IclKYitax2z2EdSkzWSmc-JIEtQLvKw7_4_O9pkOVQxsn5PX5eZIJ5SdYZFZOtGea5yDErtiJ5KZTbMxFY1wsxpeZvQUuf2qeRL_6RgRl5bdAe-nbb_Zm1RSaezzYi2A5WHSBvGuROikXPdJ4o21gFUI-UfdOnq4e2jw5LGcRIQ_GC9SufzE0zoJlFhixT9VpCsFoxxs3bstJFkRUb3XJI90FpjVLAEG-dlJ8-29BEkJ4YIppdMycGQiJOq8UqsgnaGB1Njljz6N5gxUv1-lDGdQuCLAxDBc4B0IfMdSwXJ_szZNHFjm2JWju9I3YGuyQC9PZ08oIwVUqAvP6NL-6Aq3AJi8wq3In5aYZbvHfwiKxRExPFa0inZ5JqFKNh793cPqjV3q-G_rGMWKHUb77fouHPiph7m1RVA8jVyKw835B8S2Zlb_Lcg11guywlm18bTRV-bk6s3aKdRd3klBlCG1M9iTx9DwgDwNlLxU35ha2poDpQMXIPy-XlxNEAdpmS62pbDc2xup5YtShQ2qQZ1hWGMr1f1wC79TOwg_pfPMXY-PB1OkTmQhwLCU9VpMNvlA1-m9TxY4v8PXqJ3NMusINkuRFwtT_sTPvFrTEG5z-oeKsBWOtbmg65N58Wn8YASbc2lZpyC8wC-mE5NPk12C5RGi0N3osPquhV-vGzVIPi7menpLO-j5n9UKRuZ2OGg3zp-6t83rMaJ8Ga65QWN0lMLyAfzNqlEGvCjUW53XV74q_TkNKpw5_GYw40k6HvSTtLrm3z7KtKJU30ii0e_6az4Id8Iw13IgnYrT8yJD9PCy9LWGYTu44AakXwr2ABp4GevEY0O9iL6IT_h5nSS6YPdlsPK_7rZXBMrNDl70_kdbdbzQ0bHwgaYh-EZFT99DcuuDPZywc-16_Ro8Ag_UV-AqogsQsuHRa8FiGrTfBbKx4Nt9vFNGi0LEMj3StYur_h-uvhtP5Sko0wl6fxIU2Ac6NGJ-BX3oyKVcR6uaLipIjY91KkCC-FtPDa-nJM2ygN4r_CykRuGpwFZyltVfr6-mppwgp0lZW5AyQu6r2WJgnfAJ1_CFTr0fppJV0wZZFF8F2NgLKnPdCOJdwcgNThKUp3lu2rgAszSHLgEdrr-qsFX7P-3kYPfrCWrvFCU3kacVmBvN1gDVhdvDi7HXiKS1iMCIWvz5J-YKz930uslJNUsN0QLMBVI4785KlbBew82M7TXP6ZJN_p_eX-0xvUp_jhVcCnLzya7W0djbLoS82Zmxr27nTLCJhNRpl0Ox01z_RMkwg0j2gy3o6q5TIHEUtk3yfZzV30QCBYQKVf3XRTuFEsUOk79RZ1UFhD_6p_Cl_y-jzOrE7weXLtS2T2zo169cf2OBRqpeZBCzs8dIzfxpQa4LwvDYRlZMEoe6rZ69_EJMcGL0Ae0DwENcRSQdptWKwjG78d2xgTKOnacQvq5Vwmb0vWiXE5_bBLzjfyvz1aURkOV-qwtb3USSHwa1L6Q9Cq9652zMJ5FSUYZQNi_Ax-rdrlf5-6afkOaYGseKoi0zBcdhlJc3L0GqObpM-D4wpjjXmI4Ld_Kwkd4w9BEz1l-ZH2rsg_5qP2Pif9xvCG3SdlliEx6Z1TAMl1Vsv6M0IYiZGNIxEvasSvedygc-0jrXVQ4w0FQvC7zWWCq67B9VKoCGPSNVKKAHuqZxX5ys5dX1-LjWYwvHmNAdLSwPRvyvxHVgw28l2EFyUfRu_ACUJhrRbyQJYxack0cg3KIWK69NtVSSsn0fEWjAwRB_iVNjePyYlCvpHUzaFtspd1aaFYcPqgfJY6XfURTPxyAyUYahCgpvYIhaaK9-smWv8Dq08gW6i5p-zOYH0QO6Am-XpEd9K0YQO3fjxvGXtVs6Qd9DxiTddL0xxLUl0vFthNUMx5wNKqTLwjDPZAjikiiD8YxdevBgGCVH-G6blpBSO6GXAajGNr7N4wfB7gTWpYbTfEoaOcV5c7AFGLt554Sr6qOd4Jp98NdHgRtQ9_tIZd1x8JrJ-LJi3qlKo77XJ3T6h2WLLhbEDY1pPJqGPcIDqRCVKhf_khiz5fJiQaQ195j5524GPiuy7RU1YAQIn-wrdy93FKqEgmmwjNBmZJatn8hQD7inVHAC3pZ3XZXYnJmxr4MUHYyTWn-rxanrPBZ1iO_ZvrEknHhDBciKwjI2kaxwZ86BcPHcY9QCer4lzol4qUzVdbYoa9YdQu9FsGPTvHqPu_yGDh867rKohcs6HZpwMHXoEofOyL6wIbEJSFBCOfkppzTT15qF5s2G3bnTtIwym7vxwB_qKABe13MexONBfB18uZyqD7ho32fBJ88fhGv67Ru3EIfkNEbWPxwHTdhY46GAuIe2q2kmJXB1Zjou1umLdlMrqmcllHxaQhOqJEON1hX06dHMk4FbN4M1g3_n91WPKxL3_6H7d4k6SmpHO7Ei_Nxyv3cBKIHUXWQ_CC4jyJe6C_PuJgxIrGX2vay5w3C6x-pV0IBVsq7q0qoVnRWN5eiK3P1we1jVTVI2_1FU-opBcbniHnyz1nX5bHhQ1flaau19GAs-PutmUSwhGowifXRjtIenFL7UJofvgDQI7LRT-ZcAoS1DfpfsWa5HzpTBYTIC9JmiEgAymWknmGULtZQ8LDqsZDGEjLCoybWk7K9NpZNi5oaHPlW68Xaf5--qB2Mkls3Q-wPPmmJXtAR8lzb9Vr-XQVKOw0WZlEeQKmr5X5adp7exa4eYnU1KkF-AkTSbAW8eq2IoEPL3zS7pdkwFBpKPQZNIfFR33N7MfcgmxAQOhdUCARMmTpbKlwjYaNffmrfkVuiIhW7xeY83iAdL1_Acpu6-H9OWLIbB5NlVFfgTgC8FIbrcZtzbdvyMWY9I5qEA_crE2yGKhODV1j8FOfae5PTt1v2kxIULV0XKaV1F78QHC8TRk4Q3tTrR3s4uyeJmPFo_UwOMSgYMICYUMJT3rdFvj3qoezu3dCRD2AA6Pjjx-304Fv7p0tPtFitG-2iVn29uNWYvn4OHL70flvO6f5gqq6XYxodiTrLMfDO5DyFfrY0wOimZtRqF1AKdE12SYhyd_Tm2A6jRymVHU9ktHEThoY7obxaeAcrcfmfMb-opAxFhQ-Y_1BHtTB-oXvOte0dHeqkhqG_nj7NUBp7OW-Ad1FiT8I502Yh8PjgRAoefvlZBbyR1jiSO_PH1n86CPa3wMsleI25YRHmKiT4lNnqOjovhNk1pPDkqccNT17fJr1ZPVolcgIgAjGzjXdUmcQy7fmg_KsyPk66wN_kEcT2Of3C8-53Ceaqf0kps7yAQP09_eRvxRn4G5DPE8bUmbx2Z1dnTeNAKcE8Uwu-3nO9__xTsEqtvGXDDXul6Ck8ALE-q_2TNdcoT85Gsn6cXIXRWZiDudzs8jArOHbkseTJZ2qWiUJakC0FZ_7aUs7ci1ZFfUIZPhjPtGuPjLd3Deu2kxBWUqG9bInoUksFPiZFlnWDZXChbusFuI45VwXNtrtG-8qympzJjCxBqEvzVtaYkHdNA8txq3RpAQ0-rhZOFUi3jDtX9CCz4ZCbC1bHDH0XsnOxdPqwnM3Mb6zfUq8nVCeVgWsVdmNiAzUODZ_9A-xFTXvJ0Zc7JjjyUwMlOrSkHqafFsgfCLGG0hm3bp-H9boqk9W-eYukp9AEV9qW2nnnvhUo13n5d5vgunYEuQPFfwHlr6bWWl34fQeTb5-hrDJ9STexE70zf9KofEP2Cvyy5WmH3tXnDO1XszJgiUIoKwNIhlgJ9BsTnuLDG1dBnvpZPF5Jqg2OkDgzB2sa5Fu0sF67QyPGK-LlRKPheMUBymYtJenK8nyKp3t8yFy_kVmzQV4e4LCPqQ96DJZO052iRUEEs1MP4MpFOzrJ4Lpp7nzflwmICAC--uhHgSHVqpNe1pguAqHuF30iduqoQKuoN2zSNusRfqQqI4AfRnxTf_h0EuaeDBPlyQb63kkohK-RzUk37eWnE2QwsVqzB8WelN1CKP_lo9yVWcEwiNpWPSwocszkrM2yBbAz2oxmmkHJreKa9r4w9AsyuHgs_R4X8MCI6r8GbGrDmyzVXwFmqV0PceFjWYCnIUiUtgD-Zy4E6DD5HhvIRkP5g6cFJfboXGopdKdBj6WtQwk-rOIhr6gIFuzZI6xmN0WaM0zZVcZIa4ET36Erggq7o_hx8U2gxlgrrwuC0Ltqgkv3gMCtxqP3HHtsD25_J9w2cf6DCs7NTMvywmLVXbOT2Kl6r7EAj-kA1GvXdaNuKAbmcVbkOm_-m0PytJ1JO-o44bm8tnmUNVom_YIYI9iknhaMsV3hyQEbmrYT-hw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_033c40cfe2510080016af6226f879887d19169cdfd63dcc3e7",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 679,
+   "total_tokens": 4240,
+   "cost": 0.0088656,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 3558,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0088656,
+    "upstream_inference_prompt_cost": 0.0007176,
+    "upstream_inference_completions_cost": 0.008148
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 331,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.6
+}

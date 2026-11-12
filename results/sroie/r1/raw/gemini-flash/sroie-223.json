@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "1010104759",
+  "invoice_date": "2018-03-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 9.34,
+  "tax": 0.56,
+  "total": 9.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SC Acr Frame S103M",
+    "quantity": 2.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "Member Discount",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 9.34,
+    "tax": 0.56
+   }
+  ]
+ },
+ "cost_usd": 0.008304,
+ "raw": {
+  "id": "gen-1794512747-4Fh4sis4hFZVvrFTCai2",
+  "object": "chat.completion",
+  "created": 1794512747,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"POPULAR BOOK CO. (M) SDN BHD\",\n  \"vendor_vat\": \"001492992000\",\n  \"invoice_ref\": \"1010104759\",\n  \"invoice_date\": \"2018-03-05\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 9.34,\n  \"tax\": 0.56,\n  \"total\": 9.90,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SC Acr Frame S103M\",\n      \"quantity\": 2.0,\n      \"unit_price\": null,\n      \"tax_rate\": 6.0,\n      \"net\": null\n    },\n    {\n      \"description\": \"Member Discount\",\n      \"quantity\": null,\n      \"unit_price\": null,\n      \"tax_rate\": 6.0,\n      \"net\": null\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 9.34,\n      \"tax\": 0.56\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Data: Receipt Analysis**\n\nI'm focusing on extracting key data points from the receipt image. Currently, I've identified the vendor name as \"POPULAR BOOK CO. (M) SDN BHD,\" the VAT/GST registration number as \"001492992000,\" and the company number as \"113825-W.\" I'm also noting both \"Slip No. 1010104759\" and \"Trans: 10461\" as invoice references, or similar.\n\n\n**Refining Data: Calculations**\n\nI've determined the \"Slip No.\" is \"1010104759\", the invoice date is 2018-03-05, and the currency is MYR.  The untaxed amount is 9.34, tax is 0.56, and the total is 9.90.  I've marked the VAT treatment as 'S'. Now I'm carefully analyzing the line items, particularly line 1: \"SC Acr Frame S103M.\" The price (11.00) includes tax. I am focusing on figuring out if unit prices or net amounts are present in other line item information.\n\n\n**Clarifying Values: Unit Prices**\n\nI'm wrestling with how to handle unit prices when only gross amounts are printed. Specifically, I have \"SC Acr Frame S103M\" with a gross amount of 11.00 and \"Member Discount\" at -1.10. Calculating the net amount yields 9.34 before tax. Now, given that both of the given figures are inclusive of tax, do I mark net as the printed value, as printed, as the \"amount before tax\", as calculated, or null? I am beginning to believe that calculating or setting net to null might be appropriate, given the context.\n\n\n**Revising Data: Tax Inclusion**\n\nI'm now grappling with whether \"net\" should be null or 11.00 for line item one, considering tax. I've noted that 9.34 is printed, but not as the direct \"net\". The 11.00 is inclusive of GST, indicated by 'T'. If net = 11.00, it contradicts the untaxed value of 9.34. The schema allows null, which might be correct since no net amount is printed. I will carefully examine how similar receipts were handled in the benchmark, given that the total before tax might not be explicitly present.\n\n\n**Evaluating Data: Line Items**\n\nI'm now determining how to populate \"unit_price\" and \"net\" for each line item. I'm considering scenarios where only the gross amount is printed, and I need to decide if they should be null. I'm leaning toward unit_price and net both being null for the initial items. I'm exploring the implications of an \"amount before tax, as printed\" field and how its handling affects the interpretation.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Data: Receipt Analysis**\n\nI'm focusing on extracting key data points from the receipt image. Currently, I've identified the vendor name as \"POPULAR BOOK CO. (M) SDN BHD,\" the VAT/GST registration number as \"001492992000,\" and the company number as \"113825-W.\" I'm also noting both \"Slip No. 1010104759\" and \"Trans: 10461\" as invoice references, or similar.\n\n\n**Refining Data: Calculations**\n\nI've determined the \"Slip No.\" is \"1010104759\", the invoice date is 2018-03-05, and the currency is MYR.  The untaxed amount is 9.34, tax is 0.56, and the total is 9.90.  I've marked the VAT treatment as 'S'. Now I'm carefully analyzing the line items, particularly line 1: \"SC Acr Frame S103M.\" The price (11.00) includes tax. I am focusing on figuring out if unit prices or net amounts are present in other line item information.\n\n\n**Clarifying Values: Unit Prices**\n\nI'm wrestling with how to handle unit prices when only gross amounts are printed. Specifically, I have \"SC Acr Frame S103M\" with a gross amount of 11.00 and \"Member Discount\" at -1.10. Calculating the net amount yields 9.34 before tax. Now, given that both of the given figures are inclusive of tax, do I mark net as the printed value, as printed, as the \"amount before tax\", as calculated, or null? I am beginning to believe that calculating or setting net to null might be appropriate, given the context.\n\n\n**Revising Data: Tax Inclusion**\n\nI'm now grappling with whether \"net\" should be null or 11.00 for line item one, considering tax. I've noted that 9.34 is printed, but not as the direct \"net\". The 11.00 is inclusive of GST, indicated by 'T'. If net = 11.00, it contradicts the untaxed value of 9.34. The schema allows null, which might be correct since no net amount is printed. I will carefully examine how similar receipts were handled in the benchmark, given that the total before tax might not be explicitly present.\n\n\n**Evaluating Data: Line Items**\n\nI'm now determining how to populate \"unit_price\" and \"net\" for each line item. I'm considering scenarios where only the gross amount is printed, and I need to decide if they should be null. I'm leaning toward unit_price and net both being null for the initial items. I'm exploring the implications of an \"amount before tax, as printed\" field and how its handling affects the interpretation.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 592,
+   "completion_tokens": 2096,
+   "total_tokens": 2688,
+   "cost": 0.008304,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.008304,
+    "upstream_inference_prompt_cost": 0.000444,
+    "upstream_inference_completions_cost": 0.00786
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1778,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 29.94
+}

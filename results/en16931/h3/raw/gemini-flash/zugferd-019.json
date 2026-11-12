@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Taxiunternehmen TX GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "TX-471102",
+  "invoice_date": "2018-10-30",
+  "due_date": "2018-11-29",
+  "currency": "EUR",
+  "untaxed": 16.9,
+  "tax": 1.18,
+  "total": 18.08,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Grundpreis (Pauschale)",
+    "quantity": 1.0,
+    "unit_price": 3.9,
+    "tax_rate": 7.0,
+    "net": 3.9
+   },
+   {
+    "description": "Stadtfahrt - 2,00 Euro je gefahrene Kilometer",
+    "quantity": 6.5,
+    "unit_price": 2.0,
+    "tax_rate": 7.0,
+    "net": 13.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 16.9,
+    "tax": 1.18
+   }
+  ]
+ },
+ "cost_usd": 0.00508275,
+ "raw": {
+  "id": "gen-1794514644-ndMxyXfxJDQPMPs6157I",
+  "object": "chat.completion",
+  "created": 1794514644,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Taxiunternehmen TX GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"TX-471102\",\"invoice_date\":\"2018-10-30\",\"due_date\":\"2018-11-29\",\"currency\":\"EUR\",\"untaxed\":16.9,\"tax\":1.18,\"total\":18.08,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Grundpreis (Pauschale)\",\"quantity\":1.0,\"unit_price\":3.9,\"tax_rate\":7.0,\"net\":3.9},{\"description\":\"Stadtfahrt - 2,00 Euro je gefahrene Kilometer\",\"quantity\":6.5,\"unit_price\":2.0,\"tax_rate\":7.0,\"net\":13.0}],\"vat_breakdown\":[{\"rate\":7.0,\"base\":16.9,\"tax\":1.18}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focused on extracting specific vendor information. My immediate objective is to pull out the `vendor_name` as \"Taxiunternehmen TX GmbH\" and the `vendor_vat` as \"DE123456\". This is a crucial step for structuring the invoice data accurately.\n\n**Updating Field Extraction**\n\nI've successfully identified and extracted the invoice reference as \"TX-471102\" and the invoice date as \"2018-10-30\". Further refinement is underway to capture the due date and currency.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focused on extracting specific vendor information. My immediate objective is to pull out the `vendor_name` as \"Taxiunternehmen TX GmbH\" and the `vendor_vat` as \"DE123456\". This is a crucial step for structuring the invoice data accurately.\n\n**Updating Field Extraction**\n\nI've successfully identified and extracted the invoice reference as \"TX-471102\" and the invoice date as \"2018-10-30\". Further refinement is underway to capture the due date and currency.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2217,
+   "completion_tokens": 912,
+   "total_tokens": 3129,
+   "cost": 0.00508275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00508275,
+    "upstream_inference_prompt_cost": 0.00166275,
+    "upstream_inference_completions_cost": 0.00342
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 694,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.56
+}

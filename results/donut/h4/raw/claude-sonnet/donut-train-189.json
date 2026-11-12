@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "Potter, Jackson and Brooks",
+  "vendor_vat": "941-90-0647",
+  "invoice_ref": "72677375",
+  "invoice_date": "2013-08-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 479.95,
+  "tax": 48.0,
+  "total": 527.95,
+  "iban": "GB57LPIB27874128237321",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,",
+    "quantity": 5,
+    "unit_price": 79.99,
+    "tax_rate": 10,
+    "net": 399.95
+   },
+   {
+    "description": "Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->",
+    "quantity": 1,
+    "unit_price": 80,
+    "tax_rate": 10,
+    "net": 80
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 479.95,
+    "tax": 48.0
+   }
+  ]
+ },
+ "cost_usd": 0.012408,
+ "raw": {
+  "id": "gen-1794515669-2PRig8VpsS5rEk6TEK1Z",
+  "object": "chat.completion",
+  "created": 1794515669,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Potter, Jackson and Brooks\",\"vendor_vat\":\"941-90-0647\",\"invoice_ref\":\"72677375\",\"invoice_date\":\"2013-08-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":479.95,\"tax\":48.0,\"total\":527.95,\"iban\":\"GB57LPIB27874128237321\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,\",\"quantity\":5,\"unit_price\":79.99,\"tax_rate\":10,\"net\":399.95},{\"description\":\"Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->\",\"quantity\":1,\"unit_price\":80,\"tax_rate\":10,\"net\":80}],\"vat_breakdown\":[{\"rate\":10,\"base\":479.95,\"tax\":48.0}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date as 2013-08-04, since the US-based addresses and USD currency point to month-first, and no day is above 12 to rule that out. The comma decimals don't matter here, so I'm moving on to the line quantities and prices: 5 units at 79.99 for a net of 399.95 with 10%, and a second line of 1 at 80.\n\nI'm adding up the totals next: a 10% discount leaves 479.95 before tax, the tax comes to 48.00 at 10%, and the grand total is 527.95. The VAT treatment is S, and there's no due date.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date as 2013-08-04, since the US-based addresses and USD currency point to month-first, and no day is above 12 to rule that out. The comma decimals don't matter here, so I'm moving on to the line quantities and prices: 5 units at 79.99 for a net of 399.95 with 10%, and a second line of 1 at 80.\n\nI'm adding up the totals next: a 10% discount leaves 479.95 before tax, the tax comes to 48.00 at 10%, and the grand total is 527.95. The VAT treatment is S, and there's no due date.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSlwcKEggTEAIYAjgBQgh0aGlua2luZxIMdBxvH46Bmiae5qBdGgyKN74AkjOKsL/D+U8iMJQb98Egh4AH351lk39LCGdEWnvU80y5LOvPO3guJpvQo6YAz8LfcuYkdzDYiF60fCqyBm6bjoquVMRk6DE7KpQz/X39kv4qlI2fQVadsRNVFhIWbALUY1q3/37S2tD/LnocPYhKYKN1uuGcIjagSZu7ZGfslgfn+JHwQPmpi7kuDr5f7IOaLiuRvzJ4SDUlbzgEArOeTRVsuDFrc8whuoqaELZGctbVsnoI0OYeDhd+HvdBGZT3bDdic36V9mdN0MKrYyQzksq7eDU2SvI47UQc1Rojwx57IeYeIqIVtLZo3pxr6rQBqjv/PZ+PuGYAHZvFXKoMHI5SQJohXFOG/QuaxgQI7L5FQH61++68YM+3OyiBqeBAk2lMLebBNqF6MEKmujA14OcKGOq/8izM9sotl/9RDmjg0sl28qa1lcqczZRLX8QPp7PXhovk9bHCJj2NKFEvi0QCHzVS3RYMrdgXqGyucB1EF98n0NwVZb3ld+wlx5/pVIs0soiSf1QAlX4cLiuaOJUbY6JdTJu+g1le5+A3HH+X17EvLQMEtZRgZ8I2xQ4RhQg1aRWyWRNNR9B14m/1T/2qIT44PJDpJ9Ua13zwyHvB2ppBgANPNxSPDXp7qYaRxhTijQtTbVX6tFdbGHLo3tALVja4Gm+V72BpS54rEzSAusX8Z+1zqgiM/e/5peQOIwmPP30awKJdV6scETYAN5e9y5QunCjMyn4UGu833AKBvFiCBvat0ezfTeDi97f8vlLYolJkPY9y4i8YH+TpuSD3jnWYUy2/VzFg1Rwh+FvHLSzW4cT4pg5CWAacosu8aRVIRYg+YOIIL0ptFcaSFUYPzutslHv4kvCECtT7SFm5UM3jk+CkDKOfXdjgqwOOEYSgM5W9j4VL9/NN90s+VGlo/TGwjkn89lLp85I7rvCULAqZOmFUsEBHDhm2BGUQ34KYUansgr7dewUm771CygpdgD7BuGBAiO0Kq8pjaajjfv3rDG6SRxqDV2MYWCtO1ConFTglzZQoEsG/5BTpgd2TGxZtGRVNfjssFQh6hCwSbc678RmEMSGAExFm0TmNY6pRmEigGkDR2MX+E7xmDXQbIjKP2Q6qn+MnlYd1I6u0Ca7/WR8x/JAMtSefmkF5Itl/gSdBIPfvCT4E/IQHGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 514,
+   "total_tokens": 4148,
+   "cost": 0.012408,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012408,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.00514
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 203,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.79
+}

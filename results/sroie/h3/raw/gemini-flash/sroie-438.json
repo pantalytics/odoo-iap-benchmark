@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18052402170329",
+  "invoice_date": "2018-05-24",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.92,
+  "tax": 0.48,
+  "total": 8.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000025- 1 Meat + 2 Vege",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "SR 100100000170- Imported Veggies",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "SR 100100000149- Add Vegetable (X)",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 7.92,
+    "tax": 0.48
+   }
+  ]
+ },
+ "cost_usd": 0.00658875,
+ "raw": {
+  "id": "gen-1794515959-HNE5Iuxti4aNlFdxVBCf",
+  "object": "chat.completion",
+  "created": 1794515959,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 100100000025- 1 Meat + 2 Vege\",\n      \"quantity\": 1.0,\n      \"unit_price\": null,\n      \"tax_rate\": 6.0,\n      \"net\": null\n    },\n    {\n      \"description\": \"SR 100100000170- Imported Veggies\",\n      \"quantity\": 1.0,\n      \"unit_price\": null,\n      \"tax_rate\": 6.0,\n      \"net\": null\n    },\n    {\n      \"description\": \"SR 100100000149- Add Vegetable (X)\",\n      \"quantity\": 1.0,\n      \"unit_price\": null,\n      \"tax_rate\": 6.0,\n      \"net\": null\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 7.92,\n      \"tax\": 0.48\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Document Data**\n\nI'm actively parsing the provided document, a tax invoice from UNIHAKKA INTERNATIONAL SDN BHD. Key details like the invoice number (OR1), date (2018-05-24), and company registration number (867388-U) are being extracted and structured for further analysis. The address is also being cataloged.\n\n**Verifying Pricing Logic**\n\nI'm confirming the pricing structure. It appears the item totals are indeed inclusive of GST, as indicated. My current focus is on the currency ambiguity; while the location is Malaysia, the \"$\" symbol is present, which I'm cross-referencing with typical Malaysian currency conventions for invoices.\n\n**Clarifying Price Calculations**\n\nI'm refining my understanding of the line item pricing. It's becoming clear that the listed amounts are gross, inclusive of GST. Therefore, I'm marking 'unit_price' and 'net' as null as they are not explicitly printed before tax, aligning with the schema's definition for unprinted values.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Document Data**\n\nI'm actively parsing the provided document, a tax invoice from UNIHAKKA INTERNATIONAL SDN BHD. Key details like the invoice number (OR1), date (2018-05-24), and company registration number (867388-U) are being extracted and structured for further analysis. The address is also being cataloged.\n\n**Verifying Pricing Logic**\n\nI'm confirming the pricing structure. It appears the item totals are indeed inclusive of GST, as indicated. My current focus is on the currency ambiguity; while the location is Malaysia, the \"$\" symbol is present, which I'm cross-referencing with typical Malaysian currency conventions for invoices.\n\n**Clarifying Price Calculations**\n\nI'm refining my understanding of the line item pricing. It's becoming clear that the listed amounts are gross, inclusive of GST. Therefore, I'm marking 'unit_price' and 'net' as null as they are not explicitly printed before tax, aligning with the schema's definition for unprinted values.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 1420,
+   "total_tokens": 3105,
+   "cost": 0.00658875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00658875,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.005325
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 998,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.48
+}

@@ -1,0 +1,130 @@
+{
+ "pred": {
+  "vendor_name": "Hudson, Hinton and Phillips",
+  "vendor_vat": "943-90-1835",
+  "invoice_ref": "98442092",
+  "invoice_date": "2015-06-10",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 157.01,
+  "tax": 15.7,
+  "total": 172.71,
+  "iban": "GB89RSKI56873844054165",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "National Geographic Bird Watcher s Bible - A Complete Treasury",
+    "quantity": 4,
+    "unit_price": 4.89,
+    "tax_rate": 10,
+    "net": 19.56
+   },
+   {
+    "description": "The Wire in the Blood (Tony Hill and Carol Jordan, Book 2) by McDermid New+-",
+    "quantity": 5,
+    "unit_price": 15.12,
+    "tax_rate": 10,
+    "net": 75.6
+   },
+   {
+    "description": "Dont Sweat the Small Stuff . . . and Its All Small Stuff: Simple Ways to Keep",
+    "quantity": 2,
+    "unit_price": 4.49,
+    "tax_rate": 10,
+    "net": 8.98
+   },
+   {
+    "description": "My Passion for Design by Barbra Streisand",
+    "quantity": 4,
+    "unit_price": 5.56,
+    "tax_rate": 10,
+    "net": 22.24
+   },
+   {
+    "description": "The Complete Life's Little Instruction Book by Brown, H. Jackson, Jr.",
+    "quantity": 1,
+    "unit_price": 4.09,
+    "tax_rate": 10,
+    "net": 4.09
+   },
+   {
+    "description": "Red Dragon Codex (Deckle Edge) (The Dragon Codices) by R.D. Henham",
+    "quantity": 5,
+    "unit_price": 4.49,
+    "tax_rate": 10,
+    "net": 22.45
+   },
+   {
+    "description": "Skeleton Canyon (Joanna Brady Mysteries, Book 5) by Jance, J.A.",
+    "quantity": 1,
+    "unit_price": 4.09,
+    "tax_rate": 10,
+    "net": 4.09
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 157.01,
+    "tax": 15.7
+   }
+  ]
+ },
+ "cost_usd": 0.016338,
+ "raw": {
+  "id": "gen-1794515492-yJ0NZBOerxWCr5WrarQ5",
+  "object": "chat.completion",
+  "created": 1794515492,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Hudson, Hinton and Phillips\",\"vendor_vat\":\"943-90-1835\",\"invoice_ref\":\"98442092\",\"invoice_date\":\"2015-06-10\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":157.01,\"tax\":15.7,\"total\":172.71,\"iban\":\"GB89RSKI56873844054165\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"National Geographic Bird Watcher s Bible - A Complete Treasury\",\"quantity\":4,\"unit_price\":4.89,\"tax_rate\":10,\"net\":19.56},{\"description\":\"The Wire in the Blood (Tony Hill and Carol Jordan, Book 2) by McDermid New+-\",\"quantity\":5,\"unit_price\":15.12,\"tax_rate\":10,\"net\":75.6},{\"description\":\"Dont Sweat the Small Stuff . . . and Its All Small Stuff: Simple Ways to Keep\",\"quantity\":2,\"unit_price\":4.49,\"tax_rate\":10,\"net\":8.98},{\"description\":\"My Passion for Design by Barbra Streisand\",\"quantity\":4,\"unit_price\":5.56,\"tax_rate\":10,\"net\":22.24},{\"description\":\"The Complete Life's Little Instruction Book by Brown, H. Jackson, Jr.\",\"quantity\":1,\"unit_price\":4.09,\"tax_rate\":10,\"net\":4.09},{\"description\":\"Red Dragon Codex (Deckle Edge) (The Dragon Codices) by R.D. Henham\",\"quantity\":5,\"unit_price\":4.49,\"tax_rate\":10,\"net\":22.45},{\"description\":\"Skeleton Canyon (Joanna Brady Mysteries, Book 5) by Jance, J.A.\",\"quantity\":1,\"unit_price\":4.09,\"tax_rate\":10,\"net\":4.09}],\"vat_breakdown\":[{\"rate\":10,\"base\":157.01,\"tax\":15.7}]}",
+     "refusal": null,
+     "reasoning": "I'm treating this as a US-based order: NJ and CA, in USD. The date 06/10/2015 reads month-first, so June 10, 2015, and nothing in it forces a different reading. Next I'm checking the line quantities and unit prices against the 10% tax rate, since the net total of 157.01 and the tax of 15.70 need to reconcile with the final 172.71.\n\nI'm adding the line nets back up, 19.56 through 4.09 plus the rest, and they land on 157.01, so that checks out. Then I'm noting the vendor's tax ID, 943-90-1835.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating this as a US-based order: NJ and CA, in USD. The date 06/10/2015 reads month-first, so June 10, 2015, and nothing in it forces a different reading. Next I'm checking the line quantities and unit prices against the 10% tax rate, since the net total of 157.01 and the tax of 15.70 need to reconcile with the final 172.71.\n\nI'm adding the line nets back up, 19.56 through 4.09 plus the rest, and they land on 157.01, so that checks out. Then I'm noting the vendor's tax ID, 943-90-1835.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSnwgKEAgTGAI4AUIIdGhpbmtpbmcSDCQZ02HU9z0gaYVEMxoMH3w7YonkTyUExb0ZIjAG0Qpeu0M4mhuF6HFjR0dRwV5rTFhLEug9WUpDndvTRlwSzCKbuFAkpbAGg7oIzbcqvAe9gY1ghy8f4MD5k3/0oJMaX17XYJ9V7C7bUdn2AUdRdDS7SsKFJ7JebGRSjI4bIdFfbVmtDmyoQ4ZtPO57gDGvkqhZfxs7fQ6oMzGP/cThZJJUGX+mJ+zrkZesBryLzBqrNpvcPcziHjbgd7aANKAfDizPNMvL9h6UAcZ3HONFQRTwegw+z+nRuh+uGKCBZ7qrL8D/GckasxmsvBfY7C31THp4vevp7Bt4NCSraEs4gq/GkXI2FXXCqE/RJNi5pBgwglhEI7uOYLA/WkLEZnkoM5/SKw15mzSNhZPGAK5iu6BUSsqCxS+WaoTv6ucY2D6zUgOF85tCThPwjOjMY4ZDSqRZ7ykWktqtp5cjSJ06PlvMQoG8BJHaLh+u8hxLJIa9hLIqOrnEtHngzyXHnKDlVAzT0NinESXYUHMKsLnbPAcsm2nERdg85LI6JRkkyy4/oAOb+L1gYtYMRTTR4oDkCQxcQzX6Mf8GHHda4Td8EdoC5YDWJiior0td3dcs54WBAJ+aPh7H057pxIjYd1YFTi94Q80A+JuRRbiaWG2DZxCqcw9/fhh7KwVNNUN2hg9NfrYzT7uV7Y0Ty/dJTieEeTqfMfGcl1FkAueJB37MFNGLNQydQ8/18b3i/8owoeW3cMgvbpQVsAU1LGtzmPiQGnfA0nYSIVK+Dm9ltMJGDYYrtAfyVgGTzh/TlK7/khyPpUW+urZxosZoMFppQkA0ioe3OQ+84VIvG3QP/fpWIjaDaqJ4Dgy3/7oRhgYJfKvF8jViL9DeP1jTSvUO3To6EnZaEDvOkPuJQtaqYU9F5k0ulbKD0lk9G4Dau9pDC4PXvLP4jIecME/kWsBrBGIsdaFqQCvU8HHcuh6NlQFPX6eVSwQ0l4hRzDWzXnAzv5m7MBK/Qf1QhHm9XvBqdH47UR9an68i2FgP03P0LftXCAmE7SkNtSB69R6ciWenll6yKC9kj+y55jFmb8pjDnv/jJNz0N9OBt5KPgwJhlEjXY+/9DpNDOoCZpuKxwG/98ejLTj4vo0dQ1XyY0GWYHBSOb3GmPfWrc8m+u+Yc7MJbvn/wtu7QDF1NEQARMX81NeDuJqx/FERhI3XPZqPvjJfhAe1otvatm5A3g2tdOZ4TCK49adUUyA+OugPYIj14gqcYC7wFLnXIKnjVdu3BRyJbxyFjxrYsbT+FsQ2/K+8khgRVZxEejdEcuRFSqhJpbMpUv7HvkszhaMTD82se6r9ahW03pFHgzxNjfSa+DWTQdMftGBLB1RLtMD8ixgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 907,
+   "total_tokens": 4541,
+   "cost": 0.016338,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.016338,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.00907
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 248,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.02
+}

@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18030502160349",
+  "invoice_date": "2018-03-05",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 7.74,
+  "tax": 0.46,
+  "total": 8.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000060-4 Vege",
+    "quantity": 1.0,
+    "unit_price": 5.19,
+    "tax_rate": 6.0,
+    "net": 5.19
+   },
+   {
+    "description": "SR 100100000006-Pork",
+    "quantity": 1.0,
+    "unit_price": 2.55,
+    "tax_rate": 6.0,
+    "net": 2.55
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 7.74,
+    "tax": 0.46
+   }
+  ]
+ },
+ "cost_usd": 0.0308375,
+ "raw": {
+  "id": "gen-1794512740-Or8TWNLHcoExCNKI1PXw",
+  "object": "chat.completion",
+  "created": 1794512740,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18030502160349\",\n  \"invoice_date\": \"2018-03-05\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.74,\n  \"tax\": 0.46,\n  \"total\": 8.2,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 100100000060-4 Vege\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.19,\n      \"tax_rate\": 6.0,\n      \"net\": 5.19\n    },\n    {\n      \"description\": \"SR 100100000006-Pork\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.55,\n      \"tax_rate\": 6.0,\n      \"net\": 2.55\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 7.74,\n      \"tax\": 0.46\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified \"UNIHAKKA INTERNATIONAL SDN BHD\" as the vendor and extracted \"GST REG #000656195584\" as their GST registration number. Now, I'm focusing on efficiently mapping these data points to the designated \"vendor_name\" and \"vendor_vat\" fields within the JSON schema.\n\n\n**Populating JSON Fields**\n\nI'm now populating the JSON fields. I've successfully mapped \"UNIHAKKA INTERNATIONAL SDN BHD\" to `vendor_name` and \"000656195584\" to `vendor_vat`. I've extracted \"OR180305021603 49\" for `invoice_ref` and \"2018-03-05\" for `invoice_date`. The `due_date` will be set to `null` as it's not present. I'm hesitant on currency, it's '$' but the country is Malaysia. I need to figure out how to represent the currency, given this ambiguity and the schema's requirement for ISO code.\n\n\n**Mapping Data and Handling Errors**\n\nI'm now extracting and mapping remaining fields. I've populated `untaxed` with 7.74, `tax` with 0.46, and `total` with 8.20.  I've set both `iban` and `currency` to `null` due to missing or ambiguous information. I determined the `vat_treatment` is \"S\". Now I'm extracting data for the \"lines\" array, focusing on description, quantity, and unit price, which requires careful interpretation and calculation.\n\n\n**Calculating Line Item Prices**\n\nI'm now calculating the pre-tax unit prices for each line item. I've determined that the listed prices include GST. After careful calculations and considering the total tax and untaxed amounts, I've derived the appropriate pre-tax unit prices. I'm rounding these values to two decimal places.\n\n\n**Finalizing Line Item Details**\n\nNow I'm finalizing the line items. For line 1, I've confirmed `description` as \"SR 10010000006 0-4 Vege\", `quantity` as 1, `unit_price` as 5.19, `tax_rate` as 6, and `net` as 5.19. I've also processed line 2 similarly, deriving the corresponding values. Now, I will populate the `lines` array in the final JSON schema.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the final touches on the JSON. I've successfully extracted and validated all the data elements, including vendor details, invoice information, and the VAT breakdown. I've populated the `lines` array with the calculated pre-tax unit prices and net amounts for each line item. I'm verifying the total tax and untaxed amounts match the invoice to ensure data consistency, and I'm ready to produce the complete and accurate JSON.\n\n\n**Refining JSON Data Extraction**\n\nI'm now putting the finishing touches on data mapping, ensuring accuracy. I've double-checked all calculations, especially for line items, focusing on the pre-tax unit prices and net amounts for each line. I also validated that totals match the invoice for consistency. I'm ready to produce the JSON.\n\n\n**Validating Data Consistency**\n\nI'm now carefully re-evaluating the calculations to guarantee accuracy, especially the line item pre-tax prices and net amounts, comparing them against the totals and tax breakdown, and resolving all ambiguities. Now, I will put the final touches on the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified \"UNIHAKKA INTERNATIONAL SDN BHD\" as the vendor and extracted \"GST REG #000656195584\" as their GST registration number. Now, I'm focusing on efficiently mapping these data points to the designated \"vendor_name\" and \"vendor_vat\" fields within the JSON schema.\n\n\n**Populating JSON Fields**\n\nI'm now populating the JSON fields. I've successfully mapped \"UNIHAKKA INTERNATIONAL SDN BHD\" to `vendor_name` and \"000656195584\" to `vendor_vat`. I've extracted \"OR180305021603 49\" for `invoice_ref` and \"2018-03-05\" for `invoice_date`. The `due_date` will be set to `null` as it's not present. I'm hesitant on currency, it's '$' but the country is Malaysia. I need to figure out how to represent the currency, given this ambiguity and the schema's requirement for ISO code.\n\n\n**Mapping Data and Handling Errors**\n\nI'm now extracting and mapping remaining fields. I've populated `untaxed` with 7.74, `tax` with 0.46, and `total` with 8.20.  I've set both `iban` and `currency` to `null` due to missing or ambiguous information. I determined the `vat_treatment` is \"S\". Now I'm extracting data for the \"lines\" array, focusing on description, quantity, and unit price, which requires careful interpretation and calculation.\n\n\n**Calculating Line Item Prices**\n\nI'm now calculating the pre-tax unit prices for each line item. I've determined that the listed prices include GST. After careful calculations and considering the total tax and untaxed amounts, I've derived the appropriate pre-tax unit prices. I'm rounding these values to two decimal places.\n\n\n**Finalizing Line Item Details**\n\nNow I'm finalizing the line items. For line 1, I've confirmed `description` as \"SR 10010000006 0-4 Vege\", `quantity` as 1, `unit_price` as 5.19, `tax_rate` as 6, and `net` as 5.19. I've also processed line 2 similarly, deriving the corresponding values. Now, I will populate the `lines` array in the final JSON schema.\n\n\n**Finalizing JSON Structure**\n\nI'm now putting the final touches on the JSON. I've successfully extracted and validated all the data elements, including vendor details, invoice information, and the VAT breakdown. I've populated the `lines` array with the calculated pre-tax unit prices and net amounts for each line item. I'm verifying the total tax and untaxed amounts match the invoice to ensure data consistency, and I'm ready to produce the complete and accurate JSON.\n\n\n**Refining JSON Data Extraction**\n\nI'm now putting the finishing touches on data mapping, ensuring accuracy. I've double-checked all calculations, especially for line items, focusing on the pre-tax unit prices and net amounts for each line. I also validated that totals match the invoice for consistency. I'm ready to produce the JSON.\n\n\n**Validating Data Consistency**\n\nI'm now carefully re-evaluating the calculations to guarantee accuracy, especially the line item pre-tax prices and net amounts, comparing them against the totals and tax breakdown, and resolving all ambiguities. Now, I will put the final touches on the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3044,
+   "total_tokens": 3362,
+   "cost": 0.0308375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0308375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03044
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2694,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 26.75
+}

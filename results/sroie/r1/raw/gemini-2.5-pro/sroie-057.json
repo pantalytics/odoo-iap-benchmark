@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18032902170347",
+  "invoice_date": "2018-03-29",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.7,
+  "tax": 0.4,
+  "total": 7.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000035-1 Meat + 3 Vege",
+    "quantity": 1.0,
+    "unit_price": 7.1,
+    "tax_rate": 6.0,
+    "net": 6.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 6.7,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.0158475,
+ "raw": {
+  "id": "gen-1794514617-jcYiiolWBrLQpmhqXwIo",
+  "object": "chat.completion",
+  "created": 1794514617,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18032902170347\",\n  \"invoice_date\": \"2018-03-29\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.7,\n  \"tax\": 0.4,\n  \"total\": 7.1,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 100100000035-1 Meat + 3 Vege\",\n      \"quantity\": 1.0,\n      \"unit_price\": 7.1,\n      \"tax_rate\": 6.0,\n      \"net\": 6.7\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 6.7,\n      \"tax\": 0.4\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've begun processing the document to populate the JSON schema. \"UNIHAKKA INTERNATIONAL SDN BHD\" appears to be the `vendor_name`, and \"GST REG #000656195584\" seems to be the `vendor_vat`. I'm now moving on to the remaining fields to see if I can extract them.\n\n\n**Populating JSON Schema**\n\nI've extracted more data. \"Invoice#: OR18032902170 347\" is the `invoice_ref`. I've parsed \"29 Mar 2018\" as `invoice_date` \"2018-03-29\". Since no due date is present, `due_date` will be `null`. The currency is \"MYR\", inferred from the Malaysian GST and Johor location. Finally,  `untaxed` is 6.70 and `tax` is 0.40.\n\n\n**Finalizing JSON Extraction**\n\nI've completed the data extraction and schema population. The total is `$7.10`, the `iban` is `null`, and the `vat_treatment` is \"S\" with a 6% rate, and the line item is for `SR 10 0100000035-1 Meat + 3 Vege`. I've calculated the `unit_price` as 6.70, and the `net` amount as 6.70 for that line. The `vat_breakdown` includes the 6% rate, with a base of 6.70.\n\n\n**Verifying Extracted Data**\n\nI've re-examined the extracted details for accuracy and completeness, including values for vendor and invoice information. I've cross-validated the `unit_price`, `net`, and `vat_breakdown` amounts, confirming all figures align with the document and GST calculations. The final validation affirms the reliability of the extracted data for the JSON schema.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together. I've successfully extracted and validated all the necessary data points, as per my checks. I'm finalizing the JSON format and am ready to output it according to the schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've begun processing the document to populate the JSON schema. \"UNIHAKKA INTERNATIONAL SDN BHD\" appears to be the `vendor_name`, and \"GST REG #000656195584\" seems to be the `vendor_vat`. I'm now moving on to the remaining fields to see if I can extract them.\n\n\n**Populating JSON Schema**\n\nI've extracted more data. \"Invoice#: OR18032902170 347\" is the `invoice_ref`. I've parsed \"29 Mar 2018\" as `invoice_date` \"2018-03-29\". Since no due date is present, `due_date` will be `null`. The currency is \"MYR\", inferred from the Malaysian GST and Johor location. Finally,  `untaxed` is 6.70 and `tax` is 0.40.\n\n\n**Finalizing JSON Extraction**\n\nI've completed the data extraction and schema population. The total is `$7.10`, the `iban` is `null`, and the `vat_treatment` is \"S\" with a 6% rate, and the line item is for `SR 10 0100000035-1 Meat + 3 Vege`. I've calculated the `unit_price` as 6.70, and the `net` amount as 6.70 for that line. The `vat_breakdown` includes the 6% rate, with a base of 6.70.\n\n\n**Verifying Extracted Data**\n\nI've re-examined the extracted details for accuracy and completeness, including values for vendor and invoice information. I've cross-validated the `unit_price`, `net`, and `vat_breakdown` amounts, confirming all figures align with the document and GST calculations. The final validation affirms the reliability of the extracted data for the JSON schema.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together. I've successfully extracted and validated all the necessary data points, as per my checks. I'm finalizing the JSON format and am ready to output it according to the schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1545,
+   "total_tokens": 1863,
+   "cost": 0.0158475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0158475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01545
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1273,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.88
+}

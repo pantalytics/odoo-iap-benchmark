@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0008",
+  "invoice_date": "2017-11-03",
+  "due_date": "2017-12-03",
+  "currency": "EUR",
+  "untaxed": 2076.76,
+  "tax": 0,
+  "total": 2076.76,
+  "iban": "FR20 1242 1242 1242 1242 1242 124",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 8,
+    "unit_price": 4.55,
+    "tax_rate": 0,
+    "net": 32.76
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 20,
+    "unit_price": 3.2,
+    "tax_rate": 0,
+    "net": 64
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 100,
+    "unit_price": 19.8,
+    "tax_rate": 0,
+    "net": 1980
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2076.76,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.025788,
+ "raw": {
+  "id": "gen-1794514890-jhAj711uWg9KYDSFTgGV",
+  "object": "chat.completion",
+  "created": 1794514890,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Au bon moulin SARL\",\"vendor_vat\":\"FR11999999998\",\"invoice_ref\":\"FA-2017-0008\",\"invoice_date\":\"2017-11-03\",\"due_date\":\"2017-12-03\",\"currency\":\"EUR\",\"untaxed\":2076.76,\"tax\":0,\"total\":2076.76,\"iban\":\"FR20 1242 1242 1242 1242 1242 124\",\"vat_treatment\":\"K\",\"lines\":[{\"description\":\"Nougat de l'Abbaye 250g\",\"quantity\":8,\"unit_price\":4.55,\"tax_rate\":0,\"net\":32.76},{\"description\":\"Biscuits aux raisins 300g\",\"quantity\":20,\"unit_price\":3.2,\"tax_rate\":0,\"net\":64},{\"description\":\"Huile d'olive à l'ancienne\",\"quantity\":100,\"unit_price\":19.8,\"tax_rate\":0,\"net\":1980}],\"vat_breakdown\":[{\"rate\":0,\"base\":2076.76,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the dates as MM/DD/YYYY, since the payment date 11/17/2017 only works that way. That makes the invoice 2017-11-03 and the due date 2017-12-03, which fits a 30-day term. The VAT treatment is an intra-community supply, code K. For the nougat line, 8 at 4.55 is 36.40, and after the 10% discount it comes to 32.76, but I'll keep the printed unit price of 4.55.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the dates as MM/DD/YYYY, since the payment date 11/17/2017 only works that way. That makes the invoice 2017-11-03 and the due date 2017-12-03, which fits a 30-day term. The VAT treatment is an intra-community supply, code K. For the nougat line, 8 at 4.55 is 36.40, and after the 10% discount it comes to 32.76, but I'll keep the printed unit price of 4.55.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSiAcKEAgTGAI4AUIIdGhpbmtpbmcSDDDXskfZ0aIVedZQmhoMN+BtveFfnDQolU37IjCmoQy/5flcbfbwnR8fdkABoM5fPNSUI69bra4I39yaCJZTQU8uEEjV5Zjv+DWdg68qpQaKObdGti16lDocN/66THIbhUAxbv4fX/W5YI1igTaps+wsZp6azajf6i4Dx0sXuJvo8ii3boCYN++/GWKxcvnsWFbb5kbsz5OD7t6+iFk42y6aKZDH4tgYp2lMD+qiJn9zdy7GdIM92QiSQIwqNIQ5LBDaywLJ3A+/0NYbyNfoTtBQb4vSjprxXr6Cwq7HUvrKz07vSB2/by0d8IGbfaelIaKJqakmNmGb2HM1LvMqOzQ+qMoOltfgma94oS2cMTFC83b1/VX7iIJqYc7PmOnFv/BumRVs1yRIilkYSjc6ZZ8YUZOcOcaWVd0EY4/74xDY0tFYc0oK+gnustSpA58r5oGQziktG0ls9d+olcvLSK58pWzYfOSJwVEnfXg2nO3BoohrMr60JoAfu29NAP6/DXy5Ypq6DMIo6mUJh9qteTBtkYK6KbnrmdRk6sF/0gDO+CUKMK14v1Gl+ZTny+EwN5pDM3cVhZBXrYa/b1H+GUPfNNQ1hiY9uETQlLNA59kyDm65F1/6G5mCXmlFFn8S9eJeZyX16u9dS3Z1yg9/4anUB651mf+dXFhLLHlpG0fWs8XaochSzpWpRGWstcKiyz+lJ+CrKzs2QzMtnjOZPQgJTqWPTfvzYTLpZ7amztMqLbEACOXeiRAyfOEBkrNzRWzZbC9FqyxADYJypXZydI+tVlDy1DxwPrVyhwGTShrK02FYxYTYJqXHgrCXX3L6Z1c4sv/6nZHT/GLfLSsGUI+hDBNskrcx976ZVIi7noyisdX/K6ooI8oHfEwSWBaFUiie7VL4v8GExq5Bfc34mWhZdajLJ4QXSlP6BPiHzeSZa1VW0l1rgDpsLj1DPT7ZPUJhXlQ5lFGQq3buiU6nDlMaOhT+gTVGcLb02t2WC56SW5xMuY2BbuBYLIh1Y2v3fKJgt8+8FAqkgbaVYl1vn5jUfLGadDfx53Z1TURBsYxty8E31bf9EH358tFApHMtwggGQ7nRl8w1HswIQGZS9jEq6GPirUBdV9MPBm3W7N39GSF9yX6/0frGJ5ZFF0yWSCXA5CWpJxUihuYY0NCbqnSCEk7KGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 4007,
+   "completion_tokens": 488,
+   "total_tokens": 4495,
+   "cost": 0.025788,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025788,
+    "upstream_inference_prompt_cost": 0.016028,
+    "upstream_inference_completions_cost": 0.00976
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 149,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.3
+}

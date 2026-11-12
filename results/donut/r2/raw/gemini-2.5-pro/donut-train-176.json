@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Hughes-Jones",
+  "vendor_vat": "905-82-3364",
+  "invoice_ref": "10817861",
+  "invoice_date": "2020-09-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 10800.0,
+  "tax": 1080.0,
+  "total": 11880.0,
+  "iban": "GB58XSSC05650878610110",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "YILONG 4'x6' Golden Handmade Area Carpet Tribal Hand Knotted Silk Rugs 074B",
+    "quantity": 3.0,
+    "unit_price": 3600.0,
+    "tax_rate": 10.0,
+    "net": 10800.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 10800.0,
+    "tax": 1080.0
+   }
+  ]
+ },
+ "cost_usd": 0.0246775,
+ "raw": {
+  "id": "gen-1794512809-7xMMhEcWOK79IFDNR4Kf",
+  "object": "chat.completion",
+  "created": 1794512809,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hughes-Jones\",\n  \"vendor_vat\": \"905-82-3364\",\n  \"invoice_ref\": \"10817861\",\n  \"invoice_date\": \"2020-09-06\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 10800.00,\n  \"tax\": 1080.00,\n  \"total\": 11880.00,\n  \"iban\": \"GB58XSSC05650878610110\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"YILONG 4'x6' Golden Handmade Area Carpet Tribal Hand Knotted Silk Rugs 074B\",\n      \"quantity\": 3.00,\n      \"unit_price\": 3600.00,\n      \"tax_rate\": 10.0,\n      \"net\": 10800.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 10800.00,\n      \"tax\": 1080.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified \"Hughes-Jones\" as the vendor and extracted their name. I've also found the vendor's VAT ID, which is \"905-82-3364\", from the provided text and noted that it's also present on the IBAN line. Next, I plan to move forward and consider how I can extract other relevant fields from this document.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. I've extracted \"Hughes-Jones\" as the vendor name and \"905-82-3364\" for the VAT ID. The invoice number is \"10817861\", and the issue date is \"06/09/2020\", assumed as DD/MM/YYYY, or 2020-09-06. Since there's no due date, that's `null`.  Currency is USD, since totals have a dollar sign, and addresses are US based. The untaxed amount is 10800.00, tax is 1080.00, and the total is 11880.00.\n\n\n**Refining Field Extraction**\n\nOkay, I've re-examined the information. I have extracted all relevant fields, and am in the process of mapping them to the JSON schema. I've now considered the date format and will use the more probable date format. I am also extracting all line items and VAT breakdowns, and taking account of the line item data such as quantity, unit price, tax rate, and net amount for each item. I have ensured that the VAT treatment is \"S\" for standard rate.\n\n\n**Confirming JSON Schema**\n\nI've re-reviewed the information, paying close attention to the date format, which I'm now setting as MM/DD/YYYY, or 2020-06-09. I've double-checked all fields, and confirmed that \"Hughes-Jones\" is the vendor and \"905-82-3364\" is the vendor VAT. The IBAN field is also extracted for completeness. I've re-confirmed currency as USD, and the line item extraction is verified, and includes the correct net and tax calculations.\n\n\n**Revising Date Format**\n\nI've re-examined the document, specifically focusing on the date. Considering the US addresses and the currency, I'm now setting the date as MM/DD/YYYY, resulting in 2020-06-09. All other extracted fields, including vendor details, VAT, invoice information, currency (USD), amounts, IBAN, and line items, have been double-checked and remain accurate.\n\n\n**Finalizing Data Extraction**\n\nI've meticulously reviewed all extracted information again. I'm now certain about all fields for the JSON schema: vendor details (Hughes-Jones, 905-82-3364), invoice information (10817861, 2020-09-06, null), currency (USD), amounts, IBAN, line items, and VAT breakdown. I've re-considered the date format and will use the more probable date format. I'm satisfied with the comprehensive mapping of data, after resolving the potential inconsistencies between date format and the addresses.\n\n\n**Finalizing Data Mapping**\n\nMy focus is now on assembling the JSON. I've performed a final review of all extracted data. I am comfortable that vendor information (Hughes-Jones, 905-82-3364), invoice details (10817861, 2020-09-06, null), currency (USD), amounts, IBAN, line items, and VAT breakdown are all correct. I considered the potential ambiguity of the date format, but will proceed assuming DD/MM/YYYY. I am confident in the comprehensiveness and accuracy of the mapping.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified \"Hughes-Jones\" as the vendor and extracted their name. I've also found the vendor's VAT ID, which is \"905-82-3364\", from the provided text and noted that it's also present on the IBAN line. Next, I plan to move forward and consider how I can extract other relevant fields from this document.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. I've extracted \"Hughes-Jones\" as the vendor name and \"905-82-3364\" for the VAT ID. The invoice number is \"10817861\", and the issue date is \"06/09/2020\", assumed as DD/MM/YYYY, or 2020-09-06. Since there's no due date, that's `null`.  Currency is USD, since totals have a dollar sign, and addresses are US based. The untaxed amount is 10800.00, tax is 1080.00, and the total is 11880.00.\n\n\n**Refining Field Extraction**\n\nOkay, I've re-examined the information. I have extracted all relevant fields, and am in the process of mapping them to the JSON schema. I've now considered the date format and will use the more probable date format. I am also extracting all line items and VAT breakdowns, and taking account of the line item data such as quantity, unit price, tax rate, and net amount for each item. I have ensured that the VAT treatment is \"S\" for standard rate.\n\n\n**Confirming JSON Schema**\n\nI've re-reviewed the information, paying close attention to the date format, which I'm now setting as MM/DD/YYYY, or 2020-06-09. I've double-checked all fields, and confirmed that \"Hughes-Jones\" is the vendor and \"905-82-3364\" is the vendor VAT. The IBAN field is also extracted for completeness. I've re-confirmed currency as USD, and the line item extraction is verified, and includes the correct net and tax calculations.\n\n\n**Revising Date Format**\n\nI've re-examined the document, specifically focusing on the date. Considering the US addresses and the currency, I'm now setting the date as MM/DD/YYYY, resulting in 2020-06-09. All other extracted fields, including vendor details, VAT, invoice information, currency (USD), amounts, IBAN, and line items, have been double-checked and remain accurate.\n\n\n**Finalizing Data Extraction**\n\nI've meticulously reviewed all extracted information again. I'm now certain about all fields for the JSON schema: vendor details (Hughes-Jones, 905-82-3364), invoice information (10817861, 2020-09-06, null), currency (USD), amounts, IBAN, line items, and VAT breakdown. I've re-considered the date format and will use the more probable date format. I'm satisfied with the comprehensive mapping of data, after resolving the potential inconsistencies between date format and the addresses.\n\n\n**Finalizing Data Mapping**\n\nMy focus is now on assembling the JSON. I've performed a final review of all extracted data. I am comfortable that vendor information (Hughes-Jones, 905-82-3364), invoice details (10817861, 2020-09-06, null), currency (USD), amounts, IBAN, line items, and VAT breakdown are all correct. I considered the potential ambiguity of the date format, but will proceed assuming DD/MM/YYYY. I am confident in the comprehensiveness and accuracy of the mapping.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2428,
+   "total_tokens": 2746,
+   "cost": 0.0246775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0246775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02428
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2116,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.62
+}

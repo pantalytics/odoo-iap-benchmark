@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Montgomery LLC",
+  "vendor_vat": "924-83-8802",
+  "invoice_ref": "13310164",
+  "invoice_date": "2020-01-16",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 17045.0,
+  "tax": 1704.5,
+  "total": 18749.5,
+  "iban": "GB13LKIT26418644296553",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "15\"x15\" White Marble Coffee Top Table Filigree Lapis Inlay Art Christmas Gift",
+    "quantity": 5.0,
+    "unit_price": 650.0,
+    "tax_rate": 10.0,
+    "net": 3250.0
+   },
+   {
+    "description": "30\"x30\" Marble Black Top Table Semi Precious Bird Art Black Friday Gift Décor",
+    "quantity": 5.0,
+    "unit_price": 2399.0,
+    "tax_rate": 10.0,
+    "net": 11995.0
+   },
+   {
+    "description": "15\"x15\" White Marble Chess Top Table Carnelian Inlay Art Black Friday Gift Deco",
+    "quantity": 3.0,
+    "unit_price": 600.0,
+    "tax_rate": 10.0,
+    "net": 1800.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 17045.0,
+    "tax": 1704.5
+   }
+  ]
+ },
+ "cost_usd": 0.013209,
+ "raw": {
+  "id": "gen-1794515001-ke1dnD6TbUe8Yishz2uh",
+  "object": "chat.completion",
+  "created": 1794515001,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Montgomery LLC\",\"vendor_vat\":\"924-83-8802\",\"invoice_ref\":\"13310164\",\"invoice_date\":\"2020-01-16\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":17045.00,\"tax\":1704.50,\"total\":18749.50,\"iban\":\"GB13LKIT26418644296553\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"15\\\"x15\\\" White Marble Coffee Top Table Filigree Lapis Inlay Art Christmas Gift\",\"quantity\":5.00,\"unit_price\":650.00,\"tax_rate\":10.00,\"net\":3250.00},{\"description\":\"30\\\"x30\\\" Marble Black Top Table Semi Precious Bird Art Black Friday Gift Décor\",\"quantity\":5.00,\"unit_price\":2399.00,\"tax_rate\":10.00,\"net\":11995.00},{\"description\":\"15\\\"x15\\\" White Marble Chess Top Table Carnelian Inlay Art Black Friday Gift Deco\",\"quantity\":3.00,\"unit_price\":600.00,\"tax_rate\":10.00,\"net\":1800.00}],\"vat_breakdown\":[{\"rate\":10.00,\"base\":17045.00,\"tax\":1704.50}]}",
+     "refusal": null,
+     "reasoning": "**Reviewing output schema**\n\nI need to create a JSON output schema that includes specific details. First, I should clarify the amounts in USD, including vendor tax ID and line items. There's some ambiguity with the total: net is 17,045 and tax is 1,704.50, bringing the total to 18,749.50. For line 2, the gross is listed as 13,194.50, but when I multiply 11,995 by 1.1, I get 13,194.50, which checks out. I should ensure the descriptions are exact, including double quotes and correct decimal formatting for unit prices. I'll note the tax as 'S' and leave 'due' as null.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Reviewing output schema**\n\nI need to create a JSON output schema that includes specific details. First, I should clarify the amounts in USD, including vendor tax ID and line items. There's some ambiguity with the total: net is 17,045 and tax is 1,704.50, bringing the total to 18,749.50. For line 2, the gross is listed as 13,194.50, but when I multiply 11,995 by 1.1, I get 13,194.50, which checks out. I should ensure the descriptions are exact, including double quotes and correct decimal formatting for unit prices. I'll note the tax as 'S' and leave 'due' as null.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iA-meJXr_duBKt68S3yLUcenzkOE-nfpf46nvplzPaQsTumHG4Q2SyUFk-SSjeaJlhJrxXpYQmpzulk_2zqB1VKubAhOoTEBdoPYSjRJg8QQgcHaUX5JveaoRoIZrbFN2iX7As5K9ZXdRH01pMh6eva0a2XOpLYWhHhZJ3i3FRLhiM2xr7liJWzkcxj_G-0-PXE_HWke_R0iE2-OzReH_2ZstgCnJl7rRdpCGPJMMHG-Xu1BYbpebKzuJBFXRYx3EibPiCWSSqLe1-HrZtRhFv3dSPqmisl0NrrBMOHuCjqaAIEJqtlzEIVTbgmMatc2oJvPA4hdSCzhLaVEY7aMK4Tr6ID4jpIa9zqMQSlw-vbbS3f0VR82ddXTWhDRxOWzTKLMipxJnF3l9ncorOO6ifZvgSaRyUdTE1kFG3B8x0F7jBqNZa83OmJTEK-PaglQyErNPriHwQkph3AtaEX7u16gomVAne9bEQDHl1nf_ptcLcz-IDrxIay252MB43hudjCMhEqxLwsz6Dl9mwED7-Lb8Qet3zeU6WhZM50ztVEOkxiod1fMvOEdbQPgeKYfaqxTBS6YI3TXIkSkh6HUD48ugibIWoRPTaAHo9qxXamEknQQtWWF2LlYeXMjuO3sitX9gNAR793W141N4G3IVO_BIsqsgNL-uYexM5T3RZtL_tbBMdUocQR6kcaLmV-UGunADHokmaHRYOE7YRo_lrrrXdmDHqLYlQNV2TIzZtaLAAaPJFSUK8sEW8NFyRwIRRXsb006Q9qu6ETDYDDv9IaiULm5DHgxRtPUszcwRuk2nmxoDyFd9-0J6Is_tK-ebo3T13NAlEK8ZEuQSCiukMHuhmZlSOj9XzMMGOlkarxnS51nzo_qo1SB5dT5Ot0reD8wSahF7F95F3O5lePlyJua1N3Yel6aF6YM_o4gCcZ6dDsWJMFsdSfimuxY7yqxv1gh48Eph_WKUjIpCGNmk13qXQTxLpnmlccTOW3xG7i7iDQSyAt9Y6XTBrW75b2uc0fyzQun1fyxjK1puH4mx8E5fDOEEguXzlScWP0OIPwHl4jPJL4Sa-T8SThXFHVcDP4cM9IEGApkY265Np7JAFeTBvfX7H6gQzsZU_c1Hd0p-q3MiDHcU6MFymNYSkkg_a7-RlXTqCC9yy0TJeNlOUlo0cmdOWEW9CEeqKP02bkAR1FdyU9-AgS-Y9XuqPy6mGphPFoWVZDQIJ5T1ow01zQ-WCe9MgAlYCsn0Ngskh396z7Zw69sNfQMiJ7_n7lLB_i2Y9gfz4YFd1z5XjGpk1cOYhBDLuVNuZLB1OX8oNelyykqx2JET-Xy6vD8m5yTIGQUQ7BNlbiN5EBqCBo8IBgTd1QDPkWbyASRe2JnTzljWDQuc0ZBoH1OhIbIST307SokpSshWNjMBoYGdaQRFklAnLBylVMdlVrkNt6XsqDooy9dkPyJnax-IDqmseE-nVU17rapLCnC7eBCIdwlHMKsLN0LUQ8Mhjn8Yo8jqGqEqE47RkDRSG3K2HxfrMunRdrOXqU-F_EZoN6iQA7riZKSq7QeXusswjCAUrAnXj3M0MEcWFh_Q1ekk_bUd3EYkm5Bj7LmTsD0A8YrHXLewrowxg5TwoXL_2ZPME1TrvGpWwWNXTqrHyHcQqXl0bg-iWXpfIc6VAEXRPKqg0oYlmChDYNLMsJZMwzhVlr0DW_2_PwBMZMz5H4osiBSL2zbrIWV_UdE01wrXsG39urSoVwto58Uo0DJG8TXOzuV4kepg4EscytFUb4OWQcZfQVgN70dHlUOyVDH37SAhNlwNhmYGlnK9qSyFvQalj4_XD6nuFbjvKEbYzviKYaDKp0uxs3oGSgZbQukn21nIunG91xvDC_-u_iBB2REu6goLzIudXoMNZnNCRWAuJtCPzRL1IOlL-nlxQcY8HviQlIJze0JC1FrYaA2G0MkSaj-n_bkBo6m1RUuPVM8KdZRog-vEaXaWdgsSfCy1q-NpIgabnRLhSyw1VchQ0q366n7p9C9Q-GtOQPEp92cEzAvNwcqpr94Ir1Yad0tS-I1zbuNF1yCEEaQAGtJeHPoZaTvJCfsV-NoiFi9Ndiz8FAznws5Uzv7AY7XohKJe_g7lskM-4hTED8nq9fZZif0ZgneJrkjZUljVO76GDUSkr8UTOHjuuCh0XWWeou6yhURjD9B7FRwobmkZB5TfuayyClMvW8duPKeJB5PiQKbXWM-6S-Zou50vuFcNm_PN7hLDGuZ79UF2rgRdi1u9FwCE_-onsQ96bbYUcMO855voPefQ2zI4cBqq3zViKqYD3o5taz216wU6Xv66mZnUmm-EZnGs2QiVJRz-iO0FhsjldBWBdJYyj2HM5PD4Z7rdwtdv6Olf3JZ2yxRfhuDeCie174IRyRi9SYV6kpghSRcNGFDS6LK2iybK-SkiyXUuO-t8S5BkY0kNH9lY4KGJZMmkvVJOjjMU_bMssye6LB0S_QLkwkzaeiTuxRiX1ActUwO2WhlmKc0TB0FBOUet5qCDmwwAWqMvh5gy3Ik8_2Nkp-d-ANsmY8NqeCABXUG3J8T4RKRralrtVBwAut61TgRhUUxB3VEc1J1uFkbmRu4k8dugnRDxTcUguBc47tD6e0BFJr9nLqXJgrxTEzt67_Pd6R5h85IUVZhr3FySqpu3NxWpPpPmIp14IBQyXLjJw9Y18X7Qifcw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_00eeb1e1dba751f5016af6203a8c8487d1916fa5439fd0d3a7",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 359,
+   "total_tokens": 3920,
+   "cost": 0.013209,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3558,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013209,
+    "upstream_inference_prompt_cost": 0.008901,
+    "upstream_inference_completions_cost": 0.004308
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 87,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.96
+}

@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "IKANO HANDEL SDN BHD",
+  "vendor_vat": "000115154944",
+  "invoice_ref": "0000000109000712950",
+  "invoice_date": "2018-04-25",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 20.75,
+  "tax": 1.25,
+  "total": 22.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Chicken Curry Puff",
+    "quantity": 4.0,
+    "unit_price": 5.1875,
+    "tax_rate": 6.0,
+    "net": 20.75
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 20.75,
+    "tax": 1.25
+   }
+  ]
+ },
+ "cost_usd": 0.0154275,
+ "raw": {
+  "id": "gen-1794514683-kEN3zoAI5qUhx44fFx8F",
+  "object": "chat.completion",
+  "created": 1794514683,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"IKANO HANDEL SDN BHD\",\n  \"vendor_vat\": \"000115154944\",\n  \"invoice_ref\": \"0000000109000712950\",\n  \"invoice_date\": \"2018-04-25\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 20.75,\n  \"tax\": 1.25,\n  \"total\": 22.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Chicken Curry Puff\",\n      \"quantity\": 4.0,\n      \"unit_price\": 5.1875,\n      \"tax_rate\": 6.0,\n      \"net\": 20.75\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 20.75,\n      \"tax\": 1.25\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Defining Vendor Entities**\n\nI'm working on extracting vendor information for the JSON schema. Identifying both the legal entity, \"IKANO HANDEL SDN BHD,\" and the store name, \"IKEA Cheras,\" are key. Distinguishing between these entities is important for data accuracy.\n\n\n**Analyzing Receipt Data**\n\nI've extracted the core data points from the receipt to populate the JSON schema. \"IKANO HANDEL SDN BHD\" is confirmed as the `vendor_name`, with the tax number \"000115154944\" as `vendor_vat`. I'm using \"Slip: 0000000109000712950\" for the `invoice_ref` and \"2018-04-25\" for the `invoice_date`. I will set `due_date` and `iban` to null, and \"MYR\" for the `currency`. The untaxed amount is 20.75, tax is 1.25, and total is 22.00. The tax treatment will be \"S\".\n\n\n**Populating Line Item Details**\n\nI've moved on to the line item details. I've successfully extracted the description \"Chicken Curry Puff\", quantity \"4\", and unit price \"@ 5.50\". Tax is 6%, matching the \"GST SR 6%\" section, so I will denote as such. The total for this line is the net amount, which is given in the JSON as 20.75, which matches the  \"Amt. Excl. GST\". The unit price is 5.50 *inclusive* of tax, and the total line item amount *including* tax is 22.00.\n\n\n**Finalizing JSON Data**\n\nNow I'm finalizing the JSON, all data points are validated. I've rechecked the calculations, especially for the unit prices and tax.  The JSON structure is now consistent with all previously extracted data, and I'm ready to produce the final output with all necessary fields correctly populated.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Defining Vendor Entities**\n\nI'm working on extracting vendor information for the JSON schema. Identifying both the legal entity, \"IKANO HANDEL SDN BHD,\" and the store name, \"IKEA Cheras,\" are key. Distinguishing between these entities is important for data accuracy.\n\n\n**Analyzing Receipt Data**\n\nI've extracted the core data points from the receipt to populate the JSON schema. \"IKANO HANDEL SDN BHD\" is confirmed as the `vendor_name`, with the tax number \"000115154944\" as `vendor_vat`. I'm using \"Slip: 0000000109000712950\" for the `invoice_ref` and \"2018-04-25\" for the `invoice_date`. I will set `due_date` and `iban` to null, and \"MYR\" for the `currency`. The untaxed amount is 20.75, tax is 1.25, and total is 22.00. The tax treatment will be \"S\".\n\n\n**Populating Line Item Details**\n\nI've moved on to the line item details. I've successfully extracted the description \"Chicken Curry Puff\", quantity \"4\", and unit price \"@ 5.50\". Tax is 6%, matching the \"GST SR 6%\" section, so I will denote as such. The total for this line is the net amount, which is given in the JSON as 20.75, which matches the  \"Amt. Excl. GST\". The unit price is 5.50 *inclusive* of tax, and the total line item amount *including* tax is 22.00.\n\n\n**Finalizing JSON Data**\n\nNow I'm finalizing the JSON, all data points are validated. I've rechecked the calculations, especially for the unit prices and tax.  The JSON structure is now consistent with all previously extracted data, and I'm ready to produce the final output with all necessary fields correctly populated.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1503,
+   "total_tokens": 1821,
+   "cost": 0.0154275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0154275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01503
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1232,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.71
+}

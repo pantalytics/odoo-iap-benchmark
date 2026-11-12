@@ -1,0 +1,105 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1.0,
+    "tax_rate": 19,
+    "net": -5.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.022892,
+ "raw": {
+  "id": "gen-1794512631-JHtc9NPfpd0VuCNFrLm6",
+  "object": "chat.completion",
+  "created": 1794512631,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MUSTERLIEFERANT GMBH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"RK21012345\",\n  \"invoice_date\": \"2018-09-16\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"untaxed\": -7.67,\n  \"tax\": -1.12,\n  \"total\": -8.79,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Zitronensäure 100ml\",\n      \"quantity\": -5,\n      \"unit_price\": 1.0,\n      \"tax_rate\": 19,\n      \"net\": -5.0\n    },\n    {\n      \"description\": \"Gelierzucker Extra 250g\",\n      \"quantity\": -2,\n      \"unit_price\": 1.45,\n      \"tax_rate\": 7,\n      \"net\": -2.9\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19,\n      \"base\": -4.85,\n      \"tax\": -0.92\n    },\n    {\n      \"rate\": 7,\n      \"base\": -2.82,\n      \"tax\": -0.2\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Defining the Task Scope**\n\nI'm now zeroing in on defining the precise parameters of the task. My focus is on understanding the JSON schema and how it relates to the data within the German invoice. I need to make sure I am extracting the fields as per the structure of the JSON file, and consider all potential edge cases in the document format.\n\n\n**Extracting Specific Invoice Data**\n\nI've successfully pinpointed key data points within the invoice, including the vendor name, VAT ID, invoice reference, and date. I've also parsed the currency and the various monetary amounts. I'm noting the absence of IBAN and due date information. Finally, I have begun to organize the line items, extracting descriptions, quantities, unit prices, and tax rates. I am determining the tax rate.\n\n\n**Finalizing the Data Structure**\n\nI'm now satisfied with the data structure and content. I've ensured all fields are present, populated, or set to null where appropriate, including the tax rate, net values, and VAT breakdowns. I'm especially happy with my handling of the line items, extracting all key attributes with accuracy, as well as the accurate tax rates. I'm also confirming the format of the output matches the requirements.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Defining the Task Scope**\n\nI'm now zeroing in on defining the precise parameters of the task. My focus is on understanding the JSON schema and how it relates to the data within the German invoice. I need to make sure I am extracting the fields as per the structure of the JSON file, and consider all potential edge cases in the document format.\n\n\n**Extracting Specific Invoice Data**\n\nI've successfully pinpointed key data points within the invoice, including the vendor name, VAT ID, invoice reference, and date. I've also parsed the currency and the various monetary amounts. I'm noting the absence of IBAN and due date information. Finally, I have begun to organize the line items, extracting descriptions, quantities, unit prices, and tax rates. I am determining the tax rate.\n\n\n**Finalizing the Data Structure**\n\nI'm now satisfied with the data structure and content. I've ensured all fields are present, populated, or set to null where appropriate, including the tax rate, net values, and VAT breakdowns. I'm especially happy with my handling of the line items, extracting all key attributes with accuracy, as well as the accurate tax rates. I'm also confirming the format of the output matches the requirements.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2188,
+   "completion_tokens": 1543,
+   "total_tokens": 3731,
+   "cost": 0.022892,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022892,
+    "upstream_inference_prompt_cost": 0.004376,
+    "upstream_inference_completions_cost": 0.018516
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1182,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.84
+}

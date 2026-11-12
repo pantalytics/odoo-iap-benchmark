@@ -1,0 +1,112 @@
+{
+ "pred": {
+  "vendor_name": "Bei Spiel GmbH",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "RE-20190610/507",
+  "invoice_date": "2019-06-10",
+  "due_date": "2019-07-01",
+  "currency": "EUR",
+  "untaxed": 496.0,
+  "tax": 75.04,
+  "total": 571.04,
+  "iban": "DE88200800000970375700",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Design (hours): Of a sample invoice",
+    "quantity": 1.0,
+    "unit_price": 160.0,
+    "tax_rate": 7,
+    "net": 160.0
+   },
+   {
+    "description": "Ballons: various colors, ~2000ml",
+    "quantity": 400.0,
+    "unit_price": 0.79,
+    "tax_rate": 19,
+    "net": 316.0
+   },
+   {
+    "description": "Hot air „heiße Luft“ (litres):",
+    "quantity": 800.0,
+    "unit_price": 0.025,
+    "tax_rate": 19,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 160.0,
+    "tax": 11.2
+   },
+   {
+    "rate": 19,
+    "base": 336.0,
+    "tax": 63.84
+   }
+  ]
+ },
+ "cost_usd": 0.024508,
+ "raw": {
+  "id": "gen-1794512661-DWMr6FqoGJknGbJ621kN",
+  "object": "chat.completion",
+  "created": 1794512661,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Bei Spiel GmbH\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"RE-20190610/507\",\n  \"invoice_date\": \"2019-06-10\",\n  \"due_date\": \"2019-07-01\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 496.00,\n  \"tax\": 75.04,\n  \"total\": 571.04,\n  \"iban\": \"DE88200800000970375700\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Design (hours): Of a sample invoice\",\n      \"quantity\": 1.00,\n      \"unit_price\": 160.00,\n      \"tax_rate\": 7,\n      \"net\": 160.00\n    },\n    {\n      \"description\": \"Ballons: various colors, ~2000ml\",\n      \"quantity\": 400.00,\n      \"unit_price\": 0.79,\n      \"tax_rate\": 19,\n      \"net\": 316.00\n    },\n    {\n      \"description\": \"Hot air „heiße Luft“ (litres):\",\n      \"quantity\": 800.00,\n      \"unit_price\": 0.025,\n      \"tax_rate\": 19,\n      \"net\": 20.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7,\n      \"base\": 160.00,\n      \"tax\": 11.20\n    },\n    {\n      \"rate\": 19,\n      \"base\": 336.00,\n      \"tax\": 63.84\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the `vendor_name` and `vendor_vat` from the OCR'd invoice text, mapping these to the provided JSON schema. My progress is centered on precisely locating these fields within the unstructured text.\n\n**Refining Date Extraction**\n\nI've successfully pinpointed the `invoice_date` and `due_date`, establishing a consistent YYYY-MM-DD format. My current focus is on verifying these dates against potential variations in the OCR output.\n\n**Summing Up Financials**\n\nI'm now processing the `untaxed`, `tax`, and `total` amounts, ensuring accurate extraction from the OCR text. My focus is on validating these figures against the line items and their respective VAT rates.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the `vendor_name` and `vendor_vat` from the OCR'd invoice text, mapping these to the provided JSON schema. My progress is centered on precisely locating these fields within the unstructured text.\n\n**Refining Date Extraction**\n\nI've successfully pinpointed the `invoice_date` and `due_date`, establishing a consistent YYYY-MM-DD format. My current focus is on verifying these dates against potential variations in the OCR output.\n\n**Summing Up Financials**\n\nI'm now processing the `untaxed`, `tax`, and `total` amounts, ensuring accurate extraction from the OCR text. My focus is on validating these figures against the line items and their respective VAT rates.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1781,
+   "total_tokens": 3349,
+   "cost": 0.024508,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024508,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.021372
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1286,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.4
+}
