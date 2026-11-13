@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471113",
+  "invoice_date": "2018-06-13",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 22.0,
+  "tax": 1.54,
+  "total": 23.54,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Schweinesteak\nBestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet.\ngetLineTradeAgreementBruttopreis : 5,5000\nSchweinesteak aus Deutschland",
+    "quantity": 4.0,
+    "unit_price": 5.5,
+    "tax_rate": 7.0,
+    "net": 22.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 22.0,
+    "tax": 1.54
+   }
+  ]
+ },
+ "cost_usd": 0.00328425,
+ "raw": {
+  "id": "gen-1794512582-pxsEFqc739ngAn97Yl61",
+  "object": "chat.completion",
+  "created": 1794512582,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471113\",\"invoice_date\":\"2018-06-13\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":22.0,\"tax\":1.54,\"total\":23.54,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Schweinesteak\\nBestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet.\\ngetLineTradeAgreementBruttopreis : 5,5000\\nSchweinesteak aus Deutschland\",\"quantity\":4.0,\"unit_price\":5.5,\"tax_rate\":7.0,\"net\":22.0}],\"vat_breakdown\":[{\"rate\":7.0,\"base\":22.0,\"tax\":1.54}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm now focusing on extracting the core invoice details. I've successfully identified and parsed the vendor name as \"Lieferant GmbH\", their VAT ID as \"DE123456789\". The invoice reference number (\"471113\"), invoice date (\"2018-06-13\"), and due date (\"2018-07-04\") are now successfully captured. Next, I will determine the best structure for representing this within a JSON output format.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm now focusing on extracting the core invoice details. I've successfully identified and parsed the vendor name as \"Lieferant GmbH\", their VAT ID as \"DE123456789\". The invoice reference number (\"471113\"), invoice date (\"2018-06-13\"), and due date (\"2018-07-04\") are now successfully captured. Next, I will determine the best structure for representing this within a JSON output format.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "EsoLCscLAWkUfRPsB2D3+MFBCp5F/8PDC6HYIl9a2eWkIPldjK0fB5hVMX4BlcJMZJek0um4a41EI0l1npvYjOLpafYK+WljbMIPU5Zk4lUd92cE1JEiKWeojbFENJB830GHn36I2wz+nMf6LBFgIJVMU+tl9ORweAqhicZfJGzVPaMP0pPEIPa0yXY9c9EcghEwRLhE4JOYF6t/HCClsWGg40D8g8vlvkinda9dkE/Rgrr88ZtpPykJb8EhyF+qLzBfS2J7sp68aw38acJQG6/WYocDnSmrAkudHOmob7HUZLBYqjz8YQuoHQgrBblwUCu3ab18f6+aqkrnLb3XJ421WxLvSALXm4F+8janRAFQdiz9x+VIxVDULyG2IXfDlBTh8UAGd+csoFmazL9KVQQ0XO0Cca48tTSotTwfnhJBzyeT11gLfmsHwpAi/FbnvyPKDrmWnnxU4hUpYsnYlSfp9R+9mu/NkVquUsbAx8+/1eLTcb8Ws2FbRTYuE/oNgW6bheuR0RE25cpIRVWqRLSFl6MUy8IvDwZnPjaOjI7TtVKmppiZM0z3d0IxIBKdxot5nvIOtx4RPsC1yR06nt60UU0LCrPhWmuYzcTSct+q9RzGrj2IqDK2+jWaupyGFLiFJvBo1aoHXjMjdCdRE6/Mlr9ARqTJ5MKaTqb4TJIQyDqkiW7cXFjwaBjmum3nzR72OI2M9S4YYq1P0UBZ7aerpJNYbSVHh1ucLjAePgGfk1CMTkPI3Gx/s+nZDt3mNo8+QPyduPr1LLrJ4jwGTnfx97FI0/aTf8Y1QVEZdb6zdU972VeQcxPmMgy0IvdWWJLWX08mMnRIRKcCQm3idVQjj5aSaHstls4lsf9vjnnJLrDCf+n+rcuDAkMyFuxasFMg8WZNm/3gDHZmEbNgKVqsnAWLQd/mxYHEzpyrJeyscLtdl+XPZc2Uu/YOfvhyykmDV0kNytTNMRDPKNHAWi3HKaj6KdEFrSBTLvp0CK0v5b1Gju6Xv8rZy2mGBQL392he0nlUxi9yTvyPxCHNvldGRO+LxPz74uAihhw/S/kmHZs/wyp+zHEq25772OSSj6sbAMs0pqE++4u0v0Y9HV5zui+SVOVI7WmG0bGHx0IPQaGGbKLsv43ew5bTlzzdonWxYdEjVBOOUBDSYrnWQWV1GiFYpZH6oEUrjHJ5SidgOM4aYsaQj2QIvgkS+c5KIxN0Xl5Y9X0NjVU/kRSqKvG2o81VR1dNQoqRbSLWhv6MrBhlynf0kDZF5aitV0gu+09Bz0kx27/OHO/nwb0gXRUWTvqsdm5CbHhC+0UtYQUnI4scsZWDwD0WlBbA3MKNy0Iu8uJ20zinomk2npPB31kqLmqpZYw4JBD9Jjw26f2+pw8oW1nVoGUkYcL+dfBy/s7tDdtEi/HQC/j/+6alWn3O1+C1qUEnMPZh0vuuW1j1jht6xc/VpoIInd9Pdxc2N7B6Xupju4/pAA50iGrsizGaTNGyxo1egin5EGIEY66FeZwRWcRB9alTMfiYDpiFl1kVWpSqAlcGMbjo95PCLrqgVqGos6T3yknx0eTjbNnuKRM3CxM6lIqQNUgJeumnZ2WUr7ACl3HE9cBcTKLW2veZoVW4I1EQ5eJKDMVPpePG4QQMKEls24/ATeLgkphI6DM0GCR1v/wXi+Bj7Jsc7l+S2IKKyjw8laXnFAx2Bb7HqDIHqfQWn7+Z/nvBUPVz1Whh1f5H7CHFfrZyf4P0cjiH036oIuPmbUNc7ZdFz3xWrJX+ZikmpRFK77aqEEvZvdfugpa/uT1swJdsC53cTWf/CA2gSXMaf+K4Bmd6qVwLphVAPGRZp8mVU/lvH2Zg4hxKm3Zbo2jKZCrcBCwG9vG5tGjxulEpkyVR9wzYvfHoEKy54PlPeP8Xf7cMwkBKKFBWKoGYOMfYiCIsvZjz7t2Kh6UQqmkouCvQOohdNykFqBOcb9pzTAX9GL00",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1124,
+   "completion_tokens": 651,
+   "total_tokens": 1775,
+   "cost": 0.00328425,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00328425,
+    "upstream_inference_prompt_cost": 0.000843,
+    "upstream_inference_completions_cost": 0.00244125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 428,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.8
+}

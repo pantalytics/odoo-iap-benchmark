@@ -1,0 +1,120 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "280081",
+  "invoice_date": "2018-07-13",
+  "due_date": "2018-08-12",
+  "currency": "EUR",
+  "untaxed": 214.09,
+  "tax": 16.39,
+  "total": 230.48,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Übernachtung. 2 Nächte Hotel",
+    "quantity": 1,
+    "unit_price": 158.88,
+    "tax_rate": 7,
+    "net": 158.88
+   },
+   {
+    "description": "Verpflegung Frühstück",
+    "quantity": 1,
+    "unit_price": 11.76,
+    "tax_rate": 19,
+    "net": 11.76
+   },
+   {
+    "description": "Fahrtkosten, Taxi Berlin",
+    "quantity": 1,
+    "unit_price": 23.36,
+    "tax_rate": 7,
+    "net": 23.36
+   },
+   {
+    "description": "Fahrtkosten, Taxi Nürnberg",
+    "quantity": 1,
+    "unit_price": 20.09,
+    "tax_rate": 7,
+    "net": 20.09
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 202.33,
+    "tax": 14.16
+   },
+   {
+    "rate": 19,
+    "base": 11.76,
+    "tax": 2.23
+   }
+  ]
+ },
+ "cost_usd": 0.0051432,
+ "raw": {
+  "id": "gen-1794514887-evczkTBJuh62FDG7M0Tr",
+  "object": "chat.completion",
+  "created": 1794514887,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"280081\",\"invoice_date\":\"2018-07-13\",\"due_date\":\"2018-08-12\",\"currency\":\"EUR\",\"untaxed\":214.09,\"tax\":16.39,\"total\":230.48,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Übernachtung. 2 Nächte Hotel\",\"quantity\":1,\"unit_price\":158.88,\"tax_rate\":7,\"net\":158.88},{\"description\":\"Verpflegung Frühstück\",\"quantity\":1,\"unit_price\":11.76,\"tax_rate\":19,\"net\":11.76},{\"description\":\"Fahrtkosten, Taxi Berlin\",\"quantity\":1,\"unit_price\":23.36,\"tax_rate\":7,\"net\":23.36},{\"description\":\"Fahrtkosten, Taxi Nürnberg\",\"quantity\":1,\"unit_price\":20.09,\"tax_rate\":7,\"net\":20.09}],\"vat_breakdown\":[{\"rate\":7,\"base\":202.33,\"tax\":14.16},{\"rate\":19,\"base\":11.76,\"tax\":2.23}]}",
+     "refusal": null,
+     "reasoning": "**Clarifying invoice terms**\n\nI need to focus on the output schema. The terms indicate that payment is due within 30 days, calculated from the invoice date of July 13, 2018, which brings us to August 12. It's a bit odd that the discount date is earlier, though. There's no IBAN to consider. I’ll need to break down the VAT as well. For the description lines, I might choose to omit some of the more technical gross text to keep it clearer.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Clarifying invoice terms**\n\nI need to focus on the output schema. The terms indicate that payment is due within 30 days, calculated from the invoice date of July 13, 2018, which brings us to August 12. It's a bit odd that the discount date is earlier, though. There's no IBAN to consider. I’ll need to break down the VAT as well. For the description lines, I might choose to omit some of the more technical gross text to keep it clearer.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h_LopAVCeFSfiTisTbv7homwXh-WA8vFJ3lkYy3lLro_Uo6Ucvj1lIV39LLDkWaNPeITpr2ecG0l9HYlxG-HwNy3PRonS-xNycM_wo66rbcTjG5AyC7RTBh-pEu9A-EmTzPW9A7GIqU4mFnlrzUsaYHNSVuteraR0qnb4aY11CdCit2ppydkqgowII-WxUshes3DhAIDF-WgHsSB6_pHMNWUQ8cgKm0AIBttnP1VE0HLEPHVPW3GgzOx4XY083qpOBEQy7nCv1H-O0XKYwbmdgdgd6AOvdsDDcIWUr2jr4RBWAkfrq8_VgLm1MnSNcj7H5LO1bZphbm_3h3eAeQ2HpDpiU3Y9f_2bvVJbtU7Na0Jm6tVt25JpgfdOQ8dFagOO_hYzlrVhs9Qqn3ioOVRqj0QT6she184phkgpKR7z4N84O7x1DGwcBThPbyVrQgAe-Su1_aye9BgDjvQrsQpE5Uk_OfBF2dIDXbN8f6TSn36LYXOd2muJiTbx2iCIH0f7oTi5qG8RXES-z8bUdKVf6xAQmfeJKtoFds5dCHfV2V8o1y8hSisft6t88tgIgO2LIDlSm4tJCfZu0fhkPpegZIovi9muHBNRQlP_iB24qmGzl9HasE0UsMPgwIEGm5XXw8rKg1noUQLV21YyVuXACH8lpBiauo6UveNBcXQYsgs-ebHC2AQTa6obBGdGfQHuD4xLGdRhb1rgOylDa9OgXT1yWKtjeM4e7Cpv4X5H-6NLiBQ8wm1dOn7IJNlLGPP15D00zP45nvptIE-FMpxjHQRPXeN__Rry43s6tlkU4TAeLEPUrJYmScrYk501ZCsIRlF5tQxwYVJJybfnNgoDU77u8XIFrXjmEJxAHzMCUJN63BQ5nBFP3LQz7AdM1GkUgl9IKAPdrg6kmYuczW2T7Z3pgy3WnbsMdE6U3L2rUj1d0lx4t-_g39_6YgJYGS_KawM6EQY76JnkA9Wou3Or1mciWyntMksTxA4JDCEAoqUrlgiT99szXMoyXr6Pjwo9x5cRWlHZ754Txjyj7Bpo3aezWfA5zCSySz6EZCvYavTnofQnJdqj-yASxP6XAmkdL9qzYL8UffNzHpfbijvy40h1i8V88WaAUQPzjuAEJsd7JSYxpqv3N4zBou9OU5wZDuaXALikt8VvLni-NZos8Bc-Vyhc_aXAGL_nQWyS5v_7U5ghb5G_PKm95Pk2O4UAug41ohPBdn3ryEDMUjDtWt9Mab3qFwd7wVjltSARseYsDsf8EnfHZhYZK1zsozE8xLx7RZVOy86ez34kq5__XJAjP67OjdmxKBsoxed_D-1i-OXZMSnzKCim_yJtHxN6ZMafIdsyZQWb4seQ_3NHyMdoMBq1xPf3GnuunaLm2MJu9hHYu98zPahkrJIn9TSfTRjh7P5j51zMS0GQkZ7TX0mCQg4TPVIDJet4wXWqbMMokP4gfdgs4Sz6cRgwZUkas7YQGkVdnxHpmzv9wQYkWvGZ3HDc1M76ArXeO1jBaGau-OBclgDT-h9xvTv8RSXcfHWtIr9hke8LYwvR7HqMxmvvi-1grlo7G0or5tCpC-j4C38moTsJLZBwVTPdpRVsn5m2bleouPGNUGtLvMYsrC1LUYl0AiH-mlL0FkSHqd4nZtzrUiCWbOFnIOfTl5y2Xf0mjY0_u0fRQ4U6fabfpFSQHBY-LhDCog1slLtpPWiAF9zDOl3lQY_SV6r8ZszBpLbDyJ-wdCVqynMJ4E67Y7VOXUSTvBNyPT0VZ1zpUFNzmAY8IGn65yBaEcGTKEheY1jMwAdvSbWZImKC94E_KEMFQfqpKEBI9L7YmWMVgn8Guy0jzt522W-EMaFlEoUCpuWnt6owoTfm1BMneZGQ0OQFSAR4LgztNQ2QCh4aDcW1nH2SU1UPC0M-eId-Rxcpu2kx_nRB5m_U8AQgj-wA_dwzltbtYPQJsxev84gEh-4nre1-ooj-UDInB-SHEHgNLIrLpnTTl1QRgiU0IVH704MxC4GX1RZfojLy5lj1Q4_P0dzU993YHjPFpjOhzC8sEMPwnBy6TwO5ml3MFNVjBICoyBuJ5qpOLmmBCFpRmHidIcKkcT4ISirbbfetlvpwYGrdjTlZvEdzQYHW3M6m9qU31a4xXZTeK3RDJXJrxfLR632CXzx3kkEpeklooGVWmh-K1FdHl6LZpkIWTvXyR1OZzUkTIwdfnPiR3YKDll2Z3j_8F2wo9dn_qfvdZPGvjX4F9qME41ty6IuQ-ycZ8ehMNxd8vafooSpsTEaA3Y23-m8KPTJ2XnYWr4wt7ULZUVjsSgDUC3dqfSAiTPEyXiZHPQn4sxKjySN-4D51CxmmFQa0XaQKY5my4tn0LLHJz7F8eFCW5E0RWHqfxaTNUPfNLkIVBmVPH8WvadEIl0mhWQjHYzsVb4cgXipoB_o_48ziDUgYNoRtBplW3ndl4154khZ6udknurfkYY1nRwm7QWrNbKAzHmoYC5O3l1v6qEu0oSzeeJGzTCKJ2siAfNc66T_KOHgf4wlzeX62d1fhRqM3iozo1GksDeXArY7Fec.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0499f8b993e017cc016af61fc8a23c87d1bfd594418cbf492c",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 6549,
+   "completion_tokens": 319,
+   "total_tokens": 6868,
+   "cost": 0.0051432,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 6546,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0051432,
+    "upstream_inference_prompt_cost": 0.0013152,
+    "upstream_inference_completions_cost": 0.003828
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 65,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.91
+}

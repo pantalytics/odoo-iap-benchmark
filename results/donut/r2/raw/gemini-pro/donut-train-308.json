@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Sanchez Inc",
+  "vendor_vat": "958-83-2401",
+  "invoice_ref": "64678621",
+  "invoice_date": "2014-06-09",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 118.95,
+  "tax": 11.89,
+  "total": 130.84,
+  "iban": "GB39NIAV91589079294162",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off",
+    "quantity": 2.0,
+    "unit_price": 9.5,
+    "tax_rate": 10,
+    "net": 19.0
+   },
+   {
+    "description": "Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y",
+    "quantity": 4.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 79.96
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW",
+    "quantity": 1.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 118.95,
+    "tax": 11.89
+   }
+  ]
+ },
+ "cost_usd": 0.028624,
+ "raw": {
+  "id": "gen-1794515156-HQWAfHW6WmH4zlm2ohvr",
+  "object": "chat.completion",
+  "created": 1794515156,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Sanchez Inc\",\n  \"vendor_vat\": \"958-83-2401\",\n  \"invoice_ref\": \"64678621\",\n  \"invoice_date\": \"2014-06-09\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 118.95,\n  \"tax\": 11.89,\n  \"total\": 130.84,\n  \"iban\": \"GB39NIAV91589079294162\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off\",\n      \"quantity\": 2.00,\n      \"unit_price\": 9.50,\n      \"tax_rate\": 10,\n      \"net\": 19.00\n    },\n    {\n      \"description\": \"Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y\",\n      \"quantity\": 4.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 79.96\n    },\n    {\n      \"description\": \"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW\",\n      \"quantity\": 1.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 19.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 118.95,\n      \"tax\": 11.89\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Deducing Date Formats**\n\nI'm now tackling the `invoice_date` and `due_date`, attempting to resolve potential ambiguities in their formats. The presence of a UK IBAN suggests a DD/MM/YYYY preference, which I'm testing against the \"09/06/2014\" value.\n\n**Resolving Date Ambiguities**\n\nI'm refining the `invoice_date` interpretation now. Given the US address context and the \"$\" currency symbol, I'm leaning towards a MM/DD/YYYY format, specifically yielding \"2014-09-06\". The `due_date` remains elusive.\n\n**Parsing Line Items**\n\nI'm now processing the individual line items from the invoice. My focus is on extracting the description, quantity, unit price, tax rate, and net amount for each, ensuring precise numeric formatting and handling any missing data.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Deducing Date Formats**\n\nI'm now tackling the `invoice_date` and `due_date`, attempting to resolve potential ambiguities in their formats. The presence of a UK IBAN suggests a DD/MM/YYYY preference, which I'm testing against the \"09/06/2014\" value.\n\n**Resolving Date Ambiguities**\n\nI'm refining the `invoice_date` interpretation now. Given the US address context and the \"$\" currency symbol, I'm leaning towards a MM/DD/YYYY format, specifically yielding \"2014-09-06\". The `due_date` remains elusive.\n\n**Parsing Line Items**\n\nI'm now processing the individual line items from the invoice. My focus is on extracting the description, quantity, unit price, tax rate, and net amount for each, ensuring precise numeric formatting and handling any missing data.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2124,
+   "total_tokens": 3692,
+   "cost": 0.028624,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.028624,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.025488
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1652,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.47
+}

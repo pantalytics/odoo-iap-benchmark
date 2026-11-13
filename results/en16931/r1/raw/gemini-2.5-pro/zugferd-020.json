@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Rohstoff AG Salzgitter",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "47110815",
+  "invoice_date": "2018-10-31",
+  "due_date": "2018-11-20",
+  "currency": "GBP",
+  "untaxed": 858.75,
+  "tax": 163.16,
+  "total": 1021.91,
+  "iban": "DE1212344321987600",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Stahlcoil CO-123/V2A",
+    "quantity": 10,
+    "unit_price": 100.0,
+    "tax_rate": 19,
+    "net": 850.0
+   },
+   {
+    "description": "Abschlag Lagerware (Bilateral vereinbart)",
+    "quantity": 1,
+    "unit_price": -100.0,
+    "tax_rate": 19,
+    "net": -100.0
+   },
+   {
+    "description": "Abschlag Direktbelieferung (Direktbelieferung)",
+    "quantity": 1,
+    "unit_price": -50.0,
+    "tax_rate": 19,
+    "net": -50.0
+   },
+   {
+    "description": "Zuschlag Einwegverpackung (Miscellaneous)",
+    "quantity": 1,
+    "unit_price": 30.0,
+    "tax_rate": 19,
+    "net": 30.0
+   },
+   {
+    "description": "Abschlag Stammkundenrabatt (Miscellaneous)",
+    "quantity": 1,
+    "unit_price": -21.25,
+    "tax_rate": 19,
+    "net": -21.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19.0,
+    "base": 858.75,
+    "tax": 163.16
+   }
+  ]
+ },
+ "cost_usd": 0.0308925,
+ "raw": {
+  "id": "gen-1794511871-GGdlRGSifYOIvVPlEArx",
+  "object": "chat.completion",
+  "created": 1794511871,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Rohstoff AG Salzgitter\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"47110815\",\n  \"invoice_date\": \"2018-10-31\",\n  \"due_date\": \"2018-11-20\",\n  \"currency\": \"GBP\",\n  \"untaxed\": 858.75,\n  \"tax\": 163.16,\n  \"total\": 1021.91,\n  \"iban\": \"DE1212344321987600\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Stahlcoil CO-123/V2A\",\n      \"quantity\": 10,\n      \"unit_price\": 100.0,\n      \"tax_rate\": 19,\n      \"net\": 850.0\n    },\n    {\n      \"description\": \"Abschlag Lagerware (Bilateral vereinbart)\",\n      \"quantity\": 1,\n      \"unit_price\": -100.0,\n      \"tax_rate\": 19,\n      \"net\": -100.0\n    },\n    {\n      \"description\": \"Abschlag Direktbelieferung (Direktbelieferung)\",\n      \"quantity\": 1,\n      \"unit_price\": -50.0,\n      \"tax_rate\": 19,\n      \"net\": -50.0\n    },\n    {\n      \"description\": \"Zuschlag Einwegverpackung (Miscellaneous)\",\n      \"quantity\": 1,\n      \"unit_price\": 30.0,\n      \"tax_rate\": 19,\n      \"net\": 30.0\n    },\n    {\n      \"description\": \"Abschlag Stammkundenrabatt (Miscellaneous)\",\n      \"quantity\": 1,\n      \"unit_price\": -21.25,\n      \"tax_rate\": 19,\n      \"net\": -21.25\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19.0,\n      \"base\": 858.75,\n      \"tax\": 163.16\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focused on extracting crucial details from the German invoice. I've pinpointed the \"Verkäufer\" section, and identified \"Rohstoff AG Salzgitter\" as the vendor name. Now, I'm working to locate the vendor's VAT number within the document.\n\n\n**Defining Invoice Parameters**\n\nI've outlined a step-by-step approach to populate the JSON object. I've now defined all the invoice parameters I need to extract, including the vendor name, VAT number, invoice reference, and date. I've also identified due date, currency, untaxed amount, tax, total, IBAN, and the VAT treatment. I am currently formatting each data point according to the specified schema, taking into account any necessary transformations like date formatting or currency conversion.\n\n\n**Mapping Invoice Data**\n\nNow I'm focusing on mapping the extracted data to the required JSON structure, meticulously populating each field. I've successfully located and formatted the invoice date and due date, and I've started on currency and amounts. Next, I'll structure the lines array, ensuring all line item details are accurate. I'm also ensuring the correct parsing of decimal values. I am currently evaluating the surcharges and discounts to correctly compute the \"nett\" amount.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now putting the finishing touches on the JSON object, having addressed all data points. I've re-examined and correctly calculated the line item details and correctly mapped the discounts to derive a correct net amount. I've also incorporated date formatting, currency handling, and decimal adjustments. The final step is to validate the structure against the schema.\n\n\n**Structuring Invoice Data**\n\nNow I'm structuring the extracted data into the required JSON object, having finalized the extraction and formatting of all the individual data points. I've re-evaluated and corrected the line item amounts considering the discounts and surcharges, ensuring an accurate \"net\" amount for each line. I am now validating the JSON format against the schema, ready for submission.\n\n\n**Analyzing Invoice Data**\n\nI've completed the extraction, formatting, and calculation of invoice details, meticulously validating against the German invoice. I've re-evaluated all data points, especially line items and discounts, to derive correct net amounts. I am now finalizing the `vat_breakdown` section and preparing the complete JSON object for validation against the schema. I've validated the totals and finalized all line items.\n\n\n**Generating JSON Object**\n\nI've completed the extraction and formatting of all required invoice details, including VAT breakdowns and the structure of the line items. I'm now in the final phase of generating the JSON object based on the extracted data. I have re-evaluated the totals and validated them. I am now validating the format against the JSON schema, and I am ready to submit the results.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focused on extracting crucial details from the German invoice. I've pinpointed the \"Verkäufer\" section, and identified \"Rohstoff AG Salzgitter\" as the vendor name. Now, I'm working to locate the vendor's VAT number within the document.\n\n\n**Defining Invoice Parameters**\n\nI've outlined a step-by-step approach to populate the JSON object. I've now defined all the invoice parameters I need to extract, including the vendor name, VAT number, invoice reference, and date. I've also identified due date, currency, untaxed amount, tax, total, IBAN, and the VAT treatment. I am currently formatting each data point according to the specified schema, taking into account any necessary transformations like date formatting or currency conversion.\n\n\n**Mapping Invoice Data**\n\nNow I'm focusing on mapping the extracted data to the required JSON structure, meticulously populating each field. I've successfully located and formatted the invoice date and due date, and I've started on currency and amounts. Next, I'll structure the lines array, ensuring all line item details are accurate. I'm also ensuring the correct parsing of decimal values. I am currently evaluating the surcharges and discounts to correctly compute the \"nett\" amount.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now putting the finishing touches on the JSON object, having addressed all data points. I've re-examined and correctly calculated the line item details and correctly mapped the discounts to derive a correct net amount. I've also incorporated date formatting, currency handling, and decimal adjustments. The final step is to validate the structure against the schema.\n\n\n**Structuring Invoice Data**\n\nNow I'm structuring the extracted data into the required JSON object, having finalized the extraction and formatting of all the individual data points. I've re-evaluated and corrected the line item amounts considering the discounts and surcharges, ensuring an accurate \"net\" amount for each line. I am now validating the JSON format against the schema, ready for submission.\n\n\n**Analyzing Invoice Data**\n\nI've completed the extraction, formatting, and calculation of invoice details, meticulously validating against the German invoice. I've re-evaluated all data points, especially line items and discounts, to derive correct net amounts. I am now finalizing the `vat_breakdown` section and preparing the complete JSON object for validation against the schema. I've validated the totals and finalized all line items.\n\n\n**Generating JSON Object**\n\nI've completed the extraction and formatting of all required invoice details, including VAT breakdowns and the structure of the line items. I'm now in the final phase of generating the JSON object based on the extracted data. I have re-evaluated the totals and validated them. I am now validating the format against the JSON schema, and I am ready to submit the results.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2985,
+   "total_tokens": 3819,
+   "cost": 0.0308925,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0308925,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.02985
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2423,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.48
+}

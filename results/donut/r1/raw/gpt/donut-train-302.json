@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Hernandez, Green and Lloyd",
+  "vendor_vat": "953-72-5962",
+  "invoice_ref": "98605220",
+  "invoice_date": "2016-03-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 151.74,
+  "tax": 15.17,
+  "total": 166.91,
+  "iban": "GB75NNPW12043314244332",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Book: The Lee-Enfield by Ian Skennerton- Signed Edition",
+    "quantity": 1,
+    "unit_price": 94.95,
+    "tax_rate": 10,
+    "net": 94.95
+   },
+   {
+    "description": "Basic River Canoeing",
+    "quantity": 3,
+    "unit_price": 4.89,
+    "tax_rate": 10,
+    "net": 14.67
+   },
+   {
+    "description": "Hekate Soteira - A Study of Hekate's Role in the Chaldean Oracles and Related...",
+    "quantity": 1,
+    "unit_price": 24.12,
+    "tax_rate": 10,
+    "net": 24.12
+   },
+   {
+    "description": "Motorcycle Journeys Through North America : A Guide for Choosing and Planning...",
+    "quantity": 3,
+    "unit_price": 6,
+    "tax_rate": 10,
+    "net": 18
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 151.74,
+    "tax": 15.17
+   }
+  ]
+ },
+ "cost_usd": 0.02549,
+ "raw": {
+  "id": "gen-1794512160-qIAe7kIWbGGZoDxqB994",
+  "object": "chat.completion",
+  "created": 1794512160,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Hernandez, Green and Lloyd\",\"vendor_vat\":\"953-72-5962\",\"invoice_ref\":\"98605220\",\"invoice_date\":\"2016-03-17\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":151.74,\"tax\":15.17,\"total\":166.91,\"iban\":\"GB75NNPW12043314244332\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Book: The Lee-Enfield by Ian Skennerton- Signed Edition\",\"quantity\":1,\"unit_price\":94.95,\"tax_rate\":10,\"net\":94.95},{\"description\":\"Basic River Canoeing\",\"quantity\":3,\"unit_price\":4.89,\"tax_rate\":10,\"net\":14.67},{\"description\":\"Hekate Soteira - A Study of Hekate's Role in the Chaldean Oracles and Related...\",\"quantity\":1,\"unit_price\":24.12,\"tax_rate\":10,\"net\":24.12},{\"description\":\"Motorcycle Journeys Through North America : A Guide for Choosing and Planning...\",\"quantity\":3,\"unit_price\":6,\"tax_rate\":10,\"net\":18}],\"vat_breakdown\":[{\"rate\":10,\"base\":151.74,\"tax\":15.17}]}",
+     "refusal": null,
+     "reasoning": "**Extracting JSON schema**\n\nI need to extract the JSON schema and format the output for the response. The relevant fields include the invoice number, issue date, seller information with tax ID, IBAN, and currency, likely USD since the seller is in the US. The totals are clear, with specific amounts for untaxed, tax, and total. Each line items need to be parsed correctly, including descriptions, quantities, unit prices, and tax rates. It’s crucial to get this right!**Formatting VAT breakdown**\n\nI need to provide the VAT breakdown, which includes a base amount of 151.74 and a tax of 15.17, at a rate of 10%. My goal is to output this in JSON format, ensuring that the numbers have the correct decimal places. I want to finalize everything in a bill format for clarity. Getting this right is important so the user can see the specifics easily!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting JSON schema**\n\nI need to extract the JSON schema and format the output for the response. The relevant fields include the invoice number, issue date, seller information with tax ID, IBAN, and currency, likely USD since the seller is in the US. The totals are clear, with specific amounts for untaxed, tax, and total. Each line items need to be parsed correctly, including descriptions, quantities, unit prices, and tax rates. It’s crucial to get this right!**Formatting VAT breakdown**\n\nI need to provide the VAT breakdown, which includes a base amount of 151.74 and a tax of 15.17, at a rate of 10%. My goal is to output this in JSON format, ensuring that the numbers have the correct decimal places. I want to finalize everything in a bill format for clarity. Getting this right is important so the user can see the specifics easily!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hUq4JR-h1flRnJV8nYM53hvharhc0fSWgTT5ynp1XfaJ6u8nfD7w5kx4vzvYQZpsT-VS0GjyGxM-2pDw_YIkhXVa6mbh5tcDvX0zabuNaeV9IRDTrl_JEWZfwdB7CE_k_eYSoRapBINCmQ3wrmDvve1Lxm75qXWm0Su43doH2K4meefXSEoBBoaFXhh3Xnh7GGzZ_eGRx98vLlZWnbd0fM1ISK2PZ9X3Vaz14vUNWkSqa91WktfOxx6DP7Ps2NH3DYyavOui6CHwtaFuNB5Y4aGJrVlKaQTruS4jFWRkBPJPi-G4VEbdPmk4sqlheewE1OTtW_PQmqTfHjLnpTGVM_ff0cvxi6V2ZmnhOBvSPfC1OC0d9gwp1OaN0PjTefhqRD3ZCUenSAXQs3sx81ibq2_WQOwfBdQD7xnKav2K9Tb740ruLHlALqGKRNUrsjDDDGJPFMaYth5chKKl2eZtZucOIfsVy38owNpBYoKYY1rV-yXCA7spZqZwqWiVDzK_TH16A0tiR_BA0ezK6WAcrJtNU-tSSOCdsXMjDIymDjqsDj8I435QnBad9M3D-lyiePO7xAxbKwCseIEsYGKsNqW6eUjOLUH77RoEwtObNYl0cRjTyfcz666s99l00b3-vBEm0R9_liDzPx88bstHUDs_mCcNXLbmZGMbUZBaFv5VGZemg3EkKSK4l_WBJXXwsT_3tJXKRDUFsZCxBRd9WPZ9Hy5RJ5M9XtVnBoOAOcC15tjT-MU5a-PXVTqWIUKtsJomnQ-Bo65Hyv5Fo1uQ64zRo3rpRnHg43F7PHsZsVN_ub2v9sJ2OdhLLS-7nMpWl-akqOhdGTDrXJfn4KqKfw6XuYu5igmnJ-dyzlebrJE2NUNfyiOqkVuw8mcn7bdkL7z6-MpMD7j5IBu52CMB6KhzDa4aGns6AUUGbDRrt_oGqfWpnaEwRXg-xW6uz01hEzEEU7tRId-Gq0KDwyeDUSibRvf920C3tGB6gB_arPjoCNyBz4tBBAqNfHkm8Fbxb9J8a3fTOvhQl-N24kNnR7i40m-WzWkUp5DB8q-WkYPIHBeIsYpsbo8MndJ8hucNJ9rjjdQbBMAfP6Ro1vtBPE_RU7d-q5j2fJIVACPe5d1jLojgpv_4uU16ADqx-oW4Sm1QGUKo3JhntzZtDTxc40J56Z4gUtmSV8Pk1LQLsbj6HiS49-U7SpbEwOamJQmFRRJitCDBrcgeZU6btq9AsEPD0EdjAW0QzApHKMNANQGI8iOUfAypwxGketpuTEVRsJFNNvp2hOmdzuCp97aSSoAvy9WuAeP-pSG7ht7WTFZi1IJTv8tFb4y1CjWTl4WwQGOUrqp9Tmz8JiX60ZUWuFl8aUbRoV1RR-YXTS_fKTfLf_WDVCIzTHL_L1As8OGGMlGDkzYNvxtKAZ5uz_FEEKOipgkNNzvgl8eznXCUoPz5E6yoSl6pzXXssc2ZDQ4NiEU37NKGAmssnNaEeZSK-kcqno71KX_abkJyK2hqHRMLT8EQB0Jg2rgdJQsKU0_zEAuYS3tlDd1gvsR7IwBH9v1WIJvZfUG6AuLiVvc7PrJLqf5Nhn1dA3INAqZFhk4LWHwB99aaKp1XnGQ8TLiUT-R6Os6GFD0SH-bE-5UB-5Dnsd_gYHVMbYSm5pHZG0KFzlBvy6C586ffuOJVvKMMrc9VyzMuuZn6W7RTwKco-DXcBvA2STYiA-G6Sn3wy0tMzv6wqqxZrsmr9NGu1qgbANt_PUU25JYrX1GmyB8UzngyCj7_n6UlosCBkZvIG70jMX-lm45YjAxSNNwlJYrGwz7RtbKhuWefE0KprcFGvydAjQF_rBYkSsnYlhAwI5lPDoFus-WvFsCiz44017YZ8tJnB35j4PZiA0QOHvi01l1oalWqs6T6gFX5vibt0FRv_0u9NA6V8Y80hNvOBww8rRfoyRAjcBQd_NlfDHkvDxG4lbMZDg0-0I7oZFKR7ud0Joyfd5PvmAdZL_sIzpykbM4-ydR85q2CIJwd0hHuV-414XNQ7iT3ss6HkuL0Y2xhOpl51AKsgsYbWfl4uuAu5Y1lW8EKh_9-V6oD-_G34wpbCD0oFnSq9ds1Xz91U9Qo8B1zpaCCDpwbR8YGehAdOqxct7g3xnCZa9leiF5rzA8qFy8e1etP_Ms0LfX7dsce4O2XlauXyk4-5Ox_n6EpJk5Y5s59rwBReyN6ijWI1G6hRxfldXX0ypPA051FqG3HW2lNrZAjemi89ifjXc-sQmizbyRCGtg2SU-oYh24SlpeKwFLjEy3A0Q1jbSsVk5vnpjFdPUpOSBDcuGPmCSuTukmlLT8NKG41eKZI_Mt2EGVxyIQH1DVY7IUsoUktAkC8wvxfK9_u-EKHq5UvuXquKpjDGJgw_Iqdn7ECwOvQUqbnQedmyLtmGQo6_5ibO5yA8IClZsPffVmo5Fs72ETojQwLcNDHTNzLIJEGXamHHnIqsrwvSh_yvF57B9OxW4AZhpo_absW6Nd4smipjtIZupwQP3hDzF8tjMGx7xQ4ZGJq0Gvo4LwClMhEoT9ODK3WeKd0U4Y_WYG08acJAfAyKJeK_1PKTXBC5DNaTLZphfa13xNdZ1hsL1xXMMUL8FN6XRGBNa9Ki_WNd-c1PzT-Zn9qAkovp_GTvjCFkZ45OVZpchaqeNSzyxzmNCxLUdDoogqErQZ4C6HpGp52YOq2pXVJBIWZk55jwMuJ1l1ZdO8n8OB7zqbHq1NFyB5eStz9iORG5reU_bn0YL4yW9roOlAig1pkFPwX4cBEcuua3svOfpJOpBGCd_gAJyitXsDr_wDxfcYLRV9o2_jM-bpwoRI4gynaPm9pu6bbEAeaaDXGcZFAQOw_nTke8UzLd29fwJcCfRl33k6m7UAHLMsBPBCpPa-ZHRrrNcWwCYykhcociPwcl4RLEKco1Nd_JYiRFf2UBmPVxLxH-Nks8N8hSOUP5K1wbiIA6XOxoS4ZwHfcr1ZCL3guEOZd5OsHi1XN6L38g7VcU2kaQA_P-iP837A9i16ohPdALp7SOOsV-USptmaX3NqICxJ0v-jYBLcuDfkJRXyQTJd0JoRFNwhdizwCrTOCfWCF0euX089hg30w50MUHuNtfw9pAbB0ONs-5lT3wRwPtz6ciDeOlwk2YDxBJSXYEiIcUdsKhZJr8yUm6Ikn39m9gc86d-qjkkfKNZbma5g4t4ww25rPTu7eu6bcYy8-ICCHBOei_s9N4Kf4GH0r-RoJYsRWIC53BHuasY4PbDFsN7mEpdc38FJqSu6GlMEMSNX1tjsVoDqO93IB5sBEoI3XrIFbf7mCT1qTxBBlV82RBT1eoV1OrtFLmLHDKKP1rwiOOom1ZTDwl-AgSiWBU6TsSCnUkGlS9w1Ds1FggIg8Vd23CgcoqJU04E4FHjmsTVKr3xbiOTmws2iAJsGkEWy8S3Fs5aiwVF1jNl5ugBCUvYTE4pmg8wExY3UOG3Nj7DlbrLeIRXKkei4CaPrhcNuxcjRBL6iqkn9iPBPkD4dNCarqpaE_QllLnEq4-uiQpMcWU_LMJgxPodhwFhR8iDdwaZr81pStyYP6-usSdMkRM35sO5szDgWom6LTML4P5V3G8sqYrN7HbY_zy-5y5RZlpchetyIdeifErQmCCtvne0FamLQpUxBOnqqBJghpBt2ZcrKmo6g-_6OmiTJ5OcxED2WbMLhXD9OdZIBbcEV9cU9-uKD2s2IMlyHOxokCqvYkyKWtdUAGc9mzgNzKjJ8NCWWwhpk0PdBAzUo1fRojl7CeD4iwFQAt6yl-qeAPJEobJKy3Np9DbPHO9_RzOCSefKlgCIXwXz9xPvRAoHAUnoS7woE87dxUo965c06BUBVCa2m-yz2rzbEg0Lx99_GTyjcV1fRkLevXq2su0XXrnXNuMlSPbzxrU7QaB-tQ4fks5Wt6RWc-h56Knr57HnQuiz0CWaqlvcftj7Pe8h4fiCHsEQWE4DhunfTsKjdAhQzmoJqS5P1P-RVzZRlv58FCWmdrFYoY3Pc_sfUkGLGPhsbopDDWXg34U5FT9jzLBjT8tJ-Xm9wdDF2WV8f7zcgdZSa4PLFW0nF3RUbmZzz2oGn3vNxXtnaDm00uT0KUUBGHrx65My1WBFPkhfQT6Z9S4yYBIUGL2-xRSoG1bIxLsi5aB2DRZ3koih_QUenBzbeT9OETmnIwSEELqzCa5r1DyGi2CTsuM8fr4pC1gG0Zyf3N27ek2NWWSa0FG-OK6bpiHuQUsL9505KhCkIyiL8PJ8RUw9ISmw16asAIB9-7D6EPfi8Hgjobvi2L4RLU7hFxL45DcKk2wP-0fsUxyc3K3-UzSpGUb5hEUZtKeka5Dkp6vO-41qqqxxc7OpkcsDI-FkNzedEVUxnGwdNqrN-b_7_q5ae4zGQKX-uU3mnevcBZSDkUwgJ_lfbXKfim0verm4lasQiVCMDBC_HAQTHSDyWOoJv_Shy8Ld4zwVFELpVL2IQBfYy-EtZ-qKhaT5Tqzj1hz3cK_fuQxGg1-shrIpmIoDYrVZHKkulO-DXrI04eSiMKV63w2RmZ0KjHpKkpcfsRwcYIVFFZzgp-AJHFSG8nvi6oMiu5bftQ7KJ1OPerVERFGDpHjVmjGgARbIwqlUVmfc75nq3sOfwRSKXNU_NHqkChhNORc5DkxnoSbe8COiiGOWLbvgvpmRz1f4TWAmxFO2m1vJPrZPN-0OqHklPtlSHkYh6_78dUKdDoIUwsqEZlcqcx2ibc5kNvPUI2Y1EgJ0D8n8koTIvDpLcLKiTFd-cBG0R9nJ838FUQkMFPwClqGLR2AywvRQgN0tv7VSUgEZRykZEb6E7RA4Vj02m9hSZQyRgXQQ-2vUzfbOnIJ7u4AGk8-6se-0HibYt-BoYyBILccf2adNujwauuSN99mAJ4E1U8PiVgrKr6asSLXd0DeuFtf1-T3gjIaq2tSyjgu5H7nblPHaLgqqiTXeQ0HbmPfwoT2IC6264tDmO7tOH89276U94N2kcMz7EQRa77DUEdi-hO1YrkmKRIXH_h3BMSO24FR7QCw3ixbbDuET-c_NyI4Xj9wYoRnrPDebPvLeJKd-mDb2Zh4XPajXZMvW_gKCaVlg1GFfcVqT6p1DHHVni2pdbml9DWA4SnhpPqw4fahCu_CgOeYTOyn6QyxOJJHg2bUs7XfNdwhU6m6C1RK0bU1AIA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0cd8040848acca6b016af61523542c87d18a2e038805f80d9d",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 599,
+   "total_tokens": 2103,
+   "cost": 0.02549,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02549,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01797
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 324,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.6
+}

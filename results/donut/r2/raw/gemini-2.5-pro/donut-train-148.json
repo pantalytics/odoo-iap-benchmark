@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Smith and Sons",
+  "vendor_vat": "912-86-5998",
+  "invoice_ref": "20653012",
+  "invoice_date": "2013-03-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 581.95,
+  "tax": 58.2,
+  "total": 640.15,
+  "iban": "GB46MLEX00282137220677",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 1.0,
+    "unit_price": 14.99,
+    "tax_rate": 10.0,
+    "net": 14.99
+   },
+   {
+    "description": "Nintendo 64 Console with Box, Foam and extra oem controller",
+    "quantity": 4.0,
+    "unit_price": 120.0,
+    "tax_rate": 10.0,
+    "net": 480.0
+   },
+   {
+    "description": "B311 Nintendo 3DS console Cosmo Black Japan x",
+    "quantity": 4.0,
+    "unit_price": 11.99,
+    "tax_rate": 10.0,
+    "net": 47.96
+   },
+   {
+    "description": "PocketGo Bittboy v2 White Retro Video Game Portable Console 3.5 IPS display",
+    "quantity": 1.0,
+    "unit_price": 39.0,
+    "tax_rate": 10.0,
+    "net": 39.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 581.95,
+    "tax": 58.2
+   }
+  ]
+ },
+ "cost_usd": 0.0181375,
+ "raw": {
+  "id": "gen-1794515494-LKE31IDsSrJFAepDKBka",
+  "object": "chat.completion",
+  "created": 1794515494,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith and Sons\",\n  \"vendor_vat\": \"912-86-5998\",\n  \"invoice_ref\": \"20653012\",\n  \"invoice_date\": \"2013-03-08\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 581.95,\n  \"tax\": 58.2,\n  \"total\": 640.15,\n  \"iban\": \"GB46MLEX00282137220677\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Sony PlayStation 1 PS1 Console model scph-7501\",\n      \"quantity\": 1.0,\n      \"unit_price\": 14.99,\n      \"tax_rate\": 10.0,\n      \"net\": 14.99\n    },\n    {\n      \"description\": \"Nintendo 64 Console with Box, Foam and extra oem controller\",\n      \"quantity\": 4.0,\n      \"unit_price\": 120.0,\n      \"tax_rate\": 10.0,\n      \"net\": 480.0\n    },\n    {\n      \"description\": \"B311 Nintendo 3DS console Cosmo Black Japan x\",\n      \"quantity\": 4.0,\n      \"unit_price\": 11.99,\n      \"tax_rate\": 10.0,\n      \"net\": 47.96\n    },\n    {\n      \"description\": \"PocketGo Bittboy v2 White Retro Video Game Portable Console 3.5 IPS display\",\n      \"quantity\": 1.0,\n      \"unit_price\": 39.0,\n      \"tax_rate\": 10.0,\n      \"net\": 39.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 581.95,\n      \"tax\": 58.2\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm now focused on the invoice, working to extract key details. The first task is straightforward: pinpointing the vendor name, which is \"Smith and Sons.\" Next, I'll identify the seller's tax ID. I'll need to figure out where to find that.\n\n\n**Defining Invoice Attributes**\n\nI've got the attributes defined, based on the schema, and I'm filling in the data now. Vendor name and VAT are simple, and I've mapped the invoice number and date to the correct fields. I've also noted the lack of a due date and set it to null. I've also decided on USD as the currency, despite the IBAN confusion. Now, I'm working on the monetary values, and tax treatments.\n\n\n**Mapping Invoice Elements**\n\nI'm now mapping out all the invoice elements to the JSON schema. I've successfully identified the vendor name, tax ID, and invoice reference. I've also formatted the invoice date and set the due date to null, as it's not present. I've settled on USD as the currency, despite the IBAN suggesting otherwise. Now, the next step is extracting the monetary values.\n\n**Populating Invoice Details**\n\nI've got the mapping done, and I'm now populating the details. I'm extracting the monetary values, and tax treatments, and things are lining up. I'm almost done with the main fields, and now need to deal with the line items, which should take some time to process. The description, quantity, unit price, tax rate, and net are needed for each line. I'm focusing on those now.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now putting the finishing touches on the JSON object, having extracted all necessary information. I've double-checked all calculations, ensuring the line item sums and the total match the invoice. The tax calculation has been adjusted to match the document's value, addressing a minor rounding discrepancy. I'm satisfied with the consistency.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm now focused on the invoice, working to extract key details. The first task is straightforward: pinpointing the vendor name, which is \"Smith and Sons.\" Next, I'll identify the seller's tax ID. I'll need to figure out where to find that.\n\n\n**Defining Invoice Attributes**\n\nI've got the attributes defined, based on the schema, and I'm filling in the data now. Vendor name and VAT are simple, and I've mapped the invoice number and date to the correct fields. I've also noted the lack of a due date and set it to null. I've also decided on USD as the currency, despite the IBAN confusion. Now, I'm working on the monetary values, and tax treatments.\n\n\n**Mapping Invoice Elements**\n\nI'm now mapping out all the invoice elements to the JSON schema. I've successfully identified the vendor name, tax ID, and invoice reference. I've also formatted the invoice date and set the due date to null, as it's not present. I've settled on USD as the currency, despite the IBAN suggesting otherwise. Now, the next step is extracting the monetary values.\n\n**Populating Invoice Details**\n\nI've got the mapping done, and I'm now populating the details. I'm extracting the monetary values, and tax treatments, and things are lining up. I'm almost done with the main fields, and now need to deal with the line items, which should take some time to process. The description, quantity, unit price, tax rate, and net are needed for each line. I'm focusing on those now.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now putting the finishing touches on the JSON object, having extracted all necessary information. I've double-checked all calculations, ensuring the line item sums and the total match the invoice. The tax calculation has been adjusted to match the document's value, addressing a minor rounding discrepancy. I'm satisfied with the consistency.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1774,
+   "total_tokens": 2092,
+   "cost": 0.0181375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0181375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01774
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1261,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.54
+}

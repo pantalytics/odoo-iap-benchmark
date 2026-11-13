@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "GL HANDICRAFT & TAILORING",
+  "vendor_vat": "001945532736",
+  "invoice_ref": "CS 10217",
+  "invoice_date": "2018-04-09",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 98.11,
+  "tax": 5.89,
+  "total": 104.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "NONA M ACRYIC YARN",
+    "quantity": 8,
+    "unit_price": 12.26,
+    "tax_rate": 6,
+    "net": 98.11
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 98.11,
+    "tax": 5.89
+   }
+  ]
+ },
+ "cost_usd": 0.023404,
+ "raw": {
+  "id": "gen-1794513473-l7iHtWrlvKSE4DTXVioX",
+  "object": "chat.completion",
+  "created": 1794513473,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GL HANDICRAFT & TAILORING\",\"vendor_vat\":\"001945532736\",\"invoice_ref\":\"CS 10217\",\"invoice_date\":\"2018-04-09\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":98.11,\"tax\":5.89,\"total\":104.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"NONA M ACRYIC YARN\",\"quantity\":8,\"unit_price\":12.26,\"tax_rate\":6,\"net\":98.11}],\"vat_breakdown\":[{\"rate\":6,\"base\":98.11,\"tax\":5.89}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date as 9 April 2018, going day-first since it's a Malaysian receipt. The totals are 98.11 before tax, 5.89 tax, and 104.00 overall. The line item is 8 at 13.00, which comes to 104.00 with GST included, so I'm checking whether that printed amount is really before tax.\n\nI'm settling on the net figure of 98.11 and a unit price of 12.26 (98.11 divided by 8), since the printed 13.00 includes tax and I want everything tax-exclusive. For the GST registration number, the digits are hard to read, so I'm going with 001945532736. The vendor is GST-registered, the currency is MYR, and the VAT treatment is standard-rated.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date as 9 April 2018, going day-first since it's a Malaysian receipt. The totals are 98.11 before tax, 5.89 tax, and 104.00 overall. The line item is 8 at 13.00, which comes to 104.00 with GST included, so I'm checking whether that printed amount is really before tax.\n\nI'm settling on the net figure of 98.11 and a unit price of 12.26 (98.11 divided by 8), since the printed 13.00 includes tax and I want everything tax-exclusive. For the GST registration number, the digits are hard to read, so I'm going with 001945532736. The vendor is GST-registered, the currency is MYR, and the VAT treatment is standard-rated.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSjgoKEAgTGAI4AUIIdGhpbmtpbmcSDAV5j+zhF1rbIOOq4BoMYfLX9iKLU4j4GjXfIjBjPRw+k9F68lsgavU7UgtICW+vbiGlVBXTF2xtC/9r1w42vwBPSXPXvyMcRUMLsEEqqwmQwd4ZicOjXOnQZNOgV/wQsMmU+1B7awI8fCtMxsAdWV+2p1xDxFhEY7Z0UdxMvgP/ppBDJm82N/2pt6GNV/J8mHTTXYNoGJF+gbbRPijqR9g74GNTqjgTMdRIhkrzxXb+j9sB/AbrRO0wAJfjVYsZo7sa08Occ6i1DGCopASMmXY5pIgLwdhSuyBcS2pzGeiJWO/RET44GOSMsnzQ8/o4ITFt1YMVm/D0rT8qEraHU1dtnsykz8zwLMG2XVk3/Rs4uLd2WZAouesf7UBKhSajrph+0ZbXeHXS6CUatG5E9AQlxuYjP6+wnsLj5fTnl7yJZRg3CoFzLCvADrAdB/JTXM8x2guc0vsrD9vesuiJXWXhUbPHO/N/I67MvQ2rRB9SJNqm+RRMG89PZlg+Z4NlVhx8T9mm6h8dQoL+8UzyPc1EDZ/UYc72porL9xqh9QGChEc3IbZNd00vHUv4Wtbu4/skZVAgcPG3O/XJxtNEnr4bA+hiAUEjjhh4vSglRp/wWYuHG3molhzVuVyU27TMT8tfffg0wznCBZk7tb75xPg9pvi5PUBW9ae6GziVkAm60mvRVoFzH31XzqceleqJ0AjtcpOj9kOYzNJ5DABXBw720lAOVdEsrI3JATplIE7Abb3DnoB78da0AsQfZAI1ICU+l7/L1Xk/rH8ZcqLurGHHUZnW/5mmksEpatNM0Wc7jXkfwxeFlFdMhzdAnaxx8M4IK5PfItWLztxelz1FMylJsCMg+bjs4NcqAusdeyq9eXoLhgRZtmqueaQFIiBcaZN8sHH5VAGR0B8eWMnwScyAc/klLL70c+nCSlotdvvUOI64TdE9ms7GDxcpI+w9ct/7XW4GdFdbXvUUmhCwo6KJxz/cKoCase/n3stoChz4TSpXXZB/4wSTCMG2igOJMqegW8YBavJ33jZuiFeRVuxmyS2EeIR7WRdJS/1dntU5wtYRwpicAbreVsr15i+9few464jPTYIbWHYDoi49NJExn+oXqnOAlc81tY8w6bXzcO0+642pkiWLRJbv2sjWROmkwpx4PF0UiI4NJuhtEx85CWIbkJHt+8P184QVtjQwACqKd2rlzJ0IK/NwKJrCzEb3BhD5p8Y/k2XSC4abMVVmJuJYjn5XEFYwaPLwZy2MEpMTLqcRzeJS6TPnUjgHXYyMiT2QtqtOfeOkttwWqxdBSxPXyw5TyxJAgi9zfo+izfwY7Qzwq3Fw27znpzOouARb8k+yMnzp8BN4iXgq86E3RRU6VXNHEKs44lM1uugh/Vnw4F//yns6Fi7Qlcqifu6BY8JG1N/GEyCmQIWl5Z7QK7z+w/9PtLrybQ7XlJo6F30DxFZHhn4veFSgPrXLLgHNysEbJMkXM0gL1ZS5qCj/FzdJjzi3/PrQdf2IKfLM62ZKPV1cOuSo4TYdiIe6tBoqkszl0vJ3/0HlA2Jgz7IovRXrvawDUg4Dw1nyAWt0EvRU9T6L53IhB5Cr8/Ur7amkgB7Ydg3versxnbsPlCDbAnaq/Ib/jG+LlJ7nzi0ZncVIJJWAIcSBE0pCCti+16pwhvQ3x5OeHp1QqBUPSqv6CW5gdRLIZyf6GAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 534,
+   "total_tokens": 3715,
+   "cost": 0.023404,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023404,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01068
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 319,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.66
+}

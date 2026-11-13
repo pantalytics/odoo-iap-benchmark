@@ -1,0 +1,143 @@
+{
+ "pred": {
+  "vendor_name": "SOON HUAT MACHINERY ENTERPRISE",
+  "vendor_vat": "002116837376",
+  "invoice_ref": "CS00004040",
+  "invoice_date": "2019-01-11",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 327.0,
+  "tax": 0.0,
+  "total": 327.0,
+  "iban": null,
+  "vat_treatment": "O",
+  "lines": [
+   {
+    "description": "REPAIR ENGINE POWER SPRAYER (1UNIT) workmanship & service",
+    "quantity": 1,
+    "unit_price": 80.0,
+    "tax_rate": 0,
+    "net": 80.0
+   },
+   {
+    "description": "GIANT 606 OVERFLOW ASSY",
+    "quantity": 1,
+    "unit_price": 160.0,
+    "tax_rate": 0,
+    "net": 160.0
+   },
+   {
+    "description": "ENGINE OIL",
+    "quantity": 1,
+    "unit_price": 17.0,
+    "tax_rate": 0,
+    "net": 17.0
+   },
+   {
+    "description": "GREASE FOR TOOLS 40ML (AKODA)",
+    "quantity": 1,
+    "unit_price": 10.0,
+    "tax_rate": 0,
+    "net": 10.0
+   },
+   {
+    "description": "EY20 PLUG CHAMPION",
+    "quantity": 1,
+    "unit_price": 6.0,
+    "tax_rate": 0,
+    "net": 6.0
+   },
+   {
+    "description": "STARTER TALI",
+    "quantity": 1,
+    "unit_price": 8.0,
+    "tax_rate": 0,
+    "net": 8.0
+   },
+   {
+    "description": "EY20 STARTER HANDLE",
+    "quantity": 1,
+    "unit_price": 10.0,
+    "tax_rate": 0,
+    "net": 10.0
+   },
+   {
+    "description": "HD40 1L COTIN",
+    "quantity": 2,
+    "unit_price": 18.0,
+    "tax_rate": 0,
+    "net": 36.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 327.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.049755,
+ "raw": {
+  "id": "gen-1794514182-jCqcbjRSywtfHVRDiqet",
+  "object": "chat.completion",
+  "created": 1794514182,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SOON HUAT MACHINERY ENTERPRISE\",\"vendor_vat\":\"002116837376\",\"invoice_ref\":\"CS00004040\",\"invoice_date\":\"2019-01-11\",\"due_date\":null,\"currency\":null,\"untaxed\":327.00,\"tax\":0.00,\"total\":327.00,\"iban\":null,\"vat_treatment\":\"O\",\"lines\":[{\"description\":\"REPAIR ENGINE POWER SPRAYER (1UNIT) workmanship & service\",\"quantity\":1,\"unit_price\":80.00,\"tax_rate\":0,\"net\":80.00},{\"description\":\"GIANT 606 OVERFLOW ASSY\",\"quantity\":1,\"unit_price\":160.00,\"tax_rate\":0,\"net\":160.00},{\"description\":\"ENGINE OIL\",\"quantity\":1,\"unit_price\":17.00,\"tax_rate\":0,\"net\":17.00},{\"description\":\"GREASE FOR TOOLS 40ML (AKODA)\",\"quantity\":1,\"unit_price\":10.00,\"tax_rate\":0,\"net\":10.00},{\"description\":\"EY20 PLUG CHAMPION\",\"quantity\":1,\"unit_price\":6.00,\"tax_rate\":0,\"net\":6.00},{\"description\":\"STARTER TALI\",\"quantity\":1,\"unit_price\":8.00,\"tax_rate\":0,\"net\":8.00},{\"description\":\"EY20 STARTER HANDLE\",\"quantity\":1,\"unit_price\":10.00,\"tax_rate\":0,\"net\":10.00},{\"description\":\"HD40 1L COTIN\",\"quantity\":2,\"unit_price\":18.00,\"tax_rate\":0,\"net\":36.00}],\"vat_breakdown\":[{\"rate\":0,\"base\":327.00,\"tax\":0.00}]}",
+     "refusal": null,
+     "reasoning": "**Extracting JSON schema**\n\nI need to extract a JSON schema that matches the bill details. First, I'll inspect the image, noting the vendor name, which is likely Soon Huat Machinery Enterprise. The invoice reference is CS00004040, and the date is printed in a dd/mm/yyyy format, confirmed as January 11, 2019. There isn’t a currency symbol on this Malaysian receipt, so I’ll use null for the currency. The total sales amount is 327.00, with no tax shown, leading me to set tax as 0.00. Something seems off with the totals.**Determining VAT category**\n\nI'm considering the GST situation. The tax column is blank, possibly indicating a zero tax rate. I need to infer the VAT category. For receipts without any VAT mention or GST amount, the VAT treatment might be \"O.\" Since the goods are in Malaysia and outside the EU scope, using \"O\" seems appropriate. There’s no line tax, and the category isn’t printed on the bill, so I’ll likely use null for what's not specified. I'll have to decide how to categorize the lines and item details later on.**Extracting item details**\n\nFor this item, the quantity is 2, with a unit price of 18.00. So, the total amount is 36.00. I see that both S/Price values are the same, confirming my assumption about the unit price. The net total comes to 36, which makes sense given the calculations. I should also consider including the item code in the description as printed, since it might provide additional clarity for this entry.**Considering VAT breakdown**\n\nI’m thinking about the VAT breakdown. If there’s no VAT summary, maybe it should be an empty array or just one row. The schema indicates one row per VAT rate. If there's no VAT, I might go with an empty array or a single entry with zero tax. The VAT summary isn’t printed, but the amounts suggest there’s no tax. I’ll want to include “MYR” as the currency, since the vendor is from Malaysia, though the bill doesn’t state it explicitly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting JSON schema**\n\nI need to extract a JSON schema that matches the bill details. First, I'll inspect the image, noting the vendor name, which is likely Soon Huat Machinery Enterprise. The invoice reference is CS00004040, and the date is printed in a dd/mm/yyyy format, confirmed as January 11, 2019. There isn’t a currency symbol on this Malaysian receipt, so I’ll use null for the currency. The total sales amount is 327.00, with no tax shown, leading me to set tax as 0.00. Something seems off with the totals.**Determining VAT category**\n\nI'm considering the GST situation. The tax column is blank, possibly indicating a zero tax rate. I need to infer the VAT category. For receipts without any VAT mention or GST amount, the VAT treatment might be \"O.\" Since the goods are in Malaysia and outside the EU scope, using \"O\" seems appropriate. There’s no line tax, and the category isn’t printed on the bill, so I’ll likely use null for what's not specified. I'll have to decide how to categorize the lines and item details later on.**Extracting item details**\n\nFor this item, the quantity is 2, with a unit price of 18.00. So, the total amount is 36.00. I see that both S/Price values are the same, confirming my assumption about the unit price. The net total comes to 36, which makes sense given the calculations. I should also consider including the item code in the description as printed, since it might provide additional clarity for this entry.**Considering VAT breakdown**\n\nI’m thinking about the VAT breakdown. If there’s no VAT summary, maybe it should be an empty array or just one row. The schema indicates one row per VAT rate. If there's no VAT, I might go with an empty array or a single entry with zero tax. The VAT summary isn’t printed, but the amounts suggest there’s no tax. I’ll want to include “MYR” as the currency, since the vendor is from Malaysia, though the bill doesn’t state it explicitly.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h0Wa2pjDOmRjxNIAL5xe-JUt8HrPXlu3tPCWf3U19UKTxzOfvPsQdIGQKuEUa-1vUKg0ekTviIH_NNbvkVE-1PzTVnDCZ5wH0v7amWFzaty2exlcMo081qII07R6UPmy_g96L9Wagxw9Jvy18TwGHGM7vPkJEQRpyBtCh4XS3_Yl8u7_YhtvbXnH03JC1IQIGcmEXx3ZLbqRqY5VvQy6oKnjSEjwQRb1Yf5PIcnh_lUSYSNnvVRUcB2RfCT1yIvwZvS2WtzLmarJngZtnHOe91z1O482IgCluq1U8jk3KzfC4EMBKDbf1-u-L5LTG_t4Sh_tS78FDstquVaVPBkVslvOh7HiM4t8iAsIkanEoEH36kYuSAnvy5zRvAT1gblcwwkHwz5IsreG0g8ppMmYzszhaxWzgIoJCZx4-W2cUSOtWqIXGtGv7eZQVb7NwfHa8woW58AfMVIzhR72WAKleZTguff6Lln_WdoR_b9FyWSm85ZSIgrfuaqJCEeTYebs18aUsYQjCr88peOsaiCMPmlJ8rZqe9XfhBxWv0kZhQrNXlX3c4REzIeUlVq-XAkK6aomw1kWhyCaGF3y7dCkD9S-q63FDnWvOOXVhbANOgmLDDbIGl4CE2d_lFl4H5w7ZZidAe2iJu2pm165sxIiRcd9Q4-tOesLGXcCLASltU7s0pf7HOjiwTx5myW7xmyOHGKHQdhZOLCiG8xoxiPe5OhER32rhn7KCUvSqOcAwvZHrXGRCc7OtGdZBnU4NsWDCqGniDODCR9hELRP8Wab7020kPxWJbSn76F-JUQO3MTIh7DgL02vie51qTrvXeSdqHXnN8R0Wr7P04s17hZIqBE_7DqEGJ4gsAuHQi9Tc3RgZXQM0JJpwVBflukmVutjWbHOTnniWFrFns90oodgNHj80Y3Xtr5AHmGFJrD-6Q7ICGbI6a--doXGdHmUmhEHd7kj1MZHimnRkvyPWpOetj-sgVpYlRl9ss3ip-cSrkeMuBww6TKB0p_iy2X1YUuz1UsvvC0yIXj0-WuaaI3U0i6aGS_BXz4LvKird-GHQsQcoLe_PT0ujyt-j_FQE88liQ_lX_Bmy_lU2p4cJ6m3zjb9dQE5IztEzVBg4zZdks0Nk89TS7TeoWjuOVaBomm7HPD9n89cSbZhxKLVJ8rjsdgYOI5PkYlBcuXF2GeFgXoX72Gtd68xwrtSl65gWSE7H1heskZvG4WQZEuJkCBGhxLHqRi3SGxO1lojHloZMtsGatHm05hBg5Dbc2TOvmcmDmXxPnSj070nKBymWVcHQ1JEfYziaNBdIdbzksqai7fZ2sokc6kLZWDrBGVOvX1aCBvfwtetn4IF8Nwuu6wT7UyoJJkacALmpAjF2uao3SomTWvopbqV4TmrpVglaAsMz0ok-hSZ7WRSZ6ovDO0w8m9-k3PR5MiMBll8-L9Ssk3UtPydYHMYFKwECOO18B0rg4nNfOBJ4pCkCOSgsN5tMaREMvbBBlh4riK9nxHa0zl7yD5f8CZ439elrcMFXLz6TOd_3Qld_yL_w0qJMC6mBdyEUzJqZF7h407QicvgYVSveck0Abj4247UxrZkBICoBn1ADPITO5e9jmVZDmRZWKqJKJJt7OqWR9nxO9K27Pc5gITG7UvwoB-x_1xMH5MIK59O8VbTkysfc0t5WC8dhWpweXyyYIHDpyj1bcUGaFjzZ8UU-ykVtTytGa0xYXkvZJXAGh7dJqxyrtABwPgMACULUSaJKATZ6BzgTbCu4Bv4mI7wBcJdWCO5eR_hYCWS0TE56J73JoZIJ9nWfoR9z2Q39Hr_NwEle_jZPIosFVRqbHHgYh_Osyj-aNK2FYAfEUOJ8hwgsIPtM9NhbL5FCz1RmSWMdtKD-jVyUVUArIJ1Sr-95pR8lBJqLjp-qqsuG0ejSrvPMkZda68hRcdjPBgMzJtP5K_DAyVCvqFVLU8keAFCLQzBqI4FwCT-9xqJyvlaNuvQV2rpGnsKgfViDsf7GVr8BkK89I9jb-5Ptn0abSRq31tdwH9UPNe40A_ngWNi2FrFVDFs1DIuJpgOH8gNAQxbIbKD6f5iZQpLPXu2QTHtFEgKndVzig4gaZxLP1c4Uy4LGwgoE7U103SjWvW4DAzXptBlh8irQBRV-fQ945JKqiO-JtNSJWRnwViXRBQm1QLcbVs7OXz8BBogY8pBKuI6YZRHpPVXetxTVppK2_ihx0P7y8NEsEni0KCtY-j6eEOdc1fXam_DZ1fhCCRZzFO2lyZHIqSbSAeb74zusvab15KMQCVebCiPCHG1RRsPj3eNBoS9NUzI2UnhS8ynVHRe1QGah812_v8RqFAWgntToVBFG6GeGy_LQID1tl0eCqOSSfGFyZfmZcrwr33NJ2IwP-rC-8VSTliDJczqktMshrHejCKIYQiJKJIRZhgZRwosugKATY0G_NAWtuG4zhMrl044LJCiBWI2YloDfnGXPr936qNhF0NAFsUum3pUSxu-Nm6NugU2rxjYQDk4Hh_XcrGV4eSzH0uHMbf8DNIAvGKxSOxwH20VpDCsG9YPV7vTbHwlosnOg_xQ0faCehEN0tGWhK-o1Rw8l6sP5oSU4x17na2jT6iCnuDQQ7bXBG7XRUZz1ot-HVHDj-pAOHT6ixAV-hyjV3OvdNFJo0I4y2XEXDiBNwDLNoh1cbbap2_3Oklf_5IcIpf80T9PeIhy4RKbXxjZBq-XIWTyBwFny4Z1FOLmVvcuKwWLjoSlUpuYqvEQIHjihpT25lv6CdIDKc3J-nCJid-m9kpLbPDSnjDazAt63e1iHw5tEIF0cr_7gT4JHuXuT73quE3HW7pAn0bohqBSp3ZUCkHk_COoAb5SeaaSmeDbTM_PusV0V6F-7O8CXJOH8Hy1f7qrxsSx84WtMep7SvIHuC1dRnwuY4lVj1L7CaxGnHIShm3fJ12-WRIbMfThXayCOcTTjDbuOwBChD4B2qjD-bEMtuVRyZ1uMVyloQ4E-PCbWqMz0VvRlOhB3gTB1Rr9bdnygFWfxD6UUj9bbAznjCjjmCFcslYgEoxKV7KFCVYc3QGdy6oOtOsfSl7cleoif1j9j2THRntJGgy1_xgrDwxq5y3pmW8HqpIB-PmKJn6ZN8WlYVHDw387grnwJ9_zAc4vlpm4tvW16RqQ8sHJXqOV6X5nLjm-eqn1yNsi-K8t2cxPDOp7WTTLqGUnrP0Ax9CEOKK19WtwfmYbxmCb1r3Jtb_HAX2IaiI4qBQiiqEQa3vYmh11eKgTlfjLE_1a1xiPEDGO-fY2jQxCm9jjaRanCpDE_x3E1I2-oa9JDcMayOT7e-bOKF6X2qnS5UXz78hNBqyXdx8CM6Mcy2sx4pREJG0-a-zdBPF1cm8WrDocwxP18smk3vYrIpccCLOQr9bhTNxzQe-4U-Zfs2LJn5GoNuYciu0oPWDIZl6SqDl50eiMG8eEPGkcIBtmtulc2raF7DBI-Cgd7AiZk5yZY1fDktkIBBcrMaA6_Q7KZV0i8SzoniqWh0jJmNUbHZ7XN3ZsPmaox6NWSqL87wM6nzmMRChgZiQ2vzHP7ud5FoDUUgG2XeKNK3U4EZ004gA20EF2foMzO1go5bTRbPVFdhrvTkFUoOyArOQVawoFw-94kQrN28-VuudPycnrztquG33Aw1LNQtDoLDnn7mmGQgGoBmI83M_EAFRzODK55ovhPESdMZ-_5bNWqy0rcFM3AyZPL9UfPtIfTym6hQMW0_XGIrTf9emLsz_yzJWM-tTTsQ_7VC8PzgC5Sp3JLiYFstZrvrYKHS2GoorIJEOui3PybwAD64cJqZ7PVVoiGpkEmvlwU6SCh2wuRoaj3yH8U1VM7-b5AJ4iCeFRyAke7284FHehJSzlWkiQbwuh44KLmMlLH2BoPmfd3Bp4fJ6HmifsTqOsK9OvD31Ke8o2bIg4AKg_6RFC5Y04jNnWJI8IX76mwYxx9wxROzGBqsiIMrl8F6ZX4hBi8_x7CnZsKDf3bIVZ2b7CP26NJGUmZjI-giuJAapwAut8FI6NwpVVji5jx2lRhpVpk7-f8ZAUoY0WCx44RnnreYfbQxGlrWnNsFNbsaz8QGOuKiu1pDIA4lyA5Q_qOSGE3VLZUwJSrqtkmI_3ZQu6MIeDbKEoneqHce-kjH0Equje5lXM4y7CJpPuoH45yQhLrkkz2CH5sd-6JBTCDmxuaa6ROMnAx-83ePomgnSEvXk7cWvtljjxzGpM49_EnT7ZO09upwk74NvPVfIt6JEgeWOhPPFgrq9WqriGmWRqQhnTiPtHsZ4KOhGJYT8zkDg2I0PAOYuAzBLtnDzOsn2oZq68uoIAExjY_zvXCAOe1iTxhw6zm9LPZ7OnVVPvt6xrVtxHLigh60QC247a3RGqOrr8LDIollkuGT0nx-qlRsp2DWUMixFFObfc2MEdvkQRyMEqV691UBgNr-2MgFjaBYXEHfRiowgm0_BKrNhUbLgh1i3EyuWYJ7Vd79uTTjS0f4IYRZNTF_qQihydhiCqpesvjq44-5DYdyIDlLOIewoJpr0fO9J5Sj4UGNaFbtIQoYt5oTPguGA_Dt3YdapyTJnmMPp76d-nqISufFbivkPvjdjdZq5gWKd7mU72b55g4iHT55h5y9_YEdLlEp4Pk4sjyFg9-1qRZMzpk9i8sbxPMAj-ea8UhOF7Q6nKt0rqQz536t7sYO9JtWfIo8DhXs4CwfXAd2PyoUrT80Vad80Ll0Oftj8bGff6uZLrTfPtL45WQwPmIwK9M1vcaFzrDEgSVQgcRk_U2PjRqeTG-7c8375Utl1Yma6HlqqjzVQrFSdzsMPA5DEO1_C9fSdAVFG5LRmKpxQmZnb0Zm2nxojuNLzwp09ikAuVYvHfZwvAlpPEYtWsGOxsXfhn2JT9W3FD65lEW8gAlnbbUwz4mAJ3jeJmumrTaG7Xf_7v9563PBLKFWjZdMsWQRSJoW82s-LjCekaCvKMqfsvYiK44p-8hNSKr5-zt1QViToR7vTKU-MZU5A6eCFHVmYm85DwWRRXGb0iafZ7_UMmRK_Lbk80OuhK8KJ2QNtu9gcFh5KQBZonO1MLwjZgsBUMEiQuCXxnWYMXzktfe5flDPZwTLSpdgXbm818VSCgT14H6phNu5qIdk4L81yjA_UUSVza0lGPN5RGU6CwTA56Phc5eX1-xJUrRKx4BrzOYPAQdDyBNnzOvOY-TpsHP9Bfv4_v_vDkvlGaogITURdt2ah_dNjvJrIfBZzR2dC9UCtKe8QvFynp3jFo9SzFNOvIVwp86ZmuRxqAUzcEXdFgEDB9G0ItCin9FY_fAgMlKByft2T8aW9GHxZGVbzIqGcLf50oLQteKzwTnrytd80HquoTYtikxYLLNn8zyfvthu9itUfTKTfdvGx6L14Wm45wbxuXH4lNfRaKREw60GyZw7vkXDU55-yAnEFIKjpNDkQ7nGEOWmBqTqt5Nv8pW9R7PFJVZBK6s_YfV0bKDPAqS9RilLI1Aj-S6CI5o_fjnssT0ljcGxA9B679hNIhDpUpVnzYpTepgyBd9SFouk3GHYoPrPXc4ODSCxFP-tWVLeZBH9jlUxomYlM0yiGeEvvfUvK4KmJpybeD9ZK3iwAhKialTQbNF6eo0TbD5mwWuTrEcXEdrEhAntMVTqN6O-gpk6PLlfDpKFGuvayW0fBJYeNI9rX5Naq9IaKIr7xlmtp3mlPM7jNb_a0nacM-EN-BAsXrNMwUc-Tm--WugM-yEViGmjx2iTnuxH9iVF6K69jsq-PPsWuyr7-IC2f7NoSv8lr3iCct7X2w8P6DpwmyklmkmnFDe2vqO-EoyDnWLXZ3lUkmjEoBctdj4XLZeevz4VmmDZeG-IWmsnrHykpJp_dikd7akBI5MpMPqYBcsaCGGaVsogvccDClQT0aa5XYs5JETrCM5XY4rZGai9dfUID-Ld6tyaaposSbRod3LIVZmyYpduy0s6nriDQFI9R19T9k_THeWyIDFfkev_vI0r-L2Ng3yW7KR4ZMWuWitmAioB1FG3OvJbOmcEjPgTAQyvF9Fd4Co9Es7vFyTuNA5vSGzkPF3GL1mxpn110MIebgiUSmm8-QU-SqW99vkdzEdy1PohdXYxyPpuHyCLnbK9HRq8oW4UZL7TV2-G6-jgJxJDdivBYS_PWgj-XrtYPOX7SNmkJq_ZOaMBL4vLTgr95suW50B99MDlsKyqLioA7LDy1oZlju9CZwFwdCjS_Eij8BcH-zi6peHETX1YwDZBFZL9yb0ip0Ag4SRpP3h_A3kXVJ6WMQPBZdXCZYfC0_YHk9AAvmqqXtuOzGg7ZwMIMGLB2YOPTvE6S-f5wdkfZvnKXDyPowtwKNEzqa1ROX2d-Jbo3Vl0a2TvdzCoZbrKkTt6SzwviPyvJ6Rhp0N4WQeI8rF-Sg3zX3WMyIn2F6gZML5WaYCTnoxHQqkggpWL3CJCmMR1bh328OBdu6rs3OWhNiKfLzB99lg2frhgivgGFtl8h51W7_o7BSy8ZuAlkDDRbpzwSMaH1AUfY7hgWh6Vmww73bebB90gORxGvn-nRuoh-AQutuphsEXnHv5l6HTz6V7vNDasje0i8sWamHumX6ADMdGL6MsJhd6aQX54mvf0JPgq4cQhxKCEzNELTcqMbbx07Gd2ytZKb8Sp5u5xJlLPG4XIRM89CIBzjpKdY4PJpJISHLWOCexuwY0GBUsA9UxKj48NR3se8SD7D1490En0Btk3kxA52N1BjxSRLMjLZr8IuLGj4n7nJB1g96NR5FWLC1f-z1L4PTKpEdvxjGOLp7cxh96djwx7jzBv2tb89iydr2nxuAJARb8dNvMZcaWbzZ5iOoQhdrxgEL8ZYgT1aCB2NCFTqGSd3tN_zELXhXpenSLxUqDCxpJS78IirOsLb3Ul87h6aX0KH-J5paFX9sEW9pEhwvCqUCUDKcBuTnOGhj9Nkl6vxHhI_8fLynkcm6oE6YEmmouja5N_H0_D56A-nITmMuEsQD2gdSly3mqfwIwknKtY3ifW95__mB4cu7zydDTO8bBXOLaH30clXlPThJGTr6o6Lvi0QoVo1wdgdH15PIonMDJNRZfQe4hIjA9aabFrS5MhVP85ZZjK97fb1RYqFBsthxOS-lFG01y4-3nNDAoQvsxVJqNwBkUQzHbt2-6TcQaBEX8wS4wogeqeRQ_B3098TCV6ynsFOmoMuFqM2epXtBoDT1gonC9lRATvgSk7fdLIdVf8yvB9O3HUnN2FZh8eFOOQpJhSs58_2VhP1UVLws93Q9fiBMYX_5-XOjk4eNfBvN4qtHA7c9JYIj1vtr-G2ABGItPfSDefWvXPT17QjlvtFqPm8o8-dW8_uKqfA8dJVo7Bs7QRuy-PDcmh6l6WMu83G0crMoGQAWgZYDQyjGrPaXO8_Q12Bhlmxom6JZPVpTuo1x_p4fYh6-4_2OE1mc5QoVYm0CuEMFA2PQXvxLhhaXN1UTuU5pJLnHLm6mxze1Frl74HImC5tYaozFu7tH54DnBODnD6Y30w-Dxo_WxWtxkA4V8hdQI6eDgqw8yq78plh_WftC1WLqLyVslW5826kWY0RL91XATlwN_GVUA9JBwFHpUPBH2YgLilnjxRJM0JYnQutop84oq_D9Cn8EbpuG_79g_DysKhihZMwHS9MnRrud68dgCHr3D6gaTM2YQsTzUzcYJa6TrUWKmnJ-jBBzzwgkYBQ6xlmesxcuiBofr7YkckcxZ7bfAMIcIwGsCi8Wel3XOtyql7-hDIL2pie4psxyOAicfCTTBrE2CxF0lZIpGGJXeMZcMPw0KRbdIWr6CL5Zi23jy2lJ0_fk1_ipzb2dk8DlCHF0NPJxIzvWFL-AWqL5sk7Zh23YV-OzaBZt6j8awZx27b_3RywLBl5NLEccOje73-ia4OJ6KWrHrjDryRTCCHFkLlGGof-WXieXdeSD3kD7PGY9hae8CbDXIWCDqKowiEe2LD0Au7HufZKQIGzPWWm9T4iLoTNG2o53eWM5l-owBTieks-lXxBCUfSXjQvKmBwZRzjpmT1CSRiI2XHXWPKaIart9uwudPmxJSkKg61-KJ5WHJjRWnx5J0O_CqqcaCMvmfGKG7rJZM9ZVrwLd8esKccRo8CV3XPHzyZxy5P3qdwvkpe7foDP3dbBoZZ_Jmx_ZS6cMKoLou52s1DbrQ7GfYTvgJikmoiYy392QdZuxOiRIcvAAVDMJCjkGfGRaCO4i4EqMQDXIFKugn9Q8HdR7nzj-OHo9kGLKIE8xmli0dTWwHx2xaDnXF2na4kM2WIQyEgs3hRDAND51fHst8MJuVcj0d3JY4snjDpOVMyoRDKp6gYjft8SQbrYN1Pw_2ShrlxdlGzrIVQeY7tkbtdqlhPsVFid69vMf_tD67xU2tbfrsby0JgWqS2Qindq4TWmYHfGbITWwP5YbSklxEUGxF_VKmis7hzoPjDx1SghpSead-BEuNOD9COq0gU2LjaPbnlmVEDwWy0sha7PKg-VSW-bFZK5KyaImRe9cJBR8L2dHd59LG9YjM7lKgRJAdGHJZZkPKdwJquu0asChaSXb3H3r1jszhgL-s_VDnXKY6KcUpvfZmGKfNRLxjtupVIwIL0_eVS5cvCsxzUIzINSwcG2zKaqEvyiFa95VQjASFcezMYrraHI3dXNQ7nTwxitlW2AOMSSSp0PnE8ceZtvx5y1qtjz0JF7vXl_5aQta3spnUhN1fLKOeKze80T7QgWbHihgPTutpkcUiOHV2-ymhe9ORSMyEXUHh3IQ8OgMzC3V7uDP41oy6RjpVfSo697Q3cdE0TwxA2qRrlYQYb3fE-wziYtCOeAQ8HJXgu3YxFy89tcMmCGp_12bd1iii-CL4LOIxmXdIv4vipUZhjpOnFajuZP5LUQP2XN8ZmONl71sCZMGLlv7FbAmdKgRLmBnLbwkX6-JaI5VHtDT0wVUUJqrq8bIMr3ueIfQpofoW647cKEqycRBQjjOGolPgUzpaSVAo4CIa-wjfuorgjFYenHa7xT9pauCRtNJu3OgSTg0aOdecENcoOhXAdaEs7uv0vlKzQ_INVImEPjdyZy3s15a8nPVi3iMbvN2tmKQ15SLu7SYBPWDkLA68-rGTvBU-YdjpJIa_a-_r79XL-7q3wTgREMuaoHJM5G3HayWPw0UjbxsHekbLmEp2p0YoWiq8ewYnl3hIYqMqv6Yso1Txra64XFrLQK-LLxrotvXUyiRq6MdnVeYiXK9MwNca3gEPtsPt_XOo1sDJB_TsbIAW5-Qz3rZ54wWhKJ-szx87uWD2RJ8kRhNiviXjHf2jpe8ZkiWqTs4ofY3Teox_EPi2KAOkQnSJDfQKye96Nou35b_bvLo_liWSCrz477KgmSjwI6_-a367f3dnvQJAjIVkQ3h-Bb7pk0JJ30CZAUR-BHFn5FeTPkbVjxTBSkaxQeBZn77Hd-P3t4LkL1TcEI8th7uQV5kAKCeC5qaVW2Squa1U-t2f8Qv2l9lVqL5rdhsPuXE6E3wQpe-3cZfEPCSEFNRh1GNwFn_rUe2p5nmUBnq1m5-iYEnwV8A9tNxGrNWSaNEyqne1eSNetdjMInWe6LQIUbMa6xcVYqKjWjIgGggnnWaowytfrJV-DAGk-S-DQu2s50pMjCrNu9iWRT3SxzjBuoVQgvRPI5JOWW3Q1-IqS4gs1rQWjVCPHLQ2-OePt-sMZNOErP0Pc6Q1gcsKjGBnm7sHAlhyi7y3x9ASky3ZMIHTE6d9ZmIJ4fgCKIiCiVGVNxKqXOilxA9OaYJmjbuo2n8OtWH83Dl7qu1mB5091AcopouyOnmEvREsJwxtGm-2SwKFb669LH_avsD7aD9ufdaGFZyYU1xMGxwUNHz2xD1e5PU6bDexoHV6uPyaRgR1AnsoN70NlLDeUtoWPsDcKk28Ctg563Ef_Aa0Korbwa-ERm966zu22leBOYlDUcb2zm6oYMAghmOwvFW37q93ijGMVl8s5ssR9bJv82Ibj1K6nh5sxGwk8FVzK28U376QCL-TxRg_dQgYbLC4p2Ni4HPAxGWHjsxEdlsyMnYqsmS9nMuJBkJa8kHH106-EeNSLF3ZXr4TkdKvu9k6v3mxRPAv-ppHQjVMMncEZgd0YpPFuyvbjhJCqougiKcRe1LemdY0taXmHvjJoCB6X0zAI5YG7nzYKXwDhKpuG0fXGUrDuUKmtRyr1txblfZF9lSm_Cf6esNdTjSIAzA2SFD8_r6lRHQTVR97dFBbAKeYL5y7AWcfgnmLYmQxckdiYNs5XYUkDofPaCXaLBJ8cjyhrZl_xApA7hTICGiuIbNnxJ9Q07bydbFloJUFu1NlCh-ueAP4zltCJ49s424JcJ8E3GZlZvqKE7r5a_MlgGjLv_dfx-mo20KfmVkgsTWlH-ptzleIath5xQ65lXz4V8yLvVSwKfbER5ews-gJYPo4SVcKDVnnMJNVOMHEtd9ed2ctz7ZxZ4JDNwuP7-t_-_aRKSIWsgwNCPt8D4cWGJ4jNzM-DgdOGABUormVkX1V7EkwepdyDmEP8afaJWth70uyReOAmAvLV8Ok-fFtEKWlayujNMvXOJpNeT7wmXJR7YOTZqIGgrtCsnKkqjRsrOa94y_9B_5ckytKi3cJqlJNg1lgwS437su8H5QjeLFLDicBZ2PwvU2rLlrSLtgR3dG1PT_AYy1IQqr73qICLgpkLEDa2nhf5nN2hPfG5dX7qjC0TUKPjC42j6SwvFqh9gaQZh-6JUBYReiBKk7fcobFHXbyvvqhilmLKqaX_6RqIGe-pXsXDXjaoQ5i6m-IcqKUk0BP7EXWG8F5HCnV2L4F4eV3R0x63tRjqyP4B1ouipLzcTGSdnpaDECLNEUqdXNM3oVEVeRlPE_duu0crcoDhoMPwl6Di5iASOFYbF9AREXOlLBvWwQnouMP9Py8ziKLz6zh_PAIUnjhHbGOXzbQ-rKEvXb7Gk1rK1o5dgtgkLOGNjV8E9r5rM2opfHjNrsJGzjSKRB7SzefGbLUn--mR2D1B1C0xw7CtuwpDROeRWLPVxlKfJeyicjyZYnUlSq3Xj0C8SgypATn3TtOBHpc1PD2DcLgNcZT8f8e7i_zoy-C7VF27wWauLdOh6qnfi7j4xG8ypxckNTY31teRU9LRQ64EzUhaFjtPo_RwIb_3v9yGm4yIJJiXvloKRa59iNMgLBlfxXI0aXJ61qOwv0U9nZdWqaiTEAo6OM-ROPO4Vx99WQEkXT4UpmTGK1zs1hGyMol8XbzwTWZ67RyI-ROR_FtabzCKexo2jMaxE3NjMNo_sCxiwcgNPGpATesofXiCoPQWHcg0mO_A-vUyY2O99_S9sUpKa5-_62Og9ly0NOIfgrS35G_NOTgwDjcMPNfYB0xny9LfqBiGyx479N5fIXoNrBkkBf0jeOQD3Bs7a9HpNXwRl8DR43b2f3WZB5lJU3sg0nXlnwtxWWgzai-MECiEhySdn-GtQSXYK9scwkYoyFE3Sr4f0po5HhOrVsNnkIP_DsqMbaEAS78S7qrmiRqVxkYGq6QgORlKqscdHoKZwmhDpUThoqKZaJVOXJTUZViNZubbf3Zi9C9zTKHgSoQTb2ef3BRLmBP8gqkrrb6qujlSaeIWEDD_32SGh2xeX8IN-VUz53fJxaNgcaMPmOPmEKQqK6SSnnnyujChFa_CUeV9voKjSXLowxAzfBqiGstmAXbWFSP5TdTxgmSEYSFuXssPvqfnTO9xyNcH7mxYrR3KNvJRcLFbwRxwyMFPcjaJxc-FzWIXTMSgEnXuVvc2wPfD1BaHQ5FTh9FL7EDv94_nPDKdkMYHIYITLsvl3WgH-qeLBdBdi1J8Bb8_kIA9R9QzDYzNB0jwCQJcwVSuMOoEXNfbmJmt0LQ6sXi__sfEK1T7aXnE7K1vWj5KnkzrvOS8ofUECP44va793dzTD33RS9BaJESSMCFxjR4Fy6_IQpxyfbfqJQg3rAsgqUSC2v8NaMUrEoZ6nCkfFBmzlIon6lQOxtZcIhHWWqTrt82VGKYT0SdybnI-wTqLgpmJITAd0SDoZyM6ixfgyR1SI78Mqm66t1RE4x1OlNfQRWmM2Hw92AWQ158qFsKYwoerkoI0nxb7bLoSr-rOS7SKd9rPUc-LiNrR49WuQZON4Az8IXK_DfTEFq5YZX3j4fIIhxR_7nZj1kGED3pdpjR1L9lmurYYXdk2ahO3DUurIRfEUbZ7RFcMbLqfaxjKnyb27cxwOilZxAb1iqTk7du4gK2o-vA2tz21I0uKGDUsntATjAyBzHRw4Lt247OXRAz42qfInUPLoqztm8blZ6SJuGGxwNXje-rTf2fNOvLv18937HvDFFLLtF7lHX4lJLTvfgd41HaPQeqEyKpOvvNz0P3EyMQeKZSqxiUwunQc18GUl-k5BCCfc814rZrWJzlqFbKtGhRV02lKNglOmeujOg02-il-Vs50aqIJRaViEV8pMfL3SoH5maEt_X-eD5_8O2FzE6aQeCYRt3_9bfjSGLXXUSpNorHw4gA5xEQBLAPN1tfj8hqiooneA40JWVSocHxV1BEcfijfIA8H3u7RFXsR84QGzlB3Co-dqT2XeCP94ekJUnNwJV5av8s_Im2rda_GY_-K9hZALsizYJshaPLS78L3tO9rwjGUqcfaU3ZkzYJbshjuCRO4gCS9ZByP4PNbFa8-Zdm4ejEMcZ4HTItEwr72PBohVJFKlmcCRzPR0YjXXRowE8vJHQhhRIY7onVSGP40zL5mrbRBtKwP2sJhcIuxYGBbuZ1HAqxBA1jjUaqAGMWxIUC7-DL5O7JgosFrtHTpfGE337wZLxRPkz3YpIXiaLqcdf-2Vrsb-_QJEmeDkruw2iQjpJUFe2AdPDPjOigIPnZsUeX45oU4tQzsng3gcmwx5ra5rbO3YRa2eovOY34x1BgNrU1h0xw40lRVlIDAjyTjiqsAXRDDdXxc828SuV_NZysjVqjHaPPP7DFIwqfXIpi5zwpDDwLD_xt16aQSXH1tZhIy6_TPBLL55gzWPgpFMu4_6ZgZ5npTqJzWuQz5bJD9gfPV3F9fHb1Hj_idWbrkOpo7L-XQb3HsI-rhSfSN_66LeIXhQXp1u3C-0lJS6A6-LL45OIMr5Bl2nE22-UF6uNq1oCAMli2rCBWL_Ipc8KPQceLs01EUsrLLByVk_OEswb39YuKdvM-1I-CeDH8Y7ULQYqBq4XxKq630_PP43BF-H-XrEm0riNyOrC1DrBtYf34VtSxK0zsS07mxjwSa1jFZBeYeikZQqe2IYZ9ChFoh4S2QspZka3lIKdNs4r83ZV6x7SXFEfamnoN-bajLxCKfSpLRS_MYrH4JVJgIex6Lf90pbcQZxlM7Faz50N1TzUfqx-xwtuTWPJmq9v-jYtZNxY7OPGG-0ZBViapo4PHt0GsTAL_8UJ43f_ORG2p-YnovdFMsoZXwh7oBZhdUeJKRwkSv0mWtsdQPK08YTba8Ki4IhOUCljcrXcY9d8_o1HYVSlUsGe1JePWe4K-iK1n_wKTaUjfLwt50UGEwg-F3Jlg1Znn1taDHbSC5Rsg7ng6LLNf313ie0MjD1mrjzkbgIbFwjbCiSZmQ5GPn8VjHxlH1CYWoBvso2buuQ5nRdHX-YE2Ns1hjo9g12dmzyW1vWd2QF131NRiH6wK7jf9v9dI1BFrsldmlUIyfrH1EIeWbMlyfH-fEz_iGHjqtpcO4VYjomh_PJ6YmPRSVqoxh2MedYLKSAmCUgoMRhJ9Q-APnxDyZukkuif6vwtDvEZNYv-C8-DXPwifRt3V8c4Acw87SKE6T1X7OBnFojxi4F2S9bJfj3TNi1OFjaxpoTaaHRWO2hlSsOOROjX-tMl7bRs8W0GyVZ3NMFqxxXmKmP8eh99LPoTVnTC8r11MJBATlWZe-ETSlkxttFTelmTIslipZSWbNpmrbdyMe5gKqWQ485iXvxD7znUWo_hb1M-GRtkF7USKNvEcJbbru7-hSTw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0e87c9e87efdd7b2016af61d075e9487d19439b9ef1c3a41ae",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 1408,
+   "total_tokens": 2911,
+   "cost": 0.049755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.049755,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.04224
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1034,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.73
+}

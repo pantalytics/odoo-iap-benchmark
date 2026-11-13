@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Arnold, Mercer and Shelton",
+  "vendor_vat": "938-99-2312",
+  "invoice_ref": "37995856",
+  "invoice_date": "2017-05-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 79.98,
+  "tax": 8,
+  "total": 87.98,
+  "iban": "GB15WYGM00923783631136",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300",
+    "quantity": 1,
+    "unit_price": 59.99,
+    "tax_rate": 10,
+    "net": 59.99
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 79.98,
+    "tax": 8
+   }
+  ]
+ },
+ "cost_usd": 0.02213,
+ "raw": {
+  "id": "gen-1794515282-DhsW4TLSwCG0ebi1vZMU",
+  "object": "chat.completion",
+  "created": 1794515282,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Arnold, Mercer and Shelton\",\"vendor_vat\":\"938-99-2312\",\"invoice_ref\":\"37995856\",\"invoice_date\":\"2017-05-06\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":79.98,\"tax\":8,\"total\":87.98,\"iban\":\"GB15WYGM00923783631136\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300\",\"quantity\":1,\"unit_price\":59.99,\"tax_rate\":10,\"net\":59.99},{\"description\":\"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW\",\"quantity\":1,\"unit_price\":19.99,\"tax_rate\":10,\"net\":19.99}],\"vat_breakdown\":[{\"rate\":10,\"base\":79.98,\"tax\":8}]}",
+     "refusal": null,
+     "reasoning": "**Parsing invoice details**\n\nI need to extract JSON based on a specific schema, focusing on the response format for a bill. The invoice is dated 06/05/2017, and I'm debating its format—could it be DD/MM/YYYY? Since the vendor is American, I might adjust it to MM/DD/YYYY instead. The totals show USD currency, yet amounts appear with commas. I need to clearly format the tax ID and determine how to represent values correctly in JSON. Overall, it’s about ensuring the data fits properly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Parsing invoice details**\n\nI need to extract JSON based on a specific schema, focusing on the response format for a bill. The invoice is dated 06/05/2017, and I'm debating its format—could it be DD/MM/YYYY? Since the vendor is American, I might adjust it to MM/DD/YYYY instead. The totals show USD currency, yet amounts appear with commas. I need to clearly format the tax ID and determine how to represent values correctly in JSON. Overall, it’s about ensuring the data fits properly.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iFZchQbmgRd0i0198Aza49UDSY98k-VdvqW8tzH79WGY_glKCIY_TTIINL1hRxCwi8KQv_c2SJsPhrKqbaz9asu8tUnZ8PshcSSLmIOniv_8W-m5rSQ3sZa0no_-oPmc0ky3rx8_A4JwEOttgMjBCcg3erPOOiU4TDvNmF3OHM9VNW6nY1NeJ6zcPfCz449A2krVM35g9IWy6SPhTyuEhYT1aGWGhgbTYYs1ubDYbsDiPVgbDGsuC_wp5Amdb5ygkui_y1kyb35WkIH44og01W-W7P6CjXkZibWFG3u8NGivpBYVepjg6cQRNVZltJuHmFsvrH9vvwX3YM1yeNAJFaYYDHUYX77A449IrblLL6dGnsmgEy2yMBcVKiK8vTzJu4jSt0_1v4M7UzR__1UHqzeC2FmQhFKWbG7r-yPBGJQzPywCJplfFIKJ7iH7pZkfwNONguaV0GzmsrxHd05YYK3UJcPg5oXnsTHcoK23xVMbyRs4G3vL1HoM0Ic4zjpL2t-C1GbMgstqVtgkNtLc6jedvEgg8HPnE7HfhUJhC3AqTodQQ30xtLKQiyGgG6fn2xbtVXfHHh2iK-vUNidMIxijWRsvV8BF4BXvoxAWdRpIB2dT2RWxp4DBw7ugDAroeNG6Nw5TM98QELu1mqvWoiMcf5AFCbhw4td7sYspEowQFuYUnQa3VZWVduNNoy472zHnqXedBOwna7dj4SYIr35RmXVbVD3v8cCh_gza8lgR0YTAPN_Rbtbujwb8jsYmaA_J-Wj9-EGK_gI7rkh8c7OWLpqF2qsPVrWVXhmVmIp1LXgEjjrl_mG_iyzhoccdOCHL5myvzSZEQyxGNcoLSdEX_4Q6GB64z4KauNG3MLQa-IatXMnqPujZcCxLqRyGUuTucnB_oxE5MNGTRu2QCuxdN7gNBbmP39NKRYxYjq2yPo_YWnXIGcuyRay6a7HEURwCL0nr___I4mSw4-zsWTafnOqeX6Ruc2y4FQBi9ZptIrPg8CSK8oLCTJSvzP-mHzg7TIR201LkejBeXEGVKGkujHPoStBOev0dDHXQUJMzcthIQu3n24OUwWrIoTQ5aB3mPuE8boPI04P7wJG6HiYQyKPdF4haAJHJaHkotdVXlmk3o00qQm87zOxKx-W-4Pt-HZXIQTv2JMWOq9dthOpSyl-vNIv4IFlPMnab7QQLxfR99a3Fg3bNNCx4JoMAIg2EhGPTSaK8MYIoXuMhClkIOkKN4qH6EfYrKSQ4Wzi-m2iAEYS3RBSKVHO2IaSAJR7ryye-nWsRO20mR3nh2F3s_lxsCxzUmawWK1NW-RADQNjh8PDwGWZ21LLsYg9Wr9Jy0s539hwPgDBxFxrNqZyH7BNzNybM8gWlKtt_8F-JH2e1_X7jP_jt6yPZMsjNIZKva01dlHL8VcQy0ln58MtLG5_GSnmdbpfXVZ6Kya5Hhskz5iAYaS51Hid6UVc-6raB2Cwe651MKjOWB36zGJpaqTp7ehgpaLVy861ELGnMoxF_rZJzQ29EYfFMmnnD4Osv6RczGxKTwBjclbFFeziTTV2Fp8DFROVEj_4eXMCArUt4Ebq0XHTLE_UnHiYJdVSooLxZGXuSmwUoBg7xKheWIpUSZJE_WtUtk5bMAVyTFidJxTJ_v0oZQzDdsGaDoZhOQA4HOVyMzPUkCyR6vkEkNIMpfaTdsSI_V4YqYbZo-9APxp3jCDvXMbT3fB5fE-lorg7_TOa9HsZiKWV79BzQ6FGyvq4Gor3VA3N2Qsh0vA0WRLD4KqPtFYBk1K9BSx3GM-FEgTqhczsW7XYYMzpKIa6R1KHjuK6mHccGfReX-zHOOEK5cGBZ_htXwWJzb2KQ8wk0UZrhMRy3DXFDT3dmY0lqtkPBRxcAatobGMDBwj8l1mGtksECOd9fera0LRLTOmGPfwVnyzqMl2ltNThdPa0Fp1T6ZcF2SGP9Q3hm94IFi_YocelGRhaML4Eno4Dl3tgyf9rncB40WI3hm4ODB_H5ixZ_Lo2JXiqkZ5ObHj2V0Z3XDjQh8cTVT0LKq1eOzYFGhCoijNOgfIBFdS67_WrBwNd4rW15j9UtVV3hGaPTu_FRZmWrJNE0YVJM-Omm3fOwQ-bTuCsQpAEt9AZzQV9RLP979_ldWx8U1aUJzAPdawk2kZOXpm0ev0c4Hv_etOCgIex3d90QKWdyIDsueDgqlKebxLETyZp8FaY0U9-Qg6u7kwyBzrWwHKYrrqbbNut1wG0qb_DbUpgVlqCpqJ7ZIfWscw73ZYl8lG8NeLpsqO8W1JsrZzQsEibqPLsUzlpoAa18JGa0p8K-3sroLh1ZbXs7FA0ordgLUZeXWriRo9Z4_HUT2KExYEMHxpeaD9GaFh_scEPgk4o6s9Zgx-BcAzagt2xanu0WREmcMxuJ5DMLdDg1YLvJzphoGGevH_bVZmKozs6PLe0Aradxnx5KNAwqwZbebd0oX7t29jHQBsrwjvWchle_G9pEguz_7hwIa9bKM8UV70GBtJU7uyTB8VAFi5NImVGh8x6rKT8YvGbHbBZd-u-eNJBi82ZL6xWOBji-SapZ1HD0UNqX66CYOOMqjj2kdSPyxNa_vBrYASG6tpViET7w9wsqgaJc2BRliQE5jq7Km8od7R6Xb8CPQSiLB6YC_pWBXvdwWEPA1C_OHRrEUyE4kKIjLsxR0IlxSMrYTJYl0eWjdBP8QEklRvdjrmS6IgSmxtiS6mr8fm4oo5PsgnMXNS6EvJVQMsLPubUpUapFk3_eLE2RjCUADmbQzKPTOmJt4wbP9AX0GgaipvWcUKbnGB45c6xFwlWV5k0owYeu7JVbCbYVM1kxK0t8pS9KBgqowipBLCveJmdD4FtCbWcT2M452J5GzlJ8uaNhbT2gnm3PAyIUn26idNHgZ816GkqMMFbkfIUAYTaOa9Y-zdvWD0vngVRSuqyy-EvdFgWjDmXealbuKFvB1cBsAiIXNOeXlXAcVA3i_TrwZf0hvEyzJwIPnefVNwLTlpYmnTmmH9mdmWfIDAuJb_BEm4Dcvt9BOW5Y1H0Wfr_ovVN2CyKiy37q4wD0PKpeiBxOfOQF-Fi_oiG7Ux6lvnaF6Au4_zAv9rHOq5fPd5lv__MjBQrwQEd7PnVcnaiNrbEQ9T5eqTG6afsT6NcIyIjSvkLNHgqDscR82r5YHmedighFQ2wvJVTxhINlr-r6YLOE5C7YQ4yNEII-CnSTHB8EBTp3b8l9YqoaX0rq9G9sdcKqguQgLCKRUNROcpD_sa6fjfeKARDjAP9f05zljSwIE6iG8eXpvCwCycO3LjTJPub2vXdo2UIHracwq1Xe4Hps_sqsgrkfbxSkYMhADYKx0LM6OWiN-krL9FZeggUPXSEXezQfcsOj5JcJETaRlRr9kHx1sJLJgNXgYEGBSzPxWkl-ndwp_JBxtn-9GDE_zNFJ8RrZmXnDZOHLcNsMmyGoRZauQmgsOMUFNcppfIGWb0e9e2vvKhXtrw9HyMV2kf_kSNEZ-mSA-2_ARu9KYJAeBZDMu2U8YShJgd3heA8IM1St5x5pPr0scYO-_Qk_70lH_3diqjqVGLXJafX-5DryWxalOLKrFHAWWmJ-_3NiSMxEZiVEiSKv3a3UI4cGRdjwnZ36R-ykqA8qdMbLqSy2bL7VYXQmyaWiwCMtLuf5vfAGSh11lfm9z2PwwFFOzTAIyeJgKpOPPmDY6lYztoUny5ttErZvdXpsEFpzy9BmF8NnImwekSwDLJoHziCPAXlJwe0MxrN3d8CojTvlEzyaGaa8f1frVwk7NT7PP3xALVfXhysTj4ZSUbR9d-q_LkK-TSxQahgIguSL05nbErjDviMiN4p4t9Yeuae43FGtYh8gdYV_SNf75E6OAM5gGnSY6W3Z9Dw4MoFi1HHrUVP_LHjD1CaPKxPuRQSuOciMC3KFGdkSUPD-eGzNuEKLMUXpIyQIf9mHjWLNnsTbCaTNBzUtW_hQk3UuFk-7_z6x-nX4Uob--3eK34k7Aw4g0gUqHiBh9BUDU4YHwPbFQMHk2h2Vv0PoiJwiJBgN3X8kp-XmR4PZXWPGrWJHUigyo71fFmrcGxRpuSXscYYJHONum50m4bCbyFPd4d7rYqWtcpbkm4nJJlzB_JLYKm8S6hRERQldQhC1DDynnDz3bheTiA80wI5WHGOOqArT1dv8TOp_S9Ic5U5psOnV4_PZVuIxuBR9LdFJp0DgKSgcyGFcYeoXrSjMoHZ2peIBAGmfsZ6QJG1LqX090wUFD8eOWUHkVeG0YwdFukcLSCkOCIngyfZdVH5uH-rujrOD0DkwYpAFQSG73kcsE_64xMkE1qC9PXBtvE0LGgCZjM0Cg699gPSM3PWV4pAl2cWvgW2t800UuBNOLCGt2g3A11P7kQ1o9mjpSpcLIdYMHoH7jV5WkW_bYFkOW0QkyZXHcudA_o-9ouXZLDFPgbVTn-ePJ4q9Z-0fdloj4TjWgtaeaHnlyoW8HHIJZNX5JZcfLaY9wPrWXO0Bn3H_MykmNhD6zJAP1t_1LVRqwqzbjmTmxh6uZaAIze11HSvRClQMD8LWV0RQocWa_HtwHBoIxhS2nLeieb3w_LIr1TUzwwUnScelTs_pm20dgR949RtiZazj2Htdyt590l6KLM=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_01d2c53903a97da6016af62153ecd087d1b913c965d87f97da",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 487,
+   "total_tokens": 1991,
+   "cost": 0.02213,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02213,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01461
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 279,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.1
+}

@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "7010385084",
+  "invoice_date": "2018-01-07",
+  "due_date": "2018-01-07",
+  "currency": "MYR",
+  "untaxed": 29.69,
+  "tax": 1.78,
+  "total": 31.47,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "70g P.Copy 450'S",
+    "quantity": 3,
+    "unit_price": 12.92,
+    "tax_rate": 6,
+    "net": 38.75
+   },
+   {
+    "description": "Stat-Great Saving",
+    "quantity": 1,
+    "unit_price": -9.06,
+    "tax_rate": 6,
+    "net": -9.06
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 29.69,
+    "tax": 1.78
+   }
+  ]
+ },
+ "cost_usd": 0.0466175,
+ "raw": {
+  "id": "gen-1794514065-5NFD2nSc89FoZjylZGb2",
+  "object": "chat.completion",
+  "created": 1794514065,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"POPULAR BOOK CO. (M) SDN BHD\",\n  \"vendor_vat\": \"001492992000\",\n  \"invoice_ref\": \"7010385084\",\n  \"invoice_date\": \"2018-01-07\",\n  \"due_date\": \"2018-01-07\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 29.69,\n  \"tax\": 1.78,\n  \"total\": 31.47,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"70g P.Copy 450'S\",\n      \"quantity\": 3,\n      \"unit_price\": 12.92,\n      \"tax_rate\": 6,\n      \"net\": 38.75\n    },\n    {\n      \"description\": \"Stat-Great Saving\",\n      \"quantity\": 1,\n      \"unit_price\": -9.06,\n      \"tax_rate\": 6,\n      \"net\": -9.06\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 29.69,\n      \"tax\": 1.78\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the `vendor_name` as \"POPULAR BOOK CO. (M) SDN BHD\". I've also found the `vendor_vat`, which is \"00149299200 0\". The next piece of data I extracted was `invoice_ref`, which is \"70103850\". I feel good about extracting these vital details.\n\n\n**Defining Key Data Points**\n\nI'm now identifying additional key data fields. I've successfully determined the `invoice_date` as 2018-01-07, and the `due_date` as the same. I've also found the `currency` as MYR (RM). The `untaxed` amount is 29.69, and the `tax` amount is 1.78. The calculated `total` (including tax) is 31.47, despite a small rounding adjustment showing a final payment of 31.45.\n\n\n**Analyzing Receipt Data**\n\nI'm now focusing on extracting details for each line item. I've successfully determined the first line's description, quantity (3), unit price (13.69), tax rate (6%), and net amount (41.07). The second line presents a discount, I need to account for it, ensuring the final net discount is calculated without the tax, as well.\n\n\n**Finalizing Invoice Details**\n\nI've completed extracting all the data points from the receipt. I've successfully populated the JSON schema, including the vendor information, dates, currency, and tax details. The total amount is 31.47, accounting for a final payment of 31.45. I've handled the discount, calculating its net value before tax, and I'm ready to populate the line item details, ensuring the proper net and gross values are provided.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now determining the key line item details, and working through an itemized approach. I've successfully extracted and confirmed that 13.69 is a gross unit price for the first line item, and that -9.60 is the gross amount for the discount.  I've double-checked my calculations, which confirms the discount's net value of -9.0566. I will represent the discount as a negative line item, ensuring all amounts are reconciled correctly.\n\n\n**Finalizing Item Details**\n\nI'm now determining unit prices and applying corrections based on tax inclusion. I've re-calculated the net unit price for the first item as 12.915, correcting the original gross value. The discount is handled, and I've ensured I use the net (pre-tax) amount for it. Finally, I've confirmed that the schema requires the prices before taxes are applied.\n\nI've determined that \"70g P.Copy 450'S\" is actually 3 units with a 12.915 net unit price. I'm now making final value adjustments for tax application.\n\n\n**Refining Tax Calculations**\n\nI'm now deep in the process of ensuring all tax calculations are accurate and correctly reflected within the line items. I'm focusing on reconciling net and gross amounts, and verifying the application of the 6% tax rate across all line items, especially regarding the discounts, before moving on. I need to make sure the schema is populated correctly, especially for line items.\n\n\n**Refining Calculations and Line Items**\n\nI'm now refining the line item details, focusing on accurate tax calculations. I'm double-checking to confirm net and gross amounts are properly accounted for, especially with the discount. I'm ensuring the 6% tax is consistently applied to all items, including the discount. I've re-calculated the first line item, and will make final adjustments to the values before moving on to the final schema population.\n\n\n**Finalizing Item Net Amounts**\n\nI'm now calculating the net unit prices for the items. For the first item, the net unit price is 12.915, and the quantity is 3, resulting in a net value of 38.745. The second item, the discount, has a net unit price of -9.0566, with a quantity of 1. All amounts are net, pre-tax, and I will be populating the details accordingly.\n\n\n**Reconciling Line Item Tax**\n\nI've made substantial headway, now I'm certain about the calculated net amounts for the line items. I have made net amounts from gross amounts based on the VAT rate. I've re-calculated the net unit price of the first item, resolving the discrepancy, and confirming it by comparing it against the VAT summary. I also confirmed the validity of the discount calculations.\n\n\n**Refining Calculated Values**\n\nI'm now focusing on calculating net values correctly, and have ensured that the correct price, before tax, is represented for each of the line items. I have calculated the VAT on each of the items, and can confirm that the sum of all the values in my JSON represents the same values that I've extracted from the document.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the `vendor_name` as \"POPULAR BOOK CO. (M) SDN BHD\". I've also found the `vendor_vat`, which is \"00149299200 0\". The next piece of data I extracted was `invoice_ref`, which is \"70103850\". I feel good about extracting these vital details.\n\n\n**Defining Key Data Points**\n\nI'm now identifying additional key data fields. I've successfully determined the `invoice_date` as 2018-01-07, and the `due_date` as the same. I've also found the `currency` as MYR (RM). The `untaxed` amount is 29.69, and the `tax` amount is 1.78. The calculated `total` (including tax) is 31.47, despite a small rounding adjustment showing a final payment of 31.45.\n\n\n**Analyzing Receipt Data**\n\nI'm now focusing on extracting details for each line item. I've successfully determined the first line's description, quantity (3), unit price (13.69), tax rate (6%), and net amount (41.07). The second line presents a discount, I need to account for it, ensuring the final net discount is calculated without the tax, as well.\n\n\n**Finalizing Invoice Details**\n\nI've completed extracting all the data points from the receipt. I've successfully populated the JSON schema, including the vendor information, dates, currency, and tax details. The total amount is 31.47, accounting for a final payment of 31.45. I've handled the discount, calculating its net value before tax, and I'm ready to populate the line item details, ensuring the proper net and gross values are provided.\n\n\n**Finalizing Invoice Extraction**\n\nI'm now determining the key line item details, and working through an itemized approach. I've successfully extracted and confirmed that 13.69 is a gross unit price for the first line item, and that -9.60 is the gross amount for the discount.  I've double-checked my calculations, which confirms the discount's net value of -9.0566. I will represent the discount as a negative line item, ensuring all amounts are reconciled correctly.\n\n\n**Finalizing Item Details**\n\nI'm now determining unit prices and applying corrections based on tax inclusion. I've re-calculated the net unit price for the first item as 12.915, correcting the original gross value. The discount is handled, and I've ensured I use the net (pre-tax) amount for it. Finally, I've confirmed that the schema requires the prices before taxes are applied.\n\nI've determined that \"70g P.Copy 450'S\" is actually 3 units with a 12.915 net unit price. I'm now making final value adjustments for tax application.\n\n\n**Refining Tax Calculations**\n\nI'm now deep in the process of ensuring all tax calculations are accurate and correctly reflected within the line items. I'm focusing on reconciling net and gross amounts, and verifying the application of the 6% tax rate across all line items, especially regarding the discounts, before moving on. I need to make sure the schema is populated correctly, especially for line items.\n\n\n**Refining Calculations and Line Items**\n\nI'm now refining the line item details, focusing on accurate tax calculations. I'm double-checking to confirm net and gross amounts are properly accounted for, especially with the discount. I'm ensuring the 6% tax is consistently applied to all items, including the discount. I've re-calculated the first line item, and will make final adjustments to the values before moving on to the final schema population.\n\n\n**Finalizing Item Net Amounts**\n\nI'm now calculating the net unit prices for the items. For the first item, the net unit price is 12.915, and the quantity is 3, resulting in a net value of 38.745. The second item, the discount, has a net unit price of -9.0566, with a quantity of 1. All amounts are net, pre-tax, and I will be populating the details accordingly.\n\n\n**Reconciling Line Item Tax**\n\nI've made substantial headway, now I'm certain about the calculated net amounts for the line items. I have made net amounts from gross amounts based on the VAT rate. I've re-calculated the net unit price of the first item, resolving the discrepancy, and confirming it by comparing it against the VAT summary. I also confirmed the validity of the discount calculations.\n\n\n**Refining Calculated Values**\n\nI'm now focusing on calculating net values correctly, and have ensured that the correct price, before tax, is represented for each of the line items. I have calculated the VAT on each of the items, and can confirm that the sum of all the values in my JSON represents the same values that I've extracted from the document.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 4622,
+   "total_tokens": 4940,
+   "cost": 0.0466175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0466175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.04622
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4293,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 37.38
+}

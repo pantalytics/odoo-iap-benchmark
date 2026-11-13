@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "TONYMOLY VIVA CITY",
+  "vendor_vat": "000349356032",
+  "invoice_ref": "8807946",
+  "invoice_date": "2018-03-29",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 46.16,
+  "tax": 2.77,
+  "total": 48.95,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "WONDER CHEESE FIRMING CREAM EAC [SR]",
+    "quantity": 1,
+    "unit_price": 46.16,
+    "tax_rate": 6,
+    "net": 46.16
+   },
+   {
+    "description": "DISCOUNT 30% EAC [ZR]",
+    "quantity": 1,
+    "unit_price": 0.0,
+    "tax_rate": 0,
+    "net": 0.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 46.16,
+    "tax": 2.77
+   },
+   {
+    "rate": 0.0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0422675,
+ "raw": {
+  "id": "gen-1794512665-J6VmS1hwxeziaMmKaVBg",
+  "object": "chat.completion",
+  "created": 1794512665,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"TONYMOLY VIVA CITY\",\n  \"vendor_vat\": \"000349356032\",\n  \"invoice_ref\": \"8807946\",\n  \"invoice_date\": \"2018-03-29\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 46.16,\n  \"tax\": 2.77,\n  \"total\": 48.95,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"WONDER CHEESE FIRMING CREAM EAC [SR]\",\n      \"quantity\": 1,\n      \"unit_price\": 46.16,\n      \"tax_rate\": 6,\n      \"net\": 46.16\n    },\n    {\n      \"description\": \"DISCOUNT 30% EAC [ZR]\",\n      \"quantity\": 1,\n      \"unit_price\": 0.0,\n      \"tax_rate\": 0,\n      \"net\": 0.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 46.16,\n      \"tax\": 2.77\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Defining Vendor Entity**\n\nOkay, I've started tackling the vendor information. I've identified \"TONYMOLY VIVA CITY\" as the appropriate `vendor_name` from the receipt, even though the legal entity is slightly different. That seems to be the key piece of information. I'm moving on to other receipt details.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting all relevant data points from the receipt to map them onto the JSON schema. I've successfully identified and formatted `vendor_vat`, `invoice_ref`, and `invoice_date`. I will format the `invoice_date` as \"2018-03-29\". I have set the `due_date` to `null` as it's not present. The currency is \"MYR\". I've calculated the `untaxed` amount (46.16), `tax` (2.77), and now calculating the `total` as 48.95 and handling a rounding adjustment.\n\n\n**Mapping Receipt Data**\n\nI'm now focusing on mapping the extracted details to the JSON schema. I've worked out the `vat_treatment` as \"S\" since there's a standard rate. The lines are next. I'm representing the discount on Line 1, recalculating the discounted price, and I've also added Line 1 with a `quantity` of 1, a discounted price. I've set the unit price of line one to 48.93, after the discount.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've handled the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, and `due_date`, and have confirmed the `currency` as MYR.  I've calculated the `untaxed`, `tax`, and `total` amounts. Finally, I have mapped `vat_treatment` and I'm tackling the lines, including handling the discount. I'm representing discounts on the item level, adjusting as needed.\n\n\n**Finalizing Line Items**\n\nI've refined the approach to handling line items, settling on a method that balances accuracy with schema compatibility.  The first line's details, including a discount on the base amount, and the calculation of the final net amount have been reviewed and finalized. The discount is handled within the unit price of the first item, keeping the model clean. A second zero-rated line with a quantity of one and zero price is added as a placeholder for discount.\n\n\n\n**Refining Line Item Handling**\n\nI've identified all the necessary data points, like `vendor_name`, `vendor_vat`, `invoice_ref`, and the formatted `invoice_date`. The currency is definitely MYR. I'm handling the calculation of `untaxed`, `tax`, and `total` amounts correctly, including the rounding. I'm currently working through the line items, and the discount requires more careful consideration and recalculation.\n\nI'm now iterating on how to best model and represent the discount on a line item. I have a working model now. I have worked out how to calculate the price, and final pricing after rounding adjustment, for the first line. Now I am trying to determine the best method to calculate pricing including tax, and representing the discount, without negatively affecting compatibility.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data from the receipt, including vendor details, invoice information, and currency. Now, I have finalized calculations for untaxed, tax, and total amounts, making adjustments for rounding. I'm focusing on crafting and representing the line item details in a clear and compatible manner. I am planning on modeling the discount on the base item for simplicity.\n\n\n**Finalizing Line Item Details**\n\nNow I have a final approach for crafting the line items to align with the schema. I've calculated the net unit price by calculating the price after discount. Line 1 accurately reflects this, and the total matches the GST summary after applying discount. I'm adding a zero-rated line item to represent the discount.\n\n\n**Refining Line Item Calculations**\n\nI've finalized data extraction and calculated all values correctly from the receipt. I now understand how the totals are derived, including the rounding. I've re-reviewed the lines and I've come up with a consistent method to calculate all required values to populate the JSON schema. I'm focusing on crafting the line items now. I'm representing the discount on the base item.\n\n\n**Refining Line Item Calculations**\n\nI've worked to extract the key vendor data. I have finalized the calculations and values for the line items. I've represented the discount on the base item, and added a zero-value line item as a placeholder. The model appears compatible with the required schema.\n\n\n**Refining Line Item Calculations**\n\nI've iterated on representing the line item with the discount, calculating the unit price by including the discount. I'm satisfied now, and I'm updating the `vat_treatment` and `vat_breakdown` details. I'm focusing now on the best way to represent the line items consistently.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Defining Vendor Entity**\n\nOkay, I've started tackling the vendor information. I've identified \"TONYMOLY VIVA CITY\" as the appropriate `vendor_name` from the receipt, even though the legal entity is slightly different. That seems to be the key piece of information. I'm moving on to other receipt details.\n\n\n**Extracting Receipt Data**\n\nI'm now extracting all relevant data points from the receipt to map them onto the JSON schema. I've successfully identified and formatted `vendor_vat`, `invoice_ref`, and `invoice_date`. I will format the `invoice_date` as \"2018-03-29\". I have set the `due_date` to `null` as it's not present. The currency is \"MYR\". I've calculated the `untaxed` amount (46.16), `tax` (2.77), and now calculating the `total` as 48.95 and handling a rounding adjustment.\n\n\n**Mapping Receipt Data**\n\nI'm now focusing on mapping the extracted details to the JSON schema. I've worked out the `vat_treatment` as \"S\" since there's a standard rate. The lines are next. I'm representing the discount on Line 1, recalculating the discounted price, and I've also added Line 1 with a `quantity` of 1, a discounted price. I've set the unit price of line one to 48.93, after the discount.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've handled the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, and `due_date`, and have confirmed the `currency` as MYR.  I've calculated the `untaxed`, `tax`, and `total` amounts. Finally, I have mapped `vat_treatment` and I'm tackling the lines, including handling the discount. I'm representing discounts on the item level, adjusting as needed.\n\n\n**Finalizing Line Items**\n\nI've refined the approach to handling line items, settling on a method that balances accuracy with schema compatibility.  The first line's details, including a discount on the base amount, and the calculation of the final net amount have been reviewed and finalized. The discount is handled within the unit price of the first item, keeping the model clean. A second zero-rated line with a quantity of one and zero price is added as a placeholder for discount.\n\n\n\n**Refining Line Item Handling**\n\nI've identified all the necessary data points, like `vendor_name`, `vendor_vat`, `invoice_ref`, and the formatted `invoice_date`. The currency is definitely MYR. I'm handling the calculation of `untaxed`, `tax`, and `total` amounts correctly, including the rounding. I'm currently working through the line items, and the discount requires more careful consideration and recalculation.\n\nI'm now iterating on how to best model and represent the discount on a line item. I have a working model now. I have worked out how to calculate the price, and final pricing after rounding adjustment, for the first line. Now I am trying to determine the best method to calculate pricing including tax, and representing the discount, without negatively affecting compatibility.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data from the receipt, including vendor details, invoice information, and currency. Now, I have finalized calculations for untaxed, tax, and total amounts, making adjustments for rounding. I'm focusing on crafting and representing the line item details in a clear and compatible manner. I am planning on modeling the discount on the base item for simplicity.\n\n\n**Finalizing Line Item Details**\n\nNow I have a final approach for crafting the line items to align with the schema. I've calculated the net unit price by calculating the price after discount. Line 1 accurately reflects this, and the total matches the GST summary after applying discount. I'm adding a zero-rated line item to represent the discount.\n\n\n**Refining Line Item Calculations**\n\nI've finalized data extraction and calculated all values correctly from the receipt. I now understand how the totals are derived, including the rounding. I've re-reviewed the lines and I've come up with a consistent method to calculate all required values to populate the JSON schema. I'm focusing on crafting the line items now. I'm representing the discount on the base item.\n\n\n**Refining Line Item Calculations**\n\nI've worked to extract the key vendor data. I have finalized the calculations and values for the line items. I've represented the discount on the base item, and added a zero-value line item as a placeholder. The model appears compatible with the required schema.\n\n\n**Refining Line Item Calculations**\n\nI've iterated on representing the line item with the discount, calculating the unit price by including the discount. I'm satisfied now, and I'm updating the `vat_treatment` and `vat_breakdown` details. I'm focusing now on the best way to represent the line items consistently.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 4187,
+   "total_tokens": 4505,
+   "cost": 0.0422675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0422675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.04187
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3834,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 31.34
+}

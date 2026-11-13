@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "LIVES PHARMACY SDN BHD",
+  "vendor_vat": "000988880896",
+  "invoice_ref": "CS00168420",
+  "invoice_date": "2017-03-31",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 11.5,
+  "tax": 0.69,
+  "total": 12.15,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "9555060603117 HURIXS",
+    "quantity": 1.0,
+    "unit_price": 4.9,
+    "tax_rate": 6.0,
+    "net": 4.9
+   },
+   {
+    "description": "9555060603162 HURIIS",
+    "quantity": 1.0,
+    "unit_price": 6.6,
+    "tax_rate": 6.0,
+    "net": 6.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 11.5,
+    "tax": 0.69
+   }
+  ]
+ },
+ "cost_usd": 0.0218875,
+ "raw": {
+  "id": "gen-1794512752-uFhkxKfUwEmBxJMwFIHo",
+  "object": "chat.completion",
+  "created": 1794512752,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"LIVES PHARMACY SDN BHD\",\n  \"vendor_vat\": \"000988880896\",\n  \"invoice_ref\": \"CS00168420\",\n  \"invoice_date\": \"2017-03-31\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 11.50,\n  \"tax\": 0.69,\n  \"total\": 12.15,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"9555060603117 HURIXS\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.9,\n      \"tax_rate\": 6.0,\n      \"net\": 4.9\n    },\n    {\n      \"description\": \"9555060603162 HURIIS\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.6,\n      \"tax_rate\": 6.0,\n      \"net\": 6.6\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 11.5,\n      \"tax\": 0.69\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've successfully identified and extracted the crucial information needed for the JSON schema. Specifically, I've got the \"vendor\\_name\" as \"LIVES PHARMACY SDN BHD,\" the \"vendor\\_vat\" as \"000988880896,\" and the \"invoice\\_ref\" as \"CS00168420.\"\n\n\n**Analyzing Missing Fields**\n\nI've determined the values for `invoice_date` and considered `due_date`, setting it to null as there's no specific date. I'm inferring the currency, MYR, but have decided to leave `currency` as null since the document doesn't explicitly state the currency, based on the schema and to avoid assumptions. I've also identified untaxed and the tax breakdown, working out the base amount.\n\n\n**Finalizing Value Extraction**\n\nI'm now confident I have extracted all necessary fields. I've successfully determined the `invoice_date` (2017-03-31), set the `due_date` to null. I've decided `currency` as null, following the rules. I've also worked out the `untaxed` amount (11.50), the tax (0.69), and the `total` (12.15) after the rounding. I've identified the GST treatment as \"S\" or standard rate. The lines are also parsed, ready for inclusion.\n\n\n**Confirming Tax Calculations**\n\nI'm now cross-referencing my calculations to make certain the `untaxed` and `tax` figures are perfectly aligned with the bill. I verified that line items and GST summaries lead to the values of `untaxed` (11.50) and `tax` (0.69) that I expected. Also, I've confirmed that the \"total\" (12.15) on the document results from the bill after rounding adjustments. The lines have also been parsed.\n\n\n**Confirming All Calculations**\n\nI've meticulously reviewed all calculations, ensuring the derived values for `untaxed`, `tax`, and `total` are perfectly consistent with the document's information and the application of any rounding adjustments. Line descriptions are being cleaned up and refined based on what makes sense. The lines' descriptions match. Also, I've cross-referenced tax rate with line items and determined that they are all consistent. The JSON is ready to be constructed.\n\n\n**Confirming Schema Completeness**\n\nI've confirmed I have extracted and validated all the information needed to complete the JSON schema. All the necessary fields, including vendor details, dates, currency, tax breakdown, and line item details, have been meticulously addressed and accounted for, based on the document provided and the schema's requirements. The values match the document, calculations are checked, and line items descriptions are cleaned. The JSON can be generated now.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've successfully identified and extracted the crucial information needed for the JSON schema. Specifically, I've got the \"vendor\\_name\" as \"LIVES PHARMACY SDN BHD,\" the \"vendor\\_vat\" as \"000988880896,\" and the \"invoice\\_ref\" as \"CS00168420.\"\n\n\n**Analyzing Missing Fields**\n\nI've determined the values for `invoice_date` and considered `due_date`, setting it to null as there's no specific date. I'm inferring the currency, MYR, but have decided to leave `currency` as null since the document doesn't explicitly state the currency, based on the schema and to avoid assumptions. I've also identified untaxed and the tax breakdown, working out the base amount.\n\n\n**Finalizing Value Extraction**\n\nI'm now confident I have extracted all necessary fields. I've successfully determined the `invoice_date` (2017-03-31), set the `due_date` to null. I've decided `currency` as null, following the rules. I've also worked out the `untaxed` amount (11.50), the tax (0.69), and the `total` (12.15) after the rounding. I've identified the GST treatment as \"S\" or standard rate. The lines are also parsed, ready for inclusion.\n\n\n**Confirming Tax Calculations**\n\nI'm now cross-referencing my calculations to make certain the `untaxed` and `tax` figures are perfectly aligned with the bill. I verified that line items and GST summaries lead to the values of `untaxed` (11.50) and `tax` (0.69) that I expected. Also, I've confirmed that the \"total\" (12.15) on the document results from the bill after rounding adjustments. The lines have also been parsed.\n\n\n**Confirming All Calculations**\n\nI've meticulously reviewed all calculations, ensuring the derived values for `untaxed`, `tax`, and `total` are perfectly consistent with the document's information and the application of any rounding adjustments. Line descriptions are being cleaned up and refined based on what makes sense. The lines' descriptions match. Also, I've cross-referenced tax rate with line items and determined that they are all consistent. The JSON is ready to be constructed.\n\n\n**Confirming Schema Completeness**\n\nI've confirmed I have extracted and validated all the information needed to complete the JSON schema. All the necessary fields, including vendor details, dates, currency, tax breakdown, and line item details, have been meticulously addressed and accounted for, based on the document provided and the schema's requirements. The values match the document, calculations are checked, and line items descriptions are cleaned. The JSON can be generated now.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2149,
+   "total_tokens": 2467,
+   "cost": 0.0218875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0218875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02149
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1819,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.93
+}

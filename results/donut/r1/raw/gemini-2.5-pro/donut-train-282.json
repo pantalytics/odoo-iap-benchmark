@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Kemp and Sons",
+  "vendor_vat": "957-75-0578",
+  "invoice_ref": "65673716",
+  "invoice_date": "2017-12-24",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 7933.79,
+  "tax": 793.38,
+  "total": 8727.17,
+  "iban": "GB33DHDN31437695958879",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Gaming PC Desktop Computer Intel i7 RGB GTX 1660, 16GB RAM, 2TB HDD, 240GB SSD",
+    "quantity": 4.0,
+    "unit_price": 779.99,
+    "tax_rate": 10.0,
+    "net": 3119.96
+   },
+   {
+    "description": "Desktop Computer AMD Sempron LE1250 No HDD No OS",
+    "quantity": 3.0,
+    "unit_price": 9.99,
+    "tax_rate": 10.0,
+    "net": 29.97
+   },
+   {
+    "description": "Nexlink DG41RQ Desktop Computer Windows 10 w/DVD/CD Rom Drive",
+    "quantity": 2.0,
+    "unit_price": 11.95,
+    "tax_rate": 10.0,
+    "net": 23.9
+   },
+   {
+    "description": "Intel core i7 Geforce GTX1060 Super Game Gamer Master Gaming Desktop Computer PC",
+    "quantity": 4.0,
+    "unit_price": 689.99,
+    "tax_rate": 10.0,
+    "net": 2759.96
+   },
+   {
+    "description": "SAMA RGB Gaming PC Desktop Computer i5 3.7GHz Nvidia GTX 1060 16GB Windows 10",
+    "quantity": 5.0,
+    "unit_price": 400.0,
+    "tax_rate": 10.0,
+    "net": 2000.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 7933.79,
+    "tax": 793.38
+   }
+  ]
+ },
+ "cost_usd": 0.0219175,
+ "raw": {
+  "id": "gen-1794512380-4IVYqfEo81SIn0RjuHN3",
+  "object": "chat.completion",
+  "created": 1794512380,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Kemp and Sons\",\n  \"vendor_vat\": \"957-75-0578\",\n  \"invoice_ref\": \"65673716\",\n  \"invoice_date\": \"2017-12-24\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 7933.79,\n  \"tax\": 793.38,\n  \"total\": 8727.17,\n  \"iban\": \"GB33DHDN31437695958879\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Gaming PC Desktop Computer Intel i7 RGB GTX 1660, 16GB RAM, 2TB HDD, 240GB SSD\",\n      \"quantity\": 4.0,\n      \"unit_price\": 779.99,\n      \"tax_rate\": 10.0,\n      \"net\": 3119.96\n    },\n    {\n      \"description\": \"Desktop Computer AMD Sempron LE1250 No HDD No OS\",\n      \"quantity\": 3.0,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10.0,\n      \"net\": 29.97\n    },\n    {\n      \"description\": \"Nexlink DG41RQ Desktop Computer Windows 10 w/DVD/CD Rom Drive\",\n      \"quantity\": 2.0,\n      \"unit_price\": 11.95,\n      \"tax_rate\": 10.0,\n      \"net\": 23.9\n    },\n    {\n      \"description\": \"Intel core i7 Geforce GTX1060 Super Game Gamer Master Gaming Desktop Computer PC\",\n      \"quantity\": 4.0,\n      \"unit_price\": 689.99,\n      \"tax_rate\": 10.0,\n      \"net\": 2759.96\n    },\n    {\n      \"description\": \"SAMA RGB Gaming PC Desktop Computer i5 3.7GHz Nvidia GTX 1060 16GB Windows 10\",\n      \"quantity\": 5.0,\n      \"unit_price\": 400.0,\n      \"tax_rate\": 10.0,\n      \"net\": 2000.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 7933.79,\n      \"tax\": 793.38\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Seller Details**\n\nI've successfully identified \"Kemp and Sons\" as the vendor and their VAT ID as \"957-75-0578\". This information appears to be extracted correctly and is ready for integration into the appropriate JSON fields: `vendor_name` and `vendor_vat`. I'm moving on to identifying the invoice reference.\n\n\n**Confirming Key Data Points**\n\nI've now successfully extracted the invoice reference \"65673716\" and its issue date, which I've formatted as \"2017-12-24\" for the JSON. The `due_date` field will be null, as it's not present on the document. I'm moving on to the currency, which is USD, though the IBAN throws me off a bit, it is GB. I'll need to double check how to handle this edge case.\n\n\n**Finalizing Currency and Totals**\n\nI've clarified the currency as USD, despite the UK-based IBAN. I've now extracted and formatted all key numerical data points: `untaxed` (7933.79), `tax` (793.38), and `total` (8727.17), as well as the IBAN. I'm moving on to line item extraction for the `lines` array. I'll need to parse this for `description`, `quantity`, `unit_price`, `tax_rate`, and `net` for each line.\n\n\n**Constructing JSON Output**\n\nI'm now collating the information to build the JSON. The line item details are extracted, including descriptions, quantities, unit prices, tax rates (consistently 10%), and net values. I've also parsed the VAT breakdown to populate the VAT summary section. My next step involves creating the JSON object structure to match the schema's requirements, now that I have all data points identified.\n\n\n**Formulating JSON Structure**\n\nI'm now extracting all data points and structuring them into the JSON format as per the schema. The currency remains USD, and I've verified the accuracy of all the extracted numerical values against the document. I have carefully formatted the `invoice_date` and validated the totals. I am confident in the extracted values. The line items have been carefully parsed to match the schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Seller Details**\n\nI've successfully identified \"Kemp and Sons\" as the vendor and their VAT ID as \"957-75-0578\". This information appears to be extracted correctly and is ready for integration into the appropriate JSON fields: `vendor_name` and `vendor_vat`. I'm moving on to identifying the invoice reference.\n\n\n**Confirming Key Data Points**\n\nI've now successfully extracted the invoice reference \"65673716\" and its issue date, which I've formatted as \"2017-12-24\" for the JSON. The `due_date` field will be null, as it's not present on the document. I'm moving on to the currency, which is USD, though the IBAN throws me off a bit, it is GB. I'll need to double check how to handle this edge case.\n\n\n**Finalizing Currency and Totals**\n\nI've clarified the currency as USD, despite the UK-based IBAN. I've now extracted and formatted all key numerical data points: `untaxed` (7933.79), `tax` (793.38), and `total` (8727.17), as well as the IBAN. I'm moving on to line item extraction for the `lines` array. I'll need to parse this for `description`, `quantity`, `unit_price`, `tax_rate`, and `net` for each line.\n\n\n**Constructing JSON Output**\n\nI'm now collating the information to build the JSON. The line item details are extracted, including descriptions, quantities, unit prices, tax rates (consistently 10%), and net values. I've also parsed the VAT breakdown to populate the VAT summary section. My next step involves creating the JSON object structure to match the schema's requirements, now that I have all data points identified.\n\n\n**Formulating JSON Structure**\n\nI'm now extracting all data points and structuring them into the JSON format as per the schema. The currency remains USD, and I've verified the accuracy of all the extracted numerical values against the document. I have carefully formatted the `invoice_date` and validated the totals. I am confident in the extracted values. The line items have been carefully parsed to match the schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2152,
+   "total_tokens": 2470,
+   "cost": 0.0219175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0219175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02152
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.1
+}

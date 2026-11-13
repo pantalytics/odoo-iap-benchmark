@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Taxiunternehmen TX GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "TX-471102",
+  "invoice_date": "2018-10-30",
+  "due_date": "2018-11-29",
+  "currency": "EUR",
+  "untaxed": 16.9,
+  "tax": 1.18,
+  "total": 18.08,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Grundpreis (Pauschale)",
+    "quantity": 1,
+    "unit_price": 3.9,
+    "tax_rate": 7,
+    "net": 3.9
+   },
+   {
+    "description": "Stadtfahrt 2,00 Euro je gefahrene Kilometer",
+    "quantity": 6.5,
+    "unit_price": 2.0,
+    "tax_rate": 7,
+    "net": 13.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 16.9,
+    "tax": 1.18
+   }
+  ]
+ },
+ "cost_usd": 0.01226,
+ "raw": {
+  "id": "gen-1794512675-90InqDXU8X21bt6tX5Lm",
+  "object": "chat.completion",
+  "created": 1794512675,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Taxiunternehmen TX GmbH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"TX-471102\",\n  \"invoice_date\": \"2018-10-30\",\n  \"due_date\": \"2018-11-29\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 16.90,\n  \"tax\": 1.18,\n  \"total\": 18.08,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Grundpreis (Pauschale)\",\n      \"quantity\": 1,\n      \"unit_price\": 3.9000,\n      \"tax_rate\": 7,\n      \"net\": 3.90\n    },\n    {\n      \"description\": \"Stadtfahrt 2,00 Euro je gefahrene Kilometer\",\n      \"quantity\": 6.5,\n      \"unit_price\": 2.0000,\n      \"tax_rate\": 7,\n      \"net\": 13.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7,\n      \"base\": 16.90,\n      \"tax\": 1.18\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm focusing on parsing a German invoice into a JSON object. I've begun extracting the `vendor_name`, finding \"Taxiunternehmen TX GmbH\" after \"Verkäufer:\". I'll move on to `vendor_vat` using the German format, then the other fields.\n\n\n**Defining Invoice Data Fields**\n\nI've got the overall invoice data extraction process structured. I'm moving sequentially through the fields, defining how I'll extract each piece of data. I'm focusing on \"vendor_name\" (already located), \"vendor_vat\" (found as \"USt.-Id.-Nr. : DE12 3456789\"), and \"invoice_ref\" (\"Handelsrechnung Nr. TX-471102\"). I have a plan for each piece of the required data.\n\n\n**Mapping Invoice Details**\n\nI'm now methodically moving through the required data points, establishing extraction methods for each. The invoice date (\"vom 30.10.2018\") will be formatted to YYYY-MM-DD, and the due date (\"Fälligkeit 29.11.2018\") as well. Currency (\"EUR\") is next. I am also planning how to extract the totals for the values listed.\n\n\n**Structuring Data Extraction**\n\nI've completed the extraction plan for all data fields, including the line items and VAT breakdown. I'm focusing on assembling the final JSON object, ensuring data types are correct and all values are formatted according to the schema. I'm now testing my parsing logic.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm focusing on parsing a German invoice into a JSON object. I've begun extracting the `vendor_name`, finding \"Taxiunternehmen TX GmbH\" after \"Verkäufer:\". I'll move on to `vendor_vat` using the German format, then the other fields.\n\n\n**Defining Invoice Data Fields**\n\nI've got the overall invoice data extraction process structured. I'm moving sequentially through the fields, defining how I'll extract each piece of data. I'm focusing on \"vendor_name\" (already located), \"vendor_vat\" (found as \"USt.-Id.-Nr. : DE12 3456789\"), and \"invoice_ref\" (\"Handelsrechnung Nr. TX-471102\"). I have a plan for each piece of the required data.\n\n\n**Mapping Invoice Details**\n\nI'm now methodically moving through the required data points, establishing extraction methods for each. The invoice date (\"vom 30.10.2018\") will be formatted to YYYY-MM-DD, and the due date (\"Fälligkeit 29.11.2018\") as well. Currency (\"EUR\") is next. I am also planning how to extract the totals for the values listed.\n\n\n**Structuring Data Extraction**\n\nI've completed the extraction plan for all data fields, including the line items and VAT breakdown. I'm focusing on assembling the final JSON object, ensuring data types are correct and all values are formatted according to the schema. I'm now testing my parsing logic.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 576,
+   "completion_tokens": 1154,
+   "total_tokens": 1730,
+   "cost": 0.01226,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01226,
+    "upstream_inference_prompt_cost": 0.00072,
+    "upstream_inference_completions_cost": 0.01154
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 823,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.08
+}

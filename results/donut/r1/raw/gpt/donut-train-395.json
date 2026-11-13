@@ -1,0 +1,129 @@
+{
+ "pred": {
+  "vendor_name": "Andrade-Bennett",
+  "vendor_vat": "959-86-0320",
+  "invoice_ref": "29378439",
+  "invoice_date": "2011-09-16",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 355.56,
+  "tax": 35.56,
+  "total": 391.12,
+  "iban": "GB79DVQP67S94826429760",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nike Air Force 1 Low 314192-117 Triple White Youth Boys Size 5Y",
+    "quantity": 4,
+    "unit_price": 54.95,
+    "tax_rate": 10,
+    "net": 219.8
+   },
+   {
+    "description": "The Children's Place Brown Dress Boy Lace Up Shoes Size 12",
+    "quantity": 1,
+    "unit_price": 8,
+    "tax_rate": 10,
+    "net": 8
+   },
+   {
+    "description": "Saucony Boys' Ride ISO Sneaker, White/Blue/Vizi Red, 7 M US Little Kid",
+    "quantity": 1,
+    "unit_price": 27.99,
+    "tax_rate": 10,
+    "net": 27.99
+   },
+   {
+    "description": "Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y",
+    "quantity": 3,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 59.97
+   },
+   {
+    "description": "boys bogs waterproof boots youth size 3",
+    "quantity": 1,
+    "unit_price": 9.8,
+    "tax_rate": 10,
+    "net": 9.8
+   },
+   {
+    "description": "Skechers Shoes Kids Size 2",
+    "quantity": 3,
+    "unit_price": 10,
+    "tax_rate": 10,
+    "net": 30
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 355.56,
+    "tax": 35.56
+   }
+  ]
+ },
+ "cost_usd": 0.03362,
+ "raw": {
+  "id": "gen-1794512443-3yULxhOQxY0BBBOeillA",
+  "object": "chat.completion",
+  "created": 1794512443,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Andrade-Bennett\",\"vendor_vat\":\"959-86-0320\",\"invoice_ref\":\"29378439\",\"invoice_date\":\"2011-09-16\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":355.56,\"tax\":35.56,\"total\":391.12,\"iban\":\"GB79DVQP67S94826429760\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Nike Air Force 1 Low 314192-117 Triple White Youth Boys Size 5Y\",\"quantity\":4,\"unit_price\":54.95,\"tax_rate\":10,\"net\":219.8},{\"description\":\"The Children's Place Brown Dress Boy Lace Up Shoes Size 12\",\"quantity\":1,\"unit_price\":8,\"tax_rate\":10,\"net\":8},{\"description\":\"Saucony Boys' Ride ISO Sneaker, White/Blue/Vizi Red, 7 M US Little Kid\",\"quantity\":1,\"unit_price\":27.99,\"tax_rate\":10,\"net\":27.99},{\"description\":\"Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y\",\"quantity\":3,\"unit_price\":19.99,\"tax_rate\":10,\"net\":59.97},{\"description\":\"boys bogs waterproof boots youth size 3\",\"quantity\":1,\"unit_price\":9.8,\"tax_rate\":10,\"net\":9.8},{\"description\":\"Skechers Shoes Kids Size 2\",\"quantity\":3,\"unit_price\":10,\"tax_rate\":10,\"net\":30}],\"vat_breakdown\":[{\"rate\":10,\"base\":355.56,\"tax\":35.56}]}",
+     "refusal": null,
+     "reasoning": "**Extracting bill information**\n\nI need to extract the bill JSON carefully, especially with decimal commas. Since the summary uses $, I'm assuming USD, and the invoice has US addresses. Dates will change from 09/16/2011 to 2011-09-16. The vendor is Andrade-Bennett, with a tax ID, and the IBAN seems off but is US-based. I'll ensure quantities and pricing are formatted correctly, and calculate tax rates as needed. Finally, I'll output everything in the required bill JSON format.**Analyzing table data**\n\nI’m reviewing a table of shoe items for extraction. There are various entries, including Nike Air Force 1s and Skechers, with specific quantities and unit prices. Each entry has net values, but I need to keep everything untaxed for the output schema. The total is untaxed at 355.56 with a tax of 35.56, making the total come to 391.12. I need to ensure I format the lines correctly as an array of objects without including gross amounts.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting bill information**\n\nI need to extract the bill JSON carefully, especially with decimal commas. Since the summary uses $, I'm assuming USD, and the invoice has US addresses. Dates will change from 09/16/2011 to 2011-09-16. The vendor is Andrade-Bennett, with a tax ID, and the IBAN seems off but is US-based. I'll ensure quantities and pricing are formatted correctly, and calculate tax rates as needed. Finally, I'll output everything in the required bill JSON format.**Analyzing table data**\n\nI’m reviewing a table of shoe items for extraction. There are various entries, including Nike Air Force 1s and Skechers, with specific quantities and unit prices. Each entry has net values, but I need to keep everything untaxed for the output schema. The total is untaxed at 355.56 with a tax of 35.56, making the total come to 391.12. I need to ensure I format the lines correctly as an array of objects without including gross amounts.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hZF_vFtftBYq7YHinqECuuezQ4E0Wlc9o8ySDDRO58cm_Q4gyHi3d0WSFWbnWv9xlSADXLLuY7dzKSisa2ejK9y0Ab6fFxOSA_07V46k_SkDqFQwzvWpmSPM5q_08pvokAGwHMIITTWwnJ716YrRMqbHAS4kKvsX0bPeYR55JC2AjvhxxwBFeKWfTq-Tronqzz1PWnyp_fCrvFQiFZnTWbP8T2SsFDgfmUtkkuL4gzrr9jc8RaHfvyrCYIrYVGHVowPBTzuXZlo6ytr7NDZB24g4utDaxV2ILw3TY5mSE1LuNzuhGS-5ALA1APpoeIS1zhrZ8L0CcyBqV4nS1c-DONPyP3wVUxPw2H1KnLlCqlvYcPWbFMa94cWr6mhgbRRAHe-Jy1celHzIIJb0zq6zny4Z4wHQFSf3GUEBN0GFWOFn_OK0FVsmprym8Z16m9n5lFMtAxjnLpF3BGUhb61Ip4rqqYuybFNB1kGoxiwws4WO_8T4kr3PHQ8OmWMYRHYxAFjvC3nR1i3BbS91TcO3EDu3ajcJLBoAP3CYnBdoVp-3_8BcRcvwm1JyjCn71Ar-iUGN56VB2GT2vM-QFCaRj_s9J9Ly2TWF_lxo4O8JA4uWv7D6LLUfDkw8-ejyi8moH0FTyDngK3_g68E2_ATPIdH4qnVPPOaVfDn6rZ6KSPTCkTI1XGz8YUETrtTitpJ6r4D-8W1IKBTa4nHrxPwzTLjsQThybqnB9YYkEwmZTwpb8Z6rVMfSiFe2WfvUyn3vIr2TgkRKgkeg5zz-80eG31bvDQ0uwadfwG8M2_UjqJnAwzoQC2GnUdHNfih_f-HbI4DMniPiAVUeUSdtEITJqzI1OJRlyvLDGelTDprF9bZyDTeMk8hYJV66WZGEFxiMeoOq4ciIL7DsHu621dlun2ZbkoPhVsssn24nAkHJMAUJt4Q5AAzTHho9X7h7Dp0Kr2C9I5s3bcAJ53tDt6F4yEJnwKJpb7Hh_gX1_7BGbGCSvZ1lthQuscl6SeMQ3mnVtOBEmOJ1ne2qfuEJeaXgoFwn7pv-ZM3W0TGWi9mDMBdeG1ll7BT8o44hYZE6_RLQOt90CC6fMlrGk3IL9I4eD5QKDbzx_0o52JPej_WOOYwZn2Nq3gDqY2yqT1FXmC8CK-az1MH_yhIvqw-FbugiVZn6paPTdgOMjZnWJALA6EBdtd8knbdweWGJpsC7yzglJunVehW23P3i5HZavnkiqQKzPYvPcFJpUxmb6FhLvUWB2s3P3PVfQkYLsisbvmSut_EVuki7TEiJwSSS7_jMjMv7wXwaD4jsFRMpZ-ouDD2SD9Im9ysgRl6WY7xCoJC5WeQAsuhcNQCHgJhAkXNwhSyKChPMeZEkJ-72M6uXvIMWHMhT_SXPAoARFR4o2BHJg5eDgQTUU63fZ9T-qhvHJ1larHBMSUSh-QkNJz7ZEbxh-LQUGswL-Y_5chjQyMUd6o281HRGmjg2ze4TT0oltgwp9Hx0Vk39pFR3I4nk8AiAKOgKi-kRqhP_5nvA9hd94TO3qCE5k95zuMHt6lUO5g0EELS6V-O_Jey-8thiEqgftWt9XLTs_biAPXrlNdX6byexbj-wkkLWF3Ef3KD3DAy2XAOc5VIQEkHShUJPzfNXO2yVyCEWxsOAJ_1qgBGmBsOfyg96HGIbd-FH0PtFShXZVUp0oI3zJ0CGF5ojfrWS1QkERbPzVfOjL73Q8164UcW2fXVogsOjRSHK-KDOQ85HxuXTioa867tYfDiUbwjAFhm2MvhPCa4qtaXy0vJw948g2OxHPJAZ71QCPt3kz4jgthjVBr98_pPUce8iVq5nQnk9vJj42oPGEFPbwTwXJM5LNLXXSKqTD4zXChx3_OIvuPpC1EKypcDrJywovDCD-Xbgmi7u8_b72kp5iqrwWNnYjkbp6fcNj5JkNcFfNY11X32XVwiMbGb-N_uGoW7ORg8sCuPhj6irZXdQ5p-qKrGGhbspD5d-B4UvsZEqccd73QpwKk-Mf6j4P3Wb6_PYGNEP-nsDhZt93dd52LiyHeP9z4Bwfh8__orNRBDeKTTi8zVX-u0N0A08qegKjqAUP8cACzTZWrchEleJtDbh9wUPAMEkqaKVyoX8mzrUPHXZWK6Qd3l-fe_qDhW--iKCnV6f00Vcs_KwdEN9Sy0pdUDxjnubQND1VpliiFYDz8Dcu1SzhUJpSRgXpJK9VFHxOYegLgMtaQwUTbn75A2A95-lxUVVraRvtmpQBw6RoFAm3OHLqZjYZYyvKrZ6rHX8GQiykcPHl3lf_Y0CNkAtxLwMKHgwEABk0P3XiCQjEGyaBi3Tnu41PusvyVR2eIoabx-ltY6mKt01ZoBBUd0UKyCYoUlOiZXvD0qqAhoJjs-AKZ6lYqT1X-PjVExJqDt6Nn7PHOvSSC4-vS9UFOHlyZiIL32MOHNViHodi65x5-tQetu-RtIxT1YQgCUwbYz0WRo2G7SszBStGM3iRc5Kju7nqtRSFxsWC8Lrz_yDYnZ8JL37TCA44Y4zmHGjPtTU6Bla0TAMnsiM-y0UtcJE1AQhxyN6sIjpGqDkvCCuExx7I2B2kTysJvRm_qaQEpf3Q2FLk-7p3UAtisduMi89up_wSaM2a5YZ5XAqHG6u6M42VkOu936ZecV7OMp4wNscIgcKRN7mKmEzxqi9hUOHoaBfsxwliJWjVLeytF3FKUr4Edq5rHDCMvKrYq_KK28QjRLZCB_DmOj91KwbykIf-IHXu40GRgiZndyNoiTuO_RAigFM1Yt9zbvkIrIsUMLBfn4FkJxk9IyFBxZrwLF1sAIr7vw4TjqNy6qAIciokfLPU0oEJXbwo5qVttGxFgVvKQgmAoPJQD8eOTWluekB3YCODvOlq7jUsW9yCGloyqdrV1K-PjW6ZAwwCO4MYQ_GJfTdtjOFFFK_8yC6729KY_LQLOjWd2G7JkJcAG_kWxUKKjHKVeEOkzHssaTdeQ9tT9MITe3uywOnqqI2sM0MpXKIa1MWBc4sAoSpw90XvR4myH-RL4wuqpUuWDh2ngdO0rfADkmT8VaM9h7rmJzO55fOPDXEUE7r4i6-m11uHZAnPCymr2nSoV1_7g5XzD-ouuBbUPNKCwA09jfCr_GzS3M9Bt8lZK5FudHJIDyQna30tD3pKfuE3oTCmD4E4iMXkP834xZscv5GYtDeMvqHiPI-yfDpkBWj2eSSvwl0l5HNgnG85W-07qRGKJZZxAtwZZ4hv2c0MIdhOz0k3KPm589OymoMX9hpQqYX8F2iQpVf1srbe_owX8Eurhs8eup7j2FrZuVP3wC6-rDzcZUeBQ1ePi02H23KB-lmy6zW-5q7AHHa6VE7SwPq7xaMD-kzbsZ6eHie0chqTRuzcnx7McYcpYtMYb0Z3s6oV05Sg_Vlokul_QB9QtgkhU-DZMCK5BWdRJ2wt7UKs_j_JvedM6KecEmGBHzC_8y1KYXEC6iZ20VSuFmBz_CccjKWK_IRokcH0qjwQsGVw0Gs0gLy2tJwR-qdXFQi5e-FOyLt2svGrAy8sNAfVkSn46FRxcjs8uPgsHujnUeYWmsebabM49RqDacKEYHHJEf_cOkJWCA8Hco3bTAi0zV94EtvBn9UAe1GnmLloKd0OQid3eUyD2gwe0gHVcDC8rQQqXbn6IRkuMeG0NzWgbmbXKoNj0uQJ7hUzhv7eHtiQWxK9oMgTyR4weqCI6dJ2J_HLM2A_I0A12eX0Z08TfcfT3XiJQgcpsQgVv4WGFs8ub7V9asWyKABhJ8S2xA4jT1hJsKWpXNS0lRq0b0rK5WAuAeiHbal-9vTApJltnlsblx-MP91L5_JCT0Kv7aTuV-ROEKGKnKGYrme2W-iiM844CEkiUz8vJZqpB-30dUAWPWii-9hFuIbMD-VaoPX3R2qR3p0-VzsXaFaG84HjigGyXT8NxrUz4wJneXG49hOJBOs1z8BjlHAUBogRAa1SY2vhAhs4ew7rhig0wvy_1doP6_QzBt3M1b6PzT-g6ysPMn-SxqV3IsTkziU77ed52c1p0U8_I51WmtfbR5UkAfaucszJqtUr0ouHvb1EGTatUPCryNtYLF7YtXEpI1H3sXobVJ0ecaozl4e4bkv_DYSwxobGNA61epTApIqRrzIJA9S1eaDrzbfhnLV1MhtA7jULTz35Vp39atTzFJezxUV6a3Qq1U_fxZvA7M05rhx1_7fbU0M8ynTuu7GhX6YqCOtDg_luiAn4eerF-oN_cVZtpGoDidBjqmacQIGAK0eZ0ToXuVmGkcMsNoUfLNQKE520uzDqB6tT-wHbsR7edTO2bMbjAarva0OSWML1nWNbhZBioiBCxqEbjBgGmO4UtcXqfJDwjGB_h5LQIhA9T4YZXi1bVGRRRfqcWx0h-HHefEHh8uPLmV-IJ22UCqbDhLw1w3ZrbtGIldoNnPTf1EUMKT3AJJxL0RTSxaxWf_PfqpCHeH70szMKLhR6P_0s8M77zXw-3YvXO56Ft5Zh7KmaNp2o1uFFszzCQdaJIzpAusdq_EMxMx5Ex8_cB54bJC-2aGbh_voXn40h7VCst58KUNbsFiBORW_C0Z-XulEIQEB3Tlr5zJ1MLaaSBYtPD9xH48QDBa2uV5LVfFronU6why4wienbpNnBA1A95Yo_0C4n6weBLVJFMP2ExyKyDiazDm6-pp7q6p_BBLC34gTvICnIBhDUTTAmQmMWG1B3nfuDS_1KfKAFWtzxYngu9VHyWpe7OiOJ3EJ1MqFolHwxadhclpdoP75rRNRUrIaA_Ww5D29i_wKTBiJ_rBa6ARu2vlNjHCZMwZbo1dXJDzbmMtKcnufaMS_GzoQaF0aOQHUiV3kvD6sRIdR5kM1Lvvi0Ks1vP4KRzFhLXL4IaiDJUV7m0zZi8NcCWuriM2XH5XHh8D5dHRebK8HYLK6ijbJp_lwHvx2GYwh2-BIOU3Ez7WV70t0MHQ2WNrJBvj2QgIBngADgB2N1WhCCSa3qkXV2r4SgtxsJsuiLoxl3HVZGMh2NNx6L86CqWkVhEtYdss2AYuVm93ihr-sQuxzbzZRuC1KD3U0h_lS0yXYLqQ5GtWzrmiMIPVc-ae0T-Zo4GnNRnajvj38whCJ2SJxqiRqvL3WV_O4bFTyJ3ChLok9H1mopKmi_EYahKpjyopm9glbK7cLdmFkZjO27JYW54OlWMPcLFLPcbwKVGKk3RIsq78K0q8-sz0gYKbUQW7ZrBEXghhhSzpacqQmvWgHGJiXCYAAT3TbSFZdqMGDU_ru5zme652-MKMkbLFqSyzwp9eMjZoYZ2EGoYMGH5k6viZLchwU6BkDIPRHmmWJog6E9xPYorOHmhtSa-Pt5ZPUypgyGQx6Gkfk8kfjiJlq7HrHR_xta1Z9Z6Onm8UsJI_x62IeLS5y89zfinfxW38pAbZ9IPo2_a5_llhuyjV_1pj8VtauiSswrCFBA2l8C4OyOwEkW1ZKWfpYo2kpZEmncIbc-IYj00dzJmShsFpE9J8NpX7L3eFYPQ1NotFhJC4JS9vwXpZZVR67rBGFNg_ioimjICGHydxQHycRl1ZzpZlfjYRdsOz3aCztsnyov4aFib-1-ovB14-m6MjdW30wywCunfw3ByhDSIPcFejs8GfyivihI-Bm58OW1al32cRpt_qvq2ses0Y0iQgL57IpFCtR9hFx5KUZ-Gc1-6RdqgdSoRFvTuqfJFNVW9kHp24RwdE_MakaVw3prmy04eUXlaVgDd9FNhQAHYVBUo-SIetwBMSfe4pjkj9Ovb803NGrJ8heboM9mtDi8LTdnOsCjRjPyRsrMLW6jZ81P8CD7rWVBFet9V1SihU5XfAcZy-FO156ioV6ew0kVEuUDrMS9eRHT1iwsSMtAMhM8MHFLj8og2y_ysnLaV4ZNTb6DcbLoStJ-OhsPoB1nkkChAtwJ-7cymtuDV76K0TKt10yJR656bgNYYVoosKzosX6yvEHQZCOLiUksUwxF0WRuRfLvr6o_pJNdsb42G1nguOLbX5cAGk-mtIUAYRUGr9BR41Uf4wGjBiaoUolhI-xOjkS0k7zfaVfS_bBQdSPi5zpN0Ggan1uVN_QXVJM6pM5GgrITi6ZzZN5n4CiG0DONt5oL7Fzb6nQhSRf4-SPWqypJ4Xd5edPstzHZHcfk-JPAiDNWBslAH2X1bjA1nfhmpwUwXDtZe_7qM1JeO9irivkmW2azLoqopO20wc_bGzqvG2SFq4-cp4yJR3MDjxxqzqgR8_LoWTfCuuPvbxVdt2dDGuANdDDljYRx-Gkt4bSBGIwb-TnrjALohQPFAquVR-O5OW6Sk819RHje7dVd_2rrdhOafj-N3CUQprTVGLww7QpM6dWvY_7wKs0grMeOpLBorbrI4hPGdrb_XTsDW2hc_bmZwQjqrBmIhdYl9WcGD_E5Ov63TwElM3QF-5Bm9QVnwzlkfNdAXuVSgkQ7luZ3R1AQUz4Mih0TM_UOtSPXIe1Vi4oR9-YLTE2M8HvjyTZya5BvG48QDDL2UJQkZmT5jcx9dRXH31tOhMraZMrcCMsIdk4-VAGe1iRaKpdKEiL_ne39r2QUPFhcj5fHFGy1QDBK7uiifCsx4HT1NvaOOCiKgDlMua6N05-psuhF2r_A3IxX_U5LPcSjXp95SNKNRYunvvWgME6XI7y-7sZUk61CJrKKXqWsCCkyRn-i4OD-6h2RY13L-eEx4GSEptuVxJtCPJ9G-RLrZA6NQy1DUvO59zA4O6Fpy6iiSScG_xjV9N9fnaAatNe2wNmkC2ZolOZzyU114vOvS52bmuGDrGLvOhLcPh88xE0V3LqtWWWiGBki3CjBTeNPD_S3910jG4On6IeIjh_58WqnOZAqVrB6CDEVzWeXsVWuPSDNGjrhYpo5OlvRbANFB3GqsieLQbZPDyJVP1Nqe8HBSCyq4kN4sWm8coeXxJ3_bmFsknMuW6zSMlTZl-_sSOddFlZF7NSsC3lCigJ5FUfaGzjZ-IsVC4poAqFsACaxEo1uhM-J1VzBqbNu_VWq4NuOwrod0SIyEYqgpXAGcWx8R77oH73JmkuPTXXccUvxSCC0bJ_TMMmGxa54UjU_uEKGP0rTZb7Xzp9ha9t-57Nnf_Tp5W_nrb7t7jn-XpNuqdPX5x0k1IwCdkKMpCTxMDby2WZLkZjgPtoKt69FITFtdP9ClstH46OqsQ3oEsrIxX7L9L7OiQdvIbFO0Gfn16kRRbtSj_JZT3PjEhTouilAz5yLhxvpL1LKXMMAU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0fe84c0f2b434779016af6163ceb0887d1b90ab30ee8bd3e52",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 870,
+   "total_tokens": 2374,
+   "cost": 0.03362,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03362,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.0261
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.36
+}

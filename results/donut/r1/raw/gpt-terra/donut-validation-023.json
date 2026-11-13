@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Garcia, Stewart and Payne",
+  "vendor_vat": "949-78-5411",
+  "invoice_ref": "34528548",
+  "invoice_date": "2015-02-11",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 729.75,
+  "tax": 72.98,
+  "total": 802.73,
+  "iban": "GB60LAOW81233191361598",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\" LCD",
+    "quantity": 2,
+    "unit_price": 139.95,
+    "tax_rate": 10,
+    "net": 279.9
+   },
+   {
+    "description": "Dell Optiplex Desktop Computer with Dual 19\" LCD Monitors Windows 10 Pro",
+    "quantity": 3,
+    "unit_price": 149.95,
+    "tax_rate": 10,
+    "net": 449.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 729.75,
+    "tax": 72.98
+   }
+  ]
+ },
+ "cost_usd": 0.0142025,
+ "raw": {
+  "id": "gen-1794515016-HJBpQf0GkNCnhdfwj7Oi",
+  "object": "chat.completion",
+  "created": 1794515016,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Garcia, Stewart and Payne\",\"vendor_vat\":\"949-78-5411\",\"invoice_ref\":\"34528548\",\"invoice_date\":\"2015-02-11\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":729.75,\"tax\":72.98,\"total\":802.73,\"iban\":\"GB60LAOW81233191361598\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\\\" LCD\",\"quantity\":2,\"unit_price\":139.95,\"tax_rate\":10,\"net\":279.9},{\"description\":\"Dell Optiplex Desktop Computer with Dual 19\\\" LCD Monitors Windows 10 Pro\",\"quantity\":3,\"unit_price\":149.95,\"tax_rate\":10,\"net\":449.85}],\"vat_breakdown\":[{\"rate\":10,\"base\":729.75,\"tax\":72.98}]}",
+     "refusal": null,
+     "reasoning": "**Analyzing invoice data**\n\nI need to extract JSON from an invoice, but the date format is ambiguous — it looks like 11/02/2015 could be DD/MM, suggesting I might have to interpret it as February 11, 2015. The tax total seems odd, too: the net items add up to 729.75, and calculating a 10% tax, I get 72.98. The vendor is \"Garcia, Stewart and Payne.\" I notice some strange formatting issues, like unrecognized glyphs that I could omit. I’ll ensure a clear description of the items.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Analyzing invoice data**\n\nI need to extract JSON from an invoice, but the date format is ambiguous — it looks like 11/02/2015 could be DD/MM, suggesting I might have to interpret it as February 11, 2015. The tax total seems odd, too: the net items add up to 729.75, and calculating a 10% tax, I get 72.98. The vendor is \"Garcia, Stewart and Payne.\" I notice some strange formatting issues, like unrecognized glyphs that I could omit. I’ll ensure a clear description of the items.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iBORebwiPi7AHH64AbvWFsFnDh-qiB5WSIU1kDN3jzLbxzzFKHv8mOhtMQek1LLO8VKKNjXM_XD1mOGGCu4dRd4pV4IaYTA4TXB63cmrIzGmR1Jlatpi4u0ALDDOB4ZWl9BNVPZIqI-tWAmnEm-4OMwZWFTeQkuS-ZRknNW-Bl6yznru_8Yrn0zrnoF-qlLmeyH77tL4xdzorgTjse4T27zXFG-_DwdCpcPSEuUL06xKeAsycwOVNX7_KrYRNUO8knGGBpVhJleoii8Ale4dnU8kA3OPIZVLF1W0ALJ95rUZ17U1s7LYmGtwf5oWGnBpaVfVQA3wl0LfVwsA60QtqEJC9KTaqBrlZFwAhHuZYTCi9hUN-XM6UUDJr2su6LTRKXPq1a6IdhAR6zoImk52AlxWcBPAodiRoyJ6Hs3zNF8Vs7pEuLRnxN_-VKvF9wQSssXorBZ1NuPUAoVQkIZC2nB3hKFZz0QmwONZP7mbwDOgzcKlfWEH5ZJiejYm7uLlXLkmiKVaM2nS7zDp2E7w9A7d0uDVmLjMZIPVVH2pbfjKfQYBLUM1W5Q4kGkgfIAgF-X1irZKCCwCrmdSAL-SqWZ7leiEWTXsKm-XkWfcjcRXvUL_qPNKgb1f4R4VoO7ew8NZnrJ-VPylcHtOWufh1kwj1fhW7rU-mdeY_1_FBue_Cu0tRhpVrXAREZjAq2UJCfEZ3A_69X_Tvpk1-f3ISvT8tzSml9BTz3hh9xCixT-d5loW5zGQZJvmi1_B457f-UuP9zbA_BIOLwMGhTj5-ZFzQspkMdquOJ9rnjxeUGrb-yJ883wHXaVh5nS5sk_aaOKi_pe-dvyAC1-mlwA9VX8OTIcu89Gu4FSLr1QRDTYPre6R5IYNUPnVdGNQ82SdIkE8Gl2j99mUsZCmxvDF2vIOEO8esV5rCWrnI80iiEq6j6Cax2qc031HZLsCJ1zgWYCQH9hOUoE2RVhP8xOYqSPZq-oDbRmb0cGeQYjR4oePDnspvXbQhix7Ogv8S4OUawZBXMCJ2pYU1UkTLcCtULm85w1HbhlL2ZkzwV1RnAnrTtEPq82O_j_UPZ-gwQhzelNRwf5n53DATO3n0oXfx9nYbFMa6jGSe4SxUZPN0lpQYZyiZP4Fny9pwoKrA7KXY0NDkeYENHJA3cFR-vFiERpEO3UjeFT9Gcvn8UXdkh_QsCj2c-FWTHvxG3nPnxaemNePQOPjeXoWhV2ORbRGHEPLsQ7etP0Yd1Cgk6OfzS79O30xKlwJV86f4Webb-2AkE9QJ9PQ4CepjqZtjLyI7ml2p_3ImHef-jjRzYisQZ3hijX4Z2B17YJuXTljc34NIBrBR-w32xR7gp0nbDbF7QVHTakHDClaiXYmhaCuhK-AS1BOHBhYJtlcItMT2J-2AuD5o5101NhgZHdeOMHt6q22PShS1jKf5Auv68M4wxNMpzZrmT4aeoiVbt08Pmk6-Gr-lXTaynLTHpDtpGef2oR8Ya4CtS_lpfAYilVuGrMaa7zNd7d-TGQ2hFp8AwShLk3KZSAMtsBxm2n10hpzaZrv-gB4VCdy_1-E71b8D5yrk-vAOm76_zhQ0etdgH3iJJgJ5GU8Aq0ku4lkN4s5qkCR5u-EqFXjdOEL357j3vXZwNlcCjK7NehgIg2uc3Rwc9LJYhM8wOPrf05EP1YZTbGA67Dqr8XeSOcom36wuDctzC75EC5gXlpbt8QY8uUQ-e6sE4HR_cBuD4i1h3z06V17wSkyZtRSG-gEdBW3TPRhTl3nAk93PKv1yRoIpXxXYWA4fvdcgGjsQo6sOF-pwJBCbwHkYUbqOjArVWUZCwGT-zOby3b129Tg-oH_pJ5bpTUDVh-8fOaNqT80MtHUYybnNzDfGhqxRNDXrdMXT0VvVmiIQlTgyfeB4Zv4oxQZENiecHv415rF8R6u2nBxaJvkktkBvrSDzgLfxfZjH1h_YrHcV-XHOCwCsbrsJoJqj6l9-s2WbZ1RzWEbhk-UqRtblR1BxUniHQ3vrh8AvarEzlDPfNJ0x56zWQ-uvSScz6gbNui8xE3r75jLM8WDhgclHf1vY12-1k1kHRX49zchcrcB9Pfx9vC-4u8DoifYIQOaoW3CPR3XqkBCrUHoqsoFuiTxJbh5xy3txxvIaN0-l6Ersl9cc9SWsms-01B_SbzLPU9L0THRoel3Cz9XIHkJHbISae2adbi7cw8hVg0wyY2Z-whC93rBYdsGfpBUcPhjiiLrgmzsiNhULWkH45a9LsV-b5twXWejAcW6QkZEx3Q1wL_drNBKS_h9dPqly2rXLHgDSSCTcc_Hl2EAs6MQCBLG78Hqa7J21owUOprb__wAZGETU9YILM-idDTGR3f1Mknhtn4u8dqtnrUDfTKRhVKSGceemP3VLQLN3i6peAUgeW5B5PBxpSO6zUFwjdEINwb-KgHVoMUrJSDipFmb22M64l9xI6viLELBfoCE5YeOYuQWKD6dhoGyAslLytPc7gUSnuAwGMkzP2yp4tBFkgYWMZJgMjnnKbf6r14wii_wxd0YDze5OkzY_4uWMNGB_620Ya7Af-MNwcwLiGFgLQRbSHSPUchW-vstHTZg1NIzBXgM6yGpHDwbnPdM9-kee-156BKm89-95q0XMLxz4yYp29f1ARIlJTo1BYQTCsP4hsE3u1pnLu8grjYORQrNnXP9wp7avzB5NveKM1GYrhUD8c4-GnN3APAE6m8CluUgAHhBaZ3QhMIex6K_HaINMmnH7CoVOaFqr2CrE5UQ2pFYA8nDwU0hB5zvTYxKyMxVp7MtJSwCCybbdTTNL8K228da1OUR_4ZsxhGeFaS_JXGfPGshqWGeCGUQllsUfQxKmbH5RcOq7o-XrpMmlp_UfLXuOAT1zGdJAy_JwWhsuEJ5Q1vevWg0C8ejCi0HWqw0h_Crw3Q2RcsPTov3aksF-WOi7BTzFEGOXPup5hgC_WakCbpxvOBWQ6eNQHV-of7VaYhR56SRlv6CfF3-TqbiuVSknRrI7c7ivdIOw17OuD3DeveYTDOxlWiBVdu_qXfqDupeW1XrDdetIFFHJ4j-YAUJ8jk8Q2i7P8CA6r3AWr1e92s2MQWi9sKFHOlFXpG1qxf0ZB0GS-dRYsreUq_YYpTLf-LG0cvg4keWhjsapbb0zSHoOkkXHCDoT8zXfrBu9467VDDcLsUWMcsA2DLrj04EFqcJN5V-L6vecAZPErdNlgT4boybkNul1vkaJXHFf2BPHwrDYIerTZBMPYvFSk4SNnhTzSLVsPgEareencuEGsAHNxYmRN39FE0pbAM0kkH0LO5zjEHHRrZ_3ChmLGp3bkG7MMknoFXfw6l4Sj_hUspcvW9fBOw33JufdpUjRmxuh7oB9Wejo0l-jWN8wQFejEo6yuwErWm7HiofdlKreE3R_Lz7IXPw-eXcghGFsz-aJ4w3d1JqiOCRGiKAZBRGi8SX5v0RBftQ0osU2tq2tp4i0C7ibKxyMtVQylLIP8bX5j8_ICCyhS893gpeKus_EcXyMkpyifce1BbiOZ8EFkHCXCWsHyvt1cF5aGRBe9DB40MY5WLyKccyDFyFwnpewsTbXk07auGQVJ3rkIpkh1qZLL52tDbDJa3TM0jegc7Sa2hHPBES4SqILGnWO9KPChAe1-lHf3n6rKxrIaT8Br_usELrnGMh9R2osRc9or5iuwr1GgbqMgQL2nX4bxcZAsZOPGQ_ifrCrS5wXZWmAKnXHzmu2iYvRPaWgNY6TEI0Xw14k1ioMqvFJyYsRCU5aTSw_bzIbUSM9nPMQ2DGrdPSYi4yexCpDAPYrfAPnI8XDfD6jURfnssrt6DbiA15CbTHd0Ib8od0SP-pV8BO1CG4gGLBJSzmOoBeKHljfd3mx4mVZ7QCIxuS_3lEnctWoKqTgqhTyiZTW0HeLms4ImPSe-lQS6nUd-gcNG_h7XR5tREJsCNgXnAGO6JsMlnL3sk7_E3zH_-nbFGdVHfNu_ktIYj26N_K4iQdEz2UtTGKWLEQk9xVEHvxgfl_VHYZuHfmJnWyR7M3Yt6PHv5bP9VPlnauK7bU49cHwW1IZchATPWEK3IOeGOd8Q4JAHtXSQ7LDaA_7uH_6pDZZq-OtWFCQVFOZzaALnlUguuG7MZ9e1rI4UPj5gs4NiukQqBQ_-reO3BSgmiKMoeaToVh6mihcoyRBgUoqmo9-mPfrcqiL-jjDWGLF9U6dE0f4eID-tYK7rP5MkjuB_jyXuIyCwZoQLc7-7DGCgAVNOXGWrrV6Pg7DDDoFyJgqRNx12dFNXd-_YyxJaCVRurvaVvkg8Zs6LTu0L8Pu4_ybwom6Lzmji2oRVp2Ok20GUnW3NAn354xt8kPcC0G1ZGzACrlpK5MBamraZLfSfJgjg=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_082efc357042db51016af6204a534487d1815b306ce86cbb37",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3560,
+   "completion_tokens": 442,
+   "total_tokens": 4002,
+   "cost": 0.0142025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3557,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0142025,
+    "upstream_inference_prompt_cost": 0.0088985,
+    "upstream_inference_completions_cost": 0.005304
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 229,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.43
+}

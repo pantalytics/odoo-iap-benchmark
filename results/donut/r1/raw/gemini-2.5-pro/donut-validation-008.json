@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Mcgrath-Ruiz",
+  "vendor_vat": "911-76-9645",
+  "invoice_ref": "18001573",
+  "invoice_date": "2012-12-30",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 100.97,
+  "tax": 10.1,
+  "total": 111.07,
+  "iban": "GB37ARTN37168057473190",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome",
+    "quantity": 3.0,
+    "unit_price": 22.99,
+    "tax_rate": 10.0,
+    "net": 68.97
+   },
+   {
+    "description": "New Never Used CROFTON CHEFS COLLECTION WINE COOLING STICK IN PACKAGE",
+    "quantity": 4.0,
+    "unit_price": 3.0,
+    "tax_rate": 10.0,
+    "net": 12.0
+   },
+   {
+    "description": "Refinery Wine Opener",
+    "quantity": 2.0,
+    "unit_price": 10.0,
+    "tax_rate": 10.0,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 100.97,
+    "tax": 10.1
+   }
+  ]
+ },
+ "cost_usd": 0.0118075,
+ "raw": {
+  "id": "gen-1794512326-Ab1hk5viqoVcGGRv3osJ",
+  "object": "chat.completion",
+  "created": 1794512326,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Mcgrath-Ruiz\",\n  \"vendor_vat\": \"911-76-9645\",\n  \"invoice_ref\": \"18001573\",\n  \"invoice_date\": \"2012-12-30\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 100.97,\n  \"tax\": 10.1,\n  \"total\": 111.07,\n  \"iban\": \"GB37ARTN37168057473190\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"mDesign Metal Wine Rack Storage Organizer, 6 Bottles - Chrome\",\n      \"quantity\": 3.0,\n      \"unit_price\": 22.99,\n      \"tax_rate\": 10.0,\n      \"net\": 68.97\n    },\n    {\n      \"description\": \"New Never Used CROFTON CHEFS COLLECTION WINE COOLING STICK IN PACKAGE\",\n      \"quantity\": 4.0,\n      \"unit_price\": 3.0,\n      \"tax_rate\": 10.0,\n      \"net\": 12.0\n    },\n    {\n      \"description\": \"Refinery Wine Opener\",\n      \"quantity\": 2.0,\n      \"unit_price\": 10.0,\n      \"tax_rate\": 10.0,\n      \"net\": 20.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 100.97,\n      \"tax\": 10.1\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've successfully identified and extracted the crucial information needed for the JSON schema. \"Mcgrath-Ruiz\" is the vendor's name, their tax ID is \"911-76-9645\", and invoice number is \"18001573\". The next step is to match the appropriate keys to each of the extracted values.\n\n\n**Mapping Data to Fields**\n\nI've mapped the extracted data to their respective JSON schema keys. I've filled `vendor_name`, `vendor_vat`, and `invoice_ref`. I've also added the `invoice_date` and set the `due_date` to `null`. I've determined that the currency is USD and assigned this to the `currency` field. I've now extracted and mapped the `untaxed`, `tax`, `total`, and `iban` values. The VAT treatment is \"S\" at 10%. I've started extracting the `lines` items.\n\n\n**Finalizing Field Population**\n\nNow, I've filled in all remaining fields for the schema. I've populated the `invoice_date` with \"2012-12-30\" and have verified the currency as USD. The total is $111.07. I've correctly set the `vat_treatment` to \"S\" and extracted the IBAN. The lines are now extracted and mapped, including quantity, unit price, tax rate, and net amounts. Finally, I've summarized and added the VAT breakdown data, and now I'm ready to construct the JSON object.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've successfully identified and extracted the crucial information needed for the JSON schema. \"Mcgrath-Ruiz\" is the vendor's name, their tax ID is \"911-76-9645\", and invoice number is \"18001573\". The next step is to match the appropriate keys to each of the extracted values.\n\n\n**Mapping Data to Fields**\n\nI've mapped the extracted data to their respective JSON schema keys. I've filled `vendor_name`, `vendor_vat`, and `invoice_ref`. I've also added the `invoice_date` and set the `due_date` to `null`. I've determined that the currency is USD and assigned this to the `currency` field. I've now extracted and mapped the `untaxed`, `tax`, `total`, and `iban` values. The VAT treatment is \"S\" at 10%. I've started extracting the `lines` items.\n\n\n**Finalizing Field Population**\n\nNow, I've filled in all remaining fields for the schema. I've populated the `invoice_date` with \"2012-12-30\" and have verified the currency as USD. The total is $111.07. I've correctly set the `vat_treatment` to \"S\" and extracted the IBAN. The lines are now extracted and mapped, including quantity, unit price, tax rate, and net amounts. Finally, I've summarized and added the VAT breakdown data, and now I'm ready to construct the JSON object.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1141,
+   "total_tokens": 1459,
+   "cost": 0.0118075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0118075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01141
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 707,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.71
+}

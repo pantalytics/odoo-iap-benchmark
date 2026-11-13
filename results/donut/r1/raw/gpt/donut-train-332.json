@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-12-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3,
+    "unit_price": 45,
+    "tax_rate": 10,
+    "net": 135
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4,
+    "unit_price": 119.99,
+    "tax_rate": 10,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD WiFi DVD Windows 10",
+    "quantity": 3,
+    "unit_price": 124.95,
+    "tax_rate": 10,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5,
+    "unit_price": 1092.27,
+    "tax_rate": 10,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.03161,
+ "raw": {
+  "id": "gen-1794512205-GqTQ3JzYbui2saTltbkd",
+  "object": "chat.completion",
+  "created": 1794512205,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith-Guerrero\",\"vendor_vat\":\"954-91-2300\",\"invoice_ref\":\"39400829\",\"invoice_date\":\"2012-12-01\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":6451.16,\"tax\":645.12,\"total\":7096.28,\"iban\":\"GB81NHIS20902698381776\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\"quantity\":3,\"unit_price\":45,\"tax_rate\":10,\"net\":135},{\"description\":\"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\"quantity\":4,\"unit_price\":119.99,\"tax_rate\":10,\"net\":479.96},{\"description\":\"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD WiFi DVD Windows 10\",\"quantity\":3,\"unit_price\":124.95,\"tax_rate\":10,\"net\":374.85},{\"description\":\"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\"quantity\":5,\"unit_price\":1092.27,\"tax_rate\":10,\"net\":5461.35}],\"vat_breakdown\":[{\"rate\":10,\"base\":6451.16,\"tax\":645.12}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to output a JSON schema for an invoice based on an image inspection. The invoice shows an ambiguous date format that could be interpreted as either January or December 12, 2012. It seems likely this document follows a European date format, so I’ll standardize it to 2012-12-01. The vendor's address suggests a U.S. context, but the invoice includes some European features. I'll extract the tax ID and currency too, noting totals in USD.**Formatting invoice data**\n\nI'm processing lines from an invoice that includes various products and their details. For each item, I need to extract quantity, unit price, and total amounts, including VAT. The items range from Intel Compute Sticks to custom gaming computers, with their specific prices and quantities listed clearly. The VAT breakdown indicates a 10% rate, so I’ll summarize everything in a structured JSON format to conform to the required response format accurately.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to output a JSON schema for an invoice based on an image inspection. The invoice shows an ambiguous date format that could be interpreted as either January or December 12, 2012. It seems likely this document follows a European date format, so I’ll standardize it to 2012-12-01. The vendor's address suggests a U.S. context, but the invoice includes some European features. I'll extract the tax ID and currency too, noting totals in USD.**Formatting invoice data**\n\nI'm processing lines from an invoice that includes various products and their details. For each item, I need to extract quantity, unit price, and total amounts, including VAT. The items range from Intel Compute Sticks to custom gaming computers, with their specific prices and quantities listed clearly. The VAT breakdown indicates a 10% rate, so I’ll summarize everything in a structured JSON format to conform to the required response format accurately.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hVXaxC4znKRE3Aj0O6AKwX-sfOCBljJld8H5-OHnWZEX_5XIqG9R7DhFXLOEA-XLAuPTCoHA0uebsF0rQokw4yokjLCOKQvt57_Ab_CtIl__PW8iCgvdxNGTB-vtfTtfSPeTaYU3GY3JkBQnUHs75EE46es-Zfu7enQhz5A2n6IJv7hfojoDqRQYNKPvL-qmAEKmJGOZzBXaNijRugVlimPQI5ytiS7V5mu2JWgDUGAn_22UL1GGkUQa4y9yyGkSPTjF6Q7gpiq9RrgVBb7D6Ru4AcASF4MsIgmdpD5BtqHXtjL0XzF3LZBLxs34N4knSnt69gMtqMwNUXpEmbXlR6OnHaIGvgxyl5T-0URlSrZwhs5NNihWUln1EtPTN1fiqA8a1Fpv8VyQwsvbOz6nGiL5BGlt_nZwZCkvOgVUWRdi7nKo4Sn8MA1Z8W21obg8GGjCeUzN-q8giAbN4i4oRfB6PEAOqCbhJbsJHbXNccmkgw6tAYNDeOc0YNphCmaHjVZg3x88hjWAIsZGZTx9wn-xa7-q-hQMfeboHURx8ShAk-UjrNy1ypF4-LhC5uISK-THbtUSi5L2wlf-02FUkPnpU1AZP_n3MEowQAahBOl6BhCyYud3Ax72sb-A4lSNVIqGmweUuiAt_fARp1ObyNFDEbEk1raPaAe5SW-mr9gpRgoQMka8VHHwTkQrUzb1EziP9AiHIVn8_XEqUtsTcHdSTdKQvzQJ6batX6zXX3LHLU8Z1CBJiIWKMyGfBYYSSa_zacesgIF1ahKADFf5dET1TcTcUhqIaQqmx7GUipbR841rNeMsJ4dcmEdxiBfCw7S6xSixFp0yNfZoKYvsSnR2YPdpphZ9yiXHC6aKDJNxa6tt1SBByOZDwGlPnZMMLgyDsI6E2FcGsTauzFpBIkgjS_ttXp9G-t8sdEotwhnkVUZCKen655_2rl2xxIs7InKJwRglcGaNVWIuFz7xrmF6MmgNfPK7Zx1MGYJBHvmfLjbJ7avJsjFAWyQ4bqPVEf_8KhYVDLcOyq51jvjNf_BAu4RURSdhHOot_SE9Nq7I29Ffi9Vlh61DEmwUJTkTDvFeaCkCHT5ZYW5IHxgUqbbANCmPf9OPKA0Xj61gVbzAI4xYy1ZO01kracbuUfzhCanAGsrOBBh7TtxOnAe1Gt84rxvusuTXXYoVm2hy1Y7e2nSYUcML6f3a5VeJJElmLLcSs5RelVgswkItEECPCj_VHiu0ku1u-KCe8uC53ev2nJhvkc1L-5AdKK10VTri6jlbvpinpeeFH9GNamZGp0LSq0tRq4KN5YWKpwRnj4kj1MedyUy-bqiPlq6GftDLfHjSjXklDkO_-Xt0GTWpcC6KrDs1wkA1ovN1BQa6hxG-cAZYOWOapxE8O3SOdhYHd3XVrBlMC0WNEpI4KbCtKLqzRg9J1K8Dju1C8vIyxXuSD-cTV43Lo_8psurvK6Fr3uFNZZPFJwZeEbgyaDrtZj62SBmPv3UnC9O3ABYW5h2vMhhUPCwh_vVdYUijQgtrmt0mxrp3ia13J0QjfI7zdPhHNv9ConeAZn66NIMFYohKdN5Nr-Ho5GxuHlQAPudORvARAqXCWhSLtGbbtERXcQ135aU0qMfq2ooX7umJknRubzXirI6wHsaUOxPsXHTUL3_WPzoo_6MQXFbqe-Z7XqSO9a97MxDCbuqbUkHMCaeESB4ZdSz1lLBdORIQdNYhFzRD1EXjZT5U7JQe4GcMcfkIwMymqNcZ_kM3Gpu6azDCCEtu-bc-xyCnKHusny6mVpfmus1UH0tEVFkr0HpgZQejA1hR8GOorji1oe_-nPBmDbU5tN9sLFedAwXpoGYdNTCgNEtOp_6_3G3tKGoz-roUM2dMpBidY9nfMhOz9Zj3g2xZTHlr5q44J3E7DhvnBrc-YFNVtZEYR8207zhDdez0Vm8WEAuB_qmjIXOSctlLNQCl3itpsomn7tdP5r4iL-65GPVLs75l7c38g586w3y99_qeLRIoPohLlAyhdWkcTtQGr05vjQKZOaJJrGusEZs6xU6-zWe-0gzKRK1G0qTh-08iBgJxGj0mP8hkjZHkeURtns9sfghWTgBVPL2aJO_J0QChY3PUStHriC1ZAmypXOv5Aqt7oYK2_rI2tpatWP-2fjQwa3uTw5pcv3PJ2W6SgDaU4MBJuXDa8SM5Z179FZ5Vv5KQhqqqLtyZqiETYqHtguBJi3n5JblOnJMd4q_4DaZLNHJGD-qikDqA2W813_2l3lus3akoUitXwl0LIiNGl4ODnj4vX6MFRTE8w2kPNJ5EPXHc1_RpOC8bL072ATEVf4E0Lc0HLA8SEAI5SJ9O5Tm8aeeux6obu_OSd6bKQICW3g__AQlztzZwFAixs7Yk_6Obrduno42bHUSDGQ9uLZ1mTzUBpwunO9xWflbJ0nQvSBPSl-_wRKYcIpWpRqn5I3CsTlA10yNdGd2yGro7EYfGDbU_n3CodLexwlAXFhpQnNrptlr7h_exjOjcsE-pq43Ac3wXbUe47SXYPZXYcu4Sq0mwvzt8IW4_VKMIgkJ5ONHNFpHBFP8jw4ZZpTMCBNAVjIPZ-r4S9I7eNs7Y4pwfgqJe08_ZwAYSE5r9y8JU1tnrcfaciZepRbdPTdJwOTlt57GB8KE-3DfgTKurid2yrd5rJL0efjG2OM1XhhnycxB7vTQYbXtTKINPLIWJBqt4y_uXrhDvM5bAWS5soj1-pdpajEpxGY7ve0y0lJkE0ZZS4eDGO17-46fH2PD81d3XXwMn6s6EBUqZnfDSEr6ewU7V2gzx846rc6B0QReAj9mhXwWsijeEXn-eg6NADwOaZxaJwVd7UWMtX9kNktkXhXUUoHraJXJb6LHBJgg9wEwJ6GWSvClGEfPDkhA9ReNrg-cqfG2cBng4QdLQuu1Do5jGehcSet0PlUfyv7rn1A2PSEHs7nw9YFcvW0noFBXp4tppskBROOZav40N6fUMg6lvtwdDRtNi5Y4xuCOUbOxfxKAJuJn1HCovkufk6BqN3jzYEL-kR34LXXGcVlgEB__s3fWB07oZ5aDeQqjm0mV2KvBq3czZqa4e5Z4sNbuc8PKiTKpUSCUVRWkNQrDV5xrbhHIsLdKvu12sNpXfrp4ZOC-RUUudxwyWU_RrWNyCCStX8I3xWrbh6_H9qNl-_8rDgOVR5VpkdXuK3wkKJefZvYa0KA2R8cccSQBjfszwciDkTKI6yRTU8wWy2bwWbn6f0t_9BxvazCQ0-qKlhIDKOJX1brPoWbSKgLaxuqaY6pwZ5XgZrZO7hBJ6BYGVVI-_1MNzHSv-plZ2e1PNtIh6qJ-Q5aPuaTGi056azuJVv7xYB1lAb2QIzDNINAgHID5FTgha54ujcDOfAnQ-QLSJEbZDXg8pP60pj8dX_WmNbXvYwpGFqxJaFljQuPJYtIz-Ly73Bdyr49TDAKzXGiFQdTgvT7vqLL3fNeEqJblb0XLfNzamE_YlXmj0mA41ngDtxZxtn5l8s4TZz7xJkqifDaabQ6tQIcdNimnH24Lk5bD8XjXkjGHU5fQssJtDt4gyu8wWzFIRfcnBoM5LVzmZ8rJ8HgKFQvSfCgrdgwmcdm7IL4suPBhNpVjdqSWjl2M71kbfLINEV1JaCHvkO5BBD4imtVuWAD3zH4z25xalHsjmwrcMgKCOojBeSmLYApuHhBvWwW32pNBUbY5l5XUYxwsZFHE723qIOex2P9VUh7LBtWiNGmbnliiSAJl7ivQhRxtIvqdmuPRXo7dhQAgHKlwWj9MtS7M82hUgzjITUSK8LTY4TTJWrRjvHAOf7DKYx-oSNG_v1Qj2FzNtAEG2rAwTw1skHV5pjt7QinhcxOeAb2Mntl2bAWZG1VsbCCRCiagenWQdQ8OvePH4DGRpMwk29FafyWbo0Q_EQkDt3I365RAjR4xu2I_t6VU-uw4R73Q8IefTpOB2tbYMluFfTGYpuYt1jBCOVEBIAvSrBSXoXCkeEqJ5NmbZvY2b4YSn3OZBBv3duSkyvtw1nMWS9ODFdxbTlWNyomdXpeujVa6ZBrdmB1FMfyDB5Lxn_IBLj59XqUkbrBy39LXL30Hgya-gmgLZfswmZcJtXt-nJSeteJ4nQ_ezcWuMkajN4pXLEoi7MCO-uus9za617VAAs_fnu1aB7kDEPkfjhvQDDiBssIXV6h8S6zXh8_dNOfeoRVDfQG6zxLCTzK6IDyKu3E6Wwry9u8NnmKtdBK5QTr9zIR-D6KhAytnTcsspWK_xmMuHZvuZosIBWK5eR-SDplj2zEITnTGHh8XNEtZs8arg2SEeh8lI3G0YfeFAxsJ33gyZJpB4txew2rt58BnEzGjYVAlTA9J3cvdgNXKtgbmEnyEiZfNPeJQSlzozxA_op8hxWVCCuxkVyfIVGHmrHaH_d_7vx-euJveJbcj5sn0IKaR7PQyLeLLl7zaJZn3WIau6nFq5VCdTWTUx-5OGT_dzj90UedDaH6BZVK0mhP6GkAwUQRV9Huhgmh1RFVHmnmabcHeOv0bVBxmv-uvNzs8CBA9spvUT4s4VgOG2xRr6T4F_u8ceqEEWYYMMRrS_G1MHEsL8j2cOx52ya8NpI9DBwYp5LfAffLPgXtt94BoC3s7zq9VtapUCuFjcToqjYWj0zrr0TIoWjutMvM9shm-XAvem9LwzDF_ceZ2AwxN-WHyx9XRknJ353PEg6mSDzJI-Qz0sF3j7psbGrOD7GTQgYqIJzLKMMlXAEsAL4vkzGhWS8Xklod5golVm-Sk7veeelS-S4g4mZ2O8TX8Vkf5ETpDtnFCcWEocUjLBjvPEtfkioWfF9yPVyaNTjdFttvDvKoYK0MEsDI9NJM0KbnI65HIEBzXrrdXbN8ZgBjtBW4WiPSp3ZpjMemkYYx_UEY_omu6HNRiYs04I1z-uRncjtc5SA1atmgbHhGRFgAbafs_JoO0btBUE5xsFF1cBJxGnpxPYavmKA9aJ_uUnxImM_SWBq2owejtex59lt5L9GqtZQSz8gUB0cgvUnl1JLCNkJvx5mnPmALPZvT5eMznozO0POd_Ucys7pL0ra9z3_xciC6BA7_AGIsuDZkDCU9xWa9xHINZ5hS3rjn8ST-YInvlgdRnIfvZmmhBVPeL5gDCkbfc2A__PRtd0x3InnuLGi0YLXq5AJ06oCtqJvjpHpr_GMOLtxNcMZgBENWNItGuijNzbtIRzmIvz5Z6u9o29GdVX1tET_VuDlfzN1IQ4xPrhgqO1M1crB6sfHJBox6tAsphAb3IN1fdhqf99cz2aERx6BnRbdC3_72UdokCPu8PBt_N44K4j-Sy-fAb9tfgowpKrQuaMKdr5371g6iW0Lldd2SwlU2rvDthCs2lESzr-FAbfZKumD5A_qvDQcdR_7FsglaI4bI2ZL7JTM-zWagYvXltKxHUlMyyXy8eR9jRYtIMEvHAZjAonVtS1rqlU7Xlpr5qLs4mGDCh3ZTSMdi1QFp_mzECTjlsxvLcU7fNqqbMczVSqC-1orl3IA8OoGYWQIEl5hDMSB1vT_sYQbwxGzyL-IbHAOSUAY5UjXWPBxDlURtRzKf7h9vhH11JwKJ7hurNFbEu0I3Amlz1JJ_gtyI1lgmue8E2Dr5dbU_HvNE3UmrFKwR3XFbCGMNYLIeqCPYGMsdb_ECy3vqLP59xyGv939vrynccNDKXuWe7XkU-LnFCuQtMb2zO8zt3tZUtM9JDiehnsv6NNXRRugdxnuBelABWH3BYzFOmK7LuNWcd91IGfmGhYcfRDaNAkhjofVGB1mn58J6UKRY5yvErROiKz3WvDUR98miPFX-lbY98H9Kcb1Vm-ScwqGLYgll8CNVFPbCJ2utA2Oq_3BBLBL-i_7_gZTj_Qe_qJ3akQOJjmIUxm600HNBzKtcIkGIILRpo3MNokpFPLMv1UsQs06AwCBzzWIcDNbX5stnvZ1fyGLBaBZv0fStpZfD2TOrx4BwDEWg51RnUAq4bVtGjhTw_6SSN-F_evaqpYfXCuWIX7H7t6p_w9criKSQ9Rp82EJavCnttsBb2t1OoZ4gC00T9ZgXjCU1DAkhYTUnlapPcvLvN6EGwlNx3mfjD4hJLKtOVH7lYyDsGluvL1Qew_bk42RqseE2tliT1F0Ly5vmhDU-R9e-gnekJ8v0oL6nrvL0KwA14sT-7h2MFx4qMs08XDQyVjFgD1rUdKzQNG2T7rdDbWc0Wodpg1JDX1mmyZec4Ur1af1IW-5QrgBkt5EBt9Pgdev-lJ0cd8ZX8J7dE3pJG50yh_o7161XTNtZYe7XR9d7n01r16mxhoov6rNeDenXOa4kEwNaMnB4Ja8PEldwQktPqqkUbgTkZQjMiGC8dr1m7ymadwBeVeJMOUM3VXDu3qMw66EPY2YRF_p-EdTYPN-tII1dQ0woSRVCxA1c50GZ01uWchm2pM0HIIGVygk9PTBaubDLPGbctM0JxW1oLTDP_KuhjbMDbSkmgA8Y1-U57NPmcbSx-ogVO1357QLu1WzBxRQ8AOMsM-rEoIXJ_2WWqVgMiFJwg1NpVbHMotOMSqaCWmxITR2JXwgi2WB01txww-0oGXiEu6xnKwA-Zsrc-jHRhVVbt5gwpuWZL_8RYPakZT6Yr30CYIeeKCdIBUEX0EL5okGOatX12nI56XoByO2xb1AQaWzplDcfRTpTkV0pBc7vTI-5IYUNTHfOtteVl8gwkagRTH6VIwwdUsZ5F1JIrDimgZ9UCdpU8K-2HVtPYWA0b7CoPlXhbcCTHgsnd6LaRWxW0n2Xngtr3a8ukeVHDO-f-44SpyLTCwyDxbL1NEIAVuj7GcG5eCLIv4NjvTyy_zBkgWIWuqd2FZvLZrwiPdOaXhO4Gl72rGbyTYeikqnFimblBzgbk.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_02a5377a4fbd6b72016af6154fdc8087d18cd04adc9607b336",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 803,
+   "total_tokens": 2307,
+   "cost": 0.03161,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03161,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02409
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 488,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.67
+}

@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471113",
+  "invoice_date": "2018-06-13",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 22.0,
+  "tax": 1.54,
+  "total": 23.54,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Schweinesteak",
+    "quantity": 4,
+    "unit_price": 5.5,
+    "tax_rate": 7,
+    "net": 22.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 22.0,
+    "tax": 1.54
+   }
+  ]
+ },
+ "cost_usd": 0.02474,
+ "raw": {
+  "id": "gen-1794511826-1d4dcT61yOK0goKChaAF",
+  "object": "chat.completion",
+  "created": 1794511826,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Lieferant GmbH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"471113\",\n  \"invoice_date\": \"2018-06-13\",\n  \"due_date\": \"2018-07-04\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 22.00,\n  \"tax\": 1.54,\n  \"total\": 23.54,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Schweinesteak\",\n      \"quantity\": 4,\n      \"unit_price\": 5.5,\n      \"tax_rate\": 7,\n      \"net\": 22.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7,\n      \"base\": 22.00,\n      \"tax\": 1.54\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Bill Data**\n\nI'm currently working on extracting relevant data from a two-page bill document. My primary goal is to structure this information as a JSON object that adheres to the defined schema. I've begun by identifying the vendor name, which is clearly labeled under \"Verkäufer\" -> \"Name\" on the document.\n\n\n**Defining Data Fields**\n\nI've moved on to explicitly defining the data fields I need to extract and their locations within the bill document. I've successfully pinpointed the vendor's name, VAT number, invoice reference, and date. Now, I'm systematically identifying and planning to extract the due date, currency, untaxed amount, tax, total, and finally the IBAN. I will ensure each one aligns with the defined JSON schema.\n\n\n**Mapping Data Fields**\n\nI've carefully mapped out each data field required by the JSON schema and its corresponding location within the bill document. I have successfully located and formatted the vendor's name, VAT number, invoice reference, and date. The due date, currency, amounts (untaxed, tax, total), and IBAN are also identified. I have now also identified the VAT treatment as well.\n\nI am now focusing on the line items.\n\n\n**Extracting Detailed Data**\n\nI'm now diving deeper into the specifics, verifying and extracting individual data points. I've successfully identified and formatted vendor details, dates, currency, and amounts. I'm extracting and formatting the amounts, like the untaxed total is \"22.00\". The VAT summary is also now complete. I've located and extracted all line item data, including the descriptions, quantities, and unit prices. I am now working on confirming the vat breakdown.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction and formatting, cross-referencing all fields to the source document, and meticulously validating extracted values. I've re-examined the line item description to ensure I am extracting the most useful and complete description possible. I've considered including the extra details from the line descriptions as well. I've also re-confirmed the VAT breakdown based on the tax summary. All values are formatted, in the correct data types, and ready to be compiled into the JSON.\n\n\n**Verifying Data Integrity**\n\nI'm now cross-referencing all extracted data points against the original document to ensure accuracy and completeness. I have confirmed each value for vendor details, dates, currency, and amounts. I am confident that the extracted line item data is accurate. I'm prioritizing the inclusion of the concise line description, and formatting all values, and verifying their compliance with the JSON schema. All values and formats have been confirmed, and are now ready to be compiled into the JSON structure.\n\n\n**Compiling Data into JSON**\n\nI've completed the data extraction, meticulously reviewing and reformatting each field to align perfectly with the JSON schema. I've re-confirmed data types, and now, I'm ready to compile all the extracted values into a well-structured JSON object, ensuring accuracy and data integrity.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Bill Data**\n\nI'm currently working on extracting relevant data from a two-page bill document. My primary goal is to structure this information as a JSON object that adheres to the defined schema. I've begun by identifying the vendor name, which is clearly labeled under \"Verkäufer\" -> \"Name\" on the document.\n\n\n**Defining Data Fields**\n\nI've moved on to explicitly defining the data fields I need to extract and their locations within the bill document. I've successfully pinpointed the vendor's name, VAT number, invoice reference, and date. Now, I'm systematically identifying and planning to extract the due date, currency, untaxed amount, tax, total, and finally the IBAN. I will ensure each one aligns with the defined JSON schema.\n\n\n**Mapping Data Fields**\n\nI've carefully mapped out each data field required by the JSON schema and its corresponding location within the bill document. I have successfully located and formatted the vendor's name, VAT number, invoice reference, and date. The due date, currency, amounts (untaxed, tax, total), and IBAN are also identified. I have now also identified the VAT treatment as well.\n\nI am now focusing on the line items.\n\n\n**Extracting Detailed Data**\n\nI'm now diving deeper into the specifics, verifying and extracting individual data points. I've successfully identified and formatted vendor details, dates, currency, and amounts. I'm extracting and formatting the amounts, like the untaxed total is \"22.00\". The VAT summary is also now complete. I've located and extracted all line item data, including the descriptions, quantities, and unit prices. I am now working on confirming the vat breakdown.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction and formatting, cross-referencing all fields to the source document, and meticulously validating extracted values. I've re-examined the line item description to ensure I am extracting the most useful and complete description possible. I've considered including the extra details from the line descriptions as well. I've also re-confirmed the VAT breakdown based on the tax summary. All values are formatted, in the correct data types, and ready to be compiled into the JSON.\n\n\n**Verifying Data Integrity**\n\nI'm now cross-referencing all extracted data points against the original document to ensure accuracy and completeness. I have confirmed each value for vendor details, dates, currency, and amounts. I am confident that the extracted line item data is accurate. I'm prioritizing the inclusion of the concise line description, and formatting all values, and verifying their compliance with the JSON schema. All values and formats have been confirmed, and are now ready to be compiled into the JSON structure.\n\n\n**Compiling Data into JSON**\n\nI've completed the data extraction, meticulously reviewing and reformatting each field to align perfectly with the JSON schema. I've re-confirmed data types, and now, I'm ready to compile all the extracted values into a well-structured JSON object, ensuring accuracy and data integrity.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 576,
+   "completion_tokens": 2402,
+   "total_tokens": 2978,
+   "cost": 0.02474,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02474,
+    "upstream_inference_prompt_cost": 0.00072,
+    "upstream_inference_completions_cost": 0.02402
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2150,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.65
+}

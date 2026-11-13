@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Potter, Jackson and Brooks",
+  "vendor_vat": "941-90-0647",
+  "invoice_ref": "72677375",
+  "invoice_date": "2013-04-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 479.95,
+  "tax": 48,
+  "total": 527.95,
+  "iban": "GB57LPIB27874128237321",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,",
+    "quantity": 5,
+    "unit_price": 79.99,
+    "tax_rate": 10,
+    "net": 399.95
+   },
+   {
+    "description": "Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->",
+    "quantity": 1,
+    "unit_price": 80,
+    "tax_rate": 10,
+    "net": 80
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 479.95,
+    "tax": 48
+   }
+  ]
+ },
+ "cost_usd": 0.0047736,
+ "raw": {
+  "id": "gen-1794515592-HeadFh6LJ30bX3JmDsFg",
+  "object": "chat.completion",
+  "created": 1794515592,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Potter, Jackson and Brooks\",\"vendor_vat\":\"941-90-0647\",\"invoice_ref\":\"72677375\",\"invoice_date\":\"2013-04-08\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":479.95,\"tax\":48,\"total\":527.95,\"iban\":\"GB57LPIB27874128237321\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,\",\"quantity\":5,\"unit_price\":79.99,\"tax_rate\":10,\"net\":399.95},{\"description\":\"Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->\",\"quantity\":1,\"unit_price\":80,\"tax_rate\":10,\"net\":80}],\"vat_breakdown\":[{\"rate\":10,\"base\":479.95,\"tax\":48}]}",
+     "refusal": null,
+     "reasoning": "**Evaluating JSON schema for invoice**\n\nI need to consider the JSON schema for the invoice. The date is likely in dd/mm format, which could be ambiguous as 08/04/2013, so I usually see it as 2013-04-08 in datasets. The vendor has a military address format in FPO AE as well. I should specify the currency as USD with a dollar sign. The line item descriptions need to be precise, noting totals of 479.95 and a 10% VAT. The tax totals are 40 for item 1 and 8 for item 2, but I need to determine the due date.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating JSON schema for invoice**\n\nI need to consider the JSON schema for the invoice. The date is likely in dd/mm format, which could be ambiguous as 08/04/2013, so I usually see it as 2013-04-08 in datasets. The vendor has a military address format in FPO AE as well. I should specify the currency as USD with a dollar sign. The line item descriptions need to be precise, noting totals of 479.95 and a 10% VAT. The tax totals are 40 for item 1 and 8 for item 2, but I need to determine the due date.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iKPrKdV2kgBjW8RZXajsxZtxQ4rDl2fTBkYg1NDLs5NEMIwrY284JcQQhhYLbrS_08Vj6H7cAE0s8EimoV_Z9It-6aYN_h1CW9HpZjHa01aybYSC8Ct1uDClryYQDHSNaEkH7VdqSqn7zMjZPfW6FGPrCg7AHlkuDlnjojNpGFdbOiPrlHDJailuHphqd02MtDzgrawJS5O100iC684XpSunK2xvYr-JIWYUJMlz0VCGemWD4XtdFpqbTwbycLr_7XmgDCuvSekyV4BiuzrT9BE3GwMY3Cx8-t4bUbrz2BTjLNLTq6DEinbpaYaPZfAs5-owYnQVu1GgqokKGWBEqaR_kdZdb3ZS9VGSrZxJyMumttxxe1GPLZcAASphBVDrKFcNnZAQXkEBtQ4VR3SYQAGZ2innbJwEjEphdI7nne5dOYaP0fTOPiRX_i5jCS_NPooxAXowZL_dUCqb07GKPDdRLj5k0AjgWcgTrwmS2ACW3D8IhdgqdOt0qAsAryGbqnbc92lSiEnwPCzeBdI2kxw5xYTXRxC2IP2gngcPrknXWSqoFNMehJFtT4-JU1JZi2_z3SgidBc_oEzHDFV0OT2MP5_H1ddzueJ-CYlf8tTla9WViJJKF2H-XJRUWo67943gOjpXANcds2PH2JBnO7kBbfXq0JZnDlww4xyiRBg184tsWnN3DZw0I4PebFtvymzJn4SAnxj76bXFKWfzRL0S5lA83p3i784Qf_pWwN0IOiYGcOBpklzhis0yKQZEf3zkDv_I_1fwys1U8wA9_a6ROpVGrYkAB3EWLpTuf9RMX252oP3mfLl9u484hq3Iu6nvA3cp4Tcs2UlUdrM3AcmUBJZn9uJObuRRTUqqXfZ0JWz_mtArx5lF32UNrjy8Wrllz-HfcagOVGp0CBcD5auBfjRLlTX-A-bURBdCYIx6LXQhKUvCqMkbbLVo8ebIUbsOoZ6ozywToYQpctz7nGaL30tvhOD6abvbVs2oVj71J5U4zOj-6b1FTnnnBkhTi3aOmdtZjrxM45cZWBswsWV3DnkR3WRrrmtc5X_zLmWd8HcQxgpD-2s4ul6_O4s6i1x2WrohQhiAynGmym1ZvteafHyc0rNo4376malLW6E0R_YdWZUvl5S72yxpjoj7Yu5u6OPPuE2pAtyBDtx8nebFYytq8mZC7M_gDcep5PM-LQy5gOCn0e4xTSafv8kJtaOJSVE35Bqzv27KQhf8Fa9NseSEf74Lte9Jj1DHtfuIaZoMEiJJ3-EgEnyL8asYxURO3ivzoSpdLH-8IAxIcDwmeuqt44WsGbN2ZGH1MMhWe1WPwwzW2BXgjClj3qhTaJYHQHq51oG-g30Ed9ZqfNW3wmZL2LDByCGLny_tvzYRJaudwkVtKgJnk4tvVlxW8ZKtN7l6kn7VprjKsGEU3t9PFvK_bYH2PiAc8IDjMhBS4NREAiDLJSpYbWeLLFE8CAIsktLNCHSpbrNLytb1kEcs4BNP0BmCj8IHoQq984wuRaTDtGmBYYN5M72XGvaUorA7hv8LOwk9_lZ8HzflrM0DcG73Ole0ntDQk_22UTlqgFiTeHHl0WVqMfU7PxntQ7r1U7dhqD05qzwzC8vIjMG-PKBD6mSUctZGYiVhQIXnKJnL0JDxxM-G87PPdUgB4ZmMCidinSdRdaXWDNAg17IMLeunIP_QHRSJ2Zh7Qqa4ngR5tPxDrmjwDjFi5U_jO5ogmJnd-ekz3ZXkndFHGuZfEctEIAHrCFGhc0KLJJqmMatATGrvCpLpqsQp5cZMwxT2Nlu_TQvjDsgFBSyrv6-tKBQhA78jQhvjEg3zhBaO_XBO2i0DMW8bhjINC3SQ66kA40LickdyXgpWRbsTY86zYfIPdlPVr9hsKZBV3J7pklvAWjMGnmGpC8N4ybWx3UTYTMIpWbOzTkIZS19UHZFGsHi32UPTXbj0WyW0Bqczb7mg5UO-ynHmFkczpFqUTU2ZaKSiJNuev7t2OvuoULScpzOIdNIjgZ_87_Uu9b4Q_rJ0SdarSAfHKK1WKSGRUqKiF8DoP8f_fLlJBfNgIzZldxDscaIWE9o_Mv0Ecq8yOWylvq5kQp2hGrD5LghB2Fl_RWJ7CXypqnlffXWQlt-_MOLmA0wP_9Ra1ktWYigyTKavCVv4gHvgZl7Q7AIfLVi33Cqw2k8_RhssxixVtmV8PU56YOKsCio7H-3OHTJoSgoQcHcBTrmLId6tVw3D7MRS3LpTc7WZaGk4Mf0wV45q3ZJCseNPQMtZciD00wtEGuiurkLx2ApXxDShQ1emMSJc8l-1hUCXdUWkAq_Gc1xjgMIhebNa_p_EOzRJxbklMTaVN-Y5jD-Fkl_CTIoIdChTOKGA1Otz-1VBr8wTgfMuxWZDW3lV7VK1N4lh6tdIJPwEulNjlWo7KWFIGdi3dXmRyWxzwzUzqR4sMZrupWx1YaqHysQfIefAncB9023YStjavV3SdHH922Gk98zuWx0gMKBp0mqeZvYHJD9u9pD3G873WN_i3ea-b5D1K1u9OZxR0S4VT48JANcvgAcnPnjcDgPAoudNrHFB-ferp_sVdIaxq8Pclz7A2TkOqfGMNzhipp5ukCikjpJuxsv4clrA1t40qKaPuAIIKC6rvSWsiCAzzU-X594fwMN29DLKiEdpRlLfePEx1s3kELwXNuZKyhOnW8uLySxsfv8MpH7qB4c9JTlOPobP2VZeHzsbhYctSiy7e2agfNqYO9BOFE4TAVc62n0CY-Du_XVecLG2Vs-qFt7Ieomqoh36mk1a0LyDB2QJ18bOMqTd3g4fonSjgl5R73zbtgY0QZMCDomYik9juYPy7giyu_TAAV80_1NlP3Vm9mlKgFH5cE56ruaByItbXsJ7fwuVbn6EVOrltU8hCyGvzilmMU2yLN2gEgMXXnoutxJ4GV1sm90KyBx_ombvacgM0rT36B6VcumOTmWiDsu4OuVkp53TiPBQBIxU3O_EUim9K23pHFoa02od7-4EGD7prXyccgR1yN-Rr33BIjjo9E-QNuB4iP7d33oqdLGNCmqBtMZ9x9NIRpvVeg1-e6Cxxu6fgZYf67fplCx_j4X0SLMj8RIz4wkps43KJo0NZmrZrXItpFirJcTSinymyS9bIYv04BWAf2-jXPsRn5qMIf4GXMlvnuyDcvdnnZGMHmKUlQT-uwOYtOZbuSY08z-SNzmyXaUQhtBxlozCEZl8dE80pLQp5LRGHdNNWb96cS_XR1eYS6pMvVo9hBBz9nA09f3BcBjX9jMm7OVgLby1169egAfUHS5lsuVJCZbUaOP56tsdEfmzjsV.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_084ca01564468cc9016af6228a572087d1aa1653f995ed7ae3",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 338,
+   "total_tokens": 3899,
+   "cost": 0.0047736,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 3558,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0047736,
+    "upstream_inference_prompt_cost": 0.0007176,
+    "upstream_inference_completions_cost": 0.004056
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 141,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.14
+}

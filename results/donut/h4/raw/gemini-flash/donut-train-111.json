@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Murphy-Sanders",
+  "vendor_vat": "917-83-2356",
+  "invoice_ref": "46301857",
+  "invoice_date": "2017-08-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 59.35,
+  "tax": 5.94,
+  "total": 65.29,
+  "iban": "GB24OZUP84517588674217",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Care & Repair of Furniture",
+    "quantity": 5.0,
+    "unit_price": 4.25,
+    "tax_rate": 10.0,
+    "net": 21.25
+   },
+   {
+    "description": "Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The",
+    "quantity": 5.0,
+    "unit_price": 7.62,
+    "tax_rate": 10.0,
+    "net": 38.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 59.35,
+    "tax": 5.94
+   }
+  ]
+ },
+ "cost_usd": 0.006786,
+ "raw": {
+  "id": "gen-1794515355-TTVC2M7t5ciXrrC60kMJ",
+  "object": "chat.completion",
+  "created": 1794515355,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Murphy-Sanders\",\"vendor_vat\":\"917-83-2356\",\"invoice_ref\":\"46301857\",\"invoice_date\":\"2017-08-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":59.35,\"tax\":5.94,\"total\":65.29,\"iban\":\"GB24OZUP84517588674217\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Care & Repair of Furniture\",\"quantity\":5.0,\"unit_price\":4.25,\"tax_rate\":10.0,\"net\":21.25},{\"description\":\"Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The\",\"quantity\":5.0,\"unit_price\":7.62,\"tax_rate\":10.0,\"net\":38.1}],\"vat_breakdown\":[{\"rate\":10.0,\"base\":59.35,\"tax\":5.94}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Details**\n\nI've successfully parsed the invoice number, issue date, seller, and client information from the provided document. This initial extraction lays the groundwork for further processing.\n\n**Analyzing Date Ambiguity**\n\nI'm now focusing on the date 04/08/2017. Given the decimal comma usage and the potential for a US military address, I need to definitively resolve whether it's DD/MM/YYYY or MM/DD/YYYY to ensure accurate chronological processing.\n\n**Confirming Date Interpretation**\n\nI've confirmed that the invoice date \"04/08/2017\" corresponds to August 4, 2017, following the standard DD/MM/YYYY format prevalent in European contexts and commonly used with this known invoice dataset template. This resolves the previous ambiguity.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Details**\n\nI've successfully parsed the invoice number, issue date, seller, and client information from the provided document. This initial extraction lays the groundwork for further processing.\n\n**Analyzing Date Ambiguity**\n\nI'm now focusing on the date 04/08/2017. Given the decimal comma usage and the potential for a US military address, I need to definitively resolve whether it's DD/MM/YYYY or MM/DD/YYYY to ensure accurate chronological processing.\n\n**Confirming Date Interpretation**\n\nI've confirmed that the invoice date \"04/08/2017\" corresponds to August 4, 2017, following the standard DD/MM/YYYY format prevalent in European contexts and commonly used with this known invoice dataset template. This resolves the previous ambiguity.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1918,
+   "completion_tokens": 1426,
+   "total_tokens": 3344,
+   "cost": 0.006786,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006786,
+    "upstream_inference_prompt_cost": 0.0014385,
+    "upstream_inference_completions_cost": 0.0053475
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1184,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.15
+}

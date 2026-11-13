@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0010",
+  "invoice_date": "2017-11-13",
+  "due_date": "2017-12-13",
+  "currency": "EUR",
+  "untaxed": 624.9,
+  "tax": 46.25,
+  "total": 671.15,
+  "iban": "FR2012421242124212421242124",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 20.0,
+    "unit_price": 4.55,
+    "tax_rate": 20.0,
+    "net": 81.9
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 15.0,
+    "unit_price": 3.2,
+    "tax_rate": 5.5,
+    "net": 48.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 25.0,
+    "unit_price": 19.8,
+    "tax_rate": 5.5,
+    "net": 495.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 20.0,
+    "base": 81.9,
+    "tax": 16.38
+   },
+   {
+    "rate": 5.5,
+    "base": 543.0,
+    "tax": 29.87
+   }
+  ]
+ },
+ "cost_usd": 0.0191475,
+ "raw": {
+  "id": "gen-1794512652-NnnruZe8pfZsPiMv2L9M",
+  "object": "chat.completion",
+  "created": 1794512652,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Au bon moulin SARL\",\n  \"vendor_vat\": \"FR11999999998\",\n  \"invoice_ref\": \"FA-2017-0010\",\n  \"invoice_date\": \"2017-11-13\",\n  \"due_date\": \"2017-12-13\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 624.9,\n  \"tax\": 46.25,\n  \"total\": 671.15,\n  \"iban\": \"FR2012421242124212421242124\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nougat de l'Abbaye 250g\",\n      \"quantity\": 20.0,\n      \"unit_price\": 4.55,\n      \"tax_rate\": 20.0,\n      \"net\": 81.9\n    },\n    {\n      \"description\": \"Biscuits aux raisins 300g\",\n      \"quantity\": 15.0,\n      \"unit_price\": 3.2,\n      \"tax_rate\": 5.5,\n      \"net\": 48.0\n    },\n    {\n      \"description\": \"Huile d'olive à l'ancienne\",\n      \"quantity\": 25.0,\n      \"unit_price\": 19.8,\n      \"tax_rate\": 5.5,\n      \"net\": 495.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 20.0,\n      \"base\": 81.9,\n      \"tax\": 16.38\n    },\n    {\n      \"rate\": 5.5,\n      \"base\": 543.0,\n      \"tax\": 29.87\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm now zeroing in on the vendor information. The plan is to pull the `vendor_name` directly from the document header, which lists \"Au bon moulin SARL.\" Next, I'll identify the `vendor_vat` number from the same section. I anticipate this will be a straightforward extraction based on its typical formatting and placement.\n\n\n**Identifying Key Data Points**\n\nI've moved on to identifying key data points for the schema. I've pinpointed the `invoice_ref` as \"Facture FA-2017-0010,\" the `invoice_date` as \"2017-11-13\", and the `due_date` as \"2017-12-13\". The currency is confirmed as \"EUR,\" and I see \"624.90\" as the untaxed total. I've also found the `tax` amount \"46.25\", and `total` \"671.15\". The IBAN is also available. I am making an assessment about the VAT treatment.\n\n\n**Populating The Schema**\n\nNow I'm focusing on populating the schema fields, systematically extracting data and verifying formats. I've successfully extracted and formatted dates, identified currency (\"EUR\"), and translated textual labels to their corresponding values, such as \"Total HT\" to 624.90. The IBAN is also available. I'm building out a plan for line item extraction. I'll need to parse the detailed item descriptions, quantities, unit prices, and tax rates. I see I can map the bill's format to the schema I developed. I'm considering best ways to represent the VAT treatment.\n\nI'm now zeroing in on the vendor information. The plan is to pull the `vendor_name` directly from the document header, which lists \"Au bon moulin SARL.\" Next, I'll identify the `vendor_vat` number from the same section. I anticipate this will be a straightforward extraction based on its typical formatting and placement.\n\nI've moved on to identifying key data points for the schema. I've pinpointed the `invoice_ref` as \"Facture FA-2017-0010,\" the `invoice_date` as \"2017-11-13\", and the `due_date` as \"2017-12-13\". The currency is confirmed as \"EUR,\" and I see \"624.90\" as the untaxed total. I've also found the `tax` amount \"46.25\", and `total` \"671.15\". The IBAN is also available. I am making an assessment about the VAT treatment.\n\n\n**Constructing The JSON**\n\nI'm now extracting and validating the remaining data points and building out the JSON. I've successfully extracted all the key fields, including dates, amounts, and vendor information. I've also parsed the line items and their corresponding VAT treatments, and I'm currently constructing the lines array. I'm double-checking the calculations to confirm accuracy, and I'm verifying the VAT breakdown.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm now zeroing in on the vendor information. The plan is to pull the `vendor_name` directly from the document header, which lists \"Au bon moulin SARL.\" Next, I'll identify the `vendor_vat` number from the same section. I anticipate this will be a straightforward extraction based on its typical formatting and placement.\n\n\n**Identifying Key Data Points**\n\nI've moved on to identifying key data points for the schema. I've pinpointed the `invoice_ref` as \"Facture FA-2017-0010,\" the `invoice_date` as \"2017-11-13\", and the `due_date` as \"2017-12-13\". The currency is confirmed as \"EUR,\" and I see \"624.90\" as the untaxed total. I've also found the `tax` amount \"46.25\", and `total` \"671.15\". The IBAN is also available. I am making an assessment about the VAT treatment.\n\n\n**Populating The Schema**\n\nNow I'm focusing on populating the schema fields, systematically extracting data and verifying formats. I've successfully extracted and formatted dates, identified currency (\"EUR\"), and translated textual labels to their corresponding values, such as \"Total HT\" to 624.90. The IBAN is also available. I'm building out a plan for line item extraction. I'll need to parse the detailed item descriptions, quantities, unit prices, and tax rates. I see I can map the bill's format to the schema I developed. I'm considering best ways to represent the VAT treatment.\n\nI'm now zeroing in on the vendor information. The plan is to pull the `vendor_name` directly from the document header, which lists \"Au bon moulin SARL.\" Next, I'll identify the `vendor_vat` number from the same section. I anticipate this will be a straightforward extraction based on its typical formatting and placement.\n\nI've moved on to identifying key data points for the schema. I've pinpointed the `invoice_ref` as \"Facture FA-2017-0010,\" the `invoice_date` as \"2017-11-13\", and the `due_date` as \"2017-12-13\". The currency is confirmed as \"EUR,\" and I see \"624.90\" as the untaxed total. I've also found the `tax` amount \"46.25\", and `total` \"671.15\". The IBAN is also available. I am making an assessment about the VAT treatment.\n\n\n**Constructing The JSON**\n\nI'm now extracting and validating the remaining data points and building out the JSON. I've successfully extracted all the key fields, including dates, amounts, and vendor information. I've also parsed the line items and their corresponding VAT treatments, and I'm currently constructing the lines array. I'm double-checking the calculations to confirm accuracy, and I'm verifying the VAT breakdown.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1875,
+   "total_tokens": 2193,
+   "cost": 0.0191475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0191475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1387,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.46
+}

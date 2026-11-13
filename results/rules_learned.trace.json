@@ -1,0 +1,60 @@
+{
+ "teacher": "anthropic/claude-opus-5.5",
+ "errors": 22,
+ "request": "A model read supplier bills and receipts and returned these fields wrong.\nEach line is: field | right value | the model's value.\n\ninvoice_date | 2016-03-10 | 2016-10-03\ninvoice_date | 2017-07-10 | 2017-10-07\ninvoice_date | 2013-07-12 | 2013-12-07\ninvoice_date | 2019-12-08 | 2019-08-12\ninvoice_date | 2019-06-04 | 2019-04-06\ninvoice_date | 2013-11-09 | 2013-09-11\ninvoice_date | 2018-10-08 | 2018-08-10\ninvoice_date | 2016-07-08 | 2016-08-07\ninvoice_date | 2018-05-12 | 2018-12-05\ninvoice_date | 2015-09-07 | 2015-07-09\nvendor_name | Obrien Group 1710 Thomas Tunnel Suite 214 Cassandramouth, DE 17634 | Anderson-Bryant\ninvoice_date | 2017-06-12 | 2017-12-06\ninvoice_date | 2019-06-08 | 2019-08-06\ninvoice_date | 2017-10-03 | 2017-03-10\ninvoice_date | 2017-05-03 | 2017-03-05\ninvoice_date | 2012-03-04 | 2012-04-03\ninvoice_date | 2021-01-07 | 2021-07-01\ninvoice_date | 2018-11-12 | 2018-12-11\nvendor_name | SYARIKAT PERNIAGAAN GIN KEE | \ninvoice_date | 2018-01-11 | \ntotal | 116.28 | \ninvoice_date | 2018-02-03 | 2018-03-03\n\nWrite at most 10 general reading rules that would have prevented these errors on\nother bills. Do not quote any name, number, date or amount from the list above.\nAnswer with the rules only, one per line, each starting with \"- \".",
+ "response": {
+  "id": "gen-1794514554-QMDFjOakIeEHoAsoJrTn",
+  "object": "chat.completion",
+  "created": 1794514554,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "- Before reading any date, work out the document's date convention from its country, currency, address format and language; do not assume month-first.\n- Look for an unambiguous date on the same document (a day value above 12) and apply its day/month order to every other date on that document.\n- When converting to year-month-day output, map the day and month components explicitly and check that they did not swap.\n- Sanity-check the invoice date against related dates such as due date, payment terms, delivery date or service period; a swapped day/month often breaks that consistency.\n- Read each date component digit by digit, and never fill one component by copying the value of another.\n- The vendor is the issuer or seller, found in the letterhead, logo area, \"from\" or \"remit to\" block; never take the bill-to, ship-to, customer or any other company named on the page.\n- Copy the vendor's identifying text exactly as printed in the issuer block, without substituting a different company name found elsewhere.\n- On retail receipts, the business name is usually the capitalized line at the very top, often near a registration or tax number; extract it rather than leaving the field blank.\n- Never return an empty field when the document contains the value. Search the header, the footer, and the area around the transaction details before giving up, even on faint or low-quality scans.\n- For the total, take the final amount payable after tax and rounding (labels such as total, grand total, nett or amount due), not the subtotal, cash tendered or change.",
+     "refusal": null,
+     "reasoning": "The errors are mostly day and month swaps. The vendor field is wrong too: the model grabbed the buyer, and the right value is the issuer's name as printed in the header block, with its address. Empty outputs need fixing so a value that is present never comes back blank, since receipts usually show the company name in capitals at the top and the total near the bottom. The last case is a single misread digit, 2018-02-03 instead of 2018-03-03.\n\nI'm settling on the rules for reading dates and vendor names: work out the date order from the locale and any unambiguous dates on the page, output everything in ISO format, and cross-check against due dates and payment terms. For the vendor, I'll take the seller or issuer as printed, not the bill-to party, and never substitute a company name from somewhere else on the document. I'm also making sure a field that's present never comes back empty, and that the total is the final payable amount after tax and rounding.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "The errors are mostly day and month swaps. The vendor field is wrong too: the model grabbed the buyer, and the right value is the issuer's name as printed in the header block, with its address. Empty outputs need fixing so a value that is present never comes back blank, since receipts usually show the company name in capitals at the top and the total near the bottom. The last case is a single misread digit, 2018-02-03 instead of 2018-03-03.\n\nI'm settling on the rules for reading dates and vendor names: work out the date order from the locale and any unambiguous dates on the page, output everything in ISO format, and cross-check against due dates and payment terms. For the vendor, I'll take the seller or issuer as printed, not the bill-to party, and never substitute a company name from somewhere else on the document. I'm also making sure a field that's present never comes back empty, and that the total is the final payable amount after tax and rounding.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 643,
+   "completion_tokens": 994,
+   "total_tokens": 1637,
+   "cost": 0.022452,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022452,
+    "upstream_inference_prompt_cost": 0.002572,
+    "upstream_inference_completions_cost": 0.01988
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 547,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

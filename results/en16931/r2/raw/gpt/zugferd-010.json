@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1,
+    "tax_rate": 19,
+    "net": -5
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.020336,
+ "raw": {
+  "id": "gen-1794512633-m2KnOiUjMomte1HgaIGz",
+  "object": "chat.completion",
+  "created": 1794512633,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"RK21012345\",\"invoice_date\":\"2018-09-16\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":-7.67,\"tax\":-1.12,\"total\":-8.79,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Zitronensäure 100ml\",\"quantity\":-5,\"unit_price\":1,\"tax_rate\":19,\"net\":-5},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":-2,\"unit_price\":1.45,\"tax_rate\":7,\"net\":-2.9}],\"vat_breakdown\":[{\"rate\":19,\"base\":-4.85,\"tax\":-0.92},{\"rate\":7,\"base\":-2.82,\"tax\":-0.2}]}",
+     "refusal": null,
+     "reasoning": "**Creating JSON Schema for Credit Note**\n\nI need to extract details for the JSON schema of a Rechnungskorrektur credit note from MUSTERLIEFERANT GMBH. The invoice reference is RK21012345, dated 2018-09-16, with no due date specified and in EUR. The amounts listed are untaxed -7.67, tax -1.12, and total -8.79, and I notice the negative quantities might need special handling. I must also account for discounts in the summary while noting the tax rates for the line items.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Creating JSON Schema for Credit Note**\n\nI need to extract details for the JSON schema of a Rechnungskorrektur credit note from MUSTERLIEFERANT GMBH. The invoice reference is RK21012345, dated 2018-09-16, with no due date specified and in EUR. The amounts listed are untaxed -7.67, tax -1.12, and total -8.79, and I notice the negative quantities might need special handling. I must also account for discounts in the summary while noting the tax rates for the line items.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hb_piW9dzOR1KUQ2E6KcJWmH5r_Eezm_IU3IrJnanT3r_LLMvFMnqBcsAwFExZJbFfheORFqfd52BzLjTecKiOlDeFeVDY2iwGKURqBaXlCU8zT6GJ2xydOyAxmkA4P_ANHM0YHl0ZhTcEwDxCcPhanC9gsWNMD5n2pwUbqeZi0dFldt8NOnJUpnQZ7e9fn128bX9KTs8qNcKT83U-Uv2KbS_DX2WlPbl4VZ4Yho-EgFdjRQp9lNOYSfAHtUnofbA-LbT4_vCToHAywKNwTPOBh_Q2pLijicaJY-gTAkkbEJ-vNlX5USOdELiLu7eTCLsQ3nBpb2BBHWwWs6YpWNvsZzBGQsFSau9j8sT2fihsyruFKbD32oFv4mhoLdJ6_qU1zUhIus6u_P_gDCQ1yI77Az8fE_OBp3r6MgmcwOmdN_4rVVjJ2mf0KhpnQpN1eDTdBtS3NrBSUmLrqaFumecHr9kliU2ccJTy-oL-klXYvPRKdkxlSO0qZtCnr2J6LZrW3l6Wqz1q27WNvdMKn_lDIbzFGr9fireyLU5bzIpuFcvKdk7rsQZEF15JcT7wGC2U89xK0vN6vZQhLeemm5JOXcO1qJrBcatwGtilRquaf5kka-T7Cx9RpW2ZhnGnrC7EjZoKUOs3b6iwwYpBIOW9hQVdq8v1Hy1_ekk8wf2104ITZGtFf3MBZ4ipNsm67pOfeIJyAwBwLeLvzQkzBkyKosqcm5VNdUqQ_nrq9XQHZ9dklgmGnSkD8YuuMQ6Zn-jxUQAUgP-zT3_bb2tgVAEVViDImP14BQodeUdYN5mMk_TQdjv5SKU0yvRJKSstQ_79oTzR4lXEt1ol78vOjFMgZ0-umdaY9BrxcVRjLZjJmIuO1UZ0sGvmvWD4KPlOkd6CBVMu4cpkClYBCjNd8qwUQXovXoUC-5ad2FmZxNompFLYGg_2q2UXnONXLnoAiwrlOwQRelvoqAPWLkn3YSYJHiSZwoq2nTFBSJgg0hq8it4kjc_AimPGfDV8tEj4zZZVJdk2GArfGn2DrxrOm6E8bUnVdSPoIhHK20VspFaMdbE5FYdCxQrodfow_1tH9lyfaL1hWLYOS-MDAYm3WBGu1Knx6PgEbTujaPJbY7OZcaFg60Pp6uGpuP-th44Zxt2dtE00IsO29GqX9QcjegqJ9pWu8s51AWWQp6i0JbIJB2VGoprhHaiOQ8CfAC7gBVbNs-f4fdpEbJOhvSY6qG8N1PrcZFd_TEXj3mVaMbMHDRFS-xNRMZThMCBTRMW94YfJDtX2Ejj1auGzuXWvUN7dg4JmtVyq6yASmGPW5FqYwCODh90tH0PF0C_EL6eKkda3gGAPMM9IVdwsrUPzonuUmbITDdeuYOFWbfN3VyUcY_48pRKWe_Ea17TbdjST6SPkGtxJmenWRIxVBeyqit09JP6s0fJLNIE5vVU6VspPEB2MtJoC2OuP5xMdCA4vmXIG9ohoSqB9XDC6ir3ATsngYpleWWJXMNCZ6qjQyGpq5Z5znBDXoHA0VkyDxRtEd9ArQxNGXcWersmkBbOSwFMtl0nbEofeQ9Q4yPJqnwr3Z5U0WZJcD964SmazHFvyGBTKHeComlg0w4YQl220fmF5GvuiOb9AL8HKbnX9E0j2GyhAHeB_easSf-L5zSaWrkiNVCKkOC62sGj26LM_hGG1lwhw6KF5QEXcNGOV2VsPYT1sIwM2SoJqMSdYusYLzjB8MOX_OUJ86RMjC5AUfiMUE83-i069h3B5XDBKkyEVRTW_i9jd16dfHcQvaUs2d4V57mvDAnsNaH6AUoJqxjpc5_wEUxxX2xdOgntogw5PhRj1iquHuel4v843e7oQ8brJn4kiKEt1DXgoxrAXmaR8N9ONd2rVftIi_S6NFAjtOkHxDDzMdA-2FTL4UU5TJsYZI5D5CQz1EwxlIMVNPcTKX0-cu9rysRaXUW2lpfFrMhYQclRl9DLDYv_RnYrftfuwWD8W8o9uUUH9BMZ5BwldBze_tFy9DPkyGN9BOo9eVloXQHNItqg8GDweLnN7f_gKGL2Wxwwsi0QUQ0uEgVK2oof1wlTVqLTUqGFhdiZP0p6vQYZdHJwU8zOaR68cmnKVvVSA5IhvtcSlZahIG7BIRqJwdS2s7ENiukM_BVfl30OoJtiALGWD9uv8iSF2TZy21J-0SGtPI1s2QO8W8hSoSWd1-QdHhaNKSRYp1jvqU2isHjw3A5QuU4o2woaddTXCJEXNEBri5G1qjMxd1tZEpvhyz0H105m6_r7D8n43UgybBGXtZPIYn2CCwZxH_kJSPp71JXm1221NApWzbScnik6F7otlwZGaUnILG9TD0sApGO7UurlCPhCnE_CJ1nbwe4dfvHqTg23TGK1ykJk-bDuz4GFNf9Qog4h2T_6fa7oRBdFN63VeDshI5gtfWsijj7cTGpOy5RBjpE3Nz7BOWxDJIR4iCXtXwxbChDO-sJlnOwR8iucDozypxbwLviUtBRJCJQBKlIuvaedX9i4iUDWsRNnsiInB27KOvt45HY0GBBEZ-S2o82BxVU-rUYlaKK5dJzE1UI0DvSde4bfS-mylU707SH7x40cEi5lNgYLEAYT17Hr1HghtSLGoLzJOPFbmwSysol4QMmYCJl8eLrtbkogn-iAnIrakxLCVbOzDV5nJKfMlOnRvg6wF1WuYbOAz3mlD7hQyWcv23YmR2ANZr7tJ6gKKeGqauhrP-Pr38zoi-Fjkl3MISggSLd_GUv_LsvtTvW1sfUKi7K3JG0GnZGPvedu5LrmQC6wxP50Zq08CDIo_IsQSPUJSGyC5ACLnwwp05f67l8lhvE9TWb1rHEobY5bscItP26shImf-L2qC2fwnm1vdZVB5NK4k1sLCB4gpXC1Ts6tsRgvxHKm-WuoEFmmlR5RHb1JBMl3-l3vAx11UloNbVDB8WuKR7cmrSPIFzPd0kgllcQxWKRst6SE-v9WZUQYlQbYqgWPHsJpU6PvrtAlwvEbwPgQTcgk3A_kgjIWPFZlGcjZhKrMMOD6DhFoILOriMa_plQYgxVWnzyLNXI-BcaXju8wjp7mU-6PFQdGtthbhkvibNMfuPZcWtrF0Tr_EZfO96pVaPRk6joLBB5pU49iRqc4kD-jjysIzv_XrMTDsMSIXoy7Vv7BFuzLMpV0TL128Kx9JddMfmH8-8JcZTxQYNSf_2A3KMXB5rO13s_NH_WH8l_embQP7F6uW6pczt6q0eYbkzAHIQjS9Sxqxwr8M9ePzvjnV7N1WMAJtK2ojPbGbRIgE-UycNOri0Ze-R-V4t5eULBr_k6xIG_B4s3ngtsReCURM8dE6-oUGOS41rtF78NTRW8xZy9QjV43eZlzoClZ97jf3Fu-bxAdH-4QONZcPMqusZFzTPmOxktBcLpFYnF2XRL2uwwd1P5rutukCbzritpTqbFE8ZUOnH4RcTSu1l2-lR-0llA6BEx3EDej_j0GyfiZEF2--U1VpQKjVME-NKssuVe4dmoLMMsUr7hfMh0sYxVZKazbXh0tpGzafUfYOq2j23hEA6qE-q8dw_KSneuiwW5DRcCBDLx7-e-FtwJA-xySyu0bTSwpedOLOjHr9UcrQD8nJPvRdvS_iW21g3uLdcZxfD-Qwn4H52D0C5GEzS_Snp2fqm7uSiDrmkD_HuCjfYp8mo31r51okRqb1VbzVKFDAZaLjyVet9rwO9CbLQd7eWtPy7cTWIUSm2rfHeLZxLt7JQpGuUQyiIXSQc3eyLfn9jU60rlenRGmmaw-5ooEB37FYIIDSnbei54r_myI3l1ZOU4QBmE5JnLL60bwfeaulISl2ZSfaq0NOO37AGiEJoBODNkKHasPCikGor5FFvH7wbUPduGclc148fZbQu_vJTOZTF9WlMBlu8jpfPks-iciN0TK5PpWM7dEe3GB8VC9JvZTw73E3_RRFrpwcDRLPgrAIOXcX6gdNA7NsE2oKVPeqnOaDxKSNjR6tdaXR4aSQQ7GpyHjWfM_mzTcT86gKKD7aHzyMOYxpJn8QjDvrna4ax0WECrcHaHLGvE4yD71N47leD3MG4Z08ELX1cerg0PO7bVVU3MkPSUy0E9FJlf79cUw2OvtxPdKh_QCd2ycch0RXoNb0uPdlbiUqPwDN9AP5GBPOrgKX5sqTnQGhm_1e3zbigNhgEGcqdqvJX22PiKf3ZGiFZoak=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0af9119b1defff74016af616fa8f1087d1a75bdf7b3c32791a",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3040,
+   "completion_tokens": 440,
+   "total_tokens": 3480,
+   "cost": 0.020336,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.020336,
+    "upstream_inference_prompt_cost": 0.007136,
+    "upstream_inference_completions_cost": 0.0132
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 237,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.79
+}

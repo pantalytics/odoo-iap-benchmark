@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18032902170347",
+  "invoice_date": "2018-03-29",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.7,
+  "tax": 0.4,
+  "total": 7.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR I00100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.7,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.021844,
+ "raw": {
+  "id": "gen-1794514617-D83thTcRHH1OJAuA4ROJ",
+  "object": "chat.completion",
+  "created": 1794514617,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18032902170347\",\"invoice_date\":\"2018-03-29\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.7,\"tax\":0.4,\"total\":7.1,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SR I00100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":6.7,\"tax_rate\":6,\"net\":6.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.7,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the receipt as Malaysian with 6% GST and amounts in MYR. The vendor's GST registration number looks like 000656195584, though the OCR is a bit garbled, so I'm going with that. For the line item, the printed price of 7.10 already includes tax, which works out to 6.70 before tax plus 0.40 GST, so I'm treating 6.70 as the unit price.\n\nI'm going to give the net as 6.70 before tax, since that's more consistent than the 7.10 inclusive figure. The company registration 867388-U isn't a VAT number, and the date is 2018-03-29.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the receipt as Malaysian with 6% GST and amounts in MYR. The vendor's GST registration number looks like 000656195584, though the OCR is a bit garbled, so I'm going with that. For the line item, the printed price of 7.10 already includes tax, which works out to 6.70 before tax plus 0.40 GST, so I'm treating 6.70 as the unit price.\n\nI'm going to give the net as 6.70 before tax, since that's more consistent than the 7.10 inclusive figure. The company registration 867388-U isn't a VAT number, and the date is 2018-03-29.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSxQgKEAgTGAI4AUIIdGhpbmtpbmcSDO27cSZUPGQgfzqzvhoMNzeSXl8qLQjTmUA7IjA+Ze9sgXnlDXYcgk7Dk+gcIA8GfyB0gw2PqVlFU2gpxQjA7Ay52qs4l81EX2eIxAUq4gfXbxfZDJhCcDSzwKtt2u3Q0qt5jUFlLDVYGGry9BPhBJIosudToj7FyS7je3KigQ6RFvWDjkv09SuS2i3r34koAIfhuk+mdAN7h74TIuiL9aIWBPjwwLtqV/E7XjzldwxVerrwm2eRaQ8nK144uu0H8xnTY35PpY+1r0tcCbSotgmo+7DAi127cu6QqxiA5sIbIqDTJsEHD/PyPHvLMUPTvoa20oFdwjVZfCUJFCRhmu49nOK7kDMFo96O97ysz+BIJsmxvTfr7XtAWnJqmQo2mMp3BZgbY9Nyo7qfQm8IiLv3EOGHChQJ8zFlzARkRl9moLA1+Ps14sPB59N3CvPi2rsrovz1fS6e55UnJssP7pfqthtqSIKa4PJBCwUMQNQFjzWhCrxA9/DT3tT1igSrB+clVMP5BZiN9orVYXIwS3miv/kjX3GGiwU0lSpy6oiQZHgw1Iln9/3w/Pz1BNGxeNRBYp7HXOWdv+JTdEuq1/vL2jp4d2J+X7V4H+5BORMLwtt1vy4Eo0HOlpcfZcaLvrn2WhULwbP8LP+EE1I733x5OEpuoO9WWwpklOfb9Q56pY3G4aCrC695ciAvUJ6aHGLb+F2Gc6mjzWQ2N/kVmb+aUDzhLUTubbD9D97Ey9fbWe7EkkS9pjdyw5qgAhGHb3mtcuYdVGdaDZ7GE9IvhLxr4KZvj0qhA67BeIaNFHp1hAh1XjPvYbUuaQ6iZKj8bRdR+lm+yceEfppi6NYGDidlPv7o9P0M2Y7TBxNA25pGz0FuwQbEt44HvgB+wUF+lEG+Pb7TiL0PqjrTaa8Zq0bVYi2VBDvP3lM6sEz9p1MecTiex3OaYCMCWLOVM6RiQGRm018y4u/FXtmDcGXgbEKT9OmOvM++G7MisJIihQKmU/AtivjTA5wzkGTY0eaHyTS9ptUrJYa+Y7RjZoxBQkMZJ3wITEZRAW7dng4ee/PP96PF/oHYfFCkSV5fiiY8QqleCByYVwDyWzylo7humEiXyvseceBPW/YCBihM/YeQmaWOU4EG/CmpbNjXXY2JFM4dVEt9LY82FPvzEP42HXnz+FKmoCL8g2yJ8PYO6sm7q6quskZdIemC+Fp42J+DTSEoA/THJu16aSWEBjJn5/4bmHfdgEmGgSopq5JAxT7sQEir+ZAExzo5tSNU/R78TyF9TAmqcwdoSCKdLd6TGVCaHH6hjBUQt3X5yDfFR4xZzCLCcY/B9g/3H6aqljhfv/3qvmCGIXX2YIufSQvNWlbKmnbRZyvVrKWC3bXIa3D7SAQp0pdbu51Wmnxygk9CwfRj5QrYsloJbc0xKO/5DjuoGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 456,
+   "total_tokens": 3637,
+   "cost": 0.021844,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021844,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.00912
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 224,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.04
+}

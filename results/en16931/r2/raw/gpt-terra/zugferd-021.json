@@ -1,0 +1,122 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "KR87654321012",
+  "invoice_date": "2018-10-06",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 403.55,
+  "tax": 76.67,
+  "total": 480.22,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Wirkarbeit HT",
+    "quantity": 10000,
+    "unit_price": 0.052,
+    "tax_rate": 19,
+    "net": 52
+   },
+   {
+    "description": "Ökosteuer Lieferant",
+    "quantity": 10000,
+    "unit_price": 0.0205,
+    "tax_rate": 19,
+    "net": 20.5
+   },
+   {
+    "description": "Kommissionierer 1250032 D. Muster",
+    "quantity": 27.5,
+    "unit_price": 10.5,
+    "tax_rate": 19,
+    "net": 288.75
+   },
+   {
+    "description": "FALTENBEUTEL 16x6x28 CM",
+    "quantity": 3500,
+    "unit_price": 0.0105,
+    "tax_rate": 19,
+    "net": 36.75
+   },
+   {
+    "description": "Kopierpapier A4",
+    "quantity": 1210,
+    "unit_price": 0.01,
+    "tax_rate": 19,
+    "net": 12.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": 403.55,
+    "tax": 76.67
+   }
+  ]
+ },
+ "cost_usd": 0.0068646,
+ "raw": {
+  "id": "gen-1794514897-sX84Rr50eaj7DZ1yE050",
+  "object": "chat.completion",
+  "created": 1794514897,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"KR87654321012\",\"invoice_date\":\"2018-10-06\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":403.55,\"tax\":76.67,\"total\":480.22,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Wirkarbeit HT\",\"quantity\":10000,\"unit_price\":0.052,\"tax_rate\":19,\"net\":52},{\"description\":\"Ökosteuer Lieferant\",\"quantity\":10000,\"unit_price\":0.0205,\"tax_rate\":19,\"net\":20.5},{\"description\":\"Kommissionierer 1250032 D. Muster\",\"quantity\":27.5,\"unit_price\":10.5,\"tax_rate\":19,\"net\":288.75},{\"description\":\"FALTENBEUTEL 16x6x28 CM\",\"quantity\":3500,\"unit_price\":0.0105,\"tax_rate\":19,\"net\":36.75},{\"description\":\"Kopierpapier A4\",\"quantity\":1210,\"unit_price\":0.01,\"tax_rate\":19,\"net\":12.1}],\"vat_breakdown\":[{\"rate\":19,\"base\":403.55,\"tax\":76.67}]}",
+     "refusal": null,
+     "reasoning": "**Clarifying the JSON schema requirements**\n\nI’m focusing on creating a JSON-only schema. The due date might be set as the invoice date plus 10 days, although it’s not explicitly stated. There's a 2% discount within that time frame, but no general payment due. Also, it looks like lines should include multiple fields based on the printed description. I wonder about surcharge lines—should they be included as invoice items? The schema specifies exactly five line items, with VAT base set at 403.55 and vendor VAT DE number needed.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Clarifying the JSON schema requirements**\n\nI’m focusing on creating a JSON-only schema. The due date might be set as the invoice date plus 10 days, although it’s not explicitly stated. There's a 2% discount within that time frame, but no general payment due. Also, it looks like lines should include multiple fields based on the printed description. I wonder about surcharge lines—should they be included as invoice items? The schema specifies exactly five line items, with VAT base set at 403.55 and vendor VAT DE number needed.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h_WjKgBAPfsTsReCjJgSCba8hvmo28o9S4YLL6QfZ8sNqiqvl97CEUYMwP3i2fSnOyyqs_82MszI6TMYYl-5L7qUa9OltJiP71xFMkXliYwfXnmqalN-ovjHjmwNtT_qWs8cRmJ0xfa5XpYmF2kPaeunaAgGFVx_1dqUEZnabRX_p1s8_RdWKxVhq4rfpBIrnGO8N_mvrfKpXqKZqkD35S8EEsw0_lBrEpoqTGtLBdDQ9JXCeBVVHCS-vly2sPG83qiar3VlYRqA83jLh00_eMZ7ezFhUyNgcuxav5CUzWijT9pm3Q_hxpGnY-gFVVlyVoKgNjfksJhKla4m5jx9rKboKUM_eeruQPleBhACteLlOHim4I02RDLh6m7kGcSvIuYtCHbIzIZxnVr1WzP34_TJl5W396Ovw5cNwYvwE4IU0fTwYkGS8X1bVA48tSSQif8nj3dkurDWVePwo40ASPIVTnkXaWRBpw283T94l9JDY0aguSUAxyxaEU8N_l1EvXiRiahybB03pEIcTMtqnwIsIr1Fuy8QmE180alNPIVL1i9tpZlLweeNhkooH4N9CjXJILJSfnNsCaSgQjNe1BpRi5AeGP5s6QqZHb59S2yLiYWKRrKmoDwmgouPgWUpxuaYy9KQ22K6URBY2L6amCjkQOGP2heW-0RAxtOQb7wSwUyo7wuhmy_sctV7P75Wc1n7aKue_4LYgIYuKI1eTt2bVFXtsgAc4HIBtA7pSfbGUxtQy4NgqDgjOWqt2XVw01N0F75O8Dg0TfiripAePxxeJLxFJR-a2TVs-jQpLvnbqtQknCbkW6AJehVrp71Eswt7-6PMxi0gz7goDcVa2mgAlseXEZvM64RLy_vgIVTOJz5-HR_AaykgcPpA_-8f2smu9LiDQhSXCV3C0Rcmfa2yJb9Nh-BRImG9QKXl7BpkorOk0nzoITC8hfuuf9U8NfeY0ceSkis2anZPxjCjhVvzigg9LVEy3FtcgP-ZKrEexmkZdh3i3XgqDQ9t4Cil6wj222aRR4u8-VtowNQnJx_MargdzcGjEHO6wCtWarjbKp0SH9_Ek7zeVy8p92WaetKLHCIg5oJMq-D-fBbOrJpcT9cvs4qAXCPgz85SclDRULCKN-kLPRYZf7ohp1pG5WVZLOaWBsSlvwi8OZosXUaS3tYwPnHXbwSVYDF88RFkahCt42tYR1QfeJI_V_AnczWsxasFmgfKvzfESVUFjG384N4Z-QBrrejJyMWG8vM6kvqnK037RsRT5yI0J3X7QLmUEjC8FMzgHFbxpf1fvsjf7iyt8ebRXuiZezXsmaapr2ZgMAIPNlhWJSOo-xLNICX_uQ5M60pqGOlCERceIaRrIQOJDlx11gTWbEz0DwEq7lOg7LfOSH009J1D8HMH7fcsw3WsMdWg3WsZ5u_H6VBNFhR-i_XQkNmnZjszm0Z8zRWFAuXUqbg-ARPH7yjqVa42p2MOdKv0LXWQYsH4GVLIPk4gDmiIRRxfTevQ-gt1YXo3n386OEmPh85qU8gZ0ZnozoPZmQmsYm0EaW4sWbUFiI3sBtssunOpZskkairLRp5AHZ-PgNXi_PQwGPs93CiANcHnmdI7fs08yP4Scg6RwQU_liDJ-z2hM4kQcv7qnisRnRwkGfQHuJvWEDI3Ux5IaWHY5JIRIjssgoPO8E9lSI-u9kEqe8wZVF37wLjWrpqEU9Phxk9L_QHoP7Lor5FAkOBrQiQ24NGHLQywLO2d51yHWGGpj-Slu0dXnY8AfBo2iJO66JoJQjKhwJuAeevOjoYgU_fHqVpjh_7v2p-JyVAeKsFuH3cpkZgtHn1RsGBxwE503-ysH9mTOZ_Kb3kdJNGdyd32ncT7EqjwhcuKcPO8WR8hmE4j8kBGPndTQmTtZT1hVpsVSKmEldcV1cY2QlG0lmKeXvoznHK1H22vuoFh8mjM4-1LNTYGDFIHSNUXccNkmI0sNy8mKVvdcyNQ5cd6vD6wI8J5lctrElQvTjTKyC1eNKeYZAeNOZ87hc8y1LW6k6x6pQbWTEHPIAg82Rdf0cJmPkszUGnuXlb86KDsHzxzmWP-7m1AHE3MN3fTiDQ0tAgFJ-E8Z2hg9YlFAnlZnXvoKGMJ78PkwDd2vp5elGh5N8E5vbKHE63_tcYa2HL1w7LYRR4H0pWCFDj0ELW6R25ioi8yz3inkTAYYc1S238DTPRzvXYGx7_8TjM7RqFN3Ws_kg_uT2_KwGLrogGW5SW7Kw4Fc66vX8fI9vw317KAIqJJwV0VQwTPnihBRHascpEHsaPgPKFiCsj75nDt1lqnerpdP0lN0rPfww_0wo2EYeqclkORJLBHt5zbXtHCksqHR6zSKbQ0wbOnsb-sOW7YNpSVuS412S5T2NhIgDG4L-9diyoE8OhSywpIyZJ2geZL7vNwwe1Z4qzRGm6jAYBTQWzlCsjDEn3o1yjp7SWw-N1xMJ-SPFbYnvoP4XAcmVGavCMgf_rfXATodhJdkgOBP14ilGMphVu8B8eXhXrSUUaLo5UiyLbDs74rW1QqZTNS3Cf2wMoKFfQaeQqjZau85VpUo2o0qCRcfDMenT6PfX8RCCKrTiqhOLazHGb4zm7owHAZtGxInW5shGRhdBJmprDxc2uzLtMsDFhv-BK_4bO60_OePXRBca00VYy2cslMJBZoZ3V9N4m_P9V4A26daF53ZFNbtMdM6wFgyYCKEBMfChQt0F0EGPo7J9j5H1kYWWXhng4sTiy0v-0apPD6kO1tLmIPP1j4HOaibyEAa7ok8J45lX4GNNbhE0Ih5yZbXEExeAtNIERa6iB9Vueo6Cr_yC-Tj7y3nn5D3rI4_eN1xipRzxRukudLmN9pGDT_O7WXxo5OurcogU13GVEsHnlxiY2TjaeUyGfooTFKyoSjBEAbsWAf39xDOhXgi3w-bLmJ4PXJs0hhPIQ53W3uJdE0XSppXGNW7lS1oVio7EL5SfirWEQJypvx8EB97ZTAmX61kPEpyLSvcZf0qhcN7WX13FuNYU95g==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0fff40ddbb568c93016af61fd2b11887d1922028e78a8a7dfe",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 10836,
+   "completion_tokens": 391,
+   "total_tokens": 11227,
+   "cost": 0.0068646,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 10833,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0068646,
+    "upstream_inference_prompt_cost": 0.0021726,
+    "upstream_inference_completions_cost": 0.004692
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.05
+}

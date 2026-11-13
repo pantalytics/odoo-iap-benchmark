@@ -1,0 +1,92 @@
+{
+ "pred": {
+  "vendor_name": "IN-SPARKLE TRADING SDN BHD",
+  "vendor_vat": "001429012480",
+  "invoice_ref": "10100023492",
+  "invoice_date": "2017-10-21",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 235.85,
+  "tax": 14.15,
+  "total": 250.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALARM G.COB(333)L-A66/L-A71 (LC) 1",
+    "quantity": 1.0,
+    "unit_price": 235.85,
+    "tax_rate": 6.0,
+    "net": 235.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 235.85,
+    "tax": 14.15
+   },
+   {
+    "rate": 0.0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0171775,
+ "raw": {
+  "id": "gen-1794514755-yKn3ZSitqctMqs6k2Zku",
+  "object": "chat.completion",
+  "created": 1794514755,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"IN-SPARKLE TRADING SDN BHD\",\n  \"vendor_vat\": \"001429012480\",\n  \"invoice_ref\": \"10100023492\",\n  \"invoice_date\": \"2017-10-21\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 235.85,\n  \"tax\": 14.15,\n  \"total\": 250.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"ALARM G.COB(333)L-A66/L-A71 (LC) 1\",\n      \"quantity\": 1.0,\n      \"unit_price\": 235.85,\n      \"tax_rate\": 6.0,\n      \"net\": 235.85\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 235.85,\n      \"tax\": 14.15\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified \"IN-SPARKLE TRADING SDN BHD\" as the vendor name. I've also found the vendor's VAT ID, which is \"001429012480,\" labeled as \"GST ID\" on the receipt. This is a good starting point for mapping data into the JSON schema, and I will continue extracting the appropriate information to fill other schema fields.\n\n\n**Populating the Schema**\n\nI've extracted all necessary data points and am currently mapping them to the JSON schema. The vendor name is \"IN-SPARKLE TRADING SDN BHD\", the VAT ID is \"001429012480\". The invoice reference number is \"1010002349 2\". I've formatted the date as \"2017-10-21\". I've set the due date and IBAN to null as they are not present. The currency code is MYR. I have calculated the untaxed amount at 235.85, tax at 14.15, and total at 250.00. The VAT treatment is \"S\" for the standard 6% rate.\n\n\n**Finalizing the Mapping**\n\nI'm now integrating the additional extracted line item details into the schema, focusing on the `lines` and `vat_breakdown` sections. For the single line item, I'm noting the description, calculating the unit price before tax, setting the tax rate, and net amount. Finally, I'm populating the VAT breakdown with the rate, base, and tax amounts from the receipt's GST summary. The process is complete.\n\n\n**Verifying the Calculations**\n\nI'm now cross-referencing all extracted figures against each other for internal consistency. I've re-calculated the tax and total to confirm alignment with the receipt's information. I've also validated the single line item's individual components and prices. Finally, I confirm all data aligns with the overall document.\n\n\n**Mapping Data Confidently**\n\nI've completed the extraction and mapping process, filling all schema fields, including line items and VAT breakdowns. I've double-checked my calculations, confirming that they match the figures on the receipt. Now, I will start constructing the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified \"IN-SPARKLE TRADING SDN BHD\" as the vendor name. I've also found the vendor's VAT ID, which is \"001429012480,\" labeled as \"GST ID\" on the receipt. This is a good starting point for mapping data into the JSON schema, and I will continue extracting the appropriate information to fill other schema fields.\n\n\n**Populating the Schema**\n\nI've extracted all necessary data points and am currently mapping them to the JSON schema. The vendor name is \"IN-SPARKLE TRADING SDN BHD\", the VAT ID is \"001429012480\". The invoice reference number is \"1010002349 2\". I've formatted the date as \"2017-10-21\". I've set the due date and IBAN to null as they are not present. The currency code is MYR. I have calculated the untaxed amount at 235.85, tax at 14.15, and total at 250.00. The VAT treatment is \"S\" for the standard 6% rate.\n\n\n**Finalizing the Mapping**\n\nI'm now integrating the additional extracted line item details into the schema, focusing on the `lines` and `vat_breakdown` sections. For the single line item, I'm noting the description, calculating the unit price before tax, setting the tax rate, and net amount. Finally, I'm populating the VAT breakdown with the rate, base, and tax amounts from the receipt's GST summary. The process is complete.\n\n\n**Verifying the Calculations**\n\nI'm now cross-referencing all extracted figures against each other for internal consistency. I've re-calculated the tax and total to confirm alignment with the receipt's information. I've also validated the single line item's individual components and prices. Finally, I confirm all data aligns with the overall document.\n\n\n**Mapping Data Confidently**\n\nI've completed the extraction and mapping process, filling all schema fields, including line items and VAT breakdowns. I've double-checked my calculations, confirming that they match the figures on the receipt. Now, I will start constructing the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1678,
+   "total_tokens": 1996,
+   "cost": 0.0171775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0171775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01678
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1346,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.08
+}

@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001-539327",
+  "invoice_date": "2018-05-30",
+  "due_date": "2018-05-30",
+  "currency": "MYR",
+  "untaxed": 82.5,
+  "tax": 4.95,
+  "total": 87.45,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Chicken Item",
+    "quantity": 1.0,
+    "unit_price": 15.0,
+    "tax_rate": 6.0,
+    "net": 15.0
+   },
+   {
+    "description": "Fish Item",
+    "quantity": 1.0,
+    "unit_price": 46.0,
+    "tax_rate": 6.0,
+    "net": 46.0
+   },
+   {
+    "description": "Vege item",
+    "quantity": 1.0,
+    "unit_price": 12.0,
+    "tax_rate": 6.0,
+    "net": 12.0
+   },
+   {
+    "description": "White Rice",
+    "quantity": 1.0,
+    "unit_price": 4.5,
+    "tax_rate": 6.0,
+    "net": 4.5
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1.0,
+    "unit_price": 5.0,
+    "tax_rate": 6.0,
+    "net": 5.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 82.5,
+    "tax": 4.95
+   }
+  ]
+ },
+ "cost_usd": 0.0187175,
+ "raw": {
+  "id": "gen-1794514238-vFv55lIQJt5LLhLxuuJx",
+  "object": "chat.completion",
+  "created": 1794514238,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\n  \"vendor_vat\": \"000670224384\",\n  \"invoice_ref\": \"V001-539327\",\n  \"invoice_date\": \"2018-05-30\",\n  \"due_date\": \"2018-05-30\",\n  \"currency\": \"MYR\",\n  \"untaxed\": 82.5,\n  \"tax\": 4.95,\n  \"total\": 87.45,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Chicken Item\",\n      \"quantity\": 1.0,\n      \"unit_price\": 15.0,\n      \"tax_rate\": 6.0,\n      \"net\": 15.0\n    },\n    {\n      \"description\": \"Fish Item\",\n      \"quantity\": 1.0,\n      \"unit_price\": 46.0,\n      \"tax_rate\": 6.0,\n      \"net\": 46.0\n    },\n    {\n      \"description\": \"Vege item\",\n      \"quantity\": 1.0,\n      \"unit_price\": 12.0,\n      \"tax_rate\": 6.0,\n      \"net\": 12.0\n    },\n    {\n      \"description\": \"White Rice\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.5,\n      \"tax_rate\": 6.0,\n      \"net\": 4.5\n    },\n    {\n      \"description\": \"Beverage\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.0,\n      \"tax_rate\": 6.0,\n      \"net\": 5.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 82.5,\n      \"tax\": 4.95\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI have successfully identified the vendor name as \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\" and extracted the vendor's VAT registration number, which is \"00067022438\". This fulfills the initial data extraction requirements for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the invoice reference (\"V001-5393 27\") and date (\"2018-05-30\"). Since this is a cash receipt, I'm setting the due date to match the invoice date. The currency is MYR, and I've found \"Total (Excluding GST)\" to be 82.50, \"GST Payable\" to be 4.95, and \"TOTAL\" to be 87.45. There's no IBAN, so it's null. The VAT treatment is \"S\" (standard rate). Now, I'm moving on to parsing the line items. I have successfully extracted line 1 and 2, and am working on line 3.\n\n\n**Completing JSON Fields**\n\nI'm now populating the JSON schema with all of the extracted details. I have set the vendor details, invoice information, and financial data according to the receipt. I'm currently working on the line items, meticulously extracting and formatting descriptions, quantities, unit prices, and tax details to populate the final array within the JSON output, including the \"Beverage\" line.\n\n\n**Constructing JSON Output**\n\nI'm now integrating all extracted data points into the final JSON output. I've focused on meticulous formatting for the line items array, ensuring accurate representation of quantities, unit prices, and tax rates. The VAT breakdown is being assembled to correspond with the \"GST Summary\" section, and all financial figures are being validated for consistency. I am ensuring that all extracted fields correspond to the correct data type in the JSON schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI have successfully identified the vendor name as \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\" and extracted the vendor's VAT registration number, which is \"00067022438\". This fulfills the initial data extraction requirements for the JSON schema.\n\n\n**Populating JSON Schema**\n\nI've extracted the invoice reference (\"V001-5393 27\") and date (\"2018-05-30\"). Since this is a cash receipt, I'm setting the due date to match the invoice date. The currency is MYR, and I've found \"Total (Excluding GST)\" to be 82.50, \"GST Payable\" to be 4.95, and \"TOTAL\" to be 87.45. There's no IBAN, so it's null. The VAT treatment is \"S\" (standard rate). Now, I'm moving on to parsing the line items. I have successfully extracted line 1 and 2, and am working on line 3.\n\n\n**Completing JSON Fields**\n\nI'm now populating the JSON schema with all of the extracted details. I have set the vendor details, invoice information, and financial data according to the receipt. I'm currently working on the line items, meticulously extracting and formatting descriptions, quantities, unit prices, and tax details to populate the final array within the JSON output, including the \"Beverage\" line.\n\n\n**Constructing JSON Output**\n\nI'm now integrating all extracted data points into the final JSON output. I've focused on meticulous formatting for the line items array, ensuring accurate representation of quantities, unit prices, and tax rates. The VAT breakdown is being assembled to correspond with the \"GST Summary\" section, and all financial figures are being validated for consistency. I am ensuring that all extracted fields correspond to the correct data type in the JSON schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1832,
+   "total_tokens": 2150,
+   "cost": 0.0187175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0187175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01832
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1321,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.7
+}

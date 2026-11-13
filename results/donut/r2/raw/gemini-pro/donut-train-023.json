@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Clark PLC",
+  "vendor_vat": "918-88-8070",
+  "invoice_ref": "78566408",
+  "invoice_date": "2016-03-18",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 207.89,
+  "tax": 20.79,
+  "total": 228.68,
+  "iban": "GB76QCXU43762789246312",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Oomphies Boys Ankle Boots Shoes Gray Green Kids Size 2 EUC",
+    "quantity": 2.0,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 23.98
+   },
+   {
+    "description": "Boys water/beach/pool black orange and blue hook and loop size 13-1 shoes",
+    "quantity": 2.0,
+    "unit_price": 1.18,
+    "tax_rate": 10,
+    "net": 2.36
+   },
+   {
+    "description": "Lotto Soccer Turf Shoes 6 Black Vincente Turf Jr Indoor Outdoor Futbol Cleats",
+    "quantity": 3.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 59.97
+   },
+   {
+    "description": "Blueteeth LED Galaxy Projector Starry Night Lamp Star Projection Night Light USB",
+    "quantity": 1.0,
+    "unit_price": 28.49,
+    "tax_rate": 10,
+    "net": 28.49
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 4 White Red Futbol NEW",
+    "quantity": 3.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 59.97
+   },
+   {
+    "description": "Adult Kids Pokemon Pikachu Kigurumi Pajama Cosplay Christmas Costume Sleepwear",
+    "quantity": 2.0,
+    "unit_price": 16.56,
+    "tax_rate": 10,
+    "net": 33.12
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 207.89,
+    "tax": 20.79
+   }
+  ]
+ },
+ "cost_usd": 0.02968,
+ "raw": {
+  "id": "gen-1794515469-faasi25AqoRErLTXTJq6",
+  "object": "chat.completion",
+  "created": 1794515469,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Clark PLC\",\n  \"vendor_vat\": \"918-88-8070\",\n  \"invoice_ref\": \"78566408\",\n  \"invoice_date\": \"2016-03-18\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 207.89,\n  \"tax\": 20.79,\n  \"total\": 228.68,\n  \"iban\": \"GB76QCXU43762789246312\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Oomphies Boys Ankle Boots Shoes Gray Green Kids Size 2 EUC\",\n      \"quantity\": 2.00,\n      \"unit_price\": 11.99,\n      \"tax_rate\": 10,\n      \"net\": 23.98\n    },\n    {\n      \"description\": \"Boys water/beach/pool black orange and blue hook and loop size 13-1 shoes\",\n      \"quantity\": 2.00,\n      \"unit_price\": 1.18,\n      \"tax_rate\": 10,\n      \"net\": 2.36\n    },\n    {\n      \"description\": \"Lotto Soccer Turf Shoes 6 Black Vincente Turf Jr Indoor Outdoor Futbol Cleats\",\n      \"quantity\": 3.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 59.97\n    },\n    {\n      \"description\": \"Blueteeth LED Galaxy Projector Starry Night Lamp Star Projection Night Light USB\",\n      \"quantity\": 1.00,\n      \"unit_price\": 28.49,\n      \"tax_rate\": 10,\n      \"net\": 28.49\n    },\n    {\n      \"description\": \"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 4 White Red Futbol NEW\",\n      \"quantity\": 3.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 59.97\n    },\n    {\n      \"description\": \"Adult Kids Pokemon Pikachu Kigurumi Pajama Cosplay Christmas Costume Sleepwear\",\n      \"quantity\": 2.00,\n      \"unit_price\": 16.56,\n      \"tax_rate\": 10,\n      \"net\": 33.12\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 207.89,\n      \"tax\": 20.79\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Data**\n\nI'm currently focusing on extracting the `vendor_name` and `vendor_vat` fields from the invoice. My process involves identifying these specific pieces of information within the image data to accurately populate the JSON schema.\n\n**Finding Key Invoice Details**\n\nI've successfully identified and extracted several crucial invoice fields, including the `invoice_ref`, `invoice_date`, and `currency`. My focus has now shifted to pinpointing the `untaxed`, `tax`, and `total` amounts from the provided data.\n\n**Extracting Line Item Data**\n\nI'm now focused on parsing the individual line items. Specifically, I'm extracting descriptions, quantities, unit prices, net amounts, and tax rates for each entry. This granular data will be crucial for a comprehensive invoice breakdown.\n\n**Formatting Final Output**\n\nI'm now ensuring all extracted data points precisely adhere to the expected schema types, meticulously converting values for quantities, monetary amounts, dates, and references. My focus is on completing the `vat_breakdown` and confirming the final formatted JSON structure is accurate.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Data**\n\nI'm currently focusing on extracting the `vendor_name` and `vendor_vat` fields from the invoice. My process involves identifying these specific pieces of information within the image data to accurately populate the JSON schema.\n\n**Finding Key Invoice Details**\n\nI've successfully identified and extracted several crucial invoice fields, including the `invoice_ref`, `invoice_date`, and `currency`. My focus has now shifted to pinpointing the `untaxed`, `tax`, and `total` amounts from the provided data.\n\n**Extracting Line Item Data**\n\nI'm now focused on parsing the individual line items. Specifically, I'm extracting descriptions, quantities, unit prices, net amounts, and tax rates for each entry. This granular data will be crucial for a comprehensive invoice breakdown.\n\n**Formatting Final Output**\n\nI'm now ensuring all extracted data points precisely adhere to the expected schema types, meticulously converting values for quantities, monetary amounts, dates, and references. My focus is on completing the `vat_breakdown` and confirming the final formatted JSON structure is accurate.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2212,
+   "total_tokens": 3780,
+   "cost": 0.02968,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02968,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.026544
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1523,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.69
+}

@@ -1,0 +1,113 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "280081",
+  "invoice_date": "2018-07-13",
+  "due_date": "2018-08-12",
+  "currency": "EUR",
+  "untaxed": 214.09,
+  "tax": 16.39,
+  "total": 230.48,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Übernachtung. 2 Nächte Hotel",
+    "quantity": 1,
+    "unit_price": 158.88,
+    "tax_rate": 7,
+    "net": 158.88
+   },
+   {
+    "description": "Verpflegung Frühstück",
+    "quantity": 1,
+    "unit_price": 11.76,
+    "tax_rate": 19,
+    "net": 11.76
+   },
+   {
+    "description": "Fahrtkosten, Taxi Berlin",
+    "quantity": 1,
+    "unit_price": 23.36,
+    "tax_rate": 7,
+    "net": 23.36
+   },
+   {
+    "description": "Fahrtkosten, Taxi Nürnberg",
+    "quantity": 1,
+    "unit_price": 20.09,
+    "tax_rate": 7,
+    "net": 20.09
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 202.33,
+    "tax": 14.16
+   },
+   {
+    "rate": 19,
+    "base": 11.76,
+    "tax": 2.23
+   }
+  ]
+ },
+ "cost_usd": 0.0218525,
+ "raw": {
+  "id": "gen-1794512635-Bz2EzPAnu7ksRsLqK0mw",
+  "object": "chat.completion",
+  "created": 1794512635,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Lieferant GmbH\",\n  \"vendor_vat\": \"DE123456789\",\n  \"invoice_ref\": \"280081\",\n  \"invoice_date\": \"2018-07-13\",\n  \"due_date\": \"2018-08-12\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 214.09,\n  \"tax\": 16.39,\n  \"total\": 230.48,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Übernachtung. 2 Nächte Hotel\",\n      \"quantity\": 1,\n      \"unit_price\": 158.88,\n      \"tax_rate\": 7,\n      \"net\": 158.88\n    },\n    {\n      \"description\": \"Verpflegung Frühstück\",\n      \"quantity\": 1,\n      \"unit_price\": 11.76,\n      \"tax_rate\": 19,\n      \"net\": 11.76\n    },\n    {\n      \"description\": \"Fahrtkosten, Taxi Berlin\",\n      \"quantity\": 1,\n      \"unit_price\": 23.36,\n      \"tax_rate\": 7,\n      \"net\": 23.36\n    },\n    {\n      \"description\": \"Fahrtkosten, Taxi Nürnberg\",\n      \"quantity\": 1,\n      \"unit_price\": 20.09,\n      \"tax_rate\": 7,\n      \"net\": 20.09\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7,\n      \"base\": 202.33,\n      \"tax\": 14.16\n    },\n    {\n      \"rate\": 19,\n      \"base\": 11.76,\n      \"tax\": 2.23\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Data**\n\nI'm currently focused on extracting crucial information from this German invoice. I've successfully identified the vendor's name, which is \"Lieferant GmbH,\" and located it under the \"Verkäufer\" section. Now, I'm moving on to extracting the remaining data points and mapping them into the desired JSON format.\n\n\n**Extracting Further Invoice Details**\n\nI'm now extracting the vendor's VAT ID (\"DE1234567 89\") from the \"Verkäufer\" section. I've also pinpointed the invoice number (\"Nr. 280081\") and the invoice date (\"vom 13.07.2018\"), which I will format as YYYY-MM-DD. Next, I'll identify the due date and begin parsing amounts (untaxed, tax, total), as well as the currency. I've noted the lack of an IBAN on the document, so I'll report that.\n\n\n**Mapping Invoice Data**\n\nI'm now methodically progressing through the data extraction and mapping to JSON. I've successfully identified and formatted the invoice and due dates. Currency and untaxed amounts have also been located and are being parsed. I'm noting the absence of IBAN information, and will set it to null. Next, I am working on capturing all the line items, and the various fields. I will handle the differing VAT percentages.\n\n\n**Finalizing Invoice Data**\n\nNow I'm focusing on the line items, meticulously extracting descriptions, quantities, unit prices, and tax rates for each. I am also making sure the calculations are consistent across the document. I am also extracting the VAT breakdown from the summary table to ensure the invoice details are correct. All fields seem to be available. After this, the JSON output is complete.\n\n\n**Constructing JSON Output**\n\nI'm now putting the finishing touches on the JSON object. All data points from the German invoice have been extracted and validated, including vendor details, invoice information, payment terms, and line-item details. The VAT breakdown, calculations, and totals all check out. I'm ready to finalize the JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Data**\n\nI'm currently focused on extracting crucial information from this German invoice. I've successfully identified the vendor's name, which is \"Lieferant GmbH,\" and located it under the \"Verkäufer\" section. Now, I'm moving on to extracting the remaining data points and mapping them into the desired JSON format.\n\n\n**Extracting Further Invoice Details**\n\nI'm now extracting the vendor's VAT ID (\"DE1234567 89\") from the \"Verkäufer\" section. I've also pinpointed the invoice number (\"Nr. 280081\") and the invoice date (\"vom 13.07.2018\"), which I will format as YYYY-MM-DD. Next, I'll identify the due date and begin parsing amounts (untaxed, tax, total), as well as the currency. I've noted the lack of an IBAN on the document, so I'll report that.\n\n\n**Mapping Invoice Data**\n\nI'm now methodically progressing through the data extraction and mapping to JSON. I've successfully identified and formatted the invoice and due dates. Currency and untaxed amounts have also been located and are being parsed. I'm noting the absence of IBAN information, and will set it to null. Next, I am working on capturing all the line items, and the various fields. I will handle the differing VAT percentages.\n\n\n**Finalizing Invoice Data**\n\nNow I'm focusing on the line items, meticulously extracting descriptions, quantities, unit prices, and tax rates for each. I am also making sure the calculations are consistent across the document. I am also extracting the VAT breakdown from the summary table to ensure the invoice details are correct. All fields seem to be available. After this, the JSON output is complete.\n\n\n**Constructing JSON Output**\n\nI'm now putting the finishing touches on the JSON object. All data points from the German invoice have been extracted and validated, including vendor details, invoice information, payment terms, and line-item details. The VAT breakdown, calculations, and totals all check out. I'm ready to finalize the JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2081,
+   "total_tokens": 2915,
+   "cost": 0.0218525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0218525,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.02081
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1599,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.68
+}

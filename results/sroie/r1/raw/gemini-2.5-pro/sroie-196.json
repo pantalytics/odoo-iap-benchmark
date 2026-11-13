@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "9060293578",
+  "invoice_date": "2018-03-11",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 5.42,
+  "tax": 0.33,
+  "total": 5.75,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "DOCUMENT HOL A4 9101A-Tra",
+    "quantity": 5.0,
+    "unit_price": 1.084,
+    "tax_rate": 6.0,
+    "net": 5.42
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 5.42,
+    "tax": 0.33
+   }
+  ]
+ },
+ "cost_usd": 0.0146975,
+ "raw": {
+  "id": "gen-1794514355-ObfrUPLuV6cfP0O2dqqq",
+  "object": "chat.completion",
+  "created": 1794514355,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"POPULAR BOOK CO. (M) SDN BHD\",\n  \"vendor_vat\": \"001492992000\",\n  \"invoice_ref\": \"9060293578\",\n  \"invoice_date\": \"2018-03-11\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 5.42,\n  \"tax\": 0.33,\n  \"total\": 5.75,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"DOCUMENT HOL A4 9101A-Tra\",\n      \"quantity\": 5.0,\n      \"unit_price\": 1.084,\n      \"tax_rate\": 6.0,\n      \"net\": 5.42\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 5.42,\n      \"tax\": 0.33\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"POPULAR BOOK CO. (M) SDN BHD\" as the vendor name from the receipt. I've also extracted the VAT registration number as \"0014929920\" from the \"GST Reg No.\" field, as required by the schema.\n\n\n**Populating Schema Fields**\n\nI've extracted the invoice reference (\"906 0293578\") and the date (\"2018-03-11\"). I've also identified \"RM\" as the currency (MYR). The untaxed amount is 5.42, tax is 0.33, and total is 5.75. The missing fields, such as due date and IBAN, are set to null. The VAT treatment is \"S\" (standard rate). Finally, I am parsing the single line item.\n\n\n**Refining Calculations**\n\nNow, I'm adjusting my calculations for the line item. The unit price before tax is now 1.084, derived by dividing the total net amount by the quantity. Similarly, the line net amount is 5.42. I've also verified that these values align with the GST summary on the receipt.\n\n\n**Constructing JSON Output**\n\nI'm now satisfied with the data extraction and calculations. I'm building the JSON output by populating the schema with the identified and derived values. I've verified the consistency of my calculations and am ready to finalize the JSON structure based on the receipt details and schema requirements.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"POPULAR BOOK CO. (M) SDN BHD\" as the vendor name from the receipt. I've also extracted the VAT registration number as \"0014929920\" from the \"GST Reg No.\" field, as required by the schema.\n\n\n**Populating Schema Fields**\n\nI've extracted the invoice reference (\"906 0293578\") and the date (\"2018-03-11\"). I've also identified \"RM\" as the currency (MYR). The untaxed amount is 5.42, tax is 0.33, and total is 5.75. The missing fields, such as due date and IBAN, are set to null. The VAT treatment is \"S\" (standard rate). Finally, I am parsing the single line item.\n\n\n**Refining Calculations**\n\nNow, I'm adjusting my calculations for the line item. The unit price before tax is now 1.084, derived by dividing the total net amount by the quantity. Similarly, the line net amount is 5.42. I've also verified that these values align with the GST summary on the receipt.\n\n\n**Constructing JSON Output**\n\nI'm now satisfied with the data extraction and calculations. I'm building the JSON output by populating the schema with the identified and derived values. I've verified the consistency of my calculations and am ready to finalize the JSON structure based on the receipt details and schema requirements.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1430,
+   "total_tokens": 1748,
+   "cost": 0.0146975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0146975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0143
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1155,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.59
+}

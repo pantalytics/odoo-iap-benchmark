@@ -1,0 +1,119 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-06-05",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 177.49,
+  "tax": 20.16,
+  "total": 197.65,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kunstrasen grün 3m breit",
+    "quantity": 3.0,
+    "unit_price": 3.3333,
+    "tax_rate": 19.0,
+    "net": 10.0
+   },
+   {
+    "description": "Schweinesteak",
+    "quantity": 1.0,
+    "unit_price": 5.5,
+    "tax_rate": 7.0,
+    "net": 5.5
+   },
+   {
+    "description": "Mineralwasser Medium 12 x 1,0l PET",
+    "quantity": 20.0,
+    "unit_price": 5.49,
+    "tax_rate": 7.0,
+    "net": 109.8
+   },
+   {
+    "description": "Pfand",
+    "quantity": 20.0,
+    "unit_price": 2.77,
+    "tax_rate": 19.0,
+    "net": 55.46
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 113.03,
+    "tax": 7.91
+   },
+   {
+    "rate": 19.0,
+    "base": 64.46,
+    "tax": 12.25
+   }
+  ]
+ },
+ "cost_usd": 0.0077055,
+ "raw": {
+  "id": "gen-1794514568-ULnQndemdTED5UH6kgaA",
+  "object": "chat.completion",
+  "created": 1794514568,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\": \"Lieferant GmbH\", \"vendor_vat\": \"DE123456789\", \"invoice_ref\": \"471102\", \"invoice_date\": \"2018-06-05\", \"due_date\": \"2018-07-04\", \"currency\": \"EUR\", \"untaxed\": 177.49, \"tax\": 20.16, \"total\": 197.65, \"iban\": null, \"vat_treatment\": \"S\", \"lines\": [{\"description\": \"Kunstrasen grün 3m breit\", \"quantity\": 3.0, \"unit_price\": 3.3333, \"tax_rate\": 19.0, \"net\": 10.0}, {\"description\": \"Schweinesteak\", \"quantity\": 1.0, \"unit_price\": 5.5, \"tax_rate\": 7.0, \"net\": 5.5}, {\"description\": \"Mineralwasser Medium 12 x 1,0l PET\", \"quantity\": 20.0, \"unit_price\": 5.49, \"tax_rate\": 7.0, \"net\": 109.8}, {\"description\": \"Pfand\", \"quantity\": 20.0, \"unit_price\": 2.77, \"tax_rate\": 19.0, \"net\": 55.46}], \"vat_breakdown\": [{\"rate\": 7.0, \"base\": 113.03, \"tax\": 7.91}, {\"rate\": 19.0, \"base\": 64.46, \"tax\": 12.25}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Name**\n\nI've successfully identified and extracted the vendor's name, \"Lieferant GmbH,\" from the invoice document. This was found under the \"Verkäufer\" section.\n\n**Locating Tax Details**\n\nI've now pinpointed the VAT identification number, the invoice reference, and key dates like the invoice and due dates. I’ve also extracted currency, untaxed, tax, and total amounts. The VAT treatment is confirmed as 'S', and I’ve begun parsing the VAT breakdown for the 7% rate.\n\n**Validating Line Items**\n\nI've been meticulously cross-referencing the calculated totals against the extracted line items, and it appears there might be a discrepancy with the \"Pfand\" line item's net value. I'm currently investigating this further to ensure accuracy.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Name**\n\nI've successfully identified and extracted the vendor's name, \"Lieferant GmbH,\" from the invoice document. This was found under the \"Verkäufer\" section.\n\n**Locating Tax Details**\n\nI've now pinpointed the VAT identification number, the invoice reference, and key dates like the invoice and due dates. I’ve also extracted currency, untaxed, tax, and total amounts. The VAT treatment is confirmed as 'S', and I’ve begun parsing the VAT breakdown for the 7% rate.\n\n**Validating Line Items**\n\nI've been meticulously cross-referencing the calculated totals against the extracted line items, and it appears there might be a discrepancy with the \"Pfand\" line item's net value. I'm currently investigating this further to ensure accuracy.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2749,
+   "completion_tokens": 1505,
+   "total_tokens": 4254,
+   "cost": 0.0077055,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0077055,
+    "upstream_inference_prompt_cost": 0.00206175,
+    "upstream_inference_completions_cost": 0.00564375
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1106,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.37
+}

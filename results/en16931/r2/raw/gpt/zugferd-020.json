@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Rohstoff AG Salzgitter",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "47110815",
+  "invoice_date": "2018-10-31",
+  "due_date": "2018-11-20",
+  "currency": "GBP",
+  "untaxed": 858.75,
+  "tax": 163.16,
+  "total": 1021.91,
+  "iban": "DE12 1234 4321 9876 00",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Toolbox 0815 Stahlcoil",
+    "quantity": 10,
+    "unit_price": 100,
+    "tax_rate": 19,
+    "net": 850
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": 858.75,
+    "tax": 163.16
+   }
+  ]
+ },
+ "cost_usd": 0.026755,
+ "raw": {
+  "id": "gen-1794512682-XgrFiXqgQIAsIlYr57a4",
+  "object": "chat.completion",
+  "created": 1794512682,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Rohstoff AG Salzgitter\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"47110815\",\"invoice_date\":\"2018-10-31\",\"due_date\":\"2018-11-20\",\"currency\":\"GBP\",\"untaxed\":858.75,\"tax\":163.16,\"total\":1021.91,\"iban\":\"DE12 1234 4321 9876 00\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Toolbox 0815 Stahlcoil\",\"quantity\":10,\"unit_price\":100,\"tax_rate\":19,\"net\":850}],\"vat_breakdown\":[{\"rate\":19,\"base\":858.75,\"tax\":163.16}]}",
+     "refusal": null,
+     "reasoning": "**Parsing invoice details**\n\nI need to output a JSON schema for a German invoice. The vendor seems to be Rohstoff AG from Salzgitter, while the payment recipient is Global Supplies. The vendor's VAT is DE123456789, and the invoice reference is 47110815 with a date of October 31, 2018, and due date of November 20, 2018. The currency is GBP, with untaxed amounts at 858.75 and tax 163.16. The total gross is 1021.91. I'll need to be careful with the IBAN formatting too!**Formatting invoice JSON**\n\nI need to break down this invoice to produce a JSON schema. The net price is listed as 100.0000 per unit, but after discounts, the net comes to 850.00 for a quantity of 10. The tax rate is 19%, with a VAT breakdown of 858.75 base and a tax of 163.16. There’s some confusion about the invoice currency being GBP vs EUR, so I need to clarify that. I'll ensure my final JSON response adheres strictly to the schema without any extras.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Parsing invoice details**\n\nI need to output a JSON schema for a German invoice. The vendor seems to be Rohstoff AG from Salzgitter, while the payment recipient is Global Supplies. The vendor's VAT is DE123456789, and the invoice reference is 47110815 with a date of October 31, 2018, and due date of November 20, 2018. The currency is GBP, with untaxed amounts at 858.75 and tax 163.16. The total gross is 1021.91. I'll need to be careful with the IBAN formatting too!**Formatting invoice JSON**\n\nI need to break down this invoice to produce a JSON schema. The net price is listed as 100.0000 per unit, but after discounts, the net comes to 850.00 for a quantity of 10. The tax rate is 19%, with a VAT breakdown of 858.75 base and a tax of 163.16. There’s some confusion about the invoice currency being GBP vs EUR, so I need to clarify that. I'll ensure my final JSON response adheres strictly to the schema without any extras.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hc0bBHkYivgK9df563uvjUng6wUp6gsBDJzC9rZJ-2ioisZD7a52oQAsBWoiQcmms9muWNMlbQLGlXrza0EgALlQQdE_5DVmdEuiY1l7WUV6AKQsbKOkCkgQlTNQ-xjkyIqfLM7aIpodIyRFz6yUab7lqq3w5rvA7io81gBVgD8HLbk4JrUX5siOqlTkZeDrV9ezA4mcQV59CadbwSEetV6tIshLRv8TBHSqfW-HNEv8eJ_ymGmP441X611O5fjRP1JXPUcrocTdqLB5xJIH0-M-Qq_tiYokrFk2J5TUGzKeE1hBo8I3YZVUzlSJFE28-T-f0FNRFeNwy8hyRjAXNv6KRPVKfsUIZwJ6at0c8c4YIJXEEb2HinV9PZynBf9l-xT8p9RQF2JpIToyW6xlKEH9ahpOqLgzBC0E34M4amXuCr7iwhn7LRa3wx06uFMiMILFrZ7rQ3Cm2iPBtx1prKh92nbpaOGjxch79DZfwbs77CURI5GOKpSAQ9Yw4S7itlYMIrEVeHh94BhLJO9nbqgFdl4xscZyoM5SPcus8UOO7NSyAVNhqghGRweDXYDdVd5onb9jjPV79iLvERCXRkg7hlwSgqnSNf3goTNiMfZpBZRd9zjyL4uYBmi-4C7tMa052hXGZQt9pmJEtnM1okwQS8lSj4XKv7JE_jAPRivoWNj3zO69jOD8W6mPbpfR33F08JJgfV1g8tkEQHtOEJw3ZjpMMSMpjQ6m91ZJMeawE-hWIsxkkklImsC29DSafHqNLElEQXjaF4C3SF7zHqEUPw78NgC89bL_boTI0Auv0KfhXIXbx83qdmNqpOSJpXyYnweGJLAl1O0VCSax7z_jGH998Q9HjDQvJnL_VyNU2HlfqhKc5My83STRbR13HJiN-QyVSEtgu6MAnnxJFk5D5Qr1EfjJ4Wp6Y6xhNp-aAhPgQkzP3t6ZwcauNZYcGf_77QNKGrQeud1FDANQ4KlDNDRrURihOkfNjN5tvQEAsTD-RfaEXsvE8ooKHOwDuglM8wWb53i32bLXEM5LdAqSbLboOWEUlsyF6dCgJoPZThv4NicN9vDFAq41d2fG1hxJXTlq0mhcQZVQQxpiMkc0kT4z6ur64WlbXdZXXlsfFPlDm-NedZnIef8r_o2gEBnV0cwW9yxC_gvf67XkLT9iqY_gJ38e0KuYuZz2KGiOsP8bOwAjedHtjM-koI58-aVTCIqWAZRYg9TlSch6fE2yvGaa3NNOjVM86U4-HW4nMTPRx9xn32dUMDpiju8DfvMNoRjlOHpVM5FA__ViVAbJXC7NZ118yO2XxxH3ZpjjsIQ_4vkPMEYihWCAMvfhCWfltdC0OQ0Rrm1JLH_c6Nw9ObdUJ2nsGjDquHMIFlDopdQmbc0-7pXZVb2GrpwJpv7jKvunX0viOkaYHziWR-hEGG2SdHi7pBHfj3XAHzjFhhmIhuufAa2k8ODgr6xHRJ3Cx2RinTZAsJhWPHkt98hi1XoAMYaZlSaCPPAjYikVKNjOwVzuc_ryPU9BbZ9reU5KhnN3HnAmIH8SwbNFjWbV2wdk72RV4DaOG5qWLXFZAWyiFMH5_9QHGbB1pMn-Jj1wZOFYZjYjFlHU8B5B76ksoVMxFMhSs08qaZ60PNfVIuRsnVKVfPyv1NtzDXtzTibt_9BYm2HLygXmpJ9y9Jdeql_-rKWjSA_9NOPdpqh-V4erOccRFvLi-gd67gSeNnS0UuSU7D9Ksnd5hIkuNmTKKfS0QTmgIN2bwSJ4UQ_9xSu6PTcYSqxSmwc9lykKXPlv_1HTSj5Pr2K-a0kasKm4QiSevfryjIRotjJrOYa-swSPXKdpQcuW6hjlXTJ2ZOB7tDAnBfEIxtJC7_ii8EDVOiM3dMqNx_WRDK08bi6N-H8dYBWUdxfFBvZTRqycbijaQdMP4pfVOZ4-yFLCpVH_H7nohPePZbVqRhC4dRaF_c1O9iA036S46D5kBlj8cJvEmwx-PLXnENS2plOXHo_o0-duXxiBbyUmBk_g4VV_SR2Kza9GV1oS0uMOv37uGFsAizwqfQPhzDlBqKx2gjjWwVa09KTW86sUNfB9j9Qo1ggUuqYtljWAc_0mclBCAJUjMxFG8cZZ4L80qLD42Zwya_nmoEncSQbgwxV6RL3UAeeVexN-8LeAO31bNZZCYvOIV8OVtULnbUtT_y84WRtOl7BaCc4hLIyShnGdZJFLfbXCFr2w8VGllCzJT3EJnDPuXtRPP1CE9yqFCz2rCq6VozhSC97G6J75MiW4bh8Y8lCev-5J_vvN3gR_G5OC4nvWXXLhkRwJzFof7_tHIhcpl5zXLl6VzMUu5yjg44w_Kl81jbd2ii0yNdVdm2FdKmTPO4oODyUNIV1ObnryEaxrmYcRE-c8-aM-B_grtDxDEK6OSOcdEtKEShB32hmeyErDlYtdIEmMx1Zfkf47HTcTMwR3O3c7fSKFBp7U_z4fxsiGzWRiaP301mAT5BrPDeD3n_9ll4ykkV3D_2WDjtv18U-Y7VYkGNezz9TNoZeNht0CGbc5EHNVfaG29CoepRQ1HSVn6xRxExQCtlfy0_rycb1dyTT2l-7LP_g1_6GysyJ3H0ZBq7JCa_sxG7BjAIYkYJQGzZFhYy6-jLpoF3gpmNrsKBzwxaKLs0mqKZSyLKHsa6KEfB30GAs6dmeqUIgKYAsrySsPa_ZgFrlBaUu3InA_m3c5fF3wGZAJpy91m5LGmSgsopehT7Lx3PAWa2JKjI8zrJN-EGzDc8NCUXSub4ZLFB5AGXnccqe1gyyrbhmP2tiExi5RMNU16BP2WY6Aw93lKEAV91bmxFbIkc4hsZKlYPsVRO4sgZ2-ozBYkRsZ1rzUfcvGShPUMAkZaoBVpUYm6_TFaMXKNXnRyMR9xV3VoG2_2sXpQPHb5ubsszEPv2srLeUfpP2SuQMiCEteGBzTRuxngTBwMH8t0Ap2agq9PmzpKVNKdpBH0ceK0qQCVG0S1EGgZMF-F0O4eesPMTlU2W-rL27aNwqrmJx8NA4XgMau1K5_5Mewf9d53pRxOfA9QixwqxlHutRO0tC862t5Bin2H9DApsPON9V2Ux7-3485rEictnnIpnQVVP9UzXGnqEiRVVpPA9kQGhfi2PzBrxZJLaD7lqW2FujW5odRr3sG9EQuJmUJ9Sfr2zd_JrLdRJHoFxW4uquITKrT7US-xZXETSU635HuPryBTerZmX-AVSy2NdEv-CfwfzceaNpN61gxI3uz4ESGGC1S-fQr-acwHWz5mGRSsA_6vsTILkFqJ_YTlfGXsoLvwIiXKtJ5ZoLjyhKgZb2Gks__gtcpT6doOg2pwBUfEg7VAPhy1upwu_qWtiW0trKqS9BEUPfnmFAEF3kdDT-j_uiDmcBSDqsljjs5B3Aa2W2bXR1m3JsAG9TQ5rOCsjgKYM6SZPiy9tcZgtWG0JVOy5MVGlBadUNpFEq7BUnjMeovpZMt9L56drZqoU7bgQ1JFIZ6xTCAeEjnqg7jjPTZC-63icQdWMox_rSIbqQyz06B4Y3_c-bmZSw-Rb_CEAlaN8RU0ItuA7ZrX6e_o_TeHcbpuS_u3Fsqr7HiidWJoyOuzm0PPw3uQojDUEgANUKmCyCxhrwlKvjDrXoUBhnuEWdEgn4EPovpqTdkx3e-LD6PPhlh5Wz0aE-EmHkyJuqR2KH9tOx5bv2neMpnTIuSQOPEz8dD-rp357xXdZjZoCb3BUUhVSOLRHN1VW0DJj0Dk-ijLdpZIcjVE_lfwyl0ajItHRYEVo0-6cZdYS1icI7Xn9lTFn3vE1Uq80bjsgtetUrywISMEfcOanYFntw756TU0qD5bOAZ36SjYnQdGykC676b80bpVOr5GLyh07C7YTpgB1wBaHFivVU1iYzZHWnlO2t_wpamECLOeEtEgsDtKsIw-NVJGkOGdS9W1Z-NIU6v2K5rO7JXlzdWSlPWawIWOMTwsNIr7YyUAs-W_ueMqSPaTMa26WYCzaKbABEDVWaBv9BuDReEuktINGTWdsM6AoX_CxHEmRwUtdwWqcL_NXAlQKkCYkSVaGlHZgRdamYc6i7ZMXNgcofzBZVe-5OV0A_2Hr2tdGp4kw73cB6mxZnhuNygKthvofrhGpmn6aKxuWpFp0JhSrxGLy77vdNZSDxzcM8-vpCjCuCkK6bZKNPhK21fWKDfk5qqfjZeP7JbVbUAg79wDERHGjUh8wxvJpnR0_vPnA9tf6DmyJJ6QxVI3x4jw5EYDQqcRHsCBqYAxhrQLAllSniLLnqtGo-atjmFYVpzun4ZHdC-pQ4y2_Y-AnIJS7SvUYUhWi8WbnzSFI3iK-fodTcyAWMF_HgGxswmeMl54fbiBbFZwwkXwGSVTn2kkeEtwDo_gMQ2CV2uc0LEzAEnKmUFS1xFoJl-1thR1OXskXj5-IIuj_sqycbkXLAUTAb3tcCgpRxuJ0mXdXFbNrkFi7dGqfoXEGYWaDYM7kLkSgqATEbljRSucvw7Y0UyfyWK3K6Yc825nBuokvHb-cOKo8LVMlQInl3_Lzwr0n_nCnklVSGaLvGMh4pexTO93xfovZK9aPgaP3eXt4JTnZ9G4LCu0dcM5wJosrQctjQB_91YP-1V8FdVDXT7dvwGhRGSbNWOTycjikXpQ5SFHQg03iRwDcDW6NxmHj--ICmSucItWuwMcOj1ev7KaQL7eBwgrStu2Wfs9vOoKQaSCy-LZpOwBBqpbiDDLNTOQmO_0-3xiyijtsX-Ebe65RZAqeqqGfg4xldGVctbq0gMF5YHTDhOqdIGM0vF-Jq8G2xo6JntB43oYlq7GVFmALgrGkKbEnS-6cxZ-uOfCXcKbA9GKWw2YqcVA1hAhDHmLd-67j2lL0lkftrZ19KFMPh7Fjc-61CJkFLUgy9FuIq6tWARyibTopM4N3h87mcxJkQM38uTY4Z6PldGqatMnPaIzuNXNooawG272VeV4AzyRilNO50hVxGe1CT2ZL8ppYLjoSB_qlxjDEx4nfDszbpBks0HY8qj8NX3pQmWS6juJxtvjbjcpjec8I3EjVpb5xO2hnH6DGu_dyz5SeHbR93yijjK5k5rTHDKIUmSR6jNfYviWKS_1cHgqLoJEAm2uQZVUbzuwcczuD-IiPzdF6B79euPVN9h-XuHP8g3MQvhhTxKrlEdkZSPsNUIUpQS4wLJJ72EHTFLcq9DIpfXpozDWZu-NokuaRDFMehTPNJNQ0jp0g4VH_nxJzpZ-Mwd_BEc77Js9O4cVFQoh85ntb5fjJ_VWXE9-RekbXenldC581zgLhuZr7r9LiOWI1zONipZBa83LUYPiB2NdWNpSz4r6FOZLEwpG_pWcmrj2I5cn-bMPjcPWe7HokJNX2EcLbLeecguIGYqXOGtMWsSzSgZ-PpJVqHsqSaLQuI5WR_kawE9OUaujSA0SdhuSUf6oF61Sca0SmVpHBZ1z5259AzNJ47TmxndPmD9uP9PZurb4FySFQNJqLNsb8OjC5GcWcW9zy6zeuzu-XoEYd44xdgA8Iy1sFJyuzUT4Oi-W6SP6rORLvr0_P_8-JBetj7An0q6wmEPg0KlSL3Sg6oFMGC4vCJDdVSuGCKI5OwC_vEyvtXy9sGD2Vd30iGfXqa2BuAvkLKQASjyyNtUjvfBJnvu11K28at99QalGlBaPe4kqJca_IuUGvWZ1CpqvlqV6qYmm5ehJmEjyMIxDBjLFARKTdJ7j4KgCbaEMpRJosvuDBi1U4z7wa-iPBwOHvK8M0rg08WUvj_5hV2A2wARUkYf0KE2NxUFJFdzVIXbaEqi5oz6lZOHG9zWWnu82D2qus3jxjVolLF0kSfVCWsInE6nE_mPWil0GzqOq7T8mwamM0JqW829By_rGiDHHZA0EPWh6VQlcBnRB2Dg1fAJ0csecfykWjdXtfUmxHbSerQlFKmGMplQOALZOBjMnRr9fkNyGyudEGIGUWUs2KM0XO1HPdP-p4BNtKtAH8IsKcBiG1SoZfS0oitKRoAkXIHd2XijfjrZK3t9k6Al-ML0egTH3Qgl7x_ylaFeo0RS1OwzNDrdvFfvt3zu5rLOXLaGBkKIcUdqBGvNf4m7Z3qrZqacto4JQu0umw60UJXftTtzRsf69_Cy94dWQ2NuLa1FNtRzhDvoEdFI5z5LN8lkw8XBneiKFAkFfEkVu1tlDSjeqky_0KQWD3cykEl4sOxx85Ty6xroZBV4mePNQGvv56iqZ-9fJwplJBDhoANSsToooFy-m3H1T12DS_9RS9LS_WlJec55TrgbTz28crh98QZXqVs0FL26UMtAhpqALrUe-whgv1aqr13mx0BvM39m2F7xy72DLH6kH8b0VEis2LZSCYtTjdLhKjAWQ-1xfVCrGFF47cs5m-TlKlmG8wkgcCjKGZOjx34DqA4Z_DakjyTRPBvzHbSnC7aJpY3sDOhwmk4zt26-objDZXuPpDtGVnecrxrDzp3GyTN_TK_ZHw8lqx5_9kW7jCh_NAa0FJkn--9NeU32D9akOpwuDZIf8JvrR2QKPJqhkQYcceRmaen36BcnTYbQyZUaKF3caLRvV9xwHyJ3AvMUGFPB_33tKjEZTlk1Mi-LPhotGPsQskUNcz4WHbNx6KdwUY63rcpcKVPSqAyBU-cQma2aW-jZcdAMOqNdkfEeWkancfrCMXWkDyTfnZ9InA6Xouqqn5F5RpwNhnwXOx3ONZk_Tl_jy_LsUVuVQZgw1ZHs_OMTubO4uNJnK-1V6tQMk3BhBU_yRyXAxOivY7NcOsWtXFTyD0WMJGpsS3ooSeQD0ae2TUGvWFAu3GvDVqHwiPQX8koaplj_WCNBmZmthJL8b9g54U9QMtG7DdZGDzxuUBQ-k_JjfaG0mM_jfRtNiuwQin3kvaV0kGNnxFzH5UEKmnPp6ci1rzRavtfOXnSfzl9wL1rPNOIGRe32XzjmyxuqM7iZl2jORd9dWfq0cdI.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0e78325fd7e411d0016af6172bde2087d1826cc1baecefa4d3",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1673,
+   "completion_tokens": 613,
+   "total_tokens": 2286,
+   "cost": 0.026755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.026755,
+    "upstream_inference_prompt_cost": 0.008365,
+    "upstream_inference_completions_cost": 0.01839
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 456,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.54
+}

@@ -1,0 +1,133 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "R87654321012345",
+  "invoice_date": "2018-08-06",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 448.99,
+  "tax": 70.0,
+  "total": 518.99,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": 100.0,
+    "unit_price": 1.0,
+    "tax_rate": 19.0,
+    "net": 100.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 50.0,
+    "unit_price": 1.45,
+    "tax_rate": 7.0,
+    "net": 72.5
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 10.0,
+    "unit_price": 0.0,
+    "tax_rate": 7.0,
+    "net": 0.0
+   },
+   {
+    "description": "Bierbrau Pils 20/0500",
+    "quantity": 15.0,
+    "unit_price": 12.0,
+    "tax_rate": 19.0,
+    "net": 180.0
+   },
+   {
+    "description": "Leergutpfand 20 x 0,5l",
+    "quantity": 15.0,
+    "unit_price": 3.1,
+    "tax_rate": 19.0,
+    "net": 46.5
+   },
+   {
+    "description": "Mischpalette Joghurt Karton 3 x 20",
+    "quantity": 2.0,
+    "unit_price": 29.1,
+    "tax_rate": 7.0,
+    "net": 58.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19.0,
+    "base": 321.4,
+    "tax": 61.07
+   },
+   {
+    "rate": 7.0,
+    "base": 127.59,
+    "tax": 8.93
+   }
+  ]
+ },
+ "cost_usd": 0.0067905,
+ "raw": {
+  "id": "gen-1794514657-r4y28laSH9z9uHEaNNlx",
+  "object": "chat.completion",
+  "created": 1794514657,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"R87654321012345\",\"invoice_date\":\"2018-08-06\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":448.99,\"tax\":70.0,\"total\":518.99,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Zitronensäure 100ml\",\"quantity\":100.0,\"unit_price\":1.0,\"tax_rate\":19.0,\"net\":100.0},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":50.0,\"unit_price\":1.45,\"tax_rate\":7.0,\"net\":72.5},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":10.0,\"unit_price\":0.0,\"tax_rate\":7.0,\"net\":0.0},{\"description\":\"Bierbrau Pils 20/0500\",\"quantity\":15.0,\"unit_price\":12.0,\"tax_rate\":19.0,\"net\":180.0},{\"description\":\"Leergutpfand 20 x 0,5l\",\"quantity\":15.0,\"unit_price\":3.1,\"tax_rate\":19.0,\"net\":46.5},{\"description\":\"Mischpalette Joghurt Karton 3 x 20\",\"quantity\":2.0,\"unit_price\":29.1,\"tax_rate\":7.0,\"net\":58.2}],\"vat_breakdown\":[{\"rate\":19.0,\"base\":321.4,\"tax\":61.07},{\"rate\":7.0,\"base\":127.59,\"tax\":8.93}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm now focusing on isolating the vendor's name and VAT number from the OCR output, specifically looking for \"MUSTERLIEFERANT GMBH\" under \"Verkäufer:\" and the corresponding VAT \"DE12345\".\n\n**Isolating Key Invoice Data**\n\nI'm now meticulously extracting the invoice reference, dates, currency, and all monetary amounts, including the untaxed, tax, and total figures. The breakdown of VAT by rate and base is also being captured.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm now focusing on isolating the vendor's name and VAT number from the OCR output, specifically looking for \"MUSTERLIEFERANT GMBH\" under \"Verkäufer:\" and the corresponding VAT \"DE12345\".\n\n**Isolating Key Invoice Data**\n\nI'm now meticulously extracting the invoice reference, dates, currency, and all monetary amounts, including the untaxed, tax, and total figures. The breakdown of VAT by rate and base is also being captured.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2749,
+   "completion_tokens": 1261,
+   "total_tokens": 4010,
+   "cost": 0.0067905,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0067905,
+    "upstream_inference_prompt_cost": 0.00206175,
+    "upstream_inference_completions_cost": 0.00472875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 823,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.38
+}

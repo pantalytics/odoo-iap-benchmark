@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Global Supplies Ltd.",
+  "vendor_vat": "GB123456789",
+  "invoice_ref": "47110818",
+  "invoice_date": "2018-10-31",
+  "due_date": "2018-11-30",
+  "currency": "EUR",
+  "untaxed": 2000.0,
+  "tax": 0.0,
+  "total": 2000.0,
+  "iban": "DE1212344321987600",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Toolbox 0815CO-123 Stahlcoil /V2A",
+    "quantity": 10,
+    "unit_price": 100.0,
+    "tax_rate": 0,
+    "net": 1000.0
+   },
+   {
+    "description": "BR-4529-ZFIM-712 Stoßfänger /A2A",
+    "quantity": 10,
+    "unit_price": 100.0,
+    "tax_rate": 0,
+    "net": 1000.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2000.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0210425,
+ "raw": {
+  "id": "gen-1794512603-N0fcWYFBaFa6XRb82JI0",
+  "object": "chat.completion",
+  "created": 1794512603,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Global Supplies Ltd.\",\n  \"vendor_vat\": \"GB123456789\",\n  \"invoice_ref\": \"47110818\",\n  \"invoice_date\": \"2018-10-31\",\n  \"due_date\": \"2018-11-30\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 2000.00,\n  \"tax\": 0.00,\n  \"total\": 2000.00,\n  \"iban\": \"DE1212344321987600\",\n  \"vat_treatment\": \"K\",\n  \"lines\": [\n    {\n      \"description\": \"Toolbox 0815CO-123 Stahlcoil /V2A\",\n      \"quantity\": 10,\n      \"unit_price\": 100.00,\n      \"tax_rate\": 0,\n      \"net\": 1000.00\n    },\n    {\n      \"description\": \"BR-4529-ZFIM-712 Stoßfänger /A2A\",\n      \"quantity\": 10,\n      \"unit_price\": 100.00,\n      \"tax_rate\": 0,\n      \"net\": 1000.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0,\n      \"base\": 2000.00,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Structure**\n\nI'm currently focused on dissecting the structure of this self-billed invoice/credit note. My initial goal is to identify and isolate key fields like the vendor name. The document uses German terminology, but I think I can extract the information correctly. I'll approach this systematically to ensure accurate data extraction.\n\n\n**Extracting Document Data**\n\nI've made headway in extracting key data points. The vendor is \"Global Supplies Ltd.\" with VAT ID \"GB123456789.\" The invoice reference is \"Nr. 4711 0818,\" dated \"2018-10-31,\" and due on \"2018-11-30.\" Currency is EUR, with an untaxed sum of 2.000,00. I am now working on extracting the tax amount from the document.\n\n\n**Defining Data Extraction Strategy**\n\nNow I'm focusing on defining the complete data extraction strategy. I have to extract the full set of information from the document. I need to make sure I am not missing any information, and I must structure the extracted information in a correct way. I'm especially focused on getting the line items, VAT treatment, and IBAN correctly.\n\n\n\n**Defining Data Extraction Strategy**\n\nNow, I've defined the entire extraction process in detail and am double-checking all the fields. I've successfully identified and matched all essential data points. I know the document is a self-billed invoice and therefore understand that the buyer is acting on behalf of the seller. I've also parsed and validated the key information, including the line items and VAT treatment, and I am satisfied.\n\n\n**Generating Invoice Data**\n\nI'm now generating the final JSON output. All key fields and line items have been extracted, validated, and mapped correctly, adhering to the specified schema. I am confident that the generated JSON will be accurate and complete, representing the invoice's information fully.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Structure**\n\nI'm currently focused on dissecting the structure of this self-billed invoice/credit note. My initial goal is to identify and isolate key fields like the vendor name. The document uses German terminology, but I think I can extract the information correctly. I'll approach this systematically to ensure accurate data extraction.\n\n\n**Extracting Document Data**\n\nI've made headway in extracting key data points. The vendor is \"Global Supplies Ltd.\" with VAT ID \"GB123456789.\" The invoice reference is \"Nr. 4711 0818,\" dated \"2018-10-31,\" and due on \"2018-11-30.\" Currency is EUR, with an untaxed sum of 2.000,00. I am now working on extracting the tax amount from the document.\n\n\n**Defining Data Extraction Strategy**\n\nNow I'm focusing on defining the complete data extraction strategy. I have to extract the full set of information from the document. I need to make sure I am not missing any information, and I must structure the extracted information in a correct way. I'm especially focused on getting the line items, VAT treatment, and IBAN correctly.\n\n\n\n**Defining Data Extraction Strategy**\n\nNow, I've defined the entire extraction process in detail and am double-checking all the fields. I've successfully identified and matched all essential data points. I know the document is a self-billed invoice and therefore understand that the buyer is acting on behalf of the seller. I've also parsed and validated the key information, including the line items and VAT treatment, and I am satisfied.\n\n\n**Generating Invoice Data**\n\nI'm now generating the final JSON output. All key fields and line items have been extracted, validated, and mapped correctly, adhering to the specified schema. I am confident that the generated JSON will be accurate and complete, representing the invoice's information fully.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 834,
+   "completion_tokens": 2000,
+   "total_tokens": 2834,
+   "cost": 0.0210425,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0210425,
+    "upstream_inference_prompt_cost": 0.0010425,
+    "upstream_inference_completions_cost": 0.02
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1619,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.39
+}

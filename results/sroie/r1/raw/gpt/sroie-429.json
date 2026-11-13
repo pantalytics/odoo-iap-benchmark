@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18051402170467",
+  "invoice_date": "2018-05-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 8.4,
+  "tax": 0.5,
+  "total": 8.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR I00100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   },
+   {
+    "description": "SR I00100000065-Add Meats",
+    "quantity": 2,
+    "unit_price": 0.85,
+    "tax_rate": 6,
+    "net": 1.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 8.4,
+    "tax": 0.5
+   }
+  ]
+ },
+ "cost_usd": 0.028755,
+ "raw": {
+  "id": "gen-1794514154-us5fbPrmBwa6hBXcJ5j6",
+  "object": "chat.completion",
+  "created": 1794514154,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18051402170467\",\"invoice_date\":\"2018-05-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":8.4,\"tax\":0.5,\"total\":8.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SR I00100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":6.7,\"tax_rate\":6,\"net\":6.7},{\"description\":\"SR I00100000065-Add Meats\",\"quantity\":2,\"unit_price\":0.85,\"tax_rate\":6,\"net\":1.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":8.4,\"tax\":0.5}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract information from a receipt dated May 14, 2018. The receipt is from UNIHAKKA INTERNATIONAL SDN BHD and lists items, including meat and vegetables, totaling $8.90, which includes $0.50 GST. The currency seems to be Malaysian Ringgit (MYR), and it looks like the prices listed are tax-inclusive. I should focus on the net amounts before tax, which indicates a base amount of $8.40 with a total of $8.90 and tax of $0.50.**Calculating net amounts**\n\nThe schema requires me to present unit prices and net line amounts before tax. The printed totals include GST, which complicates matters. I could figure out the amounts excluding tax, calculating them as 7.10 gross divided by 1.06 for the first item to get about 6.70, and 1.80 for the second to get 1.70. Together they add up to 8.40. However, I need to use the calculated values while following the request for a bill JSON format, without markdown.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract information from a receipt dated May 14, 2018. The receipt is from UNIHAKKA INTERNATIONAL SDN BHD and lists items, including meat and vegetables, totaling $8.90, which includes $0.50 GST. The currency seems to be Malaysian Ringgit (MYR), and it looks like the prices listed are tax-inclusive. I should focus on the net amounts before tax, which indicates a base amount of $8.40 with a total of $8.90 and tax of $0.50.**Calculating net amounts**\n\nThe schema requires me to present unit prices and net line amounts before tax. The printed totals include GST, which complicates matters. I could figure out the amounts excluding tax, calculating them as 7.10 gross divided by 1.06 for the first item to get about 6.70, and 1.80 for the second to get 1.70. Together they add up to 8.40. However, I need to use the calculated values while following the request for a bill JSON format, without markdown.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hz13lm_S4ngbS_UAlFZIxgZC097jvRc3u6CDrCYWq-ZeNt6Lx1cLoIrpZV9_cpjt49AwEejhyR3jGGFp9zpFF7yPcmK4snk-XhOZBkzG6I93ielacBzyZeQ1Qh-cddRE2l35qxPT_mKHvCxhj5ApHFube1tgg7rzK8XP0pQx_c7iDbW1jLHZ6UjRUzy2zIJrvpgKprSVPHfZbGrv2D7RInFUCjOZetdVmH0Me40hjHNDVmYA8ylD-xy7Y9NTps1haGtlTuRl-JJ06IZijn9g2Piq7LTXdXhMDnESJCLlS2liVddaHFGDaTr_CDE8k6Mnhbec1hxW0OpN7NmSMakhwhFIajK50k0FqLz94ex-Z2ZuyOd-qjckWKteJ1UzZQyqDq178_nyBI5B3kjFAIvGh5hsF7Bp8owv2RZ7Z_IyVfF2ifhmOaMoliU_00TEFYEHbZAb7-Us0QU5fFE7oEeRZsWSEmnAfTRv-A7gpieYz5Hu7WHxDmydo5wlna87BAZMNs4HheiqFi_-1Fe3HRV4D14bdfjm6_uGIzhtte2HWMtgfDBIdU0WLIOdv9pgG8CvE6Bmy585EhS3uwZfcEWZqvCuKEWBkFoKPy3pVWJUTKjP9pLolPbqowE6au-FMPBb32WbVII7b3UmiKqiAHidf4KHWJsENqPLkUDHe0wivyCGN5dtbZc5_yaREM_6jhh2cG78kpdxkIUuAeUqQwoQs_CRTH0EoYEyvh-j3wEW77eKNJVlr3PrjNd8Pg72ffb9S8D8ZmOOomEuxn0s1KZXmg4CLqmiaLC0l_5LxUA4BPfhV5AcRkB8-VkPf6NnItO6sa1bIYyAC9S1rJrJ8XLB63yIwbZd7LHiS82bFqYLRNjCIlHBEUEJbiA0F7Rs0chd8UkNOBzoDIa4GoRkRogccbriW8I6218HkOqIieA_0XHfAJhxtLLmIfVAvBm3Hruk-uQPkf2jEOSAH_99GGuVgdi3tv_sUyIOcaBmh-MsLcqfU-dKanybU7-y0LGNv6MiRFQT7_e-YDOiJhvSaqkybrDuuCOYPwRfepJ6ioysYaA2400jffrff6SJm1cQ-d90d9yBV8FjPiZfheu-_unF0OJBy92zlw3LJERYpatTn8OQK5c5aXDV3Ry3f8Cy9DM7pvtQr63GDrbxI6TRZvnHpuc4lVrI78zZIlomam5RelyoznJ_qWfTJCa23QkTYDrpNJRyOZZLjEL5aqm28wqnqt4VBse6Vnbae8GImHAMMfGTHRS1b5qY6UWaxof4EV5hbsWey4zB_PwjXUWCN9xIvtuMEGZf01BGkEJU1_gafcbzMWO2g_y52GwjwTwRkShUONnyjYL7XQOBOFNe37-rixbH7uHrQ4AR623jQYV0cawdR6cHyF5x8tzJTdLuXaG-NKcHwpGJsZHTfWa7EDvoKJqNzEB8bMNeabdUEoHc-JCJKZMk33wHudZTEsJAhovLObYRR0r43oPwZhdLGyfHPB0WRib5iZZv22gdZXxBtClsH4Bp6tG1c-QbgssQKJQZZCpSWVSGcllPt6GYmawRtoQeX4zNkh7P9OncosGh3u-MPLSOgyxn_2GDCaDCjKFAxErociWn8fr4LxLn0CAbthzvgDLhkXraDn9IZGXxfp6T8ZPpEfXl5kLJYtLhwdm80fPhWI5sapAzCovxZFCKitAwH9qH32xHUSwWJDD8yOp1Midy5a-8NQvRNP3hOX9mO-h4ys3nUuTa8foewNPu2Bn8g7OxuCRWWo-3bnmj0IzJ__YNtjNODPNHZdPiS-HcTdJx-TELgVb_0qUmF0MZuN53hjay15tgElsDuTGpAEbyO6XXxMWcWqL_ODOjIlQTyLMSZaWBqzgWDKG7BIyre26q95qTJvh0Cl6PE7YC3czYX7dWYQgkuFjsdnKZuzobjtXyjwVzZQ6zJRs7tcTDnJ529V7jFfbVQKHHFWl-kSU7edyWcI4flP5QB53BKgjtpFbcG5o_pJkoORBrscQk9CbCxdFseoZpQCWQS7mFYOlrkZaIZwTvaXct_qyCp_SVueqBonUwAmHEwgHSa0Hm5n5EnAxK7pYHH-BbZL6mn4vs7eLXvBofavGO2neyj0oigLw7w8vaZ6Ly487-agbBNDoKn_rLVvREJP9cxGITsqadDkQA3CiAfxUCoLtdR7MlHni8mwDwYfUbbp-FkLc8PU_7jKup8FmlIDy-1dWOzjTniOHhYBb879waiaXEKomFXRgB8PkCUEDCjAM58YbSOcMKZxzu-BKjybhfrZCzGcfP2wxKJ_SoqNmtAu7wQpARf5gGP66j12Oys-b8dnguj18LaD3trtIwf8gUYfV6L7lYsCAK1Wt5ZgYdsu6eJF2L9BpqK1B4gbpWCowVXiyIAQbzIX-Zx6F76UfTOOUq3V35911sbGKLyAsbidgOTnhK2rlhwFf-8LiVR9PkWgXypmjB97s2pIW0aW4P4ylrZXJSbSeOlpBplcmlg-H4lttrMkFr_Zsu9hBcYO_nusl9lWExC6R_ZuogjmT8QyXKNk02wC29YH4wmmxSHjM53RIl74EKlV6tXjj8u_jJEJcUq3IKUkk109VHm35be6U-twi0fx_a3MN10AUPT57loLAA9ensB-B0GwBzCBxqupwgIC1RwEnUKGFl1PwbRsgVFRH6Klqg3AInHOIyiUwoaNRsaqr523PnXCl6vdffGyxz03LtXluWpYIER-Q0tr8DJnfLZHmg43mp8wemLY5gn3VLQ0U4tGi3vErAm7-RjSToz33c4n_gCBTRGnqzT8JFm4hdpRpL34-jMcgDMnggu-wMXPOfKqCxsiNGP22g6KmuJNm5flHl26Q6r1D_cCNzTeau7Y2-eMOi-EL53l4bfHn3i4_P9Evtub-N9BlLIhENrP6d22ATr5k3MBvJ3zhfqgNhXTOtRtnf_CstxhUAFnyexXYahpQaydE8dgBHD0MG8Zu1dJTCdELbkoD87tScYUWjYMi2ihUN4YxzMRMgfkAWJij4aS-6YGr72qZWlvoBJJNf0G0n4XnMd21EOV4-1vrV8kbN0MAS312TJv2yqCQqK68PFW9Oy3QQdNB7fVp5Y5uBuoTM9RuPYuaiSPvCtFNZTeo73niZN_9v7HEdZb0R3dzHUEylmH2VnJSO6D0ZEVqbQgTbF-NnVJQmMjjWb_RYtKUgpXfct2f0n2rVIiQxbSyI9meco-mzU_iRaCPm04tmMHvIAn-0nuJwAxGv21qRkPtQTMjOu6ETmVSKG5psK2iSBYSFUHCJfBT6ekgv0JePcY7bIbo8kPX66KIu-tBZbr9cGTOHIsd1FftdtQpsccu-fBkxWHAB2HDUhst-xrwg8-DdVcjloZ2lB09S9xHqUMEtlJ2QEzdqZIhVAJ5vNoOE00cAhUJEJ2D6mO-9UJQBgVNP1-fCk65MiOEKrmYj9vcP_zDpme-WNAuTYuTM4JaoPCkYsV99FHpT0ovpNvVzdo-Em6pnROHmu28TITFAV5jrhsv5TNMfmtVeTBSQ3F_HnRNSs0Vy49B03nepUC0ZupnBIBFPFGdGsmTCSgRUSYFqEcps2MXatYSEYIKzmljoSRjfCY-17qHqImVE1kGDWhyXLMhhT9_mabmYFZ61BJnPk-pEL03rh3N1x1fEQjiVNikOvs70hct40dKpSQoqIhiGbUyGiolyVvYXRV-vkw9uFfEyGeGNDbzwvyROMG43n4LAEdYhjzCOhjIX2-PRH4nPnJwVXUJMa7_ex_L-DHXR_e2Rl30xuuLy_JwJcuPTGggOZ8wvYtjB45CMdpcm0_hdxS1SVeo4vEg7GQ7M7JOVsPgVyl37GU3-Z9TCBKbQ2CqXViRcdwWuWitpUL_ve408Ot0bBpGVDPAOf3xDBL-zutKVI7Ht16Hls_IY8m50-f0ErXxLUJsmZ12NaLnRuCTm57afSWTQaZu37zxNuN7Yvn-q7lNAirl8FHc6RrFC-pQFtCDygCNiGljVbkbOwHxq-XlNgfI_YUk_fxkYI_BR7XTjL6IudJx5txm5Fg8jy_zVoyUdx54-ZUAzwWvtGo12PxejiuDbW22VAGnK9jpTXENxvGo6E1L_Pb24mAqH54nGVDNIJ7_e50zRIFFeT5r36Jnoj-sTGFYeQs3QdYbCi6pWom8vjUFn0mYFHILl8-6rG7R3dj3KkGrs3fLyYF9qjRnQyez6hIsCZmGpVGJSSLTBnyII-Z8WFKH0-S5U9UBp6FGUMUolFiRqZDKteOHbYh1MeQwrI_sJLVAWYIuzvfuIQ9mVdRU_85KVfyADY-VnLkLSfyCjyB87qQZ3Cob9LFPM6uq85gzIvz9ZaBzfExQpRz3vEjgrk_wTpw3nBJ4pP4A6nQcUmmLjraOKFVl8kcqjrdX_yJKRQr8PIyNg-_dUr2GtaIpEnf0pN1jg4J8dO6KuvF1aq8g_9QMo0QAck75mCgSoS6QPuik4QAnqA_gDf2BggQC_N_LVzKRPrbvOLNYfw2yqhJXV6tlVouKfJwz5YFR47mgAO7AabkJdorBLFzx3NwNuvyyV9qj2CjIOhsMeqPq1XuygqSen3QX0jiyD4dHF4rs6X0az_UsjDp89j8jy8Bw_XpbzMLqFZXfSMptGOPHsW4oSNwKz09nlYre3EU0byEunslSKp8Ku8YXSYRFxhTLkm57h2lpzgr8-jFonhFcz2ajq8JJcmTQoMBkKL8VbO8ndq7-bwbuEUS_BU4B6ow_m3Qt0EMYJMtq6u6BRe6WH9tzytR9uZ0V9-RZt8LF74xdJvM7CR7PfYWi7XhyFR3HQGDSOenR5gvyXVsOTotgtSARBoO3L5jbmLgh351em78wFYC_kXFDd5Y7ddYZoTNygUSgK7zHVfc-jEJLhpqiFOBtbX-183K0wO3fi7E9otNSnsZ32SFGWtnEang18COg8xCKfjua68dm6KlhGVBc7q5Uts1YTB9RExeuPLOjAgjIRB86BG-ZZjYSTZmu1Fi2tUlsnDMwtDFl2sPoc2DjRErjamBoaumYjFh5SzyI5DrW7qGWjjg28BRrETc1JQOToXV7eF0_OaXP7vEXrrBA2HoyfSAbSEEZVUbTeiSQHufUp7ctzXAO8cSSlT5LgG47O_qr-w6VOqF4ZD_JweZDTaLtK7GlJgF2QFH4R5qkKa8U4oSKIAyY4ogtFqTwDhZrcQP010wDEo48Wg0uL9yZXlCra_nRfWd9CqmLpAPqlqnw8LWy8XielZBGWudHjIKPwacVmJmISqAupxS306QXbiCeb6UgUPa8KrhjpB1IsA9v1JQwJsHY4Zpzkft9wUN4FBsMexFuWfGiJKMJczSzTlc5V9BjKxRvi_-Sz3dbzlLzWIkEMXZy4K8MJ0Z9Erc6YHz3dUJZN0VouhLlv6pkljyz4nPHyYg5jgodHvwptx8Ek9egAigX-8_KM07v71OMeEhvOEVFjB8VjqElOJ8BgZDO5rSjFvneIYW4OkLVX8M1D5qI4mKAeC0QacqdBqTklgznRxLqSQd9Tn1CsDrB3h0nUfc6rxoqIVqWqhJYxkeuNzpDEuV_0_qzSfSs1O5fZQ_MI0XflTqsd6qlV-NDMweIB8BssGFm9wlA7xUQsO2uumONpg1k_zK_-F7AnxD5E3vvvG6jpoMKrGzvmNodCdEh0NjomvByDk8UE-t-_6KSHcwlXavtnULtA5MX66ELaGNnZMw5hXMpoRIOajRhvfvHOoMACbrtoI_Wz5MgGVOMhKTVDFhjqDVvZxRd5LPGpkJHy0msaMZosbx42_peh2yk5IJw0Uh4GvLQrWgM3nxPPduHpxPg7Vl0BDSTKzIqKbresss-r2kuNsvef7vkiusgBBuHGDWS4dTLBZ6LiPFMyhnUYx8prc6m51gs2vI8FtWCa7M8wDJd874ezCgtvBqayrcZ7el0rwqvmlTSIZ77MCeleACbgHR4zkoWuMWF6SqVHWtTD7JS__0AKWmYWLkym12Y2qXSCyChRUFhdsBFPBCF-aMEWvDHZtNQlJq6b_CezUDKZy6eTgYyr1wiU8jaT4D2PVFi3DaD54mCcPwcKQzHQZgfESK3yCslTWYar04y37zunvnos4a0mDW6FqqmnyDKP_3WwWbWGMcj6YbB3DWReV7QtWA-bBCdSJUZ1gL1WZLjYyISx_xrORQHxwQgBq9-ZwEpogTwZRoI3ioI7lkdlqrqpK8fQn4tD9sZaf3HXOT6BVsJr7KCIlbw3YJmC-7g5G-mMqgPp9nIU4HSnW7JHMWx085QJ_zpVF6fE_ZcGB6KannYqPZUyx48M79YiNqeXFhLBH1-QGsifcTbHo2EnXcXbTT7fDjJnaRrukooH4CWFyAmjM9JfSgK_e1R6p9BgLydzp8Reh6njsFNQyy4cE5BvGaTBKxkCl1vO4Fv0jbdertcsp_-NuYLO-1Pty1Yi6TmHyvyjKJbJ64YxIQg5W0xcfPytrsC5o7CGbUSLRARKJ5MpYN1E_UZck0vW1BxYtkrxdq3NiDUbtrZu1vJ4oLgN54usapmOnITaIOWzXto_pgON-g9NIojM2m0nXdbtWkTkoK7YGh0JJPmQPrAqJnXgmaMRwl_iyskvMaOcCOeS5LKh3raq3OWgxD5-WSoPcxaxzzRKr9zGon5uv9VbvwM1K4QQbm37p_tLFwIK5h0MtAPBtPYaXiWMA9NumtcUT3J1FCkW-SDfYW41DLGVYRZWt8vElbjGKMJ9qkcSUWjMXIb6hm5JxrXvgzBUdwB83RQyf-6DIxGRVtJeD7HVfB9rVQTTbEZoheMiXYLywvAA-Js-I0BwZJ7VOKitxh4oBjufb2VzOC4ApnfLc3Etl4lRTyofsVW8c0m091BpF4Cdyo07jqe9nQA5XtuH5_PPdnflzsa22hgZv9Q4YTKy_crw9nWdboQoKMrHdV5atHlfRZVMiE92SVBk_kj8UhVHL4tvnpuJ0J9fUd8ECrqYp8WtgibmusvHIF7YpEZUur4Mv5ORaaLY75rOqRVSs_jA8oVM9t4EVvNift-y-L9lgicizThfncDT4EnxMVv0aiGySZuq6yjVos5ovuU25LN5T3EcFI4FD7sQilVlF7nl3LZxotRdMNQJC9pmCwuI5JYZf8XYWlwDtVjCxHjdp3yo-FboQ5ziEefZ_mCyG_AgaWrQ0LbWpGqbmV2qSyvcQSaXEo5AOx-EXVOWVra7x1Y304BbFQvomunF1Lfu9zpfbw=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_01bb992c79283b6d016af61cec2b6487d1938342f2f305a263",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 708,
+   "total_tokens": 2211,
+   "cost": 0.028755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.028755,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.02124
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.14
+}

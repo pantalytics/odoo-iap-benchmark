@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+  "vendor_vat": "000750673920",
+  "invoice_ref": "CS00012543",
+  "invoice_date": "2018-01-04",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 42.2,
+  "tax": 2.53,
+  "total": 44.73,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "2402 25MM GI NIPPLE",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "1462 SEAL TAPE",
+    "quantity": 2.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "1748 32MM POLY SOCKET",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   },
+   {
+    "description": "2247 1\" BALL VALVE",
+    "quantity": 1.0,
+    "unit_price": null,
+    "tax_rate": 6.0,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 42.2,
+    "tax": 2.53
+   }
+  ]
+ },
+ "cost_usd": 0.0070635,
+ "raw": {
+  "id": "gen-1794512634-r8C0xDNoO46waMQqwfyX",
+  "object": "chat.completion",
+  "created": 1794512634,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SYARIKAT PERNIAGAAN GIN KEE\",\"vendor_vat\":\"000750673920\",\"invoice_ref\":\"CS00012543\",\"invoice_date\":\"2018-01-04\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":42.20,\"tax\":2.53,\"total\":44.73,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"2402 25MM GI NIPPLE\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"1462 SEAL TAPE\",\"quantity\":2.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"1748 32MM POLY SOCKET\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null},{\"description\":\"2247 1\\\" BALL VALVE\",\"quantity\":1.0,\"unit_price\":null,\"tax_rate\":6.0,\"net\":null}],\"vat_breakdown\":[{\"rate\":6.0,\"base\":42.20,\"tax\":2.53}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently focusing on parsing the provided bill image to extract key information according to the specified JSON schema. My progress involves identifying and isolating the vendor name, VAT number, invoice reference, and invoice date.\n\n**Refining Line Item Extraction**\n\nI'm meticulously examining the invoice lines, particularly the \"Amount\" column. It appears to be inclusive of GST. I'm trying to discern if the `net` field in the schema should reflect this gross amount or if a pre-tax value is implied but not explicitly printed for each line.\n\n**Confirming Net Amount Logic**\n\nI'm wrestling with the \"Amount\" column's GST inclusivity. Since the schema specifies \"Line amount before tax, as printed,\" and it's not printed, I'm considering setting `net` and `unit_price` to null, or calculating them if standard practice dictates.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently focusing on parsing the provided bill image to extract key information according to the specified JSON schema. My progress involves identifying and isolating the vendor name, VAT number, invoice reference, and invoice date.\n\n**Refining Line Item Extraction**\n\nI'm meticulously examining the invoice lines, particularly the \"Amount\" column. It appears to be inclusive of GST. I'm trying to discern if the `net` field in the schema should reflect this gross amount or if a pre-tax value is implied but not explicitly printed for each line.\n\n**Confirming Net Amount Logic**\n\nI'm wrestling with the \"Amount\" column's GST inclusivity. Since the schema specifies \"Line amount before tax, as printed,\" and it's not printed, I'm considering setting `net` and `unit_price` to null, or calculating them if standard practice dictates.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1570,
+   "total_tokens": 3138,
+   "cost": 0.0070635,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0070635,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.0058875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1285,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.41
+}

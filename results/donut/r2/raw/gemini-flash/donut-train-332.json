@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Guerrero",
+  "vendor_vat": "954-91-2300",
+  "invoice_ref": "39400829",
+  "invoice_date": "2012-12-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 6451.16,
+  "tax": 645.12,
+  "total": 7096.28,
+  "iban": "GB81NHIS20902698381776",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop",
+    "quantity": 3.0,
+    "unit_price": 45.0,
+    "tax_rate": 10.0,
+    "net": 135.0
+   },
+   {
+    "description": "Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi",
+    "quantity": 4.0,
+    "unit_price": 119.99,
+    "tax_rate": 10.0,
+    "net": 479.96
+   },
+   {
+    "description": "Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10",
+    "quantity": 3.0,
+    "unit_price": 124.95,
+    "tax_rate": 10.0,
+    "net": 374.85
+   },
+   {
+    "description": "Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD",
+    "quantity": 5.0,
+    "unit_price": 1092.27,
+    "tax_rate": 10.0,
+    "net": 5461.35
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 6451.16,
+    "tax": 645.12
+   }
+  ]
+ },
+ "cost_usd": 0.005781,
+ "raw": {
+  "id": "gen-1794512769-0vlE0MpKEPYH87ycFHS4",
+  "object": "chat.completion",
+  "created": 1794512769,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith-Guerrero\",\"vendor_vat\":\"954-91-2300\",\"invoice_ref\":\"39400829\",\"invoice_date\":\"2012-12-01\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":6451.16,\"tax\":645.12,\"total\":7096.28,\"iban\":\"GB81NHIS20902698381776\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Intel Compute Stick (32GB, Intel Atom, 1.33GHz, 2GB) PC Desktop\",\"quantity\":3.0,\"unit_price\":45.0,\"tax_rate\":10.0,\"net\":135.0},{\"description\":\"Quality Dell Windows XP Pro Desktop PC Computer Core 2 vPro 4Gb 250Gb DVD WiFi\",\"quantity\":4.0,\"unit_price\":119.99,\"tax_rate\":10.0,\"net\":479.96},{\"description\":\"Dell Desktop Computer PC Core i5 3.1GHz 8GB RAM 500GB HD Wifi DVD Windows 10\",\"quantity\":3.0,\"unit_price\":124.95,\"tax_rate\":10.0,\"net\":374.85},{\"description\":\"Custom Gaming Computer Ryzen 7 2700 32GB DDR4 Nvidia RTX 2060 RGB SSD 500GB HDD\",\"quantity\":5.0,\"unit_price\":1092.27,\"tax_rate\":10.0,\"net\":5461.35}],\"vat_breakdown\":[{\"rate\":10.0,\"base\":6451.16,\"tax\":645.12}]}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Dates**\n\nI'm currently working on parsing the invoice dates. I've noticed a potential ambiguity between MM/DD/YYYY and DD/MM formats due to the presence of US addresses. I'm exploring ways to definitively determine the correct interpretation before converting to the desired JSON schema.\n\n**Resolving Date Ambiguities**\n\nI've identified a key point: the European decimal comma usage strongly suggests DD/MM/YYYY for dates in this context. This implies \"01/12/2012\" likely represents December 1st, 2012, rather than January 12th.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Dates**\n\nI'm currently working on parsing the invoice dates. I've noticed a potential ambiguity between MM/DD/YYYY and DD/MM formats due to the presence of US addresses. I'm exploring ways to definitively determine the correct interpretation before converting to the desired JSON schema.\n\n**Resolving Date Ambiguities**\n\nI've identified a key point: the European decimal comma usage strongly suggests DD/MM/YYYY for dates in this context. This implies \"01/12/2012\" likely represents December 1st, 2012, rather than January 12th.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1228,
+   "total_tokens": 2796,
+   "cost": 0.005781,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.005781,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.004605
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 812,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.81
+}

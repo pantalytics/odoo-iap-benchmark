@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "RESTORAN WAN SHENG",
+  "vendor_vat": "001335787520",
+  "invoice_ref": "1199976",
+  "invoice_date": "2018-06-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.5,
+  "tax": 0.0,
+  "total": 6.5,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Teh (B)",
+    "quantity": 1,
+    "unit_price": 2.1,
+    "tax_rate": 0,
+    "net": 2.1
+   },
+   {
+    "description": "Cham (B)",
+    "quantity": 1,
+    "unit_price": 2.1,
+    "tax_rate": 0,
+    "net": 2.1
+   },
+   {
+    "description": "Soya Bean",
+    "quantity": 1,
+    "unit_price": 1.7,
+    "tax_rate": 0,
+    "net": 1.7
+   },
+   {
+    "description": "Take Away",
+    "quantity": 3,
+    "unit_price": 0.2,
+    "tax_rate": 0,
+    "net": 0.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 6.5,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.022984,
+ "raw": {
+  "id": "gen-1794512697-06DG0tKwVBE6rt6NkNuf",
+  "object": "chat.completion",
+  "created": 1794512697,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"RESTORAN WAN SHENG\",\"vendor_vat\":\"001335787520\",\"invoice_ref\":\"1199976\",\"invoice_date\":\"2018-06-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.50,\"tax\":0.00,\"total\":6.50,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"Teh (B)\",\"quantity\":1,\"unit_price\":2.10,\"tax_rate\":0,\"net\":2.10},{\"description\":\"Cham (B)\",\"quantity\":1,\"unit_price\":2.10,\"tax_rate\":0,\"net\":2.10},{\"description\":\"Soya Bean\",\"quantity\":1,\"unit_price\":1.70,\"tax_rate\":0,\"net\":1.70},{\"description\":\"Take Away\",\"quantity\":3,\"unit_price\":0.20,\"tax_rate\":0,\"net\":0.60}],\"vat_breakdown\":[{\"rate\":0,\"base\":6.50,\"tax\":0.00}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm currently focused on extracting the vendor's name and their VAT/Tax ID from the invoice. I've successfully identified \"RESTORAN WAN SHENG\" as the vendor and \"GST REG NO:\" as the prefix for their tax identification.\n\n**Parsing Transaction Details**\n\nI'm now focused on extracting key transaction data. I've identified the invoice reference, date, and currency. The due date is absent, and I'm detailing the line items with their descriptions, quantities, unit prices, and tax treatments.\n\n**Applying Schema Mapping**\n\nI've successfully mapped all identified data points to the defined schema. All numeric values and string types are now correctly represented, ensuring consistency for further processing. The `vat_breakdown` has also been populated with the calculated tax details.\n\n**Formatting JSON Output**\n\nI'm ensuring the final output is a valid, single-line JSON string, precisely adhering to the format requirements. All data has been structured correctly without any extraneous control tokens.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm currently focused on extracting the vendor's name and their VAT/Tax ID from the invoice. I've successfully identified \"RESTORAN WAN SHENG\" as the vendor and \"GST REG NO:\" as the prefix for their tax identification.\n\n**Parsing Transaction Details**\n\nI'm now focused on extracting key transaction data. I've identified the invoice reference, date, and currency. The due date is absent, and I'm detailing the line items with their descriptions, quantities, unit prices, and tax treatments.\n\n**Applying Schema Mapping**\n\nI've successfully mapped all identified data points to the defined schema. All numeric values and string types are now correctly represented, ensuring consistency for further processing. The `vat_breakdown` has also been populated with the calculated tax details.\n\n**Formatting JSON Output**\n\nI'm ensuring the final output is a valid, single-line JSON string, precisely adhering to the format requirements. All data has been structured correctly without any extraneous control tokens.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "AY89a18StNjGeK33o/bODBTXZr1M40O0igVsAMsH3QC+Potjmfy+EdB7Ww5fMEGexI1gK9NtjhepHeUErG7D4+y9mHo2I0gUw0n/Yv+5mDRndnUsiUxf6tIwo65OrTHmiIO40aGLSDntUOlL+GUc9TcrWlhwCufAH6VQBR430cIYsuW2C/qdknKpkeOdY7X9w8g0A7dH4Bs0M69hw54eS/bzE3Kv1MnvN6YSnqfvcisTGaG3H6dR21d+E1CNMe0mvuyvWetKYW+JlVdrucnqTLgl7++sM/tPzTNxA5mgUlVFuXJ49ZtToDJy/BEcSE1Uo/kURgoI1VFWk2hDmnuX5Ev0W6UzJyxQr/9Uz+z3J8Oac6/v08aihp2uTGtLXLM/iBx5BhwPWHluEKuvIsLH+tfXv0hY90CgddDt1JmwB+7xYInrWXqA/iFqXXOu9SgRNejj28D2bAWBPC9gNFz5fDj97ib51BKBJcNRbiXrkhp+KwEu86xFVMkGHjlRYhULOdlld3C93grn7N92/3A2C4nf7Kr9XrGKR1aUeu/P7H1Kgu4CRwW9ARPzAFc6RNLn6OWlsyeeZfmiLZNc6P6VD45bB28anMB/sAPUuEHDfr+tGzvGsi6KYbcKVt7pTwc6fh61RWYNwePHLWTvrtAjh2ts6e7nIwXIJ9oh8hBj5sLIOG2yIFssexuH5iJxANIoibQ5nBHkQuVRuVYkm5Ras3b7DXx7xP1LGD/OaFHQ3VBxhpXTk/4bwwxTM74tbki4r3vW//g4MUHU9pehOakVEWA4Z3D2O/pMrd1H9fyrCbt5uCE1Ybhi8xIVuy8pSUF7gdw3ReGI6Pli3nqZSAy+LjLAwvxZtCmwNiA9ONw0PcvvRab09ZnaQUbDgzBTDwmGuYu2ZCeeUdUwwdqVopXCT0EcdpZnvu3BJrK9rYwDzObJfWW2jGF54IbsmWc8Q6SKNEo/XSMoCw2aa4s4h90F68OEf+vPMUA5Ox1ibPjoHGLB/wsAk8nhh75oP3pSBVzuRE2SOwWbusCu1q2W82fAUD86ulase9/Ifa1cE+HSe9ypv0NgjaCDD0+WOCjuDMvKdkdw+6rgesVl1SaJdoZ9p+rNmVOCbO5CdUp04h5a9vXhCmaqXlyrwybmvujIyaH1cZj342Yx5cT2wOBwC6651PAxjh2NPRRR3TtPwKNipBfKQtMMIQ+nnpoX8ftpZwg+/MjEvKgv+3XHg9RXxprgbqv5g+cG4CoNfoFYQoHtITxmh7jaYFRNka+B2b3tR3AjPt5XVJodhLAUUEry8Uyzmnrolv+qZWWoBplk98za8DUtciPTOdVzjx6zmcUML/jB7x/W57yN+Pjgl0wiscyITwRL1OIXdDHcq2nD0h9UNob49IRXuc5CeKD+2z8SxwFJZ+VBt9jop4IwyBYAprDWnALbeVqUVgUvu5KOJW/eqY/njlusxF2mvgR9w8agGwNWu0cqKWQCLnHfaKqi/FjYZaAr9BDRoDK5CpSoVrjF4FXO7dZX/dYWdUbOYB3CxXEzdtH4eY0xQEpA1+oJ6/MEcOza3oLnpq/cus0AU0heVDaLVTZIjWM/LDpF8IzvzZbueU5pI7/5mFFpBziHvK0MoMR8vmHFNZFlV1VW43z7qXOOuGa6DNs3AV3GMn73wGcQ5BFQJOcm/pKF4iYVDptU+97kWlTb82ze451QeZzk43sMd6mYC6x0UE3bqnslY9ULsMf4PsXBIi7BFtTNr27QRmmO1RGW9FV7grsnOePSC5r3ybBS1UZ9TBUoVia9y3YrdbkCKDXzd+6J+yb4hR8yduLC1kZOw0m6zq/iHGJfaL0JQBqx2Ldgnu5KZdgRlol5qCH2Gw/sKG+BxWExiLRiOMNRAy1uE+xaXq6fp2qVrTG7hWmRNoIlZbJDHVP6Yxi6avnjjNzXVbtpK/jdXVXLWoVgQPARTyAQNNHbuC2BEQNE0tKUKjVN6W4aqS95gkr+KEMdZlikKoeJiSI6kFHMtKFsPj8yovt9xjI7OFWacJEYfdvVjeC38Kj6QBh+WixvuI5ZpjE9FBf59/o7/fW6NXgH7LXV7ig9UkXPLhmO3r4vfXCV9TC3EzQmuTbX/U1Y2eEbZoDzDnBVvN4XzWalRpO+K7XIa/8oukK9m4OQRqCCBHwQCVcmkN1kWxzd9lUbQ/J9O1bVYMU3Aqd1AF84SmYMlCFKAiCkSdC4bNtr3SC0L49+IN0gIoIHWY6sFDFWtAkdIUevRvfdcP6BOlY+nsU5Zy/MUhDu2owPc79jkavHlbBwmjNFKtwXSM1kJEUv36qiKobePr5K57uNACdoncCAvKcKOD4K2/xfOtM//p+gbMzOCu7D3pVPC0GMlUPUZzPJ9gXUW00kgltX5SczPsNKpH0vx+ZpVlCt/JZeUcfdrikRnC4dkA8/NNAlZt7PlForHXwDoSipYMOvNWz6qWHOYxjH7ktCO1rks04Uy/wZOfcWPWdB+1NJ7DI6SNDqInRDA5mb0nZ4aS/ZB52M7Sl2JoAoVCPN01hkfsTfN256bLqtOM2W3qP0jL0kbiINxBD0uOCDpk+w1cpteRJZ5numj+WDqT9wp4uq2vp7HbFkgS+UP2kQbzQvhUOqvmMDy8RWISFDjtXVzK/RUcl3N+MPeuMb2ABJ2ysYQiOV7jAzYiESlR74Vvkwe+YfnmcZgTsSe2q0437+JV8Sp0Y/dQuGyaAd5layKfowOh3hLX5RAWtXJWoaDp27TT153UvxC+hOzKYQ6ejEHS/6baavvxU4yJpS+GOp/YMfIKxzPe6CiB7OaQwOqIIJzkh609A/e8p1D5dFJWkHo1hK+fZiLZ9pujtkWyRJZXzXZeFF+W3yKRjgCIXjCvi9wtfz8YhOPFxVeVGyHX5zf2zfyL/HZ7Pdqb5nzYyIEfrm8N7CBi9qIQu7x3lZO2Luh4VwgtalGYYTuNDHNpfaKykg8i8jXZ26WTnlvWUpIIgTOQH0h2Ct/bgV2eV5FgGj44057XFYZGBO5lCzoTYpKWxKtQ6YvU2RGnlP4TaJkvgJjzFpiplb8hImmpT3HihFEH+gRZd6xOrWw5FRu4GMOoQsx/895os6z2AqFAySIDpmeoIhmtCH5Z2Iyxlyxs24DxRlhS3UPL6FIXkHto/1j3lgjClZLSfNRj/BSJ6R9ItnUW+8/BMvEQNSAY9SbNRc+a9DSCKQ0GL8PkwcGehJT1BcYd808JTG7/xqjasUbwOfwbtaTTsB6r5l7gR733cSOG7pZWwkJkfY9tIqE1r8yKvrGyxnwnyoJsbdL8cl292L9iCAPDiTZ0cyhu4gqdqSJ3uH6zrX5RylAgAEdCmD3bmJbz3UyJ9LjgWLgtZuIZOz/EI+Ift6hH4MROzSS9TQCrUzIxjEBlzCZMS0XN7ay+ZLWlSXKNE5AjZ/SNOjh9YDRHZ7Bq1hHrTVwz+EGsZP0rZOS32N+eq6TbJzvzPOp8SgBFYt/llAAtpLguIJZEWUnw7BIS/sMfMzWkO3NFO0U1eKaoGJhJa3MwRds5uPyNhDlzEqf4NbxwfgiZLe6l/GWKyIReCeVWs88Tc8IMq0uI38Y+827TuhS3uB6HkJKyRppHpOSMJTjGT9JHbV7tLSuwETMdRn3A+gutNBGd2YlTFgUR7Kzh0eGw5fglqr1aEmhbleRWhEOxPdzI+ZPe6XzyfgeVxiKU1lelnIY2JKgRJcMGSPhdnE7dxZeSj4JkHQX7Jzf3xT/ZWXwvbiLuL8Ql6PPn+24C0vG7NpRrrpg/M0YWRTbNPagQk2En1BmZvrjKl/kltVfPFoSwV3xf7OY/aD6hcSgmU4dqo/drJzwb7+cVdA6wNjRyOJqQYsiQUMceLA1+PDdU6cDU6lP7WSbC6ufgDJpkkqv89fTUuQ6Cbbq5z+WZxBWAwFnkbVR57pGGZs51C7bDDfHFQmZ7/SiqoViFbFUN9zkIJz8FlNu+ImYUAL4T81/+bib6Yi/InbC9ZLhQWf/9ZNA3x+v3LXzIejPdOvzZ7Y3wEUWX4+5kdFi3++ikF4ltK2gywbcU6sOth2yPfoAdnLfmbWdhHhMQwmtYETGzYn4r7hJi0r4KqST9JsrkqxYIm+ueq/aCH7zgUYOwPVGQN81TEQSyftTuyY7wHvhZzCqcfRHO1Hg8wrbj8lbnO6F9kvteLGlaP+1mzO47vcQqb3iNalHE3u6uGpIUA7BnnIeFDhudgAsFJCIyjDGYM+D8poKz87KDIMkGhh09gXtS+qD3y6obpLFH7uPvwkQcK386zbYFCvsmOtKcQSMwJCc18bsiIDwuCWlL1mwFyFXGkiGJbcixRc/cr94QBD8SKhOn9UVA+xhhBkjAZMepZwBq2LrVxwV4em7EtaW7rOOAT2KzC9NjE/2rKIonVHuKnHPJmm8mcIHQQSWdvRm7YLabfNC4YGK0T4OUB7kJ2x8w2Ts+PauvpOstk1oCWnKR/UorREmDNdF2ZqaYCFJ+Nhz4EMcbtN6AFOAX2apgPiCFFktRJr38zos9W+pN/6pRYRo3JWsKPC5Fub3x7eSd04SE6Gk24/E+sXO7AQCNmxsfxo/5LFxNLZvN3OBfBghTxBlwNfEykvZSB2jAfAsdduBel//QbUXzNcFbETxuJpLfQ6D6EL0hqVqU71VxgBxFCCzjaIX8HeoTH1GR9kK3Cl5poZsYXvattVNzaUFjuLfIh5DAVeDNxpRad0OVfAsKu+9yCmcQ4X+APLsXea522XXhhP1KxdYqMX046ToamyaY5cvIwQvdSDuut5RPzdaDXPorHcapn/LPivM868gHqj1z9y2wWR5dmXOGQT1uy0LJNVIlMpyea2fv71HKVlUeh0D8SHimy3k1usmrR0mK13kq1XXaKCSs8F+uMD0DjgdFMfxVfHr4uD5tXX3slJIgXuNPWF2x+q4d66mqC5wha029xEQuJAJOIZpcPjrTyEDQRyhLEa3tdy0b1XHPhshoiuwFG0j0Gqiwr8tAD+sbc4GpVDqgyujxVqW7QDzwiiCKlEhKdlODIRYooVhPcdlawpDv0xdOOJtgpktnbAUXG+k4ySSPb/puNZojYllKv7T1T4oK1379zyOMqyYAQIBXT7ztdPHIB1DaqGiJtymch7Wd07Tv2zFAOl+TZPh6dmWaDxxMkiP5cftMAMJMfAf4gTTrO/gJnVL+F6g3/eIh7i8m53gQfcQtiPi2KOLo3IXFMDIJEyk7lVKzjO6K8CZQDiXvGZek7hYVf+W3gNbFGxS8v4WKoo/mBz9WeQtIm6aY5b4HzYmonVEjXg1cwn/urmPDW+x4FREUsBKTAwh2lEmqLQk85qRd8dikTGCDgBxB8sH13t6nv2SaXUIWAzvd02aD/HpFhcoynCK0Lp0QZVcLWejSfuxRkwE/L+uECdf9lgyVw1Rmm3k31TFGv5srj5I+i+5OpTSBbTwuJRZ4YX/cZAVkUCfKyUbj2YT5mJxVu7lQh7BRlE/zdiy3Lc/4Uw5Pw5jCZjGf6whl5cXwoqb1DW2bB5xRtfSHdn4MejME/XraG8lSYCNXkLisQhWQpHAtVVQ6QUAeLshvm7v5cvm0J8sg83NVtnSLPSmCekP4N5gOMQghhDGnb2uizGnKWk2EyuyiTWrZCDEQJC6fH7uGda6LRbhJeI/ggpFwgHpTiBnC5YmCJiw7tIk2GebNyX7hJxOr5BfJTUtkDtLhub8lJltypSKPy3mtaIRRL+SBeQTPWkDIcuFLQuY4gtxD++uazHcabGkSf17hrsWdkLO1zao31lccfPeVrvVIImUCdpbM7VxcQWkeXYmu3fX7ZhovdZhmkn3hj2wlivVCS8p23ZfqQLHhyPw1KKVcreRmb6T63xOlVaJKg64C4QcSkYhKwc9jOs09OORaPdb+R2aBrLwYOXQjiBOh9AQL5Z3TAX+cE3FXY13PSRZ/Ur2gcUlEwUG2KmwC7rm3A7reUTUbcqGidzAwqY/9zLbUs0HRbkAKQQHcbdUjluHEpZqHMW/FKGEXmKbapX/69X2vOmn6AipOfI4zuYA7snF5ure3fr+vWPnQFOCaLgnkK2yqBOTxMtZJcqsoLydIjLzNjCxxe8ZDLd2R7KXZ+fu9f6h6hH/X+r8Lbq9yzEIJEqtLB/YpYMOyk=",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1654,
+   "total_tokens": 3222,
+   "cost": 0.022984,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022984,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.019848
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1398,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.15
+}

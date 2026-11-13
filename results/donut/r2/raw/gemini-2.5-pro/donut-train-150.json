@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Figueroa, Richard and Hunter",
+  "vendor_vat": "997-81-6205",
+  "invoice_ref": "16131761",
+  "invoice_date": "2015-04-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 361.96,
+  "tax": 36.2,
+  "total": 398.16,
+  "iban": "GB67GACG37604699494790",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Rickshaw Decoration Gift Wine Rack Retro Holder Bar Home Ornaments Vintage Iron",
+    "quantity": 4.0,
+    "unit_price": 71.49,
+    "tax_rate": 10.0,
+    "net": 285.96
+   },
+   {
+    "description": "Custom wine glass",
+    "quantity": 4.0,
+    "unit_price": 19.0,
+    "tax_rate": 10.0,
+    "net": 76.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 361.96,
+    "tax": 36.2
+   }
+  ]
+ },
+ "cost_usd": 0.0292975,
+ "raw": {
+  "id": "gen-1794512828-cvdwVBvQEs4myQ5ENlZn",
+  "object": "chat.completion",
+  "created": 1794512828,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Figueroa, Richard and Hunter\",\n  \"vendor_vat\": \"997-81-6205\",\n  \"invoice_ref\": \"16131761\",\n  \"invoice_date\": \"2015-04-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 361.96,\n  \"tax\": 36.2,\n  \"total\": 398.16,\n  \"iban\": \"GB67GACG37604699494790\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Rickshaw Decoration Gift Wine Rack Retro Holder Bar Home Ornaments Vintage Iron\",\n      \"quantity\": 4.0,\n      \"unit_price\": 71.49,\n      \"tax_rate\": 10.0,\n      \"net\": 285.96\n    },\n    {\n      \"description\": \"Custom wine glass\",\n      \"quantity\": 4.0,\n      \"unit_price\": 19.0,\n      \"tax_rate\": 10.0,\n      \"net\": 76.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 361.96,\n      \"tax\": 36.2\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Figueroa, Richard and Hunter\" as the vendor and extracted \"997-81-6205\" as their Tax ID. I'm now focusing on mapping these values to the correct keys within the JSON schema.\n\n\n**Mapping Data Fields**\n\nI'm now focusing on the invoice number \"16131761\" and issue date \"12/04/2015\".  Given the ambiguous date format, and the presence of a US address with a UK IBAN, I've decided to interpret the date as DD/MM/YYYY, making it \"2015-04-12\". I'll default to `null` for the missing due date and \"$\" as USD, until more clues appear.\n\n\n**Populating JSON Fields**\n\nI've extracted all necessary data points and am ready to populate the JSON schema.  I've double-checked my interpretations, like the date format (DD/MM/YYYY since the IBAN is UK). I've set the due date to `null` and USD as the currency based on the provided information. I've now translated the various data into the keys and values required for the JSON schema and am ready to proceed.\n\n\n**Finalizing Field Values**\n\nI've re-evaluated the date and decided, given the US addresses, to interpret \"12/04/2015\" as December 4, 2015, which makes the `invoice_date` \"2015-12-04\". Despite the UK IBAN, I'm sticking with USD as the currency due to the '$' symbol and US addresses. I've rechecked all calculations for accuracy. The JSON schema is ready for population.\n\n\n**Finalizing Information Fields**\n\nI've extracted all the data from the document and reconciled some ambiguous information. I now believe the invoice date is 2015-04-12, following the DD/MM/YYYY format suggested by the UK IBAN. Despite conflicting information, I'm maintaining USD as the currency due to the '$' symbol. I've double-checked all values and am preparing to populate the JSON structure.\n\n\n**Finalizing All Data Points**\n\nI've re-reviewed the entire document, focusing on the date format and currency. Despite the US addresses, I'm now certain the date should be interpreted as DD/MM/YYYY, making it \"2015-04-12\", due to the GB IBAN. I've standardized the use of comma as the decimal separator and double-checked all calculations, ensuring accuracy. All values are now ready for the final JSON payload.\n\n\n**Finalizing and Consolidating Data**\n\nI've re-examined the entire dataset, addressing ambiguities, particularly the date format and currency. After careful consideration of multiple factors, including IBAN, addresses, and currency symbols, I'm confident with all data and values. I've standardized on using periods as decimal separators for all numerical fields, and resolved conflicting information, preparing the data for the final JSON structure.\n\n\n**Reconciling Data Discrepancies**\n\nI've re-examined the ambiguous data points, specifically the date format and currency, given the conflicting information of US addresses and a UK IBAN.  Based on the presence of the '$' symbol and the prevalence of US addresses, I've decided on \"2015-12-04\" as the invoice date and \"USD\" as the currency. I've double-checked all calculations, and confirmed the use of a comma as a decimal separator to ensure data consistency, while consolidating all fields.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Figueroa, Richard and Hunter\" as the vendor and extracted \"997-81-6205\" as their Tax ID. I'm now focusing on mapping these values to the correct keys within the JSON schema.\n\n\n**Mapping Data Fields**\n\nI'm now focusing on the invoice number \"16131761\" and issue date \"12/04/2015\".  Given the ambiguous date format, and the presence of a US address with a UK IBAN, I've decided to interpret the date as DD/MM/YYYY, making it \"2015-04-12\". I'll default to `null` for the missing due date and \"$\" as USD, until more clues appear.\n\n\n**Populating JSON Fields**\n\nI've extracted all necessary data points and am ready to populate the JSON schema.  I've double-checked my interpretations, like the date format (DD/MM/YYYY since the IBAN is UK). I've set the due date to `null` and USD as the currency based on the provided information. I've now translated the various data into the keys and values required for the JSON schema and am ready to proceed.\n\n\n**Finalizing Field Values**\n\nI've re-evaluated the date and decided, given the US addresses, to interpret \"12/04/2015\" as December 4, 2015, which makes the `invoice_date` \"2015-12-04\". Despite the UK IBAN, I'm sticking with USD as the currency due to the '$' symbol and US addresses. I've rechecked all calculations for accuracy. The JSON schema is ready for population.\n\n\n**Finalizing Information Fields**\n\nI've extracted all the data from the document and reconciled some ambiguous information. I now believe the invoice date is 2015-04-12, following the DD/MM/YYYY format suggested by the UK IBAN. Despite conflicting information, I'm maintaining USD as the currency due to the '$' symbol. I've double-checked all values and am preparing to populate the JSON structure.\n\n\n**Finalizing All Data Points**\n\nI've re-reviewed the entire document, focusing on the date format and currency. Despite the US addresses, I'm now certain the date should be interpreted as DD/MM/YYYY, making it \"2015-04-12\", due to the GB IBAN. I've standardized the use of comma as the decimal separator and double-checked all calculations, ensuring accuracy. All values are now ready for the final JSON payload.\n\n\n**Finalizing and Consolidating Data**\n\nI've re-examined the entire dataset, addressing ambiguities, particularly the date format and currency. After careful consideration of multiple factors, including IBAN, addresses, and currency symbols, I'm confident with all data and values. I've standardized on using periods as decimal separators for all numerical fields, and resolved conflicting information, preparing the data for the final JSON structure.\n\n\n**Reconciling Data Discrepancies**\n\nI've re-examined the ambiguous data points, specifically the date format and currency, given the conflicting information of US addresses and a UK IBAN.  Based on the presence of the '$' symbol and the prevalence of US addresses, I've decided on \"2015-12-04\" as the invoice date and \"USD\" as the currency. I've double-checked all calculations, and confirmed the use of a comma as a decimal separator to ensure data consistency, while consolidating all fields.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2890,
+   "total_tokens": 3208,
+   "cost": 0.0292975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0292975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0289
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2540,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.92
+}

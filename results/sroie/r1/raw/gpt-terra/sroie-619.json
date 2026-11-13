@@ -1,0 +1,122 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001-539327",
+  "invoice_date": "2018-05-30",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 82.5,
+  "tax": 4.95,
+  "total": 87.45,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Chicken Item",
+    "quantity": 1,
+    "unit_price": 15,
+    "tax_rate": 6,
+    "net": 15
+   },
+   {
+    "description": "Fish Item",
+    "quantity": 1,
+    "unit_price": 46,
+    "tax_rate": 6,
+    "net": 46
+   },
+   {
+    "description": "Vege item",
+    "quantity": 1,
+    "unit_price": 12,
+    "tax_rate": 6,
+    "net": 12
+   },
+   {
+    "description": "White Rice",
+    "quantity": 1,
+    "unit_price": 4.5,
+    "tax_rate": 6,
+    "net": 4.5
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1,
+    "unit_price": 5,
+    "tax_rate": 6,
+    "net": 5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 82.5,
+    "tax": 4.95
+   }
+  ]
+ },
+ "cost_usd": 0.0134225,
+ "raw": {
+  "id": "gen-1794514243-6ncaw1kwcsHVMMn2W6pA",
+  "object": "chat.completion",
+  "created": 1794514243,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\"vendor_vat\":\"000670224384\",\"invoice_ref\":\"V001-539327\",\"invoice_date\":\"2018-05-30\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":82.5,\"tax\":4.95,\"total\":87.45,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Chicken Item\",\"quantity\":1,\"unit_price\":15,\"tax_rate\":6,\"net\":15},{\"description\":\"Fish Item\",\"quantity\":1,\"unit_price\":46,\"tax_rate\":6,\"net\":46},{\"description\":\"Vege item\",\"quantity\":1,\"unit_price\":12,\"tax_rate\":6,\"net\":12},{\"description\":\"White Rice\",\"quantity\":1,\"unit_price\":4.5,\"tax_rate\":6,\"net\":4.5},{\"description\":\"Beverage\",\"quantity\":1,\"unit_price\":5,\"tax_rate\":6,\"net\":5}],\"vat_breakdown\":[{\"rate\":6,\"base\":82.5,\"tax\":4.95}]}",
+     "refusal": null,
+     "reasoning": "**Evaluating invoice schema**\n\nI need to use an exact JSON output schema for the vendor tax, specifically for GST registration. The invoice reference includes \"Bill#: V001-539327,\" and I'm considering if the number is accurate. The date is noted as May 30, and the currency is RM MYR, with a total before tax of 82.5 for items with a 6% tax rate. The line items seem to have some formatting quirks, with descriptions wrapping oddly. I'll make sure to categorize everything accurately.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Evaluating invoice schema**\n\nI need to use an exact JSON output schema for the vendor tax, specifically for GST registration. The invoice reference includes \"Bill#: V001-539327,\" and I'm considering if the number is accurate. The date is noted as May 30, and the currency is RM MYR, with a total before tax of 82.5 for items with a 6% tax rate. The line items seem to have some formatting quirks, with descriptions wrapping oddly. I'll make sure to categorize everything accurately.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h1JSvBy4WnsS1qLNfwiuw-FFwPAxp1sNJ_H8U0hMqgS63RyEqYEkQoHJyKa9yfNtWBPmSYIP9AIs3xKulgYPtsv0KyIfnYpcKT0OfeGsmgy0o5YnEmxkqyscPZpwpVmD-qWbJzPC3GCCy8qtxOn0H4l7D5aNM0veVk656wUJh4FWFES7qN4pDnMOHSTQBR8gZWC8SNld3Jzvq8FX2B1t1AbujNZdQKPtaiVmM5FTwkaiYz0mfq0WTCJJ5NbJLrqAnhrCnKwimF5Vj-cFzv3KR5WXU2-6FkcQd-kB2U0Vc9BgEoZlaSKFDsp4tTh08ZzKnsZF3l5Cm05dDXELXjC0jDIJRHIsjE71c8aooTKCYRT1BuLwPjVY-F-YzbDcnMv3arpEErKB0HVVGeaQzTgazwWPb4OCXfmuIMQpshItFdhX_b4qAYG206uM4dAUCSNjGBJZs6aAggb0hBKtLq89Y7YS0mj8_sZq4wllPLV7aBr3SWefmfvTeqbQnoPfe0n-08Abxv67OgNgto3LE9Z_QJ2utnuDCrOskQTGk9XwTPbLLe86N4p1jb3wF5qAGCO5C5YzJlUBm26v4C2OvLDn6FHUjuzaLTADt6HAdZ2Wi7ptiEFjxuDEPywqrZZMkrDRKMpqErM_ybVWOd4QpSW3B5Op8wAFjlU3LfDo9kqiLM8HtJnejbk-Mv8VFD7q02L4zuKcY72OFQvbyDRVerv0KuOIvKu8mve18hbQPuOzxBQXuRkK6r0rsaAgvWIV7xarKvkfQXA9snPwwF8t5_OebtSiEdbj34OTAWyaZCW3aZTOP6OmqY3UKNXVvVTyMJkDZSX-Ga9AiB_sLeez2n9RYy418f-yVsJ6ugrc5jFs1pwRpgN5ceISjRQ6FmzFJZIR43Y8Kdq3Z_nT_auHVfFrm6g2QdhabyDHcsVaZOnjh3z7CIXBN0G7VoN_1wwUWEvNeTaNENmbe_klPG8cW0Aq__Ix7n9GRIi3JP4YoA3kZzJA0_arefvyxzWZU2x92aOpo7JOhZfQ-ZbkNeRpurTwcBlm0K0jt_dI2kuL9xC7xJLLD-bOkDlzwzU5WiKO3J5mdX_BuDVFZHyR2FlHKAiupmfY2riATo_LNIWC12BIMytQ--fA2P3ELnHuCuhWpBB7ZlolVp0E6ZPc-yK0GCTRa3CTwT2pzlKabswHNGJaS_8ewevLiT4DXVgsQ225CYJ0Rf2dLZyuAotgJ7Nft_UkDvMOHY-9xush4dwi3ADIyAfsn895XO_P90QzkyE1-zd6vew_b16AUUuBBF42Lzrkb1ScNmO5Ts-2PPOxiGHOEEPZMMgudl0-LJac-yO_q2Ifsqqw5W2ul531e71o51AiaYxvq0jUceQkDJKzCb4qCSLZZwPZa14qz4TnjmgLxlwFWJ69cd3K-Hlr81rlgu0ifNl92gUDU1loQaa98mGb82VvHrUCPOKtPwVxCsavFUQFXbjPvTOxNt_4eLJ6_SsT8Y696jDo3O3IArzmmsDhZkGH7HMCVvhUow-Xr8mqfjUn0hPRIVsTcPY-ydgS9Qk_l2QiNVZa-Dtd7QG7Yw3bHZ5P_SXZfcto2VC1ZRo1vHI4gfMPn5vdvGoI8XHM2mzz7BmVdefSMfozVLjT2VWwLJKtkMdE7eFAPLr45iq6UwWf--IPIdvbRzRiPsB1K1xN1vId700yrQeV1m0qFhng0n3QH48WRDgCLxolwpm-_LT5chlKFftgK9I7L1i7rekbwMWYrHFWEdcMGzf8hvDnSXT0Qxk-j16EVThT9g8sx5DaTkZTKoXd1j31iwS8-XkTxg4sDFYx2xJX2xx7eCa0ZJsztWScZq8CgUUT258_5jzLCjLZoj9sgnkOBmx4yLvjyBBkDDS9jgxfbpRqcs17vgFFXlMsUH74NeVt4YMRfkKVTq9HXyZrj4nJGASEcvMalxUMNDG3gAOu-BQpgCEU0lCwqYNsvG2eDcwzKAHBjv03ZDAwJvAW93ITpDagWVnWVjbrU12OV2KTrzHfxD3irRNWNLOoiNbCSzbiuvxLjWRbodnpnIz9PTEhu57tiLmpJJ4-zIVBv9cQKH3wldeYjzKKfKE4XBWRt6x_oe7qp3iVBcKU1dGV3WpZ-KAYJASpCtBQxrdTGWUvMRy30DQ6afzJt5iRT10-muLD-QlIc3RLks0DJXUy1sXEYyeVqFPTh0s4K3yDelrWwU5cENI0VC5IH58ANTRlLoIF7D7Pfs5WaYp5rIbgyk_qzYXaLF922p9mgRy3GV69ttCg9X3eB8YIfTHoJwJXvUWkk80A9jQLBvIR-LTcOYWUpMapeYYlCe7zLoU4H1rsLOoCVdcXP53XQRsJJhAbFhbTQcvYj3plO3asOstYMx-1SH01bWs0KTeJKxNLxa9EcOr3DH7hSBGFNauyglg4SxQXwnp-UNKUv074zG3pAzjLcX1LM-pQdVOCzJcZLxhhnPjmDeE0DdUtpcZqOWSQTZ0dQC8kiSCLtGfTifs9rfjhKME6NU0M-evXVyero8tWO09eFN4fknKlXqGUsRT2wMxOqgmosIbJhvLY6STIHLjcYZREErOJFWF4nryuotXqYEOA-sFnFO7enkfpCDoaADZkCFZQ1Yl_SbE4iJsjWa3yfa77IWvD3p6vkNkG_EujgKRJ60_peP6wqY1NTDDrqv1PLnWhLQe3kYiaMA40uHvMrFVZWGsL5Fzcqb6x2mCs8dxMK0wisoPvhzjjzdt9Fowl2fkasx93NBEryPpaI4o9DSgLsKli5E8thjHIysO4Edn8jyyfcdry6rb3mcVUOcDFveQpjdIc36Igkr_lNwTTiDwp2TG4lG7LFi2Y0Y_SmHGb8W0YtoM6LcY4lIp0OpIZZpK7B6VZsK8e7QAa1-nkNyn6ljb9iW5OPThrQQInebrNj8oS47KrzKMYI9luJKR2IyqyjoYrAYHm_D36kXtKNqDJHlpwl00px9cGzZNlIQKvjtiQj1GzIP9W4cBBC-TMNJE_uK5o_P1bVWWw4gPKmM3Jul3zob1-oWoSExnTGUAfEMoqef6vmyv8yHVB33H2n8iPHxvJRlmyEkwupYm1uUibhko2A4K0D1g_BIEnN7_4FGg10Ll8KoqZjMaXXYHkCPY1W8Ak9aS7U7Dy8Q2NSbdYRNL0wxMBR8seq7c9RxEMUDjIpT-5H62l8MBxwoxl74ff9c5JnUAH2Xrmk2JkC3FLJ27kaZnLXc2I0yPsGcETvw5NwwPJT5tvg_G9PzmsaXWNaRRU6u4UtqZsIi5-xO76ryIQBBSWuZXEXtey9F9Q8qqRTwXsh0aDtVDKRhZGiv4MMceZRBP.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_04b429ed445dd9fb016af61d458d8487d196740e531492cd73",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3560,
+   "completion_tokens": 377,
+   "total_tokens": 3937,
+   "cost": 0.0134225,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3557,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0134225,
+    "upstream_inference_prompt_cost": 0.0088985,
+    "upstream_inference_completions_cost": 0.004524
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 135,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.55
+}

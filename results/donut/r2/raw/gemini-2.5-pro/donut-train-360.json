@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Padilla, Mccarthy and Gonzales",
+  "vendor_vat": "963-88-8109",
+  "invoice_ref": "18975369",
+  "invoice_date": "2021-05-26",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 140.0,
+  "tax": 14.0,
+  "total": 154.0,
+  "iban": "GB02EAUQ97489615205765",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo Gameboy Pocket\nConsole Green with Box\nMGB-001 Japan Tested Working\n55",
+    "quantity": 2.0,
+    "unit_price": 70.0,
+    "tax_rate": 10.0,
+    "net": 140.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 140.0,
+    "tax": 14.0
+   }
+  ]
+ },
+ "cost_usd": 0.0175975,
+ "raw": {
+  "id": "gen-1794515458-pHzmjv3IuSxJ7Ly8S4CN",
+  "object": "chat.completion",
+  "created": 1794515458,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Padilla, Mccarthy and Gonzales\",\n  \"vendor_vat\": \"963-88-8109\",\n  \"invoice_ref\": \"18975369\",\n  \"invoice_date\": \"2021-05-26\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 140.00,\n  \"tax\": 14.00,\n  \"total\": 154.00,\n  \"iban\": \"GB02EAUQ97489615205765\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nintendo Gameboy Pocket\\nConsole Green with Box\\nMGB-001 Japan Tested Working\\n55\",\n      \"quantity\": 2.00,\n      \"unit_price\": 70.00,\n      \"tax_rate\": 10.0,\n      \"net\": 140.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 140.00,\n      \"tax\": 14.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've begun extracting data points from the document. I identified the vendor's name as \"Padilla, Mccarthy and Gonzales\" and the vendor's Tax Id as \"963-88-8109.\" Now I'll move on to identifying the next field to populate in the JSON. I'm focusing on efficiently mapping the document's content to the schema's required fields.\n\n\n**Mapping Data Fields**\n\nI've successfully mapped the vendor name and VAT ID to the schema, and now I've identified the invoice number \"18975369\" and the date of issue, \"05/26/2021\", which I've converted to \"2021-05-26\". I've set the due date to `null` as it's not present. The currency is tricky; despite the UK IBAN, the dollar sign, US addresses, and the totals suggest USD, so I've assigned \"USD\" as the ISO code. I am re-checking the totals to confirm this is accurate.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the required fields and confirming their accuracy. I've successfully identified and formatted the `invoice_date` as \"2021-05-26\" and set the `due_date` to null. The currency, after careful review of various indicators, including the use of commas as a decimal separator, is confirmed as USD. I've now extracted and formatted all monetary values, including `untaxed`, `tax`, and `total`, along with the IBAN. Finally, I've extracted the VAT treatment code as \"S\" and extracted and formatted each line item. I am now proceeding with the final stage.\n\n\n**Confirming Data Accuracy**\n\nI'm now cross-checking all extracted values for accuracy and consistency before final output. I've re-examined the currency, considering the UK IBAN and US addresses, and I am confident that USD is the correct selection given the totals and the dollar sign. I've confirmed all monetary values and the VAT treatment code, and I've ensured each line item is accurately formatted with the correct data. The output should be ready now.\n\n\n**Generating Final JSON**\n\nI have finished extracting and formatting all the necessary information, carefully double-checking each data point against the document. I'm now certain all values are accurate, including the currency, which is confirmed as USD. With the data validated, I'm generating the final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've begun extracting data points from the document. I identified the vendor's name as \"Padilla, Mccarthy and Gonzales\" and the vendor's Tax Id as \"963-88-8109.\" Now I'll move on to identifying the next field to populate in the JSON. I'm focusing on efficiently mapping the document's content to the schema's required fields.\n\n\n**Mapping Data Fields**\n\nI've successfully mapped the vendor name and VAT ID to the schema, and now I've identified the invoice number \"18975369\" and the date of issue, \"05/26/2021\", which I've converted to \"2021-05-26\". I've set the due date to `null` as it's not present. The currency is tricky; despite the UK IBAN, the dollar sign, US addresses, and the totals suggest USD, so I've assigned \"USD\" as the ISO code. I am re-checking the totals to confirm this is accurate.\n\n\n**Finalizing Data Extraction**\n\nI've completed extracting all the required fields and confirming their accuracy. I've successfully identified and formatted the `invoice_date` as \"2021-05-26\" and set the `due_date` to null. The currency, after careful review of various indicators, including the use of commas as a decimal separator, is confirmed as USD. I've now extracted and formatted all monetary values, including `untaxed`, `tax`, and `total`, along with the IBAN. Finally, I've extracted the VAT treatment code as \"S\" and extracted and formatted each line item. I am now proceeding with the final stage.\n\n\n**Confirming Data Accuracy**\n\nI'm now cross-checking all extracted values for accuracy and consistency before final output. I've re-examined the currency, considering the UK IBAN and US addresses, and I am confident that USD is the correct selection given the totals and the dollar sign. I've confirmed all monetary values and the VAT treatment code, and I've ensured each line item is accurately formatted with the correct data. The output should be ready now.\n\n\n**Generating Final JSON**\n\nI have finished extracting and formatting all the necessary information, carefully double-checking each data point against the document. I'm now certain all values are accurate, including the currency, which is confirmed as USD. With the data validated, I'm generating the final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1720,
+   "total_tokens": 2038,
+   "cost": 0.0175975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0175975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0172
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1415,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.8
+}

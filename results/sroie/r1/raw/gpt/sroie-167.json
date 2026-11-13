@@ -1,0 +1,143 @@
+{
+ "pred": {
+  "vendor_name": "LITTLE CRAVINGS SDN BHD",
+  "vendor_vat": "001382293504",
+  "invoice_ref": "1",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.57,
+  "tax": 3.03,
+  "total": 53.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KUIH KETAYAP",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "ONDEH ONDEH",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "YELLOW LAKSA",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "AIR SEJUK",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "CENDOL",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   },
+   {
+    "description": "CHEE CHEONG FUN (SOS)",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": null
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 50.57,
+    "tax": 3.03
+   }
+  ]
+ },
+ "cost_usd": 0.048225,
+ "raw": {
+  "id": "gen-1794514552-0OhGdi1zKEFhoeuYpo4C",
+  "object": "chat.completion",
+  "created": 1794514552,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LITTLE CRAVINGS SDN BHD\",\"vendor_vat\":\"001382293504\",\"invoice_ref\":\"1\",\"invoice_date\":\"2018-03-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.57,\"tax\":3.03,\"total\":53.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"KUIH KETAYAP\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"ONDEH ONDEH\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"YELLOW LAKSA\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"YELLOW LAKSA\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"YELLOW LAKSA\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"AIR SEJUK\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"CENDOL\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null},{\"description\":\"CHEE CHEONG FUN (SOS)\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":null}],\"vat_breakdown\":[{\"rate\":6,\"base\":50.57,\"tax\":3.03}]}",
+     "refusal": null,
+     "reasoning": "**Extracting bill schema**\n\nI'm focusing on extracting the bill schema from the receipt and outputting it as JSON. The vendor name appears to be \"NYONYA COLORS @ 1 UTAMA,\" with \"Little Cravings Sdn Bhd\" possibly being the issuer. It looks like the schema requires the company name without an address, so I might choose \"NYONYA COLORS @ 1 UTAMA\" as the vendor name. \n\nThe invoice reference seems to be \"#000001,\" while the date is 18-03-2018. The amounts include a subtotal of 53.60 MYR.**Clarifying bill details**\n\nI'm at the point where I need to address the line quantities and prices for the bill. It looks like quantities default to 1, and since the prices might be gross (GST inclusive), I should clarify that in Malaysia, receipt prices typically are gross. The taxable amount sums up to 53.60, with the line prices included. Schema usually requires unit prices before tax, but the printed amounts are gross. I might need to calculate the net amounts and possibly use null for some values if necessary.**Calculating tax amounts**\n\nI'm working through some calculations to determine net amounts after tax. I have a total of 53.60, with a taxable amount of 50.57 before tax, and I need to divide each gross value by 1.06 to get the net. I think rounding affects several figures, like 2.547 rounding to 2.55, and checking others too.\n\nThere's some complexity with printed amounts and how to handle quantities and labeling. I need to ensure the response format complies with the expected schema, while possibly adjusting some values for clarity.**Examining schema issues**\n\nI’m working through the invoice schema issues, noting that it indicates fields like total, date, and company, which seem essential for robust extraction. It appears they expect both totals and line items. If the prices are VAT inclusive, then the line unit price before tax may not be printed, so using null for absent items might be better.\n\nThe schema doesn’t reflect gross amounts accurately, and I’m realizing I may need to present quantities and net values as null in some areas, especially since the printed prices don’t align perfectly with expectations.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting bill schema**\n\nI'm focusing on extracting the bill schema from the receipt and outputting it as JSON. The vendor name appears to be \"NYONYA COLORS @ 1 UTAMA,\" with \"Little Cravings Sdn Bhd\" possibly being the issuer. It looks like the schema requires the company name without an address, so I might choose \"NYONYA COLORS @ 1 UTAMA\" as the vendor name. \n\nThe invoice reference seems to be \"#000001,\" while the date is 18-03-2018. The amounts include a subtotal of 53.60 MYR.**Clarifying bill details**\n\nI'm at the point where I need to address the line quantities and prices for the bill. It looks like quantities default to 1, and since the prices might be gross (GST inclusive), I should clarify that in Malaysia, receipt prices typically are gross. The taxable amount sums up to 53.60, with the line prices included. Schema usually requires unit prices before tax, but the printed amounts are gross. I might need to calculate the net amounts and possibly use null for some values if necessary.**Calculating tax amounts**\n\nI'm working through some calculations to determine net amounts after tax. I have a total of 53.60, with a taxable amount of 50.57 before tax, and I need to divide each gross value by 1.06 to get the net. I think rounding affects several figures, like 2.547 rounding to 2.55, and checking others too.\n\nThere's some complexity with printed amounts and how to handle quantities and labeling. I need to ensure the response format complies with the expected schema, while possibly adjusting some values for clarity.**Examining schema issues**\n\nI’m working through the invoice schema issues, noting that it indicates fields like total, date, and company, which seem essential for robust extraction. It appears they expect both totals and line items. If the prices are VAT inclusive, then the line unit price before tax may not be printed, so using null for absent items might be better.\n\nThe schema doesn’t reflect gross amounts accurately, and I’m realizing I may need to present quantities and net values as null in some areas, especially since the printed prices don’t align perfectly with expectations.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h6JSNymqFEurHEb4vCsxz7Klca-evrKbVMvwLFrTeJK9FxD3iYAd4B9yeTHsf963Qi6avGxcty1kRK29YtS_YdrC4eTkQCS_cjr0BCCmqcoutWQbX1F98zXJzwPfcUyIEX6NM2x2qbSSMAKLMOiLiXvtF1qfHcyZ50LenOXiMSTbdtUOLntX8wbKYI_bvv-GKAZ1ZRMeKRBltosz2epoKBNcX73lv6vsDii1X_ox2cgEPyG4AZKdHHAfgUfH0cMTJn6Y1Iw6EN1Eq3xQpgjXjEAc5cnF1A7OEV6g6TPueIT7bzEp5aOyJQrlUi2kjL-yOIFn0vlsel-K4NrIU0siLSChpyV_kVV__EqJQ6VBMFtNBGoDBOgtAcrevFN-PGTidMP5Od6dBurKPIgeTrb6Oo7QEZWGeC1D1v3L65_ItZiBLCvDRy6hyp_HQMCGFmbwBnm_nYGM48pcJDr01E3EcmQcZpQhKYoI_4iwVIzt7kFGiVg0XZ8C2UX69CmSaCJWqg68X5VL1APBQzyVJ09fcynZsl2l157v7bFkFus2EAvpCoSu2bnFLKhW8tIWQJCYymSj-csB5CJXa-hT2PcHYWWwf927C5otr1EAKTqEtC7AO2k-lsnEI3mzpK8Z0OtNhERUAz8KMTBEfkPby6_1a6qsMcGp3jqZKO0etMivjWfZYySXJvg3HiZV0UN173WbFCPMicUtWD5AslLBU1U6ha4WefZp-LXnyzgwbXVoE-Bso9Kbqw-EExFCNtD4tP1-a8qlg0kezAcBRyvhHKh-YR-RfAd_3IdaQ54nqG8qOHG_qv8KZhBZodpW8nK1IwV9nj-5Fpff68WWdcrqNmiob0SHbTkmpXm74fTuApefHXPwEPiovLOwJhxdnNJvImKRoJxkjRufbBxk3eTbFWGg57rpB54G6tsrK-1vzPGQnnH5jr_KLlx30v7_UYqtvIwEhdfnIISDtBpVQj80p3E4WM5xAKp_Mtuexh5gSZXOZygiSAXU66E4y0zRPUX32UDRvjYhhDGXs9TpewEsGXWuYs5i1l2GVt6G-RXecmFP_AlzLSV1HIKRnqD8q2ciY2nzX4jTkjz-uqPPESI0bFo8KxddDyn0Pw0SLYgqJSixBs8OD51xw8zC-0sQwYLErdr8S6VCXpDieWKEBbgKZB_Mzm_MXNL3cAAjPJxuOz_wJINuMk2s5U7oDg-RUPSx68cR4RkVo6ZBkazB-Yjy3by3d3i0DMgmc2p9HNGTD9QAviSEe9bP6tMN4tobK52LtQaV7vZbahLxf4qMuj9-LibYtHRipjwnY4-1Hi5LGEuH95OgwfLIUag7ozw-AXLv4lVOVF7zXvF8mQ6XaPFa0yzijL-bgAxktg60E1HmOH9-qRGRZCRB8VIQJm0odKz4ZcvId-OhTlA3lunte-a8zEkJJVyPJgh9T5X1Y-vM5GjtTFdri5yM5gZld7rGsE-_UPzrC31s5fsTk-FQCCpih5-Ur6wmptj_RzvTi8IXO3stLdQ86bhq4428bsyctz4dCHsH-JAo70hET-H4PyT8wncyAgflzcWmW1ZjRNYXnOqkiy-VdOYYq799TG-DQKsJKf2SYl0k77nYAl1QFVikdlc_PQi55vHCe9r3W8ZmrIM47dFL8Uvi-qTpqg171i4HzOW3_wuU02ClxZt7G3CoLXqm-V3EtOgaPwUUttbrq2EBtPokD3GIKqS-F779xuo22_NjSnpiFE0bFk8RzElTWmsMbk_wU5gwpB3hIdkUaWua0ENlDQdMldxgj4h_neYgOVd0Z27IOdpyGQjwJa1iR2hxPyy3NZo55mGqp5VnSwoKdJaVv7VanmEUczSL9-TbNBjacw8naWoXYD5QiYrQjqleuuwWUfmD2gSgzWx6WTnMR8WfP5UaejzbwKTRWie2nihbUJ3bYdvptyZexvFLwPd7akpV9mvMbNC5d8V9M4ZjDeqmL65I1x_GN1hQJfC4vj910i0eW3lF6rqsI2sbDqAQYjJdr-B6j8lnnfT__ZsHb3e--Gv3OvjX92tJHOZdlwOhWEEBVxts6Cud_rWZ9Mie8VWfhPIjGWOUiRHVMwHpSVGi4LrQ_icinfK8o77sKHMI7LLq6pzFBIItPEvNfkgQMd0hrop1fghhn6rLhMZAiAjMCLQsRUlmtZ_77SNcR6kaVHiSzMNCPylmkaowqb9x6FLdlAwHpd5ATZDf8-xTWSFqIoNLZRZGj23JfzOQWmVdVHsGe8Q3QtP7TpAm9t7JgJ_QTjK1B3MxLvYn3nPHps16BTCrwf8OSLVHACDS3KahV_O6YGgj0e0QHPcnV8FL3cq0gZEw2SmwadCwgre1P-3-3AZAoXfvet2KQyUtRNpKmXnmT-PiwcOdwDjc5rpdosZNQaVJGFKKGag--1_ao64qUxALuvjgzsFjbxSnHOCQeorbYQ5N8JEwc69h1c2Ka9at8TMlsSjxdFypgr64injKT_llxA21cYnzSDtHdu86H283e2YRZgUTF5FkZYAX0A41GphGUhk2fRsbrUb6r4-nG4jVe_IhqvSAy0l29klRBBWND7i_IBVmcu8Z4ihVw1sc-OikkC9BqrJ7WXuyPVC91sVrckA3wDsLELySHaxzJJYDrdmtUYCUOstUIYREQJXpgWUM2riQN4RBbqIe5YtNvt9n6WohLrCzCaCd7ru3DjA1mzzJidygiaQaqFnj0px-Kz_DnNfy-gkLlhZVSBwLbPifC5RdZ_Fr56xl8WbXEg6XyMnUH0Ho_F1VGQohP4w1wmJELncDOfbRzc1385vmppqiUN_4KTJjwpQHExLuJtm1MICK7CEd2Pyq7Qq_JZCKEpiH-P3ZPLqVwdjQ9DbxElH0Tpd5ZalsqU_9otg-vCj5ZQ1WrAge6_wO3TfrosK11P_leT1O2iVpDNccIWyOPd1_4ohRmYqEx31dLMB_ss9-0mx306Z2EBNjs325BwN-Um-wbWNfLR9XyQNIJieXrXaKdCa9LC9pNjnIyg8vKi4c6tthPhLilsaYXeoLuQaEbV0arMbIsEwyP1VZOKXpk6RhnmSvSPInRL_ZnTopOoUatNomvNVJ_wCGkvDxhEAcfXb4x7gdjtl4FHk8IRO_S6Jt_ZLjU8nfRZDur8Mzbm6-__Zl0gxFWQ5WrEMmwQCyyKbUiC3m5y8MKb7It56SnqVxWBnd5cam0LEZC7OG3peopPWx2Mzn1exSf2J4lrtxWG0-lkvj1wrJnSUN5LzVJgEqnt2t44sv0ENYOfRwzy2Z2RYmyDtNIrnDziWOiDj64BBmjRNeAd-wwsJBIU32uo5Ho28XnGEmQuzVG0P8M4K7sz25nYRqRmcrNE3AfuG3j-3IDc7HF7nJwzC2sVJRTgPmGY6fhLcfRde3RBda2cooQbp1WscBIuGObtqX1MvHDTtY76eQAL2-4bmEdFsar2gQggvTMrxO4SvRSIJqTGaTP3H5zqLvSZ5aTk8Cs8VBp6ZjZLupja3QUurfFd8soc_sJVG0zSSkf44nLbQjMHshUP66Dv4KFvIghTjuDMs3SrOGv4xprufm90pKuI_Rw7cxBivlslWo2IdZqfoN8Rkw6huE6cvZTDWAINbrEyE9vZ12FAAAEpD1YzNVPOOnH240WGP0Nn_okH3ctsZdDeBxX-vwb5CSLCmPx_-mcOOjcWEEtNn_UObaO7csVDuedmzipi7CNYKoQHadJGMGdG0S8n2BGJThjkqg1EGzws2X_GmI4AQ9JV_yG9dgEotesqYF_FE9RuVPRsCIMwe6EhGvFvMQdASpG0SB-TN-l2VfzAbdQ09zGqdouL4pln8-0XuVClJLGwmK1XeHWA8BShDxaRAiX_dEmmxbENcv56MF3a9xC7R3yWIaO8DDAaNDIZj_pZ6AaA3rHHWai-ePNHzlkVXZU-r-LvCVqavdxsgs9bGrh7B8zQKRTNN54C_MUXyTy5ciFecruZiVgIIXlTwHyETslcOW-OuBRcuez-c8Yp_fKTAm5OvUtJEjrYEYQ0k_XQTLxjEHn_SZmvcZUUn7D18ulfffQD4AeoWs83NJQgiq1AS7GTQl30zLHHAIdyOIXB_6gI9q8hEsjIoWVGt-MxphOSk0pcBE8PRHAZjefRMmlQsBHWvrcNR7kdYngS3ik8D84BfR2F-g5OS3iYdeoNTUWw2etgxLMGK2cIBADtxqdFr0dD5QEIDHeYqAes4_U0mI89Mnbxk5QEMT2Xl1yq7ZKczsYEeYFbrIWTi25_4ipAMPAKLNlARAmye-0FOOZvEA8stZLit_ekJrCp2Dnx8Qwp11Wm_-WCye6QPla8poMO2R97GiN2OYxer9YsFMlcF3BhhQIf9c_tFIG6FS3J2Htm76PQe6EZFlz9Qxf4qJzWYcp-UUmXaVkh8tP8KkE5c0xS3Qj9jQkLh0uN9thFhGCnX7tCBoLZz09hVs40sQgKvwBTiIcx4ELtlyA21FbwuIcDg7jtZGmGfHpkNkHdjs686h1UNMAsCmqcqSzW3SaRACJh4YfDC5m8DCcx4syfMzVCEHn-tz6DBJng-I_lyAHp9qobgBUuWigbKEZR2Byc88i2qJ3r2YVTdbJU2F8ueOQegNBHLmy2JGeWhzLjEHvbgbc9Z8i4OvOGx2CZsgPfrROB8vToewEWAl5_AX-nvnp3Ghqg7k81oNH8FadgWaJJFreaaIoqUFg4kt5-HMs95r8997uM5DDQfNEDc8Kco2QvgSbwoxAvGEEb6Nugc6AxAm2sibHMPj6p0kM5aRh448xtWekewNn56ob6YxkFwjGEJJALhr8oHGPyw6QGbvCsRHfeEHDTuR0cAdwiKw_r0TXPtvxbATcn6vfBPUM3jDUA3ra1M9kFbpXu79l1CVGHrurUgFdcJb1mCcK62gEyQANgl6mfyFP6nWA169yLjndvo0Xw6xx4X_1h-HUlGuS-zRcE2SUyAtIGm0kC_iFhY9dqXzEoRrk8YoYZeTf5X5i_DpToDiHX07RCaQGNjvaANg71kyTIyRtGHBJJfAg2wUtmYK6hkULxLjHQezFGr_q3juWK2WYs1PtfkZP0IPivp7PEe_pzwEDct21fC9QtC4ws3q9TEpi7ZGM9BemdL6DZfJq8a6-b0XFnEMJJvNLX_8oIRGMzelusD1fvUMdMoDkCD1WShHUFZZ1RnCcmaJP9Uj1z9H5znuJWiNs2JUGhoFIZ4tMxjyyi_8TY7xC9UWTxSFM9M606ZcnMcXN8gbpxzUt9uwFAQJCsjbeYGy5Raok23WUWGQILOK9AZbKOg6K-fK-haVCwuLJhA3635owBIqSLWkF2LbFPFAF0hxnY-YlvACEada92jOMH6x91YFzEFSXiv21jLaTBTZsuk4BrzzaHd7T_8Kp6zhtMgG-Qg7-bF7jEmOEAl-YQCCzX33WeoA34FWxE1KUaI_b9bM3-Zo_DbVDZpjGPiLgoMwTuM5KN33SoCnHWD2Cb2bg2TT4iLZ5Vf-9IXHh5sLip597D-_utic5J0ZIH6wbkIaoBWL8Wd6dFBw8hp2-zTl2coB4DYPDdMpcmb5hS7uGRpPNvrTGWxQN-GnPcmJsJ8He9Qt9GTQqdtJUxZgwaIUtV29DVHl1lfAvs7e3lJ7iL23Hfr6E0oWCvsbrdhvpO0jhUDmzEvXHUZdDTv5pm1elPpRPpZBL-VKlQllOtEJqhTC3D7DwdYpmyX4XBaX8Fx-Md_t6Sr6FE_Rfi7rgqLAnTQ6xvDvt9Q4ksZgWgSUjy6ddIvFEYXvt4V58my3LiSpeoTnMbWTQf9reXJgMH70sxQG85bT7K1BQqC_LnClv_8UDvUCV64VUOtDccGIUC3MZPU-O29NukoB712vSlN7qxhRq0zf0lZ2umeZIBUh-ppNy_unnTakb3uO_Jt5Q-kF7J_Q--6wN0ja9-_OoQzy_IM2bCvYYDmHPPu3TJtlPdHuMQwUPNNf-ZgsaVC9ZBh0XIZP0LCFfPVtVJng7nLdZV63GXQaXlFW6O412ZUoFKwVRLPpXu2J7zhgX-z8KbCGVASEggrmETlxWm0mgIQncdmh8GtYPiAny-XDyyaya0b71CaYDlBd0ij43DhtMaBqJ4qnnCNcyy-EYtihqnsCiDHKHXNC0pmxulxBn_1XHTSPpBibS9R2aZACJs6LND1uoiVuBq6xVo7vUKiruZS3FJNipnvHOiZBkp6h9fQLV7s--qdKCqUwJArB6ZPNfghBLkpsTgMlVwd8ur-rhEZC1TqKtDvtOrTLwC7691wu5B4krOPNY4gQjfIwowN2BmNE3W8OJcRtTRDBY-luFcFO5SxU3DylPG8CvuBmJds4Vo12fzCr728-EzbN-WG4zDz5P6yL4cJvvMv7ZPlNkBc9FuX3aDiOjfQG6Q4Uo9BjsZsqr1nOaWi_TCoFz-CahWQ5XXHR19c2eiX-5XOalkPgILx-F9ZNljmq8dJODSBT-d7KWYDtT1GgFaqGec4EqjUJjgW2DTl7Xv8GWl3TFa8IEbNtDfZHNhMNSKG5SvidEsmifevB2vV1ChlHkMh_3CpBfNu28svY1l8U_HPNa2Kta3BIzkWBlLx0m21Qjnvm2EiSVWiZTYfy1ZeSPvow1F9GwXHDWKewihgyGtmnJEJFG5p3DimcsqcOUvZFcMzjqU_vPQg0wEHyJ0p3HG3KvYKk-46lbaZPq87zKj7PnMvjTp0-I4AARnKVCa-ALefhrz_TNeZR3Rzr2BbEEvg-dRQocFnbztfKjlfnZiiLEJeSP172g1w3kfp5GUivPj85F9Yhg-H26TJB_rAoDyYcOgBCxbngOatXSx7sAuiBtoA4ls1mFgR7LZfimCyJFHIeCg0pKuDncc8FYAwd8DBjhCzFwF32E-33VN68mE_MjRNFw-WnKvMGkfociewsbibGMRO_8MQi7JE0QuTaaIR-jtZR5vNoM6ukV4wsJO17-8Ty5w1NNmRrPJScZrjh3vPIfhPR3VkW9ho7yAMkvvRFFd0djvwcOsSDd7NxgXCoYPQ7UCn4SOvPaJPek0fg9yOH5427dWKMoiD3et9tRbS84KxOUKWw6GmJf_NKXr7POLlt0WtfWam3XHvLo_qZ29SEPpUTmd3QKVwLWo9BelMgsuHBR3tClu7HYL2ndOSbCWlALFKiYye5XjDB94hNXWWhVpw7YWqdO3W9UvIkVe0LbY74nQLgIUo5vzaLN6jwKy30-ITWwHP3AVdl7DdCYFuHJg740locInO3de4mr0ZCFbs_Ap0qRimvllNSWQFBl6eaMik5Y_YRU2SJtdrtKH4u2RQyEXDqZyNNO9HpxjbaH8xbYx6ygfS3sK9q2d25kDk4sPR_EueiYRmrPBJQyZ3c_aw9eUWhLMXz4aDT8EbLqd7CMerATRL2Us-4ReL1_f9gAfGfyIfjrEwANjEjCpDTLLTpuWbZ1MvI68M_9bBVXbJP6yuXovhDhcps355rPoJ3DnXvNeqaXp7256LSXBpuNPdGPTFBPk97bDIza_UJlLDwl3dRiP0fcPu6YnrC7y59SC-psoHxD_cNI0BlHjjFEv3OH6PiJwlisz3jHD-SHZHjfgsLDGk7zXKiQ6nDHyo3x_9WBc2sDaBOaTwFWneME1aXX6WgsmDUKjpne3n_7PBuV3-1LCXIvgNF1C4IHVyarBYaEBNIGMDEk2GLkE7wY3ulao6rdnvVGQSu6ApkrOyR5c3FJSHvZhBn7fHCH-g0hOoZKGBdxcigNU0SmpceJl1CLhSpEZSJA_YeOQYTbN_WPBn-Al5yQmgWbHaacW_cEAPt4sIGQkzIW4KJKML4HwyrjsS5-c4Gsede2tsdR3FB8NdUnjmd5Yew8kPL0iBCtV9ZIn7I1PvOt_sILTltK0Q9pXXkLWcet6hkTMg7_zuEKxIsWtY459r2ecOqLZnBLYBRTkCInPm-6jW52T7vVuTBjNM7G3r03Hwnk6GZ3m79nvX_YpSFmb2gep0NJvXUBUsHoK1PUmdC8jkxQZPQLsRm61ZbhWWMZtNPDJOmnbQR1nLp9WqQ1TUki-hHa9ovi1LMMirmC1tU0a9c6pju0VVo7pmtFdL9rdl3Qxo_MbEQitD7b2S14yfkg7x6DGC7OxJu808U38Dfq7F-vO_Atz8JsTfjyecPU45lbzbHBbcgOBFIa5_cx-A8DlYdlSBvWqfQAhS-rNAeDShgshO_OYurIeP-jtPfzuL24stc0JPVn_no44EO8YqSQIRt0e6sQmTPAz2hbLq77XE1zeg1V6p41ymnUuZpgM0DV5vDDuoT2htQZ4WiH8j_y5SIhkqGACb88mp03OekHmFPRPwJmjpsYL1A3QmXAMF6aD1Zp9NbrW4XTkn6EKpEX1mpECoFt-SBJSyfTRtq1zw6t6Z2Vf1NAvAeAmxR28yttgW2tu2wQke5MLSzOG7F1HtUeEb6i4nTA25WCxHj-d0bFthtOwEHbpRARSJ2vUCX9DLuEgW0TPwcTVvX6rlhfPv94Se9BEXXfWlEShYool2wseRSqX1ZBYRUQrm3Eu9ubnbWzihoEo6wZQTaG303hh_MmOYSkjuoArMQ31VVbkh3aCo_CcPLgAgRfOyBnyEKT9ueezUQJDaEVH2qsSdlJUXjCNlFSjWHs9PZ5cmD10GCe_KuaEm7fSlVXwwIurZgI0QJ4cenm9ntJgi-in_6r3iy4H2gy1MHYqFIR4Eo-GDMo_58w6KLl-hq0HpDR_GkK9bth2DPU06d3k-YnYhbSry3D3VRKmOs2wrXMGQVYJm5nvQkpzIldqd7rdPfeifdnyVK2lnXMzz4zM-1lQko6FKpu0PO_LMMZ2z1hf55HDGWvH18_NGPt8yo6fRpeoyP1sTuqnN_wO0zAVNcn--1Zj8EPEIsey1w8VaZdbZkqP7yBS30SIhha_JhAJlBOjrVDCewf4sHkw7380yGZuuaQVZjSmc8P-zm2Gr1nRGUVtpH8QQSDLT7oypeH6kuLi_Sx7Pe6QNoDc5CPmFAOJSNWhGkvf-iECY43TWWOx5rD6bjDfcEvzciVElciqovuz9dxJvACFdo2qG8wg7FrSdKGuMSN0fj21Raci6O-FtYktfz3DNPspaXqhm7Dtc6G95LMylthB2lq9LID-KRH6nx3rY1MUzP00ftYHTt5rH7sWYJuJPFT7hVI1sicEqr8-yCe-rnHhbrJwl5Rw25S9Vg3_XqkVNtCd7Jt9laKrpdtUydp85vHKMlvtsFQev-iySMYZUiEK_agKsbRhnNz6tBeNSndNm9-YeDNLB84X6ZjpHiKoUND-iQpairxYuGN970l4o67SIR1WCoWw55xtbRg2fr_ZavROWAOAhU600eB3i-kOySiR6UpnWvYy9k3rTpZA0KtZ7AOxdz1q16ov8Z2ap0FowFoOlXnSgRMK0iASNtJZ1sNRm1p8YznkQ3285PpzT9BsIB9h-FEjU9f4BcmDL_boj8NhuVXq1M3Pv497DMbhZ-wIX8zwG-MSimma70sGxfi2I7AWrjVqtlXVOmK31Pk_Pckgn0ATDN5yMlu9Ty-sAozeetlAlGkcMpGNkC-dppBgKdwxAWA9Cx7eEf3oOAXJMoJJQ9fGV5UgBAlVtmd0mVb_QzSf54va9HTY8woIQMmC5LpPz0q8RwXuVcL6HlFQzk7ZVYNrd_7PZQsz1MLO1Isrq8K-BazVRGOg3v1-DNKPKhBwKLJ84j1LpUitD4Rg0RnoaFT_adl2ZbvGzdheCL99cXYsPWghPbWLMnVUSw8uyxfERW-rQT8RxcZTwxWUIOgtpFAJ9Ium92DHQdQYopa8M48FhI0NTxSs4rxN6qo_111NdtB5sDA6NgsRdrUR_Yv0PjhqHlb181yron_OsgZU1RzV_ZePhwPNm803eOfI4EB53Ix_4FAsPKXRWbi7PrQgmErUHxkU2Q7l_sXD2FqBmGqMnxmTJEYy-R2QhTI2gIUpDmeSZxo69wYTB-h9kgtQ7RFe1YTJNCbgagQzgicNwqJX3qE7jfpuBySQrur5AavT-PCSys0Z81PTm8JEseT-NGvmXxGps5aco2mj_lVUcyJY55hKvrQTiINMuQKPoXCZs2NN86ZDpzBRho476cygGGB1znHCbRqCFoEakIwVfodEKnzwPbm1W2nk8K2VZToTF5PA_Q6dG_dfg52ps1wtoM3vI9rSsnY67tmbCgZzNTI5PpuMMbGtSE3m6PvSyXWqdyv_yok9dwBvl0GbQYVc0bgvtrdBOe0cvar3VcPIQ8ztVWplXZ-50OD6nh3Xi0gULK6bPK5bpYgl9yTcp0VgrMfWzk0gK5A7NI3VRP8bSgVuIU6-3NcD5TqfdUq5dGaI3S_S_amptcjExuOtM6bq3o2FBJaCJY5V-S5cOYpiLBpg4t-cUiU7C7MIu8g7aPFPH947DkM8QWE2DCNO0VaCfkK0ixKTv09RbOjglDpf6O5IuvP-uEME8_-bExf_JduiimXvl2u4QZAhibnkbXCRKZEYxWmEWiF3OAnATGKGMAEjlvA5kxGV7IFYZ_yJ4LvuwTa68BZu1JklAZZXbuP-TQD8LDE5O7SgNHclELuJpWBmT0fs5xDV2xFLXTx0WyDz9hYsP1FJD4F3cRc3cymDFx9T4kXdze3ti0FDW4l_laxZlyYMgg2u8gboOE6wg2a5IbCKkSM7fL78I4lmQPOGF6NV6wjzlD8Jd2ByKu-i_lXDL6gLVPz-RShBP9wCDtWdEFX44SOHZQMsl6ncSb8nUn3irtqAc4n8t3kwUQF_oxeXPNTSVIp64v7cGPk9-gLYDuNV-ZnUdH0W4aHVfcrGEPT5g_ed-EJMyLHvXT78qMjtvsn1AvfvPoFC-THcrZjVJymiJl6fLEZ7WDm6YJuAxpcxQZY39-4_Jb5riEncYtbvwioy4BPQAecaV--yrDVtGBZN93IJhn1SywQ_Jr2OcEFCVB4YIdmM69spGpTviCRGIXvwvW8TVltoHabep8ziTn7TUyTNBWDCMpz_qxRzzxCRxAmEYBIy7yzvfDUnFIbRvzZzDSOuMJYAEt5rSBjx43DdInLTQ7qixaoCWKWskBk1h3u-Uxa7wkbrTpSAMZgp_Xv0TbzAoCQ9gS8BWqIvM4Ra13aLELZzcbrFoL-7ov0i56go0my1j5Cezi7MIROxqvQeeurf5GJuAWSN2F3o7MAJXNmTiefrCYTW_fNeWb3seVinofOJLSgeArQ6kvmFaI2-oMlSfGOStU9Ugy4AzT3KF0O5KMoTxWrYVIBveqOsqhBNib-9sEd0tLTeWdyPzhKP0v9n5BfqfXv0qG4bOdZZVRDkxQMq9lZY3S4iqL58tpDjG78rIew8s_h0QrPCXoKsJWSDwgOIVA_EbFvJPmIgV_hsQxdy6HAb227nBO2CdzimWW_pD0_HYX41jB_h2M6qQSnQqbh36jnxNwSh0GNecbsSAfKMhkCJqiRrkQrIxgKZM43rtrnDPX7RT4ypNQFmG-kdnRiUkZV-DRx-opzJqFBd6QKyK3pN7Na1vaLOHixWPueR6PNEw_fae5mBRAOpGcXjgIjpVi16a9V4YTiBO7NmPe122qYbrDoZcEpB_WyJQuAknHK4k9yW4R-XgjpTYWLWGZoGqm_Yjm2cBxvxg6VdSiRVvH18Y4GkhnuSYMQ1ksCbR3dZdM5thpZk7Re_CGrR1krwAwMc97pRSAoNQI3IBQMmtI1pxeanltHhPnM64MXNUedjTjfEZDfwQjqNcdWxetZSRbhwj1J7_jlpd-xFWuhB18PtMhzN2rQiuJkRUebqkR4xyNhjIPElNjL2j1CLBLPMIkyDZsLT2GLpt15plfv5vU1gqQSQnNhRS17bQdYp0J-TZXHc9KkBLYvKs1x6r5bk-MK8lHkzvkGtSaVWjcCh51uTavnJf_mA59soAR6MGz8nOjVg40qZY8gGojNGyaJhXPPaWvW7iFDvyEMrYv9QqNb7oen7IxZBuQKc-i78W7qnsTP7MNM-M66y8JfErURUudnkdVrm3XOtTgbtrX8paFOOrk4MRXlTQsMlmy6-IMCP04TUWlMGoQaPvGF_nhbRM2t8iPHl81mPkxu_ar4VmnpdtCn8ZDOEDFNkgQMUYBZ-1M5IjN3pIxJ7h7wnXyIOalGtuu7JtPb0tarAGGZw9ugg4xi1G9ZNi6p3PddSztXvD4dKEWGZbGiKRDtYFfz03iIrhnVbSCM6evGVkLgCT_oLdAVZnkwrXBOWelC7xSlwKz7ZGwFIJqEt1zu5iZTeFQiXsvsNTE56oGF1QqXaoIqHtBihKyCop_FxzMPKRAfwNStkZ9eka_KEUhDIdWuCNsLfXe2EXSUZajra9jxsT92GOojeaZrZ0Jj8jhWX6C5ipmdw_iiGi5fprx7OlmFp34yJ1LoW_Ow02gsz6Puk_ob1uiKhBxT10pLxQpTu17Ot1S8RyoTxTZ8VAwwlPtmy1VgaqOqBzZ4eY7e4A7Tj5lTJniebAsgxPR9MnrHX7oIX2OuMoZQdPb8rwIPeDVMDWo4sxO4KPCV70faZ8Hb4OFJe9GVOA3bz6mId-2niRTTFkUnMkmi32ao_qQ7RKSf9-DWbT-Ju71vpTEfv_YifeNfzx7uID1u9QOcmZtpRR1Ih3_DtGhIxT0bmjI66rbIt7HKBYkqeE4veLZiWeufVWwgXATt9eELA5ocge02UlPxNkLWFTqo1LEd6ev5ezufeojVPrscpDphGEy6jr9m11bHyANUMq6Ri7s3Me9sRL2AwxI0svcpwB2yn7Ov8EppVawIdYB9xJ5ophIwA7tbwhUrP8KBBEEfNTm0Xwb9Aw55_EX-a5ENxX52PEVYVme6H_48BKdqlIm3C5XNUnf1oQhFVqwRK7_EHKvqaOFmvYIYFZEjslm2CzCNELd9saKyNlmrJrqkaxf04XTxGjlRtGZkOWZy0MzxJbZpUnYHw62Wqs6CMJ_0COqC4dq__EISPuzeptsKrUv-tbHPX-z2zpyQ6HnEw4A7XtzQ_q5ijsYESofDrzyW3SWd0uSSFu2YKS40XYlJhrkovZcOkcXIHu3F-De1I0bmgb0uzg0FfNm8abIPG4Gj9WWYaSMAyCG1B2Ld3SikkA6E4me37AYiSsz8DBKGBg9gJTMqyhbqbgGDPPhmYUgciuULIMXnGNBM7sjXrO9rcP02JJjhgqMjwNALqrco8AQUOr3a26PKfmN292YpKpXIE-o6tggxcDNuLPykuuKdybepDvfGZYtGuq6GuSGbMfTAOjq5ld1AJk-4WfEG-Py7m_7Fc9MoA_EtRXf2gO4vGmZho5KZhGKTAeJOgvcrQLUyojyvog3bEuCs-LNpaeOyybKmmtmlUNW_Aj85Tp21P6lzKk58eev8PFCAEYvXrW9d3gW5XSNcYfzISzwCeV4Bo8cCwUNgyQaWCLux0bFTV8J6Kw4HArB2pdeqUXIO6CdVKM6iyAFNmsUmr9Vai4aTxM3SyONcY8-Fldby2WSPklHN9Nm2Td9NSL1SB0OkjAwRAQZq7U453mc9PrVDmd2OhxseDNrTf5mSvUMe7OdPNaQfGbSKnYJAt2LwS2W4bAmMlpTpJXrOGTbV3KeTAL0unDmbPZ12VPvaz2BGLdwiWlMpuNnTlq2Jpdbba5nEi8dTxWFWXduJ16YWYRmiU7rKN-JpWRgnUlZIvwUrgzD6pxJ7IrOV3OqAnzIu1HANnX6Qw88MGGZmWVOGRcihCMuyQpy1_19Moe6K0M0zGg_RV4UUGml9up91xsgXmaFHr0IV-eCj-J418upZdHr5rT8oADuOJDmW7YeQ1GzwzZZf7fZ_FmiwKvRSKlkeJwDcifB-i0eXcIlBjo5Hs=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_048c725cd7fb9bbd016af61e79ca8c87d1b92705c0ab9ed24d",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 1357,
+   "total_tokens": 2860,
+   "cost": 0.048225,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.048225,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.04071
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1034,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.9
+}

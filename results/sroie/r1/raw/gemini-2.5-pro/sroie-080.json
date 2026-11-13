@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "HON HWA HARDWARE TRADING",
+  "vendor_vat": "001125220352",
+  "invoice_ref": "87870",
+  "invoice_date": "2017-09-21",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 9.81,
+  "tax": 0.59,
+  "total": 10.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "3/4\" ALUMINIUM ROD",
+    "quantity": 0.9,
+    "unit_price": 5.66,
+    "tax_rate": 6.0,
+    "net": 5.09
+   },
+   {
+    "description": "PVC WALLPLUG (50PCS)",
+    "quantity": 5.0,
+    "unit_price": 0.94,
+    "tax_rate": 6.0,
+    "net": 4.72
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 9.81,
+    "tax": 0.59
+   }
+  ]
+ },
+ "cost_usd": 0.0386575,
+ "raw": {
+  "id": "gen-1794514323-eo7bAjLNrQo3KMg77zRi",
+  "object": "chat.completion",
+  "created": 1794514323,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"HON HWA HARDWARE TRADING\",\n  \"vendor_vat\": \"001125220352\",\n  \"invoice_ref\": \"87870\",\n  \"invoice_date\": \"2017-09-21\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 9.81,\n  \"tax\": 0.59,\n  \"total\": 10.4,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"3/4\\\" ALUMINIUM ROD\",\n      \"quantity\": 0.9,\n      \"unit_price\": 5.66,\n      \"tax_rate\": 6.0,\n      \"net\": 5.09\n    },\n    {\n      \"description\": \"PVC WALLPLUG (50PCS)\",\n      \"quantity\": 5.0,\n      \"unit_price\": 0.94,\n      \"tax_rate\": 6.0,\n      \"net\": 4.72\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 9.81,\n      \"tax\": 0.59\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Bill Data**\n\nI'm currently working on extracting the bill data. The initial step involves identifying key information. Specifically, I have identified \"HON HWA HARDWARE TRADING\" as the vendor name from the image. Next I will extract the vendor's VAT information.\n\n\n**Defining Bill Data Elements**\n\nI've defined the key data elements to extract, including `vendor_name`, `vendor_vat`, `invoice_ref`, and `invoice_date`. The invoice date \"21/09/2017\" will be formatted as \"2017-09-21\". I'm setting `due_date` and `iban` to `null` as they are not present. The currency is \"MYR\" and the untaxed amount is 9.81. The tax is 0.59. The total is 10.40. I've categorized the VAT treatment as 'S'.\n\n\n**Analyzing Bill Data Now**\n\nI'm now diving deeper into the line items. The initial calculation of the tax rate at 6% seems correct, aligning with Malaysian GST at the time. I'm focusing on reconciling the line item totals with the overall \"Net Amt\" figure. I also need to make sure my logic is correct and consistent with my findings. I'm working on the line item extraction, paying attention to quantity, unit price, and net values, and considering potential discrepancies.\n\n\n**Finalizing Bill Data Extraction**\n\nI'm now extracting the complete data. I've confirmed all the data points, including the accurate GST calculation and net amounts, and formatting. I need to convert the inclusive prices to their pre-tax equivalent for the `lines` objects. I'm focusing on final data validation. Finally, I will structure the extracted information into the prescribed JSON format, ready for integration.\n\n\n**Refining Tax Calculations**\n\nI'm now clarifying the tax calculations for the line items and overall totals. I've re-examined the discrepancies and confirmed the values provided for the individual line items in the image are the inclusive total, not the net amount. I will perform calculations to determine the net amount. My focus now is on accurately populating the line item `net` values, including the net unit price.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating net amounts and pre-tax unit prices for each line item. I've confirmed that the \"Price\" and \"Total(RM)\" columns in the bill's line items are inclusive of GST. Using the provided totals and the calculated GST rate, I'm accurately determining the net values for `unit_price` and `net` for each line and also the overall figures.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. All required values have been extracted. I have formatted the dates, handled the `null` fields, and validated the GST calculations. I'm focusing on the final structuring to match the provided JSON schema. I am ready to convert my results.\n\n```json\n{\n  \"vendor_name\": \"HON HWA HARDWARE TRADING\",\n  \"vendor_vat\": \"001125220352\",\n  \"invoice_ref\": \"87870\",\n  \"invoice_date\": \"2017-09-21\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 9.81,\n  \"tax\": 0.59,\n  \"total\": 10.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"3/4\\\" ALUMINIUM ROD\",\n      \"quantity\": 0.9,\n      \"unit_price\": 5.66,\n      \"tax_rate\": 6,\n      \"net\": 5.09\n    },\n    {\n      \"description\": \"PVC WALLPLUG (50PCS)\",\n      \"quantity\": 5,\n      \"unit_price\": 0.94,\n      \"tax_rate\": 6,\n      \"net\": 4.72\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 9.81,\n      \"tax\": 0.59\n    }\n  ]\n}\n```\n\n\n**Validating Extracted Data**\n\nI'm now cross-referencing all calculated values, specifically line item nets and unit prices, against the total net amount for validation. I've confirmed that the calculations are accurate with high precision for each line. I have made certain all values match the source image. I'm focusing on ensuring all decimal points are correctly located.\n\n\n**Refining Calculations and Values**\n\nI've re-examined the line item values and confirmed their relationship to the total net amount. I've focused on using the total tax amount and the overall tax rate. I am accurately calculating the individual line item net and unit prices by determining their pre-tax equivalents. I've re-validated all figures.\n\n\n**Validating and Finalizing Data**\n\nI've rigorously validated the line item calculations and cross-referenced them with the invoice totals and am now ready for a JSON conversion. I've re-examined the source data, ensured all values match, and will now assemble the JSON response.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Bill Data**\n\nI'm currently working on extracting the bill data. The initial step involves identifying key information. Specifically, I have identified \"HON HWA HARDWARE TRADING\" as the vendor name from the image. Next I will extract the vendor's VAT information.\n\n\n**Defining Bill Data Elements**\n\nI've defined the key data elements to extract, including `vendor_name`, `vendor_vat`, `invoice_ref`, and `invoice_date`. The invoice date \"21/09/2017\" will be formatted as \"2017-09-21\". I'm setting `due_date` and `iban` to `null` as they are not present. The currency is \"MYR\" and the untaxed amount is 9.81. The tax is 0.59. The total is 10.40. I've categorized the VAT treatment as 'S'.\n\n\n**Analyzing Bill Data Now**\n\nI'm now diving deeper into the line items. The initial calculation of the tax rate at 6% seems correct, aligning with Malaysian GST at the time. I'm focusing on reconciling the line item totals with the overall \"Net Amt\" figure. I also need to make sure my logic is correct and consistent with my findings. I'm working on the line item extraction, paying attention to quantity, unit price, and net values, and considering potential discrepancies.\n\n\n**Finalizing Bill Data Extraction**\n\nI'm now extracting the complete data. I've confirmed all the data points, including the accurate GST calculation and net amounts, and formatting. I need to convert the inclusive prices to their pre-tax equivalent for the `lines` objects. I'm focusing on final data validation. Finally, I will structure the extracted information into the prescribed JSON format, ready for integration.\n\n\n**Refining Tax Calculations**\n\nI'm now clarifying the tax calculations for the line items and overall totals. I've re-examined the discrepancies and confirmed the values provided for the individual line items in the image are the inclusive total, not the net amount. I will perform calculations to determine the net amount. My focus now is on accurately populating the line item `net` values, including the net unit price.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating net amounts and pre-tax unit prices for each line item. I've confirmed that the \"Price\" and \"Total(RM)\" columns in the bill's line items are inclusive of GST. Using the provided totals and the calculated GST rate, I'm accurately determining the net values for `unit_price` and `net` for each line and also the overall figures.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. All required values have been extracted. I have formatted the dates, handled the `null` fields, and validated the GST calculations. I'm focusing on the final structuring to match the provided JSON schema. I am ready to convert my results.\n\n```json\n{\n  \"vendor_name\": \"HON HWA HARDWARE TRADING\",\n  \"vendor_vat\": \"001125220352\",\n  \"invoice_ref\": \"87870\",\n  \"invoice_date\": \"2017-09-21\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 9.81,\n  \"tax\": 0.59,\n  \"total\": 10.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"3/4\\\" ALUMINIUM ROD\",\n      \"quantity\": 0.9,\n      \"unit_price\": 5.66,\n      \"tax_rate\": 6,\n      \"net\": 5.09\n    },\n    {\n      \"description\": \"PVC WALLPLUG (50PCS)\",\n      \"quantity\": 5,\n      \"unit_price\": 0.94,\n      \"tax_rate\": 6,\n      \"net\": 4.72\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 9.81,\n      \"tax\": 0.59\n    }\n  ]\n}\n```\n\n\n**Validating Extracted Data**\n\nI'm now cross-referencing all calculated values, specifically line item nets and unit prices, against the total net amount for validation. I've confirmed that the calculations are accurate with high precision for each line. I have made certain all values match the source image. I'm focusing on ensuring all decimal points are correctly located.\n\n\n**Refining Calculations and Values**\n\nI've re-examined the line item values and confirmed their relationship to the total net amount. I've focused on using the total tax amount and the overall tax rate. I am accurately calculating the individual line item net and unit prices by determining their pre-tax equivalents. I've re-validated all figures.\n\n\n**Validating and Finalizing Data**\n\nI've rigorously validated the line item calculations and cross-referenced them with the invoice totals and am now ready for a JSON conversion. I've re-examined the source data, ensured all values match, and will now assemble the JSON response.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3826,
+   "total_tokens": 4144,
+   "cost": 0.0386575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0386575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03826
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3503,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 31.32
+}

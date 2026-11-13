@@ -1,0 +1,122 @@
+{
+ "pred": {
+  "vendor_name": "Smith, Anderson and Johnson",
+  "vendor_vat": "964-80-1298",
+  "invoice_ref": "92034501",
+  "invoice_date": "2015-12-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 14331.06,
+  "tax": 1433.11,
+  "total": 15764.17,
+  "iban": "GB40IOKZ01957551465223",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Floral two seater fabric sofa",
+    "quantity": 4,
+    "unit_price": 199,
+    "tax_rate": 10,
+    "net": 796
+   },
+   {
+    "description": "6'x3' Black Marble Inlaid Dining Center Table Top Peacock Inlay Patio Decor E966",
+    "quantity": 1,
+    "unit_price": 7525.06,
+    "tax_rate": 10,
+    "net": 7525.06
+   },
+   {
+    "description": "24\"x24\" Marble Real White Top Coffee Table lapis Marquetry Floral Christmas Gift",
+    "quantity": 1,
+    "unit_price": 2500,
+    "tax_rate": 10,
+    "net": 2500
+   },
+   {
+    "description": "30 Inches Marble Patio Table Top Malachite Stone Inlaid Coffee Table Home Decor",
+    "quantity": 2,
+    "unit_price": 1023.75,
+    "tax_rate": 10,
+    "net": 2047.5
+   },
+   {
+    "description": "25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home",
+    "quantity": 2,
+    "unit_price": 731.25,
+    "tax_rate": 10,
+    "net": 1462.5
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 14331.06,
+    "tax": 1433.11
+   }
+  ]
+ },
+ "cost_usd": 0.02966,
+ "raw": {
+  "id": "gen-1794512297-UXtCb06NsiIJTg7lTRK2",
+  "object": "chat.completion",
+  "created": 1794512297,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith, Anderson and Johnson\",\"vendor_vat\":\"964-80-1298\",\"invoice_ref\":\"92034501\",\"invoice_date\":\"2015-12-12\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":14331.06,\"tax\":1433.11,\"total\":15764.17,\"iban\":\"GB40IOKZ01957551465223\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Floral two seater fabric sofa\",\"quantity\":4,\"unit_price\":199,\"tax_rate\":10,\"net\":796},{\"description\":\"6'x3' Black Marble Inlaid Dining Center Table Top Peacock Inlay Patio Decor E966\",\"quantity\":1,\"unit_price\":7525.06,\"tax_rate\":10,\"net\":7525.06},{\"description\":\"24\\\"x24\\\" Marble Real White Top Coffee Table lapis Marquetry Floral Christmas Gift\",\"quantity\":1,\"unit_price\":2500,\"tax_rate\":10,\"net\":2500},{\"description\":\"30 Inches Marble Patio Table Top Malachite Stone Inlaid Coffee Table Home Decor\",\"quantity\":2,\"unit_price\":1023.75,\"tax_rate\":10,\"net\":2047.5},{\"description\":\"25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home\",\"quantity\":2,\"unit_price\":731.25,\"tax_rate\":10,\"net\":1462.5}],\"vat_breakdown\":[{\"rate\":10,\"base\":14331.06,\"tax\":1433.11}]}",
+     "refusal": null,
+     "reasoning": "**Extracting JSON details**\n\nI need to extract the JSON schema, focusing on a response format that’s likely only JSON. Then, I’ll parse the image for the invoice number 92034501, dated 12/12/2015—although there's some ambiguity since it could be interpreted as MM/DD/YYYY or YYYY-MM-DD since the document states \"12/12/2015.\" \n\nThe vendor listed is Smith, Anderson and Johnson, with a tax ID of 964-80-1298. It looks like I want to clarify the currency as USD and ensure the amounts are formatted correctly in plain numbers.**Compiling invoice details**\n\nI’m looking at line values for various items, starting with a floral two-seater sofa (Qty 4) priced net at 199.00, resulting in a net worth of 796.00 and gross of 875.60. I also have descriptions for several tables with their own quantities and pricing. After calculating the totals, the summary shows a net of 14,331.06 with VAT of 1,433.11, making the total 15,764.17. \n\nI need to ensure the invoice date is set to 2015-12-12 for the final JSON object.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting JSON details**\n\nI need to extract the JSON schema, focusing on a response format that’s likely only JSON. Then, I’ll parse the image for the invoice number 92034501, dated 12/12/2015—although there's some ambiguity since it could be interpreted as MM/DD/YYYY or YYYY-MM-DD since the document states \"12/12/2015.\" \n\nThe vendor listed is Smith, Anderson and Johnson, with a tax ID of 964-80-1298. It looks like I want to clarify the currency as USD and ensure the amounts are formatted correctly in plain numbers.**Compiling invoice details**\n\nI’m looking at line values for various items, starting with a floral two-seater sofa (Qty 4) priced net at 199.00, resulting in a net worth of 796.00 and gross of 875.60. I also have descriptions for several tables with their own quantities and pricing. After calculating the totals, the summary shows a net of 14,331.06 with VAT of 1,433.11, making the total 15,764.17. \n\nI need to ensure the invoice date is set to 2015-12-12 for the final JSON object.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hWz3xEjYXqkdhFjD5w0v4Rs64_JslRWCj137DkBkUB3tTvO4SfHJ_ePeqQ2HKiP4M0S4Ik8SUf6m69TQC5gV0b-CT6vJzNg_AzRJVldY8hGX8pmw2yCeCx5LFQbONJGa2O-vlf-gentgndOnw56BBTN77j_u6TC6YIKECWlAq_QwDteLrPRRnvyl1lTF2OuX4iYMzVej7NsQ52h0nsrnzl40unutoZI8tvhpiMDgKrKoI6SVDXFKkeLWc4cFDjZMPdcYLbXBaYiNbGEgr828a_LzSes2OsKheeF9-f9V3oAj3Bi6uSNFSIDGaSDxKEU4guo8E8Ye91cuvZdWVRCey6sqcj8T5mEmPBXbIz2YS7-cx1L-xTmJwG9LLGuI_Ke6tGmdV547GIOnIq80IVFi86HougA7UH-chni-dqq5D1Tuf2Vc8v24Mg-SJy0BExWezwWxH-nlgDMF12Yl4pvAuqjCKifMvReWVFrJn7AUTRArnlZYh-FTpx1RwkSBPTpAU-ff8sXP61DhQvmmN-iFG7ULJ1DxLTW9BLlskkpHNFDBsFeNXcWZLEiEvfYZFUpcxmMBo-xMFrBaJoWLo-5F4ThJWa1qhmQWVon-TDfoCGOfPMnS1_Fa1eTt5vMFGiaZBdPuYe5ArU0EnbabYR5O-SjgTQcxrvJ7p7BNbNuTGyApDDVvoCemTsr6x0unKrgJAN-e3JNOk7k80K9OP1Ipx0TlhLWLwoU7ON-pZ8YPMsd8ReCZYCMt829gaRCTz6uSY4AVRIvWVshDdgUXBTvaaORZw8zbn-r8kex20ai5mxx-ZJmBxEH2cW-LSIkr-YwqN6CbL62ucyFR_fsgrs0N4tiJ1OqwfNZZSpzL1zY-ddnZeOEd8znd5e2bjjHZAXDz-NDlKCYzJTXFnvZaHJVveNOzWUzsoVXl5p6ywzEwfF8SdzUdcr7yGGhmJT9emLx_8BIctu6uytMdwaWMwHT9M7w9ZQaz78wkFWO0cJ_WCHksXdlYQtOr3ZmBQmeo3lAPrtWx0n535aO3rPzRf5VNsfMXAePLgQ6cV8nGQhEF59uA6gAVeWyoRnEFnjnvbqYAgTokDVjUFeDStMp6v2lNle5_oHYz0nzip_l_MrA4YVsqj-1jQuFxeDCnVNH_QQug2SwkeVKuf6zlFk-zY5J3y5GGsPbLMJ34ZoCvQWTTACIFGYyYyFBHeUZBBt9LVkObmAUOfC-agof3HAam4z-CrAA76UawW34jS59pgTAHS2AjF--G4HcMk3puwr0k41O0ixilSs7RiRvD4vR-N27RKcQp3rXMVmrsciirwSv3YETFDaD9Wpgbn1zZ8VFRmg2VYz3rRyrOelbIcU8rnJ9EnRzYAgVpOcGd2dzFqw4mKEQYohQv3WgPr0zgiaMSv3dO7b-b2QZ-xJRYaigUoHaSBiuNhnMwvRLYid-z9CksgAei-ErRgqlxWUgB7XB7Ujim93DrnX5VNa1-Z2bFF3F-F5ZMq64XZojuImI0_BYxtsNlBPu_pZlxHR1T1DWI56SIqe0OZb7DkybSsXQUET0Ie2dBApex7bOBf09dqIkX19zYraMjXlFJnCNDcNOqHhfL7OfC6X2gRtTdQo57pHJvnx16zR1bU2nbZYdmdodV1m6aCcWcNqSIAszl-qVwUdYdVdxgygz7BIy2K8x7iNsxwpro10A2zZTc5CBJuY5judCNXqngz_ypJTY5WzFi3ms778msIaeFltZ7aUGVRWEJf-xL7IgwDb3beH2vZJthXPKyOs8KLIpWZlltyU4JBue1zeZJVU3FLKKRyNrcap0YQGNoWjPMqPDKj6aKqABJE7qNGH9KmFnPzoxqYrh-lZjneRD3ipRCYgz-3spcWddqekn4_eV98YFVNapQnNEYr3jT5YTaaR_VP3w514wFMLyoF29Ku71aThKbP3vZl55qxwg9k5s4-q3GeIKbL5nDnjKZtND-K_tjU6BhfJArERW5TuygsHlaOX27U97mktD7kEZnFP8RiwkT9wif019qf_b80LI87e2XjYyIO2TppbMwqB_cJUxszhqHPHO5oyrBHveTrLB_boG78oOgmBxBfi3mRflzow26YhePVVAt1g6_ctf8apzGRwJ4jNSdt22E_PkTNNdlEuNjMVcEUIU1e3cHUkRTHlK7D2TBl2jKjBRDOYDoORJyxqY4K1kCQpUUPXtHryAzkIATEmbEl7dqFlmPbwYEOxOk5UJbcjmKzNgtED4CcDtm1aMYTYKIG8heryb5QLXucNMJh1QM4uJLhLuaG-2C2tAshngoURzy6QZZWCf7wl3b1kc1F458lQBVK6nCd2o8N-hxdzkJ7VYXjM41oU_Ly2GFt8U03OVt8OSBduQuCay1p8Yk94UY-borPaYs3-LkvoG7uKhloEZO-aOtFx7jgHTBglyXvV2AM8gOEREc9R3L2Ydz-wkQRKA0z5U1BUg-gLS568p7hIG2aN67FQa8shbTrCp9fW2LrW__dqmcDFLJ7Ic3PCR2WKiJ_XRd9A9hiOPbwRht7Sqt0Ke6EOV4rTx5UZPYL8EmCRMOgAZq9JdqZLcI2mszku0m8QLnKR6wrwGf3yV4j_DaMmYh-uQmU2n9C9jUJY37oQLwtgr9MJiQbxAQxUIHQsVIJAM1ArpgB1wZE2BA8ZU1Z4i6Vf91iiqJaZAih0QP-tJyZ2n8iVaa2eoUjywiKNGC8fBtib2zRX_aWtolU1NUPhYuqdZHEpPUGx9a15T3ji1xpUXc7Muw5t4qd1JPrkzcPQ-i7ZYXsZwCgmx9h7BbVAn4aI8gEgQ4xFhHpoIWvD9Ru0XrZy3C1-onDeMX1t_AQULxfJHQhv5GpsslINRlj_AEd5PA8aCsjTnIggKI0RV2jHQTxig84o8kDmJypJbkO651N-d7dsWCjuR1EbAevgVtU2TXPQanGK3IJhSWfeBMpUR0HDh1SGjRX_SqAy08u2T4mctKihpOFo1wq_HEc9W1-vg9GxM_7RTRQeHiFzrIkee52thphOB9hlS9GOW6NW4vYC4WvN9t75pDWCPmatJUHOXK8BiaUOzy_QzlEh3cl5GJ2LUAkDHksTlVE4ucfFpjS3zxcsTbxMjIvBLeL3RZsiCWSakbgJdjnNzpGyhplgE_MmXpFh3g2KWppm0XLPZJ3W4uU6bqpf5OiX-trHhKTvECWQsSfn8jbhGrGbyoweVNiBVSC-7BtstVe2CmsVBKDgsZMNRbCT1PxD0IvhDbXYXs6dmbv3ytjh1e30uzaT9RZlanjeXn7xXUCgxmfSlKvUZBEovyURhUG5TqOJrgZ9QF3KBZWSSON6yysmwGCjF3hC2GgMAXCANqvRR87TyjsTQ-UKBeZK3GY1UJu4I8MoR_RUiNM9vw0Q-v50ZDMwrq6rlPHifzwaXqhW-DCT_rMcdHT3HMfjAgTZQmyc0w6iOWzEjfpOGYiCFFx1o8SpKlBKrePjn_X2HhiXEnVAHVFse4gFBG_hUOeQtEntBJNDxKgUsvXmYRDT69UY4k7MEOpC-VebBm3m4EjeVUNutcuyMLlFBccGA6UL3mGWNi_RPsvSgz395jd8Ap46ZnPcgIfJKSVhtJ-NlrBCHiPmD_e_d0UyqyA4iH6GDcr7zg747aUG3f-X54UueuSh3x6jZCFSNTY3zlUgICmjOP20iiMttNfmzi8Jb0Jkw7aDtIotvp6P-gy5yHl6mhJZT5Y0IKT9YAgc6Y5oWn0L5FN22dm8_T9N070p2iQlUp-BLRQt8XM_s2CoNfcsYVoV9pOCeqT4HcgqymcC3v0F_EjWuj7zBY9qg-sTgitviP75mnzNFHMXChuJwyfSMp7Mz_7ClpaB7ZhY6Gx_eGy6tJsPeolunmIZl3OAfgwMO1phloRj4S32eadASzUz50Ortjn8smKD1PuZlLBF0JwhxCHyJDw1tYNGvM_uxTtVo4w8K0izYd-dA_EdUz_fREbYCq8LL9vfQcKV_kJguQYByaHRJ6kRlV9b4xDOQkccSzGW0KGkYqzfQ-4UlSIt4ti2oK-lDikd1I4glSN1zBLbU2hD6SB2x0Wz3ldI2VC9B34duhpOYPk0JNawAAwHBEVqcR4X5XihBoyZ-OQ-12OFeiEOla7n-wC49o7bTUexXWqSsFap_eFDIZaIibPuH_BZ3m0oyUXSrPSqTooJ6Z6lK_h4NsHZZ43BoVTgMMmNyJFqRApaqtrYApCrWDiKHWwHsoyjJPToBjHpvQmdb3ZpXW_jk2_2lGp7E8QvosS-kWzISUZpsOlNzyhPMt2iwGgWaLRukHtWl2aVaPb64y0u2bxF8F2ROp4iEpSFf_nhgpLSjTpMrvwL2ejZLRLdMslnnaSEA4F8EeQ05Y8ryfyv7gyNiBcSyYj4V9lBHhWWbSV-9nNJM0V0dIPHvTzMiBYSCezgx53nMydOzQl-nKIcuCaEvqOV92dqKoqT8hsN9FZLXIaElxmTGWb8ld2ZhTdX7z_VISmOf-LA6pMqHECaKWX0fRgpNLLCgC9DbTut5yexPlFoEOg7Qw3YmbJMa8KddwIQ5GUQTlwGRtNuysG-OfPBjpyOIEKaEu1r4NDdPpI-Xzej_guFgdsxDmh_DQ6PHIDUHTVvqROZb9IsDZlaScXfv8LLWviWbuHNLhga7RFhLSNW9FVdQoXFhY8y-KvJpEWP4ZaqnBeUAmKcTFAeUI6E5cYyhFJsQs7pqnLg_dUIsV4jemENY9Edl-LDNVGmqOf_yaA5g4Kiwa-17ehDN0iBFBNvX5nAen4_0kHTMBAQcS9s6lWxEV8JO9rkARV3KLkSn7gg7NO4Lc-Hch_PtT1iHeM6xHhXaOYhHy4k04vwmY-vTjlVSikErsHPwE3VCLRpwQaDOv66urWwPDSwkTnJ1UakogaxgA_S0k3IC-lWkQzE0T4FGUHjnxcrh363dOVumGC9Pe9aXK9bIgpdN6N_c02023TQkYT-suaA0szYNBmujzrBbpV3dj5WoEApkQzdswD1hoXoQN5IUUJvLuubOvVsCWpfEMZHLkfLJgdgiXGeeNDM34txA7paDHop5FnE-c6427jEKMsQ463PLHfEZ9AUsf7oyLCl7MMm3lma5LhBJosUbRFLFQjeJ0wa_ZblljPkJy-LSunst2IH50ac0nTZ0lKinOpzFb4G9vEesJBzuykHb49ul7fTdxg6haKHGw8rPJB0Qvv6wfPDSRaS1-kPaw0ScBedYAgRm5VHP0NE-a_XrsGpefEreTmm8clOB5WzNQzwL724_yD_vV8tZ67fjD47dMPU_eIWK6-kyVVNpxSIdsHciV6dXOGP2qAmSPl1RDNjNN8uZRoMpjuJCD6ChFjTWDCoXv30hqsCsYXJCzhDffz_lUUmlJ-ZvQ54eHYUXayrOETIIr4JO1Gq12RFzzKOv065ljFg_F_fuaRcbwHzjpTS8uFsrpNFNmdjPE6KxM9r7n8o9DrQKl2SKY_QbOZe-n00scdWJRQQx6kIDwC40L5FS7jOjjaUkjgJ7nz-7NdArikPviAzrHcI9vVvqrtnjrZOPekYVkxx8LPaKFITZbNGKozjjjFfhToT5GOI8oasLtPW9Km-8udTzMAnnC_VDKjeXqBNJMPnSSEWeUhAakKpIuO7JRkk_-utK5wLufAHV7DP34ckxp2qTh3GXjgrImc2UWkArY9sNV-6inOEh9-xnGhKeXfbbxXKTkxktJ7dYXUIRMsKL7VhfXVBtvUzkHpYVnprZAc-79KDBY26sSoFut9cGvb2lNfYyB_EWpuP24DN_VRC0zgIsY-F8OZb8-7uTLTSBldlZ8XjdXXZvtZhcvvKLzd4SRi0jFlE4q9h8E2wzePuaxdig6ewpOu3GA1MQgJnWgRMlEGGme5kOJVjUwgJxgBjM88b-I_a5SHy2NAHsjWmQFvldAP9zM8XOk6cdpB9Hiwz-sUczWNKUYBcE1vvXSfuZ-Q3UG8mFKOAgd_wNqGy1LTZldF3Kr-W14EetvlbdQ-1ECTxzs_oMjft7lawYTMuLpHByFjLbTvJVbs4YnwXI4pWYW6SR18P464mZAR03Ukl5aFjZvkXNgSE9NyTqY-Gt2XdcS5Pg3zT3GdJ3cK-rmh1AWVG3b9haLNX7nKntORFxDIKhW9um8yg5mNCtaF84QujoPX_tiAmy9buO4Pdz5bbqv4Sa85TMxn_tJV7xICLGAF7SuJQMWBWoPZ0AKBM1a-PxpxbTg5mJ5RfnWesh7kbmf8173ilnmm-c91VNBOHOIow4VXyZr0oFqc5KZbboz18Q4yDGZc6SlJWlbhBKsQ0yCA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_02b5abfaba25a6f9016af615ab028887d1b3a003eab962432c",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 738,
+   "total_tokens": 2242,
+   "cost": 0.02966,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02966,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02214
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 414,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.27
+}

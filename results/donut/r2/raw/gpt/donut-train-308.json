@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Sanchez Inc",
+  "vendor_vat": "958-83-2401",
+  "invoice_ref": "64678621",
+  "invoice_date": "2014-06-09",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 118.95,
+  "tax": 11.89,
+  "total": 130.84,
+  "iban": "GB39NIAV91589079294162",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off",
+    "quantity": 2,
+    "unit_price": 9.5,
+    "tax_rate": 10,
+    "net": 19
+   },
+   {
+    "description": "Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y",
+    "quantity": 4,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 79.96
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 118.95,
+    "tax": 11.89
+   }
+  ]
+ },
+ "cost_usd": 0.02564,
+ "raw": {
+  "id": "gen-1794515158-ebC13seSXTA1v8POEE6W",
+  "object": "chat.completion",
+  "created": 1794515158,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Sanchez Inc\",\"vendor_vat\":\"958-83-2401\",\"invoice_ref\":\"64678621\",\"invoice_date\":\"2014-06-09\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":118.95,\"tax\":11.89,\"total\":130.84,\"iban\":\"GB39NIAV91589079294162\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off\",\"quantity\":2,\"unit_price\":9.5,\"tax_rate\":10,\"net\":19},{\"description\":\"Cherokee Boys Grayton Skate Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y\",\"quantity\":4,\"unit_price\":19.99,\"tax_rate\":10,\"net\":79.96},{\"description\":\"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW\",\"quantity\":1,\"unit_price\":19.99,\"tax_rate\":10,\"net\":19.99}],\"vat_breakdown\":[{\"rate\":10,\"base\":118.95,\"tax\":11.89}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice data**\n\nI need to extract the JSON data according to a specific schema based on the invoice details. The date format is a bit ambiguous since it shows 09/06/2014, and I suspect it might be in European format, meaning it’s 9 June 2014. So for YYYY-MM-DD, that would translate to 2014-06-09. The supplier is Sanchez Inc, and the invoice includes amounts in USD, considering decimal formatting with commas. I'll ensure all this fits the required JSON format.**Determining VAT details**\n\nI need to extract the vendor's VAT number or tax ID from the invoice. It shows the tax ID as \"958-83-2401\" and the invoice reference is \"64678621\". The vendor's name is Sanchez Inc., but there’s no address provided. The charges include an untaxed amount of 118.95, tax of 11.89, and a total of 130.84. I’ll ensure the final output matches the required JSON format while including all these details.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice data**\n\nI need to extract the JSON data according to a specific schema based on the invoice details. The date format is a bit ambiguous since it shows 09/06/2014, and I suspect it might be in European format, meaning it’s 9 June 2014. So for YYYY-MM-DD, that would translate to 2014-06-09. The supplier is Sanchez Inc, and the invoice includes amounts in USD, considering decimal formatting with commas. I'll ensure all this fits the required JSON format.**Determining VAT details**\n\nI need to extract the vendor's VAT number or tax ID from the invoice. It shows the tax ID as \"958-83-2401\" and the invoice reference is \"64678621\". The vendor's name is Sanchez Inc., but there’s no address provided. The charges include an untaxed amount of 118.95, tax of 11.89, and a total of 130.84. I’ll ensure the final output matches the required JSON format while including all these details.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iDh3yQ1h9IRtMXamwms_XXDoxkc2ajUC4vwWbgY_dZzAseYiac9HoyvHOoRDp3fmBr7KZY1hQb5flgBHfZa5_DWQuO0HJZ9Uqde1ET6PvzSOxc8Nxgw8JV0G4E8o0qKSV_ZN5mbKfhaO2aZl-HDBgX1BYwdqeMXT6HJysgyCa7YqyqixKfEr_n-9eZ3Zat1knl9Km5hEUdbyyRJEdxxpPLhAZG3B3hpR6TZGuS056UJ0gBt4JMBOS3a8ia5NUHiLO9-i1FWdFAiBIzqlI_0HBLuiOl92lNQ850WbMoOAqoFKHiqoSzV6Zedz28WzhLG2EDp_RTgr7rrcl_YDGZAD-8fpRVSlYQNcl_tAwjMvkmYPD-Qo3VkqWuallgSJFMR2Ir_jWni_BdaMNvPI8AAAusiis_TN241pF2zPZ_lOUCC7jiQ9glqbecvXkkCJZSYraJ_jkJtBihYBQwEg50o6k1lqxoZNcmEKK0JkT4Iiu8U_Qv3znjraaANaUvGDt1f-RuEtJ8Ic05ov04Z447LwHZScEnxLimUvkfJs-ovZ4eiOLTp_iJktoDn-Cqk0_GcVjRVmYK-Ai1mDUUBG4sPC3Pa7OrqdFesCo3xzzoYElcxuRYWkzi5rY7HyJQFbzOYmksBEAgWXalcL9lzC8On_TtX1UyDxx8IyjriYBXV0RQAkSCzAFTa8uvUS67hpheZ0qMT3QDjgtIUmjAFeIRb8ZA4pngkb0f4tKYLxyEmUIOkfkNlqe00wfLiCCZBntO-Q58gJTFGIp9AQ9fhguUhV9wFl2MpPTSQYd4FgkeXEozW2M5IFmUqUZrJ22nymsCLfS3RkLmIxANUFxr8-p87jnYwJLeZ8ju-DzeeIx408IGyTEFerLVdi6lsUTnCk5gc97Nw3uD6pzMEaaPJCn3r13mCa0IoCXSZRaZyd2t2-fUgTQnN4TP7DEqaQTFKjX9KkwVi2nvVdqe32B6bx7NHUpyrTaIqmgjxBnn6BlRy5bSaj7ZBQIfsdTh7akgRqe432v_AxolL2CtBi8H_fIzf9_VzOOuod6A6zeYYlPIoTFcp-wHTzJNiFMWqh4qELbuOvoxyiz-xPw2OnbbO_zkpSfcQddyfjvcnD9eGUMqeXTuQrSr8Iu2TkDLGTSG5KAhG4GQ_0oJQn9L7ilflvhljZ0MMSFD_8qznBimGL1WX66iPh0O7q0a1Miru7grYjQttGEnMCDLZRXh_JwxDQiCN5oVvZexvwPT6BJCJc-lLKfvpM4cGnHSMi3icSmnT--pAh5bSw-ZMy-P35k7veN53muC8aN0J1UaNMFxYGzMoGmrOl5vq8PFb4SAiDq6a55svjXT8sSNl7EZpAbBVvHk1hm63zLdDGG83wnqJu8ezQKa0my94daxDezELlMQqqRDbNT69FFokHPBDw5PFE0V1_gF7BKsu3fWQmltu7lmubRFGIYmZ91XUo3e6jYsJYBF6bc_7uDclOBjXzb7dBRnMp_bx-32FbAvi0N7r1S55Yz5-atYD9wlBURElCOQD3vBJIln9ok5hl1IWWTgfsJZMCN8RtlWZsFFJMAQdEAJ4SdPsZx3k38g9mg8S0BVMh7WDyfrqJI_N3aNdgsoCmakt_EgQIjE6it4oVPlIt4cKwSAeFOqHkLG85rD722vgvtDbdldlyb9pDJyG6FcLUg6Eg6QZ3EHFg7krrsKgV2SFBwHojAIRvLzJ75DYNotK4ozD9hXIepj8SfVxRgZq0poB_o2oXRChFBwVNHzdpXh5-1Gr-sKOd5Hg5uOlYdxPgTbdpBWuUWdVENFrE9lr83MHz1wl_QTg6rAH5tskx3BeGSfNz2q91KRrmN6S_TIsbTQSlzaTb2kIUM6M5N2JbqwpKUCuDLEtTWf2DofR9guklBf1CVAqBHK3IubfGuWP949wSMMBL8rWbWzdXd3X0wBAFaApkRR1tJNfMGsZKMX7fWwyKMeRhcooenumgLlTX1v94EGAo0sDzrpoasOf6vhCgzQOohF7LcGzR2_ZbVO0MPGTIzSgpQ2miMhaX0-SCuEKqlYAWsbri3u-OQE_wZ-3MRrMC5__eAzYEWergso84AispX74yvJtcWDCAOD61ouVs0m_6umHK94pgUMt2UjGZpIliBpr8Upg0EwCsSr8tSxDbhcZCWD7mb3mwwylzcowbAhxDrjrsIqhQcbJCr6y2RDqYVDBKNaerxxbyFR254PBSMX9T2H_sgE-eniHl1xO49rBZngMZ3j5vfGtTLxtsc6M-r6FqyDkKcHOysGApIOhbEpiDRVmTwrxEEp4gFjafrtHO7AohZZPUQ81WYkaNONxsCgrIb7Ep73d8wlfo5PWYquKe5s1vteMHS8tvn9xDHUmQdGqWFIdWON_emeGVdEqz9vtZyNS-7Cg28ALMkC_RDO83-d7tucPYbRO69RUqo_V3VntXF6gzoGI1RvUY5U_dtdfpCX8zdz9xMGnsZvXohwPkrNCa419GY9TiKf8DyyEg_EXjvfoJCbSPgSn0825vTBFljpq2h_w_F6bmQ60niyyMu5P_5MTxnXNaDNkkKV_74kUd1CZvGriARXC_AtZWLbHXRlePttOqspSXQV39F_q_MomDZqf17se74MZbPDZPmjGVxtrEyB3fS6wInA3Mt8T3jLOtHwUud1H4qOujviiHKftv9gHLRJTMWnlFicqHdJ0Uw4cGznIA44qT6X3dckJPzxCztbFkI6WQxZzal7t0vMq0addgI5w0QAr0Msd4-gszSkN2s3SNyogG8cikvS_0qrBe08wKWIPk32MAGbzk8Tg-jzmjvsa3fxWjRAKA3zv1NNB7hfAVUm-zqJCgKaUby2wUOSBuqc_ppEMmJtPB2cjP69g7SzuazxUcCY3z3DQyhyCFW73lhbonl0UGjr_BuKPfcNO87KgLDcNx2-WBwCAgPKS5lwUMSKSxtdoLqPQ2-pVo14_hSxd3o1RvXnaDSgwMaglDscPt040H89RqiZDRctNFVA8VcSlTIybQW8imu6seqjnz9QEPjm90UFGXjI-nIwCNcn4xvFfn_BQZdvGMhmyV8ssReaBfJQxlbEySbKYTp0upHkyQ1lQLbofuSAsBnNetdiGlfzHFwOyfGv7-OwDSDju23A3giXDzwMjbpE_DLfJ7YGxENndpFUmiQZ86EmRwwtMI3t8IUG3JCU4YnSCFD_rvbA5-RuPFmNrVm18-oLZhyLpGohwv5SJFS52qzqxjzBBY3tINswh19atzxKZoGucpwHRj3N_d0lLZUnk7Nb3ZGHi_uUAmmRE9gqndOTQes23wFn3wzu8kK1C01xW2gbMp3TWFobNGTune-5H5bYOrKwbvP72TYERwqbYuT9C0-G81A5ML8Pak7_h09gwOrPYGwHKhqU7w8M15rtdc1yb6E5Qi_MkUbR2vrW-FaosqksxgKwQM-dU1PFmmR2n0mNjaRvF_Pe82adx2nwL1Wjp_M3jkgTXajUVui8KXLzke5jclYpgbLPVdppHaYbKJOomSkC1iVlOoa67HGCFL00gRvrfawcQHt9dd3guO6NF_0_O1NVjJuEHszeLYqFdl5EnQcr6kZgYaTuEY9ALfmX7GTboMopoClLPMgAxUkmwE7M5MA7uEZk0K1MqVQapseygWFo9X8Qvx8zCwbeXu-2Fbh9qki_1u0b7qKCR8pYrF9j5L-AuqZNv07ncSJdaQb32wTseCf7UMBB2EmEkuMRIUvJCgBXXbOiBoKAxbwf5VSBuG7bs323iI7ueSlZtZDyibL3S8WUPEf2YdmydwOi9d_-QxwyZNNosb8Skclg5hjDuMdGxX4RA2f6c0GF_C0lcPsVTWQPoXrlVEAvi3sLm4m6DWcpze9Xg3ARQVcGAUJkS5miebhjwQaVOOISUk1sJo-Ro0umHItIbr8YTYRJJuL9TMpGvJizr4-ghFfNho52Pj1HXi7Etq5S1aVkD4jI-nN5ChtqvJRW0nIaOtRCqCJfFmlzC6iGRBj6oGWdMG6UB-fWOKo31dd-FsaItBDOVSioVflW70P3V3aJWn5XJ2Ir3QmXdCqxailRzlFqOEjm5lfgZgYSrUb7TDjmu1lps-BvZ3IuNYZ7merdrZ6EAUU0zPIZF5HUtNBtvdpYwx9gapUzsTE1P3s-c7ueg9FRUl6etRF47jcX-KwN8zm4o-R5vtUS0DVfh2CMv0Yeup_mugiLGr0Eu2GHB206kySqhuWwvgOjiF7BppMynMsVh2IIDC31MCDbI76yhBRanUu264i6OvmqI8pVLLWqNS8vQa1I1x9mM6xgd2ic7xZ2H49ist_rN53XARRuE_TbW5osMMwShNrSd72m9trv4Ng1ALXxwVjPZwNMLO-wwuC1dUmLxHcKDNcUSMzk1Ynu6VxAwx1X_Cr0pvU585ofuUDfr1Na9bKH10n4fftO3tyf0kGs8Jy5V4Lx-0B0PWOU0-TiLZkOgI5w4Pq0umXpFXnjdSPMnB8RnbzYKHA4HoX7QJqml63mu7mhg4gFKrv8GJy9u_3nkUpvgIApwT5ize4MCvm2muL0Bj_ynUQwfttiBoD2b29tDb6_0ql14gaVsYl51ydEhdVVR8a2jNts_0wQX5yE537cUXkO-_b9aToEgKjC0oMWOZ70OfcxTR3LfuwYzmn9kgaf6COdnZw8VemxHYITYL4r78cJSktXuXiET2Wk6yZQtrhJ4vhh_cNKNxEQV7tPi-Ee-FUzqFM8gqBB3ehTUl4P2Q1DBYr0gcM0SDtlMMdRyTgpHvb7DSfEsxr448ET80FWq42-3QSsm3mdedV4kPseVk6qGgZyuYDNXk7PGA5TQ7HVge6W2PGt4GVYAkRNN6_6AWb4pq1Vvl-TGnzUrdfbQx4l1XfWQA7ALi3BFR4JWr2C3McpNPhd6sv7qz5AWdZMwVJCapZAlR0OS37RwaYSYVhqXIL4lo0AVhzsMYWTR5vaQzzSDghZk9EkeENLw5r9GazugOoQxkZIv17_EHS-BmBacVcygEn3AFeJ-aSC6MXDMqH47I0sTTyx2JqUndsWGI-5id1aY3ZPLXgvhJp635p-BLo0sp2DDZGZMadhClsnB67iAVHZRfIjQXGjVxGVB7oHeM-MAKpIYnJIUue2F5NbPVqiZgnNypD7SUsUe53vPypD9BvBlZIZZn33_PAH8V7kVTFmlHmgDjBKuS0SyAPQjtIBfRHgKUtOH2aky7kKE4eEPCYkRWDHrnfI90VJ8SUgZllr6edPtVjV94foa2l9ErZpozfDHBN7XctLLb7wReD8QhNSJfj1-AMCZ_DwofrHR68cjjI2AhXqyilDxVYVuoUGnL1Zo_1dyc_2_nuU2xji-ZC27-SdvgZktFSG-sdH-w_V0Ny-o6woCt8IHjWr0bMkvR466QR_KpnehuYrz4OaJOUUmLqnhDlkjUoY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0e92119a887365b0016af620d84d3487d187fed13d77ed06ef",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 604,
+   "total_tokens": 2108,
+   "cost": 0.02564,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02564,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01812
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 347,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.49
+}

@@ -1,0 +1,136 @@
+{
+ "pred": {
+  "vendor_name": "Yoder Inc",
+  "vendor_vat": "928-77-9757",
+  "invoice_ref": "86602235",
+  "invoice_date": "2021-04-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 3390.85,
+  "tax": 339.09,
+  "total": 3729.94,
+  "iban": "GB71QJNA44395529511929",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Pond Scenery Fish Area Rugs Kitchen Rug Bedroom Floor Mat Non-slip Carpet Decor",
+    "quantity": 3,
+    "unit_price": 13.73,
+    "tax_rate": 10,
+    "net": 41.19
+   },
+   {
+    "description": "Nordic Braided Tassels Sofa Rugs Area Rug Soft Mat Palm Leaves Room Carpet",
+    "quantity": 5,
+    "unit_price": 186.54,
+    "tax_rate": 10,
+    "net": 932.7
+   },
+   {
+    "description": "Abstract Blue Gray Gradient Bedside Area Rugs Bedroom Decor Carpets Non-Slip Mat",
+    "quantity": 4,
+    "unit_price": 36.98,
+    "tax_rate": 10,
+    "net": 147.92
+   },
+   {
+    "description": "YILONG 1.2x1.7' 300L Tree And Birds Handmade Silk Rug Carpet Tapestry LH691A",
+    "quantity": 1,
+    "unit_price": 188,
+    "tax_rate": 10,
+    "net": 188
+   },
+   {
+    "description": "5x6 Geometric Modern Gabbeh Kashkoli Oriental Area Rug Hand-knotted Foyer Carpet",
+    "quantity": 4,
+    "unit_price": 310.68,
+    "tax_rate": 10,
+    "net": 1242.72
+   },
+   {
+    "description": "Victorian European Country Traditional Floral Floor Mat Area Rug Carpet Beige U",
+    "quantity": 4,
+    "unit_price": 178,
+    "tax_rate": 10,
+    "net": 712
+   },
+   {
+    "description": "Floor Mat Kitchen Bedroom Bathroom Non Slip Doormat Carpet Area Rug 180x60cm",
+    "quantity": 4,
+    "unit_price": 31.58,
+    "tax_rate": 10,
+    "net": 126.32
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 3390.85,
+    "tax": 339.09
+   }
+  ]
+ },
+ "cost_usd": 0.04649,
+ "raw": {
+  "id": "gen-1794515060-oXvxdKwPoCpxQIHG5uv3",
+  "object": "chat.completion",
+  "created": 1794515060,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Yoder Inc\",\"vendor_vat\":\"928-77-9757\",\"invoice_ref\":\"86602235\",\"invoice_date\":\"2021-04-03\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":3390.85,\"tax\":339.09,\"total\":3729.94,\"iban\":\"GB71QJNA44395529511929\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Pond Scenery Fish Area Rugs Kitchen Rug Bedroom Floor Mat Non-slip Carpet Decor\",\"quantity\":3,\"unit_price\":13.73,\"tax_rate\":10,\"net\":41.19},{\"description\":\"Nordic Braided Tassels Sofa Rugs Area Rug Soft Mat Palm Leaves Room Carpet\",\"quantity\":5,\"unit_price\":186.54,\"tax_rate\":10,\"net\":932.7},{\"description\":\"Abstract Blue Gray Gradient Bedside Area Rugs Bedroom Decor Carpets Non-Slip Mat\",\"quantity\":4,\"unit_price\":36.98,\"tax_rate\":10,\"net\":147.92},{\"description\":\"YILONG 1.2x1.7' 300L Tree And Birds Handmade Silk Rug Carpet Tapestry LH691A\",\"quantity\":1,\"unit_price\":188,\"tax_rate\":10,\"net\":188},{\"description\":\"5x6 Geometric Modern Gabbeh Kashkoli Oriental Area Rug Hand-knotted Foyer Carpet\",\"quantity\":4,\"unit_price\":310.68,\"tax_rate\":10,\"net\":1242.72},{\"description\":\"Victorian European Country Traditional Floral Floor Mat Area Rug Carpet Beige U\",\"quantity\":4,\"unit_price\":178,\"tax_rate\":10,\"net\":712},{\"description\":\"Floor Mat Kitchen Bedroom Bathroom Non Slip Doormat Carpet Area Rug 180x60cm\",\"quantity\":4,\"unit_price\":31.58,\"tax_rate\":10,\"net\":126.32}],\"vat_breakdown\":[{\"rate\":10,\"base\":3390.85,\"tax\":339.09}]}",
+     "refusal": null,
+     "reasoning": "**Deciding on date format**\n\nI need to extract JSON and follow a specific schema while parsing an invoice's image. The invoice number is 86602235 and the issue date is noted as 04/03/2021, which could be ambiguous. I'm trying to figure out if it’s MM/DD/YYYY or DD/MM/YYYY. Since it’s from a US vendor and uses a dollar symbol, it’s likely MM/DD/YYYY, so I’ll convert it to 2021-04-03. The date formatting is critical, and I have to consider how dates might have been generated.**Formatting invoice details**\n\nI need to determine the date for the invoice labeled \"Invoice no: 86602235 Date of issue: 04/03/2021.\" This might suggest either 2021-04-03 or 2021-03-04. The supplier is Yoder Inc., with a Tax ID of \"928-77-9757,\" but it seems like it’s not a VAT. The output needs to be in a specific JSON format, revealing the vendor's VAT as the Tax ID. I'll ensure unit prices and quantities are included, using USD as the currency and adjusting decimals accordingly.**Calculating VAT breakdown**\n\nI'm looking at a VAT breakdown with a base rate of 10%. The total is 3390.85, so the tax comes to 339.09, giving a gross total of 3729.94. I need to ensure I'm including the necessary lines without UM and that there's no due amount. It seems like the tax ID and client info have been ignored, so I'll finalize this using a JSON format that conforms to the required standards.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Deciding on date format**\n\nI need to extract JSON and follow a specific schema while parsing an invoice's image. The invoice number is 86602235 and the issue date is noted as 04/03/2021, which could be ambiguous. I'm trying to figure out if it’s MM/DD/YYYY or DD/MM/YYYY. Since it’s from a US vendor and uses a dollar symbol, it’s likely MM/DD/YYYY, so I’ll convert it to 2021-04-03. The date formatting is critical, and I have to consider how dates might have been generated.**Formatting invoice details**\n\nI need to determine the date for the invoice labeled \"Invoice no: 86602235 Date of issue: 04/03/2021.\" This might suggest either 2021-04-03 or 2021-03-04. The supplier is Yoder Inc., with a Tax ID of \"928-77-9757,\" but it seems like it’s not a VAT. The output needs to be in a specific JSON format, revealing the vendor's VAT as the Tax ID. I'll ensure unit prices and quantities are included, using USD as the currency and adjusting decimals accordingly.**Calculating VAT breakdown**\n\nI'm looking at a VAT breakdown with a base rate of 10%. The total is 3390.85, so the tax comes to 339.09, giving a gross total of 3729.94. I need to ensure I'm including the necessary lines without UM and that there's no due amount. It seems like the tax ID and client info have been ignored, so I'll finalize this using a JSON format that conforms to the required standards.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iCEZ94REhevdt16REnGrXQDi9uRyXY_OXz8jurDCGdE7Gykq2ll0fk5df5jaetuwnKDjWDimbp4HPiaffa90QdmsyfBRNc3Q74WT09RTD2QR2x4enwx-26K-XAPRHSXy3wt3gFcOxVff5ZTCxf8pnbLHOkBB8l5qmclPGulPzj4gh2kdFbmoRfFbI8JWnCxAZz_4i_5y9L1FaYKyVB0shd6vYey6mgcPtbU0QcrQm3W74f6CGD28LQrOCbQCrsp_chkeWSJh0edAnjcWU2nyYQ3i85kfjtxlwghgBx_0_3lbN0QHZ3-7T7TaMhtddNlAN16ewbiUuY1hFECm7MW9cD5cvbm8F0vhyhNEssvwImEyhQ49HIjUreNWRtbcoqjpWQP8ekS9mTaBlCshb08F1i936KOjbnv0CsYrQJM6xNMjKMQWDNsm8NVuxTompSTQ81CKUOLwsXaLQWBmgzTsES-o3m1QcYOFRwa6A9W0FII9Fhl-OaUZ_JCakXc_eneniYCBm7GejJF18FOYoDQvCT6ncqruK-yVlwBsj7a0KrfwTMPSfl4UG2jZpCq38YFa7LR3ulWxxmWIaQyq8tAnQWFzQqTfBMWAV7kqSXVRl79xQGoLinaKroBvbnQ8d0Q8gI-uuOypmivSjuvCE2Iu4cEOhgiH5nx5-Xnh0ziF4djDA2twwvXfXBCjKbrKBP2q2XctoxbrSCVZAQtNzFasG12LZOzBD2dXidg1vM_e9uA4WzTAYgkl4L4AkZfi2qor551LsHJ3wqvoPygfJ0D9ruijhvI_Btli0ug33hPwKT0x7UBXN-P8w73Ow4RR0I44wLYxFAEnbLo_EvIl2UPqBtNT4gU4jjhcivnOG-1xrdN9WwyabUjqTkIa8qO5IlVzkrlcAjR7huYb9hCwYyfE2cViEJGrkI6iURafBl9C3_YAYqsk25jLtgoLdHIMgugTScdsGUcRzMtAggIrB7GMkQi7XACjMsbIRCAIELGFSfj8IsuycFgLH2qOVhvxmWvXgRtmGK16FO4Oufs9bItBHXS-jBW9fRBrUdDAYO-QMzAUDm4xKSOUMHTUFa1P9IcuFH3OXhRMWxxtnqwQrVs2T5httKYs9o7-vWOu6vZGFbmQwBafMPviecVD1rD1ywtRF7t2EQG0BuA4FTY90hnJl-yY5Ve_pK3Pd7mRfDjpy6OAlpGbUgcPPpk0SOiVqPFObpFsBH07XT_BOtGTpzPFAvKCA5YJtG33TFXBpvs6dHlWufXHPXHDFHs5IT_dC4-nf2grZeWf9L-jW8XdBXpQmP02YiOMo38dzr6Q5UHCtp4_A7H-ezvWQPF9LbHyrV2kFbeguwpvI_BMh4TSAuwsh2lgEjGQLCoTumpjlfnKeTmC_qiNUIKJEPgU53XD98_iL7Dl4MA45LBxkmz6hwC3ubHlDWv1bJc7jlC1swTVa5ipTiw3V0Vk71CorXFdFbpsFAp6fxyryk2GvKjohoWqJkCbjBHFP_JPgJt2gKmyURHPeYf4xup-UTSY6ly-dZiK-B7QX0RWd6wEpgALQ3tfQnyxBXoAzBDBUBPPYyiMOnMDpWtXpqDz12zntIwgzarWodHBGPZp5O0VmAbqi0SU-0mBo6LqKnSfga1EgkYl7hoF8FGX3PPYGqc04LI-srbx05A6Twhos5nZbIfwLvG5XmYfhbguGggcd9cWZg8KxsMGAJl2dd8E6sreDvVbZZa40e99BCUYVFmK8j9gYKq-xemYDX6_JGFIsmM68puJKg8rKtOirPa37TBUHKEYAlbkIJvj2C8HFkDzVpg_dSfn5koughgkusTHZXsCrEzQzjc8jaq7Xk8HuQkr5X-9J5Tvt2vRnIQiXLTpEkv0cFgomgIxAPHKUTw9zoTRIpQS77Lc5sXfBwn2VU2LoMBObNTOwwOxvKYaCIyg8btqu7RC8UoJMPKr4sgsbwEIs5nZztEAsA7pNpp0vO1zSypILM0uerWSXMPPzmVNnTIjh6-SGyVnqYkJHwV8CJGZWoTbItGhIMCWYXGzZ9L4KZxNyMzPah7ujL-tV7P1cDoM7yceON0jq3YXClgn0X1VvXOSGirzQn9Zxc3Q8NJTl3fEpchRRySFDfqATUTbMgBJXB7eMWzTRf5U0SW_IGXts8tEf5mRAVA7glKRXx5M8Ay7BuqbfDTrPvQlB-1-SJAeGSl7E0j_WeviO-NA6rZPyk-XKD1SBBdA8A4duU9jHgyPVRu2AM_pSOfhnJaYPcUJ8dvzTADhzGJatAAd_fLFzPCidhfJus2ZlczCwBtk7AL-xD5Le2euDotE3ndTzzX43s9q9Pg4HKm60uzVEIBGT5fwCu8knaZduzwYeor7nCtSmgvNgB4rCrbA_JE6acATJLtaULSO0SyAeXawKY_4LGmer31JNLBqBP5pmtgdHGZEBqNu9ibIO8wX-YwwJMf8Sd6jlLmkkGl7UUjialadje_pmiEX42Ivoxb3K0xLzfXidTR9qqG2lKYMDXcohMvuCowZ3PlPOWSNIlf573KWdXcnfh626Ec7oPrJeMQ-QnqSsUHVnNkuF-awbvHPx9Twgu_cn5jvTMYE-q_7GP5Iwx54-Laqe5zYeWYjBHNNlLeY8IBBSVPBJC_XSD3tH4NntdQ1OfpExzoEqTOvMvX483MyLy6HuP775amwiEFJxJVVCHbeR41IzlgMoM7IX0hRCsfghtxuwdFcRl_uFAHqVVhXzVWH1PbvWkakY2UUEDasjS7NRa9T7grZJSvRdwL8i9vkMhCFSSJPtTh6ySKrJ671eAWIOeEBOIACytMEJHZB7kXV9GtnIUm31GN1bmv59xZPJvqG1Y7oGpseCW8C6-EEcTUeh8DkBFFIkV3KOrDzDRjHIp13unq_zaWfzjGsr_7TxGsYTto-eDXsRTgeQhNePcSPo5WtfVVd9zWAzoiO-T_y8yly0Hp0WjP27HihloE9kh8fvxw96TINYRFkuTXAdBKYxXeLN4XblQUZezj7cE7VgONVr4mbgpJBH_DS3zUpZ6X5G0_wHlEp4Pw1qhXn_GwlxGgoZn-7IZHOows26APSc86_3Pzb8U-bV5dgIlQeQ6ubGfpkp1SGU2e4awNCob3ho8LlxYLhtpG3EaDAB2i2dlcxG0CY9qO8o5acjPqwQJ2Orqj5Gn8Y-skwAOKsybSZtcSILOqqRLI0sF7cnK16_5o8IpXZ9ASogkNUOyYT90uuQf6giYzBxrqyIZqIuwDMl16AFv1E4v0puOHzOxdEZHfN8MqfHEXxRXsdMZpQAlUS1jRY8r4sFYsQ837q8X3DTshhJiaP1AY22h92U4Abk8c6l4KsJeGg4QisNfMZBF2QRwPZ4N12pa6ZHBhxvmPUYrPwwoDb2es-kcq3J0fk7PutZawpzSorRdp9Hx3Hv7Ipk711yrMaGRd7BZ8RR-RxJGoUyHEQFsSlq0HnavRikIJmCGkXGrV6_4h4xptxXcRAQdI1yMTDfHeFeGVcixHVexjkdFi1HCjSIcezLN2brBFc8snvxM0_EZYu1fhLkrmgZgQAsDdv3oFbSA7n-SPFZYb2htTZvqKJsnpatPow9_mD-vepL0rJwOsP-hcfHg9EANOlMTh9_OuJOBSJBT5TJSrqRfwv_J_xreOQZjYXX94EjRc1rINSY1bvZRTG6S19edB6dNoA7HlSd2mCLVX7wgl3EvSkrdNzogov2idJNS2eJzReMCqvitpwi_gaJWZOyyx2wm_D5mZm-PeMDkNKfmwI_3t-y2RQkZd9f6zbIYk9Ok1ia1sIFuFgFMFOUV98IlTgZuAUj0ue5IJ8lShCCea9QYN-2lVhwG1iWCnSGwtdPlLc_9ffdd15jHh8g6_iOMrDisQjI9VTDUkliHC99vJMp0bNk-t0Go8UyyxBqTuWkWa0qbCFHM4rEOjhPhGLzMQQQQ3SYX9GD2FlL1M7tzvN50kmPu3ZPfyHXil0H0xK1zQHLtIU76hH8OOD0uW4wkSS7MKWOpibME4dHwlpD45HRb4g2W48aPUU0TAoZK8QJ-GP7msC3DmvgnJXbrGU7JeblGtRezckVG6TL00LlXqo8_F96A3O1-k6tAuvWD2M2iW4KnfAI41Ex64mq1RddwfaYOLQ9kkD10jn84LYwuU1U2BbW2lh8QF34xxCsjj-oIaAGiWDjOZBk9Q8DwE2NEuHTcuykYyQJvRcT1rqRnxeDQf-tNjBnfObWb9P8HK4IVeHb536E5aMK6bisqiUv9khnc5MxXUCWLxxMxuOPSpEt6fDJSkUBSRCYCysRByyP8KiFz6Bneqp-n7QZLlPAfQf-ec3ApHkYs0BqlzhCsNIubtG1VuURijB9F-Z30fjHRWHc92QbvTOuX41hcMlOqbt5L3zhEDPI8kwB0aR9i-jgmir2-PSxW2RaGBh1TD8mf7oQ01qCGYcCPbagQlAXRKZYnhkE8VP_7b0NiKhohtX0onJ3xPUG3MEPPTN6c9hqAZTu9-D4B89e5fXyR1dX45gU6tMvlcKKqM9zbywvqlZ0I9TlXJUOoTHc2Jnb4KGtfiv72YIXcsov6a31SfTCh9ba3Inmhb3EXT_GkDT9PgbeTrbtjcMLkvoU7ONpv78NLPz6OfzwznpUDlErQiojkTyRl8LyWq6YhUqirhwet2Vysk_ZwhADjfyf9WendIvtH89ho-sb9GrvHlUJTVjMwOLKbed6vj2MqXoVavodftawXHvjxCawHMOxd-laiihEbRAJTiZbExUeBzHDH35WcXceMykO0aoJRGCa7ZshP0kYoNArhuYfXd1rvuLF1eb8UmrLXe3SQMIhxIcFps8FNPBhZN6QkoxzII7gsZhjqQzh2Ny4P7UhghtugPZOU23ZVhUSuf-_sjhnNtVkSXkF9Z_j9CTmGpCp2YkDymos_wIPrQNLV6vk_fDj7X1W75jnNmEefk_58PIj6slnnNVV1OTmvNhZ6vMprEeZRIdnLVzT35PV2QR4vIFPlo2ba0PhHUPc82kGR-n4mR2LL1X44vlcoViaqOkGu4HN8O5j8TB5jAlaRIZtOtmTIAulznATuzXl32Qbw2bDb7DSmqmhzwxQc-umYhNlVL-qUx3JLKtELqhXyaYl_jHZWj0qoI1-shCjOLRbJfiAC0qQZsyZi203fPeEmMXIdEbFnVjx3HRcbYzEgZL6SLHCdYPTB9MN_AdfFUney78hJ8J8I1QQ3BrNysKVelNJoke3tA6-7pJ8kWhPl64rey-XxlKjJWYXjltkVeKGnpb2XL6qmifEjN9OM-F8umgz51rjRbzcErwZZlJNCFhslSDSLVi9WoFRjiLpwFjKBS0u7j1oGJpXaoZVeplu-NsDLYkj46hwIpbt6E0Iwqi5vkGLDJvLydu_qNiH-kw8J0zl2B5ijLu8fFciMY1j-omk4AJCNOtFjYNUt4JkVvVjfxzm0rTLFCycR5xhie6SrjNj07pTBJVq4BTxM2gyzhkPhnBEiGwOzlaZu4uFxpWWz-2woWWlLdOM8wG2ZEpNNQBm_l4dnIsFmKZTy4rS74FJbUcW1nf5-OcoeaM5S-D8bDa5yuQxk2yCSZgTcKPwuSLmyQVDdZ17gEAlTpClTTRJ7ZGzTFlPbODydsJ4diT-OiPVEsZuTFf-LysxBAvaQJrkGEFhqaCb3oQ4E-OzPvs73QPAFtg9WqT9YCl5tp3RjCSZ8Vfri8beT44V5jrBjx_yDf5cbrndM16ICrTyFQoLMZ8CxQdmxHWBvcTzRPd7ennooSiNHcW4TH3O6PR_W7AriKhFaQPsZ-aK3xWd7mFJfaQfY-mPEupkEDdeLrL1aUGFVWy2QLwYNX84VCW9CNrmWWSRA18NLi3ZZzkUTs_wqUFy572YSQxunF1Db7zeZ3PtIDbv7wOrOmRXT9Jo3EuQCSz308gSBppMC79EmmgxjFD238FXwjzxXmhi2o5qJi0HoQwZYloDMa_iHfkqVwwSTcgFBuJQ3GiS5AMg-Dj5MirCp0gxoAMbZ2tbTP469eVbUh2-FOeWEM8lYeAOsqQEGKIwCPl6tCg7I14VGDkhzlmDC9SsHw87RLWOGlxYvnYKnadEnfygZTB8SUjNEkkzP2UpRgAw-XkPMc2TVSpS18tar74-GfNrLM2mfkmZGl8QAwHju3-m-C78pmiLtSk9fz0Hd5VY36pvNxYqPhFnppAH1FQVSm8sTrnwXQDaq2LFKqoPGQlspu1lQxGI9exVO93RDrPTeLJs1-5KeKOJd8J3g1NuEf_z7XgJ6WSwjueBX4vkOUwCQIBIMHMmEBtY929PpFYWd5PAdQmk8www8XFeR0PSKelsBd18Y0h0PySn5KnIh-dhmzTkqHGPs3h4zwbxQcl6qwUjtwXsigwmmTsvyy3oEfYE5zjXJwA4U-OzkOt-0r51i0403hwrq2kgoflsk77JWBC0OL0Xj3Fp8I-TjlW_PIHe6jWacs2Od5oBS-HIrh7Lj7MelBJ6guSzBFLmJ9Wt1ZqAQ3-Iw_6cKSC0-9kDw2h1gVv4T5Ljx1mHiorhermJDCTJ1MeQFeH4VQxep2hSBykcw328Wg099JC3JwVUc6zKWW5hk3WBSXQXXmsYQJG2zN9UVWuJGXWKCPVKH18chAiZjLcGKaSeplN_ks8qjpfdnyTBeeG2Eqo97S07fni5Bxv-maUcXk-zWONxupnpXsmnnkpWfAVJuaYj2PlwyHZ2lrUBDUlrjyUCHPF9PWfQ__ijUHGIfxnPTpBMH1W7vU1dR0H-FS57MeSOl5QFuFhxXFyIfU-EYNxmRXLy4TvdQRECP1slnQ1BrFT-r885vARvSlwyMH6SVeV-Wvh7KtUXAQ1VpAuVst_zcKpj9m0EIjM0l-1BKBNCW9XU5jPABzScfEehuPt9lJ75YT-2sZR0FSEXw2F7V05bJw0RMtCayVIqgzLnxS1FTcpNsq6fyNqwMIdVh1nB8Vbe7qG49oZvQpTEFyusvg-JVQquV6ZTbJ8r-NSt27bldJidMI2opjMB19eRMm30y-vEnZE5SE2yRUNp5xsoV6Yog-qi8v0f6TEOSFLiA4O34yBwh7B62Z4ZI6hEtBh2X3r5pAfYqI-Zuw_2TVez8_Xa3il1wr5DJeNhI2WVsM1rsin4Pl3ONJmg2_igb-GA85O431Hr23UVwaBw9kv6j3uE0FrPeSYcAWsthuU3I8NwHzu9VIOCNwSQjp5_bxEJDXVqsubISgTdhItibtIfDm7_Ws3yDmi08IAE6JaoMbGHKSd-_hddxq7UQj6UG0ff4xZzxkDVVlOZTBu6jZGjuNcdSvna6G8XGfM6tpJaDv19qgfCYhBUeSXatYNqewa6qEj_vOpzJOVrZfkdyWgKnmy7wOZdA009CMqwv00IK6wzU5Ua0M1mARzNku_-y2aHrOonzQbpE1IYtsGdAkBjfULyFlsbgtj-xxi7Iu-ygXJOBgSRnvs5cJpxeBalHcB-oeRWtfJBMQDEpW-9zW_9G5sIoujJV-Byb7eMHlsrTY94dL9w6hGwaM5tM5g0Qzqiei5tKovKl1JqoDFLZtfJ4qGGAWgdsu9wcIVF0BLLMs6pgWK90ZmkaXLAxHEU_DTooje-Pm4BZfPjR66_1c-JjWGA3z6jY7R7yC1JMyu2-QEW1yoJWE7RdHfrtwvH8byXRtfAiWm_tLTQgoAD1hfGB7VqfQf4ncMnxg7r_QPeMUoJfDR-8jebzMzeNw_MTcUXDRKoM3fjSNYPjTZzZgytUxDS2HYAQZZ80J48RMOep83Tsky9AS6QXG1GJ5plBtFpWLmAQJ4Zbhwr8lcV2r4sKsKAG0-DKjDOTAZ8Xh6nh9k3AoAiHfDT9JW5BLYBJa3GyDihpUj6jCIMkTUwVmqtkxEmI_H8aDehGGXj04KVSI5ggX3s6Y_LzdzfdRpNhe-K7FnovoZpBgAjaB41CEnFPj-tNYPsOr2MrsHL08tgmGJOcI0nxacUkvUzPPqMKqXHCETy8-nOakIPTr_f88FCZW-P8VuwC6qPg42N3LdlE6gQlSHa6gLiRGfqw-Moi1LqxDUrk0jObr5p6gKcUT4_oCrHwjSRrdKABf4CjbhaHVhl2OJWvC4xJHlozzHrpXRT9QmETxbazIA0lL_2EXfRT0KPv7dHTp1lXaVMrf_EE7WHd9AzcqyMewOXqleykVhZ3Zi7c7tH-UFl_iS-z2XjSDypnRfgXMedGt9cS6uThSCOFBWLb975fmAJxgk4eQ6sjICoQWXiwX0DZxvCczqcPo6J14J1izuA_Y-nqJjuTsWwWzdauMhD8oPe099eAn_ALahgVK8zUKUpo5gyxpgbDb_1fG64u8qn1CdMBKBd06YpDdKt_OExWokH-Y_xpGdiojQDf-5-SPjFmc64V3D3F8VhncZnrEYkJUARdEdn0BZ-acnF__521ujhbXIanHFgxtu4wCjhugqlvIZawyucoqTF9UfQ3wINNcxhsgPKimhH4nNGE61fSdFmAhOtbKpeTl1MBqq1WQENZxnkhj6YuvWz6F-Vp-IRWcZMEb-0oYaAoyJi2ckkeC5uMd9ZYsYNZOIfLrZIjHGrVGA2hlbjqyb9grG33HgCWd3E6ql4FAkLR7Z80UBnHn8GAsZvYmGBQv52_c_h_uXVbvv4mDyLwvXPhJuFKHRYIS5XCe5cwKtf8xo2_daeBVyMTg76J9LK7qINbzyNUm67yZWLd1PmG_q4tac37ZFE1N1gCSqcL0tadurMVpZ3ixdunpDNvSiQ-Xdzr6V7z-D2aY3pq8czm27OdtG3elWUDT2Is33An3hhn6AqXd1GUPveUi5KXN9kQwawETRfIJdz-CYdKcKbk8gyUSbQyb92to16PhjTEaLtwRge9IrIO4niYD4GEdL_sih9SdWsN-utMV0aTxm1s9HtQb0toPrlp-ecTbflEbKi-fmqvrAzwve1l1QuAhE6EVtrmvSJTxlkxoLDgtvq4tUPNZ3TlDyqqpogOk3nhN2TFn5xMeV3DCKtMIny-7kZWDaw52j7XidxM6iTIPBNR87NzTM5z_cWPf28lZOsLNpvEZNAmnHJbQv5Yh078Z05B0iH8qW_T5T6JtxybDujKqdIbNWuXkkeK92BaRGbyuAuy3_2IO9oWOqkkA11zyQcxb4q5QP5I6uvliqX6dKQQ_y5ZcKNQjnKkjstobXKH_7k2atrJqceuVmzdQeJ1BQWip2R1AlTuoF8FgXogcww5vjXisQh6OEhX2LBECSdh3XlIFk5FapW24Oc0U30QjwBUsZNLyZoZ5sv1qxtKd1BPE9DNtryBMU-WRkqP8GJVx8lWtU9ZCblMmqPFjQmtIp4fJ6lvJiIrBq4yUA4luzlaAA30venXIbvygGpUw49cfcccnHXEYEwZ284ytEO5RFyz1egiNkLOLEaeWibEoMpnZzikaAgI5IHXuu1oy7npgPDtNlDlZN-HTgTgCCUl0eYa_sWOIc4jCf7cRRADRqve6eTqPX2C7qn9AyUbu0A1yrxllSCHeseZd3uwEBHLuz-P9oVseCmNWdTA_Xunhlik4cV4ps82HRPHHAcJiTe491IhK_neoZmx0_FJ0SNBQh4M1NLO3A9Das-O4EpueZZnrBcRM67aLiPeXp5Sf_y2VW9QpVujzwnCTE-ZXu534dajnlmuEingfN5HRfAuUMMPexsloLjATYRl6eZ0Fef4pG2zbn6qI-7QA1MPZmXphJp9-_Xb0mF4bkzK4yZH2msBRvgl2EGSnxt-JdLqCLz_4MveOemblrlMCSaXd1rNtNwIwaRdrGOf2mMw9PwTDDRzR8NWnGTtYp1IOTKttsoGuVysBKFOaznH0n_07E9O4gM0DRLDFwV72Ks5s8PD8HfEnH61MmFvwxG8kLVnHI0Qfhjj3dQ9dQMuPhqbalR9AAq9B9iWD7wSWnygg5ef1vXCzqs6WBxWWaPFFNfA4Xw1T8E1TpkY-_DDAv-TwcLCn-MgZ0BduDyAsqCEyIgswKBQVddWlst8D4JQd0XcKCRlrOgiLWSFsEMIE-17bGJk26faY0o2qfwGPeFPzyxs1PNEgKYrM7RIKTZTO5E_4hCKHesMq-uI5FV5DVFPQVaj5KGpePpZGYWyRrskOUJJR_Ha0R-RmzETLdZCigYuA5A_aYj-7t9VfUCz3HPWO8NRvM50uszusSJ9Y5VhaSw0kgySxujaivrRi3P_CJ7VRAM6m09oB5KaNZDNPOy_TwxCvi7GaLWSSO3Vrc7W5ghfsAmlhf4Fan1PKo1NDsUl8COKBAEdEKvXYnjA3RYjVyl83OiK8Q1mCc92tfvKQ-P1uE4snGv8FibCf4SS7z8mX-q16hI-49-8SCdGy6v340j_1PvesPg2wv1fuu5G6H1uwRrUHbLu32ioY8kzwz2YPBZYSAnM54kZDEejvqttumxwmjCZ8qlJDq0RwSM5RjlNsH90ITwY8RnqP1J97mGvGlUBG4_cSxR05SD-JY7QEP3aeFpRvvKr1GlhXLSsrrzRlWo-uq7yRNlDuNvPk9rJosliORcF3x1Ex-zs7_GqUyF_qxyjnx_KPt0cw8-fKjloMITCGP1mVeAbFPhi9Jbt7CE4pp83bs7b8TGhyzDJJtLfZPVsS4NQlLA9u7rv36l5_wH2XoHcFJzbK0E_ZvX5QxkQpy7XbZ5s3RqnMAvVMkVIW-XIvTs5U-c9twOw7pEXTxyoi96hvduLVMdO74qHtrdoI1PRMhGtBHSlNZTKFDn893BbYgxehY9rdKzUq5GJ9HwuWxGzVlAHZTf0pbMbERmXKh_L_UrveVzM2G0OKHxyHbRq9kpbkCnwl900zgRcWA03VM7EZoggAMXNIRzjIlPIz1ILtL1dHhTcqvLqe-bu7KGDGtBPCxSbQ3vqaifWeyyb1gi-OoD7YMikExIh-scI_V7_Bc7_3NtxK9yF_u4VZDWCl7b3_2U5fCcSn3DPghsuuBmye169txGAeG8-uJXNyCenpE6F-dOBp0ai-JSghFtOQfMSyC9VTUeocZ18v8tLZZpkIlaUSjlNxnFr886cqNLULzBemHvPcyIj00yzRbADoIy7LF2VMo7n0QtOrQ35xWcxJqxSeOKCNrao72eXn8ngWJjLw5cW3gkwChYT_7nGrkf7VS8w6oZK9ejY3J6dVv9JJdwDsL81eCrpoBbYzIvn918BOo_fznoZuxcxQ4AHAgnBIlJIMdGmCf8EMRSVD39ggxF1pdkOq5e9os8M55Cg1Cd9bgQxkT4I4AGpbSFfRDVD0aakaPHSg97GFJavXVh24cmbAWd078cBgWOFV5bkEZ59YH2Y-0CXphkwx3u7rXV5mgRrsCTGUnhevGSEKd-9iK45q9o75aNTfQg6RfjWA8zpP_8WEGNNWTHKkxq4T4Q40l-vOcjoTDxZwts_CZc_3MQE9LwUkUahHyoRnQQt1egH-ZvclaEXgL3xbn5UUW385vP-UtCjuD1x13EHe6ev4jFG7SVR3RxFn-ZfxluY_lpDjkDGh6i1EEdO7AxJXTOVUKDwSWsmgZnfXQKv7kz7tU-6PL9mkDV2nmeLOMhVvkA653fd3tpecUGOa2kgXRqlbj9E398PwNgiuVoikmPsRdiodoGoHhi87q19CVijbfiS2CMIsSCvTCy0Gq9peRboLMgn69NBV1nineB2aTc_XttBM9uxswvCrALMetMWu0SFED6I2jZ2pTMcQQVmVjkMc1C3u4JBWqyrWdSTzBefxbDo983k6EbY_pxZYRUUN4rsBf-Yiqj_hDwiN9iF2UvFCnr5-a6lN2_DJyW9SdI7Am_Qo89DeyE_uSMhUPwqUJjtTqdRGDsj5VCS9ejDWb-1Wj2cwC7nDkVz2QKzvaIbcdMeNwkD9CzaLt5bAWVhE74tuvtQzhNw_X8gUMPww3fnnujJ2Eal5cRIwV85h7CBzRkiwyUSAMirVgF1kWp_XbWlRog2PC2i5gZI4Bgz3lB694mQldDDSG_k3yCOZ3UH8UBWv72H4DtIReRjK2IP1uClr5C41wQK_pxHlztBqo9EVHIC78g4YGtPlcbG0939v9Kv9NoKVER3Xets-xIIFSLfugbPRlF8e7kexqKYblJ-uHF-M0YMsw5G1AHEPpU7yA5_MIzqPuGutCWpzOaT2ISmbFQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_047fbfa94ca746a2016af62076101887d181538f797d87a182",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 1299,
+   "total_tokens": 2803,
+   "cost": 0.04649,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04649,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.03897
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 884,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.03
+}

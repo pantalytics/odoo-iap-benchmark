@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18030302170430",
+  "invoice_date": "2018-03-03",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.74,
+  "tax": 0.46,
+  "total": 8.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR I00100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 6.7,
+    "tax_rate": 6,
+    "net": 6.7
+   },
+   {
+    "description": "SR I00100000015- Vegetable",
+    "quantity": 1,
+    "unit_price": 1.04,
+    "tax_rate": 6,
+    "net": 1.04
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 7.74,
+    "tax": 0.46
+   }
+  ]
+ },
+ "cost_usd": 0.023924,
+ "raw": {
+  "id": "gen-1794513498-Sm38xNkFBmu7UdEdrVVT",
+  "object": "chat.completion",
+  "created": 1794513498,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18030302170430\",\"invoice_date\":\"2018-03-03\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.74,\"tax\":0.46,\"total\":8.2,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SR I00100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":6.7,\"tax_rate\":6,\"net\":6.7},{\"description\":\"SR I00100000015- Vegetable\",\"quantity\":1,\"unit_price\":1.04,\"tax_rate\":6,\"net\":1.04}],\"vat_breakdown\":[{\"rate\":6,\"base\":7.74,\"tax\":0.46}]}",
+     "refusal": null,
+     "reasoning": "I'm working out the currency and tax setup first: it's a Malaysian receipt with 6% GST and prices already including tax, so I'll report amounts in MYR even though the printout shows a $ sign. Next I'm pulling the vendor name, GST registration number, invoice number and date, plus the untaxed, tax and total figures. Now I'm checking how the line items net out against the inclusive prices.\n\nI'm checking the line-item prices: 7.10 and 1.10 are printed tax-inclusive, so I'll divide each by 1.06 to get 6.70 and 1.04 before tax, which add up to the 7.74 untaxed total.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working out the currency and tax setup first: it's a Malaysian receipt with 6% GST and prices already including tax, so I'll report amounts in MYR even though the printout shows a $ sign. Next I'm pulling the vendor name, GST registration number, invoice number and date, plus the untaxed, tax and total figures. Now I'm checking how the line items net out against the inclusive prices.\n\nI'm checking the line-item prices: 7.10 and 1.10 are printed tax-inclusive, so I'll divide each by 1.06 to get 6.70 and 1.04 before tax, which add up to the 7.74 untaxed total.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS/wgKEAgTGAI4AUIIdGhpbmtpbmcSDPNWWzfJcJXE9xHIQRoMOKLJ/HivX3rhewOoIjDjwjGASUCTMyHdpPwkjsQ65P5j1Jqz6wvrK/C68GcatA23ddkJOzfaLvMm/v5Rz8YqnAglopI3Uhrhd+JUqFtIYG1CDa8VJaCY15xOFCrcvzS20LP7zYkGbN6hXaxigug3koV1+IXFhWW3ChT3XWt5oRjCPMHVjiTJLJiVorEazLZXSDLyrqF01gaHqrgQZ5q+9HgskyOgzHQzLZ9pcJ7bFVMnnbcgGzh+UcOKhK6pSk/zAyAsqNbEITjxrgLq04H+x+qZdUdzy4Us93orb/8dBCY12Exw5ClX/ZUw39nAQ3o66fm0Pb9d9QNBoonQc46hEU2+5hvsehJEgbpIq/Impkr+lBnLp0DmV0F4CcwLlfJh7pfCzovU7GOjZASYXvSMfWKNaq8f2SQFJ9mOqvfFj54KV9kIW/5zgtDlEZyrvZ9Sw8T4DjCim95HrJrZ65+Z4FsA0i6G1ukKFQAO5l9ab0tbpmjrwylchutVHsB5sKy/sUgVG2j1QZjWQuXb+J+jiGCO3cHcdP6C7bdAIdvAYm8oe51gwOPmLyOz/spajAasRiYH7Sai1XYtbuWIX3p8Vy7Fxu3uZ3C/LJ4NB4zgRYg/su4n3RUA0/0rYCUiwTUCVjgRFA3LCdZo7PfEI5XW98SqLxUoBRu/EaXeVpvqBMlIaREZAPrkn/eC9635zEcpcRpTPGDs0p48OcV9+MACGDJZ0rFA1vjvER5PJhWaFcmR2ufPy6H1EymaFes/6jgyOypaulFi5N6fIc/oH4/Wz/uBf4rGDCm4IwZlF/qIZkf3iajQ7aj6keRI/RKskxeDJufoKDO4xoPDSm3N0lup5mD4bpxaL+HuiUYmzXwaCikftbKqDldYH3cr4itQTFAp8lsipTRgEwDd9SY/fpLgp1itHa3a7XzaD3Cwh3qYxLMBQQE7M3RZiQqrVnKtrOCzViEgAHhmQI61uBCkxhAkJ7z0pZbGRM45G495TIlIdC82ZP/JG2xrecWNcoqtHOC7yBLXkrkYaE5LaTkfARlf3YXTE2oC8I3HhDsy1o+vJ56j5bI3Ndc/jVtz4pSL5SpAp5R6kgpMeh0Cwfk4kfrCKCEPPhObHFuqLzLOzc6N4bioLe6CljeCYW0IrEWQcPVC7XQWeg7l+BMgAQhf+a/zGu36NggnhpKClI1v6xzJThyN6rfMhvsOrbEl8Jq2W5SxpbKTdbHk41/4NUiyV0EcUr/qtmBWsOfvs7fiZ9KNe+sKkaDTEQle9r20t+kXV9IwyGqzTwBSbo+H09bHbNpOFCyICbCOJ/dDWcAixHzQ7XZPMLyewcEGGnD6O1ysSB2ENefwlS0gAM/98xkUACY7wPccmuUscuFNncMK5etifbnBZBSslcwGe+zpuQ8rPbEc3X1ngOj6B2+j9vgntefgXDms2D3QA5xFygI9wx3F6Q0RxfrpzcwVe72YzxNSS7kgF4Yt38U0KTat3H/lLxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 560,
+   "total_tokens": 3741,
+   "cost": 0.023924,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023924,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.0112
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 277,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.37
+}

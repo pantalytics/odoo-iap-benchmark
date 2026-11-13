@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "RESTORAN WAN SHENG",
+  "vendor_vat": "001335787520",
+  "invoice_ref": "1040841",
+  "invoice_date": "2018-03-12",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.62,
+  "tax": 0.38,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Cham (B)",
+    "quantity": 2.0,
+    "unit_price": 2.2,
+    "tax_rate": 6.0,
+    "net": 4.4
+   },
+   {
+    "description": "Roti Steam",
+    "quantity": 2.0,
+    "unit_price": 1.1,
+    "tax_rate": 6.0,
+    "net": 2.2
+   },
+   {
+    "description": "Take Away",
+    "quantity": 2.0,
+    "unit_price": 0.2,
+    "tax_rate": 6.0,
+    "net": 0.4
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 6.62,
+    "tax": 0.38
+   }
+  ]
+ },
+ "cost_usd": 0.0319275,
+ "raw": {
+  "id": "gen-1794514800-9deGcHWVpXySAgRrOs10",
+  "object": "chat.completion",
+  "created": 1794514800,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1040841\",\n  \"invoice_date\": \"2018-03-12\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.62,\n  \"tax\": 0.38,\n  \"total\": 7.00,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Cham (B)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 2.2,\n      \"tax_rate\": 6.0,\n      \"net\": 4.4\n    },\n    {\n      \"description\": \"Roti Steam\",\n      \"quantity\": 2.0,\n      \"unit_price\": 1.1,\n      \"tax_rate\": 6.0,\n      \"net\": 2.2\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 2.0,\n      \"unit_price\": 0.2,\n      \"tax_rate\": 6.0,\n      \"net\": 0.4\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 6.62,\n      \"tax\": 0.38\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Restaurant Data**\n\nI've successfully identified \"RESTORAN WAN SHENG\" as the vendor name and \"001335787520\" as the GST REG NO, fulfilling the initial JSON schema requirements for the receipt's details. I'm focusing on key data points like vendor name and VAT for now. The next step is to locate other important pieces of information.\n\n\n**Populating Receipt Schema**\n\nI'm now populating the JSON schema with more extracted data. I've successfully grabbed the invoice number \"1040841\", and the invoice date \"2018-03-12\". The receipt indicates a cash transaction, so the due date will be `null`. The currency is \"MYR\" based on \"RM\".  I've found \"6.62\" for the untaxed amount, \"0.38\" for tax, and \"7.00\" as the total. I've also noted that IBAN is absent (null) and the VAT treatment is \"S\" for a 6% GST. I'm moving on to extracting the line item details. For example, for line 1, the description is \"Cham (B)\", quantity is 2, and unit price is 2.20. The tax rate aligns with the \"SR\" code (6%).\n\n\n**Refining Data Extraction**\n\nI'm now refining the data extraction. I've successfully extracted and validated `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, `total`, `iban`, and `vat_treatment`. I've extracted the line items and discovered an inconsistency in the initial `untaxed` value, which I'm re-evaluating. I'm cross-referencing to address this discrepancy before summarizing the item totals.\n\n\n**Revising Tax Calculations**\n\nI'm now revising the tax calculations for each line item. I've re-examined the receipt and determined that both unit prices and the \"net\" amounts are inclusive of GST. I've been working to calculate the exclusive price for each line, which involves a slight deviation for each line to address rounding discrepancies. I am ensuring that the subtotal is consistent with the GST rate and value.\n\n\n**Calculating Exclusive Prices**\n\nI'm now calculating the pre-tax unit prices and line item net amounts. After analyzing the receipt, I've determined the provided unit prices and totals include GST. I'll divide by 1.06 to obtain the values to input into the schema, and I'll confirm the values are reasonable, to maintain alignment with the specified GST rate. I will also make sure the subtotals are consistent.\n\n\n\n**Finalizing Receipt Details**\n\nI'm now finalizing the receipt details for the JSON schema. I've extracted all required data, ensuring proper formatting and handling of missing values. I've re-calculated the pre-tax unit prices and line item net amounts and validated them against the given GST rate. A small rounding adjustment was made to reconcile the line item totals with the provided exclusive total. Now I will submit.\n\n\n**Finalizing Line Item Values**\n\nI'm now extracting the required information for all the data fields. I've re-examined the receipt and I'm updating my approach to calculate pre-tax values for the unit prices and line item net amounts based on the GST amount. I will perform a small rounding adjustment. Finally, I will submit the output.\n\n\n\n**Calculating Exclusive Values**\n\nI'm now calculating the pre-tax amounts. After reexamining, I've confirmed that the given unit prices and totals are tax-inclusive. I will divide by 1.06 to obtain the values for the schema, confirming they are consistent with a 6% GST. I also ensured that I addressed any rounding to keep the subtotals consistent with the GST rate and value. Finally, I ensured the output totals match.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Restaurant Data**\n\nI've successfully identified \"RESTORAN WAN SHENG\" as the vendor name and \"001335787520\" as the GST REG NO, fulfilling the initial JSON schema requirements for the receipt's details. I'm focusing on key data points like vendor name and VAT for now. The next step is to locate other important pieces of information.\n\n\n**Populating Receipt Schema**\n\nI'm now populating the JSON schema with more extracted data. I've successfully grabbed the invoice number \"1040841\", and the invoice date \"2018-03-12\". The receipt indicates a cash transaction, so the due date will be `null`. The currency is \"MYR\" based on \"RM\".  I've found \"6.62\" for the untaxed amount, \"0.38\" for tax, and \"7.00\" as the total. I've also noted that IBAN is absent (null) and the VAT treatment is \"S\" for a 6% GST. I'm moving on to extracting the line item details. For example, for line 1, the description is \"Cham (B)\", quantity is 2, and unit price is 2.20. The tax rate aligns with the \"SR\" code (6%).\n\n\n**Refining Data Extraction**\n\nI'm now refining the data extraction. I've successfully extracted and validated `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, `untaxed`, `tax`, `total`, `iban`, and `vat_treatment`. I've extracted the line items and discovered an inconsistency in the initial `untaxed` value, which I'm re-evaluating. I'm cross-referencing to address this discrepancy before summarizing the item totals.\n\n\n**Revising Tax Calculations**\n\nI'm now revising the tax calculations for each line item. I've re-examined the receipt and determined that both unit prices and the \"net\" amounts are inclusive of GST. I've been working to calculate the exclusive price for each line, which involves a slight deviation for each line to address rounding discrepancies. I am ensuring that the subtotal is consistent with the GST rate and value.\n\n\n**Calculating Exclusive Prices**\n\nI'm now calculating the pre-tax unit prices and line item net amounts. After analyzing the receipt, I've determined the provided unit prices and totals include GST. I'll divide by 1.06 to obtain the values to input into the schema, and I'll confirm the values are reasonable, to maintain alignment with the specified GST rate. I will also make sure the subtotals are consistent.\n\n\n\n**Finalizing Receipt Details**\n\nI'm now finalizing the receipt details for the JSON schema. I've extracted all required data, ensuring proper formatting and handling of missing values. I've re-calculated the pre-tax unit prices and line item net amounts and validated them against the given GST rate. A small rounding adjustment was made to reconcile the line item totals with the provided exclusive total. Now I will submit.\n\n\n**Finalizing Line Item Values**\n\nI'm now extracting the required information for all the data fields. I've re-examined the receipt and I'm updating my approach to calculate pre-tax values for the unit prices and line item net amounts based on the GST amount. I will perform a small rounding adjustment. Finally, I will submit the output.\n\n\n\n**Calculating Exclusive Values**\n\nI'm now calculating the pre-tax amounts. After reexamining, I've confirmed that the given unit prices and totals are tax-inclusive. I will divide by 1.06 to obtain the values for the schema, confirming they are consistent with a 6% GST. I also ensured that I addressed any rounding to keep the subtotals consistent with the GST rate and value. Finally, I ensured the output totals match.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3153,
+   "total_tokens": 3471,
+   "cost": 0.0319275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0319275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03153
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2791,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 23.63
+}

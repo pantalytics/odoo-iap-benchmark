@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001--539829",
+  "invoice_date": "2018-06-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 52.0,
+  "tax": 0.0,
+  "total": 52.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Omellete Item",
+    "quantity": 1.0,
+    "unit_price": 15.0,
+    "tax_rate": 0.0,
+    "net": 15.0
+   },
+   {
+    "description": "Vege Item (S)",
+    "quantity": 1.0,
+    "unit_price": 10.0,
+    "tax_rate": 0.0,
+    "net": 10.0
+   },
+   {
+    "description": "Rice w Seafood /Meat Item Single",
+    "quantity": 1.0,
+    "unit_price": 22.0,
+    "tax_rate": 0.0,
+    "net": 22.0
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1.0,
+    "unit_price": 5.0,
+    "tax_rate": 0.0,
+    "net": 5.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 52.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0250575,
+ "raw": {
+  "id": "gen-1794514438-yLsH0nw9bEwrcCTRXIEi",
+  "object": "chat.completion",
+  "created": 1794514438,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\n  \"vendor_vat\": \"000670224384\",\n  \"invoice_ref\": \"V001--539829\",\n  \"invoice_date\": \"2018-06-05\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 52.0,\n  \"tax\": 0.0,\n  \"total\": 52.0,\n  \"iban\": null,\n  \"vat_treatment\": \"Z\",\n  \"lines\": [\n    {\n      \"description\": \"Omellete Item\",\n      \"quantity\": 1.0,\n      \"unit_price\": 15.0,\n      \"tax_rate\": 0.0,\n      \"net\": 15.0\n    },\n    {\n      \"description\": \"Vege Item (S)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 10.0,\n      \"tax_rate\": 0.0,\n      \"net\": 10.0\n    },\n    {\n      \"description\": \"Rice w Seafood /Meat Item Single\",\n      \"quantity\": 1.0,\n      \"unit_price\": 22.0,\n      \"tax_rate\": 0.0,\n      \"net\": 22.0\n    },\n    {\n      \"description\": \"Beverage\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.0,\n      \"tax_rate\": 0.0,\n      \"net\": 5.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 52.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI've begun identifying key information to populate the JSON schema. Specifically, I've located the `vendor_name` as \"ONE ONE THREE SEAFO OD RESTAURANT SDN BHD\". I'm now moving on to locate and extract the `vendor_vat` from the document.\n\n\n**Populating the Schema Now**\n\nI've successfully extracted the `vendor_vat` as \"000670224384\" and have moved on to `invoice_ref`, which is \"V001-- 539829\". Next, I'm formatting the `invoice_date` from \"05-06-2018\" to \"2018-06-05\". For the due date, it will be `null` since this is a cash payment. I am currently examining the bill for `currency` information.\n\n\n**Finalizing the Schema**\n\nI've now populated the `currency` as \"MYR\" based on \"RM\" in the GST Summary. Also, `untaxed` is \"52.00\" and `tax` is \"0.00\", while `total` is \"52.00\". The vendor's `iban` is set to `null` and `vat_treatment` is \"Z\", based on the 0% GST rate. I've begun extracting the line items and am now working to verify they all make sense within the schema.\n\n\n**Verifying the Line Items**\n\nI've carefully extracted and validated each line item, paying close attention to the descriptions, quantities, and prices. I am confirming all calculations are correct, with a final check of the net total to match the \"Total (Excluding GST)\". Everything aligns.\n\n\n\n**Finalizing the Extraction**\n\nI'm now putting the finishing touches on the JSON schema population. I have confirmed all of the data and I am constructing the vat_breakdown object: 0% rate, a base of 52.00, and tax amount of 0.00. I am now combining all information for the final JSON.\n\n\n\n**Constructing the Final JSON**\n\nI am now assembling all extracted data points into the final JSON structure, ensuring each field aligns with the schema. I've re-examined the line item descriptions, as the OCR was a little messy, and I've verified the \"SR\" in the document stands for \"Standard Rate\" but corresponds to the zero-rated VAT category \"Z\". The final JSON is now ready.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI've begun identifying key information to populate the JSON schema. Specifically, I've located the `vendor_name` as \"ONE ONE THREE SEAFO OD RESTAURANT SDN BHD\". I'm now moving on to locate and extract the `vendor_vat` from the document.\n\n\n**Populating the Schema Now**\n\nI've successfully extracted the `vendor_vat` as \"000670224384\" and have moved on to `invoice_ref`, which is \"V001-- 539829\". Next, I'm formatting the `invoice_date` from \"05-06-2018\" to \"2018-06-05\". For the due date, it will be `null` since this is a cash payment. I am currently examining the bill for `currency` information.\n\n\n**Finalizing the Schema**\n\nI've now populated the `currency` as \"MYR\" based on \"RM\" in the GST Summary. Also, `untaxed` is \"52.00\" and `tax` is \"0.00\", while `total` is \"52.00\". The vendor's `iban` is set to `null` and `vat_treatment` is \"Z\", based on the 0% GST rate. I've begun extracting the line items and am now working to verify they all make sense within the schema.\n\n\n**Verifying the Line Items**\n\nI've carefully extracted and validated each line item, paying close attention to the descriptions, quantities, and prices. I am confirming all calculations are correct, with a final check of the net total to match the \"Total (Excluding GST)\". Everything aligns.\n\n\n\n**Finalizing the Extraction**\n\nI'm now putting the finishing touches on the JSON schema population. I have confirmed all of the data and I am constructing the vat_breakdown object: 0% rate, a base of 52.00, and tax amount of 0.00. I am now combining all information for the final JSON.\n\n\n\n**Constructing the Final JSON**\n\nI am now assembling all extracted data points into the final JSON structure, ensuring each field aligns with the schema. I've re-examined the line item descriptions, as the OCR was a little messy, and I've verified the \"SR\" in the document stands for \"Standard Rate\" but corresponds to the zero-rated VAT category \"Z\". The final JSON is now ready.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2466,
+   "total_tokens": 2784,
+   "cost": 0.0250575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0250575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02466
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2028,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.03
+}

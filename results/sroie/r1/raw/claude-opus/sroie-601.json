@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "99 SPEED MART S/B",
+  "vendor_vat": "000181747712",
+  "invoice_ref": "18291/102/T0163",
+  "invoice_date": "2018-01-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.33,
+  "tax": 1.57,
+  "total": 27.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "973 COKE LIGHT 500ML",
+    "quantity": 2,
+    "unit_price": 2.08,
+    "tax_rate": 6,
+    "net": 4.15
+   },
+   {
+    "description": "5581 SPRITZER MINERAL WATER",
+    "quantity": 1,
+    "unit_price": 22.17,
+    "tax_rate": 6,
+    "net": 22.17
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 26.33,
+    "tax": 1.57
+   }
+  ]
+ },
+ "cost_usd": 0.025964,
+ "raw": {
+  "id": "gen-1794514209-GoTHD6k2b953Vgyhf1Bo",
+  "object": "chat.completion",
+  "created": 1794514209,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"99 SPEED MART S/B\",\"vendor_vat\":\"000181747712\",\"invoice_ref\":\"18291/102/T0163\",\"invoice_date\":\"2018-01-28\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":26.33,\"tax\":1.57,\"total\":27.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"973 COKE LIGHT 500ML\",\"quantity\":2,\"unit_price\":2.08,\"tax_rate\":6,\"net\":4.15},{\"description\":\"5581 SPRITZER MINERAL WATER\",\"quantity\":1,\"unit_price\":22.17,\"tax_rate\":6,\"net\":22.17}],\"vat_breakdown\":[{\"rate\":6,\"base\":26.33,\"tax\":1.57}]}",
+     "refusal": null,
+     "reasoning": "I'm treating the printed line amounts of 4.40 and 23.50 as GST-inclusive, so they aren't the \"before tax\" figures the description asks for. I'm checking whether backing out the tax gives a clean net amount, and the rounded results come to 26.32 against a 26.33 total, which doesn't quite match.\n\nI'm weighing whether to keep the net figures at 4.15 and 22.17, which sum to 26.32 rather than the untaxed 26.33, and I'd rather not nudge 22.17 to 22.18 just to make it match. The unit price for the 2.20 item works out to about 2.08, and the water line has quantity 1 with a unit price of 22.17. I'm also noting the vendor's GST ID, the company registration number, the currency as MYR, and the date as 2018-01-28.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating the printed line amounts of 4.40 and 23.50 as GST-inclusive, so they aren't the \"before tax\" figures the description asks for. I'm checking whether backing out the tax gives a clean net amount, and the rounded results come to 26.32 against a 26.33 total, which doesn't quite match.\n\nI'm weighing whether to keep the net figures at 4.15 and 22.17, which sum to 26.32 rather than the untaxed 26.33, and I'd rather not nudge 22.17 to 22.18 just to make it match. The unit price for the 2.20 item works out to about 2.08, and the water line has quantity 1 with a unit price of 22.17. I'm also noting the vendor's GST ID, the company registration number, the currency as MYR, and the date as 2018-01-28.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSlAsKEAgTGAI4AUIIdGhpbmtpbmcSDA8ztn6m9eUTfAQR5hoMZyJ1H33mXBJruKRnIjDiUQLmutjfzxBMxe34CaAqMurne+krt7gojyGShoUtEdczlk0VkHEwJ3d2efOlg3UqsQqkmg4/nOaS1Cm+q1T6OqUa/A4Sd4JkwqMG4uAqUJj3SIGFF968oeV4kPDysPYEJjP+jOEt64OWfqU36y+qnZRPlxJuAcWd/06MBrAXhNLiK0XyMggkbuKu6SgKIz9TA39gE6RUc35aSF7xjbBFrD9MZtJS3zxy4SFKUCP0NISRqSfK2JL/El26hXtFP9GRfHLOrCuHfzhGexn6gqhuadhix8NUny3IuXnpshKQyqAxdF8R9k9VlAQ03AR9zgHUdH4g5vaZUrCGdT0DNG2DiWoyESx1t1ZbM1h5JqY/U99cSIkJa+Eb0v0ZQpIJCHBnEZlBaGgoATMOFayftSmH+qZwVavwntwDDMTWnSFeYDuYg5pvVzetgnIV5oM738Ja5KjhJZaWjUdPfYRshPiHCm7OIByVFT1IYuzSKG5TeH/fe7wQxj+kdbIl01nDBgxlmImbsfFohxdbt22xgzv6rKj+la8bgMk6swkv7CqS4vaYyaMgzuiBMBTJrhfgLAgvHlvlw5Cy9Q7cH5M0x6guQ/X2G2/YANqQFs/DGnRQ1JleNkGAYOEU7fvAnqE3tChvVS7HRXDv7yzFhxuPvcb3ID0AXaxFtytQ37b8JkSqkfXbu4Mn8tm9wrBYVQQMfrxb0u2Rp92SwrG/Hva6TroZwD5bt5x+iFavBpjHWdoolC7Zcl7iPC7OUbGw9yMjSUteF9AutaXtnBo9DFqCsaHazX3UETTta8VjoNLJMUCDOA1vZDa5duSZJnmLplZu0l4NIgIX6gds02QAhceTAuakmRWesERQ2XLzx54J08Zj0husQ87ixan+RBGcDK5IwfVG4y0PaHmsBtgXgAGqwU/NsZe0cL8NwBYZqBaIsFmaLcVxmbTCVL896y70cVzrxe3POx9HHwU27ZUaIu6Hr2iCXxCP7eGg35jgSz8GCMdzka9a+1XRT7f1l3vNR+rIVhkGTIFWpE/m5N5GysdIRZzRw1YtZiX+jEEeZ711vBv+HK77xduzzg5kLZo6ERxL+VKq0jL66LGyGtvacNjl/1M/I71tC3Dj7LDZsHzXarjHTtz0i31dwVfj62ItuabN7HqqUm9Ktoxw9uyHcDhbwYavRwXwEpwNvQmrvKi2cYp/ZfkG+R5h50owul0qOV6z9HS06d2clFfF7+MzY7gRLW3+kbcUib+ftlwOpQeEfjQu6qL9Q3a7NKP8p6QTIb/dECETTlqn9zUFdIJR55ZA25VdcSZy1TH554HVfXZuMsdKKM1pPHtKqSELlmB5zuzeF6SL1MopIBxPv5XtzjX5ere+GVtwH3AJ8froEUxs4R7FzJbih2gnvYLfv5tdvzlPI0y+bBTJbDrXlSv6n1xhk2Q2b11zBLXlrv0Mew25q6fUiwyfqyeZwJgvjtVQPolRS3fzPnS3QDX0OzVJoALnNfUbpb0UO3ySnebWkbURdhaPswj6NiZ2tVrCe7il/WXFP9hBf4gWmNeNzEq+HsmQpNOA3A4nKlt/r4r+825v8k1/K3vUxOlUEeD3au++H5BD+M7Vqh0rmf0sZtjcomqdPGXyOU07mhu9htu53vK7+gHKA2+YhJN6CJ9qWWeXX7MqgU7U5pIKHMEdncBcsQuG+1bv1Ql/wN2OF4g4ewyko6W3kvB1U3c+Qy1HZUliD074JCqqSuBv+miyzcwDyoh1Hqm7+xMeg3awjR8BDOPRM7zMGT7C70O4wUiYMHKgtaqKZdQUlakqYGerYHPbDjkmX8GfY7T4R8wXkGBlgNBDBqcP3FkSmb0YAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 662,
+   "total_tokens": 3843,
+   "cost": 0.025964,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025964,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01324
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 393,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.21
+}

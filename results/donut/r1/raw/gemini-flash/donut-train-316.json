@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Jones-Frazier",
+  "vendor_vat": "937-84-4041",
+  "invoice_ref": "15801054",
+  "invoice_date": "2015-08-09",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 246.31,
+  "tax": 24.63,
+  "total": 270.94,
+  "iban": "GB29ITRF67964142047762",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes",
+    "quantity": 4.0,
+    "unit_price": 44.99,
+    "tax_rate": 10.0,
+    "net": 179.96
+   },
+   {
+    "description": "10\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock",
+    "quantity": 1.0,
+    "unit_price": 26.99,
+    "tax_rate": 10.0,
+    "net": 26.99
+   },
+   {
+    "description": "Boys Kids Printed Cotton Slippers Zip Fastening 350172494",
+    "quantity": 2.0,
+    "unit_price": 19.68,
+    "tax_rate": 10.0,
+    "net": 39.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 246.31,
+    "tax": 24.63
+   }
+  ]
+ },
+ "cost_usd": 0.006261,
+ "raw": {
+  "id": "gen-1794512009-j2pZ01ijSFolUQRBUrUq",
+  "object": "chat.completion",
+  "created": 1794512009,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Jones-Frazier\",\"vendor_vat\":\"937-84-4041\",\"invoice_ref\":\"15801054\",\"invoice_date\":\"2015-08-09\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":246.31,\"tax\":24.63,\"total\":270.94,\"iban\":\"GB29ITRF67964142047762\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes\",\"quantity\":4.0,\"unit_price\":44.99,\"tax_rate\":10.0,\"net\":179.96},{\"description\":\"10\\\" Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock\",\"quantity\":1.0,\"unit_price\":26.99,\"tax_rate\":10.0,\"net\":26.99},{\"description\":\"Boys Kids Printed Cotton Slippers Zip Fastening 350172494\",\"quantity\":2.0,\"unit_price\":19.68,\"tax_rate\":10.0,\"net\":39.36}],\"vat_breakdown\":[{\"rate\":10.0,\"base\":246.31,\"tax\":24.63}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI've successfully identified and extracted the vendor name as \"Jones-Frazier,\" their VAT number as \"937-84-4041,\" the invoice reference as \"15801054,\" and the invoice date as \"09/0\" from the provided document, aligning with the specified schema.\n\n**Resolving Date Ambiguity**\n\nI'm re-evaluating the invoice date, \"09/08/2015.\" Given the comma decimal separators and US-centric addresses and currency, I suspect a MM/DD/YYYY format, translating to September 8, 2015. However, common invoice generators can use DD/MM/YYYY, which would be August 9, 2015. I need to confirm the most probable interpretation.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI've successfully identified and extracted the vendor name as \"Jones-Frazier,\" their VAT number as \"937-84-4041,\" the invoice reference as \"15801054,\" and the invoice date as \"09/0\" from the provided document, aligning with the specified schema.\n\n**Resolving Date Ambiguity**\n\nI'm re-evaluating the invoice date, \"09/08/2015.\" Given the comma decimal separators and US-centric addresses and currency, I suspect a MM/DD/YYYY format, translating to September 8, 2015. However, common invoice generators can use DD/MM/YYYY, which would be August 9, 2015. I need to confirm the most probable interpretation.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1356,
+   "total_tokens": 2924,
+   "cost": 0.006261,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.006261,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.005085
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1040,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.81
+}

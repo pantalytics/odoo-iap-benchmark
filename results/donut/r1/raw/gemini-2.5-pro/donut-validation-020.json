@@ -1,0 +1,129 @@
+{
+ "pred": {
+  "vendor_name": "Cruz PLC",
+  "vendor_vat": "964-99-8203",
+  "invoice_ref": "94404257",
+  "invoice_date": "2013-03-07",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 126.27,
+  "tax": 12.63,
+  "total": 138.9,
+  "iban": "GB31XOVK34958853133204",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "B0028NAO6C Shoeless Joe",
+    "quantity": 5.0,
+    "unit_price": 3.49,
+    "tax_rate": 10.0,
+    "net": 17.45
+   },
+   {
+    "description": "The Fifty Greatest Conspiracies of All Time History s Biggest Myster",
+    "quantity": 3.0,
+    "unit_price": 4.49,
+    "tax_rate": 10.0,
+    "net": 13.47
+   },
+   {
+    "description": "Story of a Soul: The Autobiography of St. Therese of Lisieux",
+    "quantity": 5.0,
+    "unit_price": 9.35,
+    "tax_rate": 10.0,
+    "net": 46.75
+   },
+   {
+    "description": "The Complete Idiots Guide to Trouble-Free Home Re",
+    "quantity": 4.0,
+    "unit_price": 4.49,
+    "tax_rate": 10.0,
+    "net": 17.96
+   },
+   {
+    "description": "Rebecca to the Rescue (American Girl (Quality))",
+    "quantity": 2.0,
+    "unit_price": 4.89,
+    "tax_rate": 10.0,
+    "net": 9.78
+   },
+   {
+    "description": "Tales from the Buffalo Bills",
+    "quantity": 1.0,
+    "unit_price": 5.5,
+    "tax_rate": 10.0,
+    "net": 5.5
+   },
+   {
+    "description": "Vietnam, The Decisive Battles",
+    "quantity": 2.0,
+    "unit_price": 7.68,
+    "tax_rate": 10.0,
+    "net": 15.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 126.27,
+    "tax": 12.63
+   }
+  ]
+ },
+ "cost_usd": 0.0184075,
+ "raw": {
+  "id": "gen-1794512244-d16wnFneKuPi6nXxfRUG",
+  "object": "chat.completion",
+  "created": 1794512244,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Cruz PLC\",\n  \"vendor_vat\": \"964-99-8203\",\n  \"invoice_ref\": \"94404257\",\n  \"invoice_date\": \"2013-03-07\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 126.27,\n  \"tax\": 12.63,\n  \"total\": 138.9,\n  \"iban\": \"GB31XOVK34958853133204\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"B0028NAO6C Shoeless Joe\",\n      \"quantity\": 5.0,\n      \"unit_price\": 3.49,\n      \"tax_rate\": 10.0,\n      \"net\": 17.45\n    },\n    {\n      \"description\": \"The Fifty Greatest Conspiracies of All Time History s Biggest Myster\",\n      \"quantity\": 3.0,\n      \"unit_price\": 4.49,\n      \"tax_rate\": 10.0,\n      \"net\": 13.47\n    },\n    {\n      \"description\": \"Story of a Soul: The Autobiography of St. Therese of Lisieux\",\n      \"quantity\": 5.0,\n      \"unit_price\": 9.35,\n      \"tax_rate\": 10.0,\n      \"net\": 46.75\n    },\n    {\n      \"description\": \"The Complete Idiots Guide to Trouble-Free Home Re\",\n      \"quantity\": 4.0,\n      \"unit_price\": 4.49,\n      \"tax_rate\": 10.0,\n      \"net\": 17.96\n    },\n    {\n      \"description\": \"Rebecca to the Rescue (American Girl (Quality))\",\n      \"quantity\": 2.0,\n      \"unit_price\": 4.89,\n      \"tax_rate\": 10.0,\n      \"net\": 9.78\n    },\n    {\n      \"description\": \"Tales from the Buffalo Bills\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.5,\n      \"tax_rate\": 10.0,\n      \"net\": 5.5\n    },\n    {\n      \"description\": \"Vietnam, The Decisive Battles\",\n      \"quantity\": 2.0,\n      \"unit_price\": 7.68,\n      \"tax_rate\": 10.0,\n      \"net\": 15.36\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 126.27,\n      \"tax\": 12.63\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Cruz PLC\" as the vendor and extracted \"964-99-8203\" as their VAT ID. This directly addresses the `vendor_name` and `vendor_vat` fields in the JSON schema. The `invoice_ref` will be considered next, as I gather the relevant information from the document.\n\n\n**Populating JSON Fields**\n\nI've moved on to populating more of the JSON fields. I've extracted the invoice reference number as \"94404257\" and the invoice date as \"2013-03-07\". I've set the due date to `null` as it's not present. Regarding currency, I'm assuming USD based on the dollar symbol and the military address, despite the IBAN starting with \"GB\". Finally, I've filled the financial details: untaxed is 126.27, tax is 12.63, and total is 138.90. The IBAN is \"GB31XOVK34958853133204\", and the VAT treatment is \"S\". I'm now focusing on extracting line items, starting with the description and quantity for line one.\n\n\n**Extracting Line Items**\n\nI've moved on to the line items. I've successfully pulled the data for all six lines. I've got the description, quantity, unit price, tax rate, and net amount for each. The line item extraction is complete; I'm satisfied.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. All the required information has been extracted. The currency is slightly unclear but I'm leaning toward USD based on the provided hints. The main work is done.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Cruz PLC\" as the vendor and extracted \"964-99-8203\" as their VAT ID. This directly addresses the `vendor_name` and `vendor_vat` fields in the JSON schema. The `invoice_ref` will be considered next, as I gather the relevant information from the document.\n\n\n**Populating JSON Fields**\n\nI've moved on to populating more of the JSON fields. I've extracted the invoice reference number as \"94404257\" and the invoice date as \"2013-03-07\". I've set the due date to `null` as it's not present. Regarding currency, I'm assuming USD based on the dollar symbol and the military address, despite the IBAN starting with \"GB\". Finally, I've filled the financial details: untaxed is 126.27, tax is 12.63, and total is 138.90. The IBAN is \"GB31XOVK34958853133204\", and the VAT treatment is \"S\". I'm now focusing on extracting line items, starting with the description and quantity for line one.\n\n\n**Extracting Line Items**\n\nI've moved on to the line items. I've successfully pulled the data for all six lines. I've got the description, quantity, unit price, tax rate, and net amount for each. The line item extraction is complete; I'm satisfied.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. All the required information has been extracted. The currency is slightly unclear but I'm leaning toward USD based on the provided hints. The main work is done.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1801,
+   "total_tokens": 2119,
+   "cost": 0.0184075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0184075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01801
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1108,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.35
+}

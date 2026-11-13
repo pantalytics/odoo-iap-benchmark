@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "DI HUAN YA RESTAURANT",
+  "vendor_vat": "001914093568",
+  "invoice_ref": "199977",
+  "invoice_date": "2018-04-07",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 33.0,
+  "tax": 1.98,
+  "total": 35.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "106 #TAKE AWAY# ROASTED DUCK WITH CHINESE HERB (HALF)",
+    "quantity": 1,
+    "unit_price": 33.0,
+    "tax_rate": 6,
+    "net": 33.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 33.0,
+    "tax": 1.98
+   }
+  ]
+ },
+ "cost_usd": 0.018328,
+ "raw": {
+  "id": "gen-1794512648-KssRWK4QU9Z9eCfmvaMR",
+  "object": "chat.completion",
+  "created": 1794512648,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"DI HUAN YA RESTAURANT\",\n  \"vendor_vat\": \"001914093568\",\n  \"invoice_ref\": \"199977\",\n  \"invoice_date\": \"2018-04-07\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 33.00,\n  \"tax\": 1.98,\n  \"total\": 35.00,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"106 #TAKE AWAY# ROASTED DUCK WITH CHINESE HERB (HALF)\",\n      \"quantity\": 1,\n      \"unit_price\": 33.00,\n      \"tax_rate\": 6,\n      \"net\": 33.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 33.00,\n      \"tax\": 1.98\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently focusing on parsing the vendor information. I've successfully identified the vendor name as \"DI HUAN YA RESTAURANT\" and its GST ID.\n\n**Validating Invoice Data**\n\nI've refined the extraction of key invoice fields, including the reference number, date, and amounts. I've also begun mapping these to the target schema, noting discrepancies and a rounding adjustment.\n\n**Updating Extracted Fields**\n\nI've confirmed the invoice date and currency. I'm now refining the line item descriptions, specifically integrating the \"take away\" marker and the full product name, and verifying the rounding calculation for the total.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently focusing on parsing the vendor information. I've successfully identified the vendor name as \"DI HUAN YA RESTAURANT\" and its GST ID.\n\n**Validating Invoice Data**\n\nI've refined the extraction of key invoice fields, including the reference number, date, and amounts. I've also begun mapping these to the target schema, noting discrepancies and a rounding adjustment.\n\n**Updating Extracted Fields**\n\nI've confirmed the invoice date and currency. I'm now refining the line item descriptions, specifically integrating the \"take away\" marker and the full product name, and verifying the rounding calculation for the total.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1266,
+   "total_tokens": 2834,
+   "cost": 0.018328,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.018328,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.015192
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 986,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.21
+}

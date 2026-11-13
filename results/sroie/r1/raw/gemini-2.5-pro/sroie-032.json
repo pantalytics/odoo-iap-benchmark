@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18030302170430",
+  "invoice_date": "2018-03-03",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 7.74,
+  "tax": 0.46,
+  "total": 8.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "1 Meat + 3 Vege",
+    "quantity": 1.0,
+    "unit_price": 6.7,
+    "tax_rate": 6.0,
+    "net": 6.7
+   },
+   {
+    "description": "Vegetable",
+    "quantity": 1.0,
+    "unit_price": 1.04,
+    "tax_rate": 6.0,
+    "net": 1.04
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 7.74,
+    "tax": 0.46
+   }
+  ]
+ },
+ "cost_usd": 0.0297775,
+ "raw": {
+  "id": "gen-1794512730-JRjUyT8Vi3oiUe8TWW2W",
+  "object": "chat.completion",
+  "created": 1794512730,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18030302170430\",\n  \"invoice_date\": \"2018-03-03\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.74,\n  \"tax\": 0.46,\n  \"total\": 8.2,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"1 Meat + 3 Vege\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.7,\n      \"tax_rate\": 6.0,\n      \"net\": 6.7\n    },\n    {\n      \"description\": \"Vegetable\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.04,\n      \"tax_rate\": 6.0,\n      \"net\": 1.04\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 7.74,\n      \"tax\": 0.46\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the vendor's name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and its VAT number, which is \"GST REG #00065619558.\" I am now mapping these extracted values to the appropriate fields within the JSON schema.\n\n\n**Mapping Key Data Elements**\n\nI am now progressing with extracting more data to fit the schema. I've successfully identified and mapped the vendor's name and VAT number. I've now extracted the invoice reference number as \"OR180303 02170430\" and the invoice date as \"2018-03-03\". The due date is absent, so it will be null. The currency is proving trickier. While I suspect MYR given the location, the use of \"$\" is ambiguous, and I'll default to leaving it as null for now. I'm investigating further to resolve the currency.\n\n\n**Completing Data Extraction**\n\nI am now focused on extracting the remaining data points and mapping them to the schema. I've successfully identified and mapped `untaxed` as 7.74, `tax` as 0.46, and `total` as 8.20. Also, `vat_treatment` is \"S\". I have identified the product as \"1 Meat + 3 Vege\". I am now focusing on the product quantity and unit price, which I'll pull from the lines.\n\n\n**Finalizing Data Extraction**\n\nI've completed my work on extracting and mapping all the necessary data to the schema. I've now extracted and mapped the items within the \"lines\" array, as well as calculated and mapped the respective `net`, `tax_rate`, and `unit_price` for each line. I am satisfied I have fully completed the requested schema.\n\n\n**Finalizing Data Extraction**\n\nI am now putting the finishing touches on extracting the data and ensuring its correct mapping to the specified JSON schema. I've double-checked my calculations, particularly regarding the currency and the inclusive versus exclusive pricing.  I've adjusted the unit prices for the lines after verifying that the prices provided are inclusive of GST. All values are now accounted for. I'm satisfied that I've successfully met the requirements of the schema.\n\n\n**Finalizing Data Extraction**\n\nI am now putting the finishing touches on data extraction. I've successfully extracted all the data from the document. The values \"untaxed,\" \"tax,\" and \"total\" are all successfully mapped. The currency has been set to null. I've now extracted and finalized the 'lines' array, calculating the net values, ensuring tax rates are accurately represented, and that unit prices are correctly mapped, considering GST inclusion.\n\n\n**Finalizing Data Extraction**\n\nI am now completing the data extraction process. I've finished extracting the invoice date as \"2018-03-03\". I've extracted and processed the line items, including the descriptions, quantities, net amounts, and tax rates. I've successfully calculated and mapped the unit prices, considering the tax inclusion. I've set the currency to null as the ISO code is not explicitly available. I am satisfied that I have met the schema requirements.\n\n\n**Finalizing Data Extraction**\n\nI am now performing the final data extraction steps. I've re-reviewed all of the values to ensure I am happy. I have double-checked the data. I have finalized the calculations and the VAT breakdown. I will now generate the output in JSON format, fully confident in the extracted data.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the vendor's name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and its VAT number, which is \"GST REG #00065619558.\" I am now mapping these extracted values to the appropriate fields within the JSON schema.\n\n\n**Mapping Key Data Elements**\n\nI am now progressing with extracting more data to fit the schema. I've successfully identified and mapped the vendor's name and VAT number. I've now extracted the invoice reference number as \"OR180303 02170430\" and the invoice date as \"2018-03-03\". The due date is absent, so it will be null. The currency is proving trickier. While I suspect MYR given the location, the use of \"$\" is ambiguous, and I'll default to leaving it as null for now. I'm investigating further to resolve the currency.\n\n\n**Completing Data Extraction**\n\nI am now focused on extracting the remaining data points and mapping them to the schema. I've successfully identified and mapped `untaxed` as 7.74, `tax` as 0.46, and `total` as 8.20. Also, `vat_treatment` is \"S\". I have identified the product as \"1 Meat + 3 Vege\". I am now focusing on the product quantity and unit price, which I'll pull from the lines.\n\n\n**Finalizing Data Extraction**\n\nI've completed my work on extracting and mapping all the necessary data to the schema. I've now extracted and mapped the items within the \"lines\" array, as well as calculated and mapped the respective `net`, `tax_rate`, and `unit_price` for each line. I am satisfied I have fully completed the requested schema.\n\n\n**Finalizing Data Extraction**\n\nI am now putting the finishing touches on extracting the data and ensuring its correct mapping to the specified JSON schema. I've double-checked my calculations, particularly regarding the currency and the inclusive versus exclusive pricing.  I've adjusted the unit prices for the lines after verifying that the prices provided are inclusive of GST. All values are now accounted for. I'm satisfied that I've successfully met the requirements of the schema.\n\n\n**Finalizing Data Extraction**\n\nI am now putting the finishing touches on data extraction. I've successfully extracted all the data from the document. The values \"untaxed,\" \"tax,\" and \"total\" are all successfully mapped. The currency has been set to null. I've now extracted and finalized the 'lines' array, calculating the net values, ensuring tax rates are accurately represented, and that unit prices are correctly mapped, considering GST inclusion.\n\n\n**Finalizing Data Extraction**\n\nI am now completing the data extraction process. I've finished extracting the invoice date as \"2018-03-03\". I've extracted and processed the line items, including the descriptions, quantities, net amounts, and tax rates. I've successfully calculated and mapped the unit prices, considering the tax inclusion. I've set the currency to null as the ISO code is not explicitly available. I am satisfied that I have met the schema requirements.\n\n\n**Finalizing Data Extraction**\n\nI am now performing the final data extraction steps. I've re-reviewed all of the values to ensure I am happy. I have double-checked the data. I have finalized the calculations and the VAT breakdown. I will now generate the output in JSON format, fully confident in the extracted data.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2938,
+   "total_tokens": 3256,
+   "cost": 0.0297775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0297775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02938
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2623,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.43
+}

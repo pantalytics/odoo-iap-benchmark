@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Franco Group",
+  "vendor_vat": "973-97-5084",
+  "invoice_ref": "95611677",
+  "invoice_date": "2016-07-19",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 958.27,
+  "tax": 95.83,
+  "total": 1054.1,
+  "iban": "GB95MPFV88552069556163",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Round Indian Braided Jute Carpet Hand Woven Brown Round Shape Living Room Rug",
+    "quantity": 5.0,
+    "unit_price": 49.99,
+    "tax_rate": 10.0,
+    "net": 249.95
+   },
+   {
+    "description": "Cartoon Rabbit Printed Round Carpet Area Rug Children Play Tent Floor Mat Rug",
+    "quantity": 4.0,
+    "unit_price": 177.08,
+    "tax_rate": 10.0,
+    "net": 708.32
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 958.27,
+    "tax": 95.83
+   }
+  ]
+ },
+ "cost_usd": 0.0291375,
+ "raw": {
+  "id": "gen-1794513023-UHTOkFKQS7rJYYUP8KsX",
+  "object": "chat.completion",
+  "created": 1794513023,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Franco Group\",\n  \"vendor_vat\": \"973-97-5084\",\n  \"invoice_ref\": \"95611677\",\n  \"invoice_date\": \"2016-07-19\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 958.27,\n  \"tax\": 95.83,\n  \"total\": 1054.1,\n  \"iban\": \"GB95MPFV88552069556163\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Round Indian Braided Jute Carpet Hand Woven Brown Round Shape Living Room Rug\",\n      \"quantity\": 5.0,\n      \"unit_price\": 49.99,\n      \"tax_rate\": 10.0,\n      \"net\": 249.95\n    },\n    {\n      \"description\": \"Cartoon Rabbit Printed Round Carpet Area Rug Children Play Tent Floor Mat Rug\",\n      \"quantity\": 4.0,\n      \"unit_price\": 177.08,\n      \"tax_rate\": 10.0,\n      \"net\": 708.32\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 958.27,\n      \"tax\": 95.83\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've successfully identified \"Franco Group\" as the vendor and extracted their Tax ID as \"973-97-5084\". I'm now moving to pinpointing the invoice reference number within the document to finalize the initial data extraction. I'm focusing on locating the specific invoice reference value within the document.\n\n\n**Analyzing Conflicting Data**\n\nI have a significant conundrum! I've extracted \"Franco Group\" (vendor_name: Franco Group) with the Tax ID \"973-97-5084\" (vendor_vat: 973-97-5084) and invoice details as \"95611677\" (invoice_ref: 95611677) and \"07/19/2016\" (invoice_date: 2016-07-19). However, the currency presents a conflict. While the symbol is '$' (currency symbol: $), suggestive of USD, the IBAN format (GB95MPFV88552069556163) strongly indicates GBP. I'm defaulting to USD for currency, but it's clearly ambiguous and requires further investigation for the correct ISO 4217 code.\n\n\n**Resolving Currency Ambiguity**\n\nI'm now wrestling with the currency issue. The presence of '$' suggests USD, but the IBAN format points to GBP. Given the conflicting information, and the US addresses, I'm leaning toward USD. However, the VAT and the IBAN present a challenge to my initial conclusion. This requires significant additional scrutiny. The schema requires the ISO code; I will use USD. But I am concerned.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all required data. I've got \"Franco Group\" (vendor_name), \"973-97-5084\" (vendor_vat), \"95611677\" (invoice_ref) and \"2016-07-19\" (invoice_date). Amounts are 958.27 (untaxed), 95.83 (tax), and 1054.10 (total). Due date is null. The IBAN is GB95MPFV88552069556163. I've concluded on USD for currency (even if I have my doubts). VAT treatment is 10%.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data points: \"Franco Group\" (vendor_name), \"973-97-5084\" (vendor_vat), \"95611677\" (invoice_ref), and \"2016-07-19\" (invoice_date). Amounts are 958.27 (untaxed), 95.83 (tax), and 1054.10 (total). Due date remains null. IBAN is GB95MPFV88552069556163. While the presence of a 'S' symbol and US addresses point towards USD, the IBAN format (GB) suggests GBP. Considering the context, I've elected to maintain my original conclusion, USD, though with reservations. The tax rate is 10%.\n\n\n**Confirming Final Data Points**\n\nI've re-examined the source document extensively. While the presence of a 'S' symbol points to USD and US addresses suggest that location, the GB IBAN format presents a significant challenge. I've decided to stick with null for the currency, as per the instructions, given the conflicting information. All other data points appear accurate and complete. I will confirm the other extracted values.\n\n\\n\\n\nI've extracted vendor details: \"Franco Group\" with Tax ID \"973-97-5084\". I'm maintaining null for currency, but I feel uneasy. I have confirmed the invoice number as \"95611677\" and date as \"2016-07-19\". Other fields are null due to the lack of evidence in the document. Amounts are still 958.27 (untaxed), 95.83 (tax), and 1054.10 (total).\n\n\n**Refining Conflicting Data**\n\nI'm now zeroing in on the trickiest piece: currency. While the \"$\" symbol and US addresses suggest USD, the GB IBAN strongly leans toward GBP. After careful consideration of the context, I've concluded on maintaining 'null' for the ISO code, as per instructions. All other data is confirmed.\n\n\n**Revising Currency Extraction**\n\nI'm now completely fixated on the currency. While I initially considered USD based on the '$' symbol and US addresses, the GB IBAN continues to nag at me. The schema requires the ISO code but I can't confirm a clear currency based on the provided data. Therefore, the most defensible option to adhere to the instruction's guidance is to assign a null value for currency.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've successfully identified \"Franco Group\" as the vendor and extracted their Tax ID as \"973-97-5084\". I'm now moving to pinpointing the invoice reference number within the document to finalize the initial data extraction. I'm focusing on locating the specific invoice reference value within the document.\n\n\n**Analyzing Conflicting Data**\n\nI have a significant conundrum! I've extracted \"Franco Group\" (vendor_name: Franco Group) with the Tax ID \"973-97-5084\" (vendor_vat: 973-97-5084) and invoice details as \"95611677\" (invoice_ref: 95611677) and \"07/19/2016\" (invoice_date: 2016-07-19). However, the currency presents a conflict. While the symbol is '$' (currency symbol: $), suggestive of USD, the IBAN format (GB95MPFV88552069556163) strongly indicates GBP. I'm defaulting to USD for currency, but it's clearly ambiguous and requires further investigation for the correct ISO 4217 code.\n\n\n**Resolving Currency Ambiguity**\n\nI'm now wrestling with the currency issue. The presence of '$' suggests USD, but the IBAN format points to GBP. Given the conflicting information, and the US addresses, I'm leaning toward USD. However, the VAT and the IBAN present a challenge to my initial conclusion. This requires significant additional scrutiny. The schema requires the ISO code; I will use USD. But I am concerned.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all required data. I've got \"Franco Group\" (vendor_name), \"973-97-5084\" (vendor_vat), \"95611677\" (invoice_ref) and \"2016-07-19\" (invoice_date). Amounts are 958.27 (untaxed), 95.83 (tax), and 1054.10 (total). Due date is null. The IBAN is GB95MPFV88552069556163. I've concluded on USD for currency (even if I have my doubts). VAT treatment is 10%.\n\n\n**Finalizing Data Extraction**\n\nI've extracted all necessary data points: \"Franco Group\" (vendor_name), \"973-97-5084\" (vendor_vat), \"95611677\" (invoice_ref), and \"2016-07-19\" (invoice_date). Amounts are 958.27 (untaxed), 95.83 (tax), and 1054.10 (total). Due date remains null. IBAN is GB95MPFV88552069556163. While the presence of a 'S' symbol and US addresses point towards USD, the IBAN format (GB) suggests GBP. Considering the context, I've elected to maintain my original conclusion, USD, though with reservations. The tax rate is 10%.\n\n\n**Confirming Final Data Points**\n\nI've re-examined the source document extensively. While the presence of a 'S' symbol points to USD and US addresses suggest that location, the GB IBAN format presents a significant challenge. I've decided to stick with null for the currency, as per the instructions, given the conflicting information. All other data points appear accurate and complete. I will confirm the other extracted values.\n\n\\n\\n\nI've extracted vendor details: \"Franco Group\" with Tax ID \"973-97-5084\". I'm maintaining null for currency, but I feel uneasy. I have confirmed the invoice number as \"95611677\" and date as \"2016-07-19\". Other fields are null due to the lack of evidence in the document. Amounts are still 958.27 (untaxed), 95.83 (tax), and 1054.10 (total).\n\n\n**Refining Conflicting Data**\n\nI'm now zeroing in on the trickiest piece: currency. While the \"$\" symbol and US addresses suggest USD, the GB IBAN strongly leans toward GBP. After careful consideration of the context, I've concluded on maintaining 'null' for the ISO code, as per instructions. All other data is confirmed.\n\n\n**Revising Currency Extraction**\n\nI'm now completely fixated on the currency. While I initially considered USD based on the '$' symbol and US addresses, the GB IBAN continues to nag at me. The schema requires the ISO code but I can't confirm a clear currency based on the provided data. Therefore, the most defensible option to adhere to the instruction's guidance is to assign a null value for currency.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2874,
+   "total_tokens": 3192,
+   "cost": 0.0291375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0291375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02874
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2513,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 30.82
+}

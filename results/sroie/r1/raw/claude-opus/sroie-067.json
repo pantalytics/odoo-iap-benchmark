@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD",
+  "vendor_vat": "001147416576",
+  "invoice_ref": null,
+  "invoice_date": "2018-01-06",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.67,
+  "tax": 2.86,
+  "total": 53.55,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "(S) CURRY MIXED VEGE 515",
+    "quantity": 1,
+    "unit_price": 15.9,
+    "tax_rate": 6,
+    "net": 15.9
+   },
+   {
+    "description": "(S) 517",
+    "quantity": 1,
+    "unit_price": 13.9,
+    "tax_rate": 6,
+    "net": 13.9
+   },
+   {
+    "description": "(12 PCS) 'XINGHUA' SPRING ROLL 410",
+    "quantity": 1,
+    "unit_price": 12.0,
+    "tax_rate": 6,
+    "net": 12.0
+   },
+   {
+    "description": "(POT) TI GUAN YIN TEA 822",
+    "quantity": 1,
+    "unit_price": 3.0,
+    "tax_rate": 6,
+    "net": 3.0
+   },
+   {
+    "description": "(B) PLAIN RICE 922",
+    "quantity": 2,
+    "unit_price": 1.5,
+    "tax_rate": 6,
+    "net": 3.0
+   },
+   {
+    "description": "Svr Tax",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 0,
+    "net": 2.87
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2.87,
+    "tax": 0.0
+   },
+   {
+    "rate": 6,
+    "base": 47.8,
+    "tax": 2.86
+   }
+  ]
+ },
+ "cost_usd": 0.034264,
+ "raw": {
+  "id": "gen-1794514657-MNL1LtX6zIq4Tpt8XzQ7",
+  "object": "chat.completion",
+  "created": 1794514657,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\",\"vendor_vat\":\"001147416576\",\"invoice_ref\":null,\"invoice_date\":\"2018-01-06\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.67,\"tax\":2.86,\"total\":53.55,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"(S) CURRY MIXED VEGE 515\",\"quantity\":1,\"unit_price\":15.9,\"tax_rate\":6,\"net\":15.9},{\"description\":\"(S) 517\",\"quantity\":1,\"unit_price\":13.9,\"tax_rate\":6,\"net\":13.9},{\"description\":\"(12 PCS) 'XINGHUA' SPRING ROLL 410\",\"quantity\":1,\"unit_price\":12.0,\"tax_rate\":6,\"net\":12.0},{\"description\":\"(POT) TI GUAN YIN TEA 822\",\"quantity\":1,\"unit_price\":3.0,\"tax_rate\":6,\"net\":3.0},{\"description\":\"(B) PLAIN RICE 922\",\"quantity\":2,\"unit_price\":1.5,\"tax_rate\":6,\"net\":3.0},{\"description\":\"Svr Tax\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":0,\"net\":2.87}],\"vat_breakdown\":[{\"rate\":0,\"base\":2.87,\"tax\":0.0},{\"rate\":6,\"base\":47.8,\"tax\":2.86}]}",
+     "refusal": null,
+     "reasoning": "I'm reading through the Malaysian receipt now. The date reads 06/01/18, which I'll take as day-month-year, so 2018-01-06, and the currency is MYR. Most of the line items are straightforward, but the second item's description is missing: there's \"(S) @13.90\" with nothing before it, so I'll label it \"517 (S)\".\n\nI'm adding up the line totals and getting 50.66, which doesn't match the 47.80 gross. That gap suggests the printed prices already include the 6% GST, so I'll work from the pre-tax amounts (15.90, 13.90, 12, 3, 3), which do sum to 47.80. The service tax of 2.87 is zero-rated, and I'll record the vendor's GST ID as well.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading through the Malaysian receipt now. The date reads 06/01/18, which I'll take as day-month-year, so 2018-01-06, and the currency is MYR. Most of the line items are straightforward, but the second item's description is missing: there's \"(S) @13.90\" with nothing before it, so I'll label it \"517 (S)\".\n\nI'm adding up the line totals and getting 50.66, which doesn't match the 47.80 gross. That gap suggests the printed prices already include the 6% GST, so I'll work from the pre-tax amounts (15.90, 13.90, 12, 3, 3), which do sum to 47.80. The service tax of 2.87 is zero-rated, and I'll record the vendor's GST ID as well.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 1077,
+   "total_tokens": 4258,
+   "cost": 0.034264,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.034264,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.02154
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 566,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.21
+}

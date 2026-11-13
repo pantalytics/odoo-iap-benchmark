@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "SYARIKAT PERNIAGAAN GIN KEE",
+  "vendor_vat": "000750673920",
+  "invoice_ref": "CS00012441",
+  "invoice_date": "2017-12-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 140.0,
+  "tax": 8.4,
+  "total": 148.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PASIR HALUS 1 LOAD (SMALL)",
+    "quantity": 1.0,
+    "unit_price": 140.0,
+    "tax_rate": 6.0,
+    "net": 140.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 140.0,
+    "tax": 8.4
+   }
+  ]
+ },
+ "cost_usd": 0.00477975,
+ "raw": {
+  "id": "gen-1794514427-0ZgP9F565TtAOMFLblVq",
+  "object": "chat.completion",
+  "created": 1794514427,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SYARIKAT PERNIAGAAN GIN KEE\",\n  \"vendor_vat\": \"000750673920\",\n  \"invoice_ref\": \"CS00012441\",\n  \"invoice_date\": \"2017-12-28\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 140.0,\n  \"tax\": 8.4,\n  \"total\": 148.4,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"PASIR HALUS 1 LOAD (SMALL)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 140.0,\n      \"tax_rate\": 6.0,\n      \"net\": 140.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 140.0,\n      \"tax\": 8.4\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Details**\n\nI'm currently parsing an invoice image. My focus is on pinpointing key fields such as vendor name, VAT ID, reference number, and the invoice date. I'm systematically identifying and extracting these crucial pieces of information.\n\n**Clarifying Line Item Pricing**\n\nI'm currently wrestling with the specifics of line item pricing. It appears the \"S/Price\" on the item line, listed as 148.40, represents a price inclusive of GST, while the \"Total Sales (Excluding GST)\" is 140.00. I need to reconcile these to accurately define the pre-tax unit price for my schema.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Details**\n\nI'm currently parsing an invoice image. My focus is on pinpointing key fields such as vendor name, VAT ID, reference number, and the invoice date. I'm systematically identifying and extracting these crucial pieces of information.\n\n**Clarifying Line Item Pricing**\n\nI'm currently wrestling with the specifics of line item pricing. It appears the \"S/Price\" on the item line, listed as 148.40, represents a price inclusive of GST, while the \"Total Sales (Excluding GST)\" is 140.00. I need to reconcile these to accurately define the pre-tax unit price for my schema.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 961,
+   "total_tokens": 2529,
+   "cost": 0.00477975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00477975,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.00360375
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 681,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.22
+}

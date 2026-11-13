@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "DOMINO'S PIZZA",
+  "vendor_vat": "001694261248",
+  "invoice_ref": "6224",
+  "invoice_date": "2018-04-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 3.68,
+  "tax": 0.22,
+  "total": 3.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6\"HT (TE)",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "6\"HT (BP)",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "Coupon Discount",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": -21.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 3.68,
+    "tax": 0.22
+   }
+  ]
+ },
+ "cost_usd": 0.028935,
+ "raw": {
+  "id": "gen-1794514403-fNan78hbitbFjIAOpKMQ",
+  "object": "chat.completion",
+  "created": 1794514403,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"DOMINO'S PIZZA\",\"vendor_vat\":\"001694261248\",\"invoice_ref\":\"6224\",\"invoice_date\":\"2018-04-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":3.68,\"tax\":0.22,\"total\":3.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"6\\\"HT (TE)\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"6\\\"HT (BP)\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"Coupon Discount\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":-21.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":3.68,\"tax\":0.22}]}",
+     "refusal": null,
+     "reasoning": "**Extracting schema info**\n\nI need to extract the schema and focus on outputting JSON. I’m inspecting a receipt from Domino's Pizza, and I believe the vendor name listed is “DOMINO'S PIZZA” under the company name Dommal Food Services Sdn Bhd. The receipt confirms ownership by Dommal at the bottom but uses Domino’s in the header. I think I’ll go with “DOMINO'S PIZZA” for the vendor name. The order number appears to be 6224, with a date format of 2018-04-17.**Calculating totals for invoice**\n\nI’m looking at an invoice with the currency as Malaysian Ringgit (MYR). It lists two pizzas priced at 12.80 each, leading to a subtotal of 25.60, with a discount of 21.70, and a grand total of 3.90 including 0.22 for GST. To find the untaxed total, I do 3.90 minus 0.22, which gives me 3.68. I'm puzzled by how discounts are applied; the schema requires unit pricing before tax, but the printed prices include GST. I need to clarify how to present these line items accurately.**Determining unit price details**\n\nI'm finding it a bit challenging here. I think I need to use the printed line descriptions for clarity. The quantity is clear, but the unit price of 12.80 includes tax. I wonder how to represent this properly, especially since the schema seems to ask for unit prices before tax. It's tricky since the printed amounts don’t separate the tax, which complicates things when trying to follow the invoice format precisely.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting schema info**\n\nI need to extract the schema and focus on outputting JSON. I’m inspecting a receipt from Domino's Pizza, and I believe the vendor name listed is “DOMINO'S PIZZA” under the company name Dommal Food Services Sdn Bhd. The receipt confirms ownership by Dommal at the bottom but uses Domino’s in the header. I think I’ll go with “DOMINO'S PIZZA” for the vendor name. The order number appears to be 6224, with a date format of 2018-04-17.**Calculating totals for invoice**\n\nI’m looking at an invoice with the currency as Malaysian Ringgit (MYR). It lists two pizzas priced at 12.80 each, leading to a subtotal of 25.60, with a discount of 21.70, and a grand total of 3.90 including 0.22 for GST. To find the untaxed total, I do 3.90 minus 0.22, which gives me 3.68. I'm puzzled by how discounts are applied; the schema requires unit pricing before tax, but the printed prices include GST. I need to clarify how to present these line items accurately.**Determining unit price details**\n\nI'm finding it a bit challenging here. I think I need to use the printed line descriptions for clarity. The quantity is clear, but the unit price of 12.80 includes tax. I wonder how to represent this properly, especially since the schema seems to ask for unit prices before tax. It's tricky since the printed amounts don’t separate the tax, which complicates things when trying to follow the invoice format precisely.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h3yE2m2K2XCR7baIf3G96Rivy7Ca0PnNYA3lc73S7MOy1UOOJtodfge3nbsUUc5rSr0Nx9By0Jr9TRixETggNaJxgAgTuSawXsHbCf_BWAWoS2haPD3LtHWJ_owOTPQ4lorBIRT1I2Vg5fcDujNAXail7rlAu-BE_TkCRkdlRugYOU14Eys04-s_-Abd-e_eskr4bd01rdYqqfTCO9UHhC9enpWZQljxJf8O87r45bIDd7F63nKjDOAMt_Y9TWXXlqShovh4PIFuI4Oylld3hyN3U01Bf0nLlR84ACYvw2end5a5dITaROwh1h5BwcRDbw9aaPGxFZRDtO8X8AoAB4PQ-nVmV_8xdrhLh1FDWIMHirM3NoXo6zj0_5iwocssyfjDRE_K8i48mRNTOTNSmZg9xGY8v3QbhniW9LKUoKSgXfWZaS6xMGr_DLnGSMPKIxSDR8Gs__PMk9De4waxMTNuDJl06B8-gFvqjJxPYWQYPxsR7Y2NZiM8s-vmqeAhl9P-1wMqQ_Vzw-ibUCiPc2tvOoW9WMghX-YPmbP1asFYYcuwrRArFRD-aAaWWqD9BkgaMCwQ5scO4WEQetXvK2YUU8kjWTCdIN-2aP0zb5rmosB85b3ke0r3Dcj6Z8X2Q863fTmt70D-eBD4k6wnEk-X2269WOe9awpT_tJ0bAjtBVSvPfA1mI38bWNPEqYxAMBKz4XrHyyh9xtro4IR6F_dYEAhYPO9Anl2_zs3kq6NJIDJgoh8kL_Q8HDyUZ-IYGXJpv-rwyyRGZSPM16Hf9OIB02GAambRXEq5UpTg46gK7jPBztvk2QDT6ddA67zBNxr0N2HvabPeThNj6Izc6bAc8_YDI4FJkl_YCKK4uSwTCqerk2o03YeHRwZa5qxTcs-WX_fuHCk6afV1Cj2l0Us7-P0P84D3pxpxIatUV6yIsUtakvuVVYA0CCX-h4eD4liDG3WvpFm4NCkQkjINJn7TJ9zb4-aAisQgKUO_Fj5P3sZIhkJ1O2K0GRK6CVXvrvdvfwvF87F5ygrTTinN9EGzlcSYSlOWX81VB7JRrKzTBzPbBQ5E4TnPmPZCyVublroWuiLtz8U26Fw_Njy-unwsGPcxUIv88BDfGDi7Os2NRy3iSnS8ZJ9yMb0N1KHPVsO3yI2cUUwEkvAwDagzv5fWl5ZpSHGN1SfMRzCp1uFDcbEwuqbf0953_mfLwrrKPR-RLe-Tg7ZWhnnyoZHMmohlgjzLIuMPVCiNbszHcheuXKIjadaEAhOCLRvM6t4oIlra_x06gNYMg6sXae5UEd5R8wz4a72a40wsuBHle3z6p_QmB5p8DX-0OLsMa44ZJtTL_V_HN3fyJSw910_r2tqKpnABoHz-sUR5vRoqwmyzMVZqHT9pFm0AAdOOUOhJ-uSukMcmA3JhUbWGua0Xt5lPZGo6fe2oxEQiXN7agRGVE1KPwFDoxOIHN3bzSLYGKBTEKT1aQO6QzhT0Ilpg6q3G-pp69VPRoDdG5216nEpTnGq5Q03QgOvDG9cRQzU2NkszOnFCYCpNS0Oh7-dSULsAQ2hMkE1QKbh7dXKUSkSKE8kYq5ROhHrksWdjJHkcI3T5aEOFP0mIdAOMxWECjCAX0QbBHQMxiiFTnz2giTwlcyD6NX4kuRBbIIhHISE7WsPxr3n7ZIKN6dT3eKfKIuRuGoM9rWEAyRfHZSSlkhfzmR-ekmKYMFWIJ1ka9yz40usHA00a8eO1l4E0CTvWVvpy4C2e5yTTFIc5pJ_6wKlBikX6RhErgf4iOqfi3A5cD0GrJj8HY3wQap7mfwgZVhSd44d2xGQDafEAum33zDp3hexEvFPeU3Lt3wKhZt4gwDhI_pduzHGxX8cQlKZkxFxUY0TeZdaTb-s_5v6gtlPnEaCsIBIZFdBWE6X1r4K4mK3S99me507KorELUSvt21waLRD3rO-wKiZrMXtNvW5JkxGlZrtvo8-_CmjATxjcn-5lebVW2MO2pfRB42Zk6DYIYHGRLW-C3y-zlbWasYhBaKDt5szuD1D6hxK02gyGAmu3OjXcAb_UtsttjkLcphrMZCP8HWqYSHaXtAzuOWsqcr_c3xeKq3GmNr8g3xF7FC7c4AvqkQleUND47HtSrDe_PneEbg4nn61U6quJ-y7grbfkP_F7PJKyvxkfr8OJylmq-b6wSUb81ftoEd3D9-MtrQjLkwAFL1TAbMuHIMp53b5cdUK74aqnfw1oeMqdwXGYEyE1J7ggKM9-jqc7qqrvPT6iI5ZsNgxdqGAhEbtFHgXFMTVuqv5yDPKz3uuiAJELme-Skh83OSeusrL88lm91E3gQjZU8IgfzoVxBhm7EhtttbxI2xAbr-wJEa8K6ZG-FS-IFr2u04onNjgASvfHqTVRJC3RFQ_YGE14fJt0hOeqFuziG0e4FgsMMsuDx1Ei6M-Zwn8yTf8FLVaw0OaMDSlPeCKxqp0hbyK6P_CpGpc15eFs5Lwsnh6YeuFKwpte5XBvvGfHP6LY2VNPdupYq5OEDFyuLCP314xeYQldj5JkouMyHsW7IuRBB5aN90WHLXYN2Gq0K8u2LjzTAn6hJzVQSK2ZL8YsXRccXGTSJjJPf2XFelpaIzh6Tb2_aePhD2LYDjlN2sv7zN988ZhcAtPD2vn2nQ6Vnib15dun6o_HekTDXTHVEYi45HoF6-VUh5ZdKoMaaLU7PPoMKppdWaYxjoYHwVGBwDTErxWt-bd3wSqEgx8FJ-9JrwMhxVxfUmANm33CZrGIEF5nVn6m_dUuChpv1OtwHvTQYCGpTlRMBkqicJaRvFo0_ygqrqp9iqy7MT83JaWSf7NDCA4UxoJ_r41JmpkioL6z2rV3uQhoFpU8JVGLM2KrAidyQ0yPRNmQNVPaoyWePIxDj7DRqOl8DjjlHYLrk9dPBVk4bGqzu55zKKi9sQd360HSoMQ_muC259iMyFQwDDGZZdyuYFG1yH3UHI256UPYJr2GVqSDAN0eCgtEk1PG-tdI8mnrjsIXYwTZQtENy3fATgefrW5Envqq40Trq9XGLc8IsZ21JnAmHd5DsyWxeizYtONQEFswUqSYYhpy9Z7r33yrht0GsDB2Yr1yPr1_-JG-kwGHpCS0nKrVnL0BYik8W4X0ticGAdcp6LKYnhLTzbTLPluvA1BWOjhRFu6pfqmMGLsfe2BKpqK_Ji13-wRAXuz3mTXxLlJ18O_Sv__jCWEfzyTTh6zJz8iCDc4W5YdZuiaL8MaITHjeTyRbXv3v_gf6K8BzeJ6MX1Uh6s-arYXIO3QFqKhfKMXXuipsEMx6kz3b-fNGNE8PULPM3q76lhRmIPW1zeR0CQ6qqNMFmzh5UPjgfFuccMMeZpaqgpYvEIy1aCB_w6AsDClZ9hKBu0nMIGa8sZ2AUR5DbtHY0DHgDrxoBNF8-nJvrIR_8d72zqYJMw8meHzzzx8cD87XlziRhJN7IIv-v9LKkS_aEg8I6e-QM0dJsUIbyq0UKnXNdX-89K9LxrkOTPSwcJHeBbQVO18HfQUS-iC6hfS08ttp4xhaPCeD9xRdVGKiAT8RPYCcxyNTV25esbWAstmujBT9RyufstyWHyGpUliONJMCF1pV62bfCnb9DSUR5ozrKHJ30gSVb2kZzAK09KYaU4B783-RlZONE_B8JqmnYrhaFIJS4kqPYR0gDKXOqKHySzTiPEN70wCtzyml_VcrQeN7XUgJUen7IPbNFqmjzCt3Qd-Jvdzz7LY_pL2xk2-ll0Odsr-hWDHDWOsAEQJRVqvZcWXBnM8uOjjr_14Ghywjpm3ej614IoxOO7i_u0mACsc1QVS0GBn4OGkYhG7ZetcssU9Qaxars4Spy-qfWgx7t4niQtJr-mE8JqYXWYJDjMXkWeLsak3KfsYwqpD5vKJ6l15CuT87ubETFpDdHvXy-u62W63W7KLt-o9mpWFNZiXAiFM3LHfQy_HSs0LVfkEAERTj-04gCNn60z5zWYnQ4ASrNq4oM0BPMsfauY2Y2D0E0cLPXXXUSu1t59ZcN32sXh71BkfTTNxRM8UX4Se8he12ptBa8KapaaLT_dzKUmdg0NALlVvbicOf7Nor678p7MbUwtrC5LwDm_gc30NJSZajWqWe05o-UjEedNNbjmmqBqBYF8Cr76DdDXnG9svFeKbyKQLKlHUA35UvzS2LtfC3oc9DDC0kvNUC1lmwCZjzWhhVfa9Lde66makEjlKl7FerXx1r3Tsh5EqkCxDsMbFAGD6ktxkO_UjhOnYHSbTlGcXKoGOJeKGQvqinVNS2dPCK2zVQFqi1wV7YiHMAfL3BA9qV_FqTSTt0V-Ee4pW1IUUzWDGRszfRUlMQJtYypO-afNMLtJKel3e5rNNVu70BWNLD7VxGKIz3SVC3IsMAjYLQerHMD6pcQQdF-5jrOhlnDM0ANEuklSnnn4NbB6K3SAMaVZV-1QgR4m5_qV-8FyvyVBGkL2yB3TpKrkKcdl_eoA6q5w2TxNl4TNTIndvvgTBbvm14RKV_IEaN5pifJlgMZN9AdBp5pBSz2GamUd4vo9bwrIogwLlRBrssO24ObduHh5gu-SQjP23s6k8P4M_i37ZZRQOesMCR4C7rDw7ALiaQurEZCesmp58PBE_bT_iqHlWGYG23ZY6z-1QcDH3QkIcJtp7rEXqF-oGPE7idIgYAYcOKECeNkqNDVyKqruhStC03c9e4uFLUNkvJTK8DSC3lA2YqPgW0BtVbkzxd71J8qxY0knu3iiLRSO7fMvbwd8M-CAVPQsL5j19Tkq3BxjexvymVAT9iQBaawqCmarrT2eRW9IIwnJKkB5SokQA4MFavtx7CblbzFzmQP8_1UgyMxC9nqPjY2gcsbuzcWhswfkmaLJF1cSPKDPf8uUmCzCvfijW0GgD_h4fsd54pugHk9BqhG676SsN7-CPt2Tzl7I_eI39AJQZILyF0L0oEv_xmgIT-bKBmjqEHlrI1zDXZqkchVyLESYfIYE9furYQI2qefJNl1ePSpxwqM_U0s107WGkQwhZiEU89qc2PTos-o27j6VxRGDo5QBDxl3Q6-_IuQRbZC62YkrH8wQCeMONoha2HS5-CyzqUZWOajRWFFnxRLUjg-zXaTMBM7i2b8-fVCD8QWgcnrS_QBymT5ytIQN9Zn-PRVAe73HgBvdjeobkKZSCmvR4KB2kD9cFmxAAH-gB8zs4X2NJOUGUzCHqoBuljLoMXaTEVVoS17CX_KToSTegLf4i_-XQotlnBw_OQXIusczqsSEsP0WBPsnh6qTfPrqi5xwVPA_1pkFn6UkCuD3ZtVfoRiBejczU2as40z2N-LjM8g9TPUtep1LCxvCColsK1CX16Y-sSrPcVQvEyH4uonLE0cM1C3IPzDr69hEBdrN5lyqqtednS6nFLEbSfeuV2OXl-mk1MF2-oUbJ33P47K4bXg8RWgYJKnhk1CNJyYwxVrYaMHJXYpjwIVX0u7__vl2JKUr4dw1WNWrlfNfN7CSpOXluLCTllt-5kybM57BIR0bPZqJTqCaBmK5gCl84CTt5kJrq6MfGbIvvBM4BF1qZyT00oCC_s_qoew5HjkINlQoEareGsLTDT_aeINh4zxnjlgxiWX-QaWRdqrihzW2H4_G_OLWrsFtvkDrEBtXev3RaDV6u3YeS45-8wnArT_yB_pG9Mbf3YKEU-ACbZtz4UbnD2p2x7BWOXEtRyHron_Zpj6dR36Tj7sVEs28rGoKZW9kjiVR3p8seAjVc-CqlNwK8AnltpEVoUR6O13cuCzRvPS65Khd0R56A64XUve-16cF3ulxONHwGua3Z_lwScD_5N2yL02z9khIVLBP8ER3Bpu7Jt5gOGkK7GtxCA3LnA47GpYvtI14hsSjRX1-9NHvJaN28hNRO7BliYCNQaT_6JN19PdLbFRASZyHrU5ClE6Xpg0iduZJUADe3puiH-Pq624vYilQfOPkLTeLE3-HfBfshZqYblsLEY6zWdjmjNEUoJ0l_xJSK2dX2690xXXnim2CUjVCDGhKi_HwmT1E6o24sVXiH-svBxAJsFZqgS-kCckcnQQziQIEy4PWpN7xCZBIZBETXGEjZ1EIxDv4EDCnlnUq43DiWHAF5tBCyjBXDA2gpU7YcDosQMLRawh3wD31crghc-BBcrYVRm8PJX-yWD_AYjJtVLn1t-w2nYppL8DL0llIDzfps5rpie4GHdye4XNs6IRvAMMiY7hFCmf7ccsMSa941xP6cuE0VhRjSkihNoEA35sEb6qNpEBDrjC07y42_JuSJAC8uVNFXe-0xpC9-agwxKGQvy0vzaN2QsXMXem8jaRn7NHVlH7-lRx9G6W56I8OQsIWO6QIxkd-E67SoHv_4SqZcwl4QAmMJHbCaboHlKAU_d0OLqV-LNG5AELHgIYtMGTu6Zs3NmY64KXAwUvUdSwT5ZCnUb7dhFieGVWyIoGkiTUiIiktk2HWjnMR6QztUCdUPHekvpfBSrkSWjt5xJLisXqMNqmHG6L4A81_O7hxy0n29fhPnrXDJutCQfbZkQZQs51sP8INg6ieRVV2xCjY5jpiWHPOMan5SPjyf3HqM38fv6y4_EML3yMLf11XORtnb5KJdSor2N7wSDZWnxLq8jVK1sYDGJlduvt0I6YmDV_gehu89_8iWXYaFx1d-4llDZNUcvfJUZCtozGa0U9V_8MqTLr1LDjV8JMZrVnI_P6iDoJ-So75LBcTJ4YMvIjGGXiPtfyLc7xrO6k4gvvbfMIX8MczLZujlnn-cGuXhVGhiUdOSpc4c5eHkIY7w40qoPEFOUmVoYFYghshAK8EbIWho17i4GBJQfoEGHEWuUauhgLFwlC-5x1ORQbVGUG-cCyojz4XNOXL-VlVhJq6z-A2pv7PvFo_bdFPz62t4fsQt-s5bF4lBkOKotLixS2bF1i4fMyJfMVlhXnvDUa_aptf7aG_92gaNJcFU0gtll_KV7MMOb0IRS3ij53XidEQ7Z4_oFAqOhJEJwx6a6vY-SgRCTC394h-qMQUlWr19oz5O8ckd65SFokooAIJgg-nJ917gRcOQ2PYEfBAk8nO6L2ieJdEajAVQZt6sqcxvEcS9icjPu7pcblK3Q27J-r_2hywliAcy7IER912NghTLoZQ0nHECo0epFYnZqkK0u-FH_BL8S0Fifms13DvSXAbS8nI1AfFSe3u0NCyxr4A9649tU1GgA6cHvw34A9rzNxPPRHnMTWhMCe-Oi-79Hp0HO86baK36wMVcbBUZsRBi2CDWcTfEvS6mfmvVplcubr6ggOuYC3oZyFhbLeX0V3vF5t8S5P05gTspurKL0f0njz-x5rkPyReHo_gVmizxHWTd4rPmYKEIGncMyguvcqfSiSQQqNla7CPLJD3MAG1PNtMwM9bIK95eAdx6Ryh7DMvBZlkMiU9GxXPhINaDIDsJZKFyXrmMd3r6J80Qin1HuLxQK3Ed6_nEVjbGIRcNvMsz-zq2HW803BJ79VpDw8n7-fe5jCoQu6PN6RhSzpS8B6fCol6T3HbvzQCVSaup9HZnSEAyNUqpuVGHc9212bSqwwuCsJlZcMzJWojSy2zAlW0QlQpq2fGWwszcftiirtAkAl6tbZY9rYAXOmumnKFYULIRKk4PIXv82yfx9QjiZrPc3aQOeWUZjZQO4x3di46.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_011417a023cf118b016af61de67ee087d1b4bfa573beb141b1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 714,
+   "total_tokens": 2217,
+   "cost": 0.028935,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.028935,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.02142
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.65
+}

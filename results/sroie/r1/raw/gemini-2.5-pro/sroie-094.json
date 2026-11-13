@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "AEON CO. (M) BHD",
+  "vendor_vat": "002017394688",
+  "invoice_ref": "2018020951320023885",
+  "invoice_date": "2018-02-09",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 5.57,
+  "tax": 0.33,
+  "total": 5.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "STERILE FILTRAT",
+    "quantity": 1.0,
+    "unit_price": 5.57,
+    "tax_rate": 6.0,
+    "net": 5.57
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 5.57,
+    "tax": 0.33
+   }
+  ]
+ },
+ "cost_usd": 0.0159875,
+ "raw": {
+  "id": "gen-1794514248-GgTT4mF4Gw0onedZ7fTA",
+  "object": "chat.completion",
+  "created": 1794514248,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"AEON CO. (M) BHD\",\n  \"vendor_vat\": \"002017394688\",\n  \"invoice_ref\": \"2018020951320023885\",\n  \"invoice_date\": \"2018-02-09\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 5.57,\n  \"tax\": 0.33,\n  \"total\": 5.90,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"STERILE FILTRAT\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.57,\n      \"tax_rate\": 6.0,\n      \"net\": 5.57\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 5.57,\n      \"tax\": 0.33\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"AEON CO. (M) BHD\" from the receipt. I've also found the vendor's VAT ID, \"0020173946 88\", which I can map to the `vendor_vat` field. Lastly, I've located the invoice number, \"201802\", which is now ready for the `invoice_ref` field.\n\n\n**Refining Data Extraction**\n\nI've extracted the invoice date, \"09/02/2018\", and formatted it to \"2018-02-09\". I've also inferred the currency, although it's not explicitly stated, and will populate it with MYR. Due to the lack of a specified due date, I'll set that field to `null`, as per the schema guidelines. I've now identified and extracted the untaxed amount from the GST summary as 5.57. I will use the subtotal, if available.\n\n\n**Analyzing Receipt Data**\n\nI'm now focusing on extracting the remaining required fields for the schema. I've successfully identified the untaxed amount (5.57), tax amount (0.33), and total amount (5.90). I've also parsed the \"STERILE FILTRAT\" line item details: description, quantity (1), unit price (5.57), tax rate (6%), and net amount (5.57). I've determined the VAT treatment code as \"S\" and can extract the related vat_breakdown data. No IBAN.\n\n\n**Finalizing Data Extraction**\n\nI've extracted the full invoice reference \"2018020951320023885\" and confirmed the currency is indeed null, as it's not explicitly stated on the receipt. I've re-examined the tax and pricing, confirming consistency between the GST summary and the line item details. The VAT breakdown is in line with the tax rate and net amount. All extracted data is now fully checked and ready for schema population.\n\n\n\n**Confirming Data Accuracy**\n\nI'm now satisfied with the data extracted, and I've cross-validated the financial values, ensuring the untaxed amount, tax, and total are consistent with the line item details. I've re-examined the receipt to be certain the currency, invoice date, and due date were extracted accurately based on the schema and instructions. All extraction and verification work is now complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"AEON CO. (M) BHD\" from the receipt. I've also found the vendor's VAT ID, \"0020173946 88\", which I can map to the `vendor_vat` field. Lastly, I've located the invoice number, \"201802\", which is now ready for the `invoice_ref` field.\n\n\n**Refining Data Extraction**\n\nI've extracted the invoice date, \"09/02/2018\", and formatted it to \"2018-02-09\". I've also inferred the currency, although it's not explicitly stated, and will populate it with MYR. Due to the lack of a specified due date, I'll set that field to `null`, as per the schema guidelines. I've now identified and extracted the untaxed amount from the GST summary as 5.57. I will use the subtotal, if available.\n\n\n**Analyzing Receipt Data**\n\nI'm now focusing on extracting the remaining required fields for the schema. I've successfully identified the untaxed amount (5.57), tax amount (0.33), and total amount (5.90). I've also parsed the \"STERILE FILTRAT\" line item details: description, quantity (1), unit price (5.57), tax rate (6%), and net amount (5.57). I've determined the VAT treatment code as \"S\" and can extract the related vat_breakdown data. No IBAN.\n\n\n**Finalizing Data Extraction**\n\nI've extracted the full invoice reference \"2018020951320023885\" and confirmed the currency is indeed null, as it's not explicitly stated on the receipt. I've re-examined the tax and pricing, confirming consistency between the GST summary and the line item details. The VAT breakdown is in line with the tax rate and net amount. All extracted data is now fully checked and ready for schema population.\n\n\n\n**Confirming Data Accuracy**\n\nI'm now satisfied with the data extracted, and I've cross-validated the financial values, ensuring the untaxed amount, tax, and total are consistent with the line item details. I've re-examined the receipt to be certain the currency, invoice date, and due date were extracted accurately based on the schema and instructions. All extraction and verification work is now complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1559,
+   "total_tokens": 1877,
+   "cost": 0.0159875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0159875,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01559
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1290,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.2
+}

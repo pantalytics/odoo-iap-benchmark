@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "RESTORAN WAN SHENG",
+  "vendor_vat": "001335787520",
+  "invoice_ref": "1170190",
+  "invoice_date": "2018-06-01",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 4.8,
+  "tax": 0.0,
+  "total": 4.8,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Cham (B)",
+    "quantity": 2.0,
+    "unit_price": 2.2,
+    "tax_rate": 0.0,
+    "net": 4.4
+   },
+   {
+    "description": "Take Away",
+    "quantity": 2.0,
+    "unit_price": 0.2,
+    "tax_rate": 0.0,
+    "net": 0.4
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 4.8,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0095775,
+ "raw": {
+  "id": "gen-1794514331-GPCJJ05xDn0gAgXpTbZO",
+  "object": "chat.completion",
+  "created": 1794514331,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1170190\",\n  \"invoice_date\": \"2018-06-01\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 4.8,\n  \"tax\": 0.0,\n  \"total\": 4.8,\n  \"iban\": null,\n  \"vat_treatment\": \"Z\",\n  \"lines\": [\n    {\n      \"description\": \"Cham (B)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 2.2,\n      \"tax_rate\": 0.0,\n      \"net\": 4.4\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 2.0,\n      \"unit_price\": 0.2,\n      \"tax_rate\": 0.0,\n      \"net\": 0.4\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 4.8,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"RESTORAN WAN SHENG\" from the receipt. I've also found the vendor's VAT registration number, which is \"001335787520\" as indicated on the document. I think I am off to a good start!\n\n\n**Populating JSON Schema**\n\nI've extracted all necessary data points and am nearly finished populating the JSON schema. I've successfully mapped the `invoice_ref` to \"1170190\", formatted the `invoice_date` to \"2018-06-01\", and identified `currency` as \"MYR.\" The untaxed and total amounts are also captured, along with the `tax` amount of \"0.00\". Further, the missing due date and IBAN have been set to `null`. I've set the vat_treatment to \"Z\", representing zero-rated supply. Finally, the \"lines\" array is underway and I'm adding each line item.\n\n\n**Constructing JSON Object**\n\nNow, I'm structuring the JSON object using all the gathered data. I'm carefully inputting the values for each field, from vendor information to the breakdown of tax. I have just added the VAT breakdown section and am now filling the lines array with the appropriate descriptions, quantities, and other details. I am paying close attention to the formatting and data types to ensure a valid JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"RESTORAN WAN SHENG\" from the receipt. I've also found the vendor's VAT registration number, which is \"001335787520\" as indicated on the document. I think I am off to a good start!\n\n\n**Populating JSON Schema**\n\nI've extracted all necessary data points and am nearly finished populating the JSON schema. I've successfully mapped the `invoice_ref` to \"1170190\", formatted the `invoice_date` to \"2018-06-01\", and identified `currency` as \"MYR.\" The untaxed and total amounts are also captured, along with the `tax` amount of \"0.00\". Further, the missing due date and IBAN have been set to `null`. I've set the vat_treatment to \"Z\", representing zero-rated supply. Finally, the \"lines\" array is underway and I'm adding each line item.\n\n\n**Constructing JSON Object**\n\nNow, I'm structuring the JSON object using all the gathered data. I'm carefully inputting the values for each field, from vendor information to the breakdown of tax. I have just added the VAT breakdown section and am now filling the lines array with the appropriate descriptions, quantities, and other details. I am paying close attention to the formatting and data types to ensure a valid JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 918,
+   "total_tokens": 1236,
+   "cost": 0.0095775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0095775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.00918
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 614,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.02
+}

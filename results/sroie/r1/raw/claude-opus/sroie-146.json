@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "PappaRich BMC",
+  "vendor_vat": "000164270080",
+  "invoice_ref": "263370",
+  "invoice_date": "2018-03-24",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 68.8,
+  "tax": 4.13,
+  "total": 72.93,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "D28 MILO DINO(I) E",
+    "quantity": 1,
+    "unit_price": 7.45,
+    "tax_rate": 6,
+    "net": 7.45
+   },
+   {
+    "description": "R03 N' LEMAK+fc E",
+    "quantity": 2,
+    "unit_price": 17.83,
+    "tax_rate": 6,
+    "net": 35.66
+   },
+   {
+    "description": "N22 SPRG NDL+su+cr E",
+    "quantity": 1,
+    "unit_price": 9.34,
+    "tax_rate": 6,
+    "net": 9.34
+   },
+   {
+    "description": "B02 HALF BL EGG E",
+    "quantity": 1,
+    "unit_price": 4.53,
+    "tax_rate": 6,
+    "net": 4.53
+   },
+   {
+    "description": "D19 CHAM (I) E",
+    "quantity": 1,
+    "unit_price": 5.57,
+    "tax_rate": 6,
+    "net": 5.57
+   },
+   {
+    "description": "10% Srv Chg",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 6.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 68.82,
+    "tax": 4.13
+   },
+   {
+    "rate": 0,
+    "base": 0,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.029744,
+ "raw": {
+  "id": "gen-1794514719-LVDXzfIaT1GNhlqgJhNE",
+  "object": "chat.completion",
+  "created": 1794514719,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"PappaRich BMC\",\"vendor_vat\":\"000164270080\",\"invoice_ref\":\"263370\",\"invoice_date\":\"2018-03-24\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":68.8,\"tax\":4.13,\"total\":72.93,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"D28 MILO DINO(I) E\",\"quantity\":1,\"unit_price\":7.45,\"tax_rate\":6,\"net\":7.45},{\"description\":\"R03 N' LEMAK+fc E\",\"quantity\":2,\"unit_price\":17.83,\"tax_rate\":6,\"net\":35.66},{\"description\":\"N22 SPRG NDL+su+cr E\",\"quantity\":1,\"unit_price\":9.34,\"tax_rate\":6,\"net\":9.34},{\"description\":\"B02 HALF BL EGG E\",\"quantity\":1,\"unit_price\":4.53,\"tax_rate\":6,\"net\":4.53},{\"description\":\"D19 CHAM (I) E\",\"quantity\":1,\"unit_price\":5.57,\"tax_rate\":6,\"net\":5.57},{\"description\":\"10% Srv Chg\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":6.25}],\"vat_breakdown\":[{\"rate\":6,\"base\":68.82,\"tax\":4.13},{\"rate\":0,\"base\":0,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the Malaysian receipt's numbers: subtotal 62.55, service charge 6.25, and 6% GST of 4.13 giving a total of 72.93. The summary says the untaxed base is 68.82, but 62.55 plus 6.25 comes to 68.80, so I need to work out which base is right.\n\nI'm settling on the untaxed base of 68.80, since 68.80 plus the 4.13 GST gives the 72.93 total, and I'll include the 6.25 service charge as its own line so the lines reconcile. Then I'm pulling the remaining header details: the date, MYR currency, the invoice reference, the GST ID, and the unit price for R03 at 17.83, treating the item prices as net of tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the Malaysian receipt's numbers: subtotal 62.55, service charge 6.25, and 6% GST of 4.13 giving a total of 72.93. The summary says the untaxed base is 68.82, but 62.55 plus 6.25 comes to 68.80, so I need to work out which base is right.\n\nI'm settling on the untaxed base of 68.80, since 68.80 plus the 4.13 GST gives the 72.93 total, and I'll include the 6.25 service charge as its own line so the lines reconcile. Then I'm pulling the remaining header details: the date, MYR currency, the invoice reference, the GST ID, and the unit price for R03 at 17.83, treating the item prices as net of tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS5AoKEAgTGAI4AUIIdGhpbmtpbmcSDOcKyHlleloIS//xqRoMTXpBwNzxDU73WaOkIjC+gfTtuDeRbynXNskaGGCkC22/TR8ubKp2371t7gtPURUl+/TuAcImhMmWd5qIhFYqgQqXbNc/QUr+iqQGyg7KzaEmj2ZD/lhjZDnqChMjaKYX1/kYdeAoNu/UaJhfObE2pU+l6204Kwl5DEMy4XvINzp5PzEt8hiAnzJX9met1uY7d+dfo440LSqjQrks6H+XX4SKKiIHNe2ymX+dJZ9Je+v3HGO2WEbrIEnV1ewyHNsO3kkJvlxsaCujIrXQiYBCisF4D4HY1McjjOOJ2oV4SQRwnz+4HdGSLCCnIak34lISusCvzwhF/MRn7j4lWWBtR2J0m6WZy3FJs6iInVahB0jCNW92wdZfSHd+njnsLD32zVLP9VlseuUj65b3rBu9aBzR02G4FMSkE7q93hs8yKRfZS5RdEd9FKBQTkYZ/LJc6dzlAQOaUQcL+shbw375OK7m8cT8KS4BAA+EB1sakryGOBjV538Ka392uUnnH3UIwxg4BxDWnQ12F+dJ/1Sd81t0CVJ9PLVQi3I3cLqtO9VIya1G1WuhrTY6Gmxf7A+9o37miMk1q37ozdjP5EXC/66LIEoBRB0bn3VM5e1I8BReijt3H31ZYJhpiU3Z+5g7SYW1b0GLzNIb4QYFRBvXrdFyCmJ2d6TOJhbj5PwOti20v7sVB0eZw1i6MeHOFcZchu/YVlRI18rEU7QlJTMQpn2jCWXUsIN3oVL5FMZ/pdzjX1int0IRvuT9TLKPwKDFsJy5TQjbSde1VrBEGNizNV0QmQN3RI+vzOv/Ev+mwtXA1eKiuBfWWz5x9BO/qBSdc1GppbIOehuLhsOmJxLpyNVKWxTfg8CI+NDWEqwJSBrACwLGDR4/L4f9Ll/0DDgVq0zpUoeqGuC3qVU9WhvJvK26vAp95/w8K/XEsBb/v1cUGDg2nfrvE33L0d3U7Q756HxamqRd48hXketb31JiF2PP+IEvESy9Hvf4bgAH2YDy/tzvZ3CfJqtZq0ekZwVChkjr7SaM1Qs7Wx40X+2159ut4hqTvm+dL4FXlVHll3qRDj8lkRxaVBUzgwcgUyxGgJIUiJskKwVsgSMBrdDhFaIghp56/JJLCUOm6jfjWl1khoHENfH4zmUmSb19Abi4jtayZkV0o9qleRcVZQ8Hsml8fZ7Mbf57j+J89rqcWfqrA9iteLLtnzpFeTCz+iIyob4iDYKmKwax81SYV+O5BVUv1cKlFhCcRUfEviqKjKeM6q+iApSppIaLYZSDZ2OmXYq91TEVx9IdOsxJy1gQnrbouL4IC/B2w+hMBVwTiNTPastTe4jTe5nTyjZ94ygjPR+G93L094dL8jLcIUJ5oI8sXCl+x435Y3O0ILaVPr54Uj5ck/AUdfcn4BwzNL1P+LvYk+pDPWtG2qoIAFFa1ysSQ+hXK+QlWwwdyE0QILjOhLgf41qcqBsyAEDeDbryrf/q+L2tBbtYJ40rdRHuJ20rDmRW6uxOnqhfDiGs9qgQr2rh0VauwLXH9ZVTb3K4vIICSUQvWvycERchFE4+Jwxu5uOzKxaN0wJ5/zaW+ENyOFZ0q8w/HmlQ5yqxcUxb9zsn+tgba2d2W1Nfc7Mez4l86VOu+zI8IrOzZuCL+bPsGW/cxwDyymkprYTbm530lF5WlTqGJkm46U/mL47Z+m6F9oE9vAaEOXbm4ZS+/kHleKD0uekVY7DYSY1DP7L1zsdrakkkDLuW4zbMT0F5yv4zuYPDtL6457cqqqWUA1oeB4uVJj2oAs1IryWr2/I4IJYYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 851,
+   "total_tokens": 4032,
+   "cost": 0.029744,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029744,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01702
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 380,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.62
+}

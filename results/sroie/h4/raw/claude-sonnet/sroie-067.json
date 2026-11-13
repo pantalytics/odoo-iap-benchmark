@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD",
+  "vendor_vat": "001147416576",
+  "invoice_ref": null,
+  "invoice_date": "2018-01-06",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.67,
+  "tax": 2.86,
+  "total": 53.55,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "CURRY MIXED VEGE",
+    "quantity": 1,
+    "unit_price": 16.85,
+    "tax_rate": 6,
+    "net": 16.85
+   },
+   {
+    "description": "517 (S) @13.90",
+    "quantity": 1,
+    "unit_price": 14.73,
+    "tax_rate": 6,
+    "net": 14.73
+   },
+   {
+    "description": "'XINGHUA' SPRING ROLL (12 PCS)",
+    "quantity": 1,
+    "unit_price": 12.72,
+    "tax_rate": 6,
+    "net": 12.72
+   },
+   {
+    "description": "TI GUAN YIN TEA (POT)",
+    "quantity": 1,
+    "unit_price": 3.18,
+    "tax_rate": 6,
+    "net": 3.18
+   },
+   {
+    "description": "PLAIN RICE (B)",
+    "quantity": 2,
+    "unit_price": 1.59,
+    "tax_rate": 6,
+    "net": 3.18
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2.87,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 47.8,
+    "tax": 2.86
+   }
+  ]
+ },
+ "cost_usd": 0.018448,
+ "raw": {
+  "id": "gen-1794516220-OIaCkgxUCslsPnlmV1hD",
+  "object": "chat.completion",
+  "created": 1794516220,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\",\"vendor_vat\":\"001147416576\",\"invoice_ref\":null,\"invoice_date\":\"2018-01-06\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.67,\"tax\":2.86,\"total\":53.55,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"CURRY MIXED VEGE\",\"quantity\":1,\"unit_price\":16.85,\"tax_rate\":6,\"net\":16.85},{\"description\":\"517 (S) @13.90\",\"quantity\":1,\"unit_price\":14.73,\"tax_rate\":6,\"net\":14.73},{\"description\":\"'XINGHUA' SPRING ROLL (12 PCS)\",\"quantity\":1,\"unit_price\":12.72,\"tax_rate\":6,\"net\":12.72},{\"description\":\"TI GUAN YIN TEA (POT)\",\"quantity\":1,\"unit_price\":3.18,\"tax_rate\":6,\"net\":3.18},{\"description\":\"PLAIN RICE (B)\",\"quantity\":2,\"unit_price\":1.59,\"tax_rate\":6,\"net\":3.18}],\"vat_breakdown\":[{\"rate\":0,\"base\":2.87,\"tax\":0},{\"rate\":6,\"base\":47.8,\"tax\":2.86}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date as 6 January 2018, since Malaysia writes day first, so that becomes 2018-01-06. The vendor is a vegetarian restaurant with its GST ID noted. Next I'm pulling out the amounts: the gross amount, service tax, GST, and net amount.\n\nI'm working out the untaxed amount: 47.80 plus the 2.87 service charge gives 50.67, and the 2.86 tax sits on top of that. Then I'm going through the line items, which sum to about 50.66, close enough to 50.67 that I'll keep that figure. I'm also setting the breakdown: 2.87 at the 0% rate and 47.80 base at 6% with 2.86 tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date as 6 January 2018, since Malaysia writes day first, so that becomes 2018-01-06. The vendor is a vegetarian restaurant with its GST ID noted. Next I'm pulling out the amounts: the gross amount, service tax, GST, and net amount.\n\nI'm working out the untaxed amount: 47.80 plus the 2.87 service charge gives 50.67, and the 2.86 tax sits on top of that. Then I'm going through the line items, which sum to about 50.66, close enough to 50.67 that I'll keep that figure. I'm also setting the breakdown: 2.87 at the 0% rate and 47.80 base at 6% with 2.86 tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 1118,
+   "total_tokens": 4752,
+   "cost": 0.018448,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.018448,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.01118
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 659,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.78
+}

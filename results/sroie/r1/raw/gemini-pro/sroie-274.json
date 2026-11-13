@@ -1,0 +1,119 @@
+{
+ "pred": {
+  "vendor_name": "SUPER SEVEN CASH & CARRY SDN BHD",
+  "vendor_vat": "000639090688",
+  "invoice_ref": "138652",
+  "invoice_date": "2017-06-22",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.81,
+  "tax": 1.22,
+  "total": 28.05,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KK KACANG GORENG 400G",
+    "quantity": 3,
+    "unit_price": 6.79,
+    "tax_rate": 6,
+    "net": 20.38
+   },
+   {
+    "description": "TERUNG PENDEK",
+    "quantity": 1,
+    "unit_price": 3.15,
+    "tax_rate": 0,
+    "net": 3.15
+   },
+   {
+    "description": "HALIA MUDA LOCAL",
+    "quantity": 1,
+    "unit_price": 2.3,
+    "tax_rate": 0,
+    "net": 2.3
+   },
+   {
+    "description": "BAWANG BESAR INDIA",
+    "quantity": 1,
+    "unit_price": 0.98,
+    "tax_rate": 0,
+    "net": 0.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 20.38,
+    "tax": 1.22
+   },
+   {
+    "rate": 0,
+    "base": 6.43,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.042616,
+ "raw": {
+  "id": "gen-1794514647-QyEcjiODADjfIYEDJnvA",
+  "object": "chat.completion",
+  "created": 1794514647,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SUPER SEVEN CASH & CARRY SDN BHD\",\n  \"vendor_vat\": \"000639090688\",\n  \"invoice_ref\": \"138652\",\n  \"invoice_date\": \"2017-06-22\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 26.81,\n  \"tax\": 1.22,\n  \"total\": 28.05,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"KK KACANG GORENG 400G\",\n      \"quantity\": 3,\n      \"unit_price\": 6.79,\n      \"tax_rate\": 6,\n      \"net\": 20.38\n    },\n    {\n      \"description\": \"TERUNG PENDEK\",\n      \"quantity\": 1,\n      \"unit_price\": 3.15,\n      \"tax_rate\": 0,\n      \"net\": 3.15\n    },\n    {\n      \"description\": \"HALIA MUDA LOCAL\",\n      \"quantity\": 1,\n      \"unit_price\": 2.30,\n      \"tax_rate\": 0,\n      \"net\": 2.30\n    },\n    {\n      \"description\": \"BAWANG BESAR INDIA\",\n      \"quantity\": 1,\n      \"unit_price\": 0.98,\n      \"tax_rate\": 0,\n      \"net\": 0.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 20.38,\n      \"tax\": 1.22\n    },\n    {\n      \"rate\": 0,\n      \"base\": 6.43,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm currently focused on identifying and extracting the vendor's name and VAT/GST identification number from the provided image. Progress is steady on this front.\n\n**Clarifying Tax Calculations**\n\nI'm meticulously working to reconcile the tax calculations, ensuring the untaxed amount, tax amount, and final total align correctly. I'm prioritizing the total amount paid, factoring in any rounding adjustments.\n\n**Calculating Item Subtotals**\n\nI'm diving into the itemized lines now. I'm specifically trying to untangle whether the unit prices are tax-inclusive or exclusive, as this impacts the subtotal calculations. My goal is to accurately determine the net amount for each line item.\n\n**Reconciling Line Item Details**\n\nI'm currently refining the line item subtotals, grappling with whether unit prices are tax-inclusive or exclusive. I'm focusing on correctly determining the net amount for each item, especially with the \"KK KACANG GORENG\" line.\n\n**Finalizing Data Extraction**\n\nI've successfully extracted all key vendor and invoice details, including name, VAT, reference, and date. The currency has also been identified as MYR. I'm now integrating this into the JSON structure.\n\n**Correcting Line Item Logic**\n\nI'm revising the logic for line item calculations, specifically addressing discrepancies between printed values and calculated subtotals. I'm prioritizing accurate net amounts before tax, even if it means deviating from printed figures for unit prices to ensure mathematical integrity.\n\n**Refining Line Item Values**\n\nI'm grappling with the \"KK KACANG GORENG\" line item. While 21.60 is printed, it seems tax-inclusive, and the schema requires \"net amount before tax, as printed.\" I'm opting for 20.38 to ensure mathematical consistency with the tax breakdown, prioritizing accuracy over a direct printed value if it conflicts with the \"before tax\" requirement.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm currently focused on identifying and extracting the vendor's name and VAT/GST identification number from the provided image. Progress is steady on this front.\n\n**Clarifying Tax Calculations**\n\nI'm meticulously working to reconcile the tax calculations, ensuring the untaxed amount, tax amount, and final total align correctly. I'm prioritizing the total amount paid, factoring in any rounding adjustments.\n\n**Calculating Item Subtotals**\n\nI'm diving into the itemized lines now. I'm specifically trying to untangle whether the unit prices are tax-inclusive or exclusive, as this impacts the subtotal calculations. My goal is to accurately determine the net amount for each line item.\n\n**Reconciling Line Item Details**\n\nI'm currently refining the line item subtotals, grappling with whether unit prices are tax-inclusive or exclusive. I'm focusing on correctly determining the net amount for each item, especially with the \"KK KACANG GORENG\" line.\n\n**Finalizing Data Extraction**\n\nI've successfully extracted all key vendor and invoice details, including name, VAT, reference, and date. The currency has also been identified as MYR. I'm now integrating this into the JSON structure.\n\n**Correcting Line Item Logic**\n\nI'm revising the logic for line item calculations, specifically addressing discrepancies between printed values and calculated subtotals. I'm prioritizing accurate net amounts before tax, even if it means deviating from printed figures for unit prices to ensure mathematical integrity.\n\n**Refining Line Item Values**\n\nI'm grappling with the \"KK KACANG GORENG\" line item. While 21.60 is printed, it seems tax-inclusive, and the schema requires \"net amount before tax, as printed.\" I'm opting for 20.38 to ensure mathematical consistency with the tax breakdown, prioritizing accuracy over a direct printed value if it conflicts with the \"before tax\" requirement.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 3290,
+   "total_tokens": 4858,
+   "cost": 0.042616,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.042616,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.03948
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2804,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 28.56
+}

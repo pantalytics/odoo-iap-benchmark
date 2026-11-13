@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "Smith Ltd",
+  "vendor_vat": "916-97-6743",
+  "invoice_ref": "26343874",
+  "invoice_date": "2013-07-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 3172.99,
+  "tax": 317.3,
+  "total": 3490.29,
+  "iban": "GB78TZMX55978564099007",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Microsoft Xbox One X 1TB 4k Ultra HD Console black controller works great 1787",
+    "quantity": 5.0,
+    "unit_price": 249.0,
+    "tax_rate": 10,
+    "net": 1245.0
+   },
+   {
+    "description": "Cables 500gb,Sony PlayStation 4 PS4 CUH 1215A Jet Black Console w/ Controller",
+    "quantity": 5.0,
+    "unit_price": 100.0,
+    "tax_rate": 10,
+    "net": 500.0
+   },
+   {
+    "description": "PS2 Slim Console System SCPH-77000 PINK Playstation 2 Tested",
+    "quantity": 4.0,
+    "unit_price": 252.0,
+    "tax_rate": 10,
+    "net": 1008.0
+   },
+   {
+    "description": "Nintendo Game Boy Micro Console - Black (OXYSFBB)",
+    "quantity": 2.0,
+    "unit_price": 130.0,
+    "tax_rate": 10,
+    "net": 260.0
+   },
+   {
+    "description": "Nintendo GameCube System Console Bundle Mario Sunshine + Genuine controller LOT",
+    "quantity": 1.0,
+    "unit_price": 159.99,
+    "tax_rate": 10,
+    "net": 159.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 3172.99,
+    "tax": 317.3
+   }
+  ]
+ },
+ "cost_usd": 0.029404,
+ "raw": {
+  "id": "gen-1794515308-DtDvTMcjxmvbAyoqZ3jP",
+  "object": "chat.completion",
+  "created": 1794515308,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith Ltd\",\n  \"vendor_vat\": \"916-97-6743\",\n  \"invoice_ref\": \"26343874\",\n  \"invoice_date\": \"2013-07-17\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 3172.99,\n  \"tax\": 317.30,\n  \"total\": 3490.29,\n  \"iban\": \"GB78TZMX55978564099007\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Microsoft Xbox One X 1TB 4k Ultra HD Console black controller works great 1787\",\n      \"quantity\": 5.00,\n      \"unit_price\": 249.00,\n      \"tax_rate\": 10,\n      \"net\": 1245.00\n    },\n    {\n      \"description\": \"Cables 500gb,Sony PlayStation 4 PS4 CUH 1215A Jet Black Console w/ Controller\",\n      \"quantity\": 5.00,\n      \"unit_price\": 100.00,\n      \"tax_rate\": 10,\n      \"net\": 500.00\n    },\n    {\n      \"description\": \"PS2 Slim Console System SCPH-77000 PINK Playstation 2 Tested\",\n      \"quantity\": 4.00,\n      \"unit_price\": 252.00,\n      \"tax_rate\": 10,\n      \"net\": 1008.00\n    },\n    {\n      \"description\": \"Nintendo Game Boy Micro Console - Black (OXYSFBB)\",\n      \"quantity\": 2.00,\n      \"unit_price\": 130.00,\n      \"tax_rate\": 10,\n      \"net\": 260.00\n    },\n    {\n      \"description\": \"Nintendo GameCube System Console Bundle Mario Sunshine + Genuine controller LOT\",\n      \"quantity\": 1.00,\n      \"unit_price\": 159.99,\n      \"tax_rate\": 10,\n      \"net\": 159.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 3172.99,\n      \"tax\": 317.30\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice image. My process involves identifying these specific text elements within the image, referencing the provided JSON schema for guidance.\n\n**Refining Data Extraction**\n\nI've successfully pinpointed the vendor's VAT and invoice reference number. The invoice date has been standardized, and I've deduced the currency. I'm now working on reliably extracting the untaxed amount and the `due_date`, which isn't directly labeled.\n\n**Calculating Invoice Totals**\n\nI've parsed the numerical values for tax and the total amount, correctly converting them to decimal format. I'm also establishing the VAT treatment based on the tax rate and processing individual line item details, including quantities, unit prices, and net amounts, for the first four entries.\n\n**Processing Invoice Lines**\n\nI've successfully extracted all line item details for the invoice, meticulously capturing descriptions, quantities, unit prices, tax rates, and net amounts. This detailed parsing is now feeding into the overall calculation of invoice totals.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice image. My process involves identifying these specific text elements within the image, referencing the provided JSON schema for guidance.\n\n**Refining Data Extraction**\n\nI've successfully pinpointed the vendor's VAT and invoice reference number. The invoice date has been standardized, and I've deduced the currency. I'm now working on reliably extracting the untaxed amount and the `due_date`, which isn't directly labeled.\n\n**Calculating Invoice Totals**\n\nI've parsed the numerical values for tax and the total amount, correctly converting them to decimal format. I'm also establishing the VAT treatment based on the tax rate and processing individual line item details, including quantities, unit prices, and net amounts, for the first four entries.\n\n**Processing Invoice Lines**\n\nI've successfully extracted all line item details for the invoice, meticulously capturing descriptions, quantities, unit prices, tax rates, and net amounts. This detailed parsing is now feeding into the overall calculation of invoice totals.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "AY89a1/8eV/BgkW11urIQLzZgFK/gMfLo4bbrPSyNnMxIbZT1BDdbYKFsKzzQQsgVlgqgRykc/gSCRGaTCgGOTRdpfAVIngUt9lLMaQCfd/BCdf3mh5k+WmLqKqkZghKySMDNsPFMg2YGJ3ds5mxzvWvZHdW+Hgn4DagOt0YJogmS8NMNKSaZ3k5tu6Eriet60ifnAL+ApribRgypS9AAwBkahOdXFRw6nv9gKuR6RD0hPH7RdFwLPJQDMPhXAOLoB0T72+vhE6Sqb3PJoe3njLZpiwBNwcYh8sxd4q941x17CRdfxefTFjyPvbC9qYXfw0XfX41NuSEzqm9K12OGnB5ReCZsDdtsPAytd8kufOKs8OjupNeMBOYSx0MbQrXtU26hkO2zFP6Ir1H2GSJm3i3ul2dWb2rXnno+54AqRcPt/IorTPuFFLBDZwWohZt+/FuVfJ9nnzuwbZIzkl2qSHVC9wPp02bYUikCCu2y2F3NedxV7+8Wr2cmnGWzdDtwBW+P6BM4vk7YZt7Enjh9EcGhgjy1Y4t/3UYwUT1BC65G0/OjWxf8xEmQ8Tj2g/mYTis+sPmKtMQYPrIxrIg3wES+HoopXt6LliZHA8TEOcUbfJHsRL2JY61Rfrxk+EvWDR6M5JZk7/ojHvrwg6yXGqc/D4qIPt+YYSAv6QYNVM/Wsg55fqlT4Z18nwAkd/ornEEPP6m/QDGU7Yl+naiT+DPP3YmnLU6d8JNiIcRLhqXLYy//ZgL4sn4LE5bRnDGNiqZ8n9Oqz3snCjTN3uKsy7n/qMpuuf04npnL/vf8k06MreEb4eJpGq/NNpZlNwXDJlLEdgxeZIJ9eXpTa65gXoDVyPuukBASVKl8/k663LXNlzjPhj97KdMTf99M2cEfBwm7BGh9T+ExLSWxpHv3D/lLSOYqmkiLguxDwQTG2spsS1HZQQXRA9ucvfzP9AtI5khsCUGhaGlz1pdeZVaQe8xecI8/fZYuqRA5ZTsx020OnWb5ARm2W80P1I32X3ZkAmzzEzc7PxE/NIuhIRXWtiGQODDa8WPkSDdoUDLIDxJYwGNLFZPbrrKTCUIe55O9Ner7hY0gz/9uhW0OwNdaUUUcNbbCp9s3by4dSD13voDwujUgYw3nkTz9R6/5bafI0vWL1tQsPzIiW2PqsuUCyhtCzEj1ogxWQvNDC/dveODF5IY2XXAmC5g5cHufIAQ8tKf/0bLv5xqEkOdFwDSCWU+svXrkmSYquFacEXRq7CDo4cmn/QNYnrO39SAYso3g9mGLRzjn9c1bd4P3cgxhS8cqYF2lsp5eplN9sHR2ecBrXN/+cDQSKYrvvoM5CFO/GlaNrDkEGjByMtw5hfDws/QKXziG1yyPuyCyPtRc4IzawgehJ1SSa9atFov/DGY266jEofri3UU6ytKPEKQJuiLKsos34pyrILhAlodcnYg0TfcFaY4POADQfFTYOUvfjDvolzCCLdP9pVm9aqjNLJp5YYgjOJgbCcpffkt+RV1DT+eCVkbzEbEV10dKmlp2PMYpx6Dx0+S+1w0/6tNkvTwLh/OxZFqPNtYxFf4hHET1GzdGAeAfWCkGMztDaXv4mEz8jyM3xD1fwM6LirMn/maWNhcxIRfneS8/XV621vQNDSuVkSWpvEMj4Vw/KG3uMYqSJC1dNd9h7F3t40Raz7p2fMuV4ObE9/Oy+TGmqtAl2gz/RveOo0hYdTXXvn2lFOFbruM69rMtJYBAWdrhWXUXuE26bXtB7cCrVKDapS7NiHQfO8A4O2ugg4GzEuMNFjcVWha99sRZ/f8fUc+WE3agl6N1irF+TMQQR3ftZjONWA8rKYHinzvtyhsaVoY15FQLfnqyA/VKI2jvrWKE5l1LzqYgUA0P0aFrAPLX3+WNwiEWxl41laUJCV98d7/bHun00T942Jnll6Ep9wyUeP2spoVk82Cz22cJMD2MwwLeOcbnoZcW4swccXBVVJmaqQRKBJB6uko6IF0SdRULXSpS/YeB5KXLkjIFaWYmw8HwhUmj+CbaZharP3i8QhXxzQ8/0v72tJIRI6dd9V9a1mnUczPKJHL91+yGEse7BC5jWCnmdmzjGx4IHlemruWJ7XV13bgnJwGdZ3kKxQ0jdES9fuzbPbjXcupFXX8OaXDRYcWBU2ik0i3E1Duv7TqyP7xegrSxn9JHdVk7zn4aHp83rORISI4UwUWtNv6L211AFlrp5XAIoCd3yFJeVLnfEUr4M6eViWCzUhZvAWhyzaHZKONd/oqS1qMMDZoT4D348DOl8F0PslaTLe5rvXbOzQF0S1NgWqUUYijx6evYLDA8q06IIKMBYkrxhDFwQraafjzFmBfDa6fPxzsd4I0rfZP+8j0RmpVH1Nl+Gyp3hAaCpGRjHJ2ogfSfdvBgcJinvZuEMLHijJRXu5u+9vIEAnTdMDLpG8CMj9LcWXosnO6meBrUEKlEysuP4ZpQKblKj8SxOQ0dlMWrOpKkfSDGWoaN9jcQziAdRqgiPwz6YBzO2cUZk/iIm+Quis626oP/O0a4gvAzII2HAVqz+BC7mF4C34cEnX8EOxblquhRylp0eEE1DdqWXWy6U/U1vwuqfu05RzRfar2ynyRLNR2K1ZaK1XwLPJOq01tNehcTvKdWnLzq80LSo7Qkaz8RBt7RP/pjIwXRKsAeGzXRyIhqf5aMtUWoY2NLRqsx39nr787JbphR6PbiO+PB16Ti4xIL3zjzVCrc79AY+PfbF5eoqeDS8dXduwAF6uIVhf6GLXQmGAuoXgx8/Ekhqq2iyfd+PQCe8H51wpzGJql1UYFrcqblcpUEM4tjG7ZeJnOAQ5OuslOGqfGHGYvifzKHJjnL7siNrcV28n6l50DomLcfklznZiK0cFLlp0ZVmxySaH4eYKoSJuoRNhNZH93KUGOUz8tODOME6HsX4tJH/oU+Xauq/RXW2j1yHfYHi60eUCLF9pciU4gLq7n6Cb7ziyiYnH7Cd4Jfb+TIDm+NzlUGcHbLotdFQ7I9kSNhtyNXIo3fN8rubE1PzXuNijUJgfmw4aehfOyy+7SAhjZIsOu+Fuls6oBXkduzik6f4OlDc44khUCf4dui3fOVdtYHD6J/wbQW27EGNDRCRVxmxPDcqcyn+oaHJ+be7P9Su6UK136Gk7hs7smo+5oBDI+v7FZIPAZ4w7f+vgQ0K8jW2Ssx/ScMPgX2+PbosH4CumgX8BOqYEKZwrswfnQcD27lk7AF/C1vWKKtI5wRrZOWX0qEE3b4gilGytDIDp8sq5+ttLGpkqg9HnwvaOsYF/mfCnlL2haHrMkOiXtngaYgel9EayajD6/QRrAb8qvmHxGoxo/mp2zHzdI2kg0t2GxkFVq0uKcUTOcICJhvK2TS7/nIdc4hKs4FNappCZ6UPP1vBhar3T1hLVW7s5APB6XFxnZkfmGYQbhsRfb0qxUhFIL1CZqosv+amJ8N927hjdG+vE8uy/v9K9ax+Afdt5U3OOg2LOaiWsauWuX/kt/JjiHEBpk6iFkeErETc0MC67PEoF03GChnIEzgC3gLElw4geij2RGBryUZrDoTnPxtqbAGPjS9Yul2cvMoawXYp4X0TvezO1a4I2VCIcxcf2a+R+AbVRPAhfJBT4F5tpKP+9CP6X7rs/Nd3KSC1CipKhppFJG4H//Vcdv7J3LLVc2+/pjmPqznHIKBUxGlIw2nTM5czGb9yWWfcf0jA0SI3troXdqd7kl8e57Xqp0GDqlV+3nt13C93p8Va0aHIqhYI7owoN1Ig+FSuyBWwkQNcPo4AvTBx0MVqsWQWWXTT/j+AcyPfbohhLHx2qCzEiAadUD44L5m+NZiJJEno5PTsAtHTem0tm/MR7lphx9GJCi5Q69cfexO95xn0hkIbsqOKwDkQpIR1gh7lqwWq9Z1/ySWFIZqJ9YDFqfzl/sfmYD/Ggvpt6lQQ+7KL17c2zomYv1zJekaFdEAD3exbFhmoGkqPoE1A86VEUyAnSIh0H8dbFsLHyWYxsYJLSSbubRuljXmqLjV+kISjXG9E2xMSeIPG/svs8IoOS243eHvxVjVcBv3+e3seCwjfBOc+YMeZIkIsCvGtjU/o8RxCVdyS9iSPIrA7TkPHiAxdNxMW3jFuth29QFLm/iIm0pyNpzr6r8iQkN56lMje2VUibpYiFk0Y/CBPoasqd9X4bu1gn6HER1gx/Ck++Gtdmh98+pij9PTDrqOaT5PUGh66AED6kCxIS3xn141Xt9VoymbyE8pQiKLiT5N87L5Oo+A2A/0+M+OkMlpjHSfmqDjCrqbZNn2Dcf8vOPqlBUKTPKawz4iKCyfGbPmxP2e4eNNcdicLNQmkmxkUd0rTML0uzVJRQM5szI141TFSWJ2zBhg1nC8rwq71wt2PF29TFOkmqzh5Dvn3jmkPBG4qOHvXdlGca1Sk1iwwShSie63zgagTsFgv9K/L1VA2aOywX3ax1gNjeuwTbF+Q6t3zyQhDr1h9dsSvTfglM5mVpZAOH/4KQVFs9eIE9s8F/t6b3MXrv08YPqxZxhsvTXfvVzvtBpD12sjW9jm++ufBDULieObnC2BR5t47gtqEaOfoaLu2xF/euPpAyMKK1rwuNoteZnLCJ7c4FSToKIV3a8cfPgJjuOYnqLIXy3aRrES8MpJt7mxueRVA6l+EtWWXxkbsAYX4GnjPlRgxBa/oo5Eudl/dxkcY9dNeWm6dhvYqmNFBrWbZ5E8ktU5Sy70RmWdPZInsi5dpJgYEqyKu8+0L4+Jde2kJ2H2z53QWzxJnpm2I0SEcR5nMFZiD5TCzpxKZ4LTPf05dQZ6bmtxxJE+304x0pbkNN3BySjcyHXJkKbQ8xcQeglnyboReqpUcovPsJ/xzpv7F8XKsvuvstbIeMf0jLuuUUcHsWn0Gt0fyJHjmPHj+YfKV6QPHd3DJS4C48WjJLSUnIeQ5NxYCMd+9TT8T420JnNSnZBkrc2GUC4yfA97AlgAu+s7Fm8BTqTuq1R4UPgX7xmjKTLyupirESBxEG3dz9/bUIm6UfeAVY9HC1ok7NGHBmVjG4bWMQKHa2L448Hy0qMFOlgmIov4wRNQsEnQ3KBGfJx0/bFCLcG2FSPEJ/04voKgttl3qHaeSNB+V1D4sYe1nTNTgUSjx1P/XP1GQxUSlvvqcsX23W/BKehCqlsH9GAaAkoZuAgbVty/OUlopKlulkSV7mdEb3vcJOShF0WEOMrQdlvSy7SwiVEL1aj1QbkIpWLD1qxZyrnBzjX93DHrOwi1TuoqNa/We+CHMDAzNA0NnHOt4e5HyMAAyI2LGdAC4fEK6nF35GCwoCo6TyZOOg3DZTcJO3oaDw7+qnermn+kr9KW6gl2Xm+l8t6XHPb/f0fRqkU5ZHOrjgHkNsyxpvL2OcveGZxmJy54OxZ7sQF8k8SUSnilemnNDs8jqyfBs61CxUCil6q0aAJqJGe691GZ4PMEAqXxLD6Qyf/HlGgRTTzIsngo+/peJ6ZJK7xZC63cevaUmM+KaCBoECA9KoEMUK4PV8ePMdqWX898UH3blOP/IHhvh+f1zJLkaibKBDVV6mMfI2iZMVT5ufjboGcvhlwR/wSYDwOG4f42A04WWpMxH9vsCN8MU+NUVXHBegMjCKwE9ffYdxGuKpOj23L83jifxMRcAb9hAcbrlXnxHGSgg+bz9+Td5B9QybAe91Zswv448LkF4d8pZxGtWNjyM5DmXq+FelKec2TT+OsG5QtXKxY+aonfRTr7/FM73VqcpiL+MRCVg5uCLdACmEJSsKOyF4AQBc45R+5IiCVgiEJ5381WWm5Tt1yMToqwhaQqWZDXfV+hEjb29C6kH63TIgW62euF7q7AGdrxl5YRRw3MUkXedyWkC9pZcZaRdkg7k9BI5XjEp89znSa9sHwfDztTNv/RsCj7nBlEgNfdA4zarBRc2tidmjiI+sKSTCru0iqMy3BvmRMBwE0uLmT5YZf2PL0TPhfKYDnr2H/Drum3dlSQhmatj8QkYYzJTq7lvceo4OysDSJJAXD8GYB+SLagi3QlZEtEY0EU5qZE4nfEnIpBmsVTOMcyiavRxbgq3vWw/ZGpPBe8XAFDY/4Nehq1g/cWHpzKovp5+6ac4Z6aBjdyUpeAhxZRkJXafe/pjDaKc87WH387Ik8optkjmVibbddtsuZH9MnqI5e2kYnXnSNAswj0u3AAZyZvWLJXANXkWD4UNlpDIfJjNkHtHbojjwc59LTiEPwUbDUaFSuLaiPP1SiLrD4LcMBdFSWM+vO55ANEOQ1ehOvFK6QwZ6/xEWhpr2TlnxY/zyj34RaBPd7LISQ+qUSiqPTT63yENnm3nuH9P7NQ7igxe0SKpRAclm1VOANrcca3DAzoMiEwAeVblXQVCpSdGkoxDiFYK/JMUlFc9KWvmhB8RdjL6oVMQ8/wUNReNQUahor/KlZHindW2uPrqITkfqs14AF9woLDyFxJRa73cAjTOXeQ+bv0T4nOG1LtPL59eed8R2jD1wJEmNmLK3/6TxMYHpMegfcOHzrse676/peV7qROPMQnaq2F1tyrf3+SZHsUdOGAUFqXWQRw0+bb+HH/mVbixk25Ui/hDpIlRU1y+eSgRj3s8yrJRuaXi4DCw+p5VZKmdqgduLvAL049uiS+bRKK6S+PVcVLXEknXLJqfvqINyQN/wNAbSkARKWzTUrg66fDkla2Tu/UmpCeuthX8i9D2XJZ19zLQG1diYxjo9G6UQ3kOj0TVNQg9JfQwfkHHt0KLJwGSJ5+EC0rLHzhXYJC/YBCuN/Gw==",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2189,
+   "total_tokens": 3757,
+   "cost": 0.029404,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029404,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.026268
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1557,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.15
+}

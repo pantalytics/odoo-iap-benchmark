@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Davis, Jones and Smith",
+  "vendor_vat": "966-84-3884",
+  "invoice_ref": "40122783",
+  "invoice_date": "2019-03-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 129.11,
+  "tax": 12.91,
+  "total": 142.02,
+  "iban": "GB89GMXK96405554903257",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Tea with Jane Austen",
+    "quantity": 5.0,
+    "unit_price": 4.89,
+    "tax_rate": 10.0,
+    "net": 24.45
+   },
+   {
+    "description": "Michael Jackson: A Life in Music (Paperback or Softback)",
+    "quantity": 2.0,
+    "unit_price": 12.33,
+    "tax_rate": 10.0,
+    "net": 24.66
+   },
+   {
+    "description": "Most famous bracelet in the world",
+    "quantity": 4.0,
+    "unit_price": 20.0,
+    "tax_rate": 10.0,
+    "net": 80.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 129.11,
+    "tax": 12.91
+   }
+  ]
+ },
+ "cost_usd": 0.00721725,
+ "raw": {
+  "id": "gen-1794515412-ERaJOgRGsJ85fAzVu2P1",
+  "object": "chat.completion",
+  "created": 1794515412,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Davis, Jones and Smith\",\n  \"vendor_vat\": \"966-84-3884\",\n  \"invoice_ref\": \"40122783\",\n  \"invoice_date\": \"2019-03-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 129.11,\n  \"tax\": 12.91,\n  \"total\": 142.02,\n  \"iban\": \"GB89GMXK96405554903257\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Tea with Jane Austen\",\n      \"quantity\": 5.0,\n      \"unit_price\": 4.89,\n      \"tax_rate\": 10.0,\n      \"net\": 24.45\n    },\n    {\n      \"description\": \"Michael Jackson: A Life in Music (Paperback or Softback)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 12.33,\n      \"tax_rate\": 10.0,\n      \"net\": 24.66\n    },\n    {\n      \"description\": \"Most famous bracelet in the world\",\n      \"quantity\": 4.0,\n      \"unit_price\": 20.0,\n      \"tax_rate\": 10.0,\n      \"net\": 80.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 129.11,\n      \"tax\": 12.91\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Identifying Document Type**\n\nI've identified the document as an invoice. My focus is now on extracting key details like the invoice number, issue date, seller information, and client details.\n\n**Verifying Date Format**\n\nI'm currently grappling with the date's ambiguity. While some indicators point to a European DD/MM/YYYY format, the presence of US addresses and currency notation complicates a definitive interpretation. Further analysis is needed.\n\n**Resolving Date Ambiguity**\n\nI've reconsidered the date format. Given the IBAN structure and comma decimal usage pointing to a European convention, I'm confident that 12/03/2019 should be interpreted as 2019-03-12 (DD/MM/YYYY). I've now also processed the itemized lines.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Identifying Document Type**\n\nI've identified the document as an invoice. My focus is now on extracting key details like the invoice number, issue date, seller information, and client details.\n\n**Verifying Date Format**\n\nI'm currently grappling with the date's ambiguity. While some indicators point to a European DD/MM/YYYY format, the presence of US addresses and currency notation complicates a definitive interpretation. Further analysis is needed.\n\n**Resolving Date Ambiguity**\n\nI've reconsidered the date format. Given the IBAN structure and comma decimal usage pointing to a European convention, I'm confident that 12/03/2019 should be interpreted as 2019-03-12 (DD/MM/YYYY). I've now also processed the itemized lines.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1918,
+   "completion_tokens": 1541,
+   "total_tokens": 3459,
+   "cost": 0.00721725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00721725,
+    "upstream_inference_prompt_cost": 0.0014385,
+    "upstream_inference_completions_cost": 0.00577875
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1109,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.85
+}

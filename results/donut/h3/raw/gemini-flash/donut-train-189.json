@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Potter, Jackson and Brooks",
+  "vendor_vat": "941-90-0647",
+  "invoice_ref": "72677375",
+  "invoice_date": "2013-08-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 479.95,
+  "tax": 48.0,
+  "total": 527.95,
+  "iban": "GB57LPIB27874128237321",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,",
+    "quantity": 5.0,
+    "unit_price": 79.99,
+    "tax_rate": 10.0,
+    "net": 399.95
+   },
+   {
+    "description": "Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->",
+    "quantity": 1.0,
+    "unit_price": 80.0,
+    "tax_rate": 10.0,
+    "net": 80.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 479.95,
+    "tax": 48.0
+   }
+  ]
+ },
+ "cost_usd": 0.00911625,
+ "raw": {
+  "id": "gen-1794515222-tPE1krzQTAQTnYNLiVt6",
+  "object": "chat.completion",
+  "created": 1794515222,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Potter, Jackson and Brooks\",\n  \"vendor_vat\": \"941-90-0647\",\n  \"invoice_ref\": \"72677375\",\n  \"invoice_date\": \"2013-08-04\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 479.95,\n  \"tax\": 48.0,\n  \"total\": 527.95,\n  \"iban\": \"GB57LPIB27874128237321\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nintendo GameCube Console DOL-001 Black w/ Controller, Power, A/V,\",\n      \"quantity\": 5.0,\n      \"unit_price\": 79.99,\n      \"tax_rate\": 10.0,\n      \"net\": 399.95\n    },\n    {\n      \"description\": \"Super Nintendo Entertainment System SNES Console w/Power Video FAST FREE SHIP->\",\n      \"quantity\": 1.0,\n      \"unit_price\": 80.0,\n      \"tax_rate\": 10.0,\n      \"net\": 80.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 479.95,\n      \"tax\": 48.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've successfully parsed the invoice number, issue date, seller, and client information from the document. The seller's details include their name, address, tax ID, and IBAN, while the client's information includes their name, address, and tax ID.\n\n**Deducing Country Conventions**\n\nI'm actively working to reconcile conflicting country indicators. Specifically, I'm evaluating the implications of a GB IBAN alongside a US tax ID and shipping address for the seller. The date format is also a point of immediate focus.\n\n**Resolving Geographic Ambiguities**\n\nI've confirmed that FPO AE signifies a US military postal address, despite the GB IBAN. The presence of USNV further solidifies the US vendor location. I'm now focusing on how these details influence date and decimal formatting interpretations.\n\n**Interpreting Geographic Cues**\n\nI've confirmed the vendor's US military address despite the GB IBAN. The FPO AE designation and US ZIP code strongly indicate US origin for the vendor. I'm now focusing on how this impacts date interpretation, prioritizing month-first conventions.\n\n**Confirming Date Format**\n\nI've now confidently established the vendor's country as the US, based on address cues, thus resolving the date format to month-first. The invoice date has been determined as 2013-08-04. I'm now proceeding to verify the financial totals and the VAT treatment.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've successfully parsed the invoice number, issue date, seller, and client information from the document. The seller's details include their name, address, tax ID, and IBAN, while the client's information includes their name, address, and tax ID.\n\n**Deducing Country Conventions**\n\nI'm actively working to reconcile conflicting country indicators. Specifically, I'm evaluating the implications of a GB IBAN alongside a US tax ID and shipping address for the seller. The date format is also a point of immediate focus.\n\n**Resolving Geographic Ambiguities**\n\nI've confirmed that FPO AE signifies a US military postal address, despite the GB IBAN. The presence of USNV further solidifies the US vendor location. I'm now focusing on how these details influence date and decimal formatting interpretations.\n\n**Interpreting Geographic Cues**\n\nI've confirmed the vendor's US military address despite the GB IBAN. The FPO AE designation and US ZIP code strongly indicate US origin for the vendor. I'm now focusing on how this impacts date interpretation, prioritizing month-first conventions.\n\n**Confirming Date Format**\n\nI've now confidently established the vendor's country as the US, based on address cues, thus resolving the date format to month-first. The invoice date has been determined as 2013-08-04. I'm now proceeding to verify the financial totals and the VAT treatment.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1685,
+   "completion_tokens": 2094,
+   "total_tokens": 3779,
+   "cost": 0.00911625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00911625,
+    "upstream_inference_prompt_cost": 0.00126375,
+    "upstream_inference_completions_cost": 0.0078525
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1711,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.34
+}

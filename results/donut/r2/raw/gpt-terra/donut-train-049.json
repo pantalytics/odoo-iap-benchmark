@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Sanchez Group",
+  "vendor_vat": "936-94-8863",
+  "invoice_ref": "29470022",
+  "invoice_date": "2019-02-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 522.28,
+  "tax": 52.23,
+  "total": 574.51,
+  "iban": "GB50JVRS02423611510258",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Imitation Wool Carpet Rugs Koala Panda Plush Living Room Blankets Non Slip Decor",
+    "quantity": 5,
+    "unit_price": 26.11,
+    "tax_rate": 10,
+    "net": 130.55
+   },
+   {
+    "description": "Romantic Rose Flowers Area Rugs Kitchen Living Room Floor Mat Non-slip Carpets",
+    "quantity": 5,
+    "unit_price": 13.37,
+    "tax_rate": 10,
+    "net": 66.85
+   },
+   {
+    "description": "3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat",
+    "quantity": 3,
+    "unit_price": 11.63,
+    "tax_rate": 10,
+    "net": 34.89
+   },
+   {
+    "description": "handmade carpet rug vtg moroccan boucherouite wollen 9.4*3.5 / 288cm*107cm",
+    "quantity": 1,
+    "unit_price": 289.99,
+    "tax_rate": 10,
+    "net": 289.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 522.28,
+    "tax": 52.23
+   }
+  ]
+ },
+ "cost_usd": 0.0057816,
+ "raw": {
+  "id": "gen-1794515328-u1KOiIfXhHL2IkXgkk8g",
+  "object": "chat.completion",
+  "created": 1794515328,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Sanchez Group\",\"vendor_vat\":\"936-94-8863\",\"invoice_ref\":\"29470022\",\"invoice_date\":\"2019-02-17\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":522.28,\"tax\":52.23,\"total\":574.51,\"iban\":\"GB50JVRS02423611510258\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Imitation Wool Carpet Rugs Koala Panda Plush Living Room Blankets Non Slip Decor\",\"quantity\":5,\"unit_price\":26.11,\"tax_rate\":10,\"net\":130.55},{\"description\":\"Romantic Rose Flowers Area Rugs Kitchen Living Room Floor Mat Non-slip Carpets\",\"quantity\":5,\"unit_price\":13.37,\"tax_rate\":10,\"net\":66.85},{\"description\":\"3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat\",\"quantity\":3,\"unit_price\":11.63,\"tax_rate\":10,\"net\":34.89},{\"description\":\"handmade carpet rug vtg moroccan boucherouite wollen 9.4*3.5 / 288cm*107cm\",\"quantity\":1,\"unit_price\":289.99,\"tax_rate\":10,\"net\":289.99}],\"vat_breakdown\":[{\"rate\":10,\"base\":522.28,\"tax\":52.23}]}",
+     "refusal": null,
+     "reasoning": "**Formulating JSON schema**\n\nI need to create a precise JSON schema that includes the currency as USD and formats dates in MM/DD/YYYY. I'm calculating net rows with sums of 130.55, 66.85, 34.89, and 289.99, which totals 522.28. The rounding is tricky for gross amounts like 143.61 with a 13.06 tax, 73.53 with 6.68, and others leading to a total of 574.51, while VAT is noted as 52.23 at 10%. I should include line breaks for descriptions too.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Formulating JSON schema**\n\nI need to create a precise JSON schema that includes the currency as USD and formats dates in MM/DD/YYYY. I'm calculating net rows with sums of 130.55, 66.85, 34.89, and 289.99, which totals 522.28. The rounding is tricky for gross amounts like 143.61 with a 13.06 tax, 73.53 with 6.68, and others leading to a total of 574.51, while VAT is noted as 52.23 at 10%. I should include line breaks for descriptions too.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iGFjjCtbTWvi4Utva_LIB1AjLqJvc-2g-aLeUaR_j56QyqwRItdBbo6ItsROyv5CwK7Y6laBbWIBDeD6xn0MgVsdWSKVXdGrIZDgez0FfdigDXzb9B6llwrZzqQ8j6U6NOinJ3W8ceMk3ijLNFsMu5VwGjoCXHqzYwJ-pcLCzpwX8RH7J6PXWvpv-vNELUKZRhvdgdM9L0gee6_5z5glbzFVz5XrgIE4hAA8Un0KPnCX6K-1s3pHaba1WHUjQKD_zhzR244EmYB6713bXVQWyqHP70XHaWqgjhWVI_QxRDXnSFqjbFTDzDu_NT0WHC8RUKT9w5Sa1MYhQwMf85oNfnlyDxx0-oEwaXKGjm3J6TGlh6sjwpp_0apgzL13rcfglfWK3Bg2o7o4AWRrkTrfHj0in_tqS-_M8BJDIammZuLoWrDCnA9OYQ77yeg4_vSa9vnDo8B0h8Yux3yinxhB9s5mvYGG-_KW2TspohSdnFYEMmWTpq7yhv7qidg53W3kKa4Nk5731ar5EjjgIAC5XIavK3HNPSHKAjdmgRMpCiLegDQ1G6iJwgRSobVyl_LT9YcxAWowDJBGBVigLOH9Z4wVLG2JoWxXdqdrIo6LNl0NvAFsqxeKPE5ZssGLvmlFGbU2YSXe5TF6665Kj5gEr9E1Z1B7zyxqnWPglxxCB9hiRk-hs860ztoMNOLWucngdBgiwYk-CNXyldQID8Sp_LyIQQJv5ePlmI_HoJsWn0HWr-oAL4NZK3PcUZ-511Adc3uMZXx1hvDs7M53p6EiiNcU5sxp38T84ZQac5mku-2qC0HTQlg30tgVo4-Q9Rlge6EdSLy7Zff1SlpWiga2NTD8L2VWIFoi7YXPUiJEHwGBAmyUIjOR5d8F5yx39m34kTcHPW4Yhwocn6AMUI8S7OrHTrIKIOnM2W-CfkYKZKPmBi5ngBIhauPZI1yrRF0W2akbh0HTPakh3xC1c_UbUtKXc14MB2nsXKQ6gPIiwmvFjPOpbb3FWCNp7ih8ozNwpoiXzCnjk8w81ZoE2Qkg7VDXi8d78h4a5UZcn2YGbCuUQHaXoOEezpnJrh8zSxR7BtOy5NBBSFv_LfA7wp9bic4-eMsAyXHP2LfXYNJmKM0kywJe0rryu1k0F2RDxcxwL9877SqFUFxsiQm60CX7IQepiVI5YneT4V5wbbNFeZreijCR3LtGZgEdf5SWqrc2Jbqr9hhR_6bRZ8O5v3sMvDRHYGugiQ1KnT-EE_5P860060YJoYT76pOM5oJFF6BvjkjeMrRM8XDJnOqvgJNX6iOFoVs7uR2h0eL5-38MLmERr6QjWhE0z6VpgWY1a9l1DcTFIgtu0-A52I0eBCIiZ2qINf49cnLJXxurBq6BhiZozJjHMbw2v5j2iFFZLF44-5WZnnJcmcpaxi-NJyaUck9LqnKmd2mJ-4BqZj_JQQJ8UvRiGdahHortZsp36prWn-PBJR_42ONnUsZNMBxCUd59lyMpIrou9cZGs9EbNCE0s5QT0d9GXExKuVFxNeByAz9eVAKZ8FGPIfB3hzSOocCBZjsySvK5bgC9-46XzAFDqcBoy_Pevt1ArmzgXvkORYyy0tBk4EiHeOs-WTIQLXOIzfKOM9UPsdqhvqDWn8-JAZIb5pvck9gVPqtESAPlOS7zIc9RU5TtWFkP-Gh3qv0zmFXe5Tu6pnGGlYIYZiknPU470cqzWYYuGTtX2lKdEUhcgl7L9GCUt7PoAwXK5AQXpp-7QsIWDfqgeeYSAAlMKgLRSCiSbRMroSdyZtPCozsp1y64EcoLWZ7pRRnkEI5cwXodFK5l9ZNI6dYwHo_Ksuo4Jv5cL31uoF8ulCjaqAh6LHHLfmuglh0epAMyOuqaJO22TAubmm99hHXdWGzfBLralWKoyPnG0N2k1e8wHfbuooHLJF2q8Lzq9DX4J4FfUiRA1LCkVHajDTNv0nIpTUtq9J8Xwny3X9x_myIuagYDDFW1BLZKK0Ez0gvqAXXUT3Qj8jqhBR1iIs9B_792lkcnFPvQunThd9YeUDLSd3xrgbgphrjcTBflQU_sg-urnLnZbiJal2VnfoeQtlidWdlFeeMGww3WJ8AZNoOMcvtQ2OIqYn6xsy--11PvIP2lhlC9RXlQArfoAzy3iukLzR3Eub7L3GnY2_pRF7QzMLhQdScbusnKng92YkKeoVgxF453-o9BNfFijl-r7PmlOAsSJaLy7l61XCpHSK6J4q43hXr4ySE-rP4xOAyadM4gRoc6Ag-KWEFAfu_GH5B7gnr2YQ3Mz3VWv_n-bSyExdeQ99IqH2FeBPqxBKjHLfTuX_M1cCYvsRDHkFs0Ttpa06ytODHofrEM1mNdfFLDMFh3_CJuuCBZMn6EV-ETneswp7M8cl5ynbj6pyTg5FrGemb311YWUNzbOdcPHC-5GnSLbfsokUE8DtQo9T8AFJmY9Gk_eq1-oWHf_LUZZc0VBjOf_vGsJCJ8HFwzePupn0weBGBVYDW2iues9njkrtrVCrmfL98QZ8UJELjnBB9fZxj1ermB519IeMBeu4PFN0LaDiG4f6U8Wg5s5qHEB3-K-uhKq3hVmF9-rEYRU0iZSMXdXjJPZ0Beo6LD2vvCNNK8K-UFHBIBM2frZ546n36_sOyZRjcQGsC8evU28lb01_HmjDEzrHWjZBfp-aDUouZppb6Z8WeFKzJyoc0DFixyOa2q-LDPg6EYA5M7ug3QqaDoxAySm93Gzx7V05GAEULHYasTkjxVv5CtAdZoeLPHxerclYec2_FICyeTLN-rGju_CgITasr2wvZpX7RsP8zNObLfa3YVdkHW35LkG-18k-FHPEQv4oSh7C0HsU6M4DGSCIg-37U0mJJpGaIY8nruhoEnoDB53yWuzdqS4ZGsfp-EzH4ancjC4ft5Vdlx9qSlb3oGlYTnWuUkA83oZeYDto6JR-o-_UDv5PwWXB62lBUWhJSCWZE7TtwfTwOxCaBX4rmiM20LJnvnr9FQzzd-OvFg9MNORPuxeomlyZwxDN2CFPVnIW2YUzEtF6NsD0JvGLygd79dazVaFQwd9fb.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_04be268c91c4e04a016af621822c5c87d1abab182c03611ccf",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 422,
+   "total_tokens": 3983,
+   "cost": 0.0057816,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 3558,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0057816,
+    "upstream_inference_prompt_cost": 0.0007176,
+    "upstream_inference_completions_cost": 0.005064
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 129,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.7
+}

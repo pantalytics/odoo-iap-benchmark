@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "Garcia, Stewart and Payne",
+  "vendor_vat": "949-78-5411",
+  "invoice_ref": "34528548",
+  "invoice_date": "2015-11-02",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 729.75,
+  "tax": 72.98,
+  "total": 802.73,
+  "iban": "GB60LAOW81233191361598",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\" LCD",
+    "quantity": 2,
+    "unit_price": 139.95,
+    "tax_rate": 10,
+    "net": 279.9
+   },
+   {
+    "description": "Dell Optiplex Desktop Computer with Dual 19\" LCD Monitors Windows 10 Pro",
+    "quantity": 3,
+    "unit_price": 149.95,
+    "tax_rate": 10,
+    "net": 449.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 729.75,
+    "tax": 72.98
+   }
+  ]
+ },
+ "cost_usd": 0.022904,
+ "raw": {
+  "id": "gen-1794515529-Y3BLFtbVA3r9PZyJdsZK",
+  "object": "chat.completion",
+  "created": 1794515529,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Garcia, Stewart and Payne\",\"vendor_vat\":\"949-78-5411\",\"invoice_ref\":\"34528548\",\"invoice_date\":\"2015-11-02\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":729.75,\"tax\":72.98,\"total\":802.73,\"iban\":\"GB60LAOW81233191361598\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\\\" LCD\",\"quantity\":2,\"unit_price\":139.95,\"tax_rate\":10,\"net\":279.9},{\"description\":\"Dell Optiplex Desktop Computer with Dual 19\\\" LCD Monitors Windows 10 Pro\",\"quantity\":3,\"unit_price\":149.95,\"tax_rate\":10,\"net\":449.85}],\"vat_breakdown\":[{\"rate\":10,\"base\":729.75,\"tax\":72.98}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the date 11/02/2015 as ambiguous, but since these synthetic invoices usually use MM/DD/YYYY, I'll go with 2015-11-02 and treat the $ as USD. Next I'm looking at the product description, which has some characters I can't identify, and wondering whether to substitute something for them.\n\nI'll keep the description as printed and just drop the unidentifiable glyph, using a plain space or dash in its place.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the date 11/02/2015 as ambiguous, but since these synthetic invoices usually use MM/DD/YYYY, I'll go with 2015-11-02 and treat the $ as USD. Next I'm looking at the product description, which has some characters I can't identify, and wondering whether to substitute something for them.\n\nI'll keep the description as printed and just drop the unidentifiable glyph, using a plain space or dash in its place.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0AcKEAgTGAI4AUIIdGhpbmtpbmcSDNuqZrcR38q4Y92JdhoM6pBn2/4GbHpTAcgEIjCPC3ZJcpoefFNE6phf9ZaBNLuSvIY89wmxwhg3lxsm+0tXS/NA7HPUnxdVvvAXXzYq7QY/Ut23ccgc3P9SXPznwHkQ06CTz2ALLpAps2+VHRUwW/62kCfses6JsrqT+E1jOsdr1W1WlLJm8lJcaxVaB750wpQ5CRIt6szS5Y5EEoZFfiu99DbZvQSQ3u9CpDbtyiX5Q234h6UAe0DSMH7fqjtLMzjFaDSAhQTOHrfE5IvulDcvD1+qaEAiCvnSD6+4qwxWBLmQ4bI9KizNu8iQLjCrw4khSfHpeM9WW8ZW5cIgGF9RwxnmSM0iZb2uoH2xKlXmeycubOQaC0OeN+5svdlY3qmZ36mpGp/3orbC4kJkcbPt7ru0nJfkOFbmxST0CePxTefvgPRue1UoR6uDL2kY5dZjzbGUNB1x3hYFQ3MW4jjRlJXY1A2nI6MgpDy6bTLPpR3W5aByTvlXTs90x6qNEvF4lK5MG/OSmOl/HnLf10qOCCaEC1ebREvIyHAS1bI+xAf5+/UEB404WGwqRUQnkpBKDJoiVOjTgkmh0E+25pqfspm8DsSKOPuGOSSfHa9p8kRBvzs9kN8+0WbRZVUOqlEO41gWG97G2zjAPxI2ikzwJZ2ZP1bEVEUEG/KmfD10pLzWzd7O3thc2rZwHexIFfG+hSESVLGLMlVF0mHZ4DMXLzSrOEReG//0bEhOU92rsGfYNDBTMvHmkNSXG2kWipfBprdrtZ3gbF33rSBq+u5Yo7zxKAQjxX0t3jE8dWtDw1NX1t6F5wEEjV2Ly/ZBNTdBsr6D0mc9//M7mWAAkMROgGxb6lQJ/Qi38e2FiOOl8X2Rb2ClWwPsZdxGwFw1YK4RX5qFADUoMzjSz0LMlyZNy023u2Bb+v8Akmc9a4naSUGEVORA5z63F9E6A1mpEuoYTSB7r5VrYl3GSrXxIB/tECHPv0HWnjiMHr/ROeOfPlayaV02n90Ndl5wmyiwPwaybzFAlDGtwyW7IbBCAOfICIF+MiTu2amGjgA6nDosCmiwiMtWI7UeL05vOb7lI+hN/jh+raLiXF8lWHoAHiN6bkSswuzCu8fCplVsvpkyzSiu0CvOQhZQEqVe3xtmmypEX81iyBxNTmN5zRPNK/m+z6j2drbchNtZOWFVOOthV8FkPvpXd4VcODr90EyA9+5gcNJYikJXMxp6OEmOMTZSRrlTvOuPGjlwVqiS0z4sH6LxzJlCaLgC0xoDGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 509,
+   "total_tokens": 3690,
+   "cost": 0.022904,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022904,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01018
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 177,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.02
+}

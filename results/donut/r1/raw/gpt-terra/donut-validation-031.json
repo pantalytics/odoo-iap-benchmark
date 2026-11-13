@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Adams-Johnson",
+  "vendor_vat": "960-74-2081",
+  "invoice_ref": "64770456",
+  "invoice_date": "2011-10-13",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 2135.48,
+  "tax": 213.55,
+  "total": 2349.03,
+  "iban": "GB11WTOP88031017604276",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "European Colour Sunflower Pattern Mats Hallway Carpets Doormat Bedroom Area Rugs",
+    "quantity": 4,
+    "unit_price": 13.66,
+    "tax_rate": 10,
+    "net": 54.64
+   },
+   {
+    "description": "Floral Style Vintage 5X7 Handmade Bidjar Foyer Rug Oriental Home Decor Carpet",
+    "quantity": 2,
+    "unit_price": 889.62,
+    "tax_rate": 10,
+    "net": 1779.24
+   },
+   {
+    "description": "Happy Christmas Home Decoration Rug Mat Carpet Bedroom Rugs Bedside Area Rug New",
+    "quantity": 5,
+    "unit_price": 60.32,
+    "tax_rate": 10,
+    "net": 301.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 2135.48,
+    "tax": 213.55
+   }
+  ]
+ },
+ "cost_usd": 0.0125465,
+ "raw": {
+  "id": "gen-1794513645-u3KETYw9XAzuUxcXwymU",
+  "object": "chat.completion",
+  "created": 1794513645,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Adams-Johnson\",\"vendor_vat\":\"960-74-2081\",\"invoice_ref\":\"64770456\",\"invoice_date\":\"2011-10-13\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":2135.48,\"tax\":213.55,\"total\":2349.03,\"iban\":\"GB11WTOP88031017604276\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"European Colour Sunflower Pattern Mats Hallway Carpets Doormat Bedroom Area Rugs\",\"quantity\":4,\"unit_price\":13.66,\"tax_rate\":10,\"net\":54.64},{\"description\":\"Floral Style Vintage 5X7 Handmade Bidjar Foyer Rug Oriental Home Decor Carpet\",\"quantity\":2,\"unit_price\":889.62,\"tax_rate\":10,\"net\":1779.24},{\"description\":\"Happy Christmas Home Decoration Rug Mat Carpet Bedroom Rugs Bedside Area Rug New\",\"quantity\":5,\"unit_price\":60.32,\"tax_rate\":10,\"net\":301.6}],\"vat_breakdown\":[{\"rate\":10,\"base\":2135.48,\"tax\":213.55}]}",
+     "refusal": null,
+     "reasoning": "**Creating JSON schema**\n\nI'm focusing on formulating a JSON schema. Since the currency is indicated as \"$\" and the addresses are US-based, I need to use \"USD.\" The invoice date is set for 2011-10-13, and there's also a tax ID to consider. I should concatenate line descriptions carefully to keep them precise in a single string and format the amount with commas as the decimal separator, using spaces for thousands. Lastly, I’ll ensure the total and VAT are included properly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Creating JSON schema**\n\nI'm focusing on formulating a JSON schema. Since the currency is indicated as \"$\" and the addresses are US-based, I need to use \"USD.\" The invoice date is set for 2011-10-13, and there's also a tax ID to consider. I should concatenate line descriptions carefully to keep them precise in a single string and format the amount with commas as the decimal separator, using spaces for thousands. Lastly, I’ll ensure the total and VAT are included properly.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hry9A4bcQ5gr0MYdJn4XgDNrIQ_y0Mm1No5h38F4xwOGlQSmY5UTxJtHYyBJ7SKUnK-YRN3ZRgS6lN6rCBgc9X_k9ovg_gBlXTGV606ynAB9rbh47gSI6omta6-6Ul7px1jq6FNXEyuqt_5-D-gPEinWf9_BkfthYsAh_jSHeeKfTZy0AIhiAEuMfziI7ztuPF2KwFyGhvnA1ttkIp7SDLR1pLERahUoD3dnHeHYmceI1fJWtvamFImTjoG_ZPGEtr_oH4hRd3s7LrinjKQ6CwQgF9BaKrdN0oxgK9c0RT_osEsOlSW_fB52U6ErOLqyBkal3-NxRPi4ka66dxuE8tTDSeZ8ElT6Y9ldrIJ1HUFrnwIMMvDtUs2P82vB8ZAsEGdEiwAQ2Q5hYV14tIMEFO9hz3bNA37VRl_TfzNSqkj24KtzIL27JNQ2N0PGWToHCay_BkW8m5ghUKAT5WVC9wXVSHynnaBKCpCEkoI9Df-PomxQFBg649DwAiEAvRPfgvg_w0tPiGFNNxxIP-ZiWnri9mfzAO8z1kD7GKXoVTNlKx25h2liJ7mEaGil7AMG-gc0h_JuvcR_09rhkRj03O8MBXeK0l0IXh0URRk3YtdjaNoslzY1RO3L-1-Oh6ctitMgPM8nDxr5pN2x4k44lXCkJjhrAIChIYa-ZeJ_1QSFWcJY6L28K5i7TwYh2kub958qghoA7zeJpCDwD3TxIviVinv6rm81WjqUHBwjAZGEYn-29hleWtly03gSVBmju9SOZ5d19XjulNaLeOQ2vVLa8Z0cWaE4gmfDO21ayYiHmKd0rdfYhL-pAUE3IUo5te3HyWUyIO7RuFLHIErSj8M11XOVMazYGAiZshSxZ5YaMZdYkiKEwbqhIoRFUkx2ZFI3fLyZmKVQjXgVjxcJ27OYg1ZMTEinQfmSVwce36vMe6Vb9Dagq3gtSqrXGe-cXlHRD62O8-QbM6_0H-g3DtFQZBQz7JBQDvGgmMyEX6HaAI1Dq7kxgwhAWtx5ODF0MF6U9oNfBRPUBCAB1mjb__GnnO5NSdp4mK6M714y3mV8zb2W1-1Y7qWQDMFnigLJldUfV8WIXfrtmDBrq2S2Ipa9KAtOWzlPTCPOPV7emwhy-P1XD2cnYMapkq5vMVmD3K2rAUUr8I0W889V3CRMn4havILaq5PcDPw7bzT2OZGGTDGd9fncVWO4cHxB8orhoRfAJFW7AfBaJSLxI0q3yCw_VDsLOFOd5u8exBH82HQfP5JQyLN2ULUbYcf942RqRY0HDWh9wSx12paP-oDE9pkAoygzxRSRzbcXvdCs9cUzeSxRCv2-1gmjpaRv7oBEypNie4RtH37RhwrR02w5M-H1Hx4Ei8rdTcYwhUhle6y6gGf3tKaJO0DYbjTniBvohUCERWmiMPD8Ku8LaMlr1yfrGdlGyK7WfTXl_JrAjHLC9xMa_es9hWEptrHs2sFjwd-qaL6sfQsq0Y5aHl4LTzyYOiv9WP39kOBNKU5R3V6bqVrJqf--aqjs4MZoIoVt5Hlh-E54x3_LP9_ubKpT0C93agxPKyql8cwHVVN5dkwfBfFJvhYEkrjnAFttaQjfOCRoOHjNHyjzaRTjcNdYkS3tIuhwp6e2sh87fTT2bxOMIqvEmbNPpVoEzbRHuYL3LAnJ8qN98q-tFaPUtKauayHMxt8LNQfHbB1PJX3cJgVgUDUzyFolgkcDnY1J5ltt_NUPGTl1MITb3sRQg3mzpP_-R1ZaWfVvyDZ81TpjdtVrDz4Cktm0h5PwvDVlzFOroNw0jkDZ-KAfkz1cd-q3G_pbm8o19rnik7-Dakk0WlzvBsmt8Dt5H31R6VP9h7ABqr1d_0tBCA0Mpi-CVROREjwW74XcPzm0sjna-qb0ISE2F92SQxz2H7qdODqH7Pb6HwBPw_fgXczabQDjcZiVsVfAHlk2xvHAPHy0-AgZaaUdt3ueO3XxlTgjeYneA3zZtp-bSeH5tRSSZNVcA8_fNASOW959ixLi01ufCtpGl36-OBmYmznGTWimqX5NOhcgFtvSQtQ08qfa77VhskcJW7Ykyjydh9wG5MBSW_uxwlbdY7CJrduwsWGdkwvudSx3369Yojli_jJV63pkyZLVVr1btS7mOnjTYoIEsVAE4-BJMzU6XZE_fOkiRFIvECHxXaCLHWCQ3mW9SE7HoTPtJ8tFFHBHXqQgDB6Uf1yrSJxIJFfqaIH0NYrYKFxgleNo66yJ7l3eoMkiV6VY6G8ldchLX3hl-ET6O8BObT5NZ9eFhB1ujREoRlrltyHsrjcuFCXdc7xFa6TRlinPB2hEl3wwRVjWmrY5QpCF5U2RHxiHwx8IhRSHUg_dW36ytxw9W0OexKKAcID2agIH3arkd6kIyP2y2CeNzchxX9XNXFKMequlQU8bq2iYlmaZXM0NyCBPGvsgH5mLBj2jmEq_hN2eLVRtYkuLmH1-kv8zvUu6kI-C1VaCiAYJEgcr9tYzoeavUASrT662Bf4PhNU0yeSNA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_087b0b4b08fc075e016af61aef2c9087d1b7716ac7acf079b7",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3560,
+   "completion_tokens": 304,
+   "total_tokens": 3864,
+   "cost": 0.0125465,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3557,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0125465,
+    "upstream_inference_prompt_cost": 0.0088985,
+    "upstream_inference_completions_cost": 0.003648
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 59,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.71
+}

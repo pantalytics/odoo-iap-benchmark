@@ -1,0 +1,109 @@
+{
+ "pred": {
+  "vendor_name": "Smith and Sons",
+  "vendor_vat": "912-86-5998",
+  "invoice_ref": "20653012",
+  "invoice_date": "2013-08-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 581.95,
+  "tax": 58.2,
+  "total": 640.15,
+  "iban": "GB46MLEX00282137220677",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 1,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 14.99
+   },
+   {
+    "description": "Nintendo 64 Console with Box, Foam and extra oem controller",
+    "quantity": 4,
+    "unit_price": 120,
+    "tax_rate": 10,
+    "net": 480
+   },
+   {
+    "description": "B311 Nintendo 3DS console Cosmo Black Japan x",
+    "quantity": 4,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 47.96
+   },
+   {
+    "description": "PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display",
+    "quantity": 1,
+    "unit_price": 39,
+    "tax_rate": 10,
+    "net": 39
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 581.95,
+    "tax": 58.2
+   }
+  ]
+ },
+ "cost_usd": 0.023604,
+ "raw": {
+  "id": "gen-1794515497-Lmw7uPQY9ocTuqjvW3ba",
+  "object": "chat.completion",
+  "created": 1794515497,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith and Sons\",\"vendor_vat\":\"912-86-5998\",\"invoice_ref\":\"20653012\",\"invoice_date\":\"2013-08-03\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":581.95,\"tax\":58.2,\"total\":640.15,\"iban\":\"GB46MLEX00282137220677\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Sony PlayStation 1 PS1 Console model scph-7501\",\"quantity\":1,\"unit_price\":14.99,\"tax_rate\":10,\"net\":14.99},{\"description\":\"Nintendo 64 Console with Box, Foam and extra oem controller\",\"quantity\":4,\"unit_price\":120,\"tax_rate\":10,\"net\":480},{\"description\":\"B311 Nintendo 3DS console Cosmo Black Japan x\",\"quantity\":4,\"unit_price\":11.99,\"tax_rate\":10,\"net\":47.96},{\"description\":\"PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display\",\"quantity\":1,\"unit_price\":39,\"tax_rate\":10,\"net\":39}],\"vat_breakdown\":[{\"rate\":10,\"base\":581.95,\"tax\":58.2}]}",
+     "refusal": null,
+     "reasoning": "I'm treating the 08/03/2013 date as MM/DD/YYYY since the US-style addresses and dollar amounts point that way, so it becomes 2013-08-03. Next I'm checking the totals: the line items add to 581.95, the VAT comes to about 58.20, and the grand total is 640.15.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm treating the 08/03/2013 date as MM/DD/YYYY since the US-style addresses and dollar amounts point that way, so it becomes 2013-08-03. Next I'm checking the totals: the line items add to 581.95, the VAT comes to about 58.20, and the grand total is 640.15.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS3AYKEAgTGAI4AUIIdGhpbmtpbmcSDOZrvCOzCr22yvGUkxoM7Ey6aHPGzuRZG4VbIjAsi9MynZGXVhufYKH3K3dxSnuESeJSibrcZ9ppIXlXoBeDLuI66xPHiWDMPQT+9eQq+QXOsLukYjsKbLG3Usj7kg1qsVNEuiORpMNWO7JYzdXQIUCFpb4a3FlgiyVjibrWkg6ynxdLNRQvCUGT91E5qRw3fgMtcV2T+Sw87hd1tgheRpOfS8jVcx6D00wcdivKkXN1EabRicIWqBe5sOLavgNP+ZsvGeWxLTgh695j1C6yrV1+a5SOTZzAMx/Roba6vmLfYqk5N6Hy9d/4tgqqHT5PY7j3m5P5vDX8bCq2I3mZ4oGW8OFMRjNJRsSjq2b4DS8Bk304ePbzphvCPAHo/nrgPF9xfji+RIaBSFL5RGif6a3wwQf71hNez9LgGVM0PvBsCevm/REdYGLGOnrKt530HDjZ2eCat0PGelIhGQA6CkbcwxJbrc/V6RN5Ut22jyZw+Ov7QUETqdnYm5tk69ciYU0M7JEf6DuOUJ1LyVd/nOz1o0Qr1h4D125Npwdr9mPFT25m5nwc/SFhcFYO/uyHcE7kci+f32jOA8UOfbgQ40PBrF36DETZ3Z3cxhN6O+1PaZzTIl2rBieWia/PP0zpZbQI5U+XRTApGtA4kW0C1OC/M0IhEFoc2YHBzCKu5KP7ojmNHUL5vEsrCg9IolEw6CLbRoHYg0v3z2Wby4TfXSF+VOGouFWnXfzNYlTvFX4VB9g1zRkyzxa6NEHbR9gTr71MZjafHd6ystDpVy3xiu6pSSSN3+U54165XQHVbJudb20u9eAKsHROVWGsxPyGi325WVT6BjmSufzjIxAIMgJiDDtv7q6kYBG/tBWN77Ogbl252lvPvnWDmmRnnLUPck36ZWNIZ/hdcokJ5Lnib8eMlVZGMdGb4e8I05kiPEdFjWuX73WpGq3y/+pyuxI9rQ83VBwUDDe/3azxJCNrHsTZEM86zxfkFHd+dV/bL/w7Lqk5Duf9WEKladZX3Sye6SladPBlzqVrQh9w3qDkPZELsFmwpbMZiSUJHGzCT76ps89OUxR5w4tYciS9fdvZUXsk698c6yyUgxgadDYaVeHe4sQmlP2+iBgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 544,
+   "total_tokens": 3725,
+   "cost": 0.023604,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023604,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01088
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 128,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.14
+}

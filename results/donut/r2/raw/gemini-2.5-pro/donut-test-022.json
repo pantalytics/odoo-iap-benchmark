@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "George, Casey and Harris",
+  "vendor_vat": "907-77-8965",
+  "invoice_ref": "32830026",
+  "invoice_date": "2014-12-20",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 1036.58,
+  "tax": 103.66,
+  "total": 1140.24,
+  "iban": "GB81OUZN44807763808287",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SONY Playstation2 Console SCPH-50000 \" Peal Color \" / TESTED 11176",
+    "quantity": 5.0,
+    "unit_price": 45.0,
+    "tax_rate": 10.0,
+    "net": 225.0
+   },
+   {
+    "description": "Nintendo Switch Lite Gray CONSOLE ONLY - No Accessories or Charger [B5-2]",
+    "quantity": 1.0,
+    "unit_price": 135.0,
+    "tax_rate": 10.0,
+    "net": 135.0
+   },
+   {
+    "description": "Nintendo Wii Console RVL-001 Complete Hookups W/ Mario&Sonic; Tested / Working",
+    "quantity": 3.0,
+    "unit_price": 78.88,
+    "tax_rate": 10.0,
+    "net": 236.64
+   },
+   {
+    "description": "B351 Nintendo new 3DS console White Japan w/stylus pen",
+    "quantity": 4.0,
+    "unit_price": 79.99,
+    "tax_rate": 10.0,
+    "net": 319.96
+   },
+   {
+    "description": "Sega Saturn Console Gray HST-3200 HST-3210 Japanese",
+    "quantity": 1.0,
+    "unit_price": 119.98,
+    "tax_rate": 10.0,
+    "net": 119.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 1036.58,
+    "tax": 103.66
+   }
+  ]
+ },
+ "cost_usd": 0.0219075,
+ "raw": {
+  "id": "gen-1794512744-LQbAl9tKKCXwuvSOTvCN",
+  "object": "chat.completion",
+  "created": 1794512744,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"George, Casey and Harris\",\n  \"vendor_vat\": \"907-77-8965\",\n  \"invoice_ref\": \"32830026\",\n  \"invoice_date\": \"2014-12-20\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 1036.58,\n  \"tax\": 103.66,\n  \"total\": 1140.24,\n  \"iban\": \"GB81OUZN44807763808287\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SONY Playstation2 Console SCPH-50000 \\\" Peal Color \\\" / TESTED 11176\",\n      \"quantity\": 5.0,\n      \"unit_price\": 45.0,\n      \"tax_rate\": 10.0,\n      \"net\": 225.0\n    },\n    {\n      \"description\": \"Nintendo Switch Lite Gray CONSOLE ONLY - No Accessories or Charger [B5-2]\",\n      \"quantity\": 1.0,\n      \"unit_price\": 135.0,\n      \"tax_rate\": 10.0,\n      \"net\": 135.0\n    },\n    {\n      \"description\": \"Nintendo Wii Console RVL-001 Complete Hookups W/ Mario&Sonic; Tested / Working\",\n      \"quantity\": 3.0,\n      \"unit_price\": 78.88,\n      \"tax_rate\": 10.0,\n      \"net\": 236.64\n    },\n    {\n      \"description\": \"B351 Nintendo new 3DS console White Japan w/stylus pen\",\n      \"quantity\": 4.0,\n      \"unit_price\": 79.99,\n      \"tax_rate\": 10.0,\n      \"net\": 319.96\n    },\n    {\n      \"description\": \"Sega Saturn Console Gray HST-3200 HST-3210 Japanese\",\n      \"quantity\": 1.0,\n      \"unit_price\": 119.98,\n      \"tax_rate\": 10.0,\n      \"net\": 119.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 1036.58,\n      \"tax\": 103.66\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"George, Casey and Harris\" as the `vendor_name` and \"907-77-8965\" as the `vendor_vat`. I'm moving on to extract the next piece of information.\n\n\n**Populating The Schema**\n\nI'm now populating the JSON schema fields. The invoice number is \"32830026\" and the issue date is \"2014-12-20\". The due date is null, as it's not present on the document. I am also determining the currency as \"USD\", considering conflicting information. I've now extracted the untaxed, tax, and total amounts, which are 1036.58, 103.66, and 1140.24 respectively. Finally, I've extracted the IBAN as `GB81OUZN44807763`.\n\n\n**Extracting Additional Details**\n\nI'm now extracting VAT information and individual line items. I have determined the VAT rate as 10% and will set the VAT treatment to \"S\". Next, I am working to identify the line items, their descriptions, quantities, unit prices, tax rates, and net amounts. I have now populated the details for the first line.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. I've double-checked all the figures and ensured the line item descriptions are properly formatted. I've also verified the net amounts, and calculated the VAT.\n\n\n**Finalizing JSON Output**\n\nI've completed the JSON object creation. I ensured proper escaping of special characters and validated all calculated amounts. The conflicting currency information was resolved by prioritizing the US-based address and currency symbol, using \"USD\". I'm confident in the JSON output's accuracy.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"George, Casey and Harris\" as the `vendor_name` and \"907-77-8965\" as the `vendor_vat`. I'm moving on to extract the next piece of information.\n\n\n**Populating The Schema**\n\nI'm now populating the JSON schema fields. The invoice number is \"32830026\" and the issue date is \"2014-12-20\". The due date is null, as it's not present on the document. I am also determining the currency as \"USD\", considering conflicting information. I've now extracted the untaxed, tax, and total amounts, which are 1036.58, 103.66, and 1140.24 respectively. Finally, I've extracted the IBAN as `GB81OUZN44807763`.\n\n\n**Extracting Additional Details**\n\nI'm now extracting VAT information and individual line items. I have determined the VAT rate as 10% and will set the VAT treatment to \"S\". Next, I am working to identify the line items, their descriptions, quantities, unit prices, tax rates, and net amounts. I have now populated the details for the first line.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together to create the JSON object. I've double-checked all the figures and ensured the line item descriptions are properly formatted. I've also verified the net amounts, and calculated the VAT.\n\n\n**Finalizing JSON Output**\n\nI've completed the JSON object creation. I ensured proper escaping of special characters and validated all calculated amounts. The conflicting currency information was resolved by prioritizing the US-based address and currency symbol, using \"USD\". I'm confident in the JSON output's accuracy.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2151,
+   "total_tokens": 2469,
+   "cost": 0.0219075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0219075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02151
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1520,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 19.12
+}

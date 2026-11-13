@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Baker Inc",
+  "vendor_vat": "978-83-5677",
+  "invoice_ref": "26248685",
+  "invoice_date": "2018-05-26",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 281.0,
+  "tax": 28.1,
+  "total": 309.1,
+  "iban": "GB97DXYE25395425116910",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FashionNova \"Forecasting You\" MAXI DRESS TAUPE SZ M",
+    "quantity": 5.0,
+    "unit_price": 25.0,
+    "tax_rate": 10.0,
+    "net": 125.0
+   },
+   {
+    "description": "Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT",
+    "quantity": 4.0,
+    "unit_price": 39.0,
+    "tax_rate": 10.0,
+    "net": 156.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 281.0,
+    "tax": 28.1
+   }
+  ]
+ },
+ "cost_usd": 0.0308275,
+ "raw": {
+  "id": "gen-1794515660-F5NEQOZyk89QIybM5owv",
+  "object": "chat.completion",
+  "created": 1794515660,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Baker Inc\",\n  \"vendor_vat\": \"978-83-5677\",\n  \"invoice_ref\": \"26248685\",\n  \"invoice_date\": \"2018-05-26\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 281.0,\n  \"tax\": 28.1,\n  \"total\": 309.1,\n  \"iban\": \"GB97DXYE25395425116910\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"FashionNova \\\"Forecasting You\\\" MAXI DRESS TAUPE SZ M\",\n      \"quantity\": 5.0,\n      \"unit_price\": 25.0,\n      \"tax_rate\": 10.0,\n      \"net\": 125.0\n    },\n    {\n      \"description\": \"Leopard Print Large Dress With Pockets & Floral Sleeves HoneyMe Size L NWT\",\n      \"quantity\": 4.0,\n      \"unit_price\": 39.0,\n      \"tax_rate\": 10.0,\n      \"net\": 156.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 281.0,\n      \"tax\": 28.1\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data Points**\n\nI've successfully identified and extracted the `vendor_name`, which is \"Baker Inc\". I've also found and recorded the `vendor_vat` as \"978-83-5677\", and the `invoice_ref`, which is \"26248685\". My aim is to efficiently and accurately fill the JSON schema based on the provided document.\n\n\n**Analyzing Currency Ambiguity**\n\nI'm now grappling with the currency. While I initially extracted \"$\", leading me to tentatively assume USD, the IBAN presents a conflicting UK element. Further investigation shows the seller's addresses are US-based, and the VAT number doesn't appear UK standard. I've decided to assume USD as the currency, but note the need for further validation to determine the correct ISO 4217 code.\n\n\n**Determining Additional Values**\n\nI've extracted the invoice date, formatting \"05/26/2018\" to \"2018-05-26\". I've also noted that the due date is not specified, so I'll be using `null` for that field. My current challenge revolves around the currency, as the document only provides a '$' symbol. Although the addresses point to the US, the IBAN suggests a UK connection. After much consideration, I've decided that because of the US addresses, and lack of an ISO code on the document, I will use `null` for currency.\n\n\n**Determining Final Currency Decision**\n\nI've re-examined the contradictory currency clues. Despite the IBAN's UK format, I'm confident the transaction is in USD. The US addresses, the '$' symbol, and the non-UK Tax ID outweigh the IBAN. While the document doesn't explicitly provide an ISO code, I'll infer \"USD\" based on the established context. I am now extracting the financial data, including the untaxed, tax and total amounts.\n\n\n**Finalizing Value Extraction**\n\nI've extracted all necessary data, including line items and VAT breakdown. I've used \"2018-05-26\" for invoice date, and `null` for the due date. I've concluded on 'USD' for currency. The untaxed amount is 281.00, the tax amount is 28.10 and the total is 309.10. The seller's IBAN is now recorded. I've also designated \"S\" for VAT Treatment and recorded both line items and VAT breakdown.\n\n\n**Finalizing All Data Points**\n\nAfter extracting all of the data, I've confirmed the vendor details, invoice information, and financial figures. I am going to assign \"USD\" to the currency as the ISO code. The addresses are in the US, the currency symbol is '$', and the Tax ID is a US-style EIN. I am confident in this decision, even with the IBAN presenting UK format.\n\n\n**Resolving Currency Ambiguity**\n\nI've re-examined the data, focusing on resolving the ambiguous currency. While the IBAN suggests a UK connection, I'm now confident that the US addresses, and US-style Tax ID, along with the dollar symbol, outweigh the UK-based IBAN. Therefore, I will now use \"USD\" for currency, and extract the associated financial data. The document provides no ISO code, so I had to make an informed decision here.\n\n\n**Revising Currency Decision**\n\nI've re-examined the conflicting clues regarding currency, and am now more confident than before. The presence of both US addresses and a US-style Tax ID in addition to the ambiguous currency symbol \"＄\" strongly outweigh the UK-formatted IBAN. Therefore, I'm now certain to use \"USD\" for the currency, as it fits the context. I'm moving on to confirm the financial data.\n\n\n**Finalizing Currency and Data**\n\nI've re-evaluated the currency decision one last time. Despite the US addresses and Tax ID, the IBAN presents conflicting information, and the invoice does not specify an ISO code. I am using `null` for currency due to these ambiguities. The rest of the data has been confirmed and extracted, and I'm now ready to generate the final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data Points**\n\nI've successfully identified and extracted the `vendor_name`, which is \"Baker Inc\". I've also found and recorded the `vendor_vat` as \"978-83-5677\", and the `invoice_ref`, which is \"26248685\". My aim is to efficiently and accurately fill the JSON schema based on the provided document.\n\n\n**Analyzing Currency Ambiguity**\n\nI'm now grappling with the currency. While I initially extracted \"$\", leading me to tentatively assume USD, the IBAN presents a conflicting UK element. Further investigation shows the seller's addresses are US-based, and the VAT number doesn't appear UK standard. I've decided to assume USD as the currency, but note the need for further validation to determine the correct ISO 4217 code.\n\n\n**Determining Additional Values**\n\nI've extracted the invoice date, formatting \"05/26/2018\" to \"2018-05-26\". I've also noted that the due date is not specified, so I'll be using `null` for that field. My current challenge revolves around the currency, as the document only provides a '$' symbol. Although the addresses point to the US, the IBAN suggests a UK connection. After much consideration, I've decided that because of the US addresses, and lack of an ISO code on the document, I will use `null` for currency.\n\n\n**Determining Final Currency Decision**\n\nI've re-examined the contradictory currency clues. Despite the IBAN's UK format, I'm confident the transaction is in USD. The US addresses, the '$' symbol, and the non-UK Tax ID outweigh the IBAN. While the document doesn't explicitly provide an ISO code, I'll infer \"USD\" based on the established context. I am now extracting the financial data, including the untaxed, tax and total amounts.\n\n\n**Finalizing Value Extraction**\n\nI've extracted all necessary data, including line items and VAT breakdown. I've used \"2018-05-26\" for invoice date, and `null` for the due date. I've concluded on 'USD' for currency. The untaxed amount is 281.00, the tax amount is 28.10 and the total is 309.10. The seller's IBAN is now recorded. I've also designated \"S\" for VAT Treatment and recorded both line items and VAT breakdown.\n\n\n**Finalizing All Data Points**\n\nAfter extracting all of the data, I've confirmed the vendor details, invoice information, and financial figures. I am going to assign \"USD\" to the currency as the ISO code. The addresses are in the US, the currency symbol is '$', and the Tax ID is a US-style EIN. I am confident in this decision, even with the IBAN presenting UK format.\n\n\n**Resolving Currency Ambiguity**\n\nI've re-examined the data, focusing on resolving the ambiguous currency. While the IBAN suggests a UK connection, I'm now confident that the US addresses, and US-style Tax ID, along with the dollar symbol, outweigh the UK-based IBAN. Therefore, I will now use \"USD\" for currency, and extract the associated financial data. The document provides no ISO code, so I had to make an informed decision here.\n\n\n**Revising Currency Decision**\n\nI've re-examined the conflicting clues regarding currency, and am now more confident than before. The presence of both US addresses and a US-style Tax ID in addition to the ambiguous currency symbol \"＄\" strongly outweigh the UK-formatted IBAN. Therefore, I'm now certain to use \"USD\" for the currency, as it fits the context. I'm moving on to confirm the financial data.\n\n\n**Finalizing Currency and Data**\n\nI've re-evaluated the currency decision one last time. Despite the US addresses and Tax ID, the IBAN presents conflicting information, and the invoice does not specify an ISO code. I am using `null` for currency due to these ambiguities. The rest of the data has been confirmed and extracted, and I'm now ready to generate the final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3043,
+   "total_tokens": 3361,
+   "cost": 0.0308275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0308275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03043
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2691,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.96
+}

@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Global Supplies Ltd.",
+  "vendor_vat": "GB123456789",
+  "invoice_ref": "47110818",
+  "invoice_date": "2018-10-31",
+  "due_date": "2018-11-30",
+  "currency": "EUR",
+  "untaxed": 2000.0,
+  "tax": 0.0,
+  "total": 2000.0,
+  "iban": "DE12 1234 4321 9876 00",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Stahlcoil",
+    "quantity": 10.0,
+    "unit_price": null,
+    "tax_rate": 0.0,
+    "net": 1000.0
+   },
+   {
+    "description": "Stoßfänger",
+    "quantity": 10.0,
+    "unit_price": null,
+    "tax_rate": 0.0,
+    "net": 1000.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 2000.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.009264,
+ "raw": {
+  "id": "gen-1794514688-dC7f1zA5neBX7QdsIaBF",
+  "object": "chat.completion",
+  "created": 1794514688,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Global Supplies Ltd.\",\n  \"vendor_vat\": \"GB123456789\",\n  \"invoice_ref\": \"47110818\",\n  \"invoice_date\": \"2018-10-31\",\n  \"due_date\": \"2018-11-30\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 2000.0,\n  \"tax\": 0.0,\n  \"total\": 2000.0,\n  \"iban\": \"DE12 1234 4321 9876 00\",\n  \"vat_treatment\": \"K\",\n  \"lines\": [\n    {\n      \"description\": \"Stahlcoil\",\n      \"quantity\": 10.0,\n      \"unit_price\": null,\n      \"tax_rate\": 0.0,\n      \"net\": 1000.0\n    },\n    {\n      \"description\": \"Stoßfänger\",\n      \"quantity\": 10.0,\n      \"unit_price\": null,\n      \"tax_rate\": 0.0,\n      \"net\": 1000.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 2000.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Analyzing Invoice Details**\n\nI'm currently focused on extracting key information from the provided ZUGFeRD document. The title, \"Gutschrift (Selbst ausgestellte Rechnung) (389) Nr. 47110818 vom 31.10.2018,\" offers a good starting point for identifying the document type and its primary identifiers.\n\n**Confirming Vendor Identity**\n\nI've confirmed the vendor's name as \"Global Supplies Ltd.\" and their VAT ID as \"GB123456789,\" strictly adhering to the issuer block. I'm also extracting the invoice reference \"47110818\" and its date \"2018-10-31,\" with the due date set for \"2018-11-30.\"\n\n**Processing Payment Details**\n\nI'm now extracting payment specifics, noting a total of 2000.00 EUR, with no tax applied due to an intra-EU supply exemption. The IBAN \"DE12 1234 4321 9876 00\" is captured, and the VAT treatment code \"K\" is confirmed. Line item details are next.\n\n**Clarifying Line Item Pricing**\n\nI'm investigating a discrepancy in the line item pricing. The \"Nettopreis\" field appears blank for \"Stahlcoil,\" yet the \"Menge\" is 10 and \"Nettobetrag\" is 1,000.00. I'm verifying if the unit price is indeed null or if the calculation implies a unit price of 100.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Analyzing Invoice Details**\n\nI'm currently focused on extracting key information from the provided ZUGFeRD document. The title, \"Gutschrift (Selbst ausgestellte Rechnung) (389) Nr. 47110818 vom 31.10.2018,\" offers a good starting point for identifying the document type and its primary identifiers.\n\n**Confirming Vendor Identity**\n\nI've confirmed the vendor's name as \"Global Supplies Ltd.\" and their VAT ID as \"GB123456789,\" strictly adhering to the issuer block. I'm also extracting the invoice reference \"47110818\" and its date \"2018-10-31,\" with the due date set for \"2018-11-30.\"\n\n**Processing Payment Details**\n\nI'm now extracting payment specifics, noting a total of 2000.00 EUR, with no tax applied due to an intra-EU supply exemption. The IBAN \"DE12 1234 4321 9876 00\" is captured, and the VAT treatment code \"K\" is confirmed. Line item details are next.\n\n**Clarifying Line Item Pricing**\n\nI'm investigating a discrepancy in the line item pricing. The \"Nettopreis\" field appears blank for \"Stahlcoil,\" yet the \"Menge\" is 10 and \"Nettobetrag\" is 1,000.00. I'm verifying if the unit price is indeed null or if the calculation implies a unit price of 100.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2982,
+   "completion_tokens": 1874,
+   "total_tokens": 4856,
+   "cost": 0.009264,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009264,
+    "upstream_inference_prompt_cost": 0.0022365,
+    "upstream_inference_completions_cost": 0.0070275
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1522,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.32
+}

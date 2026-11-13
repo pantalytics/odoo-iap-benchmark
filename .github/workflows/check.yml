@@ -1,0 +1,29 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install "ruff>=0.15.10,<0.16"
+      - run: ruff format --check src
+      - run: ruff check src
+      # Every published score must follow from the published raw answers.
+      - name: Rescore from the raw answers
+        run: |
+          set -e
+          shopt -s nullglob
+          for raw in results/*/*/raw; do
+            run=$(dirname "$raw")
+            set_dir=$(dirname "$run")
+            for strict in "" "--strict"; do
+              python src/bench_invoices.py "$set_dir" "$run" --score-only $strict > /dev/null
+            done
+          done
+          [ -d results ] && python src/aggregate.py results > /dev/null
+          [ -d results ] && python src/export_csv.py results > /dev/null
+          [ -d results ] && python src/compare_prompts.py results > /dev/null
+          git diff --exit-code -- results

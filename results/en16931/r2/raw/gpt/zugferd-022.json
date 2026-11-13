@@ -1,0 +1,134 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "R87654321012345",
+  "invoice_date": "2018-08-06",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 448.99,
+  "tax": 70,
+  "total": 518.99,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": 100,
+    "unit_price": 1,
+    "tax_rate": 19,
+    "net": 100
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 50,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": 72.5
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": 10,
+    "unit_price": 0,
+    "tax_rate": 7,
+    "net": 0
+   },
+   {
+    "description": "Bierbrau Pils 20/0500",
+    "quantity": 15,
+    "unit_price": 12,
+    "tax_rate": 19,
+    "net": 180
+   },
+   {
+    "description": "Leergutpfand 20 x 0,5l",
+    "quantity": 15,
+    "unit_price": 3.1,
+    "tax_rate": 19,
+    "net": 46.5
+   },
+   {
+    "description": "Mischpalette Joghurt Karton 3 x 20",
+    "quantity": 2,
+    "unit_price": 29.1,
+    "tax_rate": 7,
+    "net": 58.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": 321.4,
+    "tax": 61.07
+   },
+   {
+    "rate": 7,
+    "base": 127.59,
+    "tax": 8.93
+   }
+  ]
+ },
+ "cost_usd": 0.022201,
+ "raw": {
+  "id": "gen-1794512691-SzjHMaKF6xzFqQCBmCx5",
+  "object": "chat.completion",
+  "created": 1794512691,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"R87654321012345\",\"invoice_date\":\"2018-08-06\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":448.99,\"tax\":70,\"total\":518.99,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Zitronensäure 100ml\",\"quantity\":100,\"unit_price\":1,\"tax_rate\":19,\"net\":100},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":50,\"unit_price\":1.45,\"tax_rate\":7,\"net\":72.5},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":10,\"unit_price\":0,\"tax_rate\":7,\"net\":0},{\"description\":\"Bierbrau Pils 20/0500\",\"quantity\":15,\"unit_price\":12,\"tax_rate\":19,\"net\":180},{\"description\":\"Leergutpfand 20 x 0,5l\",\"quantity\":15,\"unit_price\":3.1,\"tax_rate\":19,\"net\":46.5},{\"description\":\"Mischpalette Joghurt Karton 3 x 20\",\"quantity\":2,\"unit_price\":29.1,\"tax_rate\":7,\"net\":58.2}],\"vat_breakdown\":[{\"rate\":19,\"base\":321.4,\"tax\":61.07},{\"rate\":7,\"base\":127.59,\"tax\":8.93}]}",
+     "refusal": null,
+     "reasoning": "**Extracting JSON schema details**\n\nI need to create a JSON schema for an invoice with reference R87654321012345 dated 2018-08-06. The payment terms mention a 14-day discount but lack an explicit due date, so I might leave that field blank or set it as null. The vendor is MUSTERLIEFERANT GMBH, and they have VAT DE123456789 in EUR. The totals show untaxed at 448.99, tax at 70, and total at 518.99. I’ll need to extract line items, descriptions, quantities, and net prices, and consider the VAT breakdown too.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting JSON schema details**\n\nI need to create a JSON schema for an invoice with reference R87654321012345 dated 2018-08-06. The payment terms mention a 14-day discount but lack an explicit due date, so I might leave that field blank or set it as null. The vendor is MUSTERLIEFERANT GMBH, and they have VAT DE123456789 in EUR. The totals show untaxed at 448.99, tax at 70, and total at 518.99. I’ll need to extract line items, descriptions, quantities, and net prices, and consider the VAT breakdown too.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hc-12AS-SZsrtz_PRCINLYIvgxvYr6ETSJKi_MoYynmPREhzlqgke18xhSQinGN386EGHMCmvVvyavM_IwwA6bZazGdEGDTJNN9-soBi1qYJnraQKtQZd0xXvxY5zAxYripXh1-xqbflTuTBJWXCLNqnngKLbbCWxAeg0I7ZZRWE8ydQ9Xsdm46m9iQi5-yKaFqbks1RQGQI1HHDaPm6zo4ZI9uhI-r9pUHd7Eh4xvD8thAQXIq1J_Uvs7SrNFDiw1rmni32uF7yBzVcH_BbF7jdh1KH7y6qaRaN3v6KpSPRRdX68uA2jaeLzWUMMQhCQ9mrwASThglZ3SU68DeNTa2VSUp1tRm7atJhUBUXpMEh1hMs67acgtYgbpFAW7FrQJDmR5fY5u9f8UsAftjECGsf62ScOuFGh8eLjPB-crUPH6lBEIVhL77DWhozc0XLn2l_HHGkYHYEJ5x-OSY8bDUdq5KBjiym0iaEa8ELMLUnYSuRlehk645GcdeYDVb9YZuKOdJ7ViznOPt2lFD7X9aFIKRBrQofkkXn3vbZE524dMIFOH1_2Cqlf3sduuNpSsAPZBNcfiJEu1-Ymb_VyaOWgt2uE8fhRcz43q2gEZgxc0nabWeuoVyu8nvFoS9fsSu3Xdp2XUvM1IuEMlj4uiXXOBKX2u15fizZMeOAXV9KlCJ1BepnSPvo_6hfdxvYL6PFApwHPEifmowYbCh7oNoNOgvS96hofuSAFCz2LjmAQ7zIbLKoeQFKuxiHxyDWKTKRqtLv0ObUA8i5SribZprtOswE-p9NnKAMP0kT8tuWN_XT_uTc-P0kAiKp2S5fk_LNnl1GNUSerWN5fwNb_Vmk_hXF98nsR4hC794BWWIPKXptfRhy2i--9qg-GYZID2j5ZVlCzW7JmkCYvuwCJg2Mf2NG8jlw8I_vF89U3U33WqFMzrgvItqpTrx-QpMawi9wURxrMuNoHWfXNQmQNsEykZPdPP1-VDeo7OWT4YJ96UuyMUqD5k2_G9QJeiqRljwaw6nplc2TZfVO_LMvfdTgpBMf7aI-a1P1kdHGDRh_bPu5ye1TP9rJGoKlpb25XGX5arjczQXJnsX9haIIe5qNbpiDj2g1KvazAgjhhql0-sn7NxWxjnnUbAwlfeFx-GHzD6EEAEEvJCVCPY2tWHlMZJ9FZG73wwDxy8xhZGq_Pr4XmiEri4BjnlLhWF0A_XLgBEWY8FZYcuMZrKu15-nIsDiKBudIvyhH0pgx_fmMgakBN8-hntclOCX3A4hCWAaAKppgk0Iin_4m99QvACT1v3_zN3cAwfDxBthTM-fdCzPKYhEC0bAz0w5ZBHd4NgnEy1Tt3Qx5-evJ8mF7dSMiTmvmfTH1_YPi-CbwVwZC9S42NWPG2t2VmiYJm2ogWL13WbOvW8ap2_NaBnDs1LEo_aXgws2gcxWwDUi1Sy3G8Wty68BQofIXwpum2buWBDYCoq1uUbK4T4bUBAQNlUOFm5OqVi7mcs9R3jfOlcdlFytNGhEzpHQFSA587wHG7ee45xsaJul8s3OZmyi9uesLD4ed9CNzGkLoBrgi6ZLmnjkE9xNsTU3SEwPjotR3UgKUCquAK43cNIbNWorY7j0pk034foYX2Rbuk33vRMrEjhtEOVbhsZbi81cjQ6o-6amBbm6dR6uIyp06rTL5Ilpx736y_RDU_ngprfE2gzR54DKxhKxBR5IjM33wIkNfjHAePgAp_D_Tixt_r153r_fEQOYDeZ9eyeX5IVSyy0KjtC3p00pYob0Z1tsjZnT_kQoZv13f0tAoqDv7U481KABXmdS1cVpgbH8URc4AnuDpu3d4gkl3gp_8zP0S_Q4gGTwkT8nwCPbv8EmjMVxErsixCLj9l7H2JIjz8EiEx2KBLwYwRwDAg9frz6pUxpoYPSPmv-beOyFDBzPwI6No-zX0TfupnfA2_5eRYU094X-JGxK4zNKrmTCnemR6L-Yr0BVHTvjfykSZy5ToSwnYe2Wuib67GQAhJmfFGbf3-CmYI-eYn6aksflkZ16YiCKPBbSrRK0irzOb62IgOOl1SLZXRLX0A6F0wOaPHZX25QAG66t8HHgin8_NBARw7JUZw6emdx9ozL3PWHwTJfz6d_k1rwe5sFVOrdScVbBE_LLiCNJuNmxWipJ7DqPRxqT1FW8GT4ORiitTq71JtULUXcjicy4UDFH68XbjNPGwe-yIgcWF3hoW9Kjyxf8okuWODiDW_OoAl9VfGQIgbg2yrftu98950TKcYhg764LDROHDPiZQGAnnSEnzLtQs_8YJVWxLapsauFIU1uXVh1RptRk9CSZvX02A7oPrNu4j18pH1ikHxmsdh7DTA7VJOewaruN21nOCgYKLKB_MOJNDHyLACMv4AwthoTPIwmCgTEmbmRWIH0ritH0TP5tHwwqBabSB_9tgHvGv-4ISgSAjdzL1nQYR6Mgw6kw3k5MJpIKf_KZBzQIw69WXdoxbMSf13nQPCGvbVppffTShxfXQh-eeo1AH0FPIDUdP0SrvhIxChuR_JS9u9w0-ckYTpoaIMGIasBYp3UmF5iCrO171DEdjSPfJv7ai46YNeStOiAYlLqENf6t8xVR5Lw_3A5jqzrMyTxVno4gnnGrNBaaTMpv_HsO-wJQXH_OcAPFc7AQO2Y_qNfpCd4xrTixRAl_vBXnLnP78zl9VqeWIWvBmC8zUCJYAw_yczA9sLjFC1dqO50Ao6fx0F-I4PWJRI6AhpL_Y-zUNpEviA7cVA1CTalWwbnuCZvcoxUUgh3rKOjkfAwyYkreJpWYbQJDezqfiQ_94B60CuBsRh4bEc8WLYLMc_CR6C6mk8Z1byeuu20lXMxAvmQv5CjVnmFoC12cse7KhsdtP2soWwS43eahsXGFdVgQqHCVKCPit1LmISWakehA18kstjsF4cjhtUnK9wkax6U03yRULitxoTv7thKpEyMwH6R7cKqGV7jJ1SGvjOiZUKTJ9SQrSPsb4-tXwpzRgDvHGK70HBB6bvopEdkzgVXrP3HJEG6DVYiRngpXHxpC-e1XAYqVu1illR1yTuNx9wJQSP-CZHctg58WzK-UaGGC2LVXlYZeCS6tS_0gQLwe54Mq0yW_Dr97MFbzEZGAQEsbT-3OMq5YkjkNvfvQudnHxlW0PHlx1g8QdfQyZTLwKA8fhWc7xiyPMoHdQag2zMLlmQB4hclatLRWuwQoXgRkR4yeHEr2ZEY2Nf2P3QSoJ2_mxEjABWhXFI7JICmC1YrljcYwz_LjPyT_4cgPS5XXQOZ_2blLcYeDWhj42KslhaC9jZTrGoKqATPaHPBqgV8gTlSesZmWhdo5pq8XyAZpJ8NRsbG7fUty1x9_zmIhsnQq11_xLR5uolH2La_5hseJR4PDnsr93_JVNQkQmXIdganxY_3-6cB-sVOczJqHar9BbiJbuJh5MsMTPNrowCWtnkWdgKr-mDc6mDBVuUCuSlgobeqLHz7K7HmQQRDT7iZATMZNmxuKy5HCRM4GcYY3ApAWdGYz8JuJiw7e2PiqDYEu36fuf6qXZPxUeuAIT_FsAPHK_ACySbw56ReW4xSUrFXjXsk6tZzVUYl9A2KX5DwG_eD5NITb8_Upn7xXCDA-as46T_Y60zqllgQu9h9b73o4bcJ91PVKnt9OtyDEi2trmHGqifgksTqkkVsCmnV2vGQ2EIyOIJSRrscs0ANROob4PyG2SIj3DoitD8WQ6_LgoUMTFb-eRpTA9PvLidErfrvT5H8_THM8vIbxFNDHkXr09MH6-o09236x-UbE-RU-9sqsLztP2wVjQx-9N8I7E-Ilh5BOCJuNhhuBOj9YfhX-kIgu2RmqCNa_lzozBzTpIPoxAUjJEmrKSj7Pi1ksASZ7SVBaHOvRytUS5QVtthPV83cUAVlBX6vv6hBZ0GswOnJV1PdhfCF13SfJp6Gi3eeGMMEbmG8cyH_-X6u4wMUvFAjXGEGiGoA_4CCiPlJUqqQ_w5rP8TeSN5rTr70NAgXl8DkCkqPSdpuRMjk4SXqyQ05jlpAKyoUhajrtYrzV-RNOx9eZ8ZCsTVUVh97bg1ivRKyipHg-CQWQY7wkvEDC-nQL92wC4b3jaMKA_Ek6_osgp6awI_LmKzNTvoQDwFc6snkHp86zLWmMpoRLbUM2C8xupd3XVsFNhydTJFmIaurqILPeX4i5ruM1ooIMpHHnwxRuYJ-gf5dMiPzxYmXHMj22whqs0useFcmltz_XAzyx7SB-vJpyXDIIDB2E_CD5xRSB3X4LYN0c5FsQBghJcyxJisBUCCackPbej3rx9nFatYmFGcKX0pUU9nXhebxLq0unqCwKpvbLUaDmHCtmOZHr1rQzq5xrhtNo3Lw5j2ZLPgw4oANKc02tGjU8WCdq9-QOHwJZYAiyN4aI6IAj5mHAiwX2rk_IQP_F-34TfxKbhhY2brvM-7crzozC3pGCzIV1mkFtxsi0SmGQAjTS3awyV3g5wLrHzwpYxXJsrKeExivABP6TFmVomiEOEd0OY3zPfixnTiLEF74-ItgEIrNw0p_RqFzl2DJV6KH3qmO9pq1f2fm0zJWpwYvO311fJ59iy8hKoJC-CWfYBwTyMoSE9ptySI6vxPSIGC1wZ_x0uNAG2-vyNdIoE88r6LFCVu0Uw_rLwCzFAsDfRP21RVhhQqLKr6K_eyeW1T9hw2LxAOOTUO7FKPcKYkxXKsCZtbNNRxfh1Y6Ie8qVxPW9f_CH0orUcWySkvQly5IqWVbRz3rZxh3k-2g50YGJJ7lgI4aE0HPBbf-5AbtDV7Aw8Wb530JpfS3bFMgzRVs0CVW9NQGr1p5xAmKdWjXcPWL0dC041SlyxRin7YPGYFugiiyhd5f7nwzTgOPMzSt5hZp5_XyHpS_Ece0uSuU8_SaMhj87dmxtEu8I2LY3jVLPuAuAAhOwZLBmTXawHYkzHo8mSfd9f7V30wuSeaT3fC1ZWbANfX6U_1NcM7ZadnZHn4kDVzQeZ_iy9XaBaD3dpvr-n68naNSQCYke10gQ9yH6Cb8-tzOsKRYe.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_022b7fc6bd3d5aa2016af61735588c87d1b31325f0d5896519",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2363,
+   "completion_tokens": 615,
+   "total_tokens": 2978,
+   "cost": 0.022201,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022201,
+    "upstream_inference_prompt_cost": 0.003751,
+    "upstream_inference_completions_cost": 0.01845
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 286,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.97
+}

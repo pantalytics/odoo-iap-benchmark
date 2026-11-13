@@ -1,0 +1,108 @@
+{
+ "pred": {
+  "vendor_name": "Serrano, Cross and Caldwell",
+  "vendor_vat": "936-82-7340",
+  "invoice_ref": "57905164",
+  "invoice_date": "2012-06-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 268.79,
+  "tax": 26.88,
+  "total": 295.67,
+  "iban": "GB02QBHZ70184097596719",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Halloween Skeleton Hand Stemless Single Wine Glass Black with Silver Zinc Alloy",
+    "quantity": 1.0,
+    "unit_price": 24.99,
+    "tax_rate": 10.0,
+    "net": 24.99
+   },
+   {
+    "description": "Crystal Grape Wine Bottle Embellishment Jewelry Necklace For The Bottle",
+    "quantity": 4.0,
+    "unit_price": 25.0,
+    "tax_rate": 10.0,
+    "net": 100.0
+   },
+   {
+    "description": "Fabulous at 50 wine glass, Out of the Box, 33",
+    "quantity": 4.0,
+    "unit_price": 20.0,
+    "tax_rate": 10.0,
+    "net": 80.0
+   },
+   {
+    "description": "Vintage Set of 4 Clear Iridescent Rainbow Glass Glasses Champagne Wine",
+    "quantity": 4.0,
+    "unit_price": 15.95,
+    "tax_rate": 10.0,
+    "net": 63.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 268.79,
+    "tax": 26.88
+   }
+  ]
+ },
+ "cost_usd": 0.0165975,
+ "raw": {
+  "id": "gen-1794515651-j58ALpYsxaL05g6rMNvx",
+  "object": "chat.completion",
+  "created": 1794515651,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Serrano, Cross and Caldwell\",\n  \"vendor_vat\": \"936-82-7340\",\n  \"invoice_ref\": \"57905164\",\n  \"invoice_date\": \"2012-06-06\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 268.79,\n  \"tax\": 26.88,\n  \"total\": 295.67,\n  \"iban\": \"GB02QBHZ70184097596719\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Halloween Skeleton Hand Stemless Single Wine Glass Black with Silver Zinc Alloy\",\n      \"quantity\": 1.0,\n      \"unit_price\": 24.99,\n      \"tax_rate\": 10.0,\n      \"net\": 24.99\n    },\n    {\n      \"description\": \"Crystal Grape Wine Bottle Embellishment Jewelry Necklace For The Bottle\",\n      \"quantity\": 4.0,\n      \"unit_price\": 25.0,\n      \"tax_rate\": 10.0,\n      \"net\": 100.0\n    },\n    {\n      \"description\": \"Fabulous at 50 wine glass, Out of the Box, 33\",\n      \"quantity\": 4.0,\n      \"unit_price\": 20.0,\n      \"tax_rate\": 10.0,\n      \"net\": 80.0\n    },\n    {\n      \"description\": \"Vintage Set of 4 Clear Iridescent Rainbow Glass Glasses Champagne Wine\",\n      \"quantity\": 4.0,\n      \"unit_price\": 15.95,\n      \"tax_rate\": 10.0,\n      \"net\": 63.8\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 268.79,\n      \"tax\": 26.88\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Serrano, Cross and Caldwell\" as the vendor and extracted their name. I've also found the vendor's Tax ID, which is \"936-82-7340\", from the document. This is a good start in the JSON schema extraction.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've got the `invoice_ref` as \"57905164\", the `invoice_date` as \"2012-06-06\", and the `due_date` set to `null` since it's not present. I've decided to assume the currency is USD. I've populated the totals as 268.79 for `untaxed`, 26.88 for `tax`, and 295.67 for `total`. I've grabbed the IBAN and also the VAT treatment code \"S\". Next, I am working on the first line item, and will continue populating that element.\n\n\n**Confirming Data Values**\n\nNow, I've confirmed all the data values extracted from the document. I have reviewed and verified all the data points, including vendor details, dates, and amounts, ensuring accuracy. I have considered a detailed breakdown of the values to ensure I didn't make assumptions on anything. I've also populated all of the line items with the corresponding information. I've finally populated the VAT breakdown, calculating the rate, base, and tax, and I am double checking the currency.\n\n\n**Constructing JSON Schema**\n\nI'm now putting it all together in the JSON schema. The line items are completely populated, and I've double-checked all calculations and values against the original document. I've resolved the conflicting currency information by assuming USD, given the US addresses and tax ID. The VAT breakdown also confirms the calculations. Finally, I will construct the final JSON format based on the structure.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Serrano, Cross and Caldwell\" as the vendor and extracted their name. I've also found the vendor's Tax ID, which is \"936-82-7340\", from the document. This is a good start in the JSON schema extraction.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've got the `invoice_ref` as \"57905164\", the `invoice_date` as \"2012-06-06\", and the `due_date` set to `null` since it's not present. I've decided to assume the currency is USD. I've populated the totals as 268.79 for `untaxed`, 26.88 for `tax`, and 295.67 for `total`. I've grabbed the IBAN and also the VAT treatment code \"S\". Next, I am working on the first line item, and will continue populating that element.\n\n\n**Confirming Data Values**\n\nNow, I've confirmed all the data values extracted from the document. I have reviewed and verified all the data points, including vendor details, dates, and amounts, ensuring accuracy. I have considered a detailed breakdown of the values to ensure I didn't make assumptions on anything. I've also populated all of the line items with the corresponding information. I've finally populated the VAT breakdown, calculating the rate, base, and tax, and I am double checking the currency.\n\n\n**Constructing JSON Schema**\n\nI'm now putting it all together in the JSON schema. The line items are completely populated, and I've double-checked all calculations and values against the original document. I've resolved the conflicting currency information by assuming USD, given the US addresses and tax ID. The VAT breakdown also confirms the calculations. Finally, I will construct the final JSON format based on the structure.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1620,
+   "total_tokens": 1938,
+   "cost": 0.0165975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0165975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0162
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1113,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.57
+}

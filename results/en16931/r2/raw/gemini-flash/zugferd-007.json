@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "MVM Musterhafter Versicherungsverein Musterstadt a.G.",
+  "vendor_vat": "DE234567891",
+  "invoice_ref": "00.123.456.7-2018-1",
+  "invoice_date": "2018-03-11",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 220.0,
+  "tax": 0.0,
+  "total": 220.0,
+  "iban": "DE75123456780000001234",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9\ngetLineTradeAgreementBruttopreis : 80,0006\nEnthält 19% Versicherungssteuer = 12,7726 €",
+    "quantity": 1.0,
+    "unit_price": 67.2244,
+    "tax_rate": 0.0,
+    "net": 80.0
+   },
+   {
+    "description": "Vollkasko SF25 (30 %) Typkl. 21 Regio R4\ngetLineTradeAgreementBruttopreis : 140,0000\nEnthält 19% Versicherungssteuer = 22,3529 €",
+    "quantity": 1.0,
+    "unit_price": 117.6471,
+    "tax_rate": 0.0,
+    "net": 140.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 220.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.01101525,
+ "raw": {
+  "id": "gen-1794512608-eEyXzYdCqCrrb9HVNmzH",
+  "object": "chat.completion",
+  "created": 1794512608,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MVM Musterhafter Versicherungsverein Musterstadt a.G.\",\n  \"vendor_vat\": \"DE234567891\",\n  \"invoice_ref\": \"00.123.456.7-2018-1\",\n  \"invoice_date\": \"2018-03-11\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"untaxed\": 220.0,\n  \"tax\": 0.0,\n  \"total\": 220.0,\n  \"iban\": \"DE75123456780000001234\",\n  \"vat_treatment\": \"E\",\n  \"lines\": [\n    {\n      \"description\": \"Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9\\ngetLineTradeAgreementBruttopreis : 80,0006\\nEnthält 19% Versicherungssteuer = 12,7726 €\",\n      \"quantity\": 1.0,\n      \"unit_price\": 67.2244,\n      \"tax_rate\": 0.0,\n      \"net\": 80.0\n    },\n    {\n      \"description\": \"Vollkasko SF25 (30 %) Typkl. 21 Regio R4\\ngetLineTradeAgreementBruttopreis : 140,0000\\nEnthält 19% Versicherungssteuer = 22,3529 €\",\n      \"quantity\": 1.0,\n      \"unit_price\": 117.6471,\n      \"tax_rate\": 0.0,\n      \"net\": 140.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 220.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently parsing page one of the invoice. I've successfully identified and extracted the vendor name, their VAT number, and the invoice reference number according to the provided schema.\n\n**Refining Date Formats**\n\nI'm adjusting the invoice and delivery dates to the \"YYYY-MM-DD\" format. The currency is confirmed as EUR. I'm also analyzing line items, particularly the first one, to correctly parse its description and net amount while accounting for embedded insurance tax.\n\n**Clarifying Line Item Pricing**\n\nI'm re-evaluating the unit and net prices for line items, as discrepancies have emerged. I'm also cross-referencing these with the total invoice sums to ensure accurate calculations, especially considering the 'Zahlbetrag' which includes an outstanding payment.\n\n**Determining Due Dates**\n\nI'm encountering ambiguity with the due dates. While the invoice mentions installment dates of 01.07.2018 and 01.10.2018, the payment terms table and page 3 image show a blank \"Fälligkeit\" column. This suggests the provided dates might be for SEPA installments, not a direct due date, potentially making the actual due date null.\n\n**Verifying Invoice Calculations**\n\nI'm confirming the line item net amounts against the displayed \"Nettobetrag.\" It appears the German insurance tax is being correctly excluded from VAT calculations, as per standard practice. The VAT breakdown shows a 0% rate on a base of 220.0, which aligns with the \"E\" vat_treatment.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently parsing page one of the invoice. I've successfully identified and extracted the vendor name, their VAT number, and the invoice reference number according to the provided schema.\n\n**Refining Date Formats**\n\nI'm adjusting the invoice and delivery dates to the \"YYYY-MM-DD\" format. The currency is confirmed as EUR. I'm also analyzing line items, particularly the first one, to correctly parse its description and net amount while accounting for embedded insurance tax.\n\n**Clarifying Line Item Pricing**\n\nI'm re-evaluating the unit and net prices for line items, as discrepancies have emerged. I'm also cross-referencing these with the total invoice sums to ensure accurate calculations, especially considering the 'Zahlbetrag' which includes an outstanding payment.\n\n**Determining Due Dates**\n\nI'm encountering ambiguity with the due dates. While the invoice mentions installment dates of 01.07.2018 and 01.10.2018, the payment terms table and page 3 image show a blank \"Fälligkeit\" column. This suggests the provided dates might be for SEPA installments, not a direct due date, potentially making the actual due date null.\n\n**Verifying Invoice Calculations**\n\nI'm confirming the line item net amounts against the displayed \"Nettobetrag.\" It appears the German insurance tax is being correctly excluded from VAT calculations, as per standard practice. The VAT breakdown shows a 0% rate on a base of 220.0, which aligns with the \"E\" vat_treatment.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2632,
+   "completion_tokens": 2411,
+   "total_tokens": 5043,
+   "cost": 0.01101525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01101525,
+    "upstream_inference_prompt_cost": 0.001974,
+    "upstream_inference_completions_cost": 0.00904125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1920,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.96
+}

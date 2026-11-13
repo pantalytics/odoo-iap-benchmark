@@ -1,0 +1,136 @@
+{
+ "pred": {
+  "vendor_name": "Johnson LLC",
+  "vendor_vat": "980-77-0423",
+  "invoice_ref": "12830936",
+  "invoice_date": "2021-04-27",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5936.86,
+  "tax": 593.69,
+  "total": 6530.55,
+  "iban": "GB30QDVO20178698471358",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "EAST Dell Windows 10 Desktop Computer Core 2 Duo 4GB Ram 250GB DVD WiFi 22\" LCD",
+    "quantity": 1,
+    "unit_price": 169.95,
+    "tax_rate": 10,
+    "net": 169.95
+   },
+   {
+    "description": "Desktop Computer Gaming PC Build Your Own Ryzen 3000G 3200G 3.5Ghz+ Vega or GTX",
+    "quantity": 5,
+    "unit_price": 579,
+    "tax_rate": 10,
+    "net": 2895
+   },
+   {
+    "description": "HP ProDesk G1 Desktop Computer Core i3 3.4GHz 8GB 500GB HD 19\" LCD Windows 10 PC",
+    "quantity": 1,
+    "unit_price": 119.95,
+    "tax_rate": 10,
+    "net": 119.95
+   },
+   {
+    "description": "AMD Dual Core 3.9Ghz 4GB DDR3 500GB HDD WiFi Windows 10 Desktop PC Computer",
+    "quantity": 2,
+    "unit_price": 259.99,
+    "tax_rate": 10,
+    "net": 519.98
+   },
+   {
+    "description": "personal computer",
+    "quantity": 4,
+    "unit_price": 59,
+    "tax_rate": 10,
+    "net": 236
+   },
+   {
+    "description": "desktop computers gaming build from scratch",
+    "quantity": 2,
+    "unit_price": 188,
+    "tax_rate": 10,
+    "net": 376
+   },
+   {
+    "description": "Gaming PC Desktop Computer Intel i7 RGB, GTX 1660, 16GB RAM, 2TB HDD, 480GB SSD",
+    "quantity": 2,
+    "unit_price": 809.99,
+    "tax_rate": 10,
+    "net": 1619.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 5936.86,
+    "tax": 593.69
+   }
+  ]
+ },
+ "cost_usd": 0.03515,
+ "raw": {
+  "id": "gen-1794515400-ohIQiIfvMR0jU5Mmg56t",
+  "object": "chat.completion",
+  "created": 1794515400,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Johnson LLC\",\"vendor_vat\":\"980-77-0423\",\"invoice_ref\":\"12830936\",\"invoice_date\":\"2021-04-27\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":5936.86,\"tax\":593.69,\"total\":6530.55,\"iban\":\"GB30QDVO20178698471358\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"EAST Dell Windows 10 Desktop Computer Core 2 Duo 4GB Ram 250GB DVD WiFi 22\\\" LCD\",\"quantity\":1,\"unit_price\":169.95,\"tax_rate\":10,\"net\":169.95},{\"description\":\"Desktop Computer Gaming PC Build Your Own Ryzen 3000G 3200G 3.5Ghz+ Vega or GTX\",\"quantity\":5,\"unit_price\":579,\"tax_rate\":10,\"net\":2895},{\"description\":\"HP ProDesk G1 Desktop Computer Core i3 3.4GHz 8GB 500GB HD 19\\\" LCD Windows 10 PC\",\"quantity\":1,\"unit_price\":119.95,\"tax_rate\":10,\"net\":119.95},{\"description\":\"AMD Dual Core 3.9Ghz 4GB DDR3 500GB HDD WiFi Windows 10 Desktop PC Computer\",\"quantity\":2,\"unit_price\":259.99,\"tax_rate\":10,\"net\":519.98},{\"description\":\"personal computer\",\"quantity\":4,\"unit_price\":59,\"tax_rate\":10,\"net\":236},{\"description\":\"desktop computers gaming build from scratch\",\"quantity\":2,\"unit_price\":188,\"tax_rate\":10,\"net\":376},{\"description\":\"Gaming PC Desktop Computer Intel i7 RGB, GTX 1660, 16GB RAM, 2TB HDD, 480GB SSD\",\"quantity\":2,\"unit_price\":809.99,\"tax_rate\":10,\"net\":1619.98}],\"vat_breakdown\":[{\"rate\":10,\"base\":5936.86,\"tax\":593.69}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract a JSON schema from the invoice. I should focus on the output in a JSON format that matches expected specifications. The invoice number is 12830936, issued on 04/27/2021, converted to 2021-04-27. The seller is Johnson LLC, and there's a tax ID to note. For the currency, I see dollar signs in the summary, indicating it’s likely USD. I’ll need to handle amounts carefully, paying attention to decimal formats.**Summarizing equipment details**\n\nI need to extract and summarize the details from several lines of computer equipment. Each line provides specific information, like model, specifications, quantities, and prices. For example, I'll note net prices, the VAT at 10%, and the gross values. There’s a breakdown that indicates a total base price of 5936.86 and a VAT of 593.69, but I see the schema doesn’t include gross amounts. I’ll make sure to capture net values accurately.**Examining VAT treatment**\n\nI need to check the VAT treatment, which is at 10%. I’m considering whether to use the vendor's tax ID for this — it's listed as \"980-77-0423.\" I also need to ensure there's an invoice reference string and an IBAN included. Additionally, it's important to have line descriptions as they appear on the invoice, and I might need to combine them with spaces for clarity. I’ll make sure to align everything with the schema requirements.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract a JSON schema from the invoice. I should focus on the output in a JSON format that matches expected specifications. The invoice number is 12830936, issued on 04/27/2021, converted to 2021-04-27. The seller is Johnson LLC, and there's a tax ID to note. For the currency, I see dollar signs in the summary, indicating it’s likely USD. I’ll need to handle amounts carefully, paying attention to decimal formats.**Summarizing equipment details**\n\nI need to extract and summarize the details from several lines of computer equipment. Each line provides specific information, like model, specifications, quantities, and prices. For example, I'll note net prices, the VAT at 10%, and the gross values. There’s a breakdown that indicates a total base price of 5936.86 and a VAT of 593.69, but I see the schema doesn’t include gross amounts. I’ll make sure to capture net values accurately.**Examining VAT treatment**\n\nI need to check the VAT treatment, which is at 10%. I’m considering whether to use the vendor's tax ID for this — it's listed as \"980-77-0423.\" I also need to ensure there's an invoice reference string and an IBAN included. Additionally, it's important to have line descriptions as they appear on the invoice, and I might need to combine them with spaces for clarity. I’ll make sure to align everything with the schema requirements.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iHUGHEOH7TdoCrTH30RfqWfaCh5F-z83ycsLXdOSLmPxM3wQFPaLxcgL8MBSppYweSQIHrAvudTXRbw8o5f2kKyYGYiO54qDw68A1b0FMcGffqr1_imH_GfrQ045crVC_1TaQdCzyVrXDeGXWoo7mBRBNvmGW5mPH0Q8eV9WbmT0RJ2TMyyVrw4jMRwVCaymdfxxJskzPnOAa0rZ25XvUEMXGkyHDp2uz4MwDo4jTUHxryoB0YoXRc98asnx5ayNm3fFvdj89khPjzfiLyjx9Su2yYjGK5DHERpztcVZVU77Mb7wZCRYhFhzhu_fni70cfVbUutGvC0jI-1783U_6F7WBI1zgGHRffIZEd_Zuu2_XFv1KBbSVndXUBQxBpl4MTlFzspm1Ynn7I_4lkO-xdbijIvS7dXlFOVnJoQZ49UfwJ_pIepgXwQXqFBMG1Jb2Am9pVNpDT6ARCZAUkYH7fuHgeyxQKv8WNMxnK-kIcIYt0L06x6jZCnMdLGoy31TNQavh6GIlKOPYT42agPv13b-q3F2916DXRdZ4TPUFl3o9z8hyENn5NIocHGfu-Uu53uYlNUEb_2BN2LHkkDV4V0OEig9fVqS2fzwerXIp8FXsdXiGg-HdM0foKHkxrR9s-QwVkzkVL6HWcUOfNn6dn-BrCjVSJeUwjMu9TA6TGsrKQboBMKr3P0L7d9NxoX_LvgGIkfPfrQhO4shRZEYcPd29EUTuX_J7PYaKau8gWo0Ek2xIGD2jC8EERd2Be08GDir_cYuPX7I_vaL7MZL41htXDI3_Yb9aK4oOIQLFo7ctbl7lMoL9yt1NwcLV9DL8UNezYxbNSKO66ORZJLruarPUtEE3KAuWqtEGoCXnHU-wjwzgH0JO03iHKs0smUWtzgIy6OFuaOqBIbp7j3Y9n8f1DaMEZsrlujh-6e0JWLnjGRLZyFpWY3S8wK23YGW3RCIDUqqNqVnptNbiq7iC8e69llx6ca9jGZwbGN7mz7xI0NXQGWWRJQuYLWjQlPnYEaDwbEARmAeCL-mtOSXNNkrfrDX2SLlttIvS9atOz-0Ajgd6l2rN7caGYkgkMN75CWz2Mzy910QeFBYxO9YwzOrC1O_3yAQ--wrwwKDejKnAm1jfdTDuXzC1WVDLgjfqG0hCfPCQi0lfpWJOxSUI3DvFgtD1aGuqHxhacJMzlwJLFtqO6GY83BeVm0HfxQOpt71jrc9ZQMgVU09wH-l7BABRC41ww75h77u2qYZpifE-x0NzDg-x9dahzqx1Pl_cdtrf649A3qlzc8iG_p-OcFTymO1hsP61uOqNN3B5pNOXqBNbZIL298Iq4DZsIAqW-I635v3wte5TfeDRMSfX3ErxqKmbcqSPHXHFjHzUFhmccJQAc-qsUFKW97Yss2JYE2JdbupXrEr1fbgnIFnWbszyEioUT7CIlS-RPmh7Ksd5rMhzXp34OXOOjnN0IdCxx7I9_ZVaGV7DzmgEPR9EUIYGw18MHO6CE3URpeZ9h0Wju5JrOBVBrczltYIRuY9_F3_s8vCF5WSka21gZhjSXT4qQI45m08tU362aytZV-P8DeMefN2Iocl7S4KLB7Gp4LZr_rc4gN7-pgPBAFjeK6KKKhQ8XS_uw5RjA4nhlDdTVIMK5jzpK-PZqryL6GdoQgQKSiLr7gyCIRyL89tHGoc3shEKTK8_iWtyne8ri20OkB0hrVOxYjzBQ_scE-WtgA7vq602S4tlgzq8RGopcuckiu-TH7B7iA1Ogokiyv36Rw9UKPgWby_nittXGEr-YGyhEHxLDxezb_f8OLohegAf6zvfWTv52Q59rHQA7g_FhcZuQeiMHt6PHjxICF_vOv49uzyVI7UgalTgPm_qXzCD8siWYHQySFX8PoDXt1ZHGmHRKjK_Ld6sYkOXh_xPFdM6nTutk2j7psOIsgaJ_cPEqzBuxVztRAjGJjvUxhDUqKskjqEwdOU0OoShEl7RpBRAmpLu8Ht9AagZ6-KZYJmcyMenFKJYyCVj-mTVUH0Ltxl5zvtJH7nd1z4YLilUt06pDAyu2_VZbp50Xq_SA9g5CnEXSiiXgQxjmDXF1DVlX6CZsIR8R8CNx2NyCz8TiefcKjhxCr6ckAyIYJ2l6JT2tGfjuJ_6vyy2QBK0Tp0Xiegacl4e3tVmZ-TSaByRCfRCnZK0pYysXD5XR6PC0ygxAjWtbxs-oqVhqC_J69CwK48YqhSVhhOBDuYCiCDtL3-QwW-e9ShI42TDo4H0U5E4ilxSiYXuyF9VGSl4j9QLUzFW0jgoNK1wfiUW7N1xNZOXiTn27nBGvktZup-WFoKhz_5MzFkce2vNdxBRFWClDjzUsxn2U5NwwiqIghEuLKTxprBJEzX40f2zKuCEHBCD0m-jN4O5bV_BlMpkF8c7B88CRS4QjoBk2mbeVci-UkEwzO_UB4-WtSrdSgarqcfosa3QIAH-iK5B53NLDFUpi3MrKKedwRDrkm5PkAmUxt65mzMy3BtghVJKRQoLdrs77BIVXBY9blOMFbDBmKg0cLtmx5EldblDNO5Wac7xAZTc-2OIRE9_9EUX62cKxEx7nH68qud39uCNksibQpGVPDxw8qIyHBUIThHEdegE4NDtSuMVJ86e2otJGGnVDM0XZa6PcCcxFXv4PTzMZtAd7s-33RH8SGzFNy-p1etgaYpcKnkQMrTKF30I_KZnHFXtsnbKg4yCUBAaHZdUKCznbYthl2z43v7rwu4gmt7UkWewNFv72Cfzc7X6SYjwBQvmgDtee7ADWIr1AaLnx7aZO2eJjEWcGGGopG2vEoOBkFtvdn94hyVrVI1fz_CjY4NKRHHNbxZ3INynETAL7RueSsDKL9bXGf9dm7pnanu8LstgiIwcj-7ZMMG47WfTGnT2oHgh0Kap0ZOOAUM2JbB9B4EYe0pwxjdddRDrBCyhI4z8lSveA2soGn6CmVSqjTKUMwcElx17-dXZQownGo55AQepve-bSllNDFMHseTsRPGtz2sVXnZ0uI1dVJ75SOSZz1-1o4a7szgRKF7_lcTiTUbmkARlwY0ruZ3ITim90GosyjGV4iiXSIKxXZqP0DmFdFyAp83oPqlQ6mwxqmO2jXysFQQ3kLpCbtLdAwiHc0svWOoxn9WGUnZ5WDEUYg5VpWBZbIQ1J0XeCyOWarbK2PavhB7LnpJBmlQ_iVMNhCUbBkIxI0NsIpdU2FobQejM4NHbgYCjmcq5o3itHL9jXMR-DdCpl3PfMFSLsuBqw5YaVIUfC3j-aAvo4KpxQLbOsN4Kj1AnGYbcYXKDVL4jDjIAbzmk8O3jRVRrC7BBE8mcaBzFUDUFS2y8j8lJ-yrn1Q9F2kOhyaTnO6QJJ5i9dRQk97kaiQrvUEJ4lfmjOTWJai47tUKviLUTXsTd_Eadat-V1SvwJ1NA0YRt-G55YMW-uPLnC_Rj7gDp8rf_5biRsj52tql9iPC-tEHp_nRdTiCA6eCmHrqR-K_hwsMWWwLOG83UJrR8ccsNJzNUw5F3TSvZG_aBr5DexsG643hv4UoFLjcyxnEE_Xw7Dn-r5Qny76V19rFOOrt_w6VytUDO-GCplfWVODNCIKLMa-w5gUWyQHF1yiqY0j7RSBXjq34vt4NaH6aCz-IWhW_6aFgEQ62NElPrCD_CIgKxckksv8GvpMtJDbmARCYYLQZ3JaMI1fwJuBhT-UJ-1TZMM36tMpAi8HbhnuzY_vQ7scmyXfyM_f3NJ_yrZ_MPyLJqCQQk0oGaxK9wv2pznyd-up3aDLHaHQIkJo3g5ijBPlamScnD0EwTeFYMcLaxxn29i__iKr2UmGjEeJ5EHKc6yXE0KCOpqSWhv3LOW26aaPay4Gk9tBxTFIMBc7YxMPsGiS1Z3fvX5UT1r3UnSLsOWs4BSjOdSNeanAbwH4cfd4StHI1dUnQRuhUowSwsEqfwHleevVVyAGsRL_jP2MWQMC0eFwrufZoM_bx1HYORBp8PNjAHpxSeIkYnrVxZnYv0eOuGOD0rqTY0myGqjGovck-5rxO6tbuiQlBD1DSfy1APO8o9WMmF-_36kGvL5r3ROEBDfnU9mUDukV9Cs_mVzu5Xaxvr601NSexgZkiXyfgV_f7GdDTw9vuepGD0lbOFwHzx8YgBibvKY1j8Hx4KlC6kXo1H2A-HtygMNmtpuKJQPCnx6AMXh7zNwSkQZEzV7g0lncNRQoSVdRaL2baZESElO8obLJSHISGu9w3ruBuKkeDOkS0WAunJX8QpTotlDxj6SM06MfeA_rY0frdr3_0Cjy5NeaOs45Z8_Jh6Yc9fWKShSyxr4V8WSB7-OloVGQEACg9KTJKNoCAGKPlpfpVS3gSHjCW5FJQQjOUPnHry7jNKd4CFbRTmXyZ9r-a7IytqDaYYeGW6j_pd4uvfMdi_wNx53n4uOofEsAjhTIZhu97yki0RxqeOaLX11fOgM_eERzWyjIcvX59d4MammLER2hYkGh4Et8Cd2o1hrYsGj54N6wVn9FU8hK5Bss76geG6ENHDGVS54gGmaORi0ezf7FX7EjxD4rVy_t2aXxMlM8O80r5j9LwiOV-mRFHoBnx7pQLw7xQYukHtyf1nZBfmAwlCh6aGkcRhdnuqh9wzhONA2vnjkrtZY3dgPUX3AYasotcw72M8jfW0Low3wqZot30GvqhEN0xd8eL6s02JRxyaDjseaE8U0pd0BPkNT9j7FEe9pB8eLDsZuWeDDPhhH5EDuL4nZzAcYF4vw5ONq8S5rGHUk-ZErOpcrYQQgdWO0xM455yjcr5FXTotMo62RPyObtXzsWSGUESMrBwZWA2iSZAa3FOcjoUjC85TTeZZN7gSW69f3Ojzd0VCVPoyzWiCWP8J4vN8oWN6bTvqdwW_20c9NoaEz7sV4qc3CGk_swdtWKm6dZ6xUQabqYpDqX2NBfwULp7GLKiTojyHhTLhlCJvWGGburToa-TnFqbyoZj_ICCA2oJm-QytVbaM7VTevit1xa3Ql4wkpjTqGRyxkC38gHEEBd8RDMfHy1vgIJabw7JG1TAOTiICEB0_0Lgcc6FR8nNNw2LSZbnzIXXBPYm8RewgIsG0ZDDaPpcEALK0DBoP_iMJaAywFaNoWlQwnjBSe5qnDpUAJ4NzZE-fyGT85xMtz6EzJaT_lb4uE5PIeoMOJwDvezBWyRoExcvn7Sxb4l3eMCkqn8qn_x5ZvDvtuAv7jQsv8SNmJoYkEdYXz2Akksjo_uKofGv4sHkLEGR_hNIv9PnBCkR5K2wLziFBixAbWApzpObkqLgMD0WAEkdLTgucfwld2Ue1BjpzVbIPMSwBZeog2_D5cfUQdG1U8Sb5_3Vc_zX19punxiFrEd7sp5i_tHzzlNMtTDc0G_EsHBk5g3tLKgXu89jv3TmebT5ZgcyITOH0pEmBn2qyrOusWaCjFNMEieV8TVQbP-d4S-oZn6ThMYWpE8S_1N8h9cUVdeb3EnI-lkQzOYSxgeLatKPh4GNM0YZAkaE0mjHKqLAQWs1BZ0XIU7E5ipSmUe33DIdT1Rk6e9YcwiMykFMDX2Or3-0OpKhUzvnSoAMTcKDlGbE_AERNV4-Wf9BKIoLYs9JQ63e0A3qQN49S-YfwJOwTPFrZwpX-78P1mlbCN3tV2_0c-PDin92fjqGiTWmGUkHg1hmvq4thrHbRtDffu8DRJa11-2XDLR2ksSE0Hhrr0xmXXUqiJIKIXk7vuhOa1yvbBm6jSMcQEMA5OXAo7TkJQ0wHOnETNrhqqdwUUgXGCxFJ6ZCpMlRicvY_J7dKI-fBMXxXtaNCdpzLB-OyxMal9g-udPKJPHJ-SBsw5_k3P66Bv1YD0qIq63xFLi7ecgI8M8t0K9CYfaOxBYG8WpSV3irR1U7mJY5tAaVmHaMduvw-vRkNBka7gcAUgIMT26JYKjn-gZhb5dDZCLyeYlb7LdRl1rA0d1AwEVE2K-EfPb2ud3ppTsekEXqa7AOYFq1Yp1M9AVc9LEcXYwROlXBBNQOSOVMH1_a_Pr1X_6X5TH0Ql-h-ini2DLn47gFnsTeOzwjf-MRkuUjQjsBX5WzwmH2rDFRKHy1MKxAB_LmNwcHZBYZLHUkHV8fCxgMg9qTvVFZ7YaFH6tU-Lr27DS7DWmkwpQK64kxN4XpIgFrMZrllE8eQXok6vf1IQ_uBda_8KlzxHKZPPUyoAhn032HPTkXtxXQJyis1f3jRYq27BUbPh-wjDY2L9amm4ZkWYDHzALZsVF8YebSuE5jBgX5EtOTziJvIW77-bbyNFrbBA-f6uPd30VcqgNiZVP0IUNt5Ue2wqgSpeoFtr6hDZ2jtwn2TXAt5hba_gJH-X79x5OzVbRcHX5vB3XauUtFFr_zilNfwo3q72_r3WEwWOfbwwE9r40WqJn0pxgkc74khZm0PhNd7fPrmZuH2FSNi5xA_7LyPc6ctpTntcYXthTwStOF_GjSoEV5zl5ObF5wALwPTDxprjC-c1PKjrXT5XIzHYuw9gCDiIl3m3ZkeMIAQb_M00OZKLZp_goL9uA5mxEKlQOLh57fw7VYN57hnx1WfFi5Bk98TlOkjIx_UEHBMN8ybaA3hUtAxhHq6MmAjmn08de5jPYz8JoB9KXfn48ygVZuuag3mvdQioXeASszbtvDlu9SOaB6vOFtt2Fg3MXfcooTyqw8F1GI1Qz5DOSMVMtdXIH6msMpR9JV0w_SJJ5C6hIqSx_cJ_dsZn-eDVhaxHJJZ50iO0dtmA9gRxwFYgQb60pzBrQrDyok7VANJAxxZwLVYeuqiehsBoPtMvTRbbShwsquqPBTO_b9XUqP9qnFsGT7weomyEb1-pXvBOHudLV_saHOqVqjYrbQFDiZ32bUEppJy7C3MWWou50x3iojz0p7708HABscpVmnxuoqQCa5LB2zKfurs9WuY6XyzGpOZyIxhi0dq-hc0sDJYDPdkpOLIcvnXcMhb27HCXPO8uJmsykXQawHMgWszlQpCSLLw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_07d5237841f939a9016af621cb686487d1a0cc5a24a9125755",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 921,
+   "total_tokens": 2425,
+   "cost": 0.03515,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03515,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02763
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 493,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.01
+}

@@ -1,0 +1,92 @@
+{
+ "pred": {
+  "vendor_name": "ELKEN SERVICE SDN BHD",
+  "vendor_vat": "000154042368",
+  "invoice_ref": "ESS447-004439",
+  "invoice_date": "2017-10-10",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 235.85,
+  "tax": 14.15,
+  "total": 250.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VALUE PACK A BP SER SR\n-CARBON FILTER - BP SERIES\n-SEDIMENT FILTER - BP SERIES",
+    "quantity": 1.0,
+    "unit_price": 235.85,
+    "tax_rate": 6.0,
+    "net": 235.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 235.85,
+    "tax": 14.15
+   },
+   {
+    "rate": 0.0,
+    "base": 0.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0219375,
+ "raw": {
+  "id": "gen-1794513084-KEU9RZfwedaU7xUDTwV4",
+  "object": "chat.completion",
+  "created": 1794513084,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"ELKEN SERVICE SDN BHD\",\n  \"vendor_vat\": \"000154042368\",\n  \"invoice_ref\": \"ESS447-004439\",\n  \"invoice_date\": \"2017-10-10\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 235.85,\n  \"tax\": 14.15,\n  \"total\": 250.0,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"VALUE PACK A BP SER SR\\n-CARBON FILTER - BP SERIES\\n-SEDIMENT FILTER - BP SERIES\",\n      \"quantity\": 1.0,\n      \"unit_price\": 235.85,\n      \"tax_rate\": 6.0,\n      \"net\": 235.85\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 235.85,\n      \"tax\": 14.15\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 0.0,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've begun extracting data to populate the JSON schema. \"ELKEN SERVICE SDN BHD\" will be the `vendor_name`. I have also identified \"000154042368\" as the `vendor_vat`, taken from the \"GST Reg No\" field. Finally, I've confirmed that the \"INVOICE NO\" is `invoice_ref`, with the value \"ESS447-\".\n\n\n**Populating the Schema Now**\n\nI've got more fields filled in now. The `invoice_date` is \"2017-10-10\", and the `due_date` will be `null`. The currency is \"MYR\". I've extracted `untaxed` as 235.85, `tax` as 14.15, and `total` as 250.00. I also confirmed that no `iban` is present so it will be set to `null` .\nThe `vat_treatment` is \"S\". I'm starting to parse the line items: I have one main line with description \"VALUE PACK A BP SER SR\", quantity 1, unit price 235.85, 6% tax and net 235.85.\n\n\n**Finalizing the Schema**\n\nI've got the schema almost complete now. The `invoice_ref` is confirmed as \"ESS447- 004439\". I have extracted the `invoice_date` as \"2017-10-10\", set `due_date` and `iban` to `null`. I've combined the line item descriptions from \"VALUE PACK A BP SER SR\" with the sub-items for a single line item, assigning quantity 1, the unit price as 235.85, 6% tax. I've also extracted the VAT breakdown information.\n\n\n**Completing the Final Schema**\n\nI've now mapped the remaining fields. I'm finalizing the extraction, I set the `currency` to \"MYR\". The `untaxed` value is 235.85, `tax` is 14.15 and `total` is 250.00. Also I have the complete line item description from merging the main and sub-items. I have the VAT breakdown ready. The schema's nearly complete now.\n\n\n**Finalizing the Extraction**\n\nI'm now putting the finishing touches on the extracted data, ensuring accuracy. I've re-confirmed all the values extracted, comparing the document information to the schema. The currency has been finalized as \"MYR.\" The vat breakdown is ready and I will only include the values where the base is not 0. Line item descriptions are combined and validated. I've reviewed all extracted fields one last time for the final schema.\n\n\n**Finalizing the Extraction**\n\nI'm now in the final phase, methodically validating and cross-referencing all extracted data points against the source document to assure data integrity. I am focusing on the \"GST SUMMARY\". This includes the final format of the VAT breakdown information and ensuring that it accurately reflects the invoice's details. The schema is complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've begun extracting data to populate the JSON schema. \"ELKEN SERVICE SDN BHD\" will be the `vendor_name`. I have also identified \"000154042368\" as the `vendor_vat`, taken from the \"GST Reg No\" field. Finally, I've confirmed that the \"INVOICE NO\" is `invoice_ref`, with the value \"ESS447-\".\n\n\n**Populating the Schema Now**\n\nI've got more fields filled in now. The `invoice_date` is \"2017-10-10\", and the `due_date` will be `null`. The currency is \"MYR\". I've extracted `untaxed` as 235.85, `tax` as 14.15, and `total` as 250.00. I also confirmed that no `iban` is present so it will be set to `null` .\nThe `vat_treatment` is \"S\". I'm starting to parse the line items: I have one main line with description \"VALUE PACK A BP SER SR\", quantity 1, unit price 235.85, 6% tax and net 235.85.\n\n\n**Finalizing the Schema**\n\nI've got the schema almost complete now. The `invoice_ref` is confirmed as \"ESS447- 004439\". I have extracted the `invoice_date` as \"2017-10-10\", set `due_date` and `iban` to `null`. I've combined the line item descriptions from \"VALUE PACK A BP SER SR\" with the sub-items for a single line item, assigning quantity 1, the unit price as 235.85, 6% tax. I've also extracted the VAT breakdown information.\n\n\n**Completing the Final Schema**\n\nI've now mapped the remaining fields. I'm finalizing the extraction, I set the `currency` to \"MYR\". The `untaxed` value is 235.85, `tax` is 14.15 and `total` is 250.00. Also I have the complete line item description from merging the main and sub-items. I have the VAT breakdown ready. The schema's nearly complete now.\n\n\n**Finalizing the Extraction**\n\nI'm now putting the finishing touches on the extracted data, ensuring accuracy. I've re-confirmed all the values extracted, comparing the document information to the schema. The currency has been finalized as \"MYR.\" The vat breakdown is ready and I will only include the values where the base is not 0. Line item descriptions are combined and validated. I've reviewed all extracted fields one last time for the final schema.\n\n\n**Finalizing the Extraction**\n\nI'm now in the final phase, methodically validating and cross-referencing all extracted data points against the source document to assure data integrity. I am focusing on the \"GST SUMMARY\". This includes the final format of the VAT breakdown information and ensuring that it accurately reflects the invoice's details. The schema is complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2154,
+   "total_tokens": 2472,
+   "cost": 0.0219375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0219375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02154
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1832,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 15.81
+}

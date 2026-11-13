@@ -1,0 +1,122 @@
+{
+ "pred": {
+  "vendor_name": "FACE TO FACE NOODLE HOUSE",
+  "vendor_vat": "001927782400",
+  "invoice_ref": "443181",
+  "invoice_date": "2018-05-21",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 29.81,
+  "tax": 1.79,
+  "total": 31.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "711-Omega Half Boiled Egg",
+    "quantity": 1.0,
+    "unit_price": 3.02,
+    "tax_rate": 6.0,
+    "net": 3.02
+   },
+   {
+    "description": "706-Toasted Bread (Homemade Kaya)",
+    "quantity": 1.0,
+    "unit_price": 4.06,
+    "tax_rate": 6.0,
+    "net": 4.06
+   },
+   {
+    "description": "837-Honey Lemon (Hot)",
+    "quantity": 1.0,
+    "unit_price": 3.68,
+    "tax_rate": 6.0,
+    "net": 3.68
+   },
+   {
+    "description": "838-Honey Lemori (Cold)",
+    "quantity": 1.0,
+    "unit_price": 3.96,
+    "tax_rate": 6.0,
+    "net": 3.96
+   },
+   {
+    "description": "2022-House Specialty Hot & Spicy Pan Mee (Dry) (b)",
+    "quantity": 1.0,
+    "unit_price": 7.55,
+    "tax_rate": 6.0,
+    "net": 7.55
+   },
+   {
+    "description": "2021-House Specialty Hot & Spicy Pan Mee (Dry) (a)",
+    "quantity": 1.0,
+    "unit_price": 7.54,
+    "tax_rate": 6.0,
+    "net": 7.54
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 29.81,
+    "tax": 1.79
+   }
+  ]
+ },
+ "cost_usd": 0.0497175,
+ "raw": {
+  "id": "gen-1794514643-h5zqYAD03rXgiZw44kxv",
+  "object": "chat.completion",
+  "created": 1794514643,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"FACE TO FACE NOODLE HOUSE\",\n  \"vendor_vat\": \"001927782400\",\n  \"invoice_ref\": \"443181\",\n  \"invoice_date\": \"2018-05-21\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 29.81,\n  \"tax\": 1.79,\n  \"total\": 31.6,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"711-Omega Half Boiled Egg\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.02,\n      \"tax_rate\": 6.0,\n      \"net\": 3.02\n    },\n    {\n      \"description\": \"706-Toasted Bread (Homemade Kaya)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 4.06,\n      \"tax_rate\": 6.0,\n      \"net\": 4.06\n    },\n    {\n      \"description\": \"837-Honey Lemon (Hot)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.68,\n      \"tax_rate\": 6.0,\n      \"net\": 3.68\n    },\n    {\n      \"description\": \"838-Honey Lemori (Cold)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.96,\n      \"tax_rate\": 6.0,\n      \"net\": 3.96\n    },\n    {\n      \"description\": \"2022-House Specialty Hot & Spicy Pan Mee (Dry) (b)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 7.55,\n      \"tax_rate\": 6.0,\n      \"net\": 7.55\n    },\n    {\n      \"description\": \"2021-House Specialty Hot & Spicy Pan Mee (Dry) (a)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 7.54,\n      \"tax_rate\": 6.0,\n      \"net\": 7.54\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 29.81,\n      \"tax\": 1.79\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm currently focused on extracting the vendor information. I've identified \"FACE TO FACE NOODLE HOUSE\" as the name, based on the document's presentation. I'll use that as the primary vendor name.\n\n\n**Populating JSON Schema**\n\nI've moved on to populating the JSON schema. I've successfully extracted the vendor VAT, which is \"001 927782 400\", and the invoice reference number, which is \"443181\". I've also parsed the invoice date, converting \"21/05/2018\" to the format \"2018-05-21\". Since the due date isn't on the receipt, I'm setting it to null, then identified \"MYR\" as the currency. The untaxed amount is 29.81, the tax is 1.79, and the total including tax is 31.60.\n\n\n**Extracting Remaining Data**\n\nI'm now extracting the remaining data points for the JSON schema. I've successfully identified the vendor's IBAN as null, and the VAT treatment is \"S\" for standard. I have also begun extracting the line items, noting the description, quantity, unit price, tax rate, and net amount for each, such as \"711-Omega Half Boiled Egg\".\n\n\n**Finalizing Line Item Details**\n\nI'm now calculating the unit price and net amounts for each line item, correctly accounting for the 6% GST. I've successfully extracted and parsed all the data elements, ensuring the final values reflect the correct pre-tax amounts. I'm satisfied with the results and ready to submit the data.\n\n\n\n**Calculating Line Item Prices**\n\nI'm now deriving the unit prices and net amounts for each line item. I've re-examined the source document and realized the item prices listed *include* the 6% GST. I'm now correctly calculating the pre-tax unit price and the pre-tax net amount for each of the six line items to align with the JSON schema requirements. I'm double-checking the sum to make sure it matches the untaxed total.\n\n\n**Finalizing Extraction and Calculation**\n\nI've now successfully extracted and processed all data points. I've re-calculated the unit price and net amounts of each line item to ensure they are pre-tax values, accounting for the 6% GST. I've double-checked my calculations to ensure the sum of the line items accurately matches the untaxed total of 29.81.\n\n\n**Refining Extracted Data**\n\nI've carefully re-examined my extraction strategy and calculations. It appears the provided item prices are tax-inclusive, which presents a problem. Therefore, I'm now recalculating all unit prices and net amounts for each line item. I'll need these pre-tax values to comply with the JSON schema requirements. I will also check the sum of the line items matches the untaxed total of 29.81.\n\n\n**Revising Itemized Calculations**\n\nI'm now recalculating all values, carefully extracting data points. I've re-examined the source document, specifically the line items, and found the listed prices include GST. I've been refining the logic to ensure each extracted pre-tax `unit_price` and `net` aligns perfectly with the JSON schema requirements, and I've also verified that the total sum matches the untaxed total of 29.81.\n\n\n**Finalizing All Data Points**\n\nI've now successfully extracted and processed all of the information from the document. I've double-checked my calculations for each line item, ensuring the pre-tax amounts are correct. I'm confident that the extracted data fully and correctly populates the required JSON schema, and it is ready for submission.\n\n\n**Refining All Extracted Data**\n\nI've made a final pass, ensuring the document data accurately populates the required JSON schema. I've double-checked that all amounts are calculated as pre-tax values. The total untaxed amount is 29.81, which accurately reflects the sum of the line items. I have completed the process and ready to submit the data.\n\n\n**Finalizing Calculation and Extraction**\n\nI've now successfully extracted and processed all of the information from the document. I've double-checked my calculations, confirming pre-tax amounts for each line item, and ensuring that the final data accurately matches the JSON schema requirements. I'm satisfied that I've extracted the data correctly.\n\n\n**Revising Data Population**\n\nI've re-examined the line item data and identified that the prices listed include GST. I'm now implementing the calculation logic, properly deriving each pre-tax unit price and the pre-tax net amount for each of the six items. The sum of the line item `net` amounts should now precisely match the untaxed total of 29.81.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm currently focused on extracting the vendor information. I've identified \"FACE TO FACE NOODLE HOUSE\" as the name, based on the document's presentation. I'll use that as the primary vendor name.\n\n\n**Populating JSON Schema**\n\nI've moved on to populating the JSON schema. I've successfully extracted the vendor VAT, which is \"001 927782 400\", and the invoice reference number, which is \"443181\". I've also parsed the invoice date, converting \"21/05/2018\" to the format \"2018-05-21\". Since the due date isn't on the receipt, I'm setting it to null, then identified \"MYR\" as the currency. The untaxed amount is 29.81, the tax is 1.79, and the total including tax is 31.60.\n\n\n**Extracting Remaining Data**\n\nI'm now extracting the remaining data points for the JSON schema. I've successfully identified the vendor's IBAN as null, and the VAT treatment is \"S\" for standard. I have also begun extracting the line items, noting the description, quantity, unit price, tax rate, and net amount for each, such as \"711-Omega Half Boiled Egg\".\n\n\n**Finalizing Line Item Details**\n\nI'm now calculating the unit price and net amounts for each line item, correctly accounting for the 6% GST. I've successfully extracted and parsed all the data elements, ensuring the final values reflect the correct pre-tax amounts. I'm satisfied with the results and ready to submit the data.\n\n\n\n**Calculating Line Item Prices**\n\nI'm now deriving the unit prices and net amounts for each line item. I've re-examined the source document and realized the item prices listed *include* the 6% GST. I'm now correctly calculating the pre-tax unit price and the pre-tax net amount for each of the six line items to align with the JSON schema requirements. I'm double-checking the sum to make sure it matches the untaxed total.\n\n\n**Finalizing Extraction and Calculation**\n\nI've now successfully extracted and processed all data points. I've re-calculated the unit price and net amounts of each line item to ensure they are pre-tax values, accounting for the 6% GST. I've double-checked my calculations to ensure the sum of the line items accurately matches the untaxed total of 29.81.\n\n\n**Refining Extracted Data**\n\nI've carefully re-examined my extraction strategy and calculations. It appears the provided item prices are tax-inclusive, which presents a problem. Therefore, I'm now recalculating all unit prices and net amounts for each line item. I'll need these pre-tax values to comply with the JSON schema requirements. I will also check the sum of the line items matches the untaxed total of 29.81.\n\n\n**Revising Itemized Calculations**\n\nI'm now recalculating all values, carefully extracting data points. I've re-examined the source document, specifically the line items, and found the listed prices include GST. I've been refining the logic to ensure each extracted pre-tax `unit_price` and `net` aligns perfectly with the JSON schema requirements, and I've also verified that the total sum matches the untaxed total of 29.81.\n\n\n**Finalizing All Data Points**\n\nI've now successfully extracted and processed all of the information from the document. I've double-checked my calculations for each line item, ensuring the pre-tax amounts are correct. I'm confident that the extracted data fully and correctly populates the required JSON schema, and it is ready for submission.\n\n\n**Refining All Extracted Data**\n\nI've made a final pass, ensuring the document data accurately populates the required JSON schema. I've double-checked that all amounts are calculated as pre-tax values. The total untaxed amount is 29.81, which accurately reflects the sum of the line items. I have completed the process and ready to submit the data.\n\n\n**Finalizing Calculation and Extraction**\n\nI've now successfully extracted and processed all of the information from the document. I've double-checked my calculations, confirming pre-tax amounts for each line item, and ensuring that the final data accurately matches the JSON schema requirements. I'm satisfied that I've extracted the data correctly.\n\n\n**Revising Data Population**\n\nI've re-examined the line item data and identified that the prices listed include GST. I'm now implementing the calculation logic, properly deriving each pre-tax unit price and the pre-tax net amount for each of the six items. The sum of the line item `net` amounts should now precisely match the untaxed total of 29.81.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 4932,
+   "total_tokens": 5250,
+   "cost": 0.0497175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0497175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.04932
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4332,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 34.11
+}

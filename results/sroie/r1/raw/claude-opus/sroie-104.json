@@ -1,0 +1,116 @@
+{
+ "pred": {
+  "vendor_name": "T.A.S Leisure Sdn Bhd",
+  "vendor_vat": "001042104320",
+  "invoice_ref": "1080323",
+  "invoice_date": "2017-12-30",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 96.58,
+  "tax": 5.81,
+  "total": 102.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PINEAPPLE JUICE",
+    "quantity": 1,
+    "unit_price": 12.95,
+    "tax_rate": 6,
+    "net": 12.95
+   },
+   {
+    "description": "TOSTADA CHIPS",
+    "quantity": 1,
+    "unit_price": 16.95,
+    "tax_rate": 6,
+    "net": 16.95
+   },
+   {
+    "description": "CHP_BWL CK",
+    "quantity": 1,
+    "unit_price": 29.95,
+    "tax_rate": 6,
+    "net": 29.95
+   },
+   {
+    "description": "MARG CK",
+    "quantity": 1,
+    "unit_price": 27.95,
+    "tax_rate": 6,
+    "net": 27.95
+   },
+   {
+    "description": "10% Srv Chg",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 8.78
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 96.58,
+    "tax": 5.81
+   }
+  ]
+ },
+ "cost_usd": 0.026464,
+ "raw": {
+  "id": "gen-1794513484-9iUBJfawglT31me6D1CT",
+  "object": "chat.completion",
+  "created": 1794513484,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"T.A.S Leisure Sdn Bhd\",\"vendor_vat\":\"001042104320\",\"invoice_ref\":\"1080323\",\"invoice_date\":\"2017-12-30\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":96.58,\"tax\":5.81,\"total\":102.4,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"PINEAPPLE JUICE\",\"quantity\":1,\"unit_price\":12.95,\"tax_rate\":6,\"net\":12.95},{\"description\":\"TOSTADA CHIPS\",\"quantity\":1,\"unit_price\":16.95,\"tax_rate\":6,\"net\":16.95},{\"description\":\"CHP_BWL CK\",\"quantity\":1,\"unit_price\":29.95,\"tax_rate\":6,\"net\":29.95},{\"description\":\"MARG CK\",\"quantity\":1,\"unit_price\":27.95,\"tax_rate\":6,\"net\":27.95},{\"description\":\"10% Srv Chg\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":8.78}],\"vat_breakdown\":[{\"rate\":6,\"base\":96.58,\"tax\":5.81}]}",
+     "refusal": null,
+     "reasoning": "I'm reading through the receipt details: the vendor is T.A.S Leisure Sdn Bhd for Chili's in KLCC, dated 30 December 2017 in MYR. The untaxed amount is 96.58 with a tax of 5.81, and the total comes to 102.40 after rounding, which I'm checking against the 0.01 adjustment.\n\nI'm settling the total at 102.40, since the 0.01 rounding brings the 102.39 up to it. For the lines I'll include the 8.78 service charge so the items add back to the untaxed amount, and for the VAT breakdown I'll keep just the 6% row with 96.58 base and 5.81 tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading through the receipt details: the vendor is T.A.S Leisure Sdn Bhd for Chili's in KLCC, dated 30 December 2017 in MYR. The untaxed amount is 96.58 with a tax of 5.81, and the total comes to 102.40 after rounding, which I'm checking against the 0.01 adjustment.\n\nI'm settling the total at 102.40, since the 0.01 rounding brings the 102.39 up to it. For the lines I'll include the 8.78 service charge so the items add back to the untaxed amount, and for the VAT breakdown I'll keep just the 6% row with 96.58 base and 5.81 tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSngkKEAgTGAI4AUIIdGhpbmtpbmcSDIWxKvNBQc5/0FehIBoMxLiwiC6s4EdAU/DxIjB7r3577Z4R6P4PMC7Q6533AqyT87bEC5hW0Qf0nh9/QQOAJcHdyPtPJRGM20keUvgquwgA/1V9mlmbEsWuo5cfKv3iVmKqWjrROO8/JzNRUOHfNqbe/619H3MsOhJZItSzyf/uXCHpmljI64msbXwHn0Vl/OqRBa0V8vSeu/001HxWI1yH5b1SxmGt9Vit8bkHhjINvzc/z13uxpOpZU/bUQ1wGL58OU4tROydwTozDoVl3CiTx67OXJbcKz2l6nwwj+rgEDG01XhgJQvlmC8NxQbgz09E2hospiO5WZ+VrSR0XTJpes1mqneFouAZs+H1raakBLKUfIp9uXLNQHyHghBXSTwCCJYIDkDM3kW2izLU/6W9J3upwn5yDhzG9iywZgvZA1YJHIkC+qK4u6laO8pUspz6zp9kin0zEgQrSHzw5OWruXD1KAwyO0wGvtXlQ0dbY0DgRCJfULaA34SRsJLsQ3ddKKxi7KlmROF6SOBYB1tPvQaaWxUJ3FZNgb5GlWqo8psGc+xWycgLkM0iYHkV4+OCtMtsLj64TeV8c4qfZD3VJdDz4ZIb8CIDMzYDrY3Rqe/M6C9v8+AKsj/xBkgG/8fv5OeVG2ShqEi58FkS0ql3srWGxoS6W5bukFux2GDCdLL6C65AtrNfRZND0rQjWvcByaZ4KjWijRWN1x0SFgKN1uOcSRErRvZXoUSfzfrXix/stdVojgU5Fjj35d/phZlY9/wn30TPFzOAdW7IkQLleuWGb6vEinTIb9vLPcdrMgEHJHnKvo1PR1kK1ZI9Djnh3MlOwuzwd+yikkLdKsFDJg3lajVCZuR/lDnV3LNOsJBQlj2wry2cxKZ2xp7w9/VGadvGhyD9LQ6oEgtiRXVhBkMfMUrHu2/lus+LCG0R7AhGPB/WMzs8Q9qikLoHCCu64UjCkVEWoq0RcCRl7Nx5EjlDub8G7d5odbf+ej/Izq3trMgXWHvzi0QEhh6MpYKjhYJG6P3slMfj3izJhUAjz0afG/V657jo/+SJ5iY2kFdNojYAI7IXvexZZpehKHAJyQARpcfk1Xj+I1QMFhtPcPCowTbycw62Ak4EXHHthT7c2avj7RmBzGiUR+MInPYZkAyEXpgVsmf8jI1PvDD++4oAPN9m6q95ZaPjjj5i7sPXT4HvXW9mFQ2cJDdCIAbngfO56XjnEcJu/CPldFy/18iowuVccTczIhDA2sUpBwfed1kprnSoHm/htijBbJN1D9JCblgExfhD0IeN6VYCZ/GoGIwtxFhXDlekioEK4EAzmFASYL5LKVgBfqaggswLY8f0WTomTonneR9Po5feV0An7k6D87+OpONWwXsArwGlnZtYEFKh6EFmPW/a/pnnAZgMCsA1xq21sF3T9fdjisswxQA1dpI61J7E2PTS8kYxeidSBJ0/wJMWU8UGdQJyWgLR4bFXfQ3p09q1ELd/i8IxwibBTXhoTX/97NBj9DlVp1wEOVbdmFv8pEZ+H2Lh6SAX3y1yRJgYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 687,
+   "total_tokens": 3868,
+   "cost": 0.026464,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.026464,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01374
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 291,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.1
+}

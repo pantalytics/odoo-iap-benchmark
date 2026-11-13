@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Watson-Harris",
+  "vendor_vat": "916-72-9081",
+  "invoice_ref": "29333870",
+  "invoice_date": "2021-06-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 9.99,
+  "tax": 1.0,
+  "total": 10.99,
+  "iban": "GB82DJFU82273146210425",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "FASHIONCRAFT 'Love Is A Voyage' Wine Bottle Topper Silvertoned 3 1/2\"",
+    "quantity": 1.0,
+    "unit_price": 9.99,
+    "tax_rate": 10.0,
+    "net": 9.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 9.99,
+    "tax": 1.0
+   }
+  ]
+ },
+ "cost_usd": 0.0216475,
+ "raw": {
+  "id": "gen-1794512365-bDnJEzka5gB3BUNkqWMh",
+  "object": "chat.completion",
+  "created": 1794512365,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Watson-Harris\",\n  \"vendor_vat\": \"916-72-9081\",\n  \"invoice_ref\": \"29333870\",\n  \"invoice_date\": \"2021-06-03\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 9.99,\n  \"tax\": 1.00,\n  \"total\": 10.99,\n  \"iban\": \"GB82DJFU82273146210425\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"FASHIONCRAFT 'Love Is A Voyage' Wine Bottle Topper Silvertoned 3 1/2\\\"\",\n      \"quantity\": 1.00,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10.0,\n      \"net\": 9.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 9.99,\n      \"tax\": 1.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's information to populate the JSON schema. So far, I've identified \"Watson-Harris\" as the vendor name and \"916-72-9081\" as their Tax ID. Next, I will be extracting the invoice details.\n\n\n**Populating JSON Schema**\n\nI've successfully extracted and formatted several key data points. \"Watson-Harris\" is confirmed as the vendor name, and \"916-72-9081\" is their Tax ID. The invoice number is \"29333870\", and the date is \"2021-06-03\". I've set the due date to `null` as it's not present. Regarding currency, despite a UK IBAN, I'm leaning towards \"USD\" given the US addresses and the \"$\" symbol, and the example is EUR. The total untaxed amount is 9.99.\n\n\n**Finalizing Data Extraction**\n\nI've now completed extraction of all fields. My focus has shifted to constructing the JSON object. I've re-confirmed currency as USD, despite the IBAN beginning with GB, considering the US addresses and the \"$\" symbol. The tax treatment is \"S\" for the standard rate. I've parsed out all line item details, and the VAT breakdown is now complete. I'm ready to begin the final construction of the JSON object, keeping in mind the date format discrepancy.\n\n\n**Constructing JSON Object**\n\nI'm now putting it all together to build the JSON. I've successfully extracted all the necessary data points, including VAT details and line items. I'm focusing on the date, which is ambiguous in the source. I'm choosing 2021-03-06, considering US addresses, but the GB IBAN makes me question it! I'm ready to begin the final structuring of the JSON document.\n\n\n**Refining Date Interpretation**\n\nI'm now revisiting the date ambiguity, giving precedence to a DD/MM/YYYY format, given the presence of the GB IBAN. Therefore, I will settle on 2021-06-03 as the final invoice date. I've re-reviewed all fields, ensuring consistency. I'm now ready to finalize the JSON object.\n\n\n**Finalizing JSON Data**\n\nNow, I've verified all the extracted information, including ambiguous points like the date and currency. I am setting the invoice date to \"2021-06-03\". I've resolved the conflicting data, and I am now ready to construct the JSON object, having built the foundation.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm currently focused on extracting the vendor's information to populate the JSON schema. So far, I've identified \"Watson-Harris\" as the vendor name and \"916-72-9081\" as their Tax ID. Next, I will be extracting the invoice details.\n\n\n**Populating JSON Schema**\n\nI've successfully extracted and formatted several key data points. \"Watson-Harris\" is confirmed as the vendor name, and \"916-72-9081\" is their Tax ID. The invoice number is \"29333870\", and the date is \"2021-06-03\". I've set the due date to `null` as it's not present. Regarding currency, despite a UK IBAN, I'm leaning towards \"USD\" given the US addresses and the \"$\" symbol, and the example is EUR. The total untaxed amount is 9.99.\n\n\n**Finalizing Data Extraction**\n\nI've now completed extraction of all fields. My focus has shifted to constructing the JSON object. I've re-confirmed currency as USD, despite the IBAN beginning with GB, considering the US addresses and the \"$\" symbol. The tax treatment is \"S\" for the standard rate. I've parsed out all line item details, and the VAT breakdown is now complete. I'm ready to begin the final construction of the JSON object, keeping in mind the date format discrepancy.\n\n\n**Constructing JSON Object**\n\nI'm now putting it all together to build the JSON. I've successfully extracted all the necessary data points, including VAT details and line items. I'm focusing on the date, which is ambiguous in the source. I'm choosing 2021-03-06, considering US addresses, but the GB IBAN makes me question it! I'm ready to begin the final structuring of the JSON document.\n\n\n**Refining Date Interpretation**\n\nI'm now revisiting the date ambiguity, giving precedence to a DD/MM/YYYY format, given the presence of the GB IBAN. Therefore, I will settle on 2021-06-03 as the final invoice date. I've re-reviewed all fields, ensuring consistency. I'm now ready to finalize the JSON object.\n\n\n**Finalizing JSON Data**\n\nNow, I've verified all the extracted information, including ambiguous points like the date and currency. I am setting the invoice date to \"2021-06-03\". I've resolved the conflicting data, and I am now ready to construct the JSON object, having built the foundation.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2125,
+   "total_tokens": 2443,
+   "cost": 0.0216475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0216475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1837,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.88
+}

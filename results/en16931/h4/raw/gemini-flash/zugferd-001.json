@@ -1,0 +1,93 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471113",
+  "invoice_date": "2018-06-13",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 22.0,
+  "tax": 1.54,
+  "total": 23.54,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Schweinesteak Bestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet. getLineTradeAgreementBruttopreis : 5,5000 Schweinesteak aus Deutschland",
+    "quantity": 4.0,
+    "unit_price": 5.5,
+    "tax_rate": 7.0,
+    "net": 22.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 22.0,
+    "tax": 1.54
+   }
+  ]
+ },
+ "cost_usd": 0.0064125,
+ "raw": {
+  "id": "gen-1794514667-CGlJ2OPAUxKfu7P9kmV8",
+  "object": "chat.completion",
+  "created": 1794514667,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471113\",\"invoice_date\":\"2018-06-13\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":22.0,\"tax\":1.54,\"total\":23.54,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Schweinesteak Bestellt wurden 5 kg Schweinesteak. Mit dieser Rechnung werden die nachgelieferten 4 kg Steaks berechnet. getLineTradeAgreementBruttopreis : 5,5000 Schweinesteak aus Deutschland\",\"quantity\":4.0,\"unit_price\":5.5,\"tax_rate\":7.0,\"net\":22.0}],\"vat_breakdown\":[{\"rate\":7.0,\"base\":22.0,\"tax\":1.54}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting core invoice details from the provided document. I've identified the invoice reference number as \"471113\" and the invoice date as \"2018-06-13.\" The currency is confirmed as EUR, and I'm beginning to process the vendor's name, which is listed as \"Lieferant.\"\n\n**Continuing Vendor Information Extraction**\n\nI've finished pulling the vendor's name, \"Lieferant GmbH,\" and am now processing their address and tax identification numbers. Additionally, I've identified the buyer as \"Kunden AG Mitte\" and pinpointed the due date to be \"2018-07-04.\"\n\n**Parsing Item Details**\n\nI'm now focusing on the individual line items. For the \"Schweinesteak,\" I've extracted a unit price of 5.5, a quantity of 4kg, and a net amount of 22.00, with a 7% tax rate. I'm also verifying how to handle combined item descriptions.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting core invoice details from the provided document. I've identified the invoice reference number as \"471113\" and the invoice date as \"2018-06-13.\" The currency is confirmed as EUR, and I'm beginning to process the vendor's name, which is listed as \"Lieferant.\"\n\n**Continuing Vendor Information Extraction**\n\nI've finished pulling the vendor's name, \"Lieferant GmbH,\" and am now processing their address and tax identification numbers. Additionally, I've identified the buyer as \"Kunden AG Mitte\" and pinpointed the due date to be \"2018-07-04.\"\n\n**Parsing Item Details**\n\nI'm now focusing on the individual line items. For the \"Schweinesteak,\" I've extracted a unit price of 5.5, a quantity of 4kg, and a net amount of 22.00, with a 7% tax rate. I'm also verifying how to handle combined item descriptions.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2450,
+   "completion_tokens": 1220,
+   "total_tokens": 3670,
+   "cost": 0.0064125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0064125,
+    "upstream_inference_prompt_cost": 0.0018375,
+    "upstream_inference_completions_cost": 0.004575
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1002,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.35
+}

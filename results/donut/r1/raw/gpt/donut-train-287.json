@@ -1,0 +1,122 @@
+{
+ "pred": {
+  "vendor_name": "Watkins Inc",
+  "vendor_vat": "942-95-3896",
+  "invoice_ref": "56418581",
+  "invoice_date": "2013-01-25",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 39566.73,
+  "tax": 3956.67,
+  "total": 43523.4,
+  "iban": "GB80EJHH36308848007839",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "24\"x24\" Marble Black Top Coffee Table Inlaid Floral Art Christmas Gift Home Deco",
+    "quantity": 5,
+    "unit_price": 1150,
+    "tax_rate": 10,
+    "net": 5750
+   },
+   {
+    "description": "6'x3' Elegant Marble Black Top Dining Table Italian Inlay Furniture Decor E964B",
+    "quantity": 4,
+    "unit_price": 5469.38,
+    "tax_rate": 10,
+    "net": 21877.52
+   },
+   {
+    "description": "54 Inches Marble Dinning Table Top Hand Crafted Reception Table Home Furniture",
+    "quantity": 2,
+    "unit_price": 4452,
+    "tax_rate": 10,
+    "net": 8904
+   },
+   {
+    "description": "15\"x15\" White Marble Coffee Table Top With 15\" Tall Stand Semi Precious Art Deco",
+    "quantity": 4,
+    "unit_price": 575.99,
+    "tax_rate": 10,
+    "net": 2303.96
+   },
+   {
+    "description": "25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home",
+    "quantity": 1,
+    "unit_price": 731.25,
+    "tax_rate": 10,
+    "net": 731.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 39566.73,
+    "tax": 3956.67
+   }
+  ]
+ },
+ "cost_usd": 0.03416,
+ "raw": {
+  "id": "gen-1794512190-16DrA1fVfX4x5yDEBzBE",
+  "object": "chat.completion",
+  "created": 1794512190,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Watkins Inc\",\"vendor_vat\":\"942-95-3896\",\"invoice_ref\":\"56418581\",\"invoice_date\":\"2013-01-25\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":39566.73,\"tax\":3956.67,\"total\":43523.4,\"iban\":\"GB80EJHH36308848007839\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"24\\\"x24\\\" Marble Black Top Coffee Table Inlaid Floral Art Christmas Gift Home Deco\",\"quantity\":5,\"unit_price\":1150,\"tax_rate\":10,\"net\":5750},{\"description\":\"6'x3' Elegant Marble Black Top Dining Table Italian Inlay Furniture Decor E964B\",\"quantity\":4,\"unit_price\":5469.38,\"tax_rate\":10,\"net\":21877.52},{\"description\":\"54 Inches Marble Dinning Table Top Hand Crafted Reception Table Home Furniture\",\"quantity\":2,\"unit_price\":4452,\"tax_rate\":10,\"net\":8904},{\"description\":\"15\\\"x15\\\" White Marble Coffee Table Top With 15\\\" Tall Stand Semi Precious Art Deco\",\"quantity\":4,\"unit_price\":575.99,\"tax_rate\":10,\"net\":2303.96},{\"description\":\"25 Inches Black Marble Center Table Top with Multi Stones Coffee Table for Home\",\"quantity\":1,\"unit_price\":731.25,\"tax_rate\":10,\"net\":731.25}],\"vat_breakdown\":[{\"rate\":10,\"base\":39566.73,\"tax\":3956.67}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice data**\n\nI need to output JSON per the specified schema and first extract the information from the image. The invoice number is 56418581, issued on 01/25/2013, which I’ll format as 2013-01-25. The seller is Watkins Inc. The currency appears to be USD, implied by the dollar sign in the totals. The due date is absent. The items include a black marble coffee table and an elegant dining table with their details and costs calculated.**Calculating item totals**\n\nI’m extracting details from the invoice for the items listed. There’s a coffee table top with a unit price of $575.99 and a total gross of $2,534.36. Another item is a black marble center table for $731.25, with some confusion around the gross price, which appears as $804.37. I’ll summarize the net prices and tax totals correctly. The total net amounts to $39,566.73, and the gross is $43,523.40. However, the schema doesn't include a gross line.**Formatting VAT details**\n\nI'm working on a VAT treatment issue with a standard rate. The breakdown is showing a base amount of 39,566.73, which means the tax would be 3,956.67 at a 10% rate. I need to format the response correctly as a bill in JSON, making sure there are no extra elements or mistakes. It’s essential to keep everything neat and accurate to avoid any confusion!",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice data**\n\nI need to output JSON per the specified schema and first extract the information from the image. The invoice number is 56418581, issued on 01/25/2013, which I’ll format as 2013-01-25. The seller is Watkins Inc. The currency appears to be USD, implied by the dollar sign in the totals. The due date is absent. The items include a black marble coffee table and an elegant dining table with their details and costs calculated.**Calculating item totals**\n\nI’m extracting details from the invoice for the items listed. There’s a coffee table top with a unit price of $575.99 and a total gross of $2,534.36. Another item is a black marble center table for $731.25, with some confusion around the gross price, which appears as $804.37. I’ll summarize the net prices and tax totals correctly. The total net amounts to $39,566.73, and the gross is $43,523.40. However, the schema doesn't include a gross line.**Formatting VAT details**\n\nI'm working on a VAT treatment issue with a standard rate. The breakdown is showing a base amount of 39,566.73, which means the tax would be 3,956.67 at a 10% rate. I need to format the response correctly as a bill in JSON, making sure there are no extra elements or mistakes. It’s essential to keep everything neat and accurate to avoid any confusion!",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hVLoEIRONDk1iZknpZWneTLPQT-fzTZn5sGB1T_y0owKfkdjX1OOULmIrhQ-zroKbwAJC2mkNuPmdQQCnSDC4pZPd2tLrtbMQrFrEjGn3eL-_XsM9fagTu-xAdnpYoZVKT5eBKKJd0zVIdmuD8u_WsHKr9aF40onxCAZAl5DpywqK3v8NBng8mabsKWOYXBbIFRwHclBTsKSlh6srAZ6NK3L84YHziQCSdgWCMEbNYxg_ermhm5rjn_jsV3mixJIs217nX7kEh1I_jO_L4XhqjyfOKl2AwsddoDfSDuovhcNt5pFDQQdZfDM2pp9cM8ZyrakyHxoXNdkvcQ4TuvBGy_QSByXcw6lrnmrgH724IwPdGx79iJ2JbSeUi1UViszHdnPh39-UqqH-Pv1Gn1rfk3B52StJseG4xG0hetRNr-65todI1bqGazSD__Ny-e9gJdqyJppsSkl-fF46x5YPbuxBK_Jf4ccralsvT6evQRo0FPiLhOut1M9PLizMw5YuNwctXAxv6BQjsiGGH9ffrlmwVrfTe_8vhfy2qjKz7quVDyo0oyYq30mcMAKIuli4Omi6lsgTo2OIlCIeSaIQzKxDXy3HJND0IUqUg9T3GxcJh_WCW683WzDmQLQpYZzKgLBCTmyxJzA9YVDr-8dWyPijvjFWi_O9mzNbJjRrZ2F89fsCNCk20wlUay2l44aMnJ2fosr9BODvHSUcgH-YMfvCVbMBJKEbGxr2_ln7-KIzvbfuYiMj0wmqsTIBRnSjgMMwE5E7awcWFYOXvrRpQyeWKeB4bZUhB_IMJAbEs-0HczqfqZT0vLxQJxq2eE9Avtga9_26XdR2hCDP4uqLK8KErADQKn1Z-0j_TEMQX6Rbklcv6cLl_qWr0coGDVJ1iebncvb_89OaMPfMEl5AesGaqOKQ1Sqg-hjomH_V_nRAnN7bF0V_jt2Zwu5-RZ6VvsbKnyEQ6sGU6Bxu_Q16uqZs6WDaflkvJzKE8wbaFXTqz_GYpmJTjMwYyXpMMvNuCW1_SXk7fKbIG8spR-s1Gy5i6gut1TeqRUZtBcZoPPL1t0LPq7em8ratkwycxWQP3FLR7sKwLXXtmftCvAf4njqW5EPb_WrpAdtmwaCVHTQJ3qC4Ks6hPiWMneYpcfWFBKn4qncp-MdqIQOtea6HGcXGq1isFJZxHbPsysSP9R1PabsDcLEegWurtSh-cJH6xWSWqiXJq_1NxxLjUDm1ZnC3jB5jV2lvUWAovSLFmUw30XQv6OufXwSc0gZbGB1yUqizS4Pgev-0HNwLmMb3nduGgNoLQoiv9NN_xT8DG0hq5ZV65U186LNlV_z5ByMZN-CwJ46sVO2cc8Wfd_f7pMDEVEZJrm8cK8vrlE_0TfQPg8-j5eADHmb3rdiNr1eyhdWm0jX5Yag7a-G25unmWCv6JFEV7UMjBnodOmZu2TJBDY0fS6Eh1kz72I9s8JGyk-lAsGf-7A1yCveRNScENASNidQH97XPXCV9ArsoFzMr1L7k2hzxgVyVo4pem1qfqMUElMFddOW4jQ2FW_SGCp4S3co155PhrpmvIyBxNCVrJzf1aCQaawJk2px56qxY36-N_QKrbCNCHI1VB9PdrLG95-v1nvbBe_FWSCKGJBIuDL1QrpBPbJQvvVkY-_CzP9-eO0GCSujDjRgbgfaNAYZe_Yj4UqL8KfL_g8jHI1XocKeO0Q2DpTHNTtMqopFQLrMVu8G6bdQK2tgr3zZyc5JTqjgOUPMuQhueFrHFm6AqaUW5lKeaO0epYxgUIC9s0Lsjzj9ViRQWUsAbhsxDyT-aUVk9Klv5vcbQQvZQR5olcrFqyKii427-0SQcvf3YexthCDQbwLTe1H2i5q1zRujHmKzNdqqYRLJTZkdauCM18axzxjVC7XbPwLL6VuN09aXt8YSSEl345WQxeK8Mblk3lBKvOA_c3K2JZYM7-qv732z4TiNGWWGGA3l3DlEzqYoN90BtjT6COJypfMEa4lIZR3TTPnbxKQ6BJfmaWLHCQZLTEyA6zw0549EMs_9BeFoJQOU9HY47J3KofEprH4i66Nsy8niXTNHnCMStvQTM7wFdgMpvz8eT9iJrFpxA91emTR0km6kORltzgwjIR_Nf-1XM2zeJNG1Axqh3LohpGNYiNJsH43-klSWmJAJpOWlYuDyzv4IjTUx2vyzO7nzT04Db9S3Br98nOP2BbOQ3ZddpY5fNmRi0SeCCdMZf-A06jjxo8v4KZje8w-4cwu4LFF0H6GexU05CERLIztPp7Dbnevpn6wnLf2vzD2jDBAaec0DSBiPsaAXqTmc4Tn2EDw5b55TQ59a9P7Toahn3T7l9oi27izFCTVkdaH0gpe9b9sSprb0yprlCFErBu4CmIhfUJor1f_BdqR2L7CLGQnm_XvEHJ3x4nBnarvbMIj5dcwK2tpTvIqQ7wAkHoYicI45mIRkQZDPrUg-Xfb6mtfEDdIrR4a60hvbiNao-enJQisC_UjbEsMVldYASN4FZCKDhoqtR4za96UZVjJ7utDZijCqeZVYXK954rAps2JHeUzWVsmbS6_epEiqTQbJUJ8iRlNFA-K-EDb7ekJpGZFuZ1-k4799xRirvHEgfHywr_KD6ka_a-Oxvxjap0uf6rE3zWgD6FU72cWgi9omJMUV_-jUoIsGjRE_OpffuzLPNroRjAGGF7ajbC72GAmL0mVEKjUuI-LG-XrhqyIVb6qj1fdC8s_czYczHURdAuAaqQOfL5WgKQtPwQNZLfELR0P7ADg_QN8i5iwH-RN37rJgMfC5cDFW11mYUPW1z9jaogI50lSR77RXY_W9p8G_q3tFNhsjEooIWc_sKhjm3K0u1xNiMfj815w0uxjVPpOkjKlv0IuDcDktsiPixuTvzAzYW53QTpHN-_z67qo2FaD6YoIuZjWszwKvjqophKSN6FgczM3V-D1vZDP4y4AAJPOWNmTf7gJw6uHfr0N5jIDwfAvZAhLt7rCo7RktZjG8e9QdANW47yd_GLoTwowBdGbVZY2JCRx5FZ2gJ-MYGP7aZWJ5TeLC7TYbYufvn5lPuA4ETgzup59P7PpIQ_ebCH29IlLJIPJ9TU9FLia_j4upaP4F1VRHHuW72P2Q0-JG8YwSLH8Mr-6uJpoWuGBaXwbRgkpelXhbxGhGPz26Raessy1NwUFs816gAHp4fLNX8AMDwJmpmcOi60KyFzg0E9IBrJQtmYliUPs762GzRD3K6XYkpu3YGzEaKgEQXaP-HNH0MMOSVcqTRm0AvO2ODohHVhlOTEKWEm5XkV8qL6DIKR_u-zE3EVgrmEbD0yD-t9KS5pc32V5KcyHif7TfXCSjFc1QdFxeCw40jk0A3SVNwMQHIcFhqSeIcE2eQD5H_K7F9Dx6HZ38WnZyX7XE5lQZfIQ9UMe4XgiWKUP3A63b-_YDqCUASVFd1rLZm6ap3Q0wpU4nvKJ-yi-8252JJal6Y6JW2oCls-U9rdf5Fd0K-hZM5NpMFcTmKOhkJrCLDtOcIn7f8gwzqxkbfsVNZWL38ZgDOpiGGABKR8-OSz31ZjpMPjfgST-C-o89Mqs1Pz9ckpUtbzFWHKao8imXurcsgdguovr50lhbmuaTJJ9Ctli8ANA4hGBtT4ktk8hNjDWMXUGtepeIe-gtmXuJWKHyeKfLt-YmdX5T-Rpg5FpA384sNikUaJPxTS_qmstT6r8Wzryr2zBDvSO2theT40t4_GQ6UC2W-7BXgsDi5RSNgUOLIQFhYfLBbznYNfhi0S7nBnzlV4lPlDGbrVziyi1JB9A6bczS_1xT6lL_kYBVszjfY3nnq-YX1mJgikkx91a26zsEg0T5RBJLsbk8qdUjbAkYwuhfXCqmb7UWMMtDQ42FmeTkPMILQsFZCu7NEvoYr5kd4yxul9ZVbJ9W4KcfqBNhzVAc6XtPPcbh5OSUGyX-WkbcG5aIT6e9BX-BOW0iqRjWMy3EflveVXwq9GZUVFHySs3590m1QdUMoOIeQjM74uWEbHfo57e5p_lnKewxOLKCkBZE3VBigYUm9-rgXBkVPZgAgrkr5gFvEc7_c1QAdYyDwXdTVxCur1epMSoPRiGJx9N_5MkBq_v-jdKxCYfk_sf4xzgUPeosuyBYInnzyMI1Ag1YoynHqpxRTBmI9bTbT2jUDzOskrX-D9eDF-wIHiGbL1KUqMT77KRKitCgynHQ6yYlHAiZ0TPI-SIxFMN7nv_j8FBbUhJAG2pNucKyY6zpEC3BGhUGanQJrezCqnbBLTk2JUJP2dRQRzUJ8op_gQYwMQ_GAuJniE_q4hNDqDziJDQFKucgLQPbR7YGmRSxchK6ivYS3FmsQB79OUYIqjhJIqJZ4G3SLi3-p-478Kx7_9ZsQbmvn_Rpsgm-X-qWBzHI8T-o8YketP-vj9-_RLdAZuRccDl-N7jkbV0__jURmppRm8j7NWK_aWDAKm-IB7GY6xj65C15xVnDYOTF4lNRrd9RslT6T5JARwZavaLOtu0Y1q5jeAR5xZBTxLui6ui1yp-Tm8F9F2qMQx05bW_CNuIkcwCIqFua54ttzjCfqz4D0SCSmZ4IVPeUU50o-pWssrs6cKYBzxOPvhhy1JaP3ljh_fG0AG0FbMYcTxrXRbdpILJvk2D3g-ZKyNsU1tZVMZWegFFxSQf-IE_6ZoCJ6k9PPMIiuSb5fXXnxgcx2JiZEdm44BZGV5ixazWPzNWV09CVGURdI-2uCxUTDgZ1_Piw8N_HMV1BDPswKDVip5oSOoTPBTfLPszwlL1DMUzeSyoIqrNwxiIg1O-46_cddGACUsdjrHqYuFld7ccO75E-TOEtkcCEDQHlbU8ZE4S4-8-H94SRg38KDnXOfgxmNdWVSbRLQJL6LDclDbUoNHx2H9AceTJoK0pXu52InZ0qngpd6mGglo0S95sFPxOxi8iq1nkEkijwyUNslybGfUNzSUmO3FJr635b1Rs7G17_-0QfdW_ifIMLi-1hcAJnvfYH_cuxnHFgxZ4jVJHyiZIokRYlnZD9xHuJCF-abwluDi2a6_HjYi403r7J8_nLDj8OJEfu-7EnRgK5tAdQlsdeTnV0FoNQjY-J0siBze6KsF-uHWM5RgDN73oWgX4C2CQgxscvVRi7Gy5IcZEigw5ihsUslcdYBQxzFNJ0HmsR_scU7peQcw-fdqZ5G7p_BAGvi1shyEj5bLPJTWlIyHh8ccMFITVYsyWSsDWjBxM6vCU25dwIGphk54WMzmDceb19Ulh6G3iW-k4JL0djTHNhRtAGV2XM70_2mq2gPAqUEi9yfSv3XdSxy8UjnP9D2SiAKlQFxJaLkFf6_LIDyZThtSqUdm_Fd2sg6RBZZIRkORKnZdIjhDvbOA9FdJxxas4HwE0nZRPXqILPif1fIBKKIwMDsoWtLwW6gOXmH5aqnBJR_XHa582sjxQkVvVKzzdMRuIMTF0_1lDPWLxoUnbrr1rmki9DXHGRunYl8jwANSs9prCsvr8LliudFykPRLfz5JojWLkw6h0n599l9fNJc_Iz6founq2sLbwHmQfjF8JwG8kDhQHpzH6sps1V8GqOjA45jCuVa-zVAgg0PhB7LaUOrxIYS4Asj-aWpJYOglKXB47DrL3y1iE2ik5JpcUbIxDJpkutiFeyG0f7hdYEvdT29qj8E_yHLKfES0sn9dpgd71KGMunCF4-NN7x-JXt9ATN5J5Quw_iDYQx8KAkCbYery4_n2o99MKVwFKxc2L_3lPe3IiWkybP3H8kF4jU2alxy9ARKPAInREUnUmlM62OagG5qjvXDQYXXIWbx0JEqu-cUJ-vvCHOCTnBEARPwGaHBqA_4s_smdtCgWA9znIWpFPiyAofJHMZ7wWo4gEPzu7-gRAoxIayyv_WhVroqntbQ7cwSqI9bo4SImmGRvdr4EIs9YapoYl17k8L8KB3UwCh4Qr53T-C6rgHC6seIepv8Z7IBllFVRwn5fiasmOD0NkaiAKBmUedddwFA8_L4ewoTA5iFBwQzdljy87yQ5wmO3Vaf31KEmS3-HCl2r7QS4ts4wa3Lt1hIjM-DCQ5S2tD-Jp5PDYOq9Nj2ZY8In9CcDbZM9eRcG9iTBKahXE1lcCrPWlEF5IsG1am_5U9rhLDUvwuWG5y9RCZpPdXldcXnc5kjPvBUms4eZmuoB_Bd8lslQjrm9mzs5WoIMGieIg4pFYKbBY11Y_bhjNJrQ0jQrSTX5xjgR1jTvp10yjG2tMg5e0sNrSgkkZ7D8fRO2GmLcSjjC5vbWNszS2B75pBiN_-D8X7DZ0FqXUAJfq8G4C5VwqOBm9Ut0GV0472pkKsc-FhIz_HtLhWmeoJHd6-jiS2nUQYgptcixy7wuyOwfQZUCpWNccKsGWZSxtLum1vd3NBsOvP1DxxNsPCfXaYrc-ziJsvrq32KpWqUWIbXz1tuCcCxseZA6rK8lcZLN1f8YQZeDqJM_LbEkWeP3-NwN6HzCJigtxPgbYK5a8JDl7BLGxSyCRVc4pMssQ38Gn23iMvQrMZpVbSPmnvKw2opelfbS7pM6a9CSlgLJwJTFyqZTF8-lvotajDWRk0qgO0fRfp6lhapn71v-s-dCZjmxej4NQa14BR5LkMxDc0Bb-CjyA-M44SUqE60UeUwhh2Sy4brAR2H0tOQF6N0dQTx0OvIJwOYDhsvBoiIrNZiSzE_jtl-QsNZrC7ju55byypkJFl6lnOFVrt7DSFGWnQqAkEffrq61TaSoejpMirTJsC8hc5c13XUuJsV09gFUAQIm5PyAdtc6yJvCQGD0fSoJnCxsCQNaiy-Q57A2pbqd_o87iCmoqiSwkwRsd0MIhCcMhHq9EVa-MNxQnpq-X6ydkiEVzF8tBBjGZYcjMg_hNB8HaVR-y0qywVAQ0_et46IMYuqMiQQ4i3VrOh8tIplgq7cZW-qb4hLnDS2bxCEVkDhXeGx8G9nj1ZZtHG_CKISAfZXtyWsh2NMvGuad3ivMoYNLz9biZzrctr9SCqmCj5UzGlOd-ukQ8TjVqFJZmWrlNyuQq0yQ3_H24NorVlJgCOoCasagy77Ihi6FRVEFMU1ovfOln8nt1bGXg0TwmKkl3Xa9AZZwGNaBSaB78dMV-V1_NzMZftCFUg1kLA4syXDRu-BKTkup-TH_VqKAGZPQYG6-6uUszHRFNSms8t_GQAFgEN8U7M2KTMK3tEvI-ho-aYkheHJMAiJIVbYnDVtLMSZfLz53ZNljzyC7EfIpAy5O3Hou0nXU_8SxABszYfjvxsyWDj7ZzcIiCVxpBCbq5hXEn3o3tJl9JS6m3kgeGtEBdNHZq68j8qPKAUOSG0XxLGp7xrGnRMyofswE2fkgCIuoqT98FhGWBw8VvVk3xlXKLsjt3h1Zov0sqelEADt50ATZPIqPG-Y4J43s74dUmK1lTz3Sg6cq6b6isc_QDmMvbGhvZOOyeXkgo_iepkpHk7h6wBZFMni12Klu6WJcnzMkFZnTCFYCpvxcCTO14icoXCGG_wNwf_su-ntzb6jA7L03kh1U_j-aI0ygoAM1u8hN9fy8C6NxNgJWTV9sCr_Il3917h-F8BGlQpSWZciTQRSTomoRPh6QOV8Wsx5gr533dCh2XGEZ0K0VvcMvKyXAtHNQEwtCPggfbcR2dsSREL5AC7v7epsafHQrNfUBX2fx-GANF0XUjfUJEnOoMC-YUlum5rQZj4ZH6Mk1RW77bs4S3DJ1FrOiC7Zh77_3t1Q0h6nifeL8QaN_tLj3By3CrDOrT87cZV98gIRqGeJOvk05BNCy2cuVKLBqc7xHJkuLNtoeQTQQMNJb4inyUJz9P4qNVHhJMG_UTQnTX6Td6gyChAiYjSxMcNycOdkI_QNJjXEzXMRwsPAE7l0PmuPyC33vZOJbgnqI3EvoGl9uNqRbMQBkhX3x5UtcFqOzDmbGIpoATXjk6cr3_wqI_9tDF5iN4IUCoCn3ZF9dxPe3DRdDxGZ_QQ-U_y82wJExzql6UMOvQ-mjM2aXo1ee82JCmBao5-qguGP--Ap3jOFPp51HHDm-78lW5Ih0RpQ0X4m_XqITFeOCKhxBo78QtoOyv68xggM0nj5hNkDQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0d905427880303b8016af61541486487d18c97595ae27c8ccb",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 888,
+   "total_tokens": 2392,
+   "cost": 0.03416,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03416,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02664
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 558,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.79
+}

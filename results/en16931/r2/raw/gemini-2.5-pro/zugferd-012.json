@@ -1,0 +1,99 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "AV-2017-0005",
+  "invoice_date": "2017-11-16",
+  "due_date": "2017-11-16",
+  "currency": "EUR",
+  "untaxed": -218.48,
+  "tax": -14.99,
+  "total": -233.47,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 5,
+    "unit_price": -4.096,
+    "tax_rate": 20.0,
+    "net": -20.48
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 10,
+    "unit_price": -19.8,
+    "tax_rate": 5.5,
+    "net": -198.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 20.0,
+    "base": -20.48,
+    "tax": -4.1
+   },
+   {
+    "rate": 5.5,
+    "base": -198.0,
+    "tax": -10.89
+   }
+  ]
+ },
+ "cost_usd": 0.0281675,
+ "raw": {
+  "id": "gen-1794512640-tuj5p2sOTmUKyDR1mY5P",
+  "object": "chat.completion",
+  "created": 1794512640,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Au bon moulin SARL\",\n  \"vendor_vat\": \"FR11999999998\",\n  \"invoice_ref\": \"AV-2017-0005\",\n  \"invoice_date\": \"2017-11-16\",\n  \"due_date\": \"2017-11-16\",\n  \"currency\": \"EUR\",\n  \"untaxed\": -218.48,\n  \"tax\": -14.99,\n  \"total\": -233.47,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nougat de l'Abbaye 250g\",\n      \"quantity\": 5,\n      \"unit_price\": -4.096,\n      \"tax_rate\": 20.0,\n      \"net\": -20.48\n    },\n    {\n      \"description\": \"Huile d'olive à l'ancienne\",\n      \"quantity\": 10,\n      \"unit_price\": -19.8,\n      \"tax_rate\": 5.5,\n      \"net\": -198.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 20.0,\n      \"base\": -20.48,\n      \"tax\": -4.1\n    },\n    {\n      \"rate\": 5.5,\n      \"base\": -198.0,\n      \"tax\": -10.89\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Au bon moulin SARL\" as the vendor and \"FR11999999998\" as their VAT number. I've also determined the document's type is a credit note (\"Avoir\"). The extraction of the invoice reference is next.\n\n\n**Analyzing Document Details**\n\nI've now successfully extracted all the necessary fields to populate the JSON schema. I've parsed \"AV-2017-0005\" as the invoice reference. The invoice date and due date are both 2017-11-16. Furthermore, I've confirmed EUR is the currency, and I've extracted the amounts for untaxed, tax, and total as -218.48, -14.99, and -233.47 respectively. I've identified standard VAT treatment (\"S\") and noted the document lacks an IBAN, setting it as null. I also started extracting the line items.\n\n\n**Populating the JSON Schema**\n\nI'm now focusing on extracting and calculating line-item details. The first line item is proving tricky, as I must factor in a discount to determine the \"net\" amount and effective unit price. I've also confirmed that the tax rate for the item is 20%. I'll work to determine the proper way to provide a quantity of credit notes to reflect the negative nature of the items.\n\n\n**Finalizing Line Item Calculations**\n\nI've finalized line item extraction and am confident in the accuracy. For the first item, I've confirmed a net amount of -20.48, a quantity of 5, and a unit price of 4.55 before discount (which is not in the schema), and -4.096, which I calculate as the \"effective\" unit price, taking the 10% discount into account. The tax rate is 20%. The second line's details are: 10 quantity, 19.80 unit price, net amount of -198.00 and 5.5% tax. The VAT breakdown is also filled.\n\n\n**Finalizing JSON Structure**\n\nI've now completed extraction and calculation. I've double-checked all values against the document, and confirmed that line item calculations, including discounts, are accurate, and are ready for integration into the schema. I've verified the VAT breakdown matches the totals extracted, and that the appropriate VAT treatment is applied. I am now confident that I can successfully generate the JSON output.\n\n\n**Refining Item Calculations**\n\nI've been meticulously reviewing my work. I've double-checked all calculations, focusing on the treatment of the discount on the first line item. I've re-evaluated both line items to ensure the derived unit price accurately reflects the \"net\" amount after discount and tax, and verified the VAT breakdown with the document.\n\n\n**Refining and Finalizing JSON**\n\nI've made my final checks and am ready. My focus has been on ensuring the `unit_price` accurately reflects the calculations, especially with the discount on the first line item. I have refined the way I am calculating `net` values on the lines. I am now confident that all the negative values are accurate, and I have addressed all calculations to verify the overall schema integrity.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Au bon moulin SARL\" as the vendor and \"FR11999999998\" as their VAT number. I've also determined the document's type is a credit note (\"Avoir\"). The extraction of the invoice reference is next.\n\n\n**Analyzing Document Details**\n\nI've now successfully extracted all the necessary fields to populate the JSON schema. I've parsed \"AV-2017-0005\" as the invoice reference. The invoice date and due date are both 2017-11-16. Furthermore, I've confirmed EUR is the currency, and I've extracted the amounts for untaxed, tax, and total as -218.48, -14.99, and -233.47 respectively. I've identified standard VAT treatment (\"S\") and noted the document lacks an IBAN, setting it as null. I also started extracting the line items.\n\n\n**Populating the JSON Schema**\n\nI'm now focusing on extracting and calculating line-item details. The first line item is proving tricky, as I must factor in a discount to determine the \"net\" amount and effective unit price. I've also confirmed that the tax rate for the item is 20%. I'll work to determine the proper way to provide a quantity of credit notes to reflect the negative nature of the items.\n\n\n**Finalizing Line Item Calculations**\n\nI've finalized line item extraction and am confident in the accuracy. For the first item, I've confirmed a net amount of -20.48, a quantity of 5, and a unit price of 4.55 before discount (which is not in the schema), and -4.096, which I calculate as the \"effective\" unit price, taking the 10% discount into account. The tax rate is 20%. The second line's details are: 10 quantity, 19.80 unit price, net amount of -198.00 and 5.5% tax. The VAT breakdown is also filled.\n\n\n**Finalizing JSON Structure**\n\nI've now completed extraction and calculation. I've double-checked all values against the document, and confirmed that line item calculations, including discounts, are accurate, and are ready for integration into the schema. I've verified the VAT breakdown matches the totals extracted, and that the appropriate VAT treatment is applied. I am now confident that I can successfully generate the JSON output.\n\n\n**Refining Item Calculations**\n\nI've been meticulously reviewing my work. I've double-checked all calculations, focusing on the treatment of the discount on the first line item. I've re-evaluated both line items to ensure the derived unit price accurately reflects the \"net\" amount after discount and tax, and verified the VAT breakdown with the document.\n\n\n**Refining and Finalizing JSON**\n\nI've made my final checks and am ready. My focus has been on ensuring the `unit_price` accurately reflects the calculations, especially with the discount on the first line item. I have refined the way I am calculating `net` values on the lines. I am now confident that all the negative values are accurate, and I have addressed all calculations to verify the overall schema integrity.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2777,
+   "total_tokens": 3095,
+   "cost": 0.0281675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0281675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02777
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2390,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 24.14
+}

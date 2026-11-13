@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Smith Ltd",
+  "vendor_vat": "916-97-6743",
+  "invoice_ref": "26343874",
+  "invoice_date": "2013-07-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 3172.99,
+  "tax": 317.3,
+  "total": 3490.29,
+  "iban": "GB78TZMX55978564099007",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Microsoft Xbox One X 1TB 4k Ultra HD Console black controller works great 1787",
+    "quantity": 5.0,
+    "unit_price": 249.0,
+    "tax_rate": 10.0,
+    "net": 1245.0
+   },
+   {
+    "description": "Cables 500gb, Sony PlayStation 4 PS4 CUH 1215A Jet Black Console w/ Controller",
+    "quantity": 5.0,
+    "unit_price": 100.0,
+    "tax_rate": 10.0,
+    "net": 500.0
+   },
+   {
+    "description": "PS2 Slim Console System SCPH-77000 PINK Playstation 2 Tested",
+    "quantity": 4.0,
+    "unit_price": 252.0,
+    "tax_rate": 10.0,
+    "net": 1008.0
+   },
+   {
+    "description": "Nintendo Game Boy Micro Console - Black (OXYSFBB)",
+    "quantity": 2.0,
+    "unit_price": 130.0,
+    "tax_rate": 10.0,
+    "net": 260.0
+   },
+   {
+    "description": "Nintendo GameCube System Console Bundle Mario Sunshine + Genuine controller LOT",
+    "quantity": 1.0,
+    "unit_price": 159.99,
+    "tax_rate": 10.0,
+    "net": 159.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 3172.99,
+    "tax": 317.3
+   }
+  ]
+ },
+ "cost_usd": 0.0196275,
+ "raw": {
+  "id": "gen-1794515308-uM5vDhJxiju8unzT95Yw",
+  "object": "chat.completion",
+  "created": 1794515308,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith Ltd\",\n  \"vendor_vat\": \"916-97-6743\",\n  \"invoice_ref\": \"26343874\",\n  \"invoice_date\": \"2013-07-17\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 3172.99,\n  \"tax\": 317.3,\n  \"total\": 3490.29,\n  \"iban\": \"GB78TZMX55978564099007\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Microsoft Xbox One X 1TB 4k Ultra HD Console black controller works great 1787\",\n      \"quantity\": 5.0,\n      \"unit_price\": 249.0,\n      \"tax_rate\": 10.0,\n      \"net\": 1245.0\n    },\n    {\n      \"description\": \"Cables 500gb, Sony PlayStation 4 PS4 CUH 1215A Jet Black Console w/ Controller\",\n      \"quantity\": 5.0,\n      \"unit_price\": 100.0,\n      \"tax_rate\": 10.0,\n      \"net\": 500.0\n    },\n    {\n      \"description\": \"PS2 Slim Console System SCPH-77000 PINK Playstation 2 Tested\",\n      \"quantity\": 4.0,\n      \"unit_price\": 252.0,\n      \"tax_rate\": 10.0,\n      \"net\": 1008.0\n    },\n    {\n      \"description\": \"Nintendo Game Boy Micro Console - Black (OXYSFBB)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 130.0,\n      \"tax_rate\": 10.0,\n      \"net\": 260.0\n    },\n    {\n      \"description\": \"Nintendo GameCube System Console Bundle Mario Sunshine + Genuine controller LOT\",\n      \"quantity\": 1.0,\n      \"unit_price\": 159.99,\n      \"tax_rate\": 10.0,\n      \"net\": 159.99\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 3172.99,\n      \"tax\": 317.3\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm focusing on extracting the necessary vendor information to populate the JSON schema. I've identified \"Smith Ltd\" as the vendor name and \"916-97-6743\" as their tax ID. Next, I'll need to figure out how to parse the invoice reference.\n\n\n**Confirming Data Values**\n\nI've successfully identified and validated the `vendor_name` as \"Smith Ltd\", and the `vendor_vat` as \"916-97-6743\". The `invoice_ref` is confirmed as \"26343874\", and the `invoice_date` is \"2013-07-17\". I've set the `due_date` to `null` as it's not present. I've resolved the currency ambiguity, confirming \"USD\" as the correct ISO code, despite the IBAN discrepancy, based on the dollar symbol, totals, and US addresses.\n\n\n**Populating Line Items**\n\nI'm now focusing on the line items within the document to populate the JSON schema. I've extracted the initial two lines, including descriptions, quantities, unit prices, tax rates, and net values. I need to iterate to extract further. I've successfully extracted the vendor details, and now I'm making progress on capturing each line.\n\n\n**Verifying Data Integrity**\n\nI've now cross-referenced the extracted data, verifying the totals and tax calculations. Line item nets sum to $3172.99, which agrees with the 'untaxed' total. The calculated tax at 10% is also confirmed as $317.30, and the total gross value is consistent. The data is validated and internally consistent, ready for JSON construction. I have now completed extraction of all fields.\n\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm focusing on extracting the necessary vendor information to populate the JSON schema. I've identified \"Smith Ltd\" as the vendor name and \"916-97-6743\" as their tax ID. Next, I'll need to figure out how to parse the invoice reference.\n\n\n**Confirming Data Values**\n\nI've successfully identified and validated the `vendor_name` as \"Smith Ltd\", and the `vendor_vat` as \"916-97-6743\". The `invoice_ref` is confirmed as \"26343874\", and the `invoice_date` is \"2013-07-17\". I've set the `due_date` to `null` as it's not present. I've resolved the currency ambiguity, confirming \"USD\" as the correct ISO code, despite the IBAN discrepancy, based on the dollar symbol, totals, and US addresses.\n\n\n**Populating Line Items**\n\nI'm now focusing on the line items within the document to populate the JSON schema. I've extracted the initial two lines, including descriptions, quantities, unit prices, tax rates, and net values. I need to iterate to extract further. I've successfully extracted the vendor details, and now I'm making progress on capturing each line.\n\n\n**Verifying Data Integrity**\n\nI've now cross-referenced the extracted data, verifying the totals and tax calculations. Line item nets sum to $3172.99, which agrees with the 'untaxed' total. The calculated tax at 10% is also confirmed as $317.30, and the total gross value is consistent. The data is validated and internally consistent, ready for JSON construction. I have now completed extraction of all fields.\n\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1923,
+   "total_tokens": 2241,
+   "cost": 0.0196275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0196275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01923
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1305,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.63
+}

@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "Hamilton, Schmidt and Graves",
+  "vendor_vat": "914-80-3695",
+  "invoice_ref": "83876203",
+  "invoice_date": "2019-03-29",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 254.84,
+  "tax": 25.48,
+  "total": 280.32,
+  "iban": "GB11TSGI11085522221932",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "The Wim Hof Method Activate Your Potential, Transcend Your Limits",
+    "quantity": 4.0,
+    "unit_price": 4.22,
+    "tax_rate": 10,
+    "net": 16.88
+   },
+   {
+    "description": "Merry Robin Hood by H. Pyle New Sealed Illustrated Leather Bound Gift Hardback",
+    "quantity": 4.0,
+    "unit_price": 19.99,
+    "tax_rate": 10,
+    "net": 79.96
+   },
+   {
+    "description": "Christmas Cupcake Murder: A Festive & Delicious Ch... by Joanne Fluke (P.D.F)",
+    "quantity": 5.0,
+    "unit_price": 2.99,
+    "tax_rate": 10,
+    "net": 14.95
+   },
+   {
+    "description": "Sing My Way Home: Voices of the New American Roots",
+    "quantity": 5.0,
+    "unit_price": 5.61,
+    "tax_rate": 10,
+    "net": 28.05
+   },
+   {
+    "description": "Rebecca and Ana (American Girl (Quality))",
+    "quantity": 1.0,
+    "unit_price": 4.49,
+    "tax_rate": 10,
+    "net": 4.49
+   },
+   {
+    "description": "Unleashed : The Story of Tool, Paperback by McIver, Joel, Brand New, Free shi...",
+    "quantity": 2.0,
+    "unit_price": 16.88,
+    "tax_rate": 10,
+    "net": 33.76
+   },
+   {
+    "description": "[NEW] A Divine Revelation Of Hell by Mary K. Baxter",
+    "quantity": 5.0,
+    "unit_price": 15.35,
+    "tax_rate": 10,
+    "net": 76.75
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 254.84,
+    "tax": 25.48
+   }
+  ]
+ },
+ "cost_usd": 0.031756,
+ "raw": {
+  "id": "gen-1794515226-8efzF4Pq9AwGJoPw9SUQ",
+  "object": "chat.completion",
+  "created": 1794515226,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hamilton, Schmidt and Graves\",\n  \"vendor_vat\": \"914-80-3695\",\n  \"invoice_ref\": \"83876203\",\n  \"invoice_date\": \"2019-03-29\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 254.84,\n  \"tax\": 25.48,\n  \"total\": 280.32,\n  \"iban\": \"GB11TSGI11085522221932\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"The Wim Hof Method Activate Your Potential, Transcend Your Limits\",\n      \"quantity\": 4.00,\n      \"unit_price\": 4.22,\n      \"tax_rate\": 10,\n      \"net\": 16.88\n    },\n    {\n      \"description\": \"Merry Robin Hood by H. Pyle New Sealed Illustrated Leather Bound Gift Hardback\",\n      \"quantity\": 4.00,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10,\n      \"net\": 79.96\n    },\n    {\n      \"description\": \"Christmas Cupcake Murder: A Festive & Delicious Ch... by Joanne Fluke (P.D.F)\",\n      \"quantity\": 5.00,\n      \"unit_price\": 2.99,\n      \"tax_rate\": 10,\n      \"net\": 14.95\n    },\n    {\n      \"description\": \"Sing My Way Home: Voices of the New American Roots\",\n      \"quantity\": 5.00,\n      \"unit_price\": 5.61,\n      \"tax_rate\": 10,\n      \"net\": 28.05\n    },\n    {\n      \"description\": \"Rebecca and Ana (American Girl (Quality))\",\n      \"quantity\": 1.00,\n      \"unit_price\": 4.49,\n      \"tax_rate\": 10,\n      \"net\": 4.49\n    },\n    {\n      \"description\": \"Unleashed : The Story of Tool, Paperback by McIver, Joel, Brand New, Free shi...\",\n      \"quantity\": 2.00,\n      \"unit_price\": 16.88,\n      \"tax_rate\": 10,\n      \"net\": 33.76\n    },\n    {\n      \"description\": \"[NEW] A Divine Revelation Of Hell by Mary K. Baxter\",\n      \"quantity\": 5.00,\n      \"unit_price\": 15.35,\n      \"tax_rate\": 10,\n      \"net\": 76.75\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 254.84,\n      \"tax\": 25.48\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Validating Vendor Information**\n\nI've successfully identified and extracted the `vendor_name` as \"Hamilton, Schmidt and Graves\" and the `vendor_vat` as \"914-80-3695\". My parsing logic confirms these are correctly represented as strings, aligning with the schema's expectations.\n\n**Calculating Invoice Totals**\n\nI'm now concentrating on the numerical aggregates. I've noted the total net, VAT, and gross amounts, along with the IBAN. Additionally, I'm confirming the VAT rate of 10% and noting it as \"S\" for standard.\n\n**Finalizing Invoice Details**\n\nI am now cross-referencing the itemized details, ensuring each product's quantity, unit price, and net value are accurately captured and formatted as numerical types. The VAT breakdown also aligns with the individual item tax calculations. My next step involves stringent JSON formatting and validation.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Validating Vendor Information**\n\nI've successfully identified and extracted the `vendor_name` as \"Hamilton, Schmidt and Graves\" and the `vendor_vat` as \"914-80-3695\". My parsing logic confirms these are correctly represented as strings, aligning with the schema's expectations.\n\n**Calculating Invoice Totals**\n\nI'm now concentrating on the numerical aggregates. I've noted the total net, VAT, and gross amounts, along with the IBAN. Additionally, I'm confirming the VAT rate of 10% and noting it as \"S\" for standard.\n\n**Finalizing Invoice Details**\n\nI am now cross-referencing the itemized details, ensuring each product's quantity, unit price, and net value are accurately captured and formatted as numerical types. The VAT breakdown also aligns with the individual item tax calculations. My next step involves stringent JSON formatting and validation.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2385,
+   "total_tokens": 3953,
+   "cost": 0.031756,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.031756,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.02862
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1642,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 20.79
+}

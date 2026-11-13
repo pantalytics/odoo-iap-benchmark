@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "AEON CO. (M) BHD",
+  "vendor_vat": "002017394688",
+  "invoice_ref": "2018021951320026157",
+  "invoice_date": "2018-02-19",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 16.71,
+  "tax": 0.99,
+  "total": 17.7,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SAKUMASHIKIDROP",
+    "quantity": 1,
+    "unit_price": 5.57,
+    "tax_rate": 6,
+    "net": 5.57
+   },
+   {
+    "description": "BINDER CLIP -BL",
+    "quantity": 1,
+    "unit_price": 5.57,
+    "tax_rate": 6,
+    "net": 5.57
+   },
+   {
+    "description": "150YEN CAR NECK",
+    "quantity": 1,
+    "unit_price": 5.57,
+    "tax_rate": 6,
+    "net": 5.57
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 16.71,
+    "tax": 0.99
+   }
+  ]
+ },
+ "cost_usd": 0.0305075,
+ "raw": {
+  "id": "gen-1794514362-Mc0Q2IZ4FLnjTfXfy4sR",
+  "object": "chat.completion",
+  "created": 1794514362,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"AEON CO. (M) BHD\",\n  \"vendor_vat\": \"002017394688\",\n  \"invoice_ref\": \"2018021951320026157\",\n  \"invoice_date\": \"2018-02-19\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 16.71,\n  \"tax\": 0.99,\n  \"total\": 17.7,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SAKUMASHIKIDROP\",\n      \"quantity\": 1,\n      \"unit_price\": 5.57,\n      \"tax_rate\": 6,\n      \"net\": 5.57\n    },\n    {\n      \"description\": \"BINDER CLIP -BL\",\n      \"quantity\": 1,\n      \"unit_price\": 5.57,\n      \"tax_rate\": 6,\n      \"net\": 5.57\n    },\n    {\n      \"description\": \"150YEN CAR NECK\",\n      \"quantity\": 1,\n      \"unit_price\": 5.57,\n      \"tax_rate\": 6,\n      \"net\": 5.57\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6,\n      \"base\": 16.71,\n      \"tax\": 0.99\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI've successfully identified \"AEON CO. (M) BHD\" as the primary vendor. Additional details like \"DAISO SUNWAY VELOCITY\" and the phone number \"1-300-80-AEON\" are present on the receipt; I'm evaluating their relevance to the schema.\n\n\n**Analyzing Receipt Data**\n\nI've extracted the vendor name as \"AEON CO. (M) BHD\" and confirmed the vendor VAT ID is \"002017394688.\" The invoice reference is \"201802 1951320026157\" and the date \"2018-02-19.\" Since this is a retail receipt, I'll set the due date to `null`. I'm inferring the currency is MYR, given the context, and have identified the untaxed amount as 16.71.\n\n\n**Defining Schema Parameters**\n\nI've now successfully identified all the key data points required for the JSON schema. I've confirmed that the currency is MYR and extracted the untaxed amount (16.71), the tax (0.99), and the total (17.70). I'm also setting `due_date` and `iban` to `null` as they're absent on the receipt. The VAT treatment is SR (Standard Rate). I'm moving on to line item extraction next.\n\n\n**Extracting Detailed Line Items**\n\nI've moved on to meticulously extracting line items. After careful calculations and considerations for the 6% standard rate tax, I've extracted three lines: \"SAKUMASHIK IDROP,\" \"BINDER CLIP -BL,\" and \"15 OYEN CAR NECK,\" each with a quantity of 1, a pre-tax unit price of 5.57 MYR, and a 6% tax rate, for a net amount per line that aligns with the untaxed total.\n\n\n**Finalizing Item Extraction**\n\nI've determined the individual item prices by working backward from the total. I'm extracting three line items: \"SAKUMASHIK IDROP\", \"BINDER CLIP -BL\", and \"15 OYEN CAR NECK\". Each quantity is one, and after accounting for tax (6%), the unit price for all is 5.57 MYR, which sums to the untaxed total of 16.71.\n\n\n**Finalizing Schema Extraction**\n\nI've determined that \"SAKUMASHIK IDROP\", \"BINDER CLIP -BL\", and \"15 OYEN CAR NECK\" are the three items. I calculated the tax-exclusive unit price of 5.57 MYR by working backwards from the receipt, noting the total's match with 16.71 untaxed total. Each line item will include a 6% tax rate for precise alignment with the VAT breakdown. The schema is complete.\n\n\n**Finalizing Schema Data**\n\nI have carefully reviewed the extracted data and verified all fields. Based on calculations, I've confirmed that the vendor name is correct. I have cross-referenced the GST summary to ensure the untaxed amount, tax, and total values are correct. The final line item pricing of 5.57 MYR per item aligns accurately with the provided totals after adjusting for the 6% GST.\n\n\n**Refining Currency and Tax Details**\n\nI've carefully considered the implications of Malaysian Ringgit (MYR) as the currency. I've cross-validated my initial findings regarding the untaxed amount (16.71), tax (0.99), and total (17.70) by referencing the GST summary and applying calculations. I've also re-examined the line items and determined the per-item tax-exclusive price and the 6% tax rate for each.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI've successfully identified \"AEON CO. (M) BHD\" as the primary vendor. Additional details like \"DAISO SUNWAY VELOCITY\" and the phone number \"1-300-80-AEON\" are present on the receipt; I'm evaluating their relevance to the schema.\n\n\n**Analyzing Receipt Data**\n\nI've extracted the vendor name as \"AEON CO. (M) BHD\" and confirmed the vendor VAT ID is \"002017394688.\" The invoice reference is \"201802 1951320026157\" and the date \"2018-02-19.\" Since this is a retail receipt, I'll set the due date to `null`. I'm inferring the currency is MYR, given the context, and have identified the untaxed amount as 16.71.\n\n\n**Defining Schema Parameters**\n\nI've now successfully identified all the key data points required for the JSON schema. I've confirmed that the currency is MYR and extracted the untaxed amount (16.71), the tax (0.99), and the total (17.70). I'm also setting `due_date` and `iban` to `null` as they're absent on the receipt. The VAT treatment is SR (Standard Rate). I'm moving on to line item extraction next.\n\n\n**Extracting Detailed Line Items**\n\nI've moved on to meticulously extracting line items. After careful calculations and considerations for the 6% standard rate tax, I've extracted three lines: \"SAKUMASHIK IDROP,\" \"BINDER CLIP -BL,\" and \"15 OYEN CAR NECK,\" each with a quantity of 1, a pre-tax unit price of 5.57 MYR, and a 6% tax rate, for a net amount per line that aligns with the untaxed total.\n\n\n**Finalizing Item Extraction**\n\nI've determined the individual item prices by working backward from the total. I'm extracting three line items: \"SAKUMASHIK IDROP\", \"BINDER CLIP -BL\", and \"15 OYEN CAR NECK\". Each quantity is one, and after accounting for tax (6%), the unit price for all is 5.57 MYR, which sums to the untaxed total of 16.71.\n\n\n**Finalizing Schema Extraction**\n\nI've determined that \"SAKUMASHIK IDROP\", \"BINDER CLIP -BL\", and \"15 OYEN CAR NECK\" are the three items. I calculated the tax-exclusive unit price of 5.57 MYR by working backwards from the receipt, noting the total's match with 16.71 untaxed total. Each line item will include a 6% tax rate for precise alignment with the VAT breakdown. The schema is complete.\n\n\n**Finalizing Schema Data**\n\nI have carefully reviewed the extracted data and verified all fields. Based on calculations, I've confirmed that the vendor name is correct. I have cross-referenced the GST summary to ensure the untaxed amount, tax, and total values are correct. The final line item pricing of 5.57 MYR per item aligns accurately with the provided totals after adjusting for the 6% GST.\n\n\n**Refining Currency and Tax Details**\n\nI've carefully considered the implications of Malaysian Ringgit (MYR) as the currency. I've cross-validated my initial findings regarding the untaxed amount (16.71), tax (0.99), and total (17.70) by referencing the GST summary and applying calculations. I've also re-examined the line items and determined the per-item tax-exclusive price and the 6% tax rate for each.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3011,
+   "total_tokens": 3329,
+   "cost": 0.0305075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0305075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03011
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2628,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 27.11
+}

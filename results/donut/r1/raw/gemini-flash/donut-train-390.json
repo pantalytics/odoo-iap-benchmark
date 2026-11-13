@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Arnold, Mercer and Shelton",
+  "vendor_vat": "938-99-2312",
+  "invoice_ref": "37995856",
+  "invoice_date": "2017-05-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 79.98,
+  "tax": 8.0,
+  "total": 87.98,
+  "iban": "GB15WYGM00923783631136",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300",
+    "quantity": 1.0,
+    "unit_price": 59.99,
+    "tax_rate": 10.0,
+    "net": 59.99
+   },
+   {
+    "description": "Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW",
+    "quantity": 1.0,
+    "unit_price": 19.99,
+    "tax_rate": 10.0,
+    "net": 19.99
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 79.98,
+    "tax": 8.0
+   }
+  ]
+ },
+ "cost_usd": 0.00462975,
+ "raw": {
+  "id": "gen-1794511985-PNfIaxjLk2EaE9MT7mB2",
+  "object": "chat.completion",
+  "created": 1794511985,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Arnold, Mercer and Shelton\",\"vendor_vat\":\"938-99-2312\",\"invoice_ref\":\"37995856\",\"invoice_date\":\"2017-05-06\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":79.98,\"tax\":8.0,\"total\":87.98,\"iban\":\"GB15WYGM00923783631136\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Nike Pre School Kids Size 12C Jordan Jumpman Team II (PS) AQ2797-300\",\"quantity\":1.0,\"unit_price\":59.99,\"tax_rate\":10.0,\"net\":59.99},{\"description\":\"Joma Boys Youth Gol-102 Soccer Cleats Shoes Size 3.5 White Red Futbol NEW\",\"quantity\":1.0,\"unit_price\":19.99,\"tax_rate\":10.0,\"net\":19.99}],\"vat_breakdown\":[{\"rate\":10.0,\"base\":79.98,\"tax\":8.0}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently parsing the invoice image to pull out the specified fields. So far, I've identified the vendor's name as Arnold, Mercer and Shelton, their VAT number as 938-99-2312, the invoice reference as 37995856, and the date as 06/05/2017, which I'm normalizing to 2017-05-06.\n\n**Interpreting Invoice Details**\n\nI'm now focusing on disambiguating date formats and determining currency. The presence of both US-style addresses and a UK IBAN is notable, but the monetary values and common invoice generation patterns suggest USD and a DD/MM/YYYY date interpretation for 06/05/2017, aligning with my initial normalization.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently parsing the invoice image to pull out the specified fields. So far, I've identified the vendor's name as Arnold, Mercer and Shelton, their VAT number as 938-99-2312, the invoice reference as 37995856, and the date as 06/05/2017, which I'm normalizing to 2017-05-06.\n\n**Interpreting Invoice Details**\n\nI'm now focusing on disambiguating date formats and determining currency. The presence of both US-style addresses and a UK IBAN is notable, but the monetary values and common invoice generation patterns suggest USD and a DD/MM/YYYY date interpretation for 06/05/2017, aligning with my initial normalization.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 921,
+   "total_tokens": 2489,
+   "cost": 0.00462975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00462975,
+    "upstream_inference_prompt_cost": 0.001176,
+    "upstream_inference_completions_cost": 0.00345375
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 654,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.1
+}

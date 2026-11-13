@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Lee, Young and Krause",
+  "vendor_vat": "978-86-4132",
+  "invoice_ref": "57168813",
+  "invoice_date": "2017-01-10",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 17.97,
+  "tax": 1.8,
+  "total": 19.77,
+  "iban": "GB65HXDQ13046010291978",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Executive style",
+    "quantity": 3.0,
+    "unit_price": 5.99,
+    "tax_rate": 10.0,
+    "net": 17.97
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 17.97,
+    "tax": 1.8
+   }
+  ]
+ },
+ "cost_usd": 0.0147475,
+ "raw": {
+  "id": "gen-1794512217-q1BKvveSRzuUzIf8IAAy",
+  "object": "chat.completion",
+  "created": 1794512217,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Lee, Young and Krause\",\n  \"vendor_vat\": \"978-86-4132\",\n  \"invoice_ref\": \"57168813\",\n  \"invoice_date\": \"2017-01-10\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 17.97,\n  \"tax\": 1.80,\n  \"total\": 19.77,\n  \"iban\": \"GB65HXDQ13046010291978\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Executive style\",\n      \"quantity\": 3.0,\n      \"unit_price\": 5.99,\n      \"tax_rate\": 10.0,\n      \"net\": 17.97\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 17.97,\n      \"tax\": 1.8\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Lee, Young and Krause\" as the vendor. Also, I've parsed their tax ID as \"978-86-4132\". I am moving on to extracting other key information points to populate the JSON schema.\n\n\n**Populating the Schema**\n\nI'm now populating the JSON schema. I've extracted the invoice reference (\"57168813\"), the invoice date (\"2017-01-10\"), and the currency (\"USD\").  I've set the due date to `null` because it wasn't specified. I'm also working on the financial details: the untaxed amount (17.97), tax amount (1.80), and total amount (19.77), and the seller IBAN (\"GB65HXDQ 13046010291978\").\n\n\n**Finalizing Data Points**\n\nNow, I'm verifying the numerical data. The calculations confirm the accuracy of my extractions: the unit price and quantity multiply correctly to the net amount, and the VAT calculation validates the extracted tax amount.  I've reviewed the currency ambiguity and have decided on USD, given the preponderance of the US data in the document. Finally, I've confirmed that the schema population is complete, ready for submission.\n\n\n**Confirming Final Data**\n\nI have now reviewed all extracted data points for accuracy and completeness. I confirmed all calculations. I also addressed the currency ambiguity. Given that, I've confirmed that the JSON structure is complete and ready for submission.\n\nI am generating the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Lee, Young and Krause\" as the vendor. Also, I've parsed their tax ID as \"978-86-4132\". I am moving on to extracting other key information points to populate the JSON schema.\n\n\n**Populating the Schema**\n\nI'm now populating the JSON schema. I've extracted the invoice reference (\"57168813\"), the invoice date (\"2017-01-10\"), and the currency (\"USD\").  I've set the due date to `null` because it wasn't specified. I'm also working on the financial details: the untaxed amount (17.97), tax amount (1.80), and total amount (19.77), and the seller IBAN (\"GB65HXDQ 13046010291978\").\n\n\n**Finalizing Data Points**\n\nNow, I'm verifying the numerical data. The calculations confirm the accuracy of my extractions: the unit price and quantity multiply correctly to the net amount, and the VAT calculation validates the extracted tax amount.  I've reviewed the currency ambiguity and have decided on USD, given the preponderance of the US data in the document. Finally, I've confirmed that the schema population is complete, ready for submission.\n\n\n**Confirming Final Data**\n\nI have now reviewed all extracted data points for accuracy and completeness. I confirmed all calculations. I also addressed the currency ambiguity. Given that, I've confirmed that the JSON structure is complete and ready for submission.\n\nI am generating the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1435,
+   "total_tokens": 1753,
+   "cost": 0.0147475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0147475,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01435
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1158,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.24
+}

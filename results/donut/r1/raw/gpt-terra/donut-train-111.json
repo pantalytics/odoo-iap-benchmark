@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Murphy-Sanders",
+  "vendor_vat": "917-83-2356",
+  "invoice_ref": "46301857",
+  "invoice_date": "2017-04-08",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 59.35,
+  "tax": 5.94,
+  "total": 65.29,
+  "iban": "GB24OZUP84517588674217",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Care & Repair of Furniture",
+    "quantity": 5,
+    "unit_price": 4.25,
+    "tax_rate": 10,
+    "net": 21.25
+   },
+   {
+    "description": "Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The",
+    "quantity": 5,
+    "unit_price": 7.62,
+    "tax_rate": 10,
+    "net": 38.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 59.35,
+    "tax": 5.94
+   }
+  ]
+ },
+ "cost_usd": 0.014841,
+ "raw": {
+  "id": "gen-1794514929-UFKMXYfXDIfTIafF1k9E",
+  "object": "chat.completion",
+  "created": 1794514929,
+  "model": "openai/gpt-5.6-terra",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Murphy-Sanders\",\"vendor_vat\":\"917-83-2356\",\"invoice_ref\":\"46301857\",\"invoice_date\":\"2017-04-08\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":59.35,\"tax\":5.94,\"total\":65.29,\"iban\":\"GB24OZUP84517588674217\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Care & Repair of Furniture\",\"quantity\":5,\"unit_price\":4.25,\"tax_rate\":10,\"net\":21.25},{\"description\":\"Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The\",\"quantity\":5,\"unit_price\":7.62,\"tax_rate\":10,\"net\":38.1}],\"vat_breakdown\":[{\"rate\":10,\"base\":59.35,\"tax\":5.94}]}",
+     "refusal": null,
+     "reasoning": "**Formatting invoice details**\n\nI need to focus on using JSON, especially for the date format. The ambiguous date 04/08/2017 could be interpreted as either dd/mm or mm/dd. Since the vendor is US-based, using 2017-04-08 might be clearer. I'm also noticing that the invoice mentions euro formatting with commas, which raises some questions. It seems like the dataset might be generated using a common invoice template. I'll ensure the schema accurately extracts what's needed, including tax ID and currency.**Analyzing book details**\n\nI’m looking at the description for \"Harry Potter and the Chamber of Secrets\" by J.K. Rowling. There's an odd inclusion of \"The\" in the title, which might indicate a printing error, as there's also no punctuation after the \"K.\" I need to ensure the quantity listed is 5 and break down the price values correctly, including VAT. It’s essential everything is precise, as these details are crucial for accurate processing and documentation.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Formatting invoice details**\n\nI need to focus on using JSON, especially for the date format. The ambiguous date 04/08/2017 could be interpreted as either dd/mm or mm/dd. Since the vendor is US-based, using 2017-04-08 might be clearer. I'm also noticing that the invoice mentions euro formatting with commas, which raises some questions. It seems like the dataset might be generated using a common invoice template. I'll ensure the schema accurately extracts what's needed, including tax ID and currency.**Analyzing book details**\n\nI’m looking at the description for \"Harry Potter and the Chamber of Secrets\" by J.K. Rowling. There's an odd inclusion of \"The\" in the title, which might indicate a printing error, as there's also no punctuation after the \"K.\" I need to ensure the quantity listed is 5 and break down the price values correctly, including VAT. It’s essential everything is precise, as these details are crucial for accurate processing and documentation.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h_6uJ9Ko51LLrz-klJtfQBcHgUrQjRKErN5nJMpqVKhU3HoHWXSgkPwexwKRjvcPYPa1Ct_ZlW3wUEpHN3YNxnIVm4SgIDTPJ4Z3I_n-tT1UzusOHpElbULdP4FyCvi4lqlEcgKxfeKG_-zRvEzbMMsOkoatjk8RRIYiEpp_6Yj7ry91WvIZ6DDHI4PfPHQ8UKxPQG9sPXD3XnxE3jQM-w5uwXb3MfYHKm2lqt-8INfL_ytTxiOIAZIn6mwhypu5l3hdNC5ltDgf3dHIfzqKnOeXv8M7FMal6qb4_FCekfYTv4aIYawSUtMbSzKZdxQasPtjwJ3UzgdLRJv6pZ3hZ1jWiUQ8z-Z3Avufm44XL_KuUCO_VyouZV90_uLEEjQACmyj_TMSllEb1M5FEpexTAYBFQxtkqRkzxACOr0-bAhXk2-gdWu1dYlaW-HSwGnAVrVGdn4eV80toKf2Rh8lkUC8Au_HtX4hiWQmm71xDmH9Z_liso81bQzeFj1CBsbL3lFlKKrGcUr3C0gNxMwOk60ZjgoiI3Gkbn50r_0fIW1j6n3Rt275gl18XKsYSDHs35pF-ZzgbkKrp2L6W9bMWxdLExCVFlFJnHPBXBMSwgDnjAsyN9P9KmknHofS7P_HOkdwBEQxJuyel7VJR_huhHUlblgXlambBOkqq7QmDb4aI8rq_f0q_YsVWA4gVsV0CFDRsoOjvKXp908MdYqdmmq3WL6blRDX7FPEn_0pvi6Oj4SpatkNc5A01UcqiZZJK5OiFvt6UW9CgCjeUYR5EKvBJ-6uK7hd1UDXNMQfJYozACe8FszOe8cs9J0cN5hvDecDIkNeAnNntWi9oAziEAwqKL2LPTwNURGrfvwnefhzHehL2uVCoIuKfwEMuHDxX20Ud23zmcL9sdt-zLBIqDBa9PYSuMf9sdL2Vk4tnAQJ25MsZss3iDd23khKOH48cM0t4okBCtJWSH3nOuNagjiIIybG3T3UvEz_EEt_9AQoNfq3RAoASZQ5lir6qiSZa683xGzR4rEkWN_lJOVQkcy4j5F3PzYuI5f0dwvanwFE9EVo94_8cGqJA0kabMFrpAcpu-035JdAL8ePTZAvB-fnaJBgNHhGpkQ0UNeWNHTaPgNpNdpYryUIB6SntPjDjN9hnlh34UNKPV-WO8xnCOLBNoeXSaBl8Cd4jf2cIm3_q2BoSYek72G7oh6L72pMOlAC_7LrSBn893yITNCy_YJykq__lFMd3mOcgSpCdfipLP0_lkvlXwHhTpoicr4wOR43T768fznghfFTkEYajGH83v328tRvnckbqe_UonhoPkyfooYA2sY-aQQ1uxBIFo9hnCjoNuMqlqVPHZxSsImDIhnsmd4rTFrkrQ2isf-bJBnzGCNSyyxDWw7MUarUeIkoVQGa6SB-V4KGh52_cfnx8RHqxqiruaXuAeeOHknyo7spLwtByecP80qTCGiVS7E3SKNjc-8K6fg8mV-dnNwJwVKw_MoqNw-poL8dd2iJ5Yj5eur4zTQ_9oXlj2ibl50ysWUaKRmna6aFaHYZdu1mdy5Eoi3yg6ZmKmch6gVIvFWJs1xa16XV2cxSjcscHSHcJKL-U_EWmpKaap7vfHeQSPxXTwMMaIpIlD4tMt4aQGn660AgTYxkC-yFszpEfCqqUn_6TpN7_I90SwfMmuP95KD2-34EPouapDhw-zNGaaSiZLE9tn9qwxxI-DBFtBS4XxVdqhsxGWR5xhAIO9nwfQqEn4ef7g2-NLRPNBFP6TvxAcUX4HDN1uabqEkktRnvxH2hKaeUfTB_npDUhvLu2fbZIQUVMMVM89wNEzpAGZHnuyYMzsQHXcffzc0DHduypG88mL5ZLnu-33PKkKDsPWhCJe9R1CQvX9ozNtKzaA5ZArOP7lK58lLAsmnIQOezx3Cj72IUIblUUEQGKoPr5V7qBo0Er-UMbE87uCCPTJvyIZQeeTCTAfJb48kgjLJQmAA7DpwC1YHiGSSMSEGDKGu-GR9iPJmtkH388TzToZV9le7EA8O-2jkb7uIOU3vlJz88USb_YogwARybWONBld3siIybpifcJRqJRaSexURneZSlBvoqZCnofBQdzYRQWMGnfCoX_yAxs8fF8Rz5yNI1ORw7774889KTzdtXjTp3bfZS7oFllfJIEQX-WJT8Gc8aC5Kn1j6psQ2b6oXsQWbxhDcXy2NizydZT9_AncF6oGM8lc2NlKxDG7Jo1y05rw37v59BIJEV4M49G29zWaJyaZ8rfpxydHldOo7BX1c-QPldv_a4IxDzHTI7iu-OqAhPN2Df0_2uFlofBRTgRPkmVDOC_VaeG2YJBc8gHz2jGZYEYC8ROXJRCRe8QOPEDw6l2V8DLV1v3HsUV8bGiqOWlxqiXBz7HmJZ4VmxkN9oemUBFTaFgEi7lyqnJmRZDF_qJEmI8k3GJCV3Qnu1C8_Nu4F3FbI9HBq1g2OPnr9VhmnDFVLY8gp5Hg0OH7Ecpqq-Pc-L2snG2nnLMee6rfgV1uRWPW5uv7I5KMF3fxWM2UINmVMU0ovhgA_LSpRtp-JcnrzYWq_cqtBuBmwaOKYzxWeYrBxLhp3VfqLemQtuuGyIYIV5zBCriC5H_7FgVQ43t7QhGEsDIB4PQDRVf4YkIQI9ZjeFNPGA2obbcQe7qwuhcJTORT7qNLw8TtoYhiY6trctidZkNs41dDmTtkpkhmaGMv7MVwWG_K2hvC5B5S6farqJ-1vJtlai6TtJ6aRWOUvUIxVT5e3ONAiWYSaRfh2CcsNky2_6COlAz0t_-5DinG9PXrXB0gaS95ryDt8tLY_aijC1FRcI2b9037nReYCNe-llWSEetbPnNFwVyZMBJVx17hd8hZNzTFlAah3BwhmCsx8yHTi4s_a6bA5m7ZSC59CobZ4LuGWI8vSZhy7rtw2kmPYuL_0v8-XYGoBBxcr3BjnEpkKgGqvWSic0g_boGs_CaWsffkZTOogSX3llQJKc0XgnJhJj12OKRb32bE0WSNoRbnIKW_CieauJsQ1kcEoKFcB0Zyj32DJR33ZtMVKtZDUt2UAnOIuaLnWo6s0Jn1Z6YmKUEx2myWLX08HcpTJMjUC0xMLD2vUNnzr_l0BJIvGItDvO5dRgQisOg1GlrPnyny5w-_IWMgQ6PajjlKZauhOP70ethEJvuOIbEWascc8hBWjxTJCc3_bfcMepO7Cbng0uWEOmZQUniZbyWuoOMQleQ9Qgull_S-sneWXtN10Qgpl6Ou_Tpi1AqFopAsQkLvfCQPS6w8qnXFKrZJ2yCunD_BGI4QE82J3gSm1Zh5I8NHk0uTZ63qDORDFni3kL7Eizy8NZm7O2_m7cvAWeqnr4DvoV9KMegZ4Pf_GUGXM-mt1HbAkLwQF3dUCWGADZmZcqS-eWrRd5gUqh5OAyAff2NALnSI4RGFzwO1Ut2hSAlysYILHogf1rOKeqKozbAOi1Gn_lIYDB3W_TZ4YeVgOAcDeK-14Byz3SyPHbHHhJZp03sSg6WS2qXO79j2vSdXWUdLSIaXE3SZjLACqDnNpLf6bKhpVu5fEgsednjhCPGrnZMnmY6KcHw1ks8PImYax-Db-tQODYLhX8KDuyuAzBQtWjkhQWa51BrUrO0pxuin248nEa5Z5YdiAb5E6bjo--WskmMAvgJjY3sqF4dcFdk-PVVWLn2lvUh8k42rwf1p7T_NJ2fN74IgGx2ogxm-4j5pXPULzttzo_c_NB-H5U8t_ybeyB9bTjIwv5xbYORgzqF96F6uphFvIUxRvYlNGpvfhoh9RB0lxWvDHTIFcF2b7muQgBxS9uJuo4OxrZvTH5W0MK3ZGPrifGyTb2w-Vtbk4oJns7AgdTYVwEnlEAeLTFAC7b_BzHGtZ4jVrqnd-WLlvVKaAP1DgumdCgMUMVROU34dJQEiLBNPMWLZwrDfQL69HUIkA_DcZ3LbDXxFzsonjwS4ZJ678oKp-W0emkxAXBHgRmsBX_0hot-JoaFVa_n_vWjhg0eQri-VlQuDIzK96AKf1Cg8Q84NfSIuSlKLvfWDvuuIi8DQOCxKzE8T2RQG5CPD3p1_hkWb_53UT4pZS27eWjXctMVdy8qJkvkuyNgBeeNySY27u9ynUY4FGVJQWHvOOIwY5kXJy0IPntF_-ltVi2ePM4f-nEU3la9nD3pMCKDKknO3R_fCjprd1KnpFENZmT5ntlA6o74wYXcC6dOX6Iab9qD25Pgj7kbpemz9QE1gnwyjkAIkveYAFNCrlIFSxaLPT-Vj6wQ8_RAZDVB23w3CPK3gEjVEfyus5pzTLYVD7bMKncXuqKzVgkws8B_LrRJO58ODpEjvqIkbROuc5cMY3vJJNT23LQGA9u1d914Lq0jGr_FA5jEOKWeJJeUSggC60cxhVb-SV7erAqWrwvcyoa5-8BnpoUAdoS0_kYOVM8ay2FJzarr16cACa7NotogXdvVGNxnTF0g7QHW50XPk-c5D7mqDOZopyws5swBG8tFBfZ8gMx_FoP0tk0l_qtj_uzT8dib9MWHoFOp51-oAriO_ZiTQluTEMcPS1MEUPlK9EjsjBgGey3CzVNtU8-SiPp-FMlnDuZQS9BSJV_0U41wKFnzgAj2fDK-9y6WExhPNcBwjjRyR4gZ6a6y1AsqcDVEJ-JLttVWzdH5gvKR-OSC9vpTvcJeiJ7qwHSULQxn8AU-YkxfsmmQ7jpBxZ6snDwCkUWCChjhK5lPtseWsvR8YyvMA_KCroY0WLH8tHWZkV95pLHUWWtI60LaMRNPijXoYdI1NJQM4YHNpSXiypf_9UmClZW6w3M8V-FtpY7NkiptRQQ3PrQA-J2T_yXpUH_wiI2hx1wFGScR4cNbxcroaPAHw98JFgksTtMPtpds0-4DQpUbx9u2LHIxQf79cajFdVjaaHFN-FZsSFtM_MzyIsgLZ9l40TBWtu1bGcA6R5d2Rkb6D_PdjAoHb7Dpm-R_aRIk-YDYc3dZQ29WmKxG3Jfo6B9wRNpgLMpR6rcHAim8YBjfX49EYkwz9stuGg3LRITzr1ItVqYejo9IeUM6oDTqJtpphiueE3UF7oZBS0acBa7Du0I6yV-3lQBV9-db4G1e2SrePvD7eYfOSiO8uSBtkueMbU6XQ7Hw08sXy7YgQanBmP-VPhbkzgxhAY6UwZNsnlAA-JLeFOZAR6q3UIsAEuYM8DY48FLpwy8otNX-2gJmcIFaGHqoC6jb0ELWWRQXwYPeGQO8wx3MGqnof1vDEuKovTiQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjYtdGVycmEtMjAyNjA3MDl8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0a0d9884a52985b4016af61ff3aa1887d1b23a774b6bd29c1c",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3561,
+   "completion_tokens": 495,
+   "total_tokens": 4056,
+   "cost": 0.014841,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 3558,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014841,
+    "upstream_inference_prompt_cost": 0.008901,
+    "upstream_inference_completions_cost": 0.00594
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 300,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.36
+}

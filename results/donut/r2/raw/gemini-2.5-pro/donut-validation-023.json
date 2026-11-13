@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Garcia, Stewart and Payne",
+  "vendor_vat": "949-78-5411",
+  "invoice_ref": "34528548",
+  "invoice_date": "2015-02-11",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 729.75,
+  "tax": 72.98,
+  "total": 802.73,
+  "iban": "GB60LAOW81233191361598",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\" LCD",
+    "quantity": 2.0,
+    "unit_price": 139.95,
+    "tax_rate": 10.0,
+    "net": 279.9
+   },
+   {
+    "description": "Dell Optiplex Desktop Computer with Dual 19\" LCD Monitors Windows 10 Pro",
+    "quantity": 3.0,
+    "unit_price": 149.95,
+    "tax_rate": 10.0,
+    "net": 449.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 729.75,
+    "tax": 72.98
+   }
+  ]
+ },
+ "cost_usd": 0.0198975,
+ "raw": {
+  "id": "gen-1794515526-J98EGVyOv5zCIiGcvkq5",
+  "object": "chat.completion",
+  "created": 1794515526,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Garcia, Stewart and Payne\",\n  \"vendor_vat\": \"949-78-5411\",\n  \"invoice_ref\": \"34528548\",\n  \"invoice_date\": \"2015-02-11\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 729.75,\n  \"tax\": 72.98,\n  \"total\": 802.73,\n  \"iban\": \"GB60LAOW81233191361598\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\\\" LCD\",\n      \"quantity\": 2.0,\n      \"unit_price\": 139.95,\n      \"tax_rate\": 10.0,\n      \"net\": 279.9\n    },\n    {\n      \"description\": \"Dell Optiplex Desktop Computer with Dual 19\\\" LCD Monitors Windows 10 Pro\",\n      \"quantity\": 3.0,\n      \"unit_price\": 149.95,\n      \"tax_rate\": 10.0,\n      \"net\": 449.85\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 729.75,\n      \"tax\": 72.98\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Garcia, Stewart and Payne\" as the vendor, focusing on extracting the `vendor_name` field. I've also found the seller's Tax ID, which I've mapped to the `vendor_vat` field. I'm now actively seeking additional information to populate other fields in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The invoice number, \"34528548\", maps to `invoice_ref`, and the issue date \"11/02/2015\" will become \"2015-02-11\" for `invoice_date`. Since there's no specific due date, `due_date` will be `null`. The currency is definitely USD, and I've got the net, tax, and gross amounts for `untaxed`, `tax`, and `total`, respectively. I also have the IBAN. Standard VAT rate data will be captured as \"S\", but I will now focus on the invoice lines.\n\n\n**Verifying Invoice Calculations**\n\nI'm now diving deeper into the invoice details. I've double-checked the calculations for the invoice lines, especially focusing on `quantity`, `unit_price`, and `tax_rate` to calculate the `net` and confirm the totals. The initial calculations have been reviewed. I'm satisfied that the values extracted are accurate, though there's a minor rounding difference in the tax calculation, which I'll account for. Now, I'm verifying the totals.\n\n\n**Finalizing Invoice Details**\n\nI've completed the extraction and verification process, confirming all critical invoice details. I'm now satisfied with the data mapping, including vendor information, invoice particulars, and calculations. I've double-checked the currency and VAT treatment. With all fields filled and validated, the data is ready to be transformed into the JSON schema.\n\n\n**Finalizing the JSON**\n\nI'm now putting the finishing touches on the JSON schema, having verified all data points. I've re-checked all calculations, and confirmed the currency is USD. I'm satisfied with the details extracted and the transformations applied. The invoice lines, VAT breakdown, and overall totals are all ready for final integration into the JSON.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Garcia, Stewart and Payne\" as the vendor, focusing on extracting the `vendor_name` field. I've also found the seller's Tax ID, which I've mapped to the `vendor_vat` field. I'm now actively seeking additional information to populate other fields in the JSON schema.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The invoice number, \"34528548\", maps to `invoice_ref`, and the issue date \"11/02/2015\" will become \"2015-02-11\" for `invoice_date`. Since there's no specific due date, `due_date` will be `null`. The currency is definitely USD, and I've got the net, tax, and gross amounts for `untaxed`, `tax`, and `total`, respectively. I also have the IBAN. Standard VAT rate data will be captured as \"S\", but I will now focus on the invoice lines.\n\n\n**Verifying Invoice Calculations**\n\nI'm now diving deeper into the invoice details. I've double-checked the calculations for the invoice lines, especially focusing on `quantity`, `unit_price`, and `tax_rate` to calculate the `net` and confirm the totals. The initial calculations have been reviewed. I'm satisfied that the values extracted are accurate, though there's a minor rounding difference in the tax calculation, which I'll account for. Now, I'm verifying the totals.\n\n\n**Finalizing Invoice Details**\n\nI've completed the extraction and verification process, confirming all critical invoice details. I'm now satisfied with the data mapping, including vendor information, invoice particulars, and calculations. I've double-checked the currency and VAT treatment. With all fields filled and validated, the data is ready to be transformed into the JSON schema.\n\n\n**Finalizing the JSON**\n\nI'm now putting the finishing touches on the JSON schema, having verified all data points. I've re-checked all calculations, and confirmed the currency is USD. I'm satisfied with the details extracted and the transformations applied. The invoice lines, VAT breakdown, and overall totals are all ready for final integration into the JSON.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1950,
+   "total_tokens": 2268,
+   "cost": 0.0198975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0198975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0195
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1560,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.29
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Levy-Vargas",
+  "vendor_vat": "908-76-0702",
+  "invoice_ref": "53737787",
+  "invoice_date": "2011-08-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 186.82,
+  "tax": 18.68,
+  "total": 205.5,
+  "iban": "GB71IDEI54877186092625",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Breaking Free from Depression: Pathways to Wellness by Jesse H. Wright (English)",
+    "quantity": 2.0,
+    "unit_price": 32.94,
+    "tax_rate": 10.0,
+    "net": 65.88
+   },
+   {
+    "description": "The Graphic Design Reference & Specification Book: Everything Graphic Designers",
+    "quantity": 5.0,
+    "unit_price": 20.18,
+    "tax_rate": 10.0,
+    "net": 100.9
+   },
+   {
+    "description": "Escape from the Carnival of Horrors (Give Yourself Goosebumps) by R. L. Stine",
+    "quantity": 4.0,
+    "unit_price": 5.01,
+    "tax_rate": 10.0,
+    "net": 20.04
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 186.82,
+    "tax": 18.68
+   }
+  ]
+ },
+ "cost_usd": 0.0122275,
+ "raw": {
+  "id": "gen-1794512121-kET1NE04vzLDIwewcLVW",
+  "object": "chat.completion",
+  "created": 1794512121,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Levy-Vargas\",\n  \"vendor_vat\": \"908-76-0702\",\n  \"invoice_ref\": \"53737787\",\n  \"invoice_date\": \"2011-08-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 186.82,\n  \"tax\": 18.68,\n  \"total\": 205.5,\n  \"iban\": \"GB71IDEI54877186092625\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Breaking Free from Depression: Pathways to Wellness by Jesse H. Wright (English)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 32.94,\n      \"tax_rate\": 10.0,\n      \"net\": 65.88\n    },\n    {\n      \"description\": \"The Graphic Design Reference & Specification Book: Everything Graphic Designers\",\n      \"quantity\": 5.0,\n      \"unit_price\": 20.18,\n      \"tax_rate\": 10.0,\n      \"net\": 100.9\n    },\n    {\n      \"description\": \"Escape from the Carnival of Horrors (Give Yourself Goosebumps) by R. L. Stine\",\n      \"quantity\": 4.0,\n      \"unit_price\": 5.01,\n      \"tax_rate\": 10.0,\n      \"net\": 20.04\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 186.82,\n      \"tax\": 18.68\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Details**\n\nI've begun extracting data to populate the JSON schema. \"Levy-Vargas\" is the vendor. I've successfully identified \"908-76-0702\" as their Tax ID. The invoice number has also been determined; it's \"53737787\". I am confident in accurately pulling the pertinent information.\n\n\n**Populating the Schema**\n\nI'm now populating the JSON schema with extracted details. I've assigned \"12/08/2011\" to the invoice date, and formatted it correctly. The due date is absent, so it's null. I am going with USD as the currency based on the dollar symbol and US addresses, and the IBAN beginning with GB, while ambiguous, I must make a choice. I have extracted the total amounts for net, VAT, and gross. I have found and assigned the IBAN. Finally, \"S\" represents the 10% VAT rate. I will begin work on the individual line items now.\n\n\n**Constructing the JSON**\n\nI'm now building the JSON object with the extracted information. I've successfully mapped vendor details like \"Levy-Vargas\" and Tax ID \"908-76-0702\". The invoice and issue date (\"2011-08-12\") are in place. I've set the due date to null, resolved the USD currency ambiguity, and assigned total amounts. The IBAN is included, and \"S\" indicates the 10% VAT. Now I am constructing the individual line items in a dedicated array, as well as the VAT breakdown.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Details**\n\nI've begun extracting data to populate the JSON schema. \"Levy-Vargas\" is the vendor. I've successfully identified \"908-76-0702\" as their Tax ID. The invoice number has also been determined; it's \"53737787\". I am confident in accurately pulling the pertinent information.\n\n\n**Populating the Schema**\n\nI'm now populating the JSON schema with extracted details. I've assigned \"12/08/2011\" to the invoice date, and formatted it correctly. The due date is absent, so it's null. I am going with USD as the currency based on the dollar symbol and US addresses, and the IBAN beginning with GB, while ambiguous, I must make a choice. I have extracted the total amounts for net, VAT, and gross. I have found and assigned the IBAN. Finally, \"S\" represents the 10% VAT rate. I will begin work on the individual line items now.\n\n\n**Constructing the JSON**\n\nI'm now building the JSON object with the extracted information. I've successfully mapped vendor details like \"Levy-Vargas\" and Tax ID \"908-76-0702\". The invoice and issue date (\"2011-08-12\") are in place. I've set the due date to null, resolved the USD currency ambiguity, and assigned total amounts. The IBAN is included, and \"S\" indicates the 10% VAT. Now I am constructing the individual line items in a dedicated array, as well as the VAT breakdown.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1183,
+   "total_tokens": 1501,
+   "cost": 0.0122275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0122275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01183
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 736,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.56
+}

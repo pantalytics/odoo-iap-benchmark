@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "Smith-Cook",
+  "vendor_vat": "959-84-2124",
+  "invoice_ref": "16662010",
+  "invoice_date": "2016-08-28",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 2053.73,
+  "tax": 205.37,
+  "total": 2259.1,
+  "iban": "GB20BAKH22085364527355",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nintendo Gameboy Pocket Console Green with Box MGB-001 Japan Tested Working 59",
+    "quantity": 1.0,
+    "unit_price": 65.0,
+    "tax_rate": 10,
+    "net": 65.0
+   },
+   {
+    "description": "New Sony Playstation 4 Slim 1TB 3 Game Bundle Console. Sealed!!!",
+    "quantity": 3.0,
+    "unit_price": 399.99,
+    "tax_rate": 10,
+    "net": 1199.97
+   },
+   {
+    "description": "Atari Flashback 4 Classic Game Console 75 built in games Space Invaders Asteroid",
+    "quantity": 4.0,
+    "unit_price": 8.5,
+    "tax_rate": 10,
+    "net": 34.0
+   },
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 4.0,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 59.96
+   },
+   {
+    "description": "Nintendo Wii Console - 2 Remotes w/ Covers, Nunchucks, Sensor Sega Game Bundle",
+    "quantity": 1.0,
+    "unit_price": 85.0,
+    "tax_rate": 10,
+    "net": 85.0
+   },
+   {
+    "description": "Sony PlayStation 3 PS3 Super Slim Black Console 20 GB *Tested* Console & Cables",
+    "quantity": 4.0,
+    "unit_price": 99.95,
+    "tax_rate": 10,
+    "net": 399.8
+   },
+   {
+    "description": "Nintendo Gameboy Pocket Console Green with Box MGB-001 Japan Tested Working 55",
+    "quantity": 3.0,
+    "unit_price": 70.0,
+    "tax_rate": 10,
+    "net": 210.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 2053.73,
+    "tax": 205.37
+   }
+  ]
+ },
+ "cost_usd": 0.033988,
+ "raw": {
+  "id": "gen-1794512451-YGMEQSVptstGkN80GLje",
+  "object": "chat.completion",
+  "created": 1794512451,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Smith-Cook\",\n  \"vendor_vat\": \"959-84-2124\",\n  \"invoice_ref\": \"16662010\",\n  \"invoice_date\": \"2016-08-28\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 2053.73,\n  \"tax\": 205.37,\n  \"total\": 2259.10,\n  \"iban\": \"GB20BAKH22085364527355\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nintendo Gameboy Pocket Console Green with Box MGB-001 Japan Tested Working 59\",\n      \"quantity\": 1.00,\n      \"unit_price\": 65.00,\n      \"tax_rate\": 10,\n      \"net\": 65.00\n    },\n    {\n      \"description\": \"New Sony Playstation 4 Slim 1TB 3 Game Bundle Console. Sealed!!!\",\n      \"quantity\": 3.00,\n      \"unit_price\": 399.99,\n      \"tax_rate\": 10,\n      \"net\": 1199.97\n    },\n    {\n      \"description\": \"Atari Flashback 4 Classic Game Console 75 built in games Space Invaders Asteroid\",\n      \"quantity\": 4.00,\n      \"unit_price\": 8.50,\n      \"tax_rate\": 10,\n      \"net\": 34.00\n    },\n    {\n      \"description\": \"Sony PlayStation 1 PS1 Console model scph-7501\",\n      \"quantity\": 4.00,\n      \"unit_price\": 14.99,\n      \"tax_rate\": 10,\n      \"net\": 59.96\n    },\n    {\n      \"description\": \"Nintendo Wii Console - 2 Remotes w/ Covers, Nunchucks, Sensor Sega Game Bundle\",\n      \"quantity\": 1.00,\n      \"unit_price\": 85.00,\n      \"tax_rate\": 10,\n      \"net\": 85.00\n    },\n    {\n      \"description\": \"Sony PlayStation 3 PS3 Super Slim Black Console 20 GB *Tested* Console & Cables\",\n      \"quantity\": 4.00,\n      \"unit_price\": 99.95,\n      \"tax_rate\": 10,\n      \"net\": 399.80\n    },\n    {\n      \"description\": \"Nintendo Gameboy Pocket Console Green with Box MGB-001 Japan Tested Working 55\",\n      \"quantity\": 3.00,\n      \"unit_price\": 70.00,\n      \"tax_rate\": 10,\n      \"net\": 210.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 2053.73,\n      \"tax\": 205.37\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Mapping New Invoice Fields**\n\nI've successfully identified and am mapping `invoice_ref`, `invoice_date`, and `currency` based on their contextual cues within the document. Processing `due_date` and numerical fields is my next immediate focus.\n\n**Extracting Invoice Line Items**\n\nI'm now actively extracting and structuring the individual line item details, including descriptions, quantities, unit prices, and tax rates. My current focus is on accurately capturing the net value for each line as it appears.\n\n**Detailing Line Item Values**\n\nI'm meticulously detailing the line item values, specifically focusing on `Unit Price`, `Tax Rate`, and `Net` amounts. My current efforts are concentrated on accurately capturing these critical financial components for each item.\n\n**Validating Numerical and Financial Data**\n\nI've confirmed all quantities, unit prices, tax rates, and net amounts are parsed as valid numbers. I am now cross-referencing these with the identified currency and fiscal identifiers.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Fields**\n\nI'm currently focused on parsing the `vendor_name` and `vendor_vat` from the invoice image, aligning them with the specified string or null types. My progress is steady on these initial fields.\n\n**Mapping New Invoice Fields**\n\nI've successfully identified and am mapping `invoice_ref`, `invoice_date`, and `currency` based on their contextual cues within the document. Processing `due_date` and numerical fields is my next immediate focus.\n\n**Extracting Invoice Line Items**\n\nI'm now actively extracting and structuring the individual line item details, including descriptions, quantities, unit prices, and tax rates. My current focus is on accurately capturing the net value for each line as it appears.\n\n**Detailing Line Item Values**\n\nI'm meticulously detailing the line item values, specifically focusing on `Unit Price`, `Tax Rate`, and `Net` amounts. My current efforts are concentrated on accurately capturing these critical financial components for each item.\n\n**Validating Numerical and Financial Data**\n\nI've confirmed all quantities, unit prices, tax rates, and net amounts are parsed as valid numbers. I am now cross-referencing these with the identified currency and fiscal identifiers.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2571,
+   "total_tokens": 4139,
+   "cost": 0.033988,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.033988,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.030852
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1786,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.95
+}

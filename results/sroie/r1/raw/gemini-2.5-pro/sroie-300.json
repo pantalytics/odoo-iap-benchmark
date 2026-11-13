@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "AEON CO. (M) BHD",
+  "vendor_vat": "002017394688",
+  "invoice_ref": "2018041810090010447",
+  "invoice_date": "2018-04-18",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 1.65,
+  "tax": 0.1,
+  "total": 1.75,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "TAMAGO (S)",
+    "quantity": 1.0,
+    "unit_price": 2.36,
+    "tax_rate": 6.0,
+    "net": 1.65
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 1.65,
+    "tax": 0.1
+   }
+  ]
+ },
+ "cost_usd": 0.0220375,
+ "raw": {
+  "id": "gen-1794513112-4XZ8r6O3lhxZncfW6EKA",
+  "object": "chat.completion",
+  "created": 1794513112,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"AEON CO. (M) BHD\",\n  \"vendor_vat\": \"002017394688\",\n  \"invoice_ref\": \"2018041810090010447\",\n  \"invoice_date\": \"2018-04-18\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 1.65,\n  \"tax\": 0.1,\n  \"total\": 1.75,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"TAMAGO (S)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.36,\n      \"tax_rate\": 6.0,\n      \"net\": 1.65\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 1.65,\n      \"tax\": 0.1\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"AEON CO. (M) BHD\" from the receipt. I've also found the vendor VAT ID, which is \"0020173946 88\", labeled as \"GST ID\". Finally, the invoice reference number, \"201804\", was located under the \"Invoice No\" heading. Now the aim is to see what to do with the existing data.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've mapped the vendor name, VAT ID, and invoice reference. I've formatted the invoice date into YYYY-MM-DD. Since there's no explicit due date, I've set that field to `null`. I've also set the currency to `null` because it's not explicitly stated. The untaxed and tax amounts are extracted from the \"GST Summary.\" Next I will try to extract more data.\n\n\n**Refining Data Extraction**\n\nI'm now integrating more data points into the schema. I've successfully extracted the full invoice reference, which is \"201804 1810090010447\". The VAT treatment has been determined as \"S\", representing the standard 6% rate. Now, I'm working through the line items, combining the description and the discount information, and calculating the net price. I have the untaxed price as 1.65, and the item description is \"TAMAGO (S)\" and am working on refining the calculation of the tax.\n\n\n**Finalizing Line Item Details**\n\nNow I have a complete picture of the first line item. I've calculated the pre-tax unit price at 1.65, quantity as 1, the tax rate is 6%, and the net amount is 1.65. I've decided to keep the description as \"TAMAGO (S)\", omitting the discount information since the schema doesn't provide a specific field for it. All the details are now clear.\n\n\n**Finalizing All Data**\n\nI've completed extracting and formatting all necessary data points. I have filled in all the JSON fields with the extracted information. I've re-reviewed all fields to ensure accuracy and consistency, resolving any ambiguities. The process is complete.\n\n\n**Finalizing Data Mapping**\n\nNow I have extracted all data from the receipt and mapped it to the JSON schema. The currency field will be null, since there's no currency symbol shown, and the total matches the sum of the untaxed and tax amounts. The IBAN is also set as null because this information is not provided. I have filled the lines item with a description, quantity, unit price, tax rate, and net amount. The VAT breakdown is complete with rate, base, and tax amounts. I'm satisfied.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified and extracted the vendor name as \"AEON CO. (M) BHD\" from the receipt. I've also found the vendor VAT ID, which is \"0020173946 88\", labeled as \"GST ID\". Finally, the invoice reference number, \"201804\", was located under the \"Invoice No\" heading. Now the aim is to see what to do with the existing data.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted data. I've mapped the vendor name, VAT ID, and invoice reference. I've formatted the invoice date into YYYY-MM-DD. Since there's no explicit due date, I've set that field to `null`. I've also set the currency to `null` because it's not explicitly stated. The untaxed and tax amounts are extracted from the \"GST Summary.\" Next I will try to extract more data.\n\n\n**Refining Data Extraction**\n\nI'm now integrating more data points into the schema. I've successfully extracted the full invoice reference, which is \"201804 1810090010447\". The VAT treatment has been determined as \"S\", representing the standard 6% rate. Now, I'm working through the line items, combining the description and the discount information, and calculating the net price. I have the untaxed price as 1.65, and the item description is \"TAMAGO (S)\" and am working on refining the calculation of the tax.\n\n\n**Finalizing Line Item Details**\n\nNow I have a complete picture of the first line item. I've calculated the pre-tax unit price at 1.65, quantity as 1, the tax rate is 6%, and the net amount is 1.65. I've decided to keep the description as \"TAMAGO (S)\", omitting the discount information since the schema doesn't provide a specific field for it. All the details are now clear.\n\n\n**Finalizing All Data**\n\nI've completed extracting and formatting all necessary data points. I have filled in all the JSON fields with the extracted information. I've re-reviewed all fields to ensure accuracy and consistency, resolving any ambiguities. The process is complete.\n\n\n**Finalizing Data Mapping**\n\nNow I have extracted all data from the receipt and mapped it to the JSON schema. The currency field will be null, since there's no currency symbol shown, and the total matches the sum of the untaxed and tax amounts. The IBAN is also set as null because this information is not provided. I have filled the lines item with a description, quantity, unit price, tax rate, and net amount. The VAT breakdown is complete with rate, base, and tax amounts. I'm satisfied.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2164,
+   "total_tokens": 2482,
+   "cost": 0.0220375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0220375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02164
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1898,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.79
+}

@@ -1,0 +1,140 @@
+{
+ "pred": {
+  "vendor_name": "PASAR MINI JIN SENG",
+  "vendor_vat": "000150511616",
+  "invoice_ref": "002-1550040",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 28.53,
+  "tax": 0.07,
+  "total": 28.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VEGETABLES",
+    "quantity": 1.0,
+    "unit_price": 2.2,
+    "tax_rate": 0.0,
+    "net": 2.2
+   },
+   {
+    "description": "LTK OMEGA PLUS 10S",
+    "quantity": 1.0,
+    "unit_price": 5.7,
+    "tax_rate": 0.0,
+    "net": 5.7
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1.0,
+    "unit_price": 1.0,
+    "tax_rate": 0.0,
+    "net": 1.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1.0,
+    "unit_price": 2.0,
+    "tax_rate": 0.0,
+    "net": 2.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1.0,
+    "unit_price": 8.0,
+    "tax_rate": 0.0,
+    "net": 8.0
+   },
+   {
+    "description": "SEAFOOD",
+    "quantity": 1.0,
+    "unit_price": 8.5,
+    "tax_rate": 0.0,
+    "net": 8.5
+   },
+   {
+    "description": "FISH BALL / CAKE",
+    "quantity": 1.0,
+    "unit_price": 1.13,
+    "tax_rate": 6.0,
+    "net": 1.13
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 1.13,
+    "tax": 0.07
+   },
+   {
+    "rate": 0.0,
+    "base": 27.4,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.010401,
+ "raw": {
+  "id": "gen-1794516141-NuqYDO4C576yuGwLmhrr",
+  "object": "chat.completion",
+  "created": 1794516141,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"PASAR MINI JIN SENG\",\n  \"vendor_vat\": \"000150511616\",\n  \"invoice_ref\": \"002-1550040\",\n  \"invoice_date\": \"2018-03-18\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 28.53,\n  \"tax\": 0.07,\n  \"total\": 28.60,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"VEGETABLES\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.20,\n      \"tax_rate\": 0.0,\n      \"net\": 2.20\n    },\n    {\n      \"description\": \"LTK OMEGA PLUS 10S\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.70,\n      \"tax_rate\": 0.0,\n      \"net\": 5.70\n    },\n    {\n      \"description\": \"VEGETABLES\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.00,\n      \"tax_rate\": 0.0,\n      \"net\": 1.00\n    },\n    {\n      \"description\": \"VEGETABLES\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.00,\n      \"tax_rate\": 0.0,\n      \"net\": 2.00\n    },\n    {\n      \"description\": \"VEGETABLES\",\n      \"quantity\": 1.0,\n      \"unit_price\": 8.00,\n      \"tax_rate\": 0.0,\n      \"net\": 8.00\n    },\n    {\n      \"description\": \"SEAFOOD\",\n      \"quantity\": 1.0,\n      \"unit_price\": 8.50,\n      \"tax_rate\": 0.0,\n      \"net\": 8.50\n    },\n    {\n      \"description\": \"FISH BALL / CAKE\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.13,\n      \"tax_rate\": 6.0,\n      \"net\": 1.13\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 1.13,\n      \"tax\": 0.07\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 27.40,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm currently focused on identifying the vendor's name from the provided image. The text \"PASAR MINI JIN SENG\" appears to be the primary candidate for the vendor name.\n\n**Refining Tax Calculations**\n\nI'm working to clarify the tax application on individual items, specifically whether the stated amounts are inclusive or exclusive of GST. My current focus is on reconciling the line item totals with the overall GST summary to determine the correct base and tax amounts.\n\n**Validating GST Calculations**\n\nI'm refining the GST calculation, confirming that the 28.60 RM total is inclusive of tax. I've deduced that 1.20 RM likely represents the gross amount, with 0.07 RM being the calculated tax, resulting in a pre-tax base of 1.13 RM for the 6% rate. I'm now solidifying the untaxed amount and VAT treatment.\n\n**Confirming Summation Accuracy**\n\nMy calculations are now validated. The sum of item bases plus the confirmed tax component perfectly matches the total amount. I've also resolved the ambiguity regarding the \"FISH BALL / CAKE\" line item, confirming its pre-tax value and the applicable tax rate.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm currently focused on identifying the vendor's name from the provided image. The text \"PASAR MINI JIN SENG\" appears to be the primary candidate for the vendor name.\n\n**Refining Tax Calculations**\n\nI'm working to clarify the tax application on individual items, specifically whether the stated amounts are inclusive or exclusive of GST. My current focus is on reconciling the line item totals with the overall GST summary to determine the correct base and tax amounts.\n\n**Validating GST Calculations**\n\nI'm refining the GST calculation, confirming that the 28.60 RM total is inclusive of tax. I've deduced that 1.20 RM likely represents the gross amount, with 0.07 RM being the calculated tax, resulting in a pre-tax base of 1.13 RM for the 6% rate. I'm now solidifying the untaxed amount and VAT treatment.\n\n**Confirming Summation Accuracy**\n\nMy calculations are now validated. The sum of item bases plus the confirmed tax component perfectly matches the total amount. I've also resolved the ambiguity regarding the \"FISH BALL / CAKE\" line item, confirming its pre-tax value and the applicable tax rate.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1918,
+   "completion_tokens": 2390,
+   "total_tokens": 4308,
+   "cost": 0.010401,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010401,
+    "upstream_inference_prompt_cost": 0.0014385,
+    "upstream_inference_completions_cost": 0.0089625
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1707,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.59
+}

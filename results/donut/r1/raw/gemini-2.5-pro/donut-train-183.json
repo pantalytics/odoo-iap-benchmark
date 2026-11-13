@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Huber, Graves and Jensen",
+  "vendor_vat": "918-95-1661",
+  "invoice_ref": "47015720",
+  "invoice_date": "2019-01-29",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 249.89,
+  "tax": 24.99,
+  "total": 274.88,
+  "iban": "GB30TGFA43014690770091",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Hammered Brass Over Stainless steel Stemless Wine Glasses/ Candle Holders",
+    "quantity": 1.0,
+    "unit_price": 9.99,
+    "tax_rate": 10.0,
+    "net": 9.99
+   },
+   {
+    "description": "6Pc set Blue Wine Glass 7.5\" Tall Leaf and Button Pattern VGC",
+    "quantity": 2.0,
+    "unit_price": 8.99,
+    "tax_rate": 10.0,
+    "net": 17.98
+   },
+   {
+    "description": "2 Hand Blown Wine Water Goblet Glass Art Mexico Pulled Feather Iridescent Swirl",
+    "quantity": 4.0,
+    "unit_price": 29.99,
+    "tax_rate": 10.0,
+    "net": 119.96
+   },
+   {
+    "description": "VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder",
+    "quantity": 1.0,
+    "unit_price": 34.0,
+    "tax_rate": 10.0,
+    "net": 34.0
+   },
+   {
+    "description": "(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display",
+    "quantity": 4.0,
+    "unit_price": 16.99,
+    "tax_rate": 10.0,
+    "net": 67.96
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 249.89,
+    "tax": 24.99
+   }
+  ]
+ },
+ "cost_usd": 0.0155575,
+ "raw": {
+  "id": "gen-1794512322-i8K9vwmT59KPnZkKnYxP",
+  "object": "chat.completion",
+  "created": 1794512322,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Huber, Graves and Jensen\",\n  \"vendor_vat\": \"918-95-1661\",\n  \"invoice_ref\": \"47015720\",\n  \"invoice_date\": \"2019-01-29\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 249.89,\n  \"tax\": 24.99,\n  \"total\": 274.88,\n  \"iban\": \"GB30TGFA43014690770091\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Hammered Brass Over Stainless steel Stemless Wine Glasses/ Candle Holders\",\n      \"quantity\": 1.0,\n      \"unit_price\": 9.99,\n      \"tax_rate\": 10.0,\n      \"net\": 9.99\n    },\n    {\n      \"description\": \"6Pc set Blue Wine Glass 7.5\\\" Tall Leaf and Button Pattern VGC\",\n      \"quantity\": 2.0,\n      \"unit_price\": 8.99,\n      \"tax_rate\": 10.0,\n      \"net\": 17.98\n    },\n    {\n      \"description\": \"2 Hand Blown Wine Water Goblet Glass Art Mexico Pulled Feather Iridescent Swirl\",\n      \"quantity\": 4.0,\n      \"unit_price\": 29.99,\n      \"tax_rate\": 10.0,\n      \"net\": 119.96\n    },\n    {\n      \"description\": \"VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder\",\n      \"quantity\": 1.0,\n      \"unit_price\": 34.0,\n      \"tax_rate\": 10.0,\n      \"net\": 34.0\n    },\n    {\n      \"description\": \"(2) stacking Metal 8 Wine bottle holder Storage Rack, 8 bottles counter Display\",\n      \"quantity\": 4.0,\n      \"unit_price\": 16.99,\n      \"tax_rate\": 10.0,\n      \"net\": 67.96\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 249.89,\n      \"tax\": 24.99\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Huber, Graves and Jensen\" as the vendor and extracted \"918-95-1661\" as the vendor's VAT ID from the document. I'm focusing on ensuring data accuracy for the JSON schema fields. I'm continuing to refine the extraction process to capture the necessary details efficiently.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted details. I've successfully mapped \"Huber, Graves and Jensen\" to `vendor_name` and \"918-95-1661\" to `vendor_vat`. I have confirmed the invoice number is \"47015720\" and the invoice date is \"01/29/2019\" which I've formatted as \"2019-01-29\". I have also set the `due_date` to `null` because it is not present in the document. I am treating the currency as \"USD\", setting untaxed as `249.89`, tax as `24.99`, and total as `274.88`. I've added the IBAN and VAT treatment. Finally, I'm parsing the first line item, and intend to do the rest.\n\n\n**Mapping Line Items**\n\nI'm now focusing on mapping the line items, extracting all necessary information into the schema. I've successfully extracted the first five lines which I am now ready to structure. I have now moved to extract the values from the document. I'm taking care to accurately map the descriptions, quantities, unit prices, tax rates, and net amounts. The `vat_breakdown` section shows a VAT rate of 10%.\n\n\n**Constructing JSON Object**\n\nNow, I'm constructing the JSON object using all the extracted data. I've populated the basic fields like vendor name, VAT ID, invoice reference and dates. I've also set the currency, and nullified the due date. The untaxed, tax and total amounts are now mapped. The IBAN and VAT treatment have also been added. Next, I am going to populate the line item structure.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Huber, Graves and Jensen\" as the vendor and extracted \"918-95-1661\" as the vendor's VAT ID from the document. I'm focusing on ensuring data accuracy for the JSON schema fields. I'm continuing to refine the extraction process to capture the necessary details efficiently.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted details. I've successfully mapped \"Huber, Graves and Jensen\" to `vendor_name` and \"918-95-1661\" to `vendor_vat`. I have confirmed the invoice number is \"47015720\" and the invoice date is \"01/29/2019\" which I've formatted as \"2019-01-29\". I have also set the `due_date` to `null` because it is not present in the document. I am treating the currency as \"USD\", setting untaxed as `249.89`, tax as `24.99`, and total as `274.88`. I've added the IBAN and VAT treatment. Finally, I'm parsing the first line item, and intend to do the rest.\n\n\n**Mapping Line Items**\n\nI'm now focusing on mapping the line items, extracting all necessary information into the schema. I've successfully extracted the first five lines which I am now ready to structure. I have now moved to extract the values from the document. I'm taking care to accurately map the descriptions, quantities, unit prices, tax rates, and net amounts. The `vat_breakdown` section shows a VAT rate of 10%.\n\n\n**Constructing JSON Object**\n\nNow, I'm constructing the JSON object using all the extracted data. I've populated the basic fields like vendor name, VAT ID, invoice reference and dates. I've also set the currency, and nullified the due date. The untaxed, tax and total amounts are now mapped. The IBAN and VAT treatment have also been added. Next, I am going to populate the line item structure.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1516,
+   "total_tokens": 1834,
+   "cost": 0.0155575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0155575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01516
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 910,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.71
+}

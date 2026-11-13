@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "RELAIS TOTAL OULMES",
+  "vendor_vat": "40132774",
+  "invoice_ref": "V201855892",
+  "invoice_date": "2018-03-30",
+  "due_date": "2018-03-30",
+  "currency": "MAD",
+  "untaxed": 56.0,
+  "tax": 0.0,
+  "total": 56.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "CAFE CREME",
+    "quantity": 2.0,
+    "unit_price": 12.0,
+    "tax_rate": 0.0,
+    "net": 24.0
+   },
+   {
+    "description": "CAFE EXPRESSO",
+    "quantity": 2.0,
+    "unit_price": 10.0,
+    "tax_rate": 0.0,
+    "net": 20.0
+   },
+   {
+    "description": "CHOCOLAT CHAUD",
+    "quantity": 1.0,
+    "unit_price": 12.0,
+    "tax_rate": 0.0,
+    "net": 12.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 56.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0201575,
+ "raw": {
+  "id": "gen-1794513518-eG3WwUFimnon5eZOYfwS",
+  "object": "chat.completion",
+  "created": 1794513518,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"RELAIS TOTAL OULMES\",\n  \"vendor_vat\": \"40132774\",\n  \"invoice_ref\": \"V201855892\",\n  \"invoice_date\": \"2018-03-30\",\n  \"due_date\": \"2018-03-30\",\n  \"currency\": \"MAD\",\n  \"untaxed\": 56.00,\n  \"tax\": 0.00,\n  \"total\": 56.00,\n  \"iban\": null,\n  \"vat_treatment\": \"Z\",\n  \"lines\": [\n    {\n      \"description\": \"CAFE CREME\",\n      \"quantity\": 2.0,\n      \"unit_price\": 12.00,\n      \"tax_rate\": 0.0,\n      \"net\": 24.00\n    },\n    {\n      \"description\": \"CAFE EXPRESSO\",\n      \"quantity\": 2.0,\n      \"unit_price\": 10.00,\n      \"tax_rate\": 0.0,\n      \"net\": 20.00\n    },\n    {\n      \"description\": \"CHOCOLAT CHAUD\",\n      \"quantity\": 1.0,\n      \"unit_price\": 12.00,\n      \"tax_rate\": 0.0,\n      \"net\": 12.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 56.00,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"RELAIS TOTAL O ULMES\" as the vendor name. Now, my focus shifts towards locating and extracting the vendor's VAT number or tax ID from the receipt. That should be my next focus.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted \"RELAIS TOTAL O ULMES\" for `vendor_name` and \"40132774\" for `vendor_vat`, after identifying \"IF\" as the tax ID indicator. I'm using \"V201855892\" for `invoice_ref`, and \"2018-03-30\" for both `invoice_date` and `due_date`, given the cash payment. The currency is \"MAD\". Now, I'm working to determine if the receipt can provide an `untaxed` total, as this is not explicit on the receipt, and I am unsure if the listed prices are tax inclusive.\n\n\n**Completing JSON Fields**\n\nI'm now completing the JSON schema based on the receipt's data. I've populated `vendor_name` (\"RELAIS TOTAL O ULMES\"), `vendor_vat` (\"40132774\" from \"IF\"), `invoice_ref` (\"V201855892\"), `invoice_date` (\"2018-03-30\"), and `due_date` (same as invoice date). The currency is \"MAD\". I've determined `untaxed` is 56.00 and `tax` is 0, since no tax details are available and prices appear inclusive. I have assigned a 'Z' for `vat_treatment`. I still need to extract the line items.\n\n\n**Extracting Line Items**\n\nI've extracted all necessary data points and calculations. Now I'm working on populating the `lines` and `vat_breakdown` arrays within the JSON schema. I'm focusing on the line items, where I've identified three: \"CAFE CREME\", \"CAFE EXPRESSO\", and \"CHOCOLAT CHAUD\", each with their respective quantities and prices. I've also confirmed that the tax is zero for each line item, so the line item totals are equivalent to net amounts. Finally, I will summarise the `vat_breakdown`.\n\n\n\n**Finalizing JSON Data**\n\nNow I'm finalizing the JSON data and performing a final accuracy check. All details look correct, including the assumed tax treatment and calculated totals. I've re-confirmed that the currency is MAD, and the vat treatment will be zero-rated 'Z'. The `lines` and `vat_breakdown` arrays are complete and consistent with the receipt's information. I am now confident in the extracted data and final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"RELAIS TOTAL O ULMES\" as the vendor name. Now, my focus shifts towards locating and extracting the vendor's VAT number or tax ID from the receipt. That should be my next focus.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema. I've extracted \"RELAIS TOTAL O ULMES\" for `vendor_name` and \"40132774\" for `vendor_vat`, after identifying \"IF\" as the tax ID indicator. I'm using \"V201855892\" for `invoice_ref`, and \"2018-03-30\" for both `invoice_date` and `due_date`, given the cash payment. The currency is \"MAD\". Now, I'm working to determine if the receipt can provide an `untaxed` total, as this is not explicit on the receipt, and I am unsure if the listed prices are tax inclusive.\n\n\n**Completing JSON Fields**\n\nI'm now completing the JSON schema based on the receipt's data. I've populated `vendor_name` (\"RELAIS TOTAL O ULMES\"), `vendor_vat` (\"40132774\" from \"IF\"), `invoice_ref` (\"V201855892\"), `invoice_date` (\"2018-03-30\"), and `due_date` (same as invoice date). The currency is \"MAD\". I've determined `untaxed` is 56.00 and `tax` is 0, since no tax details are available and prices appear inclusive. I have assigned a 'Z' for `vat_treatment`. I still need to extract the line items.\n\n\n**Extracting Line Items**\n\nI've extracted all necessary data points and calculations. Now I'm working on populating the `lines` and `vat_breakdown` arrays within the JSON schema. I'm focusing on the line items, where I've identified three: \"CAFE CREME\", \"CAFE EXPRESSO\", and \"CHOCOLAT CHAUD\", each with their respective quantities and prices. I've also confirmed that the tax is zero for each line item, so the line item totals are equivalent to net amounts. Finally, I will summarise the `vat_breakdown`.\n\n\n\n**Finalizing JSON Data**\n\nNow I'm finalizing the JSON data and performing a final accuracy check. All details look correct, including the assumed tax treatment and calculated totals. I've re-confirmed that the currency is MAD, and the vat treatment will be zero-rated 'Z'. The `lines` and `vat_breakdown` arrays are complete and consistent with the receipt's information. I am now confident in the extracted data and final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1976,
+   "total_tokens": 2294,
+   "cost": 0.0201575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0201575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01976
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1580,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.7
+}

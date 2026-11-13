@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "BEMED (SP) SDN. BHD.",
+  "vendor_vat": "001734164480",
+  "invoice_ref": "78283158333",
+  "invoice_date": "2017-06-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 155.66,
+  "tax": 9.34,
+  "total": 165.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALPHA LIPID LIFE LINE 184810",
+    "quantity": 1,
+    "unit_price": 155.66,
+    "tax_rate": 6,
+    "net": 155.66
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 155.66,
+    "tax": 9.34
+   }
+  ]
+ },
+ "cost_usd": 0.021564,
+ "raw": {
+  "id": "gen-1794514514-J7FKDV7BaNk2Ypb3ZeHB",
+  "object": "chat.completion",
+  "created": 1794514514,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"BEMED (SP) SDN. BHD.\",\"vendor_vat\":\"001734164480\",\"invoice_ref\":\"78283158333\",\"invoice_date\":\"2017-06-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":155.66,\"tax\":9.34,\"total\":165.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"ALPHA LIPID LIFE LINE 184810\",\"quantity\":1,\"unit_price\":155.66,\"tax_rate\":6,\"net\":155.66}],\"vat_breakdown\":[{\"rate\":6,\"base\":155.66,\"tax\":9.34}]}",
+     "refusal": null,
+     "reasoning": "I'm checking the GST math: 155.66 plus 9.34 gives the 165.00 printed on the line, so that figure already includes the 6% tax. The schema asks for the amount before tax, so I'm weighing whether to use 155.66 for both the unit price and the net, even though the line itself shows 165.00 as the amount.\n\nI'm settling on 155.66 for the unit price and the net, since the schema wants the amount before tax. I also have the invoice reference CB# 78283158333, the date 2017-06-14, currency MYR, and VAT treatment S.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking the GST math: 155.66 plus 9.34 gives the 165.00 printed on the line, so that figure already includes the 6% tax. The schema asks for the amount before tax, so I'm weighing whether to use 155.66 for both the unit price and the net, even though the line itself shows 165.00 as the amount.\n\nI'm settling on 155.66 for the unit price and the net, since the schema wants the amount before tax. I also have the invoice reference CB# 78283158333, the date 2017-06-14, currency MYR, and VAT treatment S.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS1wgKEAgTGAI4AUIIdGhpbmtpbmcSDMHOAFbj4Br8zWD6mhoMfXlUT8394wfmDU4IIjDayoQ4LpTdOBHhuHQTet1Zw//n0g+AcnJVM6PKgoeaD70RO42Q+2HPgHBrAfkfMHEq9AcyJ0qMlY34RkSHBa+WDPD9ZvNaQhoWasxXEmeZFNI9Uxt+SM9FN6wx9l/MCt72dbg7qvZ6TO0b/XejI81C3GdWuLZbphetfESE1hr+bDjCXQnbfF26xYWEF2guVn4Vr6PAD75gJ8MuIkdcwNfZIxfZXVUH28xSrHIz4BFY5s1WVCYuxtUH8B9m8xqy8JSwRDmQylZtj5LszOkBZeqlUkHe25E/79l67JBz54AxRn+bSwOuyZLBTSYmGEkiH1F5HeH9kMPXjJ0xgoUoNSZFlgJDaTZMBAQfQcLHW28WOwPphfJLp5DnKHSjrwjHjKKiP4lSPKhKgidf3HDxil9SrwZ8Mx6h01c44JKsiSTZIk6I3gCj+AYSbAbmEEr8BimuJrr71hRzmfCRoVKofDhPmd1uvWjzGsZbh3n3xSZ9YCYLmDA+psFGGQyii+UZzzm8nmIeXnbn2ju3bnqnOuJ10nYMmBf2N8fF/I3m70hSND2IncISX+rIjfF62BBVnnohnDpfbrXIDS3bb5ickGrzN7fwXjnorecC9OSZr2GrrwkENvcQxMrNw+KU+FL5Epjkn4vHysRNItIJZM8qlC9VctgWZIfp4twlL9tw3F/l9TekYFqRuCild+siDcJHM7wq59rUvGAFT9q5wO1pm3qIyboqAIzHB3UEVWiZRE1pDrThgclk4ArGbgQ6KUxuNEnYmuFSvz3BbMyEv7kkG/w6DdMnLTJV/7dvQEVNqkdsxGVm7ZmYhE9v8tTsXgnLw0tJbpRC5KG4Z66mTgrgs7KHFbWS/mvRrGgg6N0nVOa8wSMSsSxWS9tXoybb2SAteIsr7GhKOKtfpK2WXvGFPe9Eb8lFl3CPIOr5A03KfSF8YlGduzJzEDvKkv8tqeyHNuMdB8A1SeqhqCmv2uA4qMMwhrZ+TQ5W1UanObTInsC4d3OGHOY8Bvyuy5XfWyHnWrvlLAju1Tk3sHVb1EkS1j+puaM4aCOX17ORpWBQOl++9GsRhL37wYEJUWzV+1q61FeNnUQkt+sKtx9IgoZoWgbz6y6QX4m9G6huftX4Xt8UWqWUfvftpkieK+mjlgxjH87me08jwtWUCyN0SX0gpCdsw/OaKwcPGcOPw7MQ8LeRo1F0iroHrfiRggzfibtawQGqd0xmDNJuoZiXLD/+voOHqLs7D+t0bl1criwPJ0IrQMhxRsLxjL1xLcOai2PXxySbH0t+RWcPyBoBi5ftrvcBh9wFZKhvZaz63NfJpTYWn5XDipUFuHjZvs4U/YJtWuIUunG+ho/yftR5KBUQfuT0OtzawJiE+8xLxNglsdhRraTnZzuuUPZb0JFCMwyhxtdvF/UTJ7SEGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 442,
+   "total_tokens": 3623,
+   "cost": 0.021564,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021564,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.00884
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 222,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.44
+}

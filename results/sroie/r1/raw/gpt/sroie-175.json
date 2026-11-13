@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "6030098553",
+  "invoice_date": "2018-02-11",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 11.13,
+  "tax": 0.67,
+  "total": 11.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PB D/S Tape 12mm",
+    "quantity": 1,
+    "unit_price": 1.79,
+    "tax_rate": 6,
+    "net": 1.79
+   },
+   {
+    "description": "H/C A4 400'S",
+    "quantity": 1,
+    "unit_price": 9.34,
+    "tax_rate": 6,
+    "net": 9.34
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 11.13,
+    "tax": 0.67
+   }
+  ]
+ },
+ "cost_usd": 0.023355,
+ "raw": {
+  "id": "gen-1794514526-yp7vuehwg9s619HPyoo9",
+  "object": "chat.completion",
+  "created": 1794514526,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"POPULAR BOOK CO. (M) SDN BHD\",\"vendor_vat\":\"001492992000\",\"invoice_ref\":\"6030098553\",\"invoice_date\":\"2018-02-11\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":11.13,\"tax\":0.67,\"total\":11.8,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"PB D/S Tape 12mm\",\"quantity\":1,\"unit_price\":1.79,\"tax_rate\":6,\"net\":1.79},{\"description\":\"H/C A4 400'S\",\"quantity\":1,\"unit_price\":9.34,\"tax_rate\":6,\"net\":9.34}],\"vat_breakdown\":[{\"rate\":6,\"base\":11.13,\"tax\":0.67}]}",
+     "refusal": null,
+     "reasoning": "**Extracting bill details**\n\nI need to extract the bill information and format it into JSON schema. The currency is likely MYR, reflecting the Malaysia RM. The vendor is \"POPULAR BOOK CO. (M) SDN BHD.\" The invoice reference seems to be \"Slip No 6030098553,\" and the date is 11/02/18, which I interpret as February 11, 2018. The total is 11.80, with 11.13 being untaxed, leading to tax of 0.67. The items listed may have gross amounts that include GST. I'll need to calculate line net amounts based on the printed values.**Setting net amounts**\n\nI'm considering whether to set the net amount to null since it's not printed on the bill. The schema specifies that the net line amount should be what's printed, but since it's absent, I wonder if I can compute it through extraction. The GST summary only shows the aggregate base. It seems the VAT treatment is marked as S, and the IBAN is null. I also need to ensure the vendor name is included without the address and finalize everything in JSON format, adhering strictly to the expected response.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting bill details**\n\nI need to extract the bill information and format it into JSON schema. The currency is likely MYR, reflecting the Malaysia RM. The vendor is \"POPULAR BOOK CO. (M) SDN BHD.\" The invoice reference seems to be \"Slip No 6030098553,\" and the date is 11/02/18, which I interpret as February 11, 2018. The total is 11.80, with 11.13 being untaxed, leading to tax of 0.67. The items listed may have gross amounts that include GST. I'll need to calculate line net amounts based on the printed values.**Setting net amounts**\n\nI'm considering whether to set the net amount to null since it's not printed on the bill. The schema specifies that the net line amount should be what's printed, but since it's absent, I wonder if I can compute it through extraction. The GST summary only shows the aggregate base. It seems the VAT treatment is marked as S, and the IBAN is null. I also need to ensure the vendor name is included without the address and finalize everything in JSON format, adhering strictly to the expected response.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9h5pmhGJkAXnWF88vKIUIrt-Lx3xrNwqAapG6YhymaVdwy9RM17RIYPDr9Bd63fk-oxJjTJv6bSZ41-Ft78YxPqeJW0d74hd2FSWfYzkWdZEyNxTFgTXP37jwLkVCBt2o16P-jFhtp50PLr41a6e63Bb72sbtZeHhs0wvPHQb-RRe2-T5BKsXGRS-1lkiC4N7ZPmlWj7KFFLYYKe02w-vRwvYfceMe2KllLJKGK7TS30YCzMiScef5IU0v_RntoyVAWz-ql-oE4IF16xb25nRGz5sc6I20T2apJhhpD6V0zsG_zUDjkm-oEhKiLEU7_0sQqWKwNR9FZcR5NzZUMDfn23JmQ4s6dnLcdcNGgq-67bYYsosejHihqSDt4o5YseCv-Pb6ERYjtS_0D052Wa99PO1VX-IWZsF5hdvpsx0tY37KIYf_8s3BjeTNeJfamRhBHvhi_4CElbz7VC3auQ_kfSqGYdfYl8GDOWxkcrp9bdFrP977_v6XA9ROkZiAOqfOdmG77_jOUsMQx90XxnGPVEWT9qLIZo35bxK68mEberL9efCjUm7siBzgDszhrc75rSlljhQ48GzGiHQiG5wjaf6NBkE7R44Iu9PlP7gmyUE1QgANLbyp5Auw0yNSBi5xZKmXSjlE9axRgACKSeOoPn1Ss9p1sY4sw0sKylmMKZLKyR_LILRObrtH3PF4bpR_tQj0QS_q5pRf_z4BF3xPXGsvdHISf-OmcVuGBYCQDdzWgYucCEMlKeJEx2xJfTrcBHGNp15CYwBTnOyGNmEhUGA64WQrUEIm6ladFq2KNcIaAwjcJtQZcqYSA1SRhSjKunJ9UqN5ZofUntxU3gsOAEv4cwLsinmYyt1UbBaade56yoJ_Am2O6jql2q6piJ9bMjT3ckUX2vkSzHfm6ue3nNZrwvb3qtXh4qo9z_mQ6GIxjqNdf1XUgsdvSbdGE5WnV0jnutGwn0rQvuanNZCCnhnS7XOzxx1J-onYECBFvUWmI6o6YS2Eg3B-VEO61nNrCyJKmEpQBWtFxBHMDRbua_Dhkcv-vGX7AQcf4uRaF2fyu_Akv2xAeHw9XFDnM16k5k4fxTCPA-p19IuZMF9QtBcxntjRw2wyxKK2MdlDTHJSdYrlJFd4RMezowr68AzpqOV--OXcOa54wfHThOomnzh1VpXm2QcwQxFuaCnXVP__1C37A6z16h2lF-3go8pM41Ccs-oodsbdE1mPf3oPiJiu0bEzzyd3SbAsN7xyKuMOReUexa4LQq3TNf8B0ZYiUQ4TWIa30ObfPeUzcoyG0TeZSi8sBsrEV3gVF2_QN-pvYr65hEPZU_V5AFGxKPj2Zwr6dwg11gNYKstgkOU3OYcd5zCQ7wY7cg4u7jc1vZUh8Y_-J9NwGruOAlOjrtogmj_8ax9AIh6NeZ12MEZ4hxrKPpsBlckuTSD3YFjeUlI-8IvSHH3fGGCQWKHAvFEl-DatHxXCFdg5sazxSoZR6DqCDAtiaKnFYCeMplG3ItJE3-A7i0AsxTLaL2aCAi0fzR1cy_uLmzc2v_x1u6dSZYM3C3Gw9qd0bIE13vBAyFiiSvHuWegcx2VSeHiSPJEVOPClrPWipQeen7sJ1SmHJavkscANiy1AaFRv3qRwkdzW9XQXXNtWopsPfwriLYln3-mCAe7Qjay1Nk11TSQraQ_IHAA8HsNA9wrMopY5spyz9dJjhohNkqQRueOeYn6-zdLf3o1mzjW0tPZR5wr8Hi4KNDf6lihJFO3tcvrYr-22LGA9_swxy9hUzEoUyoq4QNBOVBf9xStjMWNHvYOmScGs490Weya7s_MkvsIu1uDwPpxGOMgAE0raSBw2zCEoWuIeMjAQFqMtMaMQ4rqurnQEl6S_4RqVIyS4u4AomfXAhh1H4FlqkiINCRsltuD04KLsqYCIXYAFXxbWOz8_Cg1EejQJok7RowHiDkmwoosXLtDlFkcVqTYH0FlbAZ9CTNDredlZwwXqrlqRqToxoeOqgmAYYL8HGUFxh_LxxR4_WuJVRLynhrKs1cEuAAHLBF_SHgMY3Wjiskbm4mpw9vbXu1iwKr-YoJqauxOQTUGFLxKazOzRy-qaZ5ueHi2A-u86QbdsqqVCXUkyKu4QLQKBrYyehvxGsl-Re33kJGc0VqRmRgpYwsu_QeIL2TFlqo8O2456_w3UrEWitFYL9752B33X0OXqdAeDU_AV9o57cOfwkCbizViNv-SBmUes_EOcw0ayclJcCvhEmyY76RR2Fi1z9eP57pdbrYUFQT6vrVisUfTopDPfgK96BTDM277dsLnBcnRCRIwWhPhd2N3-asZxWMz2PB_TRTzJbCvQZRzevsM9y7VmKVJ39Uk95OgKOgGBqV0XKWjFluIxz-90_uNPzd7CvsC7cnV-y5xVpFSGVTjZJ4qIK3eC1r-EiPEcOzlklNX7QLCTCussRDbs_qTaRFJBJtc93x6vqodJ5F9Eh83xgthY1ADEVqZyob-WpKJ0kK6p04mVy3rGejuCz9O7rW2mXQBX0RNh7gD0ZLFuFblBP-79OlN709mLqKaL1uTax-9b5M35TWv3uGemrPjK3sbw1igIrr9-jbh7NqvQpW0ZmnT1JHXWnL_zXuggkurRe4aO7u58kcURDuIWWB9i1FizFSK6Rq2rksKFNP1x0SzlmxVEoLjowHQX_N4ONI54lBRiNjHEUmqfgMmgHlJA7SjCjCWSTL2sJI_dtF1yCH6B1XeMC972tjyydAkQexaTKLWHYVq7UjuSEd2nS5AOawNNwdseQmR534a3203yl-5IxK1MQzpGZv5G93HuHOwNwoo2I-VmMEyCa1iXTVMzRLIs7WzuQfvEQm0CgL8TaKNM1ehZzHFJgrKc-OvB-XZnzuTQY0R5oC83nrodjX5ybV2IDOxeWkIQXbaWOdt60-KRDiytmTsMD0_ai9stFi2nJMqAIKsMrjrj9EvxHo5u30zwMP0aAm7rRlL8jrNfMQjPGHb-SFAYM2DNQEBDI2dRFZ-R_U284Ofhc851nTmdhyalLXuTgJ97Kz8X9vctGRxtTWpU-sBF516hX6ImZDsLvjx9j6H7OXm52RpibdGMk0NLSlEeg3Sv8oBZPt5OUfG5ZZ1SjiL-RZ54VS7-15UqWNJH1Imj_tB5kfUqXoB2rQSx5pQsbncyBeexjqiQr1YDBhPTPa6sKprzINHYYe3nsQ8v8AHDTLqzjMAzZhfLnvFKKqP31BdKLajBYlkCOCqua6dA0TgyKN1xO_lJptb3yOkB1fxWiuMmNWVRuiehrqkNgyaJvagAfe6c97AymisZN_ENzJuhYQ_1yVMXNkg68mydBlw5XCx4E8oGE_kCWjIGVOLgRUYCJLNCdt2M8lBUeW3ffTVcNe0qd91cmH2svIJ5FhqRxgqEiSGLdWttQIeyxMZKZlqWMOdltmLGaj2K-elrO1zfJI8iah3DxAeOWUjliO_8u6JHctmW4UaMp0hxSL64n2w03gpusJ8hiitN-5tAAEZPeIxzWC27Wp_B34h1v7CmgwzO0LSFO7QShH1jrHjyX1W5AbS51oPVGuCNZlhSluJnZokwOTHKGKnn2yuXzZoLCYaLKs2rhLHk00OqVei3GHLLeOIpDXfx2MbOkJE98FvmcMl_bMKF7y2xxROxN1Dkz3OS6TnhAAF7OrFnnDJgejirM6LoeIR56j92hlVPizicjJYI_BH_YIg4JBiTdfNDcSvsVx9bwRjVxM6XZ0r-nl3MOSa4SjNAwWuh9_KxR46rXb0ZCKQAzfozcPCacu5RyouRfThwy2GMkTiVCHGtdruiMNTY4j4XV_XtrG9ury1cNZ30xiEqnVLPgz8PLUfozWsmekOuN17rWZNt_zWP7lU2ag35sMUN3c88bANE07a9eE83YPWjIS7H3iMYW9_IGNuGioVB1-dACetlAfPZbmEGsn10TcS-ZarTUZrAZKjCpCZS9VMzDa-DIBmf1QEtrAh-v9JGnlpccaiZ1HvWUyi8IiAf46aAXcRBXZYJkFIgIA2DkgHcMXnyUw-kNl8HrlHH_aV8SnZJMGEbVZii5BFUIGc0Xa3pYaibH8cVn0k18-5WW3JvGT14SU_tDp2Ih9TjG5VCGadqYTb0o8kzS01l3xRF3EETpxX5QSP-Y38AuBWZ4zvclk94GTzljnh077__exNnzjXCtyLOYY1a_03i4O0QMA4OXYPhsHGTh_0bOFeexWSxbM87J2riCCiTnzu5QV_3RLCtlE5pDQF9GC6ABM1QfElX1lwNdqN1HpuZ-fE7w39qDvpFWOHtsJzXrxQS0T9l9mCcz-NdHttGxOaGUtwXHxLPp5T2DE9rH24dIJfQwu6xJGFzyBReKiRxoZHC6ZQY5x3cJaIIy0V5W1oXoWtAJVOHIRVBlkkh2XLV9r2r_Q3NKbMfFssJtPmrM2KI6g3oS7UKDX1EZeIAmXEWv7rEA0_6GDCxmHqsDtwi6SJiSjha5wtRaKsxCKJ2Rdns_hmnkgmGKKonsuT3BDRbyRAFpF-e0mi-a61DByHP_EVBgkhCXzh6Ef6zrjTIfxST-4trfRkA8aVRblJor4qF0TjO_j0UlrUFMSVqsH-Dymfok6eGjb6e9bKG6Hbd-r6pj4cc4uaiT9LZnfqlJhh3_J9eMU-Z-htrS9JH0Q32Qq3xdc9bTlgXkzkunkgOaR0u-b1krY-nzNxlmrDBdhoinbCMM6yjkcgD4zopxHhVsWQnrYCW1bNTN8jHgEVS_s0X0V57H4JNkHpmqWctYGkJx2RIQ7X9l4vh-hOU-xgpfGD1cNsSjP9FJdtHRm4sh4xCl6OVb4yChhBtRAmS7iRz7RZmT3_kimZEmSlV36rkZLdfU90xbOJFLe-9SKZbmm7ac1Gr8V_4ch2V1MO3SBwsmVCdZW4w8FmHyU_6shiMAM-llCUPweJCbs_gwWjLPmPA1536sEEXqv7-6aiWgBH9SmjPvHkS8jy0EyihkQt1mXaeRoAzd0bw-2IuwDvl-3EyC66570-jnTl93_3hgfKKtSGTfYHsIfO3Pg32X4q6A3uppltVkvADu1KyrHjzuE_emW5IFuFVp44saHK9OTYJtiXjqElV6a0fl3txIqweXuCkgm9GTAoIdO0bjK0UWGexE5C42En9iAnY9QvbnpLhUA0La6uqbole-_T6Jvuo7n2afR3UeIGbPIjV8nlmMFaOdonQNVhddo27zvkMdw83Uq9DdSBmmwTZZ_i4yncL2Mn7sfsDlwAb8x3XziNHrwy95d2suWGkso7a27eEzeTSGNEimb40Hd61AfwXlulwwRy6ToBbrfsyyEzX7nOHMc-PGWmDk8dgLkwK-tTqKLuwuEHI0iFmTUQVEca91P1OYnvLM97cJ0iAnDYkOfWYDewYGQ72NOpGGhqbn12P_lC4wFF7oa-HvHiLpAjoSuUxlCwQejCilr_2vud1eTUxLHgA0TRg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_059ae9f112703830016af61e5fb78c87d1b0bf4b06292f8507",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1503,
+   "completion_tokens": 528,
+   "total_tokens": 2031,
+   "cost": 0.023355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023355,
+    "upstream_inference_prompt_cost": 0.007515,
+    "upstream_inference_completions_cost": 0.01584
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 347,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.08
+}

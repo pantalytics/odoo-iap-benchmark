@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Scott LLC",
+  "vendor_vat": "930-98-9727",
+  "invoice_ref": "25342867",
+  "invoice_date": "2015-10-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 215.9,
+  "tax": 21.59,
+  "total": 237.49,
+  "iban": "GB48GPKP09511878652700",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder",
+    "quantity": 1.0,
+    "unit_price": 34.0,
+    "tax_rate": 10,
+    "net": 34.0
+   },
+   {
+    "description": "Stemless wine glass Etched coordinates of Myakka River State Park, Very Good",
+    "quantity": 4.0,
+    "unit_price": 2.99,
+    "tax_rate": 10,
+    "net": 11.96
+   },
+   {
+    "description": "Hazlitt 1852 Vineyard home of the red cat wine glass",
+    "quantity": 4.0,
+    "unit_price": 3.0,
+    "tax_rate": 10,
+    "net": 12.0
+   },
+   {
+    "description": "Vintage Metal Art Sculpture Carving Chef Wine Bottle Holder and Display Tin Chef",
+    "quantity": 3.0,
+    "unit_price": 25.98,
+    "tax_rate": 10,
+    "net": 77.94
+   },
+   {
+    "description": "Brand new Cuisinart CWO-25 Electric Wine Opener, Stainless Steel",
+    "quantity": 1.0,
+    "unit_price": 20.0,
+    "tax_rate": 10,
+    "net": 20.0
+   },
+   {
+    "description": "Elegant Wine Glasses w/Hand Splatter Painted Accents (3pcs)",
+    "quantity": 3.0,
+    "unit_price": 20.0,
+    "tax_rate": 10,
+    "net": 60.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 215.9,
+    "tax": 21.59
+   }
+  ]
+ },
+ "cost_usd": 0.033964,
+ "raw": {
+  "id": "gen-1794515462-gG8zQ5jSK5pQVldFvSjL",
+  "object": "chat.completion",
+  "created": 1794515462,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Scott LLC\",\n  \"vendor_vat\": \"930-98-9727\",\n  \"invoice_ref\": \"25342867\",\n  \"invoice_date\": \"2015-10-01\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 215.90,\n  \"tax\": 21.59,\n  \"total\": 237.49,\n  \"iban\": \"GB48GPKP09511878652700\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder\",\n      \"quantity\": 1.00,\n      \"unit_price\": 34.00,\n      \"tax_rate\": 10,\n      \"net\": 34.00\n    },\n    {\n      \"description\": \"Stemless wine glass Etched coordinates of Myakka River State Park, Very Good\",\n      \"quantity\": 4.00,\n      \"unit_price\": 2.99,\n      \"tax_rate\": 10,\n      \"net\": 11.96\n    },\n    {\n      \"description\": \"Hazlitt 1852 Vineyard home of the red cat wine glass\",\n      \"quantity\": 4.00,\n      \"unit_price\": 3.00,\n      \"tax_rate\": 10,\n      \"net\": 12.00\n    },\n    {\n      \"description\": \"Vintage Metal Art Sculpture Carving Chef Wine Bottle Holder and Display Tin Chef\",\n      \"quantity\": 3.00,\n      \"unit_price\": 25.98,\n      \"tax_rate\": 10,\n      \"net\": 77.94\n    },\n    {\n      \"description\": \"Brand new Cuisinart CWO-25 Electric Wine Opener, Stainless Steel\",\n      \"quantity\": 1.00,\n      \"unit_price\": 20.00,\n      \"tax_rate\": 10,\n      \"net\": 20.00\n    },\n    {\n      \"description\": \"Elegant Wine Glasses w/Hand Splatter Painted Accents (3pcs)\",\n      \"quantity\": 3.00,\n      \"unit_price\": 20.00,\n      \"tax_rate\": 10,\n      \"net\": 60.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 215.90,\n      \"tax\": 21.59\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the vendor's name, VAT number, and invoice reference from the provided image, aligning these with the specified JSON schema.\n\n**Capturing Essential Invoice Details**\n\nI've successfully pinpointed the vendor's name as \"Scott LLC\" and their tax ID as \"930-98-9727.\" The invoice reference \"25342867\" has also been identified. I'm now reconciling the invoice date format, considering both common interpretations to ensure accuracy.\n\n**Deducing Invoice Specifics**\n\nI'm now focused on resolving the invoice date ambiguity, favoring YYYY-MM-DD format and defaulting to October 1st, 2015. The currency is identified as USD, and the IBAN points to a UK origin despite US addresses. I'm also processing line item details and calculating tax treatments.\n\n**Clarifying Date and Quantities**\n\nI've refined the invoice date to 2015-01-10, recognizing the likely MM/DD/YYYY format given the US addresses. I'm also addressing the quantity format, which appears to use commas as decimal separators for values like '1,00' and '4,00'.\n\n**Finalizing Invoice Data**\n\nI've confirmed the European formatting for quantities and prices, leading me to adopt the DD/MM/YYYY date format and a 2015-10-01 date. All line items, totals, and VAT breakdowns have been double-checked for accuracy against the vendor and invoice details.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on identifying and extracting the vendor's name, VAT number, and invoice reference from the provided image, aligning these with the specified JSON schema.\n\n**Capturing Essential Invoice Details**\n\nI've successfully pinpointed the vendor's name as \"Scott LLC\" and their tax ID as \"930-98-9727.\" The invoice reference \"25342867\" has also been identified. I'm now reconciling the invoice date format, considering both common interpretations to ensure accuracy.\n\n**Deducing Invoice Specifics**\n\nI'm now focused on resolving the invoice date ambiguity, favoring YYYY-MM-DD format and defaulting to October 1st, 2015. The currency is identified as USD, and the IBAN points to a UK origin despite US addresses. I'm also processing line item details and calculating tax treatments.\n\n**Clarifying Date and Quantities**\n\nI've refined the invoice date to 2015-01-10, recognizing the likely MM/DD/YYYY format given the US addresses. I'm also addressing the quantity format, which appears to use commas as decimal separators for values like '1,00' and '4,00'.\n\n**Finalizing Invoice Data**\n\nI've confirmed the European formatting for quantities and prices, leading me to adopt the DD/MM/YYYY date format and a 2015-10-01 date. All line items, totals, and VAT breakdowns have been double-checked for accuracy against the vendor and invoice details.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2569,
+   "total_tokens": 4137,
+   "cost": 0.033964,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.033964,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.030828
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1887,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 22.94
+}

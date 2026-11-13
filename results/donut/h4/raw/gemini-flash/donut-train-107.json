@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Murray-Parsons",
+  "vendor_vat": "932-94-1632",
+  "invoice_ref": "58805260",
+  "invoice_date": "2019-07-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 5458.46,
+  "tax": 545.85,
+  "total": 6004.31,
+  "iban": "GB85ETVV11072777524235",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "10-Core Gaming Computer Desktop PC Tower 3TB Quad 16GB DDR4 AMD Graphics WiFi PC",
+    "quantity": 1.0,
+    "unit_price": 618.49,
+    "tax_rate": 10.0,
+    "net": 618.49
+   },
+   {
+    "description": "Ryzen Gaming Computer",
+    "quantity": 5.0,
+    "unit_price": 752.0,
+    "tax_rate": 10.0,
+    "net": 3760.0
+   },
+   {
+    "description": "Custom Gaming Desktop PC Computer - Core i5 4690, RX 470, 8GB RAM",
+    "quantity": 3.0,
+    "unit_price": 359.99,
+    "tax_rate": 10.0,
+    "net": 1079.97
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 5458.46,
+    "tax": 545.85
+   }
+  ]
+ },
+ "cost_usd": 0.009306,
+ "raw": {
+  "id": "gen-1794515674-htYH8VuPB3asmgK4bp9u",
+  "object": "chat.completion",
+  "created": 1794515674,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Murray-Parsons\",\n  \"vendor_vat\": \"932-94-1632\",\n  \"invoice_ref\": \"58805260\",\n  \"invoice_date\": \"2019-07-03\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 5458.46,\n  \"tax\": 545.85,\n  \"total\": 6004.31,\n  \"iban\": \"GB85ETVV11072777524235\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"10-Core Gaming Computer Desktop PC Tower 3TB Quad 16GB DDR4 AMD Graphics WiFi PC\",\n      \"quantity\": 1.0,\n      \"unit_price\": 618.49,\n      \"tax_rate\": 10.0,\n      \"net\": 618.49\n    },\n    {\n      \"description\": \"Ryzen Gaming Computer\",\n      \"quantity\": 5.0,\n      \"unit_price\": 752.0,\n      \"tax_rate\": 10.0,\n      \"net\": 3760.0\n    },\n    {\n      \"description\": \"Custom Gaming Desktop PC Computer - Core i5 4690, RX 470, 8GB RAM\",\n      \"quantity\": 3.0,\n      \"unit_price\": 359.99,\n      \"tax_rate\": 10.0,\n      \"net\": 1079.97\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 5458.46,\n      \"tax\": 545.85\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Invoice Data**\n\nI'm currently parsing the invoice to pull out specific vendor details as per the schema. I've identified the seller's name, address, tax ID, and IBAN. The client's name is also noted.\n\n**Resolving Date Ambiguity**\n\nI'm scrutinizing the date formats, specifically the \"03/07/2019\" entry. Given the mix of potential US/UK conventions and the presence of an IBAN, I'm cross-referencing other numerical patterns and vendor location hints to definitively determine if it's DD/MM/YYYY or MM/DD/YYYY.\n\n**Determining Date Convention**\n\nI'm refining the date interpretation. The presence of US addresses and dollar currency initially suggested MM/DD/YYYY, but the comma decimal separator and IBAN point to a European format (likely DD/MM/YYYY). I'm prioritizing the documented rule to infer the convention.\n\n**Confirming Date Format**\n\nI've confirmed the invoice is a translation from a Polish template. This solidifies that \"03/07/2019\" is July 3rd, 2019, and I'll format it as 2019-07-03. This also clarifies numerical formatting with comma decimals.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Invoice Data**\n\nI'm currently parsing the invoice to pull out specific vendor details as per the schema. I've identified the seller's name, address, tax ID, and IBAN. The client's name is also noted.\n\n**Resolving Date Ambiguity**\n\nI'm scrutinizing the date formats, specifically the \"03/07/2019\" entry. Given the mix of potential US/UK conventions and the presence of an IBAN, I'm cross-referencing other numerical patterns and vendor location hints to definitively determine if it's DD/MM/YYYY or MM/DD/YYYY.\n\n**Determining Date Convention**\n\nI'm refining the date interpretation. The presence of US addresses and dollar currency initially suggested MM/DD/YYYY, but the comma decimal separator and IBAN point to a European format (likely DD/MM/YYYY). I'm prioritizing the documented rule to infer the convention.\n\n**Confirming Date Format**\n\nI've confirmed the invoice is a translation from a Polish template. This solidifies that \"03/07/2019\" is July 3rd, 2019, and I'll format it as 2019-07-03. This also clarifies numerical formatting with comma decimals.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1918,
+   "completion_tokens": 2098,
+   "total_tokens": 4016,
+   "cost": 0.009306,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009306,
+    "upstream_inference_prompt_cost": 0.0014385,
+    "upstream_inference_completions_cost": 0.0078675
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1625,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.97
+}

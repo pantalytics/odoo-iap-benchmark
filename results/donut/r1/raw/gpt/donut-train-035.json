@@ -1,0 +1,129 @@
+{
+ "pred": {
+  "vendor_name": "Scott LLC",
+  "vendor_vat": "930-98-9727",
+  "invoice_ref": "25342867",
+  "invoice_date": "2015-10-01",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 215.9,
+  "tax": 21.59,
+  "total": 237.49,
+  "iban": "GB48GPKP09511878652700",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder",
+    "quantity": 1,
+    "unit_price": 34,
+    "tax_rate": 10,
+    "net": 34
+   },
+   {
+    "description": "Stemless wine glass Etched coordinates of Myakka River State Park, Very Good",
+    "quantity": 4,
+    "unit_price": 2.99,
+    "tax_rate": 10,
+    "net": 11.96
+   },
+   {
+    "description": "Hazlitt 1852 Vineyard home of the red cat wine glass",
+    "quantity": 4,
+    "unit_price": 3,
+    "tax_rate": 10,
+    "net": 12
+   },
+   {
+    "description": "Vintage Metal Art Sculpture Carving Chef Wine Bottle Holder and Display Tin Chef",
+    "quantity": 3,
+    "unit_price": 25.98,
+    "tax_rate": 10,
+    "net": 77.94
+   },
+   {
+    "description": "Brand new Cuisinart CWO-25 Electric Wine Opener, Stainless Steel",
+    "quantity": 1,
+    "unit_price": 20,
+    "tax_rate": 10,
+    "net": 20
+   },
+   {
+    "description": "Elegant Wine Glasses w/Hand Splatter Painted Accents (3pcs)",
+    "quantity": 3,
+    "unit_price": 20,
+    "tax_rate": 10,
+    "net": 60
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 215.9,
+    "tax": 21.59
+   }
+  ]
+ },
+ "cost_usd": 0.0335,
+ "raw": {
+  "id": "gen-1794512424-fn4494urvYHHvMHFPmdC",
+  "object": "chat.completion",
+  "created": 1794512424,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Scott LLC\",\"vendor_vat\":\"930-98-9727\",\"invoice_ref\":\"25342867\",\"invoice_date\":\"2015-10-01\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":215.9,\"tax\":21.59,\"total\":237.49,\"iban\":\"GB48GPKP09511878652700\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"VTG 1970s MCM Brown Steel Tube Wall or Desk Mounted 12-Wine Rack Bottle Holder\",\"quantity\":1,\"unit_price\":34,\"tax_rate\":10,\"net\":34},{\"description\":\"Stemless wine glass Etched coordinates of Myakka River State Park, Very Good\",\"quantity\":4,\"unit_price\":2.99,\"tax_rate\":10,\"net\":11.96},{\"description\":\"Hazlitt 1852 Vineyard home of the red cat wine glass\",\"quantity\":4,\"unit_price\":3,\"tax_rate\":10,\"net\":12},{\"description\":\"Vintage Metal Art Sculpture Carving Chef Wine Bottle Holder and Display Tin Chef\",\"quantity\":3,\"unit_price\":25.98,\"tax_rate\":10,\"net\":77.94},{\"description\":\"Brand new Cuisinart CWO-25 Electric Wine Opener, Stainless Steel\",\"quantity\":1,\"unit_price\":20,\"tax_rate\":10,\"net\":20},{\"description\":\"Elegant Wine Glasses w/Hand Splatter Painted Accents (3pcs)\",\"quantity\":3,\"unit_price\":20,\"tax_rate\":10,\"net\":60}],\"vat_breakdown\":[{\"rate\":10,\"base\":215.9,\"tax\":21.59}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract the JSON schema and format the output as a bill. The invoice number is 25342867, and the issue date seems to be 01/10/2015. I suspect it's in European format (DD/MM/YYYY), so I’ll convert it to YYYY-MM-DD format, which should be 2015-10-01. The seller is Scott LLC, and the tax ID is 930-98-9727. The line item details include a product description, quantity, net price, VAT, and gross amount, with amounts using a decimal comma.**Constructing invoice details**\n\nI'm organizing some invoice line items. For example, we have stemless wine glasses with etched coordinates, four of them at $2.99 each, totaling $13.16 after tax. There are also Hazlitt Vineyard wine glasses totaling $13.20 and a vintage metal art sculpture costing $85.73, including a tax question. I have a Cuisinart electric wine opener for $22 and elegant wine glasses for $66. The untaxed total is $215.90, with $21.59 in tax, leading to a complete total of $237.49. I want valid JSON only, without any extraneous information.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract the JSON schema and format the output as a bill. The invoice number is 25342867, and the issue date seems to be 01/10/2015. I suspect it's in European format (DD/MM/YYYY), so I’ll convert it to YYYY-MM-DD format, which should be 2015-10-01. The seller is Scott LLC, and the tax ID is 930-98-9727. The line item details include a product description, quantity, net price, VAT, and gross amount, with amounts using a decimal comma.**Constructing invoice details**\n\nI'm organizing some invoice line items. For example, we have stemless wine glasses with etched coordinates, four of them at $2.99 each, totaling $13.16 after tax. There are also Hazlitt Vineyard wine glasses totaling $13.20 and a vintage metal art sculpture costing $85.73, including a tax question. I have a Cuisinart electric wine opener for $22 and elegant wine glasses for $66. The untaxed total is $215.90, with $21.59 in tax, leading to a complete total of $237.49. I want valid JSON only, without any extraneous information.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hY0mXi-bTPoodo2jBPB3a1A8jAftL7ajB-A5QcoRx69u4YDaUPC_LVOh23kI1s5ZS8-sHpopp7cdK0Ci_brYmwDEnDDC__pCui8aGU5ZtB0zwyfk6GRknvMTi6K12NykTaerC9BYJv_h19t4mdy_J_YVkJUFfBoYcXoDr8XmWhYcFjPKeVlWr5FIuZPQW75XnsQC9_rW1fIt37HDsGb8S7cJ2hSPkDn6nDTaCaBR31S7YfKa2k-7tERZR1iaHfnOEVpiw1bUeEwXSqhiGsXbea4C64IC713jt_aIJJ_EuNbUN1yW8VbR3OOyUlo4jeTBtYVoMm06ZIaP9ZhL1RsbLK01SqUA0ocXlrn7T9I1PtCP5fPWwbwZSs5F7uCiVJnI1S6azjQclMU7xSbdwEr52Mw1Nv_GwoxwOLvJsno5uGr5ghJfvDfAybAa2uvjHc_AwYIOLDGBzIOx20qFvzDyBHhLCEYC8H0osbARfd7PHbJNNIHmsqnMO853_sDUppz6ELKN3MRQsZVS_xZtyFq5iVQ6W-68_oY7LzH-eAlH5-OC6cbUQeMrtoEKtI5KtfXBvwYE37kE8guPgGEWIuLn_1eWci1PYqYb_RjI-lXUxYeBkq7wBa0dbNh-EI1Xgu5EmBj4jZefy58IslTaAU12eJKWl_mucWFAoh2WFT2Ne3cs6Frj5jWKkelujuL7cTd8RhMkUKPcLfwp02Cq6EbQbiyJ3MpgBKyBF2Lsw8uCqjp7-XZMd4ZjcsYQo13vjjyBYsNtLz0azq7OTA5qFAFb5QhwHlj30rwP78V-4FTbAgI3gxu11va9p8qrrNucCPcfvuJKdQZY90-eGt3beTPTwVAHh2bVpZVyPdcjWo3c2yn1hsONzmsZB1mmlLKFVKnUf0JlT3otNvBgMlZc7XJIqdlNF_P5WUfi15toMrgy1klh2_i7fVDhDbpCie0TWb_Rx1qEwAuzF0ej9qH46mDJDUL3IPMAee3B2aoEss8yoK6wKzjLJkl3tlUD0jwwL9SpgcIKdh7tm1IRrheAWomFbZ1G6nQSPkoM2VGpIWhs_MvHCagd_GMtNhA7XrLdIjdZ07DYmgTCKG0J2HXTZ_KD3lweh03IifYuZNm-m4tEBWJCRa9I7vVftmjs5EnL3QClumGil_sXhWuKwykn3LR3CSChdDpo8-utJWXDPDYtHEtc4tHEJXMlTkPALIW4Sau6MdQPIBNapJ4GqqYEj1iwYP42ouxhfwpPXZDyvE1ttGrxCPmiRTOp2ASeabO9kKH2yaDQuuXFmEoPGaXQH9jTSFP5L8Uny6RVxDf2Wb4kJ2Pu_eDEzvbICR4EwZT_5ElH4IUmgbCRLCiOr9e3fGXPnlE6zKmaf150nK25VvG-7UFL5vN7_wdT9Teh8qO5OLAx_fKvS-0La2g6KrDByJntyM1JF9YvTgGnLmLV3RKQgzkynub-HeEwrNWvrpxLG9EQz7-KAqCb21Eea5-9nIeDM02YgyQ6i736qa0QGfHXHE6CtDEkV1kfbKzr3fb48TeyOHvozQaQc_5NySO4yujt7nAlLJiFi-agDouWmwqBPkkHtrGXg8nAR7olS3OUbq_xs2HVkXo64bMDVrOduyWlsBcYG7ZV1KScCogXq2LL-ho35Rvdz79cHLONVx7wGoRRKd6FNXhtnrniVYUXXcURur9TSFpgJecwqw_vC2kWIbI-YZ6-0HG2DDf9-FhNxK9B93uaHhYkCiv2AETDiSy_YyPn_fUb1LKw3JZFf-cfoDWJZt62PZnOzsQpxs-_KlH5NqqxbpJeiMFapICHWP_9jiDGi4Cd4SoQRsnV1L5I6GJch3HhhEhwxEQvOT6N5DH8ON19DqWSVj-aV6JaZ40ygUidWEjaFn8Z0buGYL8iHL2moCj4ZoznqnJN4QR_9mhhY7xBgL_H0XAQaEiONjFTuK3h50RnlCVNcqKX6cLdEQrFgh1yYOVl1Nzv1wce--lWtTU8yULAsu7TfSIqNav4glhSy6XXJldcaBPTZz9U8sL-IB42CQZcURthbuJog_ORATCS8YzJP0HdX_xcFvZ1UoK-qzyXcgTOph4mjoiDAaazLtOf0ENONdp5okDLzUZbRw8xqkLVj_aZAZABNlrbtTr9BcV8cfzMbigvn-ZBrFzDfGD6VmB8H9ku_XaJuSqlVjIxL3AqIXR_-qyDCMffp9CMQJdk1gRGgb1u619j7mq8UfapWxDMqXoX_Qflne0_sDFSh9EyHn7sKbXD9KprqochUJg5S9mSXVMSEaL3GdhfcDJsmrxZcFeM1tL0edwrrIKCLP0Jt6MUIFMPyWP8uqpHY0oFlt4YabLapsC0Cn3trow4a-KqRiAX1nvItArSIaD278vTTFg9gZvKun1vjp8U9vD9L7XcgZWAao1tLUf_26yZLzpkK5r246yvYCl2zFs15tERxZnh5n_WEz4L12NCfCojYflq1sMmfDHXyNX4k4HIEpID1WDvqAe8E3UMKtG3mywXjX-N0pmNZxicMu8B2GkCqtdQ5H70gqWCBxBQU97sfz6K-lDmN-KkEKQ9iDj0cHQIj6lWopyrpHsajz056JcQfdkYbkUqxqBe_I-KM66mkA2kxPNf_Yxt9-6Q8PuOAgVC7TY1iRNKJlrH4qphXEZ4W9rlzEW4hnmEx3Xw6p5xmSgl0pfAq9T_8yMR1GPedBO2gEJZgYEkdy0fm4q3s810NF8d5JegHwEAgToeCsYw1nLhZ6zo1VClh0t97yxx4YulQH1dtfYF26p8ikeK2XtzAtV-xp3H1oQ2dD0c2KnVmDOQB8SaAwVoeY7uL-ILdyncPjFllDqngMu1BH1DCXgAZCZakIteryzUUU5DTjOobsVvh3hony6-AvwaxjInPnfyRSTWUxVFKAyAlSUeajzgfVC41_EXLXo68AqLWsyPLqWP7SA_eXV7NHF9Dqm6s_reO1OTKvILcIIPasOHovSeZlL2dQ3TRGOF3pSqoWIm1GjJzJGRb0scoKl7bAv99CTn4bVV_tQmO-HKsm5XFyAjxyCnNrTBIkapBn1bGZAddk3c6UIUbgcHy9dtjd-YSWpWnb7BnrXhQHapkx5MmQqgXejfRHfEyl0g3dW3xWLPgOsmdsKHLnkLLnylc_cDsLiJTmtrcZVPadXgIkiJrzZWDUek3sLXvp_l05b-2PelT-umswqFFnXzDMObJLwLMhcQl9m3OpqfBEaVOJdRPo-yx9KQ-zXA1mf_mSucL7XgGje1_t2AIxCGI5APsYzS__YJdCjf1_NdUwsEvxtRRnw5pONB9GIBrDq3SZhGWjOkBrAP82v5KJzfGLUd24eELciEWyJrPAKQN1pYFnIqMDnDZgLL2NeWrwwrSucZf6aQbOXkVYX_IhDO5g2dA2LMdI8QeHEBduZxR2dWsYkqrP34U4Hz9qc6gH0rlkFhuQKTDgq9XslHW_j5ymT-R2fJ-TlffDAJ3Grku-7Bdpfm1LhXIJBIX4YJZ-X-58QJ3h7k2tljX3qs-fYh6xWBNtJTcu8uQ-WvFP555QCeJFtI-Ah5bmYMOl1y-HpN1SZd66qA4y5kNNz1yU53jGVNeKRqLRXZet1nS6_FpUHM0T_wpeX2HgNMuReDtozrUN9IQjzxha21NEgjnsTBOXDCw_tzjZff6V8ErZVjkKVuaK_-_Z0gevg_enNi9rwEktBXNvcAjAfQC-JAMRLkKOLZO7tlqBBVtukolcL3UaXl7zWGRoIi7_nT_Zne31LbvNgW8KnKoXsGxvJGxZ9AaP9ETZVo338IHximrdoWvyAItaDUAf5ax4nI607lRplT5tpuQAE97xCymoi9fe3L0OqOP9Thwryxds7C4_yaRmllwVxpwC3EScO2k0gKiZHIh0UcOzYFXrHH2BV5S4iyktAP3zCPXJ0z1FIWZc0G02e49EouX3E3C_x9BrT8m2NfNsJJwQ39-QkP6z9de6sMrGSF0093so9Mk222HAUnDmQKip56Kqb6zPC_mxaXSzLRo2UpTmq_gCTJFD568t-4BK0DAABFvRYkwKru1Mt76SyQNFWaKj83E0txkeJMsvZ9GurPijME4v45-8oV1H8nlS49uWxFU29zeA0iLMSnKhnYm31GlYrz1SqfN7W5UBNTpznvK9nQzaPwGNfbdvEbqhALfAW5FaT15RNvtAbNKpreeyw6wVuKcLF22xdQ5CQNjCD5flWnfnOh1Ha4oFSqNJroaSkfbdDDJSH54Ku5jL4AixLNDumnLwf2V6YodlieDv8NL2-eaGMWBgxxhNwsjh-bISGTEtkLHXyF7p4SJCr_F9GIeNrqzwZ1CEQt9VzTf0VOq2wAemvXONAhrl6WColVg8sgqCCcmd2zBbOhAr1E6poeyrR2jcVppgbnCV6X9F-I6wVMCRA5IUXuLHtE9xO0nMJnoJzOMy20ulx8a29uGLcJc9F6fnuT-HA3qBz6Mej2AO_gFkcSkgwhP2QF3qVIK1WVRMOfBaXDWz6QdmAl_pH9ACX7iTD_ep1FeYxzoI4KAHLC3GOYgFPGcv4zBIoeUTNzmtc31NHW0RlnPN9qv665O0Hj05SVSR0cDAALiQcKkJSWoUCDH5f7oPtPPMFD76brHWlS0d21S-8krj1pbEbtNa--cz5pC5C9hWtuEkjVBT2n3zEt_s1-e00ArQuJFsHAqZ-nnvapzOXQ5SWJe54dEuDUuIanzhOvysAw_MP2iPTMsRw2y0FjzF72mUtSQTaBdrK7g19KuZyLO4aCKr8yec2hoWPN6Hc_dgDKqRMHNDx9pzh2itq06Fffmw6rSzR281ben04_PcSYJo8Cvaq3OPwcY0UL8_IDQMVV940GiYJRnH4q2_PXocn3AZ1U07EGt7HrE7kM3QrU2ohV5OJTyBz-6U3tAt7HONYHz6joCGnWaB6B24qkWj4rhuS7BTUkGnovesmaQ8KYpaiAb_1gJE1EGVXAeQAcyFMXs4V5o6vcD853shXt6I5MKQqFdMs4tnQyRdcNNTvCqUEVX7R7Yg4yosWkqvPngGGMH-oNfFLFRmMT9158I6PNz2Sh7tkV7w6-0xYuJDoeUw6DLleJzt4VOQur4AycSBCUUbnjc8dhaFIAb3k5pqW3CaycVGYRMubzCJLadYqRtCwBShirb0s9Od5TsDhk2XIp_OIKxgKxyCKAAGXVX12wCygk2XdVk9ruXBBX0gcqQRQP62F9Og_tMPNg_Jf2Jku6suiyv3Z4gfAgrIuGJ02iKf8V-kGxduTj8n7H-W1GceDRSGsJbd9Pn3omYpywQltnC7KvZ0jaeIlRQGa9UmVs_ZhZ9Y-AU0dr0R2-AxlpgNnWG8mQEsLBVF1zrmdqwBdcq-FdW0jNNblTEJ2Ycjy3WEjhH0JTKfWBlXbHwL58-u2lNknbCRXJgPs3fhea4ekZxYzTdOldvMk9EFt3D1ATemoxAHXCDsud6bHQgfWRmy3rTI66DjjmhTr3iL1Jn4jyz-dRtiaFHN5YjsWUSU8UvWPSZ9lzsDXaPJ8lW1xU_-_8foReTntHmfEVt0ZF2V-1KnRqOACPTsCjJk0C1DDGwxV5e54pwK0wq8QGb6Epfx_RZvPz2ENtRVCxuAq24WJeOKmWt2jHIWHmkrcgxbaGxC9KXcEG5SNyb6d_L9S5iLFMqHhLZBdwbzSrBADU3lnsgLcl_3faYnW5zUYtZxvQPR2frpcZ2B4s1UwXEM-GSzXLn_w3j5Sqfee-2GTJyByPBMVi6H7PFNwWoV7yiqT8fhG8MeIHzENZXimpLEol9McPtOdKNMlNIaQ1aNbPojkzNxr4bUu6T-pOh0hgjenpBwqHal-AXWCaJtwfRF4HXAa56HhzZSRji0vsbHd4s73ZIzLQXycvvPQqKpk6S4bghO4Mkj35Uz6okw0_sz1ttL9csBUfyOT5xAq1nqODID5Dz1H0fFsNJYrElPBUHZv54QDv3_y21pfC9OM-jnl561bRtg3paQvSjxsFawWQPbh2Z_vNiWF9d6YJxx-oWcClPEcoombaHTAb61S66DHQ0ug67tkGG0KTB_4V2njjBpf0Kwh0kA3aaNsNT8cPm1CnpULnisDQByn0wwRORTUHYZjanGZf1AUsBQn0WwBnMvQ2LybJyg4JsP1g6DFVoBTsiqOTWWB1O0LfkQQkGhd6AHNwBoX5kIJin6aMdKbgPuZE1sImsNofj6jRgTkwbkqoUe4pKWVrcuz31UMBltE3qqmn4zdJ3Dc137M9OWgb5F3ES56DHYlc-ienui9MWRDrEZS-Sysi6IdOGTQa5AQPozRBWx7XuVHUQn0PqVVztsnWW3cnMS_zqOvz06N5aeQogtwJfNTTlU7u-fiA5F05teNeyn_7_C8e1ix66Vb9A6K3dCGuRCJoMlOL423BIgw7mKPJhIN6Cfg1D9m7gAiobZXuaZSI3EN7HNpo96gdrVsJ1A8H37FvJ1qsjFyKw8KLrOOKvy97NZlzMd1BzwtCe-cT2evAZEmCept83-Nt4kQua1CLvm0fse5kGLh51OZVrivV5eZBa0kZUJ1F60kV4uqEDiftIf9fIXqAkNZd-O9O_kYHdb71ASJbYajFoJ74wGmCIcQbUEVk1VxG0PKnnJ1xkzdH_qp5lY3qtE89L7uAf5fbLuZ8UFqoNKve7v3USVOfZkBGsM0FMcPeyrQzBc_2wqcjUmOM9mA7mlxwEQqTDb1A8iIZWPJ7VLs2iChN9L9EHyvK2FWLhjN2KyGiebovoFH46N8h1YQNJxr61EME0m1aOnfgpkDUqHfaNUCYTrkEkfcd_8qsmwGvFLAAolpzCW0Rq-AlAtTa8Q8GRZWLIKWiJQ6eflblbOL8XojP6yvpJzPMz0ugzYBKY1zL1UMTsWC-dPYiiNSx5eWyO1IhhVArB_b6Pl8qqlAOkf4QpIrA6WTX9Ikn0ARWqyrVzig_wxTv7LOhDUOGGV_7wqhnorvohIS7Fu2_9BUf27GWSTmLIffc52h4cWkgEvs5xLCljaexWt9DmHsOVeHDfy3UiY1GnM73UznDDAxRRuuW065TkHlcSHzTlK03EijQtC9Qbru0An2EBjgUQHvFrQ66aZ_5bIdgNW4RCclnXMX0-z7Ec1V8-dDvVuILFbioTiBCwwGp3RtZ8JsQsmRFCyymwjCOGtWIS93UjPBSXrCv19PkNbzqo0cAazi35lnA-urfoh-Pgk0_Tal13E1uQA_Ns3DIcssgtAziaGF6zkv3WlbWYosOoPi7t5jZw8oiVxhjSa4Yi4XGHz8Oy-rldOgWpzH4He030_u6X_p9HL9WbZnou_P.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0c0816281d064743016af6162af5e487d18d1193b944aeb186",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 866,
+   "total_tokens": 2370,
+   "cost": 0.0335,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0335,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02598
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.26
+}

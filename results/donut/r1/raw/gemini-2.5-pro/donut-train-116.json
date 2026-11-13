@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Clark and Sons",
+  "vendor_vat": "983-90-0612",
+  "invoice_ref": "88273503",
+  "invoice_date": "2021-01-17",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 499.98,
+  "tax": 50.0,
+  "total": 549.98,
+  "iban": "GB58KHJM79703180709994",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "AMD Dual Core 3.9Ghz 4GB DDR3 500GB WiFi Windows 10 office Desktop PC Computer",
+    "quantity": 2.0,
+    "unit_price": 249.99,
+    "tax_rate": 10.0,
+    "net": 499.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 499.98,
+    "tax": 50.0
+   }
+  ]
+ },
+ "cost_usd": 0.0110375,
+ "raw": {
+  "id": "gen-1794512434-rdHeDBrraV0joojd22NA",
+  "object": "chat.completion",
+  "created": 1794512434,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Clark and Sons\",\n  \"vendor_vat\": \"983-90-0612\",\n  \"invoice_ref\": \"88273503\",\n  \"invoice_date\": \"2021-01-17\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 499.98,\n  \"tax\": 50.00,\n  \"total\": 549.98,\n  \"iban\": \"GB58KHJM79703180709994\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"AMD Dual Core 3.9Ghz 4GB DDR3 500GB WiFi Windows 10 office Desktop PC Computer\",\n      \"quantity\": 2.00,\n      \"unit_price\": 249.99,\n      \"tax_rate\": 10.0,\n      \"net\": 499.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 499.98,\n      \"tax\": 50.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Seller Information**\n\nOkay, I've got it. I'm focusing on extracting the seller's details now. \"Clark and Sons\" is the vendor's name, and their VAT number is 983-90-0612. I'll need to figure out where the invoice reference is next.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted information. I've got the `vendor_name` as \"Clark and Sons\", and the `vendor_vat` as \"983-90-0612\". The invoice reference is \"88273503\" and the invoice date is \"2021-01-17\". I've set `due_date` to `null` because it wasn't specified. I'm assuming the currency is USD. I've populated the untaxed, tax, and total amounts, as well as the IBAN. The VAT treatment is \"S\" and there is one line item. I have extracted the line item details.\n\n\n**Constructing JSON Object**\n\nNow, I'm structuring the JSON object using all the gathered data. I'm carefully considering the currency ambiguity. Although the IBAN suggests GBP, the vendor's US address and the dollar symbol indicate USD, which I'll use. I'm also ensuring the values are formatted with a period as the decimal separator. The VAT rate is \"S\" and there is one line item, I have also extracted the line item details, and incorporated the VAT breakdown into the schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Seller Information**\n\nOkay, I've got it. I'm focusing on extracting the seller's details now. \"Clark and Sons\" is the vendor's name, and their VAT number is 983-90-0612. I'll need to figure out where the invoice reference is next.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema with extracted information. I've got the `vendor_name` as \"Clark and Sons\", and the `vendor_vat` as \"983-90-0612\". The invoice reference is \"88273503\" and the invoice date is \"2021-01-17\". I've set `due_date` to `null` because it wasn't specified. I'm assuming the currency is USD. I've populated the untaxed, tax, and total amounts, as well as the IBAN. The VAT treatment is \"S\" and there is one line item. I have extracted the line item details.\n\n\n**Constructing JSON Object**\n\nNow, I'm structuring the JSON object using all the gathered data. I'm carefully considering the currency ambiguity. Although the IBAN suggests GBP, the vendor's US address and the dollar symbol indicate USD, which I'll use. I'm also ensuring the values are formatted with a period as the decimal separator. The VAT rate is \"S\" and there is one line item, I have also extracted the line item details, and incorporated the VAT breakdown into the schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1064,
+   "total_tokens": 1382,
+   "cost": 0.0110375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0110375,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01064
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 754,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.34
+}

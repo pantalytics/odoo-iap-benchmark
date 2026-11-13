@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18031802170364",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 8.11,
+  "tax": 0.49,
+  "total": 8.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "I00100000031-3 Vege",
+    "quantity": 1,
+    "unit_price": 4.15,
+    "tax_rate": 6,
+    "net": 4.15
+   },
+   {
+    "description": "I00100000064-Add Vegetable",
+    "quantity": 1,
+    "unit_price": 0.47,
+    "tax_rate": 6,
+    "net": 0.47
+   },
+   {
+    "description": "I00100000114-Add Chicken",
+    "quantity": 1,
+    "unit_price": 3.49,
+    "tax_rate": 6,
+    "net": 3.49
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 8.11,
+    "tax": 0.49
+   }
+  ]
+ },
+ "cost_usd": 0.026664,
+ "raw": {
+  "id": "gen-1794514294-koxyf40TDm87z4smyYWZ",
+  "object": "chat.completion",
+  "created": 1794514294,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18031802170364\",\"invoice_date\":\"2018-03-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":8.11,\"tax\":0.49,\"total\":8.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"I00100000031-3 Vege\",\"quantity\":1,\"unit_price\":4.15,\"tax_rate\":6,\"net\":4.15},{\"description\":\"I00100000064-Add Vegetable\",\"quantity\":1,\"unit_price\":0.47,\"tax_rate\":6,\"net\":0.47},{\"description\":\"I00100000114-Add Chicken\",\"quantity\":1,\"unit_price\":3.49,\"tax_rate\":6,\"net\":3.49}],\"vat_breakdown\":[{\"rate\":6,\"base\":8.11,\"tax\":0.49}]}",
+     "refusal": null,
+     "reasoning": "I'm looking at a Malaysian receipt in MYR, with a total of 8.60, GST of 0.49, and an untaxed amount of 8.11. The line amounts as printed (4.40, 0.50, 3.70) already include GST, and I'm weighing whether to report them as printed or convert them to net-of-tax values, since the schema asks for pre-tax figures.\n\nI'm checking the net figures I computed: 4.40, 0.50 and 3.70 divided by 1.06 give 4.15, 0.47 and 3.49, which sum to exactly 8.11. Since that matches the untaxed total, I'll use the net values for consistency, and I'll also note the vendor's GST registration number, company registration and invoice number, along with the date 2018-03-18.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm looking at a Malaysian receipt in MYR, with a total of 8.60, GST of 0.49, and an untaxed amount of 8.11. The line amounts as printed (4.40, 0.50, 3.70) already include GST, and I'm weighing whether to report them as printed or convert them to net-of-tax values, since the schema asks for pre-tax figures.\n\nI'm checking the net figures I computed: 4.40, 0.50 and 3.70 divided by 1.06 give 4.15, 0.47 and 3.49, which sum to exactly 8.11. Since that matches the untaxed total, I'll use the net values for consistency, and I'll also note the vendor's GST registration number, company registration and invoice number, along with the date 2018-03-18.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 697,
+   "total_tokens": 3878,
+   "cost": 0.026664,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.026664,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01394
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 374,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.45
+}

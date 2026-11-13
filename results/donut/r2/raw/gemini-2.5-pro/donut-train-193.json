@@ -1,0 +1,94 @@
+{
+ "pred": {
+  "vendor_name": "Adams, French and Lee",
+  "vendor_vat": "930-97-7214",
+  "invoice_ref": "31137784",
+  "invoice_date": "2015-01-27",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 69.96,
+  "tax": 7.0,
+  "total": 76.96,
+  "iban": "GB96WMVJ60269691548875",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat",
+    "quantity": 3.0,
+    "unit_price": 11.63,
+    "tax_rate": 10.0,
+    "net": 34.89
+   },
+   {
+    "description": "Hippie Sea Wave 3D Carpet Floor Mats Soft Rug for Living Room Non-slip Carpets",
+    "quantity": 3.0,
+    "unit_price": 11.69,
+    "tax_rate": 10.0,
+    "net": 35.07
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 69.96,
+    "tax": 7.0
+   }
+  ]
+ },
+ "cost_usd": 0.0128975,
+ "raw": {
+  "id": "gen-1794515393-pDJsiHeWUIGp9gbHK0hK",
+  "object": "chat.completion",
+  "created": 1794515393,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Adams, French and Lee\",\n  \"vendor_vat\": \"930-97-7214\",\n  \"invoice_ref\": \"31137784\",\n  \"invoice_date\": \"2015-01-27\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 69.96,\n  \"tax\": 7.00,\n  \"total\": 76.96,\n  \"iban\": \"GB96WMVJ60269691548875\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"3D Printed Mat Vortex Illusion Living room Rug Carpet Floors Doors Round Mat\",\n      \"quantity\": 3.00,\n      \"unit_price\": 11.63,\n      \"tax_rate\": 10.0,\n      \"net\": 34.89\n    },\n    {\n      \"description\": \"Hippie Sea Wave 3D Carpet Floor Mats Soft Rug for Living Room Non-slip Carpets\",\n      \"quantity\": 3.00,\n      \"unit_price\": 11.69,\n      \"tax_rate\": 10.0,\n      \"net\": 35.07\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 69.96,\n      \"tax\": 7.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Adams, French and Lee\" as the vendor's name and \"930-97-7214\" as the vendor's VAT ID. I'm focusing on the document to fill the JSON schema now.\n\n\n**Populating The Schema**\n\nI'm now populating the JSON schema. I've extracted \"31137784\" as the `invoice_ref` and \"2015-01-27\" as the `invoice_date`. The `due_date` is `null`. I'm assuming USD as the `currency` and using the ISO code \"USD\", despite the IBAN starting with GB. The `untaxed`, `tax`, and `total` are \"69.96\", \"7.00\", and \"76.96\", respectively. The seller's IBAN is \"GB96WMVJ60269 691548875\". I'm setting `vat_treatment` to \"S\".\n\n\n**Constructing The JSON**\n\nI am now building the JSON object. I'm focusing on the conversion of number formats, ensuring I use dots as decimal separators consistently. While the OCR output uses commas, the calculations imply these are decimal separators, so I will replace them with periods. The currency remains USD, despite the UK IBAN. I've also parsed the line items and VAT breakdown details.\n\n\n**Finalizing The JSON**\n\nI'm now completing the JSON object, having extracted all necessary information. I've parsed the line items and VAT breakdown, diligently handling number formatting to ensure consistent use of periods as decimal separators. The currency remains USD despite the UK IBAN, based on the US addresses. I'm ready to finalize the construction now.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Adams, French and Lee\" as the vendor's name and \"930-97-7214\" as the vendor's VAT ID. I'm focusing on the document to fill the JSON schema now.\n\n\n**Populating The Schema**\n\nI'm now populating the JSON schema. I've extracted \"31137784\" as the `invoice_ref` and \"2015-01-27\" as the `invoice_date`. The `due_date` is `null`. I'm assuming USD as the `currency` and using the ISO code \"USD\", despite the IBAN starting with GB. The `untaxed`, `tax`, and `total` are \"69.96\", \"7.00\", and \"76.96\", respectively. The seller's IBAN is \"GB96WMVJ60269 691548875\". I'm setting `vat_treatment` to \"S\".\n\n\n**Constructing The JSON**\n\nI am now building the JSON object. I'm focusing on the conversion of number formats, ensuring I use dots as decimal separators consistently. While the OCR output uses commas, the calculations imply these are decimal separators, so I will replace them with periods. The currency remains USD, despite the UK IBAN. I've also parsed the line items and VAT breakdown details.\n\n\n**Finalizing The JSON**\n\nI'm now completing the JSON object, having extracted all necessary information. I've parsed the line items and VAT breakdown, diligently handling number formatting to ensure consistent use of periods as decimal separators. The currency remains USD despite the UK IBAN, based on the US addresses. I'm ready to finalize the construction now.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1250,
+   "total_tokens": 1568,
+   "cost": 0.0128975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0128975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 876,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.56
+}

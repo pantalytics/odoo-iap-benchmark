@@ -1,0 +1,113 @@
+{
+ "pred": {
+  "vendor_name": "SUPER SEVEN CASH & CARRY SDN BHD",
+  "vendor_vat": "000639090688",
+  "invoice_ref": "138652",
+  "invoice_date": "2017-06-22",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.81,
+  "tax": 1.22,
+  "total": 28.05,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KK KACANG GORENG 400G",
+    "quantity": 3.0,
+    "unit_price": 6.79,
+    "tax_rate": 6.0,
+    "net": 20.38
+   },
+   {
+    "description": "TERUNG PENDEK",
+    "quantity": 1.0,
+    "unit_price": 3.15,
+    "tax_rate": 0.0,
+    "net": 3.15
+   },
+   {
+    "description": "FALIA MUDA LOCAL",
+    "quantity": 1.0,
+    "unit_price": 2.3,
+    "tax_rate": 0.0,
+    "net": 2.3
+   },
+   {
+    "description": "BAWANG BESAR INDIA",
+    "quantity": 1.0,
+    "unit_price": 0.98,
+    "tax_rate": 0.0,
+    "net": 0.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 20.38,
+    "tax": 1.22
+   },
+   {
+    "rate": 0.0,
+    "base": 6.43,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0363775,
+ "raw": {
+  "id": "gen-1794512919-9T9f26e3CpSHacCYJosQ",
+  "object": "chat.completion",
+  "created": 1794512919,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"SUPER SEVEN CASH & CARRY SDN BHD\",\n  \"vendor_vat\": \"000639090688\",\n  \"invoice_ref\": \"138652\",\n  \"invoice_date\": \"2017-06-22\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 26.81,\n  \"tax\": 1.22,\n  \"total\": 28.05,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"KK KACANG GORENG 400G\",\n      \"quantity\": 3.0,\n      \"unit_price\": 6.79,\n      \"tax_rate\": 6.0,\n      \"net\": 20.38\n    },\n    {\n      \"description\": \"TERUNG PENDEK\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.15,\n      \"tax_rate\": 0.0,\n      \"net\": 3.15\n    },\n    {\n      \"description\": \"FALIA MUDA LOCAL\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2.3,\n      \"tax_rate\": 0.0,\n      \"net\": 2.3\n    },\n    {\n      \"description\": \"BAWANG BESAR INDIA\",\n      \"quantity\": 1.0,\n      \"unit_price\": 0.98,\n      \"tax_rate\": 0.0,\n      \"net\": 0.98\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 20.38,\n      \"tax\": 1.22\n    },\n    {\n      \"rate\": 0.0,\n      \"base\": 6.43,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified and extracted the vendor's name, which is \"SUPER SEVEN CASH & CARRY SDN BHD,\" and their GST ID, \"000639090688.\" This information is ready to populate the relevant fields in the JSON schema.\n\n\n**Populating the Schema**\n\nI've extracted the invoice reference (\"1386 52\") and the invoice date (\"2017-06-22\"). The due date is null, as expected for a cash receipt. The currency is MYR (Malaysian Ringgit). I'm calculating the untaxed amount (26.81) and the total tax (1.22) based on the GST summary and line items, reconciling the figures.\n\n\n**Finalizing the Data**\n\nI'm now populating the line items within the JSON. The first line is for \"KK KACANG GORENG 400G,\" with a quantity of 3 and a unit price of 7.20 (inclusive of tax). I've cross-referenced the calculations, making certain the amounts align before finalizing the JSON. The overall document treatment is S, as it includes standard rate items.\n\n\n**Calculating Line Items**\n\nI'm now focusing on parsing the line item details. I've confirmed that the price shown on the document (\"@7.20\") includes tax. I've calculated the untaxed unit price, which will be input into the schema, using the line total and tax rate. The first line item's net amount is 20.38, its taxed unit price is 7.20, and the pre-tax unit price is ~6.79.\n\n\n**Defining Line Items**\n\nI'm now focusing on defining the individual line items for the JSON. For each, I'm extracting the description, quantity, and unit price (both pre-tax and tax-inclusive), net amount and tax rate. The first line item details are now being input into the schema, ensuring calculations are consistent and reflect the document. The subsequent line items are being parsed and validated similarly, taking into account tax implications and rounding adjustments.\n\n\n**Finalizing the Extraction**\n\nI'm now populating the JSON schema with the extracted data. I've populated `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, and `vat_treatment`. I've confirmed the calculated `untaxed` (26.81), `tax` (1.22), and `total` (28.05) amounts. I'm focusing on the line items, meticulously extracting and calculating the details for each, paying close attention to tax-inclusive pricing. I will now add line item data into the output.\n\n\n**Refining Line Item Calculations**\n\nI've refined my approach to calculating line items, focusing on achieving accuracy with tax-inclusive pricing. I'm taking the total line price and, if applicable, dividing it by 1.06 to obtain the pre-tax amount. This pre-tax value is then divided by the quantity to find the pre-tax unit price. These figures are being integrated into the schema, paying close attention to any rounding discrepancies.\n\n\n**Finalizing the Schema**\n\nI've populated the main fields like vendor, invoice reference and dates, along with currency and tax details. Currently, I am focused on meticulously populating line item details, ensuring consistency between calculations and the document. I've re-calculated line item amounts for better accuracy. Now, I'm working to add the final fields.\n\n\n**Finalizing the JSON**\n\nI'm now satisfied with the data and calculations. I've populated the main fields, including vendor details, invoice information, currency, and tax treatment. I've verified the calculated totals, and I'm confident in the extracted line item details, ensuring tax-inclusive and tax-exclusive pricing align with the document. Now I'm preparing to finalize the JSON structure with the complete data set.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified and extracted the vendor's name, which is \"SUPER SEVEN CASH & CARRY SDN BHD,\" and their GST ID, \"000639090688.\" This information is ready to populate the relevant fields in the JSON schema.\n\n\n**Populating the Schema**\n\nI've extracted the invoice reference (\"1386 52\") and the invoice date (\"2017-06-22\"). The due date is null, as expected for a cash receipt. The currency is MYR (Malaysian Ringgit). I'm calculating the untaxed amount (26.81) and the total tax (1.22) based on the GST summary and line items, reconciling the figures.\n\n\n**Finalizing the Data**\n\nI'm now populating the line items within the JSON. The first line is for \"KK KACANG GORENG 400G,\" with a quantity of 3 and a unit price of 7.20 (inclusive of tax). I've cross-referenced the calculations, making certain the amounts align before finalizing the JSON. The overall document treatment is S, as it includes standard rate items.\n\n\n**Calculating Line Items**\n\nI'm now focusing on parsing the line item details. I've confirmed that the price shown on the document (\"@7.20\") includes tax. I've calculated the untaxed unit price, which will be input into the schema, using the line total and tax rate. The first line item's net amount is 20.38, its taxed unit price is 7.20, and the pre-tax unit price is ~6.79.\n\n\n**Defining Line Items**\n\nI'm now focusing on defining the individual line items for the JSON. For each, I'm extracting the description, quantity, and unit price (both pre-tax and tax-inclusive), net amount and tax rate. The first line item details are now being input into the schema, ensuring calculations are consistent and reflect the document. The subsequent line items are being parsed and validated similarly, taking into account tax implications and rounding adjustments.\n\n\n**Finalizing the Extraction**\n\nI'm now populating the JSON schema with the extracted data. I've populated `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, `due_date`, `currency`, and `vat_treatment`. I've confirmed the calculated `untaxed` (26.81), `tax` (1.22), and `total` (28.05) amounts. I'm focusing on the line items, meticulously extracting and calculating the details for each, paying close attention to tax-inclusive pricing. I will now add line item data into the output.\n\n\n**Refining Line Item Calculations**\n\nI've refined my approach to calculating line items, focusing on achieving accuracy with tax-inclusive pricing. I'm taking the total line price and, if applicable, dividing it by 1.06 to obtain the pre-tax amount. This pre-tax value is then divided by the quantity to find the pre-tax unit price. These figures are being integrated into the schema, paying close attention to any rounding discrepancies.\n\n\n**Finalizing the Schema**\n\nI've populated the main fields like vendor, invoice reference and dates, along with currency and tax details. Currently, I am focused on meticulously populating line item details, ensuring consistency between calculations and the document. I've re-calculated line item amounts for better accuracy. Now, I'm working to add the final fields.\n\n\n**Finalizing the JSON**\n\nI'm now satisfied with the data and calculations. I've populated the main fields, including vendor details, invoice information, currency, and tax treatment. I've verified the calculated totals, and I'm confident in the extracted line item details, ensuring tax-inclusive and tax-exclusive pricing align with the document. Now I'm preparing to finalize the JSON structure with the complete data set.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3598,
+   "total_tokens": 3916,
+   "cost": 0.0363775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0363775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03598
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3110,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 28.88
+}

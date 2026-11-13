@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Garcia, Stewart and Payne",
+  "vendor_vat": "949-78-5411",
+  "invoice_ref": "34528548",
+  "invoice_date": "2015-02-11",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 729.75,
+  "tax": 72.98,
+  "total": 802.73,
+  "iban": "GB60LAOW81233191361598",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\" LCD",
+    "quantity": 2,
+    "unit_price": 139.95,
+    "tax_rate": 10,
+    "net": 279.9
+   },
+   {
+    "description": "Dell Optiplex Desktop Computer with Dual 19\" LCD Monitors Windows 10 Pro",
+    "quantity": 3,
+    "unit_price": 149.95,
+    "tax_rate": 10,
+    "net": 449.85
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 729.75,
+    "tax": 72.98
+   }
+  ]
+ },
+ "cost_usd": 0.032032,
+ "raw": {
+  "id": "gen-1794512460-MlpXGFBGk3QSRckOYJoZ",
+  "object": "chat.completion",
+  "created": 1794512460,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Garcia, Stewart and Payne\",\n  \"vendor_vat\": \"949-78-5411\",\n  \"invoice_ref\": \"34528548\",\n  \"invoice_date\": \"2015-02-11\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 729.75,\n  \"tax\": 72.98,\n  \"total\": 802.73,\n  \"iban\": \"GB60LAOW81233191361598\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Dell Desktop Computers Core i5 16GB 2TB HD 512GB SSD Windows 10 PC 22\\\" LCD\",\n      \"quantity\": 2,\n      \"unit_price\": 139.95,\n      \"tax_rate\": 10,\n      \"net\": 279.90\n    },\n    {\n      \"description\": \"Dell Optiplex Desktop Computer with Dual 19\\\" LCD Monitors Windows 10 Pro\",\n      \"quantity\": 3,\n      \"unit_price\": 149.95,\n      \"tax_rate\": 10,\n      \"net\": 449.85\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 729.75,\n      \"tax\": 72.98\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My processing is moving through identifying and isolating these specific pieces of information.\n\n**Validating Date Formats**\n\nI'm refining the date extraction, particularly for `invoice_date`. I'm considering if \"11/02/2015\" represents November 2nd or February 11th based on regional conventions.\n\n**Resolving Data Ambiguities**\n\nI've confirmed the date format is likely MM/DD/YYYY given the US addresses, so I've set the invoice date to 2015-11-02. I'm also standardizing currency to USD and will represent missing fields as null. Data extraction for line items is in progress.\n\n**Standardizing Invoice Details**\n\nI've solidified the invoice date to 2015-02-11, inferring DD/MM/YYYY format from mixed indicators. I'm also continuing to refine numerical and string data, and preparing to construct the final JSON output.\n\n**Structuring Invoice Output**\n\nI'm now preparing the extracted data for final output. I am performing a schema validation, ensuring all fields align correctly before constructing the JSON.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My processing is moving through identifying and isolating these specific pieces of information.\n\n**Validating Date Formats**\n\nI'm refining the date extraction, particularly for `invoice_date`. I'm considering if \"11/02/2015\" represents November 2nd or February 11th based on regional conventions.\n\n**Resolving Data Ambiguities**\n\nI've confirmed the date format is likely MM/DD/YYYY given the US addresses, so I've set the invoice date to 2015-11-02. I'm also standardizing currency to USD and will represent missing fields as null. Data extraction for line items is in progress.\n\n**Standardizing Invoice Details**\n\nI've solidified the invoice date to 2015-02-11, inferring DD/MM/YYYY format from mixed indicators. I'm also continuing to refine numerical and string data, and preparing to construct the final JSON output.\n\n**Structuring Invoice Output**\n\nI'm now preparing the extracted data for final output. I am performing a schema validation, ensuring all fields align correctly before constructing the JSON.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2408,
+   "total_tokens": 3976,
+   "cost": 0.032032,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.032032,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.028896
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2015,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.95
+}

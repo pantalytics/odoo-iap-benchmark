@@ -1,0 +1,119 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "280081",
+  "invoice_date": "2018-07-13",
+  "due_date": "2018-08-12",
+  "currency": "EUR",
+  "untaxed": 214.09,
+  "tax": 16.39,
+  "total": 230.48,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Übernachtung. 2 Nächte Hotel",
+    "quantity": 1.0,
+    "unit_price": 158.88,
+    "tax_rate": 7.0,
+    "net": 158.88
+   },
+   {
+    "description": "Verpflegung Frühstück",
+    "quantity": 1.0,
+    "unit_price": 11.76,
+    "tax_rate": 19.0,
+    "net": 11.76
+   },
+   {
+    "description": "Fahrtkosten, Taxi Berlin",
+    "quantity": 1.0,
+    "unit_price": 23.36,
+    "tax_rate": 7.0,
+    "net": 23.36
+   },
+   {
+    "description": "Fahrtkosten, Taxi Nürnberg",
+    "quantity": 1.0,
+    "unit_price": 20.09,
+    "tax_rate": 7.0,
+    "net": 20.09
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 202.33,
+    "tax": 14.16
+   },
+   {
+    "rate": 19.0,
+    "base": 11.76,
+    "tax": 2.23
+   }
+  ]
+ },
+ "cost_usd": 0.007329,
+ "raw": {
+  "id": "gen-1794514732-BadbmwRhL5GAoiBjVrqY",
+  "object": "chat.completion",
+  "created": 1794514732,
+  "model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"280081\",\"invoice_date\":\"2018-07-13\",\"due_date\":\"2018-08-12\",\"currency\":\"EUR\",\"untaxed\":214.09,\"tax\":16.39,\"total\":230.48,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Übernachtung. 2 Nächte Hotel\",\"quantity\":1.0,\"unit_price\":158.88,\"tax_rate\":7.0,\"net\":158.88},{\"description\":\"Verpflegung Frühstück\",\"quantity\":1.0,\"unit_price\":11.76,\"tax_rate\":19.0,\"net\":11.76},{\"description\":\"Fahrtkosten, Taxi Berlin\",\"quantity\":1.0,\"unit_price\":23.36,\"tax_rate\":7.0,\"net\":23.36},{\"description\":\"Fahrtkosten, Taxi Nürnberg\",\"quantity\":1.0,\"unit_price\":20.09,\"tax_rate\":7.0,\"net\":20.09}],\"vat_breakdown\":[{\"rate\":7.0,\"base\":202.33,\"tax\":14.16},{\"rate\":19.0,\"base\":11.76,\"tax\":2.23}]}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on pinpointing and extracting the vendor's name and VAT number. My progress involves meticulously reviewing the OCR output to accurately identify these specific details.\n\n**Identifying Invoice Details**\n\nI've successfully extracted crucial invoice metadata, including the reference number, dates, currency, and a comprehensive breakdown of untaxed amounts, tax, and totals. The line items are also parsed with quantities, unit prices, tax rates, and net values.\n\n**Validating Calculated Totals**\n\nI've successfully completed several sanity checks, confirming that the sum of line item net values, the base amounts in the VAT breakdown, and the total calculated tax all align perfectly. I've also cross-referenced the due date, accounting for a minor typo in the original text.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on pinpointing and extracting the vendor's name and VAT number. My progress involves meticulously reviewing the OCR output to accurately identify these specific details.\n\n**Identifying Invoice Details**\n\nI've successfully extracted crucial invoice metadata, including the reference number, dates, currency, and a comprehensive breakdown of untaxed amounts, tax, and totals. The line items are also parsed with quantities, unit prices, tax rates, and net values.\n\n**Validating Calculated Totals**\n\nI've successfully completed several sanity checks, confirming that the sum of line item net values, the base amounts in the VAT breakdown, and the total calculated tax all align perfectly. I've also cross-referenced the due date, accounting for a minor typo in the original text.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2982,
+   "completion_tokens": 1358,
+   "total_tokens": 4340,
+   "cost": 0.007329,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.007329,
+    "upstream_inference_prompt_cost": 0.0022365,
+    "upstream_inference_completions_cost": 0.0050925
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1028,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.21
+}

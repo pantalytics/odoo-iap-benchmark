@@ -1,0 +1,107 @@
+{
+ "pred": {
+  "vendor_name": "Jones-Frazier",
+  "vendor_vat": "937-84-4041",
+  "invoice_ref": "15801054",
+  "invoice_date": "2015-08-09",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 246.31,
+  "tax": 24.63,
+  "total": 270.94,
+  "iban": "GB29ITRF67964142047762",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes",
+    "quantity": 4.0,
+    "unit_price": 44.99,
+    "tax_rate": 10,
+    "net": 179.96
+   },
+   {
+    "description": "10'' Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock",
+    "quantity": 1.0,
+    "unit_price": 26.99,
+    "tax_rate": 10,
+    "net": 26.99
+   },
+   {
+    "description": "Boys Kids Printed Cotton Slippers Zip Fastening 350172494",
+    "quantity": 2.0,
+    "unit_price": 19.68,
+    "tax_rate": 10,
+    "net": 39.36
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 246.31,
+    "tax": 24.63
+   }
+  ]
+ },
+ "cost_usd": 0.027184,
+ "raw": {
+  "id": "gen-1794512833-faE15fAfRC7KqxxgPUhn",
+  "object": "chat.completion",
+  "created": 1794512833,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Jones-Frazier\",\n  \"vendor_vat\": \"937-84-4041\",\n  \"invoice_ref\": \"15801054\",\n  \"invoice_date\": \"2015-08-09\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 246.31,\n  \"tax\": 24.63,\n  \"total\": 270.94,\n  \"iban\": \"GB29ITRF67964142047762\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Under Armour Kids' Grade School Curry 3Zer0 2 Basketball Shoes\",\n      \"quantity\": 4.00,\n      \"unit_price\": 44.99,\n      \"tax_rate\": 10,\n      \"net\": 179.96\n    },\n    {\n      \"description\": \"10'' Cuphead Game Soft Plush Doll Cuphead Mugman Mecup Brocup kids Gift US Stock\",\n      \"quantity\": 1.00,\n      \"unit_price\": 26.99,\n      \"tax_rate\": 10,\n      \"net\": 26.99\n    },\n    {\n      \"description\": \"Boys Kids Printed Cotton Slippers Zip Fastening 350172494\",\n      \"quantity\": 2.00,\n      \"unit_price\": 19.68,\n      \"tax_rate\": 10,\n      \"net\": 39.36\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 246.31,\n      \"tax\": 24.63\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My aim is to accurately identify and capture these specific fields for further processing, ensuring we get the core vendor information.\n\n**Verifying Date Formats**\n\nI'm currently refining the date parsing, specifically addressing the ambiguity in \"09/08/2015.\" I'm leaning towards interpreting it as YYYY-MM-DD, defaulting to 2015-08-09, but am considering standard conventions for disambiguation.\n\n**Finalizing Date and Currency**\n\nI've refined the date interpretation to consistently use 2015-08-09, assuming US MM/DD/YYYY format as the default. The currency symbol \"$\" has been standardized to its ISO 4217 code, \"USD.\"\n\n**Aggregating Line Item Details**\n\nI'm currently processing the line items, specifically focusing on extracting the description, quantity, and unit price for each. My next step is to consolidate this information for accurate cost calculations and reporting.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Invoice Data**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` from the invoice. My aim is to accurately identify and capture these specific fields for further processing, ensuring we get the core vendor information.\n\n**Verifying Date Formats**\n\nI'm currently refining the date parsing, specifically addressing the ambiguity in \"09/08/2015.\" I'm leaning towards interpreting it as YYYY-MM-DD, defaulting to 2015-08-09, but am considering standard conventions for disambiguation.\n\n**Finalizing Date and Currency**\n\nI've refined the date interpretation to consistently use 2015-08-09, assuming US MM/DD/YYYY format as the default. The currency symbol \"$\" has been standardized to its ISO 4217 code, \"USD.\"\n\n**Aggregating Line Item Details**\n\nI'm currently processing the line items, specifically focusing on extracting the description, quantity, and unit price for each. My next step is to consolidate this information for accurate cost calculations and reporting.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2004,
+   "total_tokens": 3572,
+   "cost": 0.027184,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.027184,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.024048
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1543,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 18.1
+}

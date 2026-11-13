@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Grundbesitz GmbH & Co.",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-03-05",
+  "due_date": "2018-04-04",
+  "currency": "EUR",
+  "untaxed": 15387.08,
+  "tax": 2923.55,
+  "total": 18310.63,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Abrechnungskreis 1",
+    "quantity": 1,
+    "unit_price": 15387.08,
+    "tax_rate": 19,
+    "net": 15387.08
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": 15387.08,
+    "tax": 2923.55
+   }
+  ]
+ },
+ "cost_usd": 0.01252,
+ "raw": {
+  "id": "gen-1794511829-6pGeB1V8CJUq4tifo7uX",
+  "object": "chat.completion",
+  "created": 1794511829,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Grundbesitz GmbH & Co.\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"471102\",\n  \"invoice_date\": \"2018-03-05\",\n  \"due_date\": \"2018-04-04\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 15387.08,\n  \"tax\": 2923.55,\n  \"total\": 18310.63,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Abrechnungskreis 1\",\n      \"quantity\": 1,\n      \"unit_price\": 15387.08,\n      \"tax_rate\": 19,\n      \"net\": 15387.08\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 19,\n      \"base\": 15387.08,\n      \"tax\": 2923.55\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Bill Information**\n\nOkay, I'm working on extracting data from this bill and organizing it into a JSON object. I've begun to pinpoint the vendor's name, which appears to be \"Grundbesitz GmbH &\". I'll format the vendor as a string in the JSON data. Now I need to identify the other items to extract.\n\n\n**Defining Data Extraction Steps**\n\nI've got a clearer plan now. First, I will extract the vendor information: name as \"Grundbesitz GmbH & Co.\" and VAT number as \"DE136695976\". Then, I'll grab the invoice number \"471102\" and the date, \"2018-03-05\". The due date is \"2018-04-04\". Currency is \"EUR\". I'll locate \"15.387,08\" as the untaxed total, \"2.923,55\" as tax, and \"18.310,63\" as the gross total.\n\n\n**Defining Data Extraction**\n\nI've refined the approach. I've located all the key data points, including the vendor's name (\"Grundbesitz GmbH & Co.\"), VAT number (\"DE136695976\"), invoice number (\"471102\"), invoice date (\"2018-03-05\"), due date (\"2018-04-04\"), and currency (\"EUR\"). I've also found the untaxed total (\"15.387,08\"), tax amount (\"2.923,55\"), and gross total (\"18.310,63\"). I'll represent the vendor's information as strings. I've also decided that I will set the IBAN to null. Now, I'm focusing on parsing the VAT and invoice line item details.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction, having located all key data points. I've successfully identified and will extract the vendor details, invoice information, payment terms, and totals. I'm carefully extracting and formatting the date values. I am also working on setting the VAT treatment and extracting all the line item details, and VAT breakdown information. I'm focusing on the \"Positionsdaten\" and \"Umsatzsteueraufschlüsselung\" tables on page 2 to complete all remaining data points, and now I'm constructing the final JSON object.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Bill Information**\n\nOkay, I'm working on extracting data from this bill and organizing it into a JSON object. I've begun to pinpoint the vendor's name, which appears to be \"Grundbesitz GmbH &\". I'll format the vendor as a string in the JSON data. Now I need to identify the other items to extract.\n\n\n**Defining Data Extraction Steps**\n\nI've got a clearer plan now. First, I will extract the vendor information: name as \"Grundbesitz GmbH & Co.\" and VAT number as \"DE136695976\". Then, I'll grab the invoice number \"471102\" and the date, \"2018-03-05\". The due date is \"2018-04-04\". Currency is \"EUR\". I'll locate \"15.387,08\" as the untaxed total, \"2.923,55\" as tax, and \"18.310,63\" as the gross total.\n\n\n**Defining Data Extraction**\n\nI've refined the approach. I've located all the key data points, including the vendor's name (\"Grundbesitz GmbH & Co.\"), VAT number (\"DE136695976\"), invoice number (\"471102\"), invoice date (\"2018-03-05\"), due date (\"2018-04-04\"), and currency (\"EUR\"). I've also found the untaxed total (\"15.387,08\"), tax amount (\"2.923,55\"), and gross total (\"18.310,63\"). I'll represent the vendor's information as strings. I've also decided that I will set the IBAN to null. Now, I'm focusing on parsing the VAT and invoice line item details.\n\n\n**Finalizing Data Extraction**\n\nI'm now putting the finishing touches on the data extraction, having located all key data points. I've successfully identified and will extract the vendor details, invoice information, payment terms, and totals. I'm carefully extracting and formatting the date values. I am also working on setting the VAT treatment and extracting all the line item details, and VAT breakdown information. I'm focusing on the \"Positionsdaten\" and \"Umsatzsteueraufschlüsselung\" tables on page 2 to complete all remaining data points, and now I'm constructing the final JSON object.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 576,
+   "completion_tokens": 1180,
+   "total_tokens": 1756,
+   "cost": 0.01252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01252,
+    "upstream_inference_prompt_cost": 0.00072,
+    "upstream_inference_completions_cost": 0.0118
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 891,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 12.22
+}

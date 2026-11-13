@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "Hughes-Jones",
+  "vendor_vat": "905-82-3364",
+  "invoice_ref": "10817861",
+  "invoice_date": "2020-09-06",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 10800.0,
+  "tax": 1080.0,
+  "total": 11880.0,
+  "iban": "GB58XSSC05650878610110",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "YILONG 4'x6' Golden Handmade Area Carpet Tribal Hand Knotted Silk Rugs 074B",
+    "quantity": 3.0,
+    "unit_price": 3600.0,
+    "tax_rate": 10.0,
+    "net": 10800.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 10800.0,
+    "tax": 1080.0
+   }
+  ]
+ },
+ "cost_usd": 0.0246775,
+ "raw": {
+  "id": "gen-1794512332-ICgKkE3hZ4Y1Qth7FcVl",
+  "object": "chat.completion",
+  "created": 1794512332,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hughes-Jones\",\n  \"vendor_vat\": \"905-82-3364\",\n  \"invoice_ref\": \"10817861\",\n  \"invoice_date\": \"2020-09-06\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 10800.00,\n  \"tax\": 1080.00,\n  \"total\": 11880.00,\n  \"iban\": \"GB58XSSC05650878610110\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"YILONG 4'x6' Golden Handmade Area Carpet Tribal Hand Knotted Silk Rugs 074B\",\n      \"quantity\": 3.00,\n      \"unit_price\": 3600.00,\n      \"tax_rate\": 10.0,\n      \"net\": 10800.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 10800.00,\n      \"tax\": 1080.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI've successfully identified \"Hughes-Jones\" as the vendor and confirmed that \"905-82-3364\" is their VAT ID. I am looking into how to format the retrieved information to match the specific JSON schema fields.\n\n\n**Mapping Data to Schema**\n\nI'm now populating the JSON schema fields. The vendor name is \"Hughes-Jones\", and the VAT ID is \"905-82-3364\". \"10817861\" is the invoice number. I'm taking \"06/09/2020\" as the invoice date, and assuming DD/MM/YYYY format, so \"2020-09-06\". There's no due date, so I've set that to null. The currency is likely USD, the \"untaxed\" amount is 10800.00, the tax is 1080.00, and the total is 11880.00.\n\n\n**Refining Data Extraction**\n\nI've now populated more fields in the JSON schema. \"Hughes-Jones\" is the vendor and \"905-82-3364\" is the VAT ID, and \"10817861\" is the invoice number. The invoice date is \"06/09/2020\", but there's a date format ambiguity, US vs UK. I'm assuming DD/MM/YYYY so I'm using \"2020-09-06\" initially, but the IBAN is GB, which suggests DD/MM/YYYY. The currency is \"USD\". \"10800.00\" is untaxed, \"1080.00\" is tax, and \"11880.00\" is total.\n\n\n**Finalizing Date Interpretation**\n\nI've reviewed the ambiguous date, taking into account the US addresses and the GB IBAN. I've re-evaluated and confirmed the invoice date as 2020-09-06, favoring DD/MM/YYYY given the IBAN's origin, the 'VAT' term usage, and the mix of US and UK clues. I'm now certain about all the fields and moving forward.\n\n\n**Interpreting Invoice Details**\n\nI am now extracting and mapping the remaining data. I have filled the fields for the lines, quantities, prices, and tax breakdown as follows: the description, quantity, unit price, tax rate, and net amounts. The IBAN is confirmed as GB58XSSC05650878610110. I am still uncertain on the date, because of conflicting clues. I'm going with 2020-06-09. I am ready to finalize and output the result.\n\n\n**Finalizing Document Interpretation**\n\nI've now completed the extraction of all data fields, addressing the final complexities. Despite initial format ambiguities, I've elected 2020-09-06 as the correct date based on evidence. I've ensured a comprehensive interpretation of all the information provided in the invoice. I am now confident in presenting the extracted data.\n\n\n**Finalizing Field Validation**\n\nI've completed my work. I have extracted and mapped every field, and there's a degree of conflict in the invoice data. I have finalized all fields. I'm now ready to generate the final JSON output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI've successfully identified \"Hughes-Jones\" as the vendor and confirmed that \"905-82-3364\" is their VAT ID. I am looking into how to format the retrieved information to match the specific JSON schema fields.\n\n\n**Mapping Data to Schema**\n\nI'm now populating the JSON schema fields. The vendor name is \"Hughes-Jones\", and the VAT ID is \"905-82-3364\". \"10817861\" is the invoice number. I'm taking \"06/09/2020\" as the invoice date, and assuming DD/MM/YYYY format, so \"2020-09-06\". There's no due date, so I've set that to null. The currency is likely USD, the \"untaxed\" amount is 10800.00, the tax is 1080.00, and the total is 11880.00.\n\n\n**Refining Data Extraction**\n\nI've now populated more fields in the JSON schema. \"Hughes-Jones\" is the vendor and \"905-82-3364\" is the VAT ID, and \"10817861\" is the invoice number. The invoice date is \"06/09/2020\", but there's a date format ambiguity, US vs UK. I'm assuming DD/MM/YYYY so I'm using \"2020-09-06\" initially, but the IBAN is GB, which suggests DD/MM/YYYY. The currency is \"USD\". \"10800.00\" is untaxed, \"1080.00\" is tax, and \"11880.00\" is total.\n\n\n**Finalizing Date Interpretation**\n\nI've reviewed the ambiguous date, taking into account the US addresses and the GB IBAN. I've re-evaluated and confirmed the invoice date as 2020-09-06, favoring DD/MM/YYYY given the IBAN's origin, the 'VAT' term usage, and the mix of US and UK clues. I'm now certain about all the fields and moving forward.\n\n\n**Interpreting Invoice Details**\n\nI am now extracting and mapping the remaining data. I have filled the fields for the lines, quantities, prices, and tax breakdown as follows: the description, quantity, unit price, tax rate, and net amounts. The IBAN is confirmed as GB58XSSC05650878610110. I am still uncertain on the date, because of conflicting clues. I'm going with 2020-06-09. I am ready to finalize and output the result.\n\n\n**Finalizing Document Interpretation**\n\nI've now completed the extraction of all data fields, addressing the final complexities. Despite initial format ambiguities, I've elected 2020-09-06 as the correct date based on evidence. I've ensured a comprehensive interpretation of all the information provided in the invoice. I am now confident in presenting the extracted data.\n\n\n**Finalizing Field Validation**\n\nI've completed my work. I have extracted and mapped every field, and there's a degree of conflict in the invoice data. I have finalized all fields. I'm now ready to generate the final JSON output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2428,
+   "total_tokens": 2746,
+   "cost": 0.0246775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0246775,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02428
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2116,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.84
+}

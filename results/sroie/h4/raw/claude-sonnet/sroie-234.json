@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "BEMED (SP) SDN. BHD.",
+  "vendor_vat": "001734164480",
+  "invoice_ref": "58273599475",
+  "invoice_date": "2017-01-02",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 155.66,
+  "tax": 9.34,
+  "total": 165.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALPHA LIPID LIFE LINE 450MG 450G",
+    "quantity": 1,
+    "unit_price": 165.0,
+    "tax_rate": 6,
+    "net": 165.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 155.66,
+    "tax": 9.34
+   }
+  ]
+ },
+ "cost_usd": 0.014108,
+ "raw": {
+  "id": "gen-1794516210-ahV4nihHCBeFdXunRidz",
+  "object": "chat.completion",
+  "created": 1794516210,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"BEMED (SP) SDN. BHD.\",\"vendor_vat\":\"001734164480\",\"invoice_ref\":\"58273599475\",\"invoice_date\":\"2017-01-02\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":155.66,\"tax\":9.34,\"total\":165.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"ALPHA LIPID LIFE LINE 450MG 450G\",\"quantity\":1,\"unit_price\":165.0,\"tax_rate\":6,\"net\":165.0}],\"vat_breakdown\":[{\"rate\":6,\"base\":155.66,\"tax\":9.34}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the Malaysian receipt and converting the date from 02/Jan/2017 to 2017-01-02. The total is 165.00, which I'm treating as GST-inclusive at 6%, so the tax comes to about 9.34 and the base to about 155.66. The printed 155.00 may be a misreading of 155.66, so I'm checking that against the 9.34 tax line.\n\nI'm settling on 155.66 as the untaxed base, since it reconciles with the 9.34 tax and the 165.00 total, even though the printed figure reads 155.00. I'm recording the line as quantity 1 at 165.00 with a 6% inclusive rate, treated as taxable, and noting the vendor GST number and the invoice reference as printed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the Malaysian receipt and converting the date from 02/Jan/2017 to 2017-01-02. The total is 165.00, which I'm treating as GST-inclusive at 6%, so the tax comes to about 9.34 and the base to about 155.66. The printed 155.00 may be a misreading of 155.66, so I'm checking that against the 9.34 tax line.\n\nI'm settling on 155.66 as the untaxed base, since it reconciles with the 9.34 tax and the 165.00 total, even though the printed figure reads 155.00. I'm recording the line as quantity 1 at 165.00 with a 6% inclusive rate, treated as taxable, and noting the vendor GST number and the invoice reference as printed.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 684,
+   "total_tokens": 4318,
+   "cost": 0.014108,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014108,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.00684
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 460,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.97
+}

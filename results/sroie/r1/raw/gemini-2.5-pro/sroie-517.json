@@ -1,0 +1,87 @@
+{
+ "pred": {
+  "vendor_name": "MYNEWS RETAIL SB",
+  "vendor_vat": "000709361664",
+  "invoice_ref": "1856-608-9161-2806180322",
+  "invoice_date": "2018-06-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.0,
+  "tax": 0.0,
+  "total": 6.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "GP GREENCELL EXTRA HEAVY DUTY AAA 4+2",
+    "quantity": 1.0,
+    "unit_price": 6.0,
+    "tax_rate": 0.0,
+    "net": 6.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 6.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0116075,
+ "raw": {
+  "id": "gen-1794512757-0je3RfuMMg5PhYxqRfZY",
+  "object": "chat.completion",
+  "created": 1794512757,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"MYNEWS RETAIL SB\",\n  \"vendor_vat\": \"000709361664\",\n  \"invoice_ref\": \"1856-608-9161-2806180322\",\n  \"invoice_date\": \"2018-06-28\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.00,\n  \"tax\": 0.00,\n  \"total\": 6.00,\n  \"iban\": null,\n  \"vat_treatment\": \"Z\",\n  \"lines\": [\n    {\n      \"description\": \"GP GREENCELL EXTRA HEAVY DUTY AAA 4+2\",\n      \"quantity\": 1.0,\n      \"unit_price\": 6.00,\n      \"tax_rate\": 0.0,\n      \"net\": 6.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 6.00,\n      \"tax\": 0.00\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"myNEWS.com\" as the vendor from the receipt and matched it to the company name \"MYNEWS RETAIL SB(306295-X) FKA BISON STORES SB\". I'm now cross-referencing this to populate the `vendor_name` field within the JSON schema. Next, I will start to extract the date of the receipt.\n\n\n**Populating Receipt Details**\n\nI'm now populating the JSON schema fields. The vendor name is \"MYNEWS RETAIL SB\", and the VAT registration ID is \"000709361664\". I extracted the invoice number as \"1856-608-9161-280 6180322\", and the date as 2018-06-28. I set the due date and IBAN to `null` as they're not on this receipt. I found MYR is the currency, the subtotal, tax, and total are 6.00, 0.00, and 6.00, respectively. The tax treatment is \"Z\".\n\n\n**Finalizing Receipt Extraction**\n\nI've completed extracting all the data points and meticulously cross-verified them against the receipt. The JSON schema is now fully populated, including the vendor details, invoice information, tax breakdown, and line item details, all meticulously aligned with the information available. I've validated that there are no discrepancies. The schema should now be complete.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"myNEWS.com\" as the vendor from the receipt and matched it to the company name \"MYNEWS RETAIL SB(306295-X) FKA BISON STORES SB\". I'm now cross-referencing this to populate the `vendor_name` field within the JSON schema. Next, I will start to extract the date of the receipt.\n\n\n**Populating Receipt Details**\n\nI'm now populating the JSON schema fields. The vendor name is \"MYNEWS RETAIL SB\", and the VAT registration ID is \"000709361664\". I extracted the invoice number as \"1856-608-9161-280 6180322\", and the date as 2018-06-28. I set the due date and IBAN to `null` as they're not on this receipt. I found MYR is the currency, the subtotal, tax, and total are 6.00, 0.00, and 6.00, respectively. The tax treatment is \"Z\".\n\n\n**Finalizing Receipt Extraction**\n\nI've completed extracting all the data points and meticulously cross-verified them against the receipt. The JSON schema is now fully populated, including the vendor details, invoice information, tax breakdown, and line item details, all meticulously aligned with the information available. I've validated that there are no discrepancies. The schema should now be complete.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1121,
+   "total_tokens": 1439,
+   "cost": 0.0116075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0116075,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01121
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 835,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.3
+}

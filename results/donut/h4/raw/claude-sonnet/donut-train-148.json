@@ -1,0 +1,109 @@
+{
+ "pred": {
+  "vendor_name": "Smith and Sons",
+  "vendor_vat": "912-86-5998",
+  "invoice_ref": "20653012",
+  "invoice_date": "2013-08-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 581.95,
+  "tax": 58.2,
+  "total": 640.15,
+  "iban": "GB46MLEX00282137220677",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 1,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 14.99
+   },
+   {
+    "description": "Nintendo 64 Console with Box, Foam and extra oem controller",
+    "quantity": 4,
+    "unit_price": 120,
+    "tax_rate": 10,
+    "net": 480
+   },
+   {
+    "description": "B311 Nintendo 3DS console Cosmo Black Japan x",
+    "quantity": 4,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 47.96
+   },
+   {
+    "description": "PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display",
+    "quantity": 1,
+    "unit_price": 39,
+    "tax_rate": 10,
+    "net": 39
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 581.95,
+    "tax": 58.2
+   }
+  ]
+ },
+ "cost_usd": 0.013568,
+ "raw": {
+  "id": "gen-1794515623-g9ZrzzZEP7Fh8encOYTf",
+  "object": "chat.completion",
+  "created": 1794515623,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith and Sons\",\"vendor_vat\":\"912-86-5998\",\"invoice_ref\":\"20653012\",\"invoice_date\":\"2013-08-03\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":581.95,\"tax\":58.2,\"total\":640.15,\"iban\":\"GB46MLEX00282137220677\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Sony PlayStation 1 PS1 Console model scph-7501\",\"quantity\":1,\"unit_price\":14.99,\"tax_rate\":10,\"net\":14.99},{\"description\":\"Nintendo 64 Console with Box, Foam and extra oem controller\",\"quantity\":4,\"unit_price\":120,\"tax_rate\":10,\"net\":480},{\"description\":\"B311 Nintendo 3DS console Cosmo Black Japan x\",\"quantity\":4,\"unit_price\":11.99,\"tax_rate\":10,\"net\":47.96},{\"description\":\"PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display\",\"quantity\":1,\"unit_price\":39,\"tax_rate\":10,\"net\":39}],\"vat_breakdown\":[{\"rate\":10,\"base\":581.95,\"tax\":58.2}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the address and currency as US-style, and the date 08/03/2013 could be month-first, which would make it August 3rd. The reading rules warn against assuming that, but the US context points toward it. The comma decimal separators hint at a European format, though, which conflicts with that. This may be a generated dataset, and invoice dates in that kind of data are usually written month-first.\n\nI'm settling on the date as 2013-08-03 since US addresses point to month-first. The line items come to 581.95 when added up, and there's no due date.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the address and currency as US-style, and the date 08/03/2013 could be month-first, which would make it August 3rd. The reading rules warn against assuming that, but the US context points toward it. The comma decimal separators hint at a European format, though, which conflicts with that. This may be a generated dataset, and invoice dates in that kind of data are usually written month-first.\n\nI'm settling on the date as 2013-08-03 since US addresses point to month-first. The line items come to 581.95 when added up, and there's no due date.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSiQkKEAgTGAI4AUIIdGhpbmtpbmcSDGpHs8va5U7QbBWOQBoMcUetCGEPY0nGt99tIjAAzZOquk8Of07ELuf55Ucwjt9zulAg21gx0NEXUP/OFr0fVGFDj340YWFvRKmwtN4qpgg8NQ7ahX7f8rEplY/hOQXcvfnZfuGeD1LiaUpbntdWBz0KwXtk9o7DMsm/l6aqghG+XYby53sY1BnzsSFKt3/Rk9vqzLDvHKj74z5zXaoIuDHf5BZ6GzWxlA9Ww5I5jyNxHHuwSSLRDFhjdYlRD9Dq3nDj5nLS6nJJz/UdYbHo6eO4nQFS30MrCH9wT2Okbr/rc9S9s6rJrvQBbLDher913J+DxYPeK5lpAhXKzNIoheclsIOtxnY6rzwiEKWxB1I/6F+cdhanBlzm2S44OQ7Q0D1jrl7emgVm5BjxD2chzK8HHCpWUCrx8eg+5RZVk7uqj3veBup72AaDRCxRyaKo/1gy4dc8tW5OU+XRJQ23O2vaJA2eOjIn4C+v4M9DvZguVZRvuBQsC1AkhO2x+RGPZ4/sqZ2Darc2UjlMOEn4vqjpx7iq7WE+Za9FmkditHb0rrGaD1mWOJriD+mGfcrDinwUttH/v5BexTOa07+rNni6F6fO+DRyNga0/F/tTdRwvxf2fIwkme0x078/+8znpkHSE0zVEvaRhCLvolCKNI04PoU4FJbMMM+1UTdii0/0pqkYFk7kID6dd1640P6gPtdbnE4QS3/B+ku6+/pqsFJrJnCyltdyh2asCGu+gCssFSIEN+U4S49Adjbn4a2hZ85suIY8aCkn7uXKKH86vLbxnbbsqifLevkVKLsugxbWuoHN1wd5hfPdtZaR2WMhs2Ry34zObU9e3ljGJDyo4le3s/grIswSPzolWVJGcqXh6BSuxr+WymnrLAdmklfSmkT0MOucp6gPmbmB3Nw/BkJ+puqbB+OiIRdepKYDfzwr5/aeRJ8QznnLxm9ZbC3y5Ug+m0Wg5l7l/w61hjr3IWoP2kfy4rs+apyTQqxTJBq4Pzqu3f+Knjr0WfBuZIBdcmblgR3E7SDFzh63j6rTUeE4d3S1X5bistfGFsKmkDzfSSZ7sB94rZwyFIJ8GpsPzl8CnNFHcVy9gRs1nfb1zlyIlgMmh1KFTXetbmuTXbVQeueXAk0vC0FUu6f8IlhK0HvvCkmVZbkJw+G0xfFH3k+kRg/dVtXbLoVer/WHHU2BSWLqrrTSWgu0Lg5qoMB+8mdf9abL3cXTw5CvbmhPjnCgtVFneY6V0l+Q2rshctztqP/E0tntwI5/VP9bHrhuSBn5f9AMso+bOLkiLaXzedRMl3y3o2XQFGUDLxYrunjSEg84M3qfFEXntaQVjWFMsn515jPZKsYDEIaRu5dwlaiFEYtG5G1ayiahCw+iYFCDPLkNuRBLUwiQy67rz9HsjjTuluu61otSMPB+6n6cJNKB33SJhIO3WwKjJwTOFEdXPEmgB+O8eFcPdpmPjxCr5LJMV8SmECNQUHpFNzkECQPZf0cICq9dKFXK77TTskpNG4wcpDEYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3634,
+   "completion_tokens": 630,
+   "total_tokens": 4264,
+   "cost": 0.013568,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013568,
+    "upstream_inference_prompt_cost": 0.007268,
+    "upstream_inference_completions_cost": 0.0063
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 214,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.79
+}

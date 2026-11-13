@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "Stone, Lopez and Harding",
+  "vendor_vat": "955-84-1854",
+  "invoice_ref": "91134042",
+  "invoice_date": "2013-12-02",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 93.0,
+  "tax": 9.3,
+  "total": 102.3,
+  "iban": "GB34FDZU36144750758177",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Little Boys Size 2 Son Of Mars Jordan",
+    "quantity": 3.0,
+    "unit_price": 19.0,
+    "tax_rate": 10,
+    "net": 57.0
+   },
+   {
+    "description": "adidas Originals Kids Stan Smith White Green Toddler Boy Girl US 9",
+    "quantity": 3.0,
+    "unit_price": 12.0,
+    "tax_rate": 10,
+    "net": 36.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 93.0,
+    "tax": 9.3
+   }
+  ]
+ },
+ "cost_usd": 0.022084,
+ "raw": {
+  "id": "gen-1794512045-14ls9QsJYBmeL9pw8FYK",
+  "object": "chat.completion",
+  "created": 1794512045,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Stone, Lopez and Harding\",\n  \"vendor_vat\": \"955-84-1854\",\n  \"invoice_ref\": \"91134042\",\n  \"invoice_date\": \"2013-12-02\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 93.00,\n  \"tax\": 9.30,\n  \"total\": 102.30,\n  \"iban\": \"GB34FDZU36144750758177\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Little Boys Size 2 Son Of Mars Jordan\",\n      \"quantity\": 3.00,\n      \"unit_price\": 19.00,\n      \"tax_rate\": 10,\n      \"net\": 57.00\n    },\n    {\n      \"description\": \"adidas Originals Kids Stan Smith White Green Toddler Boy Girl US 9\",\n      \"quantity\": 3.00,\n      \"unit_price\": 12.00,\n      \"tax_rate\": 10,\n      \"net\": 36.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 93.00,\n      \"tax\": 9.30\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Confirming Data Types**\n\nI'm actively cross-referencing the extracted invoice data against the schema. Specifically, I'm confirming that `invoice_date` and `invoice_ref` are correctly interpreted as string types, and I'm also noting the potential ambiguity in the `invoice_date` format for future parsing adjustments.\n\n**Verifying Numerical Fields**\n\nI'm diligently cross-referencing numerical fields now. Specifically, I've confirmed the currency as \"USD\" from the \"$\" symbol and am processing the untaxed, tax, and total amounts as plain numbers, adhering to the output format.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Schema Requirements**\n\nI'm currently focused on extracting the `vendor_name` and `vendor_vat` fields. My analysis of the schema confirms these are expected to be strings or null values, which guides my approach to identifying and parsing this information from the invoice image.\n\n**Confirming Data Types**\n\nI'm actively cross-referencing the extracted invoice data against the schema. Specifically, I'm confirming that `invoice_date` and `invoice_ref` are correctly interpreted as string types, and I'm also noting the potential ambiguity in the `invoice_date` format for future parsing adjustments.\n\n**Verifying Numerical Fields**\n\nI'm diligently cross-referencing numerical fields now. Specifically, I've confirmed the currency as \"USD\" from the \"$\" symbol and am processing the untaxed, tax, and total amounts as plain numbers, adhering to the output format.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 1579,
+   "total_tokens": 3147,
+   "cost": 0.022084,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022084,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.018948
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1214,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 14.7
+}

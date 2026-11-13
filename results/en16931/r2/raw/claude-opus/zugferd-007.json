@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "MVM Musterhafter Versicherungsverein Musterstadt a.G.",
+  "vendor_vat": "DE234567891",
+  "invoice_ref": "00.123.456.7-2018-1",
+  "invoice_date": "2018-03-11",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": 220.0,
+  "tax": 0.0,
+  "total": 220.0,
+  "iban": "DE75123456780000001234",
+  "vat_treatment": "E",
+  "lines": [
+   {
+    "description": "Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9",
+    "quantity": 1,
+    "unit_price": 67.2244,
+    "tax_rate": 0,
+    "net": 80.0
+   },
+   {
+    "description": "Vollkasko SF25 (30 %) Typkl. 21 Regio R4",
+    "quantity": 1,
+    "unit_price": 117.6471,
+    "tax_rate": 0,
+    "net": 140.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 220.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.042596,
+ "raw": {
+  "id": "gen-1794514882-nEWrC372rs5jR8inyuEt",
+  "object": "chat.completion",
+  "created": 1794514882,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MVM Musterhafter Versicherungsverein Musterstadt a.G.\",\"vendor_vat\":\"DE234567891\",\"invoice_ref\":\"00.123.456.7-2018-1\",\"invoice_date\":\"2018-03-11\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":220.0,\"tax\":0.0,\"total\":220.0,\"iban\":\"DE75123456780000001234\",\"vat_treatment\":\"E\",\"lines\":[{\"description\":\"Kfz-Haftpflicht SF25 (30 %) Typkl. 18 Regio R9\",\"quantity\":1,\"unit_price\":67.2244,\"tax_rate\":0,\"net\":80.0},{\"description\":\"Vollkasko SF25 (30 %) Typkl. 21 Regio R4\",\"quantity\":1,\"unit_price\":117.6471,\"tax_rate\":0,\"net\":140.0}],\"vat_breakdown\":[{\"rate\":0,\"base\":220.0,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm settling on the due date field: the Fälligkeit column is empty, and the only dates in the text are the installment due dates for the direct debit option, so I'm leaning toward null since they're ambiguous. Now I'm turning to the totals, where the gross sum is 220 and the payment amount is 440.\n\nI'm treating the total as 220, which is the gross sum, and noting that it doesn't match the 440 payment amount. The line item has a net of 80.00 with a printed unit price of 67.2244 and quantity 1, so I'll keep that figure as printed, since the unit price is net of the insurance tax. The VAT treatment is E.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm settling on the due date field: the Fälligkeit column is empty, and the only dates in the text are the installment due dates for the direct debit option, so I'm leaning toward null since they're ambiguous. Now I'm turning to the totals, where the gross sum is 220 and the payment amount is 440.\n\nI'm treating the total as 220, which is the gross sum, and noting that it doesn't match the 440 payment amount. The line item has a net of 80.00 with a printed unit price of 67.2244 and quantity 1, so I'll keep that figure as printed, since the unit price is net of the insurance tax. The VAT treatment is E.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS3ggKEAgTGAI4AUIIdGhpbmtpbmcSDIt0Cai91DpCQgl2GRoMsI4HXta8LwhZQue3IjDKWybtvHdeKsEm9F7UnstC96E4OURw6adTSn5jWp7OiCalVoibzuPWEHhoMDYeRXoq+wfdVsbj1DcQ6vGLDwtCnnC5NkebrbQjiwfa20uqknglUq62x752gxQzl01DnFTuB1JWzoUiVR1qJi+ylEsteTUxlhxP4ZYRQVJGS8gzLq6UgXiv2sRR5y6ImQ0tY3qwGWy6rCZcRgL2EgpCntmoHUP2d/h6ltgvhpyWe5BjG4JK43KUyrVfYYp3OaRCYnnxD9WPoE2qbjtnLvi1ErOCL/fuYlbsUvK/m12q0MKGAJwzNLfB+QnGwHTKLpsAlO7PBkmTTsbQLl9AckFOqaZtmUVuViRdz6qxfOCT0Sgz3E2U7zLm6rIGHRBmficg1EgdfHvMeBoB8+PCKJTxHsVCyFwYzMWPSBSGwMaKWhwbCcPkwsc3YXEn2cyPvlKk7QAs8f7+r+jCFMB7GGxHy1UtOpsJ5FmLc8kpE0PpYH9mfU5knsHHwqR04RRIdJ1a706TKpR1w6WIO1xnu3TtBBX5DMPCMdeHNEH2g/5VyjXZqx2iuD92GdPO3Q/rZ3IFp1xtFkaxqW1/aN6Po5RruM0ZmA3vEkZK5TOfmU4YPtAgq4chOpZJ6uOYPsXikFtcAH0aEHS+/CK+aJ91nns9ek5T/yXjauvaxEEyJFCbqK2LWauwG5PrfvW9Vhlu4nqzLYG805BLNXvi2dBEXEHQnYb+VGsrQR7JPs1DN28CIjP5RgLkMqIYBcBEGwjWkGUrIdk2ZWvZ/nECqPVh4Ua95Q4Ujx4MvAnnU2meR3cqoEivQ6M257DwK0A2EjFklqgSmWzouUcZhOsux62/exM/4QqyZq4c5yP1WCXR43Z5dI39ayTtYKrBfELzQ9/LrnCJbDp+Dq5wsY3bW7oeLzFu4mT1BPPfitdwLnlq5S+OufeCvMqX5HLLmylSi5plorEPSnHqJTf0M91R1Tbc90LUFaxeMUbuMoLj9xPjQLtkbdkqgmn738Xn6JhWVPuQxYNJlkti/RtmSDSYNQZYy9JXx1Wd2b2t8dgwmq8JcvAkaJOd/VcdS3oEncEuKYA8k8uA0sJryn/rB0dWSUJnkEPvEk9tvtxeX0qwNIIqifXAVyzd+MfDgB9zm0+tPdrswxLc8XRveuUl58tXSaMs+6c+xV/BLZ3M6tCL9KMtkWrDypmfNc8ZvM7kYnn1FfHfgiPJtv0JchmeuUtr5XiB1bylfrH0xcB6+K+CEpPTW/43XmFBSSAfJj2+bIv5CpB0vOLQtYnFfPnmxudGBn9bPt9dYpJB5R5PkwWHAsEXHFikkTqHuJo+wCsX25PEenbE1HffvIS8iuPevRvEDFOfuoiCuUjoxYHMPF4fKJZq6LKyspqIXrJwKeaJxzvZmNDsVOhboyfxFFtPEo2wmmHD5H8W6BgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 7864,
+   "completion_tokens": 557,
+   "total_tokens": 8421,
+   "cost": 0.042596,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.042596,
+    "upstream_inference_prompt_cost": 0.031456,
+    "upstream_inference_completions_cost": 0.01114
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 226,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.64
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18052402170329",
+  "invoice_date": "2018-05-24",
+  "due_date": null,
+  "currency": null,
+  "untaxed": 7.92,
+  "tax": 0.48,
+  "total": 8.4,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000025-1 Meat + 2 Vege",
+    "quantity": 1.0,
+    "unit_price": 5.66,
+    "tax_rate": 6.0,
+    "net": 5.66
+   },
+   {
+    "description": "SR 100100000170-Imported Veggies",
+    "quantity": 1.0,
+    "unit_price": 1.51,
+    "tax_rate": 6.0,
+    "net": 1.51
+   },
+   {
+    "description": "SR 100100000149- Add Vegetable (X)",
+    "quantity": 1.0,
+    "unit_price": 0.75,
+    "tax_rate": 6.0,
+    "net": 0.75
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 7.92,
+    "tax": 0.48
+   }
+  ]
+ },
+ "cost_usd": 0.0330175,
+ "raw": {
+  "id": "gen-1794514763-wGF5ze61cKwPNX7JZFxR",
+  "object": "chat.completion",
+  "created": 1794514763,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.4,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 100100000025-1 Meat + 2 Vege\",\n      \"quantity\": 1.0,\n      \"unit_price\": 5.66,\n      \"tax_rate\": 6.0,\n      \"net\": 5.66\n    },\n    {\n      \"description\": \"SR 100100000170-Imported Veggies\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.51,\n      \"tax_rate\": 6.0,\n      \"net\": 1.51\n    },\n    {\n      \"description\": \"SR 100100000149- Add Vegetable (X)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 0.75,\n      \"tax_rate\": 6.0,\n      \"net\": 0.75\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 7.92,\n      \"tax\": 0.48\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and extracted the vendor's VAT registration number, which is \"GST REG #00065619558.\" I'm now cross-referencing these details to ensure accuracy with the JSON schema's requirements.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The vendor name is \"UNIHAKKA INTERNATIONAL SDN BHD,\" and the VAT registration number is \"000656195584.\" The invoice reference is \"OR18052402170329,\" and the invoice date is \"2018-05-24.\" I'm setting the due date to `null` as it's a cash receipt. I'm hesitant on the currency; while the symbol is '$' and the context is Malaysian, the ISO code is missing, so I'll keep it `null` for now.\n\n\n**Refining Currency and Tax**\n\nI am now focusing on refining the currency and tax details. Although the symbol '$' suggests MYR, I've confirmed I can't guarantee the ISO code from the document alone, so I'm maintaining `null` for `currency`. I am confident that the calculated amounts for untaxed, tax, and total are accurate and match the source information. I am also calculating the net amount from the VAT and tax for the first line item.\n\n```json\n{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 1001000 00025-1 Meat + 2 Vege\",\n      \"quantity\": 1,\n      \"unit_price\": 5.66,\n      \"total\": 6.00\n    }\n  ]\n}\n```\n\n\n**Finalizing Line Item Data**\n\nI have carefully calculated and validated the `unit_price` and tax rates for all three line items based on the provided totals, working backward to ensure accuracy. The net amount totals match the source information and the GST calculations. I've now completed the entire JSON schema.\n\n\n**Constructing JSON Output**\n\nI'm now extracting and calculating details for each line item. I'm carefully calculating tax-inclusive line totals, net amounts, and unit prices, matching those to ensure accuracy within the schema. My work is nearly complete.\n\n```json\n{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 1001000 00025-1 Meat + 2 Vege\",\n      \"quantity\": 1,\n      \"unit_price\": 5.66,\n      \"total\": 6.00\n    },\n    {\n      \"description\": \"SR 100100 000170-Imported Veggies\",\n      \"quantity\": 1,\n      \"unit_price\": 1.51,\n      \"total\": 1.60\n    },\n    {\n      \"description\": \"SR 100100000149- Add Vegetable (X)\",\n      \"quantity\": 1,\n      \"unit_price\": 0.75,\n      \"total\": 0.80\n    }\n  ]\n}\n```\n\n\n**Validating Calculations**\n\nI'm now carefully reviewing my calculations of net amounts, unit prices, and tax rates for each line item. I have ensured these accurately reflect the source data and the applicable tax regime. I am confident in the accuracy of the total calculations, matching figures on the invoice. I've also re-examined the line descriptions for consistency with the totals.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating all the line item values, which is the final step for this particular document. I'm focusing on validating these amounts match the totals, applying a consistent tax rate of 6% to each of the three line items to match the source document.\n\n\n**Finalizing JSON Data**\n\nI'm now generating the JSON output, carefully extracting the necessary details for each field. I am ensuring data accuracy and that my formatting meets the schema's requirements. I've double-checked all calculations to ensure they are correct and consistent. I am now confident in the final output.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Data**\n\nI have successfully identified the vendor name as \"UNIHAKKA INTERNATIONAL SDN BHD\" and extracted the vendor's VAT registration number, which is \"GST REG #00065619558.\" I'm now cross-referencing these details to ensure accuracy with the JSON schema's requirements.\n\n\n**Populating JSON Schema**\n\nI'm now populating the JSON schema fields. The vendor name is \"UNIHAKKA INTERNATIONAL SDN BHD,\" and the VAT registration number is \"000656195584.\" The invoice reference is \"OR18052402170329,\" and the invoice date is \"2018-05-24.\" I'm setting the due date to `null` as it's a cash receipt. I'm hesitant on the currency; while the symbol is '$' and the context is Malaysian, the ISO code is missing, so I'll keep it `null` for now.\n\n\n**Refining Currency and Tax**\n\nI am now focusing on refining the currency and tax details. Although the symbol '$' suggests MYR, I've confirmed I can't guarantee the ISO code from the document alone, so I'm maintaining `null` for `currency`. I am confident that the calculated amounts for untaxed, tax, and total are accurate and match the source information. I am also calculating the net amount from the VAT and tax for the first line item.\n\n```json\n{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 1001000 00025-1 Meat + 2 Vege\",\n      \"quantity\": 1,\n      \"unit_price\": 5.66,\n      \"total\": 6.00\n    }\n  ]\n}\n```\n\n\n**Finalizing Line Item Data**\n\nI have carefully calculated and validated the `unit_price` and tax rates for all three line items based on the provided totals, working backward to ensure accuracy. The net amount totals match the source information and the GST calculations. I've now completed the entire JSON schema.\n\n\n**Constructing JSON Output**\n\nI'm now extracting and calculating details for each line item. I'm carefully calculating tax-inclusive line totals, net amounts, and unit prices, matching those to ensure accuracy within the schema. My work is nearly complete.\n\n```json\n{\n  \"vendor_name\": \"UNIHAKKA INTERNATIONAL SDN BHD\",\n  \"vendor_vat\": \"000656195584\",\n  \"invoice_ref\": \"OR18052402170329\",\n  \"invoice_date\": \"2018-05-24\",\n  \"due_date\": null,\n  \"currency\": null,\n  \"untaxed\": 7.92,\n  \"tax\": 0.48,\n  \"total\": 8.40,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"SR 1001000 00025-1 Meat + 2 Vege\",\n      \"quantity\": 1,\n      \"unit_price\": 5.66,\n      \"total\": 6.00\n    },\n    {\n      \"description\": \"SR 100100 000170-Imported Veggies\",\n      \"quantity\": 1,\n      \"unit_price\": 1.51,\n      \"total\": 1.60\n    },\n    {\n      \"description\": \"SR 100100000149- Add Vegetable (X)\",\n      \"quantity\": 1,\n      \"unit_price\": 0.75,\n      \"total\": 0.80\n    }\n  ]\n}\n```\n\n\n**Validating Calculations**\n\nI'm now carefully reviewing my calculations of net amounts, unit prices, and tax rates for each line item. I have ensured these accurately reflect the source data and the applicable tax regime. I am confident in the accuracy of the total calculations, matching figures on the invoice. I've also re-examined the line descriptions for consistency with the totals.\n\n\n**Calculating Line Item Values**\n\nI'm now calculating all the line item values, which is the final step for this particular document. I'm focusing on validating these amounts match the totals, applying a consistent tax rate of 6% to each of the three line items to match the source document.\n\n\n**Finalizing JSON Data**\n\nI'm now generating the JSON output, carefully extracting the necessary details for each field. I am ensuring data accuracy and that my formatting meets the schema's requirements. I've double-checked all calculations to ensure they are correct and consistent. I am now confident in the final output.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 3262,
+   "total_tokens": 3580,
+   "cost": 0.0330175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0330175,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.03262
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2834,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 25.48
+}

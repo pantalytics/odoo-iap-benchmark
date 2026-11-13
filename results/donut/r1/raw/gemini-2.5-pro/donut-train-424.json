@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Hines, Stevens and Wong",
+  "vendor_vat": "971-90-7409",
+  "invoice_ref": "94914402",
+  "invoice_date": "2016-05-25",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 232.4,
+  "tax": 23.24,
+  "total": 255.64,
+  "iban": "GB17VCKB95228636038037",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off",
+    "quantity": 5.0,
+    "unit_price": 9.5,
+    "tax_rate": 10.0,
+    "net": 47.5
+   },
+   {
+    "description": "Wonder Nation Kids Blue Mout Alien Slippers House Shoes Size 5",
+    "quantity": 5.0,
+    "unit_price": 16.99,
+    "tax_rate": 10.0,
+    "net": 84.95
+   },
+   {
+    "description": "adidas Youth Boys Soccer Cleats 4.5 F5 TRX FG J Vivid Yellow Black NEW G65429",
+    "quantity": 5.0,
+    "unit_price": 19.99,
+    "tax_rate": 10.0,
+    "net": 99.95
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 232.4,
+    "tax": 23.24
+   }
+  ]
+ },
+ "cost_usd": 0.0194575,
+ "raw": {
+  "id": "gen-1794512389-vnfhb6owD2epNorHZmO6",
+  "object": "chat.completion",
+  "created": 1794512389,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Hines, Stevens and Wong\",\n  \"vendor_vat\": \"971-90-7409\",\n  \"invoice_ref\": \"94914402\",\n  \"invoice_date\": \"2016-05-25\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 232.4,\n  \"tax\": 23.24,\n  \"total\": 255.64,\n  \"iban\": \"GB17VCKB95228636038037\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Lands' End Kids Boys Snow Winter Boots Size 5 Blue Warm Zip Up Easy On Easy Off\",\n      \"quantity\": 5.0,\n      \"unit_price\": 9.5,\n      \"tax_rate\": 10.0,\n      \"net\": 47.5\n    },\n    {\n      \"description\": \"Wonder Nation Kids Blue Mout Alien Slippers House Shoes Size 5\",\n      \"quantity\": 5.0,\n      \"unit_price\": 16.99,\n      \"tax_rate\": 10.0,\n      \"net\": 84.95\n    },\n    {\n      \"description\": \"adidas Youth Boys Soccer Cleats 4.5 F5 TRX FG J Vivid Yellow Black NEW G65429\",\n      \"quantity\": 5.0,\n      \"unit_price\": 19.99,\n      \"tax_rate\": 10.0,\n      \"net\": 99.95\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 232.4,\n      \"tax\": 23.24\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Relevant Data**\n\nI've successfully identified \"Hines, Stevens and Wong\" as the vendor and extracted \"971-90-7409\" as their tax ID. I'm focusing on the relationship between information, specifically the relationship with the json structure. I need to be sure that the data accurately maps to the relevant JSON fields.\n\n\n**Mapping Data to Fields**\n\nI'm now populating the JSON schema. I've extracted and mapped \"Hines, Stevens and Wong\" to `vendor_name`, and \"971-90-7409\" to `vendor_vat`. The invoice number \"9 4914402\" is mapped to `invoice_ref`. I'm assigning \"2016-05-25\" to `invoice_date`, and setting `due_date` to null because it's not present. I'm inferring \"USD\" as the `currency`.\n\n\n**Populating JSON Schema**\n\nI've extracted and populated the remaining fields in the JSON schema. \"232.40\" is mapped to `untaxed`, \"23.24\" to `tax`, and \"255.64\" to `total`. I've added \"GB17VCKB95228636038037\" to the `iban`, \"S\" to `vat_treatment`, and I'm currently working on extracting and structuring the line items for the `lines` array. Finally, I have populated the `vat_breakdown`. Now I'll double-check those calculations.\n\n\n**Verifying Data Integrity**\n\nI've completed extracting all the data and am now rigorously checking my work. The calculations for each line item, the total net, tax, and gross amounts, are all correct. I've also re-examined the currency, deciding on \"USD\" based on the US addresses despite the ambiguous IBAN and \"VAT\" nomenclature. Finally, I confirm using the \"Tax ID\" over the IBAN for the vendor's VAT number.\n\n\n**Finalizing JSON Schema**\n\nI've completed extracting all the data points, including the detailed line items and VAT breakdown, and confirmed their accuracy through calculations and contextual analysis. After carefully resolving ambiguities regarding the currency, I am now ready to construct the final JSON output. The JSON will now be assembled according to the data I have collected.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Relevant Data**\n\nI've successfully identified \"Hines, Stevens and Wong\" as the vendor and extracted \"971-90-7409\" as their tax ID. I'm focusing on the relationship between information, specifically the relationship with the json structure. I need to be sure that the data accurately maps to the relevant JSON fields.\n\n\n**Mapping Data to Fields**\n\nI'm now populating the JSON schema. I've extracted and mapped \"Hines, Stevens and Wong\" to `vendor_name`, and \"971-90-7409\" to `vendor_vat`. The invoice number \"9 4914402\" is mapped to `invoice_ref`. I'm assigning \"2016-05-25\" to `invoice_date`, and setting `due_date` to null because it's not present. I'm inferring \"USD\" as the `currency`.\n\n\n**Populating JSON Schema**\n\nI've extracted and populated the remaining fields in the JSON schema. \"232.40\" is mapped to `untaxed`, \"23.24\" to `tax`, and \"255.64\" to `total`. I've added \"GB17VCKB95228636038037\" to the `iban`, \"S\" to `vat_treatment`, and I'm currently working on extracting and structuring the line items for the `lines` array. Finally, I have populated the `vat_breakdown`. Now I'll double-check those calculations.\n\n\n**Verifying Data Integrity**\n\nI've completed extracting all the data and am now rigorously checking my work. The calculations for each line item, the total net, tax, and gross amounts, are all correct. I've also re-examined the currency, deciding on \"USD\" based on the US addresses despite the ambiguous IBAN and \"VAT\" nomenclature. Finally, I confirm using the \"Tax ID\" over the IBAN for the vendor's VAT number.\n\n\n**Finalizing JSON Schema**\n\nI've completed extracting all the data points, including the detailed line items and VAT breakdown, and confirmed their accuracy through calculations and contextual analysis. After carefully resolving ambiguities regarding the currency, I am now ready to construct the final JSON output. The JSON will now be assembled according to the data I have collected.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1906,
+   "total_tokens": 2224,
+   "cost": 0.0194575,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0194575,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01906
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1451,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.96
+}

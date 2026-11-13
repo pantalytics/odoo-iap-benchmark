@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "PASAR MINI JIN SENG",
+  "vendor_vat": "000150511616",
+  "invoice_ref": "002-1550040",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 28.53,
+  "tax": 0.07,
+  "total": 28.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 2.2,
+    "tax_rate": 0,
+    "net": 2.2
+   },
+   {
+    "description": "LTK OMEGA PLUS 10S",
+    "quantity": 1,
+    "unit_price": 5.7,
+    "tax_rate": 0,
+    "net": 5.7
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 1.0,
+    "tax_rate": 0,
+    "net": 1.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 2.0,
+    "tax_rate": 0,
+    "net": 2.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 8.0,
+    "tax_rate": 0,
+    "net": 8.0
+   },
+   {
+    "description": "SEAFOOD",
+    "quantity": 1,
+    "unit_price": 8.5,
+    "tax_rate": 0,
+    "net": 8.5
+   },
+   {
+    "description": "FISH BALL / CAKE",
+    "quantity": 1,
+    "unit_price": 1.13,
+    "tax_rate": 6,
+    "net": 1.13
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 1.13,
+    "tax": 0.07
+   },
+   {
+    "rate": 0,
+    "base": 27.4,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.030844,
+ "raw": {
+  "id": "gen-1794514376-MfAoQeba8zRsHzcYqx4e",
+  "object": "chat.completion",
+  "created": 1794514376,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"PASAR MINI JIN SENG\",\"vendor_vat\":\"000150511616\",\"invoice_ref\":\"002-1550040\",\"invoice_date\":\"2018-03-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":28.53,\"tax\":0.07,\"total\":28.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":2.2,\"tax_rate\":0,\"net\":2.2},{\"description\":\"LTK OMEGA PLUS 10S\",\"quantity\":1,\"unit_price\":5.7,\"tax_rate\":0,\"net\":5.7},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":1.0,\"tax_rate\":0,\"net\":1.0},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":2.0,\"tax_rate\":0,\"net\":2.0},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":8.0,\"tax_rate\":0,\"net\":8.0},{\"description\":\"SEAFOOD\",\"quantity\":1,\"unit_price\":8.5,\"tax_rate\":0,\"net\":8.5},{\"description\":\"FISH BALL / CAKE\",\"quantity\":1,\"unit_price\":1.13,\"tax_rate\":6,\"net\":1.13}],\"vat_breakdown\":[{\"rate\":6,\"base\":1.13,\"tax\":0.07},{\"rate\":0,\"base\":27.4,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm checking whether the SR amount of 1.20 is GST-inclusive: working back from the 0.07 tax gives about 0.068, which rounds to 0.07, so the prices are inclusive. That puts the untaxed total at 28.53. Summing the line items, they come to 28.60, matching the receipt total.\n\nI'm adding up the zero-rated lines, which come to 27.40, and noting the GST summary amounts look inclusive too. The breakdown gives 1.13 base at 6% with 0.07 tax, and 27.40 at 0% with no tax. I'll use 1.13 as the net for the fish ball so it matches the untaxed total of 28.53, and I'm treating the receipt as mixed, with standard-rated as the dominant treatment since a standard rate is present.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm checking whether the SR amount of 1.20 is GST-inclusive: working back from the 0.07 tax gives about 0.068, which rounds to 0.07, so the prices are inclusive. That puts the untaxed total at 28.53. Summing the line items, they come to 28.60, matching the receipt total.\n\nI'm adding up the zero-rated lines, which come to 27.40, and noting the GST summary amounts look inclusive too. The breakdown gives 1.13 base at 6% with 0.07 tax, and 27.40 at 0% with no tax. I'll use 1.13 as the net for the fish ball so it matches the untaxed total of 28.53, and I'm treating the receipt as mixed, with standard-rated as the dominant treatment since a standard rate is present.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQShgsKEAgTGAI4AUIIdGhpbmtpbmcSDDUDdc3wUJbpTb67YhoMNhngExn+TAWw9TBMIjDiNd5tHn00SgBiy9ypzC51Ddh9KbXvVTEwmZQBKOIAYMWyCVBsbrPdr95fYMoDdcwqowr6tMv1icp0HUyD1cO4QzzlF2o9uhDtioOKp98CU8YH/Rpy6E5ROWy9gcz64Eh7W7H7sG3AViRYfMY3UyYbRL3BpvrvwD0Wn+yJuQjIlf/lNrxmTAW3pAjOuZeCHOdecAonGUmXvXVbAKUnfu63iHWM6XiA3HQuQpe3WuusKz/gKDU3O88M6YZKxFF5Fwc857kF5qIsQV7JgAeO6/BPDqUm4gR8JKbeYSV0JCr0M7/+Hm45ZvATUEFNJDJFTQDdtdDOXmvTvNI2e1fDP32rDtyv4GAxJwt0p8YBL0LW5QPYgYingN1soin4Qb1s9Tgng3fz0t4MwVW+LWhZnQH6oD+b8sT1FIOD2BbN3/Y9vTOHcpqOtYCYJyF4ThppyW8q4a7i0GAukodsvBEAs7IoP65Jp2UrtEmoX7h/D5QgN2Sdjj8mXker+sxEB1Y/LLPGOHzrlz3MMyr33ayTW1Zkl0Ble/a7WiNkC3RRWQD+I8jrj4WfNWVeTElhyjsmTAZzBqfAZFHAPPT4JgnqhDDCOThgVB/n+i3/xTCjI+ImLpaBBNzD4+KnJH+tvakRwWAkmAl1ZeybiAeQwwr7y9DvU9W+CFn1P9CcFOk92iIIwG4iPPe4/EPlx3uPvLHekjoOeovXlOAXD7hLhm0uONZn+Njl7Zd3InkautTEaMYnEJOUuhDzgpYMntti8n+4dgcFy8SNzZ+kdMBOAYH/8Rpur+1Lg1ATWVVYpR0BtgLtVqCet237jvVgBtMu81LjfBXr3vgRRkLj2TR+Ktug5iKfLQmakyiqk+bhs0MDRv3/cHY6zFPyaB9s6qT+gNVsyeNZxZkh2+jBb2HDp+7rIDEuF4mFzAFb5E1rGllqadiVVhsYewm5aLGKxNsHdtMLwk6/pFPp8ZN6EZWOvO6KDybEdlSsARkHP1fsoZ8GJRtZRJ5ur9HcC3Poj3nxHNCOFnAX3PaeSlPKtHOh9JLm8wsVFZsVxS8EhR2l8qOcA3spGGj8VEcIOQeTWtTO/Ayig5O7VvGIflfZkDGPk0Zuce0/cy/EWu5ataOCVDYz9Nqneu5HF9ux41sKuTkZ0sZOjLdma4Kyd2YY9FVqmA97N+JhFTv2wJTeE9WlkQ6p6VBY9aCGGlw3Iw9CnwEzMVfZV3cUhTdVCw4LkZcCnpO0UdCLUEjdTdCfn0InSxpYVcCd1t/nG9NdNyrjP8XKqOc3VzE7aklOl5IC7g4lHe8sbpyMokF60p/QhV0RrCdmSyq+bxOLFZlH53pLlhPLeO2+JQcNZIcMn0viZEkwofnFQGOX8GOjpQ6+zuXpLaXVYJV9d3Vc1jDDL/qKfvukh4bfV9abcEPiEYFGSJDnJHCc5kJHO1YoROdBJ734pbJNCK6Zto9kkE4BB/qBbFjuHTTC6gUOiqDQMWn9AyBi4Gy0V0llK8Bc+b3gmIXsOORKaXA8aOEkUB17ZhjbHsYhbtAYrXYVwxG3SKXrN0n2l8snuR4Wio88jxmEwHKhvTdgi2LUuUJBmS9m7TMYlYgIbJowKOUPWXTgyEtpnEs0Oi+wUIkmDPMf24Zq22BYEwxdeTPw6F4A2jnW+0zd1FxlGlEpEsw7COEVA09sN6QP/QDi652vMjMob+U41UojaFmqn+txM12RBCSlucmLLQZG2/nQrqhiOc9/Cy3Boe0H7FC4h6abd35cpQRymfHWGngZt4/5Mh3PYVAfRBP5XmbtfY+/Sdm4m/I7iHpSCwhBqhXvzsXeaTvp66FDGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 906,
+   "total_tokens": 4087,
+   "cost": 0.030844,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.030844,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01812
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 398,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.47
+}

@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "SUPER SEVEN CASH & CARRY SDN BHD",
+  "vendor_vat": "000639090688",
+  "invoice_ref": "138652",
+  "invoice_date": "2017-06-22",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.81,
+  "tax": 1.22,
+  "total": 28.03,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "KK KACANG GORENG 400G",
+    "quantity": 3,
+    "unit_price": 6.79,
+    "tax_rate": 6,
+    "net": 20.38
+   },
+   {
+    "description": "TERUNG PENDEK",
+    "quantity": 1,
+    "unit_price": 3.15,
+    "tax_rate": 0,
+    "net": 3.15
+   },
+   {
+    "description": "HALIA MUDA LOCAL",
+    "quantity": 1,
+    "unit_price": 2.3,
+    "tax_rate": 0,
+    "net": 2.3
+   },
+   {
+    "description": "BAWANG BESAR INDIA",
+    "quantity": 1,
+    "unit_price": 0.98,
+    "tax_rate": 0,
+    "net": 0.98
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 20.38,
+    "tax": 1.22
+   },
+   {
+    "rate": 0,
+    "base": 6.43,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.029004,
+ "raw": {
+  "id": "gen-1794514650-PUenJYnQ48QZfRRBdUwr",
+  "object": "chat.completion",
+  "created": 1794514650,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SUPER SEVEN CASH & CARRY SDN BHD\",\"vendor_vat\":\"000639090688\",\"invoice_ref\":\"138652\",\"invoice_date\":\"2017-06-22\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":26.81,\"tax\":1.22,\"total\":28.03,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"KK KACANG GORENG 400G\",\"quantity\":3,\"unit_price\":6.79,\"tax_rate\":6,\"net\":20.38},{\"description\":\"TERUNG PENDEK\",\"quantity\":1,\"unit_price\":3.15,\"tax_rate\":0,\"net\":3.15},{\"description\":\"HALIA MUDA LOCAL\",\"quantity\":1,\"unit_price\":2.3,\"tax_rate\":0,\"net\":2.3},{\"description\":\"BAWANG BESAR INDIA\",\"quantity\":1,\"unit_price\":0.98,\"tax_rate\":0,\"net\":0.98}],\"vat_breakdown\":[{\"rate\":6,\"base\":20.38,\"tax\":1.22},{\"rate\":0,\"base\":6.43,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm working through the GST on this Malaysian receipt, where the printed prices already include tax. The SR line nets to 20.38 before tax, but the printed amount is 21.60. The schema asks for the amount before tax as printed, so I'm unsure which figure to put in each field. I'm leaning toward 20.38 for the net and 6.79 for the unit price.\n\nI'm settling the totals now: untaxed 26.81 plus tax 1.22 gives 28.03, so I'll use 28.03 for consistency even though the payable is 28.05. The VAT treatment is mixed S and Z, so I'm going with S, with MYR as currency, and I'm noting the GST ID as the vendor's VAT number while the company registration number isn't a VAT number.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working through the GST on this Malaysian receipt, where the printed prices already include tax. The SR line nets to 20.38 before tax, but the printed amount is 21.60. The schema asks for the amount before tax as printed, so I'm unsure which figure to put in each field. I'm leaning toward 20.38 for the net and 6.79 for the unit price.\n\nI'm settling the totals now: untaxed 26.81 plus tax 1.22 gives 28.03, so I'll use 28.03 for consistency even though the payable is 28.05. The VAT treatment is mixed S and Z, so I'm going with S, with MYR as currency, and I'm noting the GST ID as the vendor's VAT number while the company registration number isn't a VAT number.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 814,
+   "total_tokens": 3995,
+   "cost": 0.029004,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029004,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01628
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 425,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.54
+}

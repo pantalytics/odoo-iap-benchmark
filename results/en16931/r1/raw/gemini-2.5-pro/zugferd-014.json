@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0010",
+  "invoice_date": "2017-11-13",
+  "due_date": "2017-12-13",
+  "currency": "EUR",
+  "untaxed": 624.9,
+  "tax": 46.25,
+  "total": 671.15,
+  "iban": "FR2012421242124212421242124",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 20.0,
+    "unit_price": 4.55,
+    "tax_rate": 20.0,
+    "net": 81.9
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 15.0,
+    "unit_price": 3.2,
+    "tax_rate": 5.5,
+    "net": 48.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 25.0,
+    "unit_price": 19.8,
+    "tax_rate": 5.5,
+    "net": 495.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 20.0,
+    "base": 81.9,
+    "tax": 16.38
+   },
+   {
+    "rate": 5.5,
+    "base": 543.0,
+    "tax": 29.87
+   }
+  ]
+ },
+ "cost_usd": 0.0186975,
+ "raw": {
+  "id": "gen-1794511857-FNc5Xr5Hadh5Lyt18qUC",
+  "object": "chat.completion",
+  "created": 1794511857,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Au bon moulin SARL\",\n  \"vendor_vat\": \"FR11999999998\",\n  \"invoice_ref\": \"FA-2017-0010\",\n  \"invoice_date\": \"2017-11-13\",\n  \"due_date\": \"2017-12-13\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 624.9,\n  \"tax\": 46.25,\n  \"total\": 671.15,\n  \"iban\": \"FR2012421242124212421242124\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Nougat de l'Abbaye 250g\",\n      \"quantity\": 20.0,\n      \"unit_price\": 4.55,\n      \"tax_rate\": 20.0,\n      \"net\": 81.9\n    },\n    {\n      \"description\": \"Biscuits aux raisins 300g\",\n      \"quantity\": 15.0,\n      \"unit_price\": 3.2,\n      \"tax_rate\": 5.5,\n      \"net\": 48.0\n    },\n    {\n      \"description\": \"Huile d'olive à l'ancienne\",\n      \"quantity\": 25.0,\n      \"unit_price\": 19.8,\n      \"tax_rate\": 5.5,\n      \"net\": 495.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 20.0,\n      \"base\": 81.9,\n      \"tax\": 16.38\n    },\n    {\n      \"rate\": 5.5,\n      \"base\": 543.0,\n      \"tax\": 29.87\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI'm now focusing on extracting vendor details. I've identified \"Au bon moulin SARL\" as the `vendor_name` from the document header. I'm looking closely at the header for the `vendor_vat` number, which is also present. This data will be used to populate the initial fields in the JSON schema.\n\n\n**Populating Invoice Details**\n\nI'm now populating the JSON with invoice details. I've successfully extracted the `invoice_ref` as \"FA-2017-0010\" and formatted the `invoice_date` and `due_date` to YYYY-MM-DD format as \"2017-11-13\" and \"2017-12-13\" respectively. I've also identified \"EUR\" as the `currency` and pulled the `untaxed`, `tax`, and `total` amounts. Finally, I've secured the `iban` details. My focus has shifted to individual `lines`.\n\n\n**Extracting Line Item Data**\n\nI'm now focused on the invoice lines. I've successfully extracted and validated the details for the first line item, including description, quantity, unit price, and net amount before tax. My next task is to move on to the second and third line items, and extract the corresponding information, specifically the tax rates. Then I will determine the overall `vat_treatment` from those lines.\n\n\n**Constructing The JSON**\n\nI'm now putting it all together in the JSON schema. The vendor, invoice, and total amounts are successfully populated. I've extracted all three line items, including their descriptions, quantities, unit prices, and net amounts. The VAT rates for each line and the overall tax breakdown are also accurately represented. The data is validated and ready for the final construction.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI'm now focusing on extracting vendor details. I've identified \"Au bon moulin SARL\" as the `vendor_name` from the document header. I'm looking closely at the header for the `vendor_vat` number, which is also present. This data will be used to populate the initial fields in the JSON schema.\n\n\n**Populating Invoice Details**\n\nI'm now populating the JSON with invoice details. I've successfully extracted the `invoice_ref` as \"FA-2017-0010\" and formatted the `invoice_date` and `due_date` to YYYY-MM-DD format as \"2017-11-13\" and \"2017-12-13\" respectively. I've also identified \"EUR\" as the `currency` and pulled the `untaxed`, `tax`, and `total` amounts. Finally, I've secured the `iban` details. My focus has shifted to individual `lines`.\n\n\n**Extracting Line Item Data**\n\nI'm now focused on the invoice lines. I've successfully extracted and validated the details for the first line item, including description, quantity, unit price, and net amount before tax. My next task is to move on to the second and third line items, and extract the corresponding information, specifically the tax rates. Then I will determine the overall `vat_treatment` from those lines.\n\n\n**Constructing The JSON**\n\nI'm now putting it all together in the JSON schema. The vendor, invoice, and total amounts are successfully populated. I've extracted all three line items, including their descriptions, quantities, unit prices, and net amounts. The VAT rates for each line and the overall tax breakdown are also accurately represented. The data is validated and ready for the final construction.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1830,
+   "total_tokens": 2148,
+   "cost": 0.0186975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0186975,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.0183
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1348,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.34
+}

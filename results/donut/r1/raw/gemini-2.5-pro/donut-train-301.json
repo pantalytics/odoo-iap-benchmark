@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Davis, Jones and Smith",
+  "vendor_vat": "966-84-3884",
+  "invoice_ref": "40122783",
+  "invoice_date": "2019-03-12",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 129.11,
+  "tax": 12.91,
+  "total": 142.02,
+  "iban": "GB89GMXK96405554903257",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Tea with Jane Austen",
+    "quantity": 5.0,
+    "unit_price": 4.89,
+    "tax_rate": 10.0,
+    "net": 24.45
+   },
+   {
+    "description": "Michael Jackson: A Life in Music (Paperback or Softback)",
+    "quantity": 2.0,
+    "unit_price": 12.33,
+    "tax_rate": 10.0,
+    "net": 24.66
+   },
+   {
+    "description": "Most famous bracelet in the world",
+    "quantity": 4.0,
+    "unit_price": 20.0,
+    "tax_rate": 10.0,
+    "net": 80.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10.0,
+    "base": 129.11,
+    "tax": 12.91
+   }
+  ]
+ },
+ "cost_usd": 0.0173275,
+ "raw": {
+  "id": "gen-1794512230-d7uwBE8u9ygpt6Y3gEwb",
+  "object": "chat.completion",
+  "created": 1794512230,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Davis, Jones and Smith\",\n  \"vendor_vat\": \"966-84-3884\",\n  \"invoice_ref\": \"40122783\",\n  \"invoice_date\": \"2019-03-12\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 129.11,\n  \"tax\": 12.91,\n  \"total\": 142.02,\n  \"iban\": \"GB89GMXK96405554903257\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Tea with Jane Austen\",\n      \"quantity\": 5.0,\n      \"unit_price\": 4.89,\n      \"tax_rate\": 10.0,\n      \"net\": 24.45\n    },\n    {\n      \"description\": \"Michael Jackson: A Life in Music (Paperback or Softback)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 12.33,\n      \"tax_rate\": 10.0,\n      \"net\": 24.66\n    },\n    {\n      \"description\": \"Most famous bracelet in the world\",\n      \"quantity\": 4.0,\n      \"unit_price\": 20.0,\n      \"tax_rate\": 10.0,\n      \"net\": 80.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10.0,\n      \"base\": 129.11,\n      \"tax\": 12.91\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI've successfully identified \"Davis, Jones and Smith\" as the vendor and extracted \"966-84-3884\" as their Tax ID. The IBAN information is also relevant. I need to figure out how it maps to other JSON fields.\n\n\n**Mapping JSON Fields**\n\nI'm now mapping the extracted data to the JSON schema. \"Davis, Jones and Smith\" maps to `vendor_name`, and \"966-84-3884\" is `vendor_vat`. I've set `invoice_ref` to \"40122783\" and `invoice_date` to \"2019-03-12\". The `due_date` is `null`. I'm going with USD for `currency` due to the \"$\" symbol. The amounts \"$ 129,11\" maps to `untaxed`, and \"$ 12, 91\" is `tax`.\n\n\n**Populating JSON Fields**\n\nI've extracted all necessary data points and meticulously populated the JSON schema. I've included the vendor's IBAN as \"GB89GMXK9640555 4903257\".  I've set `vat_treatment` to \"S\" due to the 10% VAT rate. I've created the `lines` array, with details for each line item including description, quantity, price, and net value. Also I've created the `vat_breakdown` field. I need to double-check the values.\n\n\n**Finalizing JSON Structure**\n\nI have now meticulously reviewed every data point extracted and cross-referenced calculations to ensure accuracy. The most perplexing aspect was the currency discrepancy with the US addresses and UK IBAN. I've confirmed that the USD assumption is the most probable based on the provided \"$\" symbol. With that certainty, I've confirmed and compiled all data into the JSON schema, including the detailed `lines` and `vat_breakdown` arrays. I'm satisfied and am ready to finalize the JSON document now.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI've successfully identified \"Davis, Jones and Smith\" as the vendor and extracted \"966-84-3884\" as their Tax ID. The IBAN information is also relevant. I need to figure out how it maps to other JSON fields.\n\n\n**Mapping JSON Fields**\n\nI'm now mapping the extracted data to the JSON schema. \"Davis, Jones and Smith\" maps to `vendor_name`, and \"966-84-3884\" is `vendor_vat`. I've set `invoice_ref` to \"40122783\" and `invoice_date` to \"2019-03-12\". The `due_date` is `null`. I'm going with USD for `currency` due to the \"$\" symbol. The amounts \"$ 129,11\" maps to `untaxed`, and \"$ 12, 91\" is `tax`.\n\n\n**Populating JSON Fields**\n\nI've extracted all necessary data points and meticulously populated the JSON schema. I've included the vendor's IBAN as \"GB89GMXK9640555 4903257\".  I've set `vat_treatment` to \"S\" due to the 10% VAT rate. I've created the `lines` array, with details for each line item including description, quantity, price, and net value. Also I've created the `vat_breakdown` field. I need to double-check the values.\n\n\n**Finalizing JSON Structure**\n\nI have now meticulously reviewed every data point extracted and cross-referenced calculations to ensure accuracy. The most perplexing aspect was the currency discrepancy with the US addresses and UK IBAN. I've confirmed that the USD assumption is the most probable based on the provided \"$\" symbol. With that certainty, I've confirmed and compiled all data into the JSON schema, including the detailed `lines` and `vat_breakdown` arrays. I'm satisfied and am ready to finalize the JSON document now.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1693,
+   "total_tokens": 2011,
+   "cost": 0.0173275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0173275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01693
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1278,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 16.56
+}

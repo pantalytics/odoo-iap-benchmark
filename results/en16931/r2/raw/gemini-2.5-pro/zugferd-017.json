@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "Bei Spiel GmbH",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "RE-20201121/508",
+  "invoice_date": "2020-11-21",
+  "due_date": "2020-12-12",
+  "currency": "EUR",
+  "untaxed": 496.0,
+  "tax": 75.04,
+  "total": 571.04,
+  "iban": "DE88200800000970375700",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Design (hours): Of a sample invoice",
+    "quantity": 1.0,
+    "unit_price": 160.0,
+    "tax_rate": 7.0,
+    "net": 160.0
+   },
+   {
+    "description": "Ballons: various colors, ~2000ml",
+    "quantity": 400.0,
+    "unit_price": 0.79,
+    "tax_rate": 19.0,
+    "net": 316.0
+   },
+   {
+    "description": "Hot air „heiße Luft“ (litres):",
+    "quantity": 800.0,
+    "unit_price": 0.025,
+    "tax_rate": 19.0,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 160.0,
+    "tax": 11.2
+   },
+   {
+    "rate": 19.0,
+    "base": 336.0,
+    "tax": 63.84
+   }
+  ]
+ },
+ "cost_usd": 0.0139275,
+ "raw": {
+  "id": "gen-1794512665-QaQdgd63U9iW9H2blUhc",
+  "object": "chat.completion",
+  "created": 1794512665,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Bei Spiel GmbH\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"RE-20201121/508\",\n  \"invoice_date\": \"2020-11-21\",\n  \"due_date\": \"2020-12-12\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 496.00,\n  \"tax\": 75.04,\n  \"total\": 571.04,\n  \"iban\": \"DE88200800000970375700\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Design (hours): Of a sample invoice\",\n      \"quantity\": 1.00,\n      \"unit_price\": 160.00,\n      \"tax_rate\": 7.0,\n      \"net\": 160.00\n    },\n    {\n      \"description\": \"Ballons: various colors, ~2000ml\",\n      \"quantity\": 400.00,\n      \"unit_price\": 0.79,\n      \"tax_rate\": 19.0,\n      \"net\": 316.00\n    },\n    {\n      \"description\": \"Hot air „heiße Luft“ (litres):\",\n      \"quantity\": 800.00,\n      \"unit_price\": 0.025,\n      \"tax_rate\": 19.0,\n      \"net\": 20.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7.0,\n      \"base\": 160.00,\n      \"tax\": 11.20\n    },\n    {\n      \"rate\": 19.0,\n      \"base\": 336.00,\n      \"tax\": 63.84\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI am now focusing on extracting specific data points according to the JSON schema. I've identified \"Bei Spiel GmbH\" as the `vendor_name` from the logo and address block in the top right.  I still need to find the `vendor_vat` number to complete the extraction.\n\n\n**Identifying Key Data Points**\n\nNow I have identified the `vendor_vat` as \"DE136695976\" from the bottom right. The invoice reference, `invoice_ref`, is \"RE-2020 1121/508\". I've extracted \"2020-11-21\" for `invoice_date` and `due_date`, respectively.  The currency is confirmed as EUR, and  `untaxed`, `tax` and `total` are \"496.00 €\", \"75.04 €\", and \"571.04 €\". The IBAN is \"DE8820080000 0970375700\" and `vat_treatment` is \"S\". Now I need to extract the lines.\n\n\n**Finalizing Data Extraction**\n\nI've successfully gathered all the required information according to the schema. Now, I'm building the JSON object with the extracted vendor details, invoice information, line items, and VAT breakdown.  I've cross-referenced all the data to ensure its completeness. The structure is almost ready for submission!\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI am now focusing on extracting specific data points according to the JSON schema. I've identified \"Bei Spiel GmbH\" as the `vendor_name` from the logo and address block in the top right.  I still need to find the `vendor_vat` number to complete the extraction.\n\n\n**Identifying Key Data Points**\n\nNow I have identified the `vendor_vat` as \"DE136695976\" from the bottom right. The invoice reference, `invoice_ref`, is \"RE-2020 1121/508\". I've extracted \"2020-11-21\" for `invoice_date` and `due_date`, respectively.  The currency is confirmed as EUR, and  `untaxed`, `tax` and `total` are \"496.00 €\", \"75.04 €\", and \"571.04 €\". The IBAN is \"DE8820080000 0970375700\" and `vat_treatment` is \"S\". Now I need to extract the lines.\n\n\n**Finalizing Data Extraction**\n\nI've successfully gathered all the required information according to the schema. Now, I'm building the JSON object with the extracted vendor details, invoice information, line items, and VAT breakdown.  I've cross-referenced all the data to ensure its completeness. The structure is almost ready for submission!\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1353,
+   "total_tokens": 1671,
+   "cost": 0.0139275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0139275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01353
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 868,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.81
+}

@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "Nolan, Williams and Roach",
+  "vendor_vat": "962-85-6776",
+  "invoice_ref": "76999802",
+  "invoice_date": "2020-07-14",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 74237.4,
+  "tax": 7423.74,
+  "total": 81661.14,
+  "iban": "GB64FEHQ32175908346356",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "26\"x26\" Marble Black Top Coffee Table Inlay Floral Pietradura Art Christmas Gift",
+    "quantity": 1.0,
+    "unit_price": 1489.0,
+    "tax_rate": 10,
+    "net": 1489.0
+   },
+   {
+    "description": "October Mist - Deer Metal Side Table by Rosemary Millette",
+    "quantity": 4.0,
+    "unit_price": 89.95,
+    "tax_rate": 10,
+    "net": 359.8
+   },
+   {
+    "description": "36\" Agate Center Dining Table Top Precious Stone Hallway Furniture Decors A026",
+    "quantity": 4.0,
+    "unit_price": 1490.0,
+    "tax_rate": 10,
+    "net": 5960.0
+   },
+   {
+    "description": "7'x4' Black Marble Pietra dura Dining Table Top Furniture Inlay Patio Decor",
+    "quantity": 5.0,
+    "unit_price": 9649.72,
+    "tax_rate": 10,
+    "net": 48248.6
+   },
+   {
+    "description": "34\"x34\" Marble Round Top Coffee Table Elephant Floral Inlaid Art Christmas Gifts",
+    "quantity": 3.0,
+    "unit_price": 1900.0,
+    "tax_rate": 10,
+    "net": 5700.0
+   },
+   {
+    "description": "Semi precious Stone Work Inlaid Dinning Table Top Marble Kitchen Table 42 Inches",
+    "quantity": 5.0,
+    "unit_price": 2496.0,
+    "tax_rate": 10,
+    "net": 12480.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 74237.4,
+    "tax": 7423.74
+   }
+  ]
+ },
+ "cost_usd": 0.034972,
+ "raw": {
+  "id": "gen-1794512945-m87ouJayVqVVQORNpRNg",
+  "object": "chat.completion",
+  "created": 1794512945,
+  "model": "google/gemini-3.1-pro-preview",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": "provisioned",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Nolan, Williams and Roach\",\n  \"vendor_vat\": \"962-85-6776\",\n  \"invoice_ref\": \"76999802\",\n  \"invoice_date\": \"2020-07-14\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"untaxed\": 74237.40,\n  \"tax\": 7423.74,\n  \"total\": 81661.14,\n  \"iban\": \"GB64FEHQ32175908346356\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"26\\\"x26\\\" Marble Black Top Coffee Table Inlay Floral Pietradura Art Christmas Gift\",\n      \"quantity\": 1.00,\n      \"unit_price\": 1489.00,\n      \"tax_rate\": 10,\n      \"net\": 1489.00\n    },\n    {\n      \"description\": \"October Mist - Deer Metal Side Table by Rosemary Millette\",\n      \"quantity\": 4.00,\n      \"unit_price\": 89.95,\n      \"tax_rate\": 10,\n      \"net\": 359.80\n    },\n    {\n      \"description\": \"36\\\" Agate Center Dining Table Top Precious Stone Hallway Furniture Decors A026\",\n      \"quantity\": 4.00,\n      \"unit_price\": 1490.00,\n      \"tax_rate\": 10,\n      \"net\": 5960.00\n    },\n    {\n      \"description\": \"7'x4' Black Marble Pietra dura Dining Table Top Furniture Inlay Patio Decor\",\n      \"quantity\": 5.00,\n      \"unit_price\": 9649.72,\n      \"tax_rate\": 10,\n      \"net\": 48248.60\n    },\n    {\n      \"description\": \"34\\\"x34\\\" Marble Round Top Coffee Table Elephant Floral Inlaid Art Christmas Gifts\",\n      \"quantity\": 3.00,\n      \"unit_price\": 1900.00,\n      \"tax_rate\": 10,\n      \"net\": 5700.00\n    },\n    {\n      \"description\": \"Semi precious Stone Work Inlaid Dinning Table Top Marble Kitchen Table 42 Inches\",\n      \"quantity\": 5.00,\n      \"unit_price\": 2496.00,\n      \"tax_rate\": 10,\n      \"net\": 12480.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 10,\n      \"base\": 74237.40,\n      \"tax\": 7423.74\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Processing Invoice Data**\n\nI'm currently focusing on extracting the vendor's name and VAT number. My current plan involves analyzing the invoice image to pinpoint these specific details, with the aim of populating the `vendor_name` and `vendor_vat` fields in the JSON schema.\n\n**Identifying Key Invoice Fields**\n\nI've successfully pinpointed the vendor's name, VAT, invoice reference, and date. My next step is to refine the date format and begin extracting the currency and untaxed amounts.\n\n**Extracting Line Item Details**\n\nI'm now focusing on parsing the individual line items. Specifically, I'm working on extracting the description, quantity, unit price, net amount, and tax rate for each entry.\n\n**Formatting Extracted Data**\n\nI'm now focusing on standardizing the extracted numerical and date fields. This involves ensuring all monetary values are plain numbers and dates adhere to the YYYY-MM-DD format, preparing for clean JSON output.\n\n**Escaping Quotes Correctly**\n\nI'm refining how I handle quotes within descriptions. I've confirmed that standard JSON escaping like `\\\"` is acceptable and not a control token issue. My next focus is to meticulously verify all numerical calculations for accuracy.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Processing Invoice Data**\n\nI'm currently focusing on extracting the vendor's name and VAT number. My current plan involves analyzing the invoice image to pinpoint these specific details, with the aim of populating the `vendor_name` and `vendor_vat` fields in the JSON schema.\n\n**Identifying Key Invoice Fields**\n\nI've successfully pinpointed the vendor's name, VAT, invoice reference, and date. My next step is to refine the date format and begin extracting the currency and untaxed amounts.\n\n**Extracting Line Item Details**\n\nI'm now focusing on parsing the individual line items. Specifically, I'm working on extracting the description, quantity, unit price, net amount, and tax rate for each entry.\n\n**Formatting Extracted Data**\n\nI'm now focusing on standardizing the extracted numerical and date fields. This involves ensuring all monetary values are plain numbers and dates adhere to the YYYY-MM-DD format, preparing for clean JSON output.\n\n**Escaping Quotes Correctly**\n\nI'm refining how I handle quotes within descriptions. I've confirmed that standard JSON escaping like `\\\"` is acceptable and not a control token issue. My next focus is to meticulously verify all numerical calculations for accuracy.\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "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",
+       "format": "google-gemini-v1",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1568,
+   "completion_tokens": 2653,
+   "total_tokens": 4221,
+   "cost": 0.034972,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.034972,
+    "upstream_inference_prompt_cost": 0.003136,
+    "upstream_inference_completions_cost": 0.031836
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1927,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 21.4
+}

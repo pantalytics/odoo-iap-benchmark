@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Murphy-Sanders",
+  "vendor_vat": "917-83-2356",
+  "invoice_ref": "46301857",
+  "invoice_date": "2017-08-04",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 59.35,
+  "tax": 5.94,
+  "total": 65.29,
+  "iban": "GB24OZUP84517588674217",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Care & Repair of Furniture",
+    "quantity": 5,
+    "unit_price": 4.25,
+    "tax_rate": 10,
+    "net": 21.25
+   },
+   {
+    "description": "Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The",
+    "quantity": 5,
+    "unit_price": 7.62,
+    "tax_rate": 10,
+    "net": 38.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 59.35,
+    "tax": 5.94
+   }
+  ]
+ },
+ "cost_usd": 0.0263,
+ "raw": {
+  "id": "gen-1794515148-S5D4AiEDh8hzy3hKMOha",
+  "object": "chat.completion",
+  "created": 1794515148,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Murphy-Sanders\",\"vendor_vat\":\"917-83-2356\",\"invoice_ref\":\"46301857\",\"invoice_date\":\"2017-08-04\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":59.35,\"tax\":5.94,\"total\":65.29,\"iban\":\"GB24OZUP84517588674217\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Care & Repair of Furniture\",\"quantity\":5,\"unit_price\":4.25,\"tax_rate\":10,\"net\":21.25},{\"description\":\"Harry Potter and the Chamber of Secrets (Book 2) by Rowling, J. K. Paperback The\",\"quantity\":5,\"unit_price\":7.62,\"tax_rate\":10,\"net\":38.10}],\"vat_breakdown\":[{\"rate\":10,\"base\":59.35,\"tax\":5.94}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract information from an invoice and output it in a JSON schema. The invoice number is 46301857, and the date of issue is 04/08/2017, which could be ambiguous. It might be in dd/mm or mm/dd format. Given its context, I’ll use YYYY-MM-DD format and consider it as 2017-08-04. The vendor is Murphy-Sanders with a tax ID. The amounts are in USD, and the total net worth is 59.35, with tax and totals calculated.**Formatting invoice details**\n\nI see that there's no tax amount printed per line, but the tax rate is included. The net price is 21.25. The book \"Harry Potter and the Chamber of Secrets (Book 2)\" by Rowling is listed as a paperback, with a quantity of 5 and a unit price of 7.62, leading to a net total of 38.10 and a gross of 41.91. I've got the VAT breakdown as well, showing a base of 59.35 and a tax of 5.94. Now, I need to format this into a valid JSON response, making sure to include nulls where necessary.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract information from an invoice and output it in a JSON schema. The invoice number is 46301857, and the date of issue is 04/08/2017, which could be ambiguous. It might be in dd/mm or mm/dd format. Given its context, I’ll use YYYY-MM-DD format and consider it as 2017-08-04. The vendor is Murphy-Sanders with a tax ID. The amounts are in USD, and the total net worth is 59.35, with tax and totals calculated.**Formatting invoice details**\n\nI see that there's no tax amount printed per line, but the tax rate is included. The net price is 21.25. The book \"Harry Potter and the Chamber of Secrets (Book 2)\" by Rowling is listed as a paperback, with a quantity of 5 and a unit price of 7.62, leading to a net total of 38.10 and a gross of 41.91. I've got the VAT breakdown as well, showing a base of 59.35 and a tax of 5.94. Now, I need to format this into a valid JSON response, making sure to include nulls where necessary.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9iDWpd4prlP5C72_0VhaE8QZd4EGFyXkGtg4l8dKwKmtvikiqxm1dKGbbjJW-MrLHmZez0fnXhewvQh5tw5lV0l97XpUw9XscUI9ONESjtGIdzUCgdg3HkUMuc5UE2g2cedEO7y-JawRqY_MtYLGMWjgeS0STKeReqwqUdd62-7d6x-XL-r646Cn_hm49XMYkuKuy7_OkjoqzyNdPHDloMZsMj0AL22a9rOHkMD6lQdOMjf7eZfUlnO9djtK53wu_ZelCQELQa1MzOKIqO85p1h6I_ovaqtnEiz4JHh5TWk8S06kDWqpwbDssA74F__i7OP7R5BqwpCv4XQfOGeBaAhVoMOEGLfTGzEtC4lH8jSaEqBDpz4lKWw9dMQJCKUSpU5rixyu_FgcnsM5HrtSdEPuAn3NrOMV7Yp4fvktrekpmdLYp87OV9u-kB6e3EeY3o4pVJ6odHkMwD5mwq6vfODnIwDlJU7vZFJ-UrNcTWZYQgAzk7CJzoWBpEFXFPW-ZNStU6MmdJPr4rseYnpvfmKNFuah4VN1ozcvMsvTxZ2tOKg3wCz4NASAh5T-EexgBB1MQnML-rQ5aKvx_zDOTRd7pydDjRKjmlX49C5bSdNIe-_qJQ6Am-BoCZaf5wOGZ0g6tscmzzLmWQIcZ1rHEEnm-l3HPGJbIz0BLJoGudex82cjyWATeQsZJYxvuYOqqL8Kjiy0WtmgkDChF0yF5jY1_BcG_hY37Ye2-WXDcKNE0u2DQanM4ZbEJb7u_6iIQSkXOovO9yLjT3zsp3HNLymTfH2WRh8z-gzvWP0h4ffMU1EYsRlaHeR9-h8_nsWaoRPrsZhWyelkaVo55DLaJkeQTds_1_kppVVRCkkiZAaEDAKvbu5lOkTe20JzbhaV82AfN1_0JwxDu_nrwTGj5WOWfEn0FSdiYCpzsnY2arpDZvz4n9leB3fRKrZkeSVBpIIfoTzD8jirbiwu_V_bgvIwnmmskxNG22z-a7ckSxHjhH5jNwQb7wef1gZ1h2S1lBGyl9fS-bf5e8rmmDFJzZDL_WxlY0qcX8egLiaYEVFzVcUAKlfI3PuOKSUJiF5AaiAEedKeh8I22H11DcPXmaTqX9CgPLCWrBtl8r647F_bnq8qmGZQY881j2cLEUVYkCcgfvHdAXZj9y8Rjf2XG86V53Afz00sfdZ1WHOt5Sselgr1ZtxHlarbS8jj1ZY_jUkgU7-I7HC_paExHLotlAVY_Vsg-6NQQoWKepflWTejMPylFWfCTO7S6nkBDhOF-YKY6Vfq1WabEs8LROsK6PiuXnZYCg9JqdrdWgskcb81jL-Lh92OCCPxuGokM0cCNF3lgiRkYXbn_WokKG0YduDtw9PaQTU8uN3reEHZFLC0YAgUkrQWvtSZWCKHlW6EE80QAMR82UxTxiksWEqdeZfFrOOF_NsRdH_tvV90M9IFiBdVPOBWzMt6hf9ITf-YBfDoa2joJWO8gxDb7443ITAlpoP9O2j0_HFTRm061F2L-Ii6CT_-0fk0A3oCSE5yz-Jo8vDX1uondcwcXOwiJhGKZFyvO8f0Frbt10qFU9qL0PPHPOZtO0GPSvHnElaa4hr1OR7U4dMDDRkIUAnx38Zv_jg7H2lLG2JIJQgaZ1Hma6FdolOb2IBkmC_NtQ5-ogzAPEOpHIlWuk_wMtPMjpYqwsNxOCtlpYqwqPQembhflqfm0Orv_M1_K-o2-SBMN6jmqFx2a5ko0nLe7bnFXfq06WYiv7PDuvI5ARtPBIq3wI3Kn7yFuCtAUKVsy2cKxc3LmqVmPaABk64MiVtOi0QnJoHK-VEcnwrduUS00KniOnjE1cKfOblNSHSAv8JKJUkmmvLwBSVvXnXA6QMB5Z3WWPaTkMo5dQLFN3ky3q5fSkwJzX556zu8-qgKfHN_YVPDhwr4S3CwZZC0JU6zJxq_LdxakIUPxhslk1RaqAIF_wo2PU6wEJSf2poy2WMfFrYIGbrZkl6fUcUmzJoy_C_q35c1wgw-3hVaR3hwV6JjDl9lXhPiiJ0IiV_xYtg4yxfw-jINfYR0_boYeeFAn-oZZqKOZ9oEXwIXbKDX0yy47ORNSG_r6BhorDCoh8Dl7H98-XLx_kQd7Ji82adxyH1WJgqPXlU1eQuqf-DaJNY7f4bWROrQ18xWZpRKxMAiyONa1qWbwn05sYb9NBQ9Oc9IiTkVrsz50SDnAeci5IIikhrtloW3N0vOgXiRdRLt4gdCU8jKIfYggEDAozfaTej8Bm89KQyLEbCVUGgAfzuSDnYUFQr7WilbUTcBWq7GxgiY9xVKVrjVF142cETwk3a55Zd-IIMCRDFtzv3xXTJBXfsQkr9AT03ZTHQjYoWB0DmR-uQqai2ITxCGmd7mATQJ3uwcY_g9yCGmxLZ2M-RKDqeH2XRlS-6ouVYmUQw8rIs6Fi3dJV7KFFp21dpnrfHyRMrGK9ar-_xIPYqO4YDs1SDouxz7EtWm__pGJWXzTONippr0287zvSwPI7Xm2j4HYFkZgcIsLYJdJpNqTkd7MBuZuHCxdoiSpjma871XEmUk7cazfiXnvH5hNGpnK4spccOznWuZCzzixFdZxep71UeR8RuTdqOF0n9RR4gSEpAsLfMqejBaDQaolDlDq6e2p0IUz-Ew1lHB39aGLk7ru1NUHn3U-mvx_QuaIA0CIonXaWAU7ZrW9jw2Bt6BLRC4goeh7K6gdRe91YZT5XPvh8HIX92umEpMiNlkoJfjcRG0Tj1uLfPY_ZmcBhGFLNNjaPEe0kiYbGfUY37lvhONAGD0JYew5yKViEX1sp_fTV_kGZftifDapQMRj07MEBqfqKMUgqr3jj8JvaRk33KHMshdb888Ph2MdUlgoBNmeB8lMDpUeIB7Zzf8Y2f3DCNZUl8vgyZq5rUuAG1Z5NdJMRkTNXnBi_DZjeyn-0vbXQROBXrDSjP6pUZDhXYlWaVA2FAZcQHwPAkJqrnSNkWItWMAxNowfzUBcLmBGbUcxLxzozI6MsZCgqg9wClB4QiZcqxVFT9jB0L2YBYCI3Ooz4ni1MeKqc-qsdRaemCbnInNe4LgW-L8fxyrbn1ihv6z-WZzMiwKxaL9KCoLAGVynk9m1F1TBey5Icj7wKHJcjMHZdV2X1EBlinvE5HJJhYahfkGMVEvhhHpYQ1D1fwpSuPxQQjbQpFz2ZTA1Xsd0-YN0AChwTybpN8gjpJRTov2nUnnT3epxSDH4jryJ_lH6Tmyi3w1WM1kN8EJSDsORe8k9yHcfMciwyS08aTA69x56us9Xm3xUYav6x4FBNbAdIT7s7FFF-1EsiwOWI7FbFp_3and2TMkDzD52iAWa0IV8-u2UFa6qTVMaoFZffT4pwbB8iDJGDl9Lkz4lVX14E-AKE5-kiviIqx7HA-SqoFVf8e8gVYsAs6IYI7jGVtUUlXIw1BPHrRwWcA9RZ1HfwB78E17ORuJPMUVUvxESGRR9G1jikv_3kpMpawLLUmix2YlIAqZeIPt3jfnsM5SPS9Ges3iQ38Xp3H3D4kpif7FaQt2i5Z6DW-SlYcuYQwmeoGE6LeDM00XgBOd_EkzRUUI8nIRoF8P7q1akRM7DOGSNnZ1Y-Bp9zC9aWCeBl--DQpltfScrLmyoG34d4kbkVP6ySLoHydt7AXxaii7XaXFu607AM9i6x2WwckNZGSftmx9D4LZCtzN2OquD7Jbvhg3MGkInmR1VyAepVF-SccAF4Lklh30ccwvzM2GMvFdjZHmYprNays38AR4BeQc9hLe8tWRrsoExo4ePvZk5ORaA8n3qH0oorACRvDHpRWJV3qSynv6uX8rTcNQHmCQFQYWkorLTXAaNn_thLZQAqsm-zzcvzWx8zAYmUg21x2Ou1QvyiqN6qgBpYwICUezSNpWlxjQms9pGA0PABINoyla3B_GLOmtKM8m2mAoJH3bfgTa7HZQY1J1JRy8oFWN7inSkClFB9gVIyYB5pYCCX_4Ek7gz85AGcgV7eGNbcl2BA0_J1Mbjbi3OcpLeojYYajCG7pnQGRO7QeNi1zP7uvNtFPuz9UnJN3TqvRDSDVtKt53ZCct-I53sSZthibVBCgwPF-1enYp75UbyESj7pmPtI1s7UZ4IunGsxWfXnEdkboxtlDtduJL9lA5-QQIV-8vQSn-AMDOdUBzTfo4kq58Y8D8hfMUAGj-zI2RvNfJd0w8kRj6UuLuBJJ8pIWvkxw7y-IX9CRIi8T8EMwj1qPuAmFkps6Lso8pD4VMcyHUbmXtdVW8JeDcz1kCie0PNYpe5Rcqp6l7PFFMX5wKB367f0WfP7DVkLjyuBOpRMw-q6UihjtaDbmcIL_vxo6FA96Qa4g4GqXsL0G5x0Vv9JGSz2R7mgA4DF9t8gu4rinBTAr-nFD93tP5aISbG1lP1HzVuyB__r69x6X07UoNfT1cu2c1Bgja1xQT8EqpfSEfjNW5PM99hefqDSMNr-mfqs-XFtNm6dIDiAQXzYUsqlhDYLRy14rHWL9Ciuezv1k2Wl4aOugXzoXOJSEhrYpd_Oy2xekzGUdcqxw1jvj_0Y4ZxKSN_GwaZ1FeQ-Y0yTmIskAaTQm3rVmZyySofgW_w_g69qLFlA7zA-W4JJS4bD_hlvYr1W0Lm1Np5u-hjQ4X4SrxuaTThGz7egEKSiyVMg6PvZdG2C8VCxYgdokXWaWigzmk8LdBoK7Tc6RmKqX4gJ5K-uGMRWyI5YRrWzcFEPD_HAC062Uk99yor4dUwxanE-_lUomm9kCtHNjPuyKFjYnzij5cv4t6fSq5g10wH78BBaEOAsTP96ToH0w7CLAB-W7VIFVcP543k7CKi6W5tqVJKybUAJV6JYCJyzrKHY8alOjKE_XHg6pPsZWHXiABr1s_uukRU3SpBft9ZXiDPdcOEdxLwzXi_6cGDcMXbuJQy9DIsWiGwJ4-ZTsRLCanG9pzXYCFaGj70UNE8t1Jm1YPUy4HYEqItQFL63wLIamRN5Myu1XEVvGHh0y8lGnZZ8l-OSawi3ESui9jSd_jnMqNzh3ZA1G4hMxma7bDB42xYc5dPnjsJH3AwQTHFrL9vhPaxn1yld8kE_zSzVckcIYuF7Kv2AkozSZgBuKd8GG2i8Bp_1GqnpleMOoavmuUCF0pK4icqBdWzKGKlMkkW3MdDZe9xU5Do2dfpky4UppcsZ3cDblHVdeddpDnlHpdy9lSGRjq2kHrLSVmu3ZE3dU5RKfXUERXt_ouNxZ9nM2d_RYgjn-BwBo7jT1B6OgaZfuEQt51qunqPyOd5giYessd3kucWd7_o110TyTOjuNGAaof107JrXXPuVf8XWegEUow43u9Ss-LfYH6ffol_i2wB1yWB1Vnb_UpV7XgvoQpy-bDI1pSSxvzlKrDDW_JHB494Eon4iCPleSKYUtI5nbLb85zhDOuksW3Q5MzLZfQCEZi2vrJMMH2PT8sVFXR48OBHHMjFEGCfjJQ3rZ4wR-q0n_9XPPkPkw3PI9ovODDMLhLQ9y8AZRlf2EhCgYJMah_169vQHiQuwbKkgdtp833gKvUkY0zS2_9LBOuT9JUNHOqzsAtqjG_g7Lt4tCwIUM0JMpzyoSPvkJA-XThmoAT82r0urdSFktGUNeZkTQAjSKKBre0i9exy3dxzNcLfibLG1p_h_gmhvCR2zIjp1Oyw_cPGELcWPHx3UfwchzLz4dYn4H9KSWSwBG-PKpDWPZ4NhzelizqIVjWxe2i-Mumb_71SJnskf3Ifg3I8F65y43RKcFp2nEY2awMPhIkd3Gb8NnloHno150UU9A4jAd9EO0MN8ow1_NJtdZrktBpe1_SwKgb577gr0mRWeZ4G3Vr2ynt1e8UhfDtiXLnWrEaGevPWzrXE2ph6C9IXlqiANW73VZCjaDUIpfWb5qdHMi24WOuD_Biy0tAEOQbO5SxxOeLsyH4RJbCD9ZLxM0k-GfllptpRBgBGapfuwEttUsbu87ZxwKp69qmTvv0zAM9Cm9R0ao57lXRteA6ombZPcsKC_ojlMigTyikhMLk4rVPTTmJD-xDh0O1csR3k-vDoVSok4OBlyXFW024xAhiwCco7HXcD5hs9I465dqrajuvqduQWamu6E4g-pPOL5Rq50UkLakoEoBYNVMAQWURHVw7v9NiYPqScakAhVBYgAev3O9CR0Pc8bw_s2X9vgU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_0a6905a1152d32bc016af620cd90f487d1aa0e674e5d1a04e7",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 626,
+   "total_tokens": 2130,
+   "cost": 0.0263,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0263,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.01878
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 431,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.02
+}

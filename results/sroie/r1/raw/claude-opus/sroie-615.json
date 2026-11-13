@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "MR. D.I.Y. (M) SDN BHD",
+  "vendor_vat": "000306020352",
+  "invoice_ref": "R000010082",
+  "invoice_date": "2018-07-15",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.16,
+  "tax": 0,
+  "total": 7.16,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "SPRAYER SX-260# 550ML HA06HD01-3 - 70 9065940",
+    "quantity": 4,
+    "unit_price": 1.79,
+    "tax_rate": 0,
+    "net": 7.16
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 7.16,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.022804,
+ "raw": {
+  "id": "gen-1794514194-cVOW8ewqeJi0pmAx4xgv",
+  "object": "chat.completion",
+  "created": 1794514194,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MR. D.I.Y. (M) SDN BHD\",\"vendor_vat\":\"000306020352\",\"invoice_ref\":\"R000010082\",\"invoice_date\":\"2018-07-15\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.16,\"tax\":0,\"total\":7.16,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"SPRAYER SX-260# 550ML HA06HD01-3 - 70 9065940\",\"quantity\":4,\"unit_price\":1.79,\"tax_rate\":0,\"net\":7.16}],\"vat_breakdown\":[{\"rate\":0,\"base\":7.16,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm looking at a Malaysian receipt with GST at 0%, and deciding whether the VAT code should be S or Z. Since the schema says S needs a rate above 0, I'm leaning toward Z, even though it's technically standard-rated. Next I'm working out the total, which is 7.16 including GST and 7.15 when rounded, and wondering which figure to use.\n\nI'm settling on 7.16 as the total, since it matches the untaxed amount plus tax, even though the amount paid comes to 7.15 after rounding. Next I'm pulling the details: the date converts to 2018-07-15, the invoice reference is R000010082, the vendor's GST ID is 000306020352, and the currency is MYR.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm looking at a Malaysian receipt with GST at 0%, and deciding whether the VAT code should be S or Z. Since the schema says S needs a rate above 0, I'm leaning toward Z, even though it's technically standard-rated. Next I'm working out the total, which is 7.16 including GST and 7.15 when rounded, and wondering which figure to use.\n\nI'm settling on 7.16 as the total, since it matches the untaxed amount plus tax, even though the amount paid comes to 7.15 after rounding. Next I'm pulling the details: the date converts to 2018-07-15, the invoice reference is R000010082, the vendor's GST ID is 000306020352, and the currency is MYR.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSnAkKEAgTGAI4AUIIdGhpbmtpbmcSDAEauFxnyqzEVy7p7BoMPVIs0x6M54HAapHBIjC0qmmlADuUNPSb4ScGy6WwOjoQ6+OxIIyw5O2wjbokkoY9ECeGKyIlWVyAdomX8zIquQiMA1DmK2kLXSJhUBCso0Qu+SJEQs1M5rJGgvuc5caubQ3r/C5uGSE0/zIEtE2aIolKFDmk+xALPHWe6pr2XkvrdsEoTlQK9y5Uy2JdAitc0I5iNireH4NhlkUxq0jQILViTtFHj/qevrbFa9gV4xZK7fUS/N67C4GDMQ7raJ0243DDWuURwm4uyRAL4oere/1X77WoliRArYpmC+v9feLAkceQNh38ttswnDlhT/JceCjFtf3KR5/BsuktE6C333m4mpw4c8JKXT7fhFIEExZ+6hze4tmQhjR7t+2DxxqpPjwJDB7MfvJFjLfxk1DDZsm1/uPdepAOIx68r22CDgAeUasQsnAPAmHizS2q87PfyxitlIyc3lMoLlxlQbT3pmiWzqSpI773ZFH9/7fbaGldQemAS8/jtdkEIMh6LGlf9+poaOA+mk2qhXeRYkTjcHOdmeO+IzO+26QTS8wWUCbc5D7wDAaTbu9ui0nhbeL8qn5mz9oYPGnhWPRipBvhVFJFOoLQVc/v/NakM2X9AxYQGKTmOpvNyLP1fuDv+ZB/igSeJiqDoz2Vq1OsX0BnIos+H5VnY0IIONOvFcyYbqbICn221wdrgZo6YgC/HRX4J7rn+yE0amIcEA9S+0pHgOYncHChSPslwiD0bYdXu4QLjWgLQUdezmF5Y654NTWVhOxWEM8204dUuiWfn2zst3HZAw/1MIJLtzSmHYfmUyquReHzhWlo7uSgdtsfPodn7uhQkfZHp9GcPtWlNOI9F5MjeS5cJ7SzM1WnSZAhYP7LTyVNHX1xMcYjTD8adEeKKrMR2PXvY6JCfw3xA9+W9W5i9mw8zVL8Pdl4vijyLF0G5eLP36eNdBbznE6V6EVcApN+MLl3bKzrz/zWtuOShCtjbuuxFCqsllzKy3sx4hCMNRCVEptfxMmO/MHOIP0K7cnxyLIqwns7Ap+r6LLL+y3jbJv1VJnQzeFLQOJT9cnT/lY5pdbRT+9NqwbXng89xHi9s9hyqHTa2quvdUA/S3jbIarXOfuYLH5Utz8noet4LP0Ei+gFWVoV8AnyJBW42+O1ZslVnDhjPyDlt17fp4vu1GBE8tknO+JctPO1NnOhy+EHB0n3ojzQAyKK3YGY005gvjLSzFhqWk50WXTNaEO7CqDKs6J48H8Hsv+64a2D6K6mJA5QrKWsBAEybDXoBX7pEP9sqfMtRIROkonEeoJmqMcPqb1u5KeVty8et2XMyXanC2FrisiBPM9IMJlZRYNHzO4C3kYVxLyMmjXiYG7n1K4/dH6rTv1RQp3J9xnFWSzzdK2BrxOre88BqlBmRkOBPMRc0JozFrrU0KLLBcHyL8NaQrFrTAzmbXfwe7luYX9AoRYgAJBGYpDbb6zJouTnAbRyuwW+isOfvvp076ocs2n4dLHuT3NGiMnzt5yKfv0p+8SqjVcsGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 504,
+   "total_tokens": 3685,
+   "cost": 0.022804,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022804,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01008
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 272,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.98
+}

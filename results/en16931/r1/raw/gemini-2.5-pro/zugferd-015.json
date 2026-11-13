@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0008",
+  "invoice_date": "2017-03-11",
+  "due_date": "2017-03-12",
+  "currency": "EUR",
+  "untaxed": 2076.76,
+  "tax": 0.0,
+  "total": 2076.76,
+  "iban": "FR2012421242124212421242124",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 8.0,
+    "unit_price": 4.55,
+    "tax_rate": 0.0,
+    "net": 32.76
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 20.0,
+    "unit_price": 3.2,
+    "tax_rate": 0.0,
+    "net": 64.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 100.0,
+    "unit_price": 19.8,
+    "tax_rate": 0.0,
+    "net": 1980.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0.0,
+    "base": 2076.76,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.0204675,
+ "raw": {
+  "id": "gen-1794511858-elaBfGpSOz5Mgappw0MZ",
+  "object": "chat.completion",
+  "created": 1794511858,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Au bon moulin SARL\",\n  \"vendor_vat\": \"FR11999999998\",\n  \"invoice_ref\": \"FA-2017-0008\",\n  \"invoice_date\": \"2017-03-11\",\n  \"due_date\": \"2017-03-12\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 2076.76,\n  \"tax\": 0.0,\n  \"total\": 2076.76,\n  \"iban\": \"FR2012421242124212421242124\",\n  \"vat_treatment\": \"K\",\n  \"lines\": [\n    {\n      \"description\": \"Nougat de l'Abbaye 250g\",\n      \"quantity\": 8.0,\n      \"unit_price\": 4.55,\n      \"tax_rate\": 0.0,\n      \"net\": 32.76\n    },\n    {\n      \"description\": \"Biscuits aux raisins 300g\",\n      \"quantity\": 20.0,\n      \"unit_price\": 3.2,\n      \"tax_rate\": 0.0,\n      \"net\": 64.0\n    },\n    {\n      \"description\": \"Huile d'olive à l'ancienne\",\n      \"quantity\": 100.0,\n      \"unit_price\": 19.8,\n      \"tax_rate\": 0.0,\n      \"net\": 1980.0\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 0.0,\n      \"base\": 2076.76,\n      \"tax\": 0.0\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Key Data Points**\n\nI've successfully identified the vendor name as \"Au bon moulin SARL.\" Next, I extracted the VAT number which is \"TVA: FR11999999998,\" and the invoice number, \"FA-2017-00.\"\n\n\n**Populating Schema Fields**\n\nI've got the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, and `due_date` extracted and formatted. The currency is \"EUR\", and I've converted the monetary values for `untaxed`, `tax`, and `total` into float format. Also extracted the `iban`. I've determined `vat_treatment` is \"K\" due to the intra-community supply and the presence of the customer's VAT number. I'm now moving on to extracting the line items.\n\n\n**Finalizing All Data Points**\n\nI've now successfully extracted all the required information from the document to populate the JSON schema. I've extracted and formatted the invoice date as \"2017-03-11\" and the due date as \"2017-03-12.\" The invoice reference has been updated to \"FA-2017-00 08\". All monetary values for  `untaxed`, `tax`, and `total` are extracted and converted to floats. The line items and VAT breakdown details have been populated. I've also verified all extractions to ensure correctness.\n\n\n**Verifying Extracted Data**\n\nI've re-examined the extracted data points and have double-checked everything against the document.  I removed the extra spaces in the IBAN and verified the calculations. It seems I am all set to assemble everything. I've corrected a small issue of a discount on the first line item, and all the calculations are now correct.\n\n\n**Assembling The Final JSON**\n\nI've carefully double-checked all data extractions, formatting, and calculations. I've removed the extra spaces in the IBAN and verified all the line items, VAT breakdown, and the overall totals. The invoice date and due dates are now correct. I'm satisfied that all extractions are correct and consistent. I am now ready to put together the final JSON document, which I anticipate will be a smooth process.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Key Data Points**\n\nI've successfully identified the vendor name as \"Au bon moulin SARL.\" Next, I extracted the VAT number which is \"TVA: FR11999999998,\" and the invoice number, \"FA-2017-00.\"\n\n\n**Populating Schema Fields**\n\nI've got the `vendor_name`, `vendor_vat`, `invoice_ref`, `invoice_date`, and `due_date` extracted and formatted. The currency is \"EUR\", and I've converted the monetary values for `untaxed`, `tax`, and `total` into float format. Also extracted the `iban`. I've determined `vat_treatment` is \"K\" due to the intra-community supply and the presence of the customer's VAT number. I'm now moving on to extracting the line items.\n\n\n**Finalizing All Data Points**\n\nI've now successfully extracted all the required information from the document to populate the JSON schema. I've extracted and formatted the invoice date as \"2017-03-11\" and the due date as \"2017-03-12.\" The invoice reference has been updated to \"FA-2017-00 08\". All monetary values for  `untaxed`, `tax`, and `total` are extracted and converted to floats. The line items and VAT breakdown details have been populated. I've also verified all extractions to ensure correctness.\n\n\n**Verifying Extracted Data**\n\nI've re-examined the extracted data points and have double-checked everything against the document.  I removed the extra spaces in the IBAN and verified the calculations. It seems I am all set to assemble everything. I've corrected a small issue of a discount on the first line item, and all the calculations are now correct.\n\n\n**Assembling The Final JSON**\n\nI've carefully double-checked all data extractions, formatting, and calculations. I've removed the extra spaces in the IBAN and verified all the line items, VAT breakdown, and the overall totals. The invoice date and due dates are now correct. I'm satisfied that all extractions are correct and consistent. I am now ready to put together the final JSON document, which I anticipate will be a smooth process.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 2007,
+   "total_tokens": 2325,
+   "cost": 0.0204675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0204675,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.02007
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1562,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 17.89
+}

@@ -1,0 +1,106 @@
+{
+ "pred": {
+  "vendor_name": "Bei Spiel GmbH",
+  "vendor_vat": "DE136695976",
+  "invoice_ref": "RE-20201121/508",
+  "invoice_date": "2020-11-21",
+  "due_date": "2020-12-12",
+  "currency": "EUR",
+  "untaxed": 496.0,
+  "tax": 75.04,
+  "total": 571.04,
+  "iban": "DE88200800000970375700",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Design (hours): Of a sample invoice",
+    "quantity": 1.0,
+    "unit_price": 160.0,
+    "tax_rate": 7.0,
+    "net": 160.0
+   },
+   {
+    "description": "Ballons: various colors, ~2000ml",
+    "quantity": 400.0,
+    "unit_price": 0.79,
+    "tax_rate": 19.0,
+    "net": 316.0
+   },
+   {
+    "description": "Hot air „heiße Luft“ (litres):",
+    "quantity": 800.0,
+    "unit_price": 0.025,
+    "tax_rate": 19.0,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7.0,
+    "base": 160.0,
+    "tax": 11.2
+   },
+   {
+    "rate": 19.0,
+    "base": 336.0,
+    "tax": 63.84
+   }
+  ]
+ },
+ "cost_usd": 0.0139275,
+ "raw": {
+  "id": "gen-1794511866-C42feHLrzRLsfq3jrZSd",
+  "object": "chat.completion",
+  "created": 1794511866,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"Bei Spiel GmbH\",\n  \"vendor_vat\": \"DE136695976\",\n  \"invoice_ref\": \"RE-20201121/508\",\n  \"invoice_date\": \"2020-11-21\",\n  \"due_date\": \"2020-12-12\",\n  \"currency\": \"EUR\",\n  \"untaxed\": 496.00,\n  \"tax\": 75.04,\n  \"total\": 571.04,\n  \"iban\": \"DE88200800000970375700\",\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Design (hours): Of a sample invoice\",\n      \"quantity\": 1.00,\n      \"unit_price\": 160.00,\n      \"tax_rate\": 7.0,\n      \"net\": 160.00\n    },\n    {\n      \"description\": \"Ballons: various colors, ~2000ml\",\n      \"quantity\": 400.00,\n      \"unit_price\": 0.79,\n      \"tax_rate\": 19.0,\n      \"net\": 316.00\n    },\n    {\n      \"description\": \"Hot air „heiße Luft“ (litres):\",\n      \"quantity\": 800.00,\n      \"unit_price\": 0.025,\n      \"tax_rate\": 19.0,\n      \"net\": 20.00\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 7.0,\n      \"base\": 160.00,\n      \"tax\": 11.20\n    },\n    {\n      \"rate\": 19.0,\n      \"base\": 336.00,\n      \"tax\": 63.84\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Information**\n\nI am now focusing on extracting specific data points according to the JSON schema. I've identified \"Bei Spiel GmbH\" as the vendor name from the logo and address block on the top right. I'm also ready to obtain the vendor's VAT number, as it is a crucial field in the schema.\n\n\n**Analyzing Data Extraction**\n\nI've successfully identified and extracted several key data points. The vendor name is \"Bei Spiel GmbH,\" and their VAT number is \"DE136695976.\" I also located the invoice reference (\"RE-2020 1121/508\"), the date (\"2020-11-21\"), and the due date (\"2020-12-12\"). Currency is EUR. I've also found the untaxed total (496.00 €), the tax total (75.04 €), the total amount due (571.04 €), IBAN (DE8820080000 0970375700), and the standard VAT treatment, \"S\". Now I'm preparing to extract line items from the table.\n\n\n**Assembling JSON Object**\n\nNow, I'm ready to structure all extracted data into the JSON object. I've successfully identified all required data points, including line items and the VAT breakdown table. The line items consist of description, quantity, unit price, tax rate, and net. The VAT breakdown covers rates, base, and tax amounts. I'm proceeding to integrate these elements into a single, comprehensive JSON object that fulfills the requirements of the given schema.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Information**\n\nI am now focusing on extracting specific data points according to the JSON schema. I've identified \"Bei Spiel GmbH\" as the vendor name from the logo and address block on the top right. I'm also ready to obtain the vendor's VAT number, as it is a crucial field in the schema.\n\n\n**Analyzing Data Extraction**\n\nI've successfully identified and extracted several key data points. The vendor name is \"Bei Spiel GmbH,\" and their VAT number is \"DE136695976.\" I also located the invoice reference (\"RE-2020 1121/508\"), the date (\"2020-11-21\"), and the due date (\"2020-12-12\"). Currency is EUR. I've also found the untaxed total (496.00 €), the tax total (75.04 €), the total amount due (571.04 €), IBAN (DE8820080000 0970375700), and the standard VAT treatment, \"S\". Now I'm preparing to extract line items from the table.\n\n\n**Assembling JSON Object**\n\nNow, I'm ready to structure all extracted data into the JSON object. I've successfully identified all required data points, including line items and the VAT breakdown table. The line items consist of description, quantity, unit price, tax rate, and net. The VAT breakdown covers rates, base, and tax amounts. I'm proceeding to integrate these elements into a single, comprehensive JSON object that fulfills the requirements of the given schema.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1353,
+   "total_tokens": 1671,
+   "cost": 0.0139275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0139275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01353
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 868,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 13.39
+}

@@ -1,0 +1,101 @@
+{
+ "pred": {
+  "vendor_name": "RESTORAN WAN SHENG",
+  "vendor_vat": "001335787520",
+  "invoice_ref": "1074908",
+  "invoice_date": "2018-04-02",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.33,
+  "tax": 0.37,
+  "total": 6.7,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Teh (B)",
+    "quantity": 2.0,
+    "unit_price": 2.2,
+    "tax_rate": 6.0,
+    "net": 4.4
+   },
+   {
+    "description": "Herbal Tea",
+    "quantity": 1.0,
+    "unit_price": 1.7,
+    "tax_rate": 6.0,
+    "net": 1.7
+   },
+   {
+    "description": "Take Away",
+    "quantity": 3.0,
+    "unit_price": 0.2,
+    "tax_rate": 6.0,
+    "net": 0.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6.0,
+    "base": 6.33,
+    "tax": 0.37
+   }
+  ]
+ },
+ "cost_usd": 0.0117275,
+ "raw": {
+  "id": "gen-1794514304-BDBCgwlHPVOVvcAKNB5f",
+  "object": "chat.completion",
+  "created": 1794514304,
+  "model": "google/gemini-2.5-pro",
+  "provider": "Google AI Studio",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "STOP",
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"vendor_name\": \"RESTORAN WAN SHENG\",\n  \"vendor_vat\": \"001335787520\",\n  \"invoice_ref\": \"1074908\",\n  \"invoice_date\": \"2018-04-02\",\n  \"due_date\": null,\n  \"currency\": \"MYR\",\n  \"untaxed\": 6.33,\n  \"tax\": 0.37,\n  \"total\": 6.7,\n  \"iban\": null,\n  \"vat_treatment\": \"S\",\n  \"lines\": [\n    {\n      \"description\": \"Teh (B)\",\n      \"quantity\": 2.0,\n      \"unit_price\": 2.2,\n      \"tax_rate\": 6.0,\n      \"net\": 4.4\n    },\n    {\n      \"description\": \"Herbal Tea\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1.7,\n      \"tax_rate\": 6.0,\n      \"net\": 1.7\n    },\n    {\n      \"description\": \"Take Away\",\n      \"quantity\": 3.0,\n      \"unit_price\": 0.2,\n      \"tax_rate\": 6.0,\n      \"net\": 0.6\n    }\n  ],\n  \"vat_breakdown\": [\n    {\n      \"rate\": 6.0,\n      \"base\": 6.33,\n      \"tax\": 0.37\n    }\n  ]\n}",
+     "refusal": null,
+     "reasoning": "**Extracting Vendor Details**\n\nI'm focusing on extracting the vendor's details from the document. So far, I've identified the vendor's name as \"RESTORAN WAN SHENG\" from the OCR. I need to continue searching for the VAT number, which is proving elusive.\n\n\n**Populating JSON Schema**\n\nI've made good progress populating the JSON schema now. The vendor name is \"RESTORAN WAN SHENG\", and their VAT number is \"001335787520\". I've found the invoice reference \"1074908\" and the date, which I'll format as \"2018-04-02\". Since it's a cash receipt, the due date and IBAN are `null`. The currency is \"MYR\". I've got \"6.33\" for the untaxed total, \"0.37\" for tax, and \"6.70\" for the total. Also, I've identified the tax treatment as \"S\" (standard rate). Next I will extract line items from the bill.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON schema. The `vendor_name` is \"RESTORAN WAN SHENG\" and their `vendor_vat` is \"001335787520.\" I've got the `invoice_ref` as \"1074908\", and the `invoice_date` is \"2018-04-02\". Since there is no due date or IBAN, I'm setting those as null. The currency code is \"MYR.\" I've extracted the totals: `untaxed` \"6.33\", `tax` \"0.37\", and `total` \"6.70\", with the `vat_treatment` \"S\". I'm structuring the line items now. I've also constructed the vat breakdown.\n\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "**Extracting Vendor Details**\n\nI'm focusing on extracting the vendor's details from the document. So far, I've identified the vendor's name as \"RESTORAN WAN SHENG\" from the OCR. I need to continue searching for the VAT number, which is proving elusive.\n\n\n**Populating JSON Schema**\n\nI've made good progress populating the JSON schema now. The vendor name is \"RESTORAN WAN SHENG\", and their VAT number is \"001335787520\". I've found the invoice reference \"1074908\" and the date, which I'll format as \"2018-04-02\". Since it's a cash receipt, the due date and IBAN are `null`. The currency is \"MYR\". I've got \"6.33\" for the untaxed total, \"0.37\" for tax, and \"6.70\" for the total. Also, I've identified the tax treatment as \"S\" (standard rate). Next I will extract line items from the bill.\n\n\n**Constructing JSON Output**\n\nI'm now putting it all together in the JSON schema. The `vendor_name` is \"RESTORAN WAN SHENG\" and their `vendor_vat` is \"001335787520.\" I've got the `invoice_ref` as \"1074908\", and the `invoice_date` is \"2018-04-02\". Since there is no due date or IBAN, I'm setting those as null. The currency code is \"MYR.\" I've extracted the totals: `untaxed` \"6.33\", `tax` \"0.37\", and `total` \"6.70\", with the `vat_treatment` \"S\". I'm structuring the line items now. I've also constructed the vat breakdown.\n\n\n",
+       "format": "google-gemini-v1",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 318,
+   "completion_tokens": 1133,
+   "total_tokens": 1451,
+   "cost": 0.0117275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0117275,
+    "upstream_inference_prompt_cost": 0.0003975,
+    "upstream_inference_completions_cost": 0.01133
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 764,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.77
+}

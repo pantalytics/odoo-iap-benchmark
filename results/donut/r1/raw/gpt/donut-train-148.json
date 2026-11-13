@@ -1,0 +1,115 @@
+{
+ "pred": {
+  "vendor_name": "Smith and Sons",
+  "vendor_vat": "912-86-5998",
+  "invoice_ref": "20653012",
+  "invoice_date": "2013-08-03",
+  "due_date": null,
+  "currency": "USD",
+  "untaxed": 581.95,
+  "tax": 58.2,
+  "total": 640.15,
+  "iban": "GB46MLEX00282137220677",
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Sony PlayStation 1 PS1 Console model scph-7501",
+    "quantity": 1,
+    "unit_price": 14.99,
+    "tax_rate": 10,
+    "net": 14.99
+   },
+   {
+    "description": "Nintendo 64 Console with Box, Foam and extra oem controller",
+    "quantity": 4,
+    "unit_price": 120,
+    "tax_rate": 10,
+    "net": 480
+   },
+   {
+    "description": "B311 Nintendo 3DS console Cosmo Black Japan x",
+    "quantity": 4,
+    "unit_price": 11.99,
+    "tax_rate": 10,
+    "net": 47.96
+   },
+   {
+    "description": "PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display",
+    "quantity": 1,
+    "unit_price": 39,
+    "tax_rate": 10,
+    "net": 39
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 10,
+    "base": 581.95,
+    "tax": 58.2
+   }
+  ]
+ },
+ "cost_usd": 0.03104,
+ "raw": {
+  "id": "gen-1794512444-uMYVGOP4lKitGtS6elEj",
+  "object": "chat.completion",
+  "created": 1794512444,
+  "model": "openai/gpt-5.5",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "completed",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Smith and Sons\",\"vendor_vat\":\"912-86-5998\",\"invoice_ref\":\"20653012\",\"invoice_date\":\"2013-08-03\",\"due_date\":null,\"currency\":\"USD\",\"untaxed\":581.95,\"tax\":58.2,\"total\":640.15,\"iban\":\"GB46MLEX00282137220677\",\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Sony PlayStation 1 PS1 Console model scph-7501\",\"quantity\":1,\"unit_price\":14.99,\"tax_rate\":10,\"net\":14.99},{\"description\":\"Nintendo 64 Console with Box, Foam and extra oem controller\",\"quantity\":4,\"unit_price\":120,\"tax_rate\":10,\"net\":480},{\"description\":\"B311 Nintendo 3DS console Cosmo Black Japan x\",\"quantity\":4,\"unit_price\":11.99,\"tax_rate\":10,\"net\":47.96},{\"description\":\"PocketGo Bittboy v2 White Retro Video Game Portable Console - 3.5 IPS display\",\"quantity\":1,\"unit_price\":39,\"tax_rate\":10,\"net\":39}],\"vat_breakdown\":[{\"rate\":10,\"base\":581.95,\"tax\":58.2}]}",
+     "refusal": null,
+     "reasoning": "**Extracting invoice details**\n\nI need to extract and format the invoice information into JSON. First, I should decide on the currency, which will likely be USD since the amounts are in dollars. The date of issue is 08/03/2013, which is ambiguous. If it’s in a US context, it’s August 3, 2013, but European invoices often assume DD/MM/YYYY, making it March 8, 2013. The vendor is Smith and Sons from Michigan. I'll include other relevant details like tax ID and invoice reference.**Formatting invoice details**\n\nI need to organize the line items from the invoice into a structured JSON format. The items include a Sony PlayStation 1, Nintendo 64, and others like a Nintendo 3DS with specified quantities and net prices. The VAT is consistently 10%. I’ll also include a VAT breakdown showing the base and tax amounts and ensure the currency is in USD. There’s some ambiguity about the invoice date being \"08/03/2013,\" as it could be March 8 if interpreted in DD/MM/YYYY format, and the user hasn't specified their locale.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.summary",
+       "summary": "**Extracting invoice details**\n\nI need to extract and format the invoice information into JSON. First, I should decide on the currency, which will likely be USD since the amounts are in dollars. The date of issue is 08/03/2013, which is ambiguous. If it’s in a US context, it’s August 3, 2013, but European invoices often assume DD/MM/YYYY, making it March 8, 2013. The vendor is Smith and Sons from Michigan. I'll include other relevant details like tax ID and invoice reference.**Formatting invoice details**\n\nI need to organize the line items from the invoice into a structured JSON format. The items include a Sony PlayStation 1, Nintendo 64, and others like a Nintendo 3DS with specified quantities and net prices. The VAT is consistently 10%. I’ll also include a VAT breakdown showing the base and tax amounts and ensure the currency is in USD. There’s some ambiguity about the invoice date being \"08/03/2013,\" as it could be March 8 if interpreted in DD/MM/YYYY format, and the user hasn't specified their locale.",
+       "format": "openai-responses-v1",
+       "index": 0
+      },
+      {
+       "type": "reasoning.encrypted",
+       "data": "gAAAAABq9hZHs4z5Uv5mU_8p5FTuIkOetoAw82gZ88PFvTzbJvhnRkmIuuSATackfEN3ehXSRaGSW7Q-J6r3hLqq_od-RtbeMGA8L_RGQiXeTyXL8eQeRK6AAe2JoWdLQib_G4EhU9IublLiIxDxthBjXj_RhsugushY65vuKwmLZtOMeIboZhgP0OSaG6_nZa0xeqA8Nb19xBgKuPn_uVkfowkr0wVgJH7rQHrjVOlNpjls3J6dYHmrFivCKUu6Cxzpkg3Qs5KGtgXpNjfgFQYXk61HnEtr8PMklgX57E-0S3bVJNfHW0maBDtnv7EDdmfU7-3wwb5CiTwHbaqVLbdjLOCVs6Ik7RmHy2DgET4Yc-y-puvhSFKCucK4o8gQh85Mn-Kic21iXV8ZOsI7kxxw1cH6CntjonUF7AYCpnkyTABqitLo5v7yG2uqjOdy_awxv3hRUkACiVIoOdRiXO4UbRZTuJvjTmXxF38QXcGbbsMQcT0LHIfsTXP7rTyS1rQleb_yq3BCxZcsLsdLUUp7Kyl0UNgK7i17fBvML9N-7e-aqA79Meuu_BjPBuxlUnEjE08-0RQuRtU7dYVJYIrvergea9PIHDeGBkW5-MleBNzpAL6hs-uKzdje3D68MfyX5mE827X11a4iEDp_7AGoDFA5ly1dXwG7fbVfTR27SR4qd_0LoVIVFEr6qQ3mpeskqrmlH0lgqPNml0nvMd-1cjYRrccMUeH1qlKzo31SsWU4y_knamkO0BlbphqxmPPiI5Q9MkUI42h8Kqsxp3WLTzpWXpB_gOcS5Iwt0diLQ62zww_LFjZ8QlFfjAQIos7VMd_DiIdN9gCxQCN2zDX0OMsXkV1T5lC-ymjKyAoWpYsZdr-iVbNuqtQkER218Snia6OiQzilNYSkBetrTgl7hqzNHBFdT6MKGwgtbUTdjyVzwsHqZZhW6bZjI30A8behnG8nq2gA3U2e9Lv9aRzecrgUM3CHwXfCqLacNg8anlw6g0dQHNxwM_5d4OlXAHNjClpVQRS8ql5bWPxKswgAp6OTJAYGXassBcd0Am4q7g3VLI5bMclkrGQgb_Lu4-AqMVBCoKZ-pA-9-fl6w9Pyb5Tn8S-sH9E5FPwRLOaGg9bszHlWfMw4pZhcSDg7rfaLWauoCj1uCrgnfl5hYAHCfm5UKNl1FQ4facNj5jgWPKXuu4LknPkgNFhto1k3irk42rRZ4xNGgIZgPnS-_3gbpcgsmNROwXrHSIQakakq-lR_-MQ5EFEOGFssCJmttW2RQuR-aW7KsbjGtEQWHB89xcevZ7KLnjIrT5w8jN9p3RD3LN86p_FiLF-oDh9DbJ2GncS7Wtj9i2aFeqHu0pv3gIuCFJUjUzgTCWiZ4VP-viii4_ALksURKR0mZmqhzfCk0m940b-SKXdZJy9BkymE-4Q9c9bmb_37cN5_n9eZX_Pyzji_TAxDTSctPeH8z_BTtfyKkBmYPM8YbX_27VD7ThXHzACnnRlxlDlWat18umm7dB0KI35dZtIPU1h_Hvd-IT-DfYcW9ecezGlBZWqIHOKtOlFQd6h-RPhzCgSZud_x3uw_SeqYnF9i5wprn4awDb3sVd875tATS8JYcJqYk7BlnIASkwbEvQDksOma0Oj59KVxMYliVL_4g-spVcTPR7IQjML75GuEXKO434hFu2Y8uCHuuD7vFe9qzRMH2-WOKnHp8cAqhxdp18cLK7PS2XJD49Xp-QS7bXfCSpG8sr5JGlMALwr6Ik-CpWnIuaVmyqAqAQ48eJkTKH2e9PVq0uOBSBr-QtAknMIIIpCkZnYZzDzU8fP_v8Q35K8tUfa9ustV5sNd0wMPbPjhil-HKoO0SSghBRmDTA0rmusuQQ9HnGPdJEBrRHUJPTQVrzuiD6_0fLpreONYEcChlzRCMfca0FoxptKm4-PSAFMGoBtf5yYBHXRgWqZ6FFIZIr06svmViZLnZzhSd7mzZsfxNG37bwOVQAYiobG5BEgN-ym63JevrGWDr3_RT-2wXTLYVrGVygSor90cfg_zmvtCW8BnzqgakP_ThJziAXv9A7r5AMqjHsM7T7IyWO_h7fbKKt_EIsrFtOO7L29ndh5yRpEyG7Ne4iUmQVFucsUsaes3tFHsNLgsXDBKMxtzdmM8aUq42i4PO5HAVAeU36ezTVRWcGEAg2TFaUgjvtZEu0yJmXilI-_QFisqDx_y4mlxpXaQg4DBAeakBcFXsH7rNb8Hf8szLaRVX3aCc0Q11LJeW7EtOxNAV804Z1nSfzd1oQd49faIOeNm3tAtj-OWjkULR2EfW9XdDF3v42A8igoRuwh1jCZ2_T6EHGi0XeE46uCPcDiWNlei95FxwnBAPVl5CoqAkTu0NOrnMmdEEH9HBUR449Ht-MEYJFWN1N94_GxRfxBa84rY5DJy1JosCmb1AVf5f3yIelQ0Kh4cM8qn3C0N-3TR8NW-sQ22rM8u_QacorrXw-QNG4UqMim6GdzMxpgKMUwDK3XaJAo72QbftymDbaKfPBjyOgYUvnRb6UN3zPTNC3OlJZF3HnsBZ4ER3ntb2mfQ4OJaC4TamDSGETRigcTj_VZk-Co3lkrQYJe3O9HJo5iIgchnCG9aeaxFnJMoZ77SWADq01Zo6LnD1jAV03Fg4xhlWqocY22n2iWmsF4_LQWH92AvAz-3-P-aiVpg9nQSDh5_U0F0YWy7dwy6xfyjWq_awkv6LIzZp48dEmp7FdxxVbkCcVMQdX_4EECFIpvy2TP7MQFmjWSlb0upWqrL4QMQIsXIQNkJ2beIJDOFraegF9LZ7XHwl7r5dni4nKDSTRELqUaGYaxD92g8YoP_44HYDawW1-SEvLGjHga8y3XeNY4IMJEop-3l808CCEfOHs2yILX2eJe8yotisfn32Sh8bNTABHiAMRANTbT6-ck3BkpHO3xRpyXPkpvm1Qn6Oagz9qIiC_LJsuKCFgf22pcstFLPOr6dNS1NXthXRptJ1cbWXuxktdvM6ZlkFxtF0bnKKX3DSBCBeedcm08ZLZ5X7aBxM2dotgxyL6YMBLW1eDD36K2sp4Fwx1v_BsLDneNvzVs55MyMhq6t0AtK_M-2BZhP5pRzxUroUZW0OyAJjJuBzw7Qdu6In3vCOYZvKlQ3Ce2Bfy3AxEKxqnG5wJaqEYR_f2wzTlYEWLSg6PN-Hh-R9Pxynw5wuP178gN86MD1CL5g-vYqU0pGs95jIV2fYfjN_Of9hq4WVYwyHU7_3GdHuvfXs31gSRD9UHGAaUVK2qyDTFhe8LNvj8U0yUp0wXI1hY824fF9dPeVduTTAgSuSpuDq9QIQzEnpP6Fin6K23muc3nt48tljexoLQMk7SHBL1AHgPW5WRTSEZ309ekYANsDQh9cPpembPHiJBCTjqDEVu1xNs-53cKdw3pZ8lTt0K-l-G5aAxCprovOcp8yQdrgL23lS5GfrgsbU3wVy4EsICWouMb61v1v2biCbLJ_jTCHBHIS_9PDr3cqtd0NTPvnpo2lurdDbIMBxIgTUOjZhoizvjACkYxhi1SAyAewYOhKxgeXEQks_o8BWjuSiFLyxuiF-xGX9Zaf3qovvxQmgZrrGIOh31fwrIVDPKBE_AUg7c1hSU7BRxUBTE42zx15DS7AwwvLZE6vLF2a27jLT056HvPCPSc0UodhEKYzY0v8c5ltrGn57MrV7pyg5QcKeZYLE8rgLIjBtqtrQzwoeXvr9q6ptN-OdE0GiIKf-R5dOeoM47nv58obf-qhG8X5Q0HyfU8W5ATJsChWnz_ZpCBbdeRuCBxk-5aK718JP3n5v1Z-rdgUByHWczbQ5jvaLIzoxweOq4KNHhgktoE1yBXWnT1D4D821iDzPAtVch4UQfC68VsyMAeY79OzSeUpQ9J3ydtZZYZV1duXOXUPogvWCWfofA79Zudd1xIn3IHqmuV5dg6dBuMesCAXnxSKxXVgjcEVE3AFWcFuC4syc8EH8fmN1hya3tqF9vs-PJ7yU4-rHWE4XqU_8OxnLHoMUm_TGgkfFLxANAZSHcVXszgnk8g5p_LQ1bPuqu5CFAhStuu7KGiVVKwLleDB15PQm0Zh5izuFRkyidmJ0jqVJSF7F2OwlOdN1MZ1IJl_fUFqQapZ6e7NwrPcT6CZ6UVhOoefxIhHXMR30pr-r1O6mU-fm3BVpO0Yb9gRFRRGzzt0q4TNl9hwMUbyU8VrVVSExaRo8BNNWMSJV3RG6nuicB80RnnoO5xggf7-bjmJjzMYlQZrLqg2psT89CvaHjR2cRXLizN1DhgI-bhO24Xz8aV8vHw1xYFNPMPuIMvB0Tpse8rSA9uMMW8toeh5vD_ZYM2GjsiZUlRi1E6SLayzLVbdgoe2kI6cfabcNw_aurNLAT4bR-scvwE1HFuv__KORwVEkMYVSZjcMhcqPgodh6Ay8GKCloFKsimb4TpPBNqaPsSpuXOzaqFaFMkOWhLL8bGA_Hi0KMUIZLWXdggrMMTyGRZzDkjKsB9XIxkXqWucQxIT5WZhhdg1NEwm0URfFusAFi_tydJMb5HWXHBZn1xuiGZG_2bnWGRIrPipuoULVanKL5lL6TJZs78yfdqTyBzVDn3vwIo4EU7TFMjlE1-T9zYlujv5uPaHGAh_rYnRmB861CtFE-yDbICZjKBO45sdMSmDSZk08C-VKroQdg8JuEFKQ8RoHJgtOrI0NM-cwCx4Mf3Xs8NfkpuZFzcFq8fGoGTYKMb8mPa7j5MApbw8E1dhB0a6i7fUkSP6UsmEF4igoc4WJPZ-YsMc92agf1s8rIYkNR7-6kQNSS1IttUe64x7tM8lmbxSN-m3TOS5JIEi2InqerJYkKwmvJVySm-DR-BCFpKyIsIci0oHwkpOxziexgCukFsND_v0lTLSxNgEx3lAX2Pp2QnfTiD6c4jU-EAvT7LQPi7N7TVpTO4XizJxqq6P7IsSvFLsTa43U4Q1qGNxebjX9rSU2tjpGpOqOLX9HIsARjXvXZLye5q2OoQNSr5XpJe6SptVOnB-VgtGLlSfroS-yi88zVjXXpME6-zOXksKaY8I2SG1ExoBWuNH-Atz3w0sCgJxm0wrM-rNHzXC4kXjQqWJtuKEldnmeEIIuYTO-Kz1owBxLPimXnEWvcosDbf-runCUlW2JkoHOCilpSnCSeAyQrSDWQ2bR2uD6i4MXjJHCAohr1i0OaL3nWQ2LaaQwctZYqKxLQfT5JEbLxffRKPFmQWn9IUzdBFF-xUw0HCrLptR0jcvToWtCVa5XdLgSB7iz4DpP3zHWVVnRHLVZW07fC7wvZ3RB8ap-Z_A8NRPcJnWCNPIXYhkR2DVbmGBFIcto5kRX6jLsXQylsrgWXd_zCrjwx5k25oMxrktwo1OvPkZrcF43outQRMfWQud4DIvBZwhdV3aA-X54fvEJEUlnOrJix-Ex7Q95OxrlqvkaX0XAj2jgVcZvEQwCg5lZBwIkEBWhGQB17Q4MdcajlhAEcyyXwT2W0ZCKI1N7vpGpVMtC_OxaQLUChzWm2BeN7DJY3E_UV7hOh1s8nr7tElCr_yrGvDEZRsUoKGNSMfsSHcn9UH9bmR_hC3bjGKYiAlUPSsqF8JzgfpztvfNUiIL1eC2TOJdp9KNGSvYmfG0ENJhc9pWXDahI2rqOyUxcv4J4eEE39tNuMHq07QmM9xjXmlJ0omeU6AAC9yKDerGlZItVepJAsL4Duhnov2VDOT6qWeP8fR3QmhwPArDgwO2GC8c3-9eNt5sHm8NAeCxz_xtidxg5bd9U4bLP2Ce7in76P4FSYwzptChaD_GH499K1U1wFiGuw5_Lc1XtZVBZWxl7xo1oZ93VUlJzjinTQCNd8NxHzKmwr6X2ot7sOJTTeKCLtCHFET0FRncNoLOO-FQQSTeBzqaxLu6NG7Co2pJujEwAco28n4k6FINr1HVEONyF8vlZXnQ-d2UkQITWM3UGirFXbrOJzhFH_GJW1pi6qm8tUHAaBxthPgSnr3JYruCubvXkcmUDPvuG--mKMk6vIr2a7iPAwdPw4OukX9ESC60L31xTyV5_B0oslpZZjGJ_pdeF7JFXNkDfIIl2kh1gGhcnez0U6hO_ktJSHG5QuP_b0ueZ_Zho3iDoDk6SLq69bd2_3pqybz4VMbjnIUn3jctZe6Iwiumxcd2sPdf7z9jHp67-9lbEHM_WBBqF5Qcz4coPAvu6I_mzjxokWalsTbz5NPrsPQD9lqJsfRqWWt_vUmku99ulBeU7glzn64BuoQD-Ey2LwItqeaA4oZvlNOfWu85raPidlKlcJThFtWRwzZMiir2PBKGHdEfBq_gRIfxwnkpu6l20dVxOJNUnLMVPSIt8qw4cphxJeMEkLz7-PM7fpb1SWI6KFOOn68Kts5MopWCjKj85_kY-QpxFdF7DWouTYTFrlv0LeeeO79TXC5nWZoUtU-hFcvJ8yGH7Hy4v-BAHlh8W3vg0MnuqsaN0OJUB2S0wkOaFsCDILYLgU_gtQ1dih2tYbdosBLsduvYBMLscZEuCMN9pienOJbhzwEZxKKGdXU7pTlWeFweEEC0hgMOWA02FNYeNkVC8R80BlNNdrljsPOOGvIs09GA0br3n7rikx0InpiHJe8dzHXdys5MDRzMqzLkXnHE0aCTCtDZMoL1CJkuJPwF0A_1cVYDuBzjbZ_mtduncFZI8lEA-oHuUTk_77lAKtukuRBA5-ShNf6nXQTCnRilj7p_vfuA7AMbakDRo0cvCFWwxcM-V52GnT5ZVi6h6WJkYvpzhU80OcxciCx3DbflU_FPQGQUhdMsUw4uroquD4syiy9QMuBu5Meb6PAVUg0hihsIMvMctrUNKfpfsIvqgVztC_KTgFOmRzNVmdy8UCN5myaA6rKdI9MER74OKVEVX6XYGz0uRLI-HXgfm8N-a4swvG_guZ9_lvUDYHjF4uH9tFWJLoLDWLgBXniDT_us9VVNeLiun7_0jkgJgyHQD3xTr1PyRU7zABQVOM3j2gUGeONbKoIAptCasrYGAynVoW3-Fl09ZqhtuFNnFN8SiTdbPyAB6x2nSottlCQ2GeOoWHW0uYDEcGOTy1oM_yKpt2Iu7PYQmN0m8b7cjKjMM3nPVTYQ9uNUjCO6xcgmZkvPe67fL7xhkmSWHylgAywGLqYomuWnTxfQPrOdKmIb-GoGlwDapFuaRvOaLATOkjLDBQKroo7f183gB2-9yRMSEEJlaVRTONV2R8Agt7yM8bK4NwjsBlpTCvqyrS_XDFIS9MrGYxphpY1ochbEFuDBdqMfQRnMb9WjummdKeC4QidPC92LVCD-JpsjyuYHrDCwmcf9cUBxbO6VaPEi0ZQgx5e51bmhFVsf82HylYW1w9W14FCV4TTAhS6rUuw2PhbuEmNxb3Q=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LjUtMjAyNjA0MjN8b3BlbmFpIn0",
+       "format": "openai-responses-v1",
+       "id": "rs_055aa9f33306ca21016af6163e5f4c87d1ade8cc485c46611e",
+       "index": 1
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1504,
+   "completion_tokens": 784,
+   "total_tokens": 2288,
+   "cost": 0.03104,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03104,
+    "upstream_inference_prompt_cost": 0.00752,
+    "upstream_inference_completions_cost": 0.02352
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 11.64
+}

@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "1010104759",
+  "invoice_date": "2018-03-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 9.34,
+  "tax": 0.56,
+  "total": 9.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SC Acr Frame S103M",
+    "quantity": 2,
+    "unit_price": 5.19,
+    "tax_rate": 6,
+    "net": 10.38
+   },
+   {
+    "description": "Member Discount",
+    "quantity": 1,
+    "unit_price": -1.04,
+    "tax_rate": 6,
+    "net": -1.04
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 9.34,
+    "tax": 0.56
+   }
+  ]
+ },
+ "cost_usd": 0.026404,
+ "raw": {
+  "id": "gen-1794513506-7K46iqynm9YCvkL6Fvz4",
+  "object": "chat.completion",
+  "created": 1794513506,
+  "model": "anthropic/claude-opus-5.5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"POPULAR BOOK CO. (M) SDN BHD\",\"vendor_vat\":\"001492992000\",\"invoice_ref\":\"1010104759\",\"invoice_date\":\"2018-03-05\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":9.34,\"tax\":0.56,\"total\":9.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SC Acr Frame S103M\",\"quantity\":2,\"unit_price\":5.19,\"tax_rate\":6,\"net\":10.38},{\"description\":\"Member Discount\",\"quantity\":1,\"unit_price\":-1.04,\"tax_rate\":6,\"net\":-1.04}],\"vat_breakdown\":[{\"rate\":6,\"base\":9.34,\"tax\":0.56}]}",
+     "refusal": null,
+     "reasoning": "I'm reading the receipt: it's from Malaysia with 6% GST, and the date 05/03/18 is day-first, so it's 5 March 2018. The unit prices already include GST, and the member discount of -1.10 is applied to the line total of 11.00, which is also tax-inclusive. I'm working out whether the net before tax comes from backing the tax out of those tax-inclusive figures.\n\nI'm checking the remaining lines against tax-exclusive figures: converting the frame at 11.00 and the discount at -1.10 by dividing by 1.06 gives 10.38 and -1.04, which sum to 9.34 and match the untaxed total, so I'll use those. The invoice references are the slip number, the vendor's GST registration, MYR as currency, and standard-rated VAT treatment.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading the receipt: it's from Malaysia with 6% GST, and the date 05/03/18 is day-first, so it's 5 March 2018. The unit prices already include GST, and the member discount of -1.10 is applied to the line total of 11.00, which is also tax-inclusive. I'm working out whether the net before tax comes from backing the tax out of those tax-inclusive figures.\n\nI'm checking the remaining lines against tax-exclusive figures: converting the frame at 11.00 and the discount at -1.10 by dividing by 1.06 gives 10.38 and -1.04, which sum to 9.34 and match the untaxed total, so I'll use those. The invoice references are the slip number, the vendor's GST registration, MYR as currency, and standard-rated VAT treatment.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSuAsKEAgTGAI4AUIIdGhpbmtpbmcSDAguWNR6j5JdMu4o/BoMHFRBlhcyYfZYVOfkIjDSfb9wVyNqBtqdvKIjEpZXjaNuhhfIUgAWLFUXPFy+bFhLxdhSE1szvTnY7LFffB8q1QqQmJs6Coj/4iXPHKx2BSZzad6jaw6HvkmHaaUCdsOjJ9il9SDTCEZogowy9GhmV1AQq2fC3U8xixndeN5kWNhOu/fZjAKKSZslaoiK7y7rwB3F9JskwJt8EZ1gIBfzPGqHgIhIqL8kv7CPH0dKLB/eZQ3owxbytOdZRvUBcguG2OpA7o5vMYdXTsh31TnQlO/eocQ70NlCwSFzm3nZQJTF8S6QWvxHotZAlUD6cf852U1wUhANYg1NT266WW3AfIitl25r9m49nGW3zzD5pjC3uthV9BncyxkRO8+DIsm/HsMs1DQoMNyFwy+AUdXhNF239v9dBz+qcj2gye7i2TezuW4VyVkEMb6bOwWxaujaln8tMuf/dtLWmPIx1kHF9MV+M0Fi/M3egV69tEh5WgIU/mUEzd7pyE8xSblkGFvUixWa4nz9dON8FY9YhC1sUAoCPM5I+5uVbdfhmxmMXpBv0x/iFbgGTr+atYAl1XofeuGRIQp453I6G3MgJ6pYnqO18TEw1HcgMlSp9DR4tdi9toqnd49vCn0GDvbcSUzLwuRl0Oc/uWO76ZyLg9LSs6aQFtC+NMY6jyWYPjiLp0Ta3f8mxxVN38HdMKrufISmzIEySYeLeT/2rywPpsFzpMQe/3O1JIYfzMDSn1dvgnsXXbT6FvUJA1ce6KyHju4Yx9HoxMf7fojMHcgEl0upxEkMXgn2jAILo1bupTO/AE7gSBX0RoSIgbHviSi76B7UMUENgmptof3MdaGABHMlH74+bSBsZIQEhZgSlAhbVzepXY0+UQtY1Q/KpAS19LQcf+EKo8RnnYSU2WS+hbjVr2iCdsLciycNimGI+JDXrG5luwhdh8EGSfdbfLx2r2mSHKIsA4anwWm0msESuHQ+EB3xadNwVj1eoKK5/p+6wgfgcCjV4/KCsD4LrPTRZIFpDl0umz8Wa+4fcot/cr0cbTk2e3GKjTVU+bU7dP1OBpuI2EwutDiAlqyF1BTXSJX8U9AOQPYsYadm8dm2lJU39PwnYwwK20h9Xv+UzdbfxabCt91J9FRr5tIlzoE5p6y9sS4svg4QX5M5IO6CwbB0YENXVZ8O/XQ+IJ6hVy/r2qxUtf0QoSDtI+yBHgi3LDyAUa34B+OoC2Gc7+O5DwBHWaVZG/ExLvRwdvjbwLHR/soHbv6rlHNBfQatmC0G654A05mRNpAQXCMnZ/HsXaRGnpAKKvQA9q0Aqo5uqc3EgPaCLEaJ6aDZtOpH4ImUM4gmuM7ORsRCQkV/eZXb3P2mbpXZX+RxHHEcAw9yqml7KG0txuljAusccGV8vWe4Fo3iU6LZYnV3a0N8GWH/3bRZ/VnsigBtpdV+Tk2JoEBdk2otEU65WVOQguS8qbzTSQDyEFlVyN81rpArxLQeUVYodg/cz7VdjzAnOb81HWBW4LLmxgG10upi738oy89qsPSuV5vKB/PY5PxA1Kc1KDvQ4EAOvrzZUwedU3KE3zg2fkIX8YL09Ed2RFSZ/5YVS3DClpvcOFUdHlj7Gr2jwQm3RLKjfd6q7hEuAQTn6/5Sw4aJK0WRhUKXuVHuSeR9BDzjO16VbsGQjDbMsMIJKGzzHwW/tSANG7Id4CCQVUVI4RM/p6GTrhdwYSXoiw4UT2VcYTl4XSuq18P0Qc4vrNjoywcgYxotsrqy8Y+k6rdEMptTSP6doxrSB5/+jR+psqfWUkNo11XWykaovo8HwnK87/M3jHJgag4l/HhJfBYJKQn4SmaIeqMjkLevktwEEZ/0b0yk5+YRFOmFNvh8xX5MKcq7g5T/b234hdAlrzp0/HZfGVtoTBEYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3181,
+   "completion_tokens": 684,
+   "total_tokens": 3865,
+   "cost": 0.026404,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.026404,
+    "upstream_inference_prompt_cost": 0.012724,
+    "upstream_inference_completions_cost": 0.01368
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 422,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.32
+}
