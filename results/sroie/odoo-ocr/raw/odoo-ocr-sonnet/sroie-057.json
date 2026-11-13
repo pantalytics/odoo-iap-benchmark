@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18032902170347",
+  "invoice_date": "2018-03-29",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.7,
+  "tax": 0.4,
+  "total": 7.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "100100000035- 1 Meat + 3 Vege",
+    "quantity": 1,
+    "unit_price": 7.1,
+    "tax_rate": 6,
+    "net": 7.1
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.7,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.00954,
+ "raw": {
+  "id": "gen-1794568376-AliD1X4kcPEFxKwqVK2m",
+  "object": "chat.completion",
+  "created": 1794568376,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18032902170347\",\"invoice_date\":\"2018-03-29\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.7,\"tax\":0.4,\"total\":7.1,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"100100000035- 1 Meat + 3 Vege\",\"quantity\":1,\"unit_price\":7.1,\"tax_rate\":6,\"net\":7.1}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.7,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "I'm reading this as a Malaysian receipt from UNIHAKKA INTERNATIONAL SDN BHD, dated 2018-03-29, with the invoice reference and GST registration number noted. The receipt only prints a \"$\" sign, so I'm inferring the currency is MYR from the Johor Bahru, Malaysia location.\n\nI'm settling the totals: 7.10 is the GST-inclusive total, with 0.40 tax on a 6.70 base, so the line uses a 6% rate, since 0.40 over 6.70 works out to about 5.97%. I'm treating it as a single standard-rated line with the same 7.10 net and gross, and leaving IBAN and due date empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm reading this as a Malaysian receipt from UNIHAKKA INTERNATIONAL SDN BHD, dated 2018-03-29, with the invoice reference and GST registration number noted. The receipt only prints a \"$\" sign, so I'm inferring the currency is MYR from the Johor Bahru, Malaysia location.\n\nI'm settling the totals: 7.10 is the GST-inclusive total, with 0.40 tax on a 6.70 base, so the line uses a 6% rate, since 0.40 over 6.70 works out to about 5.97%. I'm treating it as a single standard-rated line with the same 7.10 net and gross, and leaving IBAN and due date empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSsQkKEAgTGAI4AUIIdGhpbmtpbmcSDPcnFIgOtLBAHyTPahoM4qYAwqDJV+mEJGHRIjDB/N9znYuqc9UwNy/IYnfKL5VGcmbWOMI9x4t1ZBnO6FdaDKzu9OqiRCbmvpa0Ho0qzgh316e9uRWkJKiQVg600Y+rP+cODm63tVUtTWC8XfjlPAHI0iEk7Gc6rZDPuFmazofiBTJHzIwmCstqUTjjD5Xx3NFIu9mYlWVig9VFmcg5Rlzk6rkBj89O6w5WXfzISoCS4DvzWgUVgX28k3irZ+HpZw4eXAhGcQXaCVW43zsSeCFKI4Arl/G+qDqmPhbC+fHeOQ7fyLvcHuvGci55Q0X07RPDZ5BdRKIENzStNYR6Qb8bdRj+DEAIV1X16jjpEjlv4hLz8GM2qf92/m7IToe364XKXvD3uDaZx4ptrxaP5hcKQ6n9jL2Vn8mXH5HzmxaywAehWBVfUSZX7M1u47RpxuwFkvuytpc70ZExfUm5xDrISZMNfH+HWz2LbRn/0Cpqd8OIJ+AJ4jlFBZOQRDPctmi8NAlXhAty6Ow3kRCH0UNqg26CBAq92GeCZtg48jjmRoRa9i7wtZMYVl4A31ed0HHXFHBSA1ZovXbwyguOhm6qhgrtGubfSablMmt522YVwT6UTJMt64VwPZQOn5T+vRTxvPepuI0gkZn9IpGvU4dLmpaIMoOxiS4nuPypr1vSJv/Y8KkPREKnKXyBMZG5YumjPItDKls4MfSG7CpiT2l0gQHqYOx/R/M8pHQqejfR5sm5Cj5Q+K3cEqIOhZ1HU5gUCbaROaKwnRoZ1CzR4WsIR08thXE/gGzOejoAeoz907CcYWX9Gp6NzHtK07GKblsTDhjpPqYSuRrnyMV+xRAXIwnb3p54EYKpUKzTvKUP8FIf+jvhosDTycxZLEN4DaQktCykYfZsnTGayDIHvNhAEaLe+oOGpw6RPpIboAI/M9niLBQGD2edl8ejw6ir4+s5YSe8cj4WgWQWW6eHH5q8UcqUPBqhDyMNpmkGe1zQ4od3NMrIpMZvqNPh7x37RxOXXwHyqVtvK78bgTmkVLPidlWCR++jE2NP5CgMmoWQg9YXGnLsHX6vr0k6lfaKHH6Ug+E2jlwZMkh3OlJyK5g9UxpkZ2kPgZkMMI3DTVFZcBXblDqNfFhY8+c+TgnAO0Z/52lZnKobCYsMCmd1aD74iMpMFPKKYFm51ckuOtgCxkUQvdGBBBBwvfduaAJRjnQvUX7xd9P+8YC8YPGs+3YSGnYwh8NhXEzNoeV2eWASJQLY3wPt8X2VMGumRTmTEjT/Mi6epZYCxq/uUQRjOIh4m3XuCnjvnQyAw9RL6N2qb6DRJLzpxFkEAtRemInd5LjjrDKji0QPtqygZkG+UNvEG5RU+gp4pbIevE9Oxsp5hMWxOjPjamlH/nfBmCdro75K0nxzSdmdZ0nVvRZUHE0kKW/OXcV7UUqoOjJaLfvoySyx5bpkbsCrVP/djsqpJoscR7G4nH8PWNVSzGjAZOGCfkAboKrb4LRbqyTb2IzjGBcRREJNuDqknXFqUt1WDgFEbngxASmeq5HhiTUFH9Dq2iRT88N4vPkXMs33GAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2065,
+   "completion_tokens": 541,
+   "total_tokens": 2606,
+   "cost": 0.00954,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00954,
+    "upstream_inference_prompt_cost": 0.00413,
+    "upstream_inference_completions_cost": 0.00541
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 312,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.23
+}

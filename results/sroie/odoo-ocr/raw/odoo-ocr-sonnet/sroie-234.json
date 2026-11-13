@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "BEMED (SP) SDN. BHD.",
+  "vendor_vat": "001734164480",
+  "invoice_ref": "58273599475",
+  "invoice_date": "2017-01-02",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 155.0,
+  "tax": 0.34,
+  "total": 165.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "ALPHA LIPID LIFE LINE 450MG 450G",
+    "quantity": 1,
+    "unit_price": 185.0,
+    "tax_rate": 6,
+    "net": 185.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 155.0,
+    "tax": 0.34
+   }
+  ]
+ },
+ "cost_usd": 0.014918,
+ "raw": {
+  "id": "gen-1794568376-KLvyznH7KnCiBjt7Dt30",
+  "object": "chat.completion",
+  "created": 1794568376,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"BEMED (SP) SDN. BHD.\",\"vendor_vat\":\"001734164480\",\"invoice_ref\":\"58273599475\",\"invoice_date\":\"2017-01-02\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":155.00,\"tax\":0.34,\"total\":165.00,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"ALPHA LIPID LIFE LINE 450MG 450G\",\"quantity\":1,\"unit_price\":185.00,\"tax_rate\":6,\"net\":185.00}],\"vat_breakdown\":[{\"rate\":6,\"base\":155.00,\"tax\":0.34}]}",
+     "refusal": null,
+     "reasoning": "I'm working through a receipt that came out of OCR, so I need to read each field carefully. The vendor looks like BEMED (SP) SDN. BHD., with a GST registration number, a 2017-01-02 date, and MYR as the currency. The totals don't agree with each other, and the GST summary figures look shaky too.\n\nI'm weighing whether to report the OCR's printed tax and untaxed figures as they appear or to recompute them from the 165.00 total at 6%, which would give roughly 155.66 and 9.34. The line amount is also unclear, since the printed unit price of 185.00 doesn't match the 165.00 inclusive total.\n\nI'm settling on the printed figures for the line: unit price and net at 185.00, even though that clashes with the 165.00 total. The tax treatment is S at a 6% rate, with a base of 155.00 and tax of 0.34, and the due date and IBAN aren't on the bill, so they stay null.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working through a receipt that came out of OCR, so I need to read each field carefully. The vendor looks like BEMED (SP) SDN. BHD., with a GST registration number, a 2017-01-02 date, and MYR as the currency. The totals don't agree with each other, and the GST summary figures look shaky too.\n\nI'm weighing whether to report the OCR's printed tax and untaxed figures as they appear or to recompute them from the 165.00 total at 6%, which would give roughly 155.66 and 9.34. The line amount is also unclear, since the printed unit price of 185.00 doesn't match the 165.00 inclusive total.\n\nI'm settling on the printed figures for the line: unit price and net at 185.00, even though that clashes with the 165.00 total. The tax treatment is S at a 6% rate, with a base of 155.00 and tax of 0.34, and the due date and IBAN aren't on the bill, so they stay null.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2034,
+   "completion_tokens": 1085,
+   "total_tokens": 3119,
+   "cost": 0.014918,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014918,
+    "upstream_inference_prompt_cost": 0.004068,
+    "upstream_inference_completions_cost": 0.01085
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 861,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.22
+}

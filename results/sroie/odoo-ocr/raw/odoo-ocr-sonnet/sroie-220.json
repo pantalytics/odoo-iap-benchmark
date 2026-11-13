@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "PRINT EXPERT SDN BHD",
+  "vendor_vat": "000886677504",
+  "invoice_ref": "CS00489817",
+  "invoice_date": "2018-01-12",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 4.0,
+  "tax": 0.24,
+  "total": 4.25,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "A4 CLR COPY",
+    "quantity": 8,
+    "unit_price": 0.53,
+    "tax_rate": 6,
+    "net": 4.24
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 4.0,
+    "tax": 0.24
+   }
+  ]
+ },
+ "cost_usd": 0.009382,
+ "raw": {
+  "id": "gen-1794568352-ZCnk2RGOb1A18231WTi8",
+  "object": "chat.completion",
+  "created": 1794568352,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"PRINT EXPERT SDN BHD\",\"vendor_vat\":\"000886677504\",\"invoice_ref\":\"CS00489817\",\"invoice_date\":\"2018-01-12\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":4.0,\"tax\":0.24,\"total\":4.25,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"A4 CLR COPY\",\"quantity\":8,\"unit_price\":0.53,\"tax_rate\":6,\"net\":4.24}],\"vat_breakdown\":[{\"rate\":6,\"base\":4.0,\"tax\":0.24}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor, the GST ID, the invoice reference, and the date, which is in Malaysian day-month-year format. I'll note the due date as null and the currency as MYR, then check the untaxed amount, tax, and total against the single line item.\n\nThe line amount of 4.24 seems to be gross, since 0.53 times 8 gives 4.24 with GST included, while the breakdown shows a base of 4.00 and tax of 0.24. The two don't line up cleanly, so I'll keep the printed figures as they are. The VAT breakdown is 6% rate, base 4.00, tax 0.24, treatment S, with no IBAN.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor, the GST ID, the invoice reference, and the date, which is in Malaysian day-month-year format. I'll note the due date as null and the currency as MYR, then check the untaxed amount, tax, and total against the single line item.\n\nThe line amount of 4.24 seems to be gross, since 0.53 times 8 gives 4.24 with GST included, while the breakdown shows a base of 4.00 and tax of 0.24. The two don't line up cleanly, so I'll keep the printed figures as they are. The VAT breakdown is 6% rate, base 4.00, tax 0.24, treatment S, with no IBAN.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSrggKEggTEAIYAjgBQgh0aGlua2luZxIMEArjcgX7rVDEWOX7GgygKCN9N62DzySR5KgiMP9h9ksSyz0GVii60FfYy8wDPcnPJFysvYl3KGDHCVj3YVzMKYH9MVr2a6c02RyrryrJB4m0JrhSbbk6HAsvsqxXTu8o8oJVHI2vWDotcuv+TteAH5lzAGgf6zGD0CmOsCTi7JU4WL1FpA78Ba2YFghbtXGP/zWqWIxpsU98qv5J0D2UzGjq7WRCg1QtjaUSVy5onKBhTDlVIgj6A0+saVewLrkeG7d5HiBmYmWikOtt0RCPdO/P/RV40zB5zlkMZ/85bgmK3fUeBhQ45Mj6K9PINlyQNMfC1DzFh/s5Cw2TUr8t3tQ3TY+FVujY93SXNE6ctxc39OB+Phhp+780U+dRcCDBwWj+I/l5GEw2VUXYeCrEzqnSpCaY7JdceyTRKMvWKNcF4GWSt6KyF6wS0yIE+2FJkgoVlX5kDH/P3sy7109destclsTuSLKaEaOLItD7VHoAGVx+7sJqDcymqSF6m/6HKDVL/O7q/4jADyPSm0KxVfczsTgHP60OWuV+XBE9xSmz/cn66zPGAmEXwjrP0qESAyGu2g372ou9og0YjdhnTG0lEvlLqmqmyd3M4SbDm5qjdlSGNmVAFtGNMvwv2j4j97LpGUc+o6sDraSCsI3yCmfPdQJMsmpxAfQX+n7ODQP1c64FJiiaekr36lw1jL/eUMP//HMRlqOclGVUOwt5ZClJvPQguelw+JtR2i5z41ykvUHeXbTiGukJAwHtgGxT/rwYnE3v78UQjGOTyVPbQKRV/F5aId3kVvg/wLxFxlfJPQ8xpfbSdKec+jttX5ul5L0Qf5cZlIb83OJuLpWf7U3GlA5BOXbYZ+9dL0rLPMArxLLFpHni6UguF73KAC0AiR8CGYC8Yb/lsridGHlEj02iFiVQvmyvZqCqeeX4Zzo1IUCsXUFfxcU0hLmKop9hupL3t0BDac2sSPvNqj82876TrPOncjEDsfrMgJj12pTeVL+/edJw2IgvGvAqvF3dp0NoYxgGL+q1uxlB3bKBNtyVP4E/OKYdoVEzJ+eUb03D+L/KmUX77wlu7fYve4js76AupLVpvYRXSPgI0dBNSsQopc/izDToh5UkZEJR/Pr7jVaEsOGESVtshNRdH4K/89h6W+vVwch7W4qHk5hlwptlvn4B734tVb5Zu4d/rDkK6Xy53PGNdIiz2PittQtUYkFN4kxV04RET7r5yMSRlUsH9yOf3XhMLUu6dqfYpyCx/65EuTPbCePEwiTPhXjKj+in8zY2Cts7ZOUhlSZ8tIVZx7PwdLHQEo0AFTkT2V4J+BCRldTs37ODdwnMdYBrQk60BwBw6caMX1LatBK/rsSzz5yPTrlgj/VPFIM2ClimIYYZGR7wWxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2146,
+   "completion_tokens": 509,
+   "total_tokens": 2655,
+   "cost": 0.009382,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009382,
+    "upstream_inference_prompt_cost": 0.004292,
+    "upstream_inference_completions_cost": 0.00509
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 299,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.19
+}

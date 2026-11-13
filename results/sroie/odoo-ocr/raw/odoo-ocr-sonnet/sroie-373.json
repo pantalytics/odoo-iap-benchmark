@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7008F710",
+  "invoice_date": "2017-10-08",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 46.1,
+  "tax": -0.04,
+  "total": 46.06,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 7,
+    "unit_price": 2.13,
+    "tax_rate": 0,
+    "net": 14.91
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": 4,
+    "unit_price": 2.78,
+    "tax_rate": 0,
+    "net": 11.12
+   },
+   {
+    "description": "0.C JUMBO",
+    "quantity": 7,
+    "unit_price": 2.97,
+    "tax_rate": 0,
+    "net": 20.79
+   },
+   {
+    "description": "CR - B'SCOTCH",
+    "quantity": null,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": -0.72
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 46.82,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": -0.72,
+    "tax": -0.04
+   }
+  ]
+ },
+ "cost_usd": 0.012588,
+ "raw": {
+  "id": "gen-1794568368-r8zPKxvzmcCdSqHVBNIw",
+  "object": "chat.completion",
+  "created": 1794568368,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GARDENIA BAKERIES (KL) SDN BHD\",\"vendor_vat\":\"000381399040\",\"invoice_ref\":\"7008F710\",\"invoice_date\":\"2017-10-08\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":46.1,\"tax\":-0.04,\"total\":46.06,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"O.C. WHITE\",\"quantity\":7,\"unit_price\":2.13,\"tax_rate\":0,\"net\":14.91},{\"description\":\"WHOLEMEAL\",\"quantity\":4,\"unit_price\":2.78,\"tax_rate\":0,\"net\":11.12},{\"description\":\"0.C JUMBO\",\"quantity\":7,\"unit_price\":2.97,\"tax_rate\":0,\"net\":20.79},{\"description\":\"CR - B'SCOTCH\",\"quantity\":null,\"unit_price\":0.72,\"tax_rate\":6,\"net\":-0.72}],\"vat_breakdown\":[{\"rate\":0,\"base\":46.82,\"tax\":0},{\"rate\":6,\"base\":-0.72,\"tax\":-0.04}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor name and registration number, the GST ID, the invoice reference, the date, and the currency. I'm also checking the amounts, where the untaxed subtotal and the tax figures don't quite line up with the total payable yet.\n\nI'm working out the amounts now: the untaxed 46.10, the tax of -0.04, and the total of 46.06. The line items are the three products with their quantities and net figures, plus the credit line, which has a rate of 6 and no clear quantity. I'm leaning toward setting that credit's quantity to null and taking its unit price as 0.72.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor name and registration number, the GST ID, the invoice reference, the date, and the currency. I'm also checking the amounts, where the untaxed subtotal and the tax figures don't quite line up with the total payable yet.\n\nI'm working out the amounts now: the untaxed 46.10, the tax of -0.04, and the total of 46.06. The line items are the three products with their quantities and net figures, plus the credit line, which has a rate of 6 and no clear quantity. I'm leaning toward setting that credit's quantity to null and taking its unit price as 0.72.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0AkKEggTEAIYAjgBQgh0aGlua2luZxIMRZcDvptEjem83BMgGgweHKCSfm0YPmURJnwiMCF6oy68IRGtcgr4Qb7cOUrPAwEJRSoC3CLPqt1Cc5uN4OKKb9A7CP0X7qSTrGO25SrrCOWSBEAv+v0lfFqqShHc/DVKsTA0eqK/s27y4ITqrgNlYFVcuvQsIz/T/zaopbBQqqzyEeKa1GuoGNAW7aZbMG/ISB1HdZrFqdUXPMTnxWWWd+HP6n2S4BMY/1D1VYbnIwvVan/MwfnUDKTXhGEEkYNAfpwRoC54QZm0pubddfLCWZ51ljJb4KJ9nEMXA/PKoIpyi9cx5sQDaCPXSHZtROK5RKnLtbYqR7uEUuW2EM93vE+QVYXYk/GC0ScOv40t96Fo6/qekdSWC3Dku4GyGr1NjONy6drOLag7CbDzB2G8CH2FFF/PD6SeS4MkTKRC4YDG9woNZXwVDw4radBjwEZQyl9u8TPtVNsBZazYUVRQiCKjr0Tk82O10QoHrHx49SLoIULIMnDdNpQnyTxRGSfEbK4exOHuesUKEZolRJ3NWlOXfLXTmP3fS6sS34nV2nbOh9/duk2xaDoz3X0VrTL8Cby2tQDsGfTUTsgWJJEKyzgWCqEa9mxmD7cyHkvZYVQV2FDJbd3/SYpY5DIzP1oz6ipuj23g+zf/tXaWSknBcn3IBCQs9UCDYqbmZDc74TmW3W2iRzCybi5927g86xqlMqPLMsDts+y+vK5kM8AQGnqig8xet2nm8qCtA3MyyGEwXirlFiMzb3ydc4G/Ggy0r1y05d0NYWgZVVI4Fn9+q+0FvxpnfEOPb+tjLG+mcQj1DLwtipPtc82EuPB+L2gKkuInAgrcR7i/nhzYfH7UWvlgJPOIds8OG8t4frexeGimEjlRbl7l/dUg/AmGfpoOZUQDAmBhr7qgv/ru8di5lgsYFh+7bh7AYU2Db1dwuPa+ZV287bez050nyhWs15c8Hz1bpwlXifgNtvQzPCh7VtrT1XNI7bYRdlEcDR5KdG4x0OBtljyeG+0Xdp2ISwVyL0Paod2fBwNUmLIsBxNDQCNRs9be7Q9QxddBdpixdufz/i4nCOnmlOQiO8oqAEgGSAkGoLmROVBz1gVYz0/Xd9rzAfbWPFXBqI9Ap4p1fArl6iyolmnNx9t3+sRvWSRp3GBo2R2N8xkAw3jXJ2TMf9WnhrCddYvJzuufBeh0C265c7HCR6jhl7oaqDqJ8IIcnJvwMqX2ta/mbpAgTLGi6MCZCLgNOOqnywBvh93ZzdqFix9ZIcWj9kaWM1IQiYQe4LDuShkOLB75TStA52ze+OVV+oJA4KZXuYCfKpi9tqBooVWO+gHd/iEolMqIP1/KKhwMC+E/o/JsE2uPADTmMFHoK2KjSussmI4VPc7EnmGoFaKTJNWClfagjwPUwP7Xyruwv9jA+A9B/7M7Grfdhk5k5272c8Vrz6BO69ANBwfIZaiDG+i93POQ3fSTszMIMw5+O5a4rCYKRgKV477+V3wmeKzGS/5jjKarKbicd6wKe2zFt5McgSqqIB2gUs1Pd0opnhXzid+/Dn3N3xrG0FQKr1W0aWVyANNDe/aRH4PGs++jBTKVEHyguqClBm7WdDmzVFeqB5QBPhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2319,
+   "completion_tokens": 795,
+   "total_tokens": 3114,
+   "cost": 0.012588,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012588,
+    "upstream_inference_prompt_cost": 0.004638,
+    "upstream_inference_completions_cost": 0.00795
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 414,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.27
+}

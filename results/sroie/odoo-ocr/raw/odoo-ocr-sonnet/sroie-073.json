@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "LIAN HING STATIONERY SDN BHD",
+  "vendor_vat": "002139201536",
+  "invoice_ref": "CS-20242",
+  "invoice_date": "2018-03-27",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 75.0,
+  "tax": 4.5,
+  "total": 79.5,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Durafile H399 (110 x 95mm) Name Badge (H)",
+    "quantity": 100,
+    "unit_price": 0.55,
+    "tax_rate": 6,
+    "net": 55.0
+   },
+   {
+    "description": "809 Metal Name Badge Clip - 100's",
+    "quantity": 1,
+    "unit_price": 20.0,
+    "tax_rate": 6,
+    "net": 20.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 75.0,
+    "tax": 4.5
+   }
+  ]
+ },
+ "cost_usd": 0.011228,
+ "raw": {
+  "id": "gen-1794568370-I4EvNxCfd3ItYj36PPjQ",
+  "object": "chat.completion",
+  "created": 1794568370,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIAN HING STATIONERY SDN BHD\",\"vendor_vat\":\"002139201536\",\"invoice_ref\":\"CS-20242\",\"invoice_date\":\"2018-03-27\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":75.00,\"tax\":4.50,\"total\":79.50,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Durafile H399 (110 x 95mm) Name Badge (H)\",\"quantity\":100,\"unit_price\":0.55,\"tax_rate\":6,\"net\":55.00},{\"description\":\"809 Metal Name Badge Clip - 100's\",\"quantity\":1,\"unit_price\":20.00,\"tax_rate\":6,\"net\":20.00}],\"vat_breakdown\":[{\"rate\":6,\"base\":75.00,\"tax\":4.50}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor LIAN HING STATIONERY SDN BHD, its GST ID, the reference CS-20242, the date, and the MYR totals of 79.50 with 4.50 tax. I'm checking the first line item, where 100 at 0.55 comes to 55.00, and the printed 58.30 matches a 6% GST addition.\n\nI'm sorting out the line amounts: I'll take the net values of 55.00 and 20.00 before tax, since the schema calls for pre-tax figures and those add up to the 75.00 subtotal. I'm also noting the item descriptions, the quantities of 100 and 1, a 6% tax rate, and leaving the IBAN and due date empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor LIAN HING STATIONERY SDN BHD, its GST ID, the reference CS-20242, the date, and the MYR totals of 79.50 with 4.50 tax. I'm checking the first line item, where 100 at 0.55 comes to 55.00, and the printed 58.30 matches a 6% GST addition.\n\nI'm sorting out the line amounts: I'll take the net values of 55.00 and 20.00 before tax, since the schema calls for pre-tax figures and those add up to the 75.00 subtotal. I'm also noting the item descriptions, the quantities of 100 and 1, a 6% tax rate, and leaving the IBAN and due date empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2104,
+   "completion_tokens": 702,
+   "total_tokens": 2806,
+   "cost": 0.011228,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011228,
+    "upstream_inference_prompt_cost": 0.004208,
+    "upstream_inference_completions_cost": 0.00702
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 419,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.5
+}

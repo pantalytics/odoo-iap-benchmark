@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "MR. D.I.Y. (M) SDN BHD",
+  "vendor_vat": "000306020352",
+  "invoice_ref": "R000112587",
+  "invoice_date": "2018-03-26",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 26.42,
+  "tax": 1.58,
+  "total": 28.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PILLAR SINK TAP 87601 OZO5-5/60",
+    "quantity": 1,
+    "unit_price": 19.9,
+    "tax_rate": 6,
+    "net": 19.9
+   },
+   {
+    "description": "NASCO SEAL TAPE NST WA33 100/1000",
+    "quantity": 1,
+    "unit_price": 0.8,
+    "tax_rate": 6,
+    "net": 0.8
+   },
+   {
+    "description": "S/S COLANDER RH-008 # 24.5CM AD41/2 5/100",
+    "quantity": 1,
+    "unit_price": 7.3,
+    "tax_rate": 6,
+    "net": 7.3
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 26.42,
+    "tax": 1.58
+   }
+  ]
+ },
+ "cost_usd": 0.01147,
+ "raw": {
+  "id": "gen-1794568346-8xkvL9AE1o2duaieKb9e",
+  "object": "chat.completion",
+  "created": 1794568346,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MR. D.I.Y. (M) SDN BHD\",\"vendor_vat\":\"000306020352\",\"invoice_ref\":\"R000112587\",\"invoice_date\":\"2018-03-26\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":26.42,\"tax\":1.58,\"total\":28.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"PILLAR SINK TAP 87601 OZO5-5/60\",\"quantity\":1,\"unit_price\":19.9,\"tax_rate\":6,\"net\":19.9},{\"description\":\"NASCO SEAL TAPE NST WA33 100/1000\",\"quantity\":1,\"unit_price\":0.8,\"tax_rate\":6,\"net\":0.8},{\"description\":\"S/S COLANDER RH-008 # 24.5CM AD41/2 5/100\",\"quantity\":1,\"unit_price\":7.3,\"tax_rate\":6,\"net\":7.3}],\"vat_breakdown\":[{\"rate\":6,\"base\":26.42,\"tax\":1.58}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor is MR. D.I.Y. (M) SDN BHD with GST ID 000306020352, and the reference looks like receipt number R000112587. The date 26-03-18 reads as dd-mm-yy, so I'll take it as 2018-03-26, with the total of 28.00 MYR including GST.\n\nI'm working out the tax split: the total of 28.00 breaks into 26.42 base and 1.58 tax at 6%, and the three line items 19.90, 0.80 and 7.30 add back up to the same total. I'm also setting the IBAN and due date to null, since neither appears on the receipt, and I'm settling on a simple product description for the sink tap line.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor is MR. D.I.Y. (M) SDN BHD with GST ID 000306020352, and the reference looks like receipt number R000112587. The date 26-03-18 reads as dd-mm-yy, so I'll take it as 2018-03-26, with the total of 28.00 MYR including GST.\n\nI'm working out the tax split: the total of 28.00 breaks into 26.42 base and 1.58 tax at 6%, and the three line items 19.90, 0.80 and 7.30 add back up to the same total. I'm also setting the IBAN and due date to null, since neither appears on the receipt, and I'm settling on a simple product description for the sink tap line.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS2ggKEggTEAIYAjgBQgh0aGlua2luZxIMoeu3Mr7bHYxqtZ0QGgy3a/7Miq/KlrZsRAAiMN6GOVY4VBFleVG0PMDYZlXr7UeTP2h0L+Z14EROguBCKr1KKYo5IhkDWCJ5Dx8y1Cr1Bwwpygt16+YKdMq3jfaYuAH/8bf8+yziYD8BtDlkqkPhhzQmxlK0oiAlGM/DeQS4FV1xERuY+FuQ6svFTI90z3l79k/6y4qnqb1n8WpAdJgC+mHIEplPBDjNisOsurEAd7/PdvJFFLmG/enJDsrTgoR35ogC0nuTzucXSQ21Apzh0vow8e0XkAg2wPDcS4ezeRaQoNTPTocK4K5PO/0yDPa0UBjiiP1ofe9J5FRfMN7Ectzk6ea+NmAzt9bYMm0ymrqMhGywkA3yTKZozZj253lshSV1ZXp/+y5nCC1qFyuVYyzof4x4whDaD4d8WOVNwuxqsOl5AfGI0FowGyHPRO7WjZNl85pckc3IsfsNCU5tMJWjuKaqbrH/v0Fy6kdPF0TIwOz+/K9O3SugeQzcFYyHAsGMpVYkqrb4rzSbuDwDAiVOGISwZ+0PRCvV7WnUYZFlYlZTmXIk514Vmgpj3FWh0yaF6+66IXPAofdYIm+zvLd/bhc7JjOamdbCtqjEuXyg7LgDL+RCGVjG3nrAcb0d+oCs/lYPhGfnT1yEIHJeGMDfBfehycnu32twusvklHQ9u40seqfgK6fIQ6aPAaJGp5yfdqnYsQEqrcCX8Sktc19GLY3xm6p5QT3Ej/rDk1Enqaxoy1SBovUgN9UvJ9Z2+BP/v+xNBZAYTtBrzKphIBg3RbBA5f4C6AwXgps/7vT4agBYUNoU/mSL7XePKXYZ9ar7tYy0dPec4J9GmHzOiGZIFc9yWpQ4k3bgviJGZhf3GLfru28O7t2unxikvbQaJK3BEw4qg6Wk8Em60QGhkCaw6R3iZqN3dPy0c8tlINKgE3vSIyuXricMKjyHXwiOkzlS+LCA5ZFVzfX9JE4lGbWu05OP30FvWQxWaDKxJwLRJjlCnZkNBHzlpMb+EaTB4dNZGdUf8DoWhWIqChI4EyZRbuGo5rq26TT08cAAg/an1BRqSzJWlQZh8K/U3bk3SC1SV/rNyakbdxb3JThtcaL5ADrITgZaxqF1ueeSB3D8OsCyHMd0erZBVXyuIwAJz5/ioz5+m/vBl2a8lKC3+JY1tkKrnFzFJ6/5mfHXc6SgKGwOxFSeS9A0zPKGcHVOnJBnzwr4wwovfwCAFXsLvGX75YEXzLDN8GwEWk/mUlgI7ur692YdI75t0VWxbhA6fXi55i8GKdGAs1TWpQP/AgZu5wk3rXPqP1xl8PqAXhkMUCBl2VcERcCJKpkihNbFnLc2uM3cqUxR1LBI/EOSnGtZ5ix1g3vDU8Wr/aLu40HclcvPWwlqTAgvJZ1ikHk8kz8jdRsSf4iJx73scAkwgzuW/EM4CQRGo90NGC18i9QtbNdfGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2225,
+   "completion_tokens": 702,
+   "total_tokens": 2927,
+   "cost": 0.01147,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01147,
+    "upstream_inference_prompt_cost": 0.00445,
+    "upstream_inference_completions_cost": 0.00702
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 348,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.76
+}

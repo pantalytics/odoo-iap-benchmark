@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "EAGLE",
+  "vendor_vat": "001663156224",
+  "invoice_ref": "C500031180",
+  "invoice_date": "2017-12-04",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.6,
+  "tax": 0.4,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "TAPE OFF 48MMXBOY CLEAR ( BOFY ) -ECS",
+    "quantity": 2,
+    "unit_price": 3.5,
+    "tax_rate": 6,
+    "net": 7.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.6,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.011274,
+ "raw": {
+  "id": "gen-1794568342-AUCT5LyoFUlW9QB9BaGV",
+  "object": "chat.completion",
+  "created": 1794568342,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"EAGLE\",\"vendor_vat\":\"001663156224\",\"invoice_ref\":\"C500031180\",\"invoice_date\":\"2017-12-04\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.6,\"tax\":0.4,\"total\":7.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"TAPE OFF 48MMXBOY CLEAR ( BOFY ) -ECS\",\"quantity\":2,\"unit_price\":3.5,\"tax_rate\":6,\"net\":7.0}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.6,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields off this receipt: the vendor name, which appears to be just \"EAGLE,\" the registration number, the GST number, the invoice reference, and the date. The totals look like a subtotal of 6.60, GST of 0.40, and a final total of 7.00. The quantity and unit price line is garbled, so I'm trying to work out the unit price from the surrounding numbers.\n\nI'm settling on the line item's figures now: the unit price is garbled on the receipt, so I'll take 3.50 from 7.00 divided by 2, and I'll record the line amount as the printed 7.00. The tax picture is clear too, with a 6% rate on a 6.60 base producing 0.40 of GST, all in MYR and treated as standard-rated.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields off this receipt: the vendor name, which appears to be just \"EAGLE,\" the registration number, the GST number, the invoice reference, and the date. The totals look like a subtotal of 6.60, GST of 0.40, and a final total of 7.00. The quantity and unit price line is garbled, so I'm trying to work out the unit price from the surrounding numbers.\n\nI'm settling on the line item's figures now: the unit price is garbled on the receipt, so I'll take 3.50 from 7.00 divided by 2, and I'll record the line amount as the printed 7.00. The tax picture is clear too, with a 6% rate on a 6.60 base producing 0.40 of GST, all in MYR and treated as standard-rated.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2127,
+   "completion_tokens": 702,
+   "total_tokens": 2829,
+   "cost": 0.011274,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011274,
+    "upstream_inference_prompt_cost": 0.004254,
+    "upstream_inference_completions_cost": 0.00702
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 480,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.22
+}

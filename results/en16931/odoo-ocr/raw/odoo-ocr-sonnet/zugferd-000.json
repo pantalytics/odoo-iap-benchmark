@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "Lieferant GmbH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "471102",
+  "invoice_date": "2018-06-05",
+  "due_date": "2018-07-04",
+  "currency": "EUR",
+  "untaxed": 177.49,
+  "tax": 20.16,
+  "total": 197.65,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Kunstrasen grün 3m breit",
+    "quantity": 3,
+    "unit_price": 3.3333,
+    "tax_rate": 19,
+    "net": 10.0
+   },
+   {
+    "description": "Schweinesteak",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 7,
+    "net": 5.5
+   },
+   {
+    "description": "Mineralwasser Medium",
+    "quantity": 20,
+    "unit_price": 5.49,
+    "tax_rate": 7,
+    "net": 109.8
+   },
+   {
+    "description": "Pfand",
+    "quantity": 20,
+    "unit_price": 2.77,
+    "tax_rate": 19,
+    "net": 55.46
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 7,
+    "base": 113.03,
+    "tax": 7.91
+   },
+   {
+    "rate": 19,
+    "base": 64.46,
+    "tax": 12.25
+   }
+  ]
+ },
+ "cost_usd": 0.014484,
+ "raw": {
+  "id": "gen-1794568330-xTnixxdXc6a0Q7WRFinh",
+  "object": "chat.completion",
+  "created": 1794568330,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Lieferant GmbH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"471102\",\"invoice_date\":\"2018-06-05\",\"due_date\":\"2018-07-04\",\"currency\":\"EUR\",\"untaxed\":177.49,\"tax\":20.16,\"total\":197.65,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Kunstrasen grün 3m breit\",\"quantity\":3,\"unit_price\":3.3333,\"tax_rate\":19,\"net\":10.0},{\"description\":\"Schweinesteak\",\"quantity\":1,\"unit_price\":5.5,\"tax_rate\":7,\"net\":5.5},{\"description\":\"Mineralwasser Medium\",\"quantity\":20,\"unit_price\":5.49,\"tax_rate\":7,\"net\":109.8},{\"description\":\"Pfand\",\"quantity\":20,\"unit_price\":2.77,\"tax_rate\":19,\"net\":55.46}],\"vat_breakdown\":[{\"rate\":7,\"base\":113.03,\"tax\":7.91},{\"rate\":19,\"base\":64.46,\"tax\":12.25}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from the invoice: vendor Lieferant GmbH, invoice 471102 dated 2018-06-05 and due 2018-07-04, in EUR with a total of 197.65. Now I'm starting on the four line items, beginning with the artificial turf line.\n\nI'm working through the remaining line items, noting that the pfand line's printed total of 55.46 differs slightly from 20 × 2.77, and I'll use the printed figure. Then I'm checking the VAT bases and totals, which all reconcile to 197.65.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from the invoice: vendor Lieferant GmbH, invoice 471102 dated 2018-06-05 and due 2018-07-04, in EUR with a total of 197.65. Now I'm starting on the four line items, beginning with the artificial turf line.\n\nI'm working through the remaining line items, noting that the pfand line's printed total of 55.46 differs slightly from 20 × 2.77, and I'll use the printed figure. Then I'm checking the VAT bases and totals, which all reconcile to 197.65.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS/AgKEggTEAIYAjgBQgh0aGlua2luZxIMCb8NfC2BcOWo2Q7cGgxdgboIlDybbQx1i2siMIfKGNCXoFFDLmVEZ3QwMoJjenyU7GrVnR/kqF7X5yzzwCtt34yCYVvIxdUeGUwfNyqXCNfZuwldX9oX/ppnW5bIUAmsHFv4F7mZoIa3/CJ9+oqZJMaybpx07ASt5lvRfjx9quwVZomfS+5yE1sUs1EolXBbPjeVWW1n9kfRKCotiOmj5zO+w+kItinOtQs0zoEiWsHK/ErlazzdhLTZWN+u1qoI7RfyBWDb43ELWEExia3taK8wREfO1vTV2e5FRyRhvhZMtzuE/iJCG/oaYGqd3/0zfLmmJoE8a47pnZ1eDOIbP1VnMp23j5Zdlj2W/UQ3sKFyf0eGLe6iEksH5UsdVwe3egue2IKAMzhjaKUuBDtP66jXmuhrsSqloPlrO3uwL2pxo3yI69Jwm61WK4gMJO0XE85qn/eOo16OBOzIzNeOl/h7+DEfZrwR6TNMrh5Ek7TNOqJ+HQFXsTUF/Ckodz+NOn6s6F6SfDCErbKyX19INzQwAvvpm1HIypvPuItNzYzmUjWU10ifHfWUEOdBybkBMr3clb9hJSht6mBc0ER/1ZyI3qMTkDXEMXBVdYtD80hAzZSFa78quvCwN9STtAxexzNbWml3Z5hRgoVrPxmTivj3JXldwhMAnnC4hYP6uxo52NLhbHOttudRLtpiQ7e8G8MKtyKm+WW9e4XskdS5J0TyRNCr/eCitca+9A4VppTqOZgQ2UAE5sDMXgdofgh9iNf5nDhekuwfrS/NpWyVMWSZXk5RwoNvB8/hFhcB2p4/SUaDFQ20Eh5YV0KNHJYwCjS4kGHDHOB49rNiP2Kg8W0aa+xur46UHIH7cFIrJeq2InFcUqAPPzSwCGSTMUjzA6cyQR3YOfjzejqy2nk2fGWUyfBBvuv32a0s2+7j6JdwLqZuh7J1NHdqm7z40/hb1kmvyO31VYrQZaExm1xbPWU+CCAvTKpTn67N2ED+eZDc8K5K/BVzGNFwb+AZw2fnFcwts/G8OoPw5ltVpSqXWN9PAydQinUGsUDvuwdU4bm59eSO598wuPxPAyIQhJKMXkaOHsxi94v1c7EID8bSu2hvwLgwkDjNu1f7bkxdZNfg+VW2p7n0nEM8Fs8BaO3zo3lzCQ3C4jyBbaXwsXJEz/5uQ4hXwSQPPe7CaI6B9kLGg6Nh4VO6oSWBQB416tPK5MJwoSWESozle2IonuyKI8SdwHBG829ZaqMJ1ItoQBKu2zZoCKDydG989KFUiS997fRb3cLa7dC1A+P/I6fvw7razIAZv/dJ6cSfHEptdGkgddrmWbjY6SFDaI1cd90WEebwh/O92RHeBYMgxe9oXeUH+72j04PkE2C3Di9je+3SRGWcj8goTxn3BRSp+UwJrSPczmY73Bos6mXWu3MS2cBJqBMuWFi1REF2fiV4eDX7IYs8qjqlu8Q6mhzRGkMhLJGclM7wrdlnB7XIPgPWsB5LBM/7BxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3462,
+   "completion_tokens": 756,
+   "total_tokens": 4218,
+   "cost": 0.014484,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014484,
+    "upstream_inference_prompt_cost": 0.006924,
+    "upstream_inference_completions_cost": 0.00756
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 386,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.31
+}

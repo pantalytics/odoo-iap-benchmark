@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18030502160349",
+  "invoice_date": "2018-03-05",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.74,
+  "tax": 0.46,
+  "total": 8.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "100100000060-4 Vege",
+    "quantity": 1,
+    "unit_price": 5.5,
+    "tax_rate": 6,
+    "net": 5.5
+   },
+   {
+    "description": "100100000006- Pork",
+    "quantity": 1,
+    "unit_price": 2.7,
+    "tax_rate": 6,
+    "net": 2.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 7.74,
+    "tax": 0.46
+   }
+  ]
+ },
+ "cost_usd": 0.010154,
+ "raw": {
+  "id": "gen-1794568342-XXmFWnycUg503XDSOk0R",
+  "object": "chat.completion",
+  "created": 1794568342,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18030502160349\",\"invoice_date\":\"2018-03-05\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.74,\"tax\":0.46,\"total\":8.2,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"100100000060-4 Vege\",\"quantity\":1,\"unit_price\":5.5,\"tax_rate\":6,\"net\":5.5},{\"description\":\"100100000006- Pork\",\"quantity\":1,\"unit_price\":2.7,\"tax_rate\":6,\"net\":2.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":7.74,\"tax\":0.46}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling out the key fields from this receipt: the vendor name, GST registration number, invoice reference, and date. The prices are GST-inclusive, and I'm working out the tax split from the total of 8.20 and the 0.46 tax, which leaves an untaxed amount of 7.74.\n\nI'm checking the rate: the receipt prints 8% but the tax works out to about 5.9% of 7.74, so I'm taking it as 6%. The lines are the vegetable item at 5.50 and the pork at 2.70, both shown as GST-inclusive, and I'm leaving the currency as an inferred MYR with the treatment marked as standard, with no due date or IBAN.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling out the key fields from this receipt: the vendor name, GST registration number, invoice reference, and date. The prices are GST-inclusive, and I'm working out the tax split from the total of 8.20 and the 0.46 tax, which leaves an untaxed amount of 7.74.\n\nI'm checking the rate: the receipt prints 8% but the tax works out to about 5.9% of 7.74, so I'm taking it as 6%. The lines are the vegetable item at 5.50 and the pork at 2.70, both shown as GST-inclusive, and I'm leaving the currency as an inferred MYR with the treatment marked as standard, with no due date or IBAN.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS7gkKEAgTGAI4AUIIdGhpbmtpbmcSDIagzb/llTdFxwqR4hoMTVBhjV9ya8TmYQLcIjB4raLHWJ6A/wKu2Vs7TcYeyPBrZnSzb61MzTxiddmZ/I6aJjwwDydtELKgI9ogftkqiwnNplRqMO2ZMrto12iSOzwSvQEx30G3w7ZYWZeDf7S8YWLuEseqknkRNHnIl0gWNDo7kkFIcs1W7JtvJJUGqJp2BQfqLsIQ2G2dbyO2aPCaOuds95I+xCRHIp0I1mb14sIb1NaZGQtwHkOPIgNkejbPJqbquav4hPWjR3GpekrR+eL4nKOJLo/eppC4L5RmQ3TgoiHgj0/fYvNlZqoC7BIASXTVvwtbwbgruG3KBcRg5obNkax9oQZW8WvIDxvMozoksxNdLhU/C5CNBlBOt75Pex/RTMVkmzlQO6dpFdcHsWQwoolXNZjpF5IAp8EOgLs+l0IOmi765GHWAcSFmBtZWCD5961SWMzDJYZJmjPNaUz8ZkzXupJbOh9n99824DxGzMf0DXi/Cl16udvD66/gcPXMD6pIO0RR1bv+abI+NbhpSOBigo2UKOStbU8sixM28WZFvvM0FOnoz33PM1srDtbCU53z4I1CnACYMY+4wJcupmMQU0JFmFND58SfN6AWwJrzMVrE92agk1fO/K7+cFLB4ibWoUSyNj39z79/wZBFUzBWRudO13Goh75l73p4GmMbAH5wG8bqV1P7CiGfQ8gGRitD4PSFxas+jj29nJQ0BTxm19CiD8lG1fO1+zvHkHToe5JIJPtuSeB6iykeikD7+2tC6HgGq7/+EbEpqk4MBUdFat8qdYHb3LtkqhiQhFqZq9dY14HRUAmZvgsClS7pD6yjqkPmlgWjbgeN8W8aTKrcL3ApA6STBkJoFQu2QFTkKpjYLOIwokQhejZu/pZlLekNa0fp0kK1pt8wHeZIepj+sivv/C5yXU56AFzSMsLs3ECMs2p3ScBcuCEQJIe1bUFCvjRElKyR8i7PNwuRqqTlltn8hFhtjxhm8RBz0u2MDozsQDBZ4ie8b1IQVWv6mVSJJu4bVrggpkUnsvjyl/8Lh/TFgRMPjJ0+SWjJZOoYA7RjywUTgqQfew6DHWrd+UQ54mXl9G/gv2wcCrWsy8Vxoguk34Q3W1xzATji1pi0zcGI20xwKlob1vQbkEXnXHYbyS0flshU4CE3MSTYP1RB/LUdf3VNn3rDFhITfkPPbL0/u/8SiJqyCUKWPtficZM0vet44cvaiHpEh4IeClnjsxvjBEvbpp8ZMfVQUa4xQLvlOWoo1np71PLljk/oXLxGU4yT4WYunMiP6rHzv743BYATuUqsSlveHdpJwbxY/N1oPWwUBS8voDIOtAVLPLNgllzLM8CW5KDz77dCWtEPxWQmgeEb2wVE6bN4o/RNZ/Iub1shY0XXmucm2tfv1hS9nNdszT69kuwISXc+g79ql62GxDyPxud8kb6PPQyrIxU6Tqf79/PfD71nm2DECdmaVE7r2+Q05f0/Nowaqcv8hmIQHAXh9ZMfAzGP48NmKithZSTJ/QOdcA9or/SjKt1eFl8Ki970hmp3WIR3DLEH5oG/ucG/KNqEA9bnoI1yYZ4Fj7maAbZ0WU7N6x7IVjbn7nsjF4mXYDmwAxQNGsLNq1HY/m36hugQVzCzo6g1mgIh9AEPFxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2082,
+   "completion_tokens": 599,
+   "total_tokens": 2681,
+   "cost": 0.010154,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010154,
+    "upstream_inference_prompt_cost": 0.004164,
+    "upstream_inference_completions_cost": 0.00599
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 332,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.26
+}

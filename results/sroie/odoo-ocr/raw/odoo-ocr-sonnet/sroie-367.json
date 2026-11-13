@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7017F714",
+  "invoice_date": "2017-10-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 105.43,
+  "tax": 5.03,
+  "total": 110.46,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 3,
+    "unit_price": 2.13,
+    "tax_rate": 0,
+    "net": 6.39
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": -1,
+    "unit_price": 2.78,
+    "tax_rate": 0,
+    "net": -2.78
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 6,
+    "unit_price": 2.97,
+    "tax_rate": 0,
+    "net": 17.82
+   },
+   {
+    "description": "CR - VANILLA",
+    "quantity": 20,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 14.4
+   },
+   {
+    "description": "CR - CORN",
+    "quantity": 20,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 14.4
+   },
+   {
+    "description": "HAZEL CHOC",
+    "quantity": 8,
+    "unit_price": 6.9,
+    "tax_rate": 6,
+    "net": 55.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 84,
+    "tax": 5.03
+   },
+   {
+    "rate": 0,
+    "base": 21.43,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.013924,
+ "raw": {
+  "id": "gen-1794568357-ZPWuJgSpmRLJ4SrzKghb",
+  "object": "chat.completion",
+  "created": 1794568357,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GARDENIA BAKERIES (KL) SDN BHD\",\"vendor_vat\":\"000381399040\",\"invoice_ref\":\"7017F714\",\"invoice_date\":\"2017-10-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":105.43,\"tax\":5.03,\"total\":110.46,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"O.C. WHITE\",\"quantity\":3,\"unit_price\":2.13,\"tax_rate\":0,\"net\":6.39},{\"description\":\"WHOLEMEAL\",\"quantity\":-1,\"unit_price\":2.78,\"tax_rate\":0,\"net\":-2.78},{\"description\":\"O.C JUMBO\",\"quantity\":6,\"unit_price\":2.97,\"tax_rate\":0,\"net\":17.82},{\"description\":\"CR - VANILLA\",\"quantity\":20,\"unit_price\":0.72,\"tax_rate\":6,\"net\":14.4},{\"description\":\"CR - CORN\",\"quantity\":20,\"unit_price\":0.72,\"tax_rate\":6,\"net\":14.4},{\"description\":\"HAZEL CHOC\",\"quantity\":8,\"unit_price\":6.9,\"tax_rate\":6,\"net\":55.2}],\"vat_breakdown\":[{\"rate\":6,\"base\":84,\"tax\":5.03},{\"rate\":0,\"base\":21.43,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key header details from the invoice: the vendor Gardenia Bakeries, its GST ID, the invoice reference and date, and the MYR currency. The totals are 105.43 untaxed, 5.03 tax, and 110.46 overall, which checks out. Next I'm looking at the line items, starting with O.C. White.\n\nI'm matching the line items to their tax rates: the three O.C. White, wholemeal and jumbo lines net to 21.43 at 0%, and the two cranberry-vanilla lines and the hazelnut chocolate line add to 84.00 at 6%.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key header details from the invoice: the vendor Gardenia Bakeries, its GST ID, the invoice reference and date, and the MYR currency. The totals are 105.43 untaxed, 5.03 tax, and 110.46 overall, which checks out. Next I'm looking at the line items, starting with O.C. White.\n\nI'm matching the line items to their tax rates: the three O.C. White, wholemeal and jumbo lines net to 21.43 at 0%, and the two cranberry-vanilla lines and the hazelnut chocolate line add to 84.00 at 6%.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSvwoKEAgTGAI4AUIIdGhpbmtpbmcSDFf2kN7LwRe/joJ3lBoM22aaWT5uqsJk8lWMIjAvJqBZbzVcUiSjjeFxHr8ZkcJTIcIsdYwiJ6wftqXQLY1mz8Fr+KX+H9MgEP6v46Yq3AnNoAIzD2TuqPBgpgSBUd2KeY1D+55CYP/+s7gmmd2hz+qyci2qW8UFM9ogfy6Oe75P1ze9Vv9rsh4Rs0rCG661nV4xI2BnGxyRMtKs/837dTcJ5ynUNdWgI8On9U0qBmX6UZtwsqErqK3ife/fU0kUs7byOqYicH4313IwJ7vh7Wo3nZBJT6WN502B6O+8x9AM8QmyZU2qZWpTq0+k+gBvEz3AE7i2wj7Y+a5Cl7pHaXnJ+cehiIjlL6oP/yY7ZFJhfCw018a8yPXNgxCeZw2YlZpNLVUvwFpGMBTqkQ41Fi6tue7I5FWfgvyCgoH0Omdw6pjAiopDuJfpHnFMbVs2VaEPUu/iOvKvveB0d1RQW+k/CP1ydD9qjRcGs3f4qcN4TywsRDtIe2fFrajT2moPjMPSLiwXSGoLYloLF36WZKPNMQ6XsqrlpIvoqoNi8j/aQAvzBkuBuGD4qOsK1IP8JvpkSZPYSaPfzoREzWFfDOKu15oFJrm8L33Ddh8RrkR7uYmU1WcyuF/AXmb7zWHOUpX7NDGmKN35YGA1bStFe5MsikcoK4zjPdmiNEKjspFja5h33X2xbeYRmPGQHKaZtldHW5ZZo+gYcSx+uTgaLNun7QYwiaMOlABfYnlOHwhCWQssYaoN2dX7rhdpVrKITozZEZYGZZ9l9yCySc6L4IqXtqmLru+vKQc3DIW5EPVraoGhZHyyGjFUkG8TSzz86vi7EtVJdWzamWGPJm4Tk6fYYOLuTLsj7RGQoA9P072ZO+3JsSPzDKIWeO8/P8/qw5DnkuuBbonIDJZpl0SgBt0r6INdNyKsnJUtTW1GtF1cWlA0yvPVu+5yPecBoHvbd+qxqSHnJSVBUmaXzgB20oNFP0wwZeF5cjRF89x/axv+XpV6GsZPgssq681ehmwSumhk8KopXdK3EyCrQikf5rtWG8f2wLzENaT3IF+L0dScPbq+NoDWkSqS+OffMCuso64pL6VIdLHplf+k1jOkzqE+0E3XgLUG/4oYakhVbpXE0aWCO/gNAieGhNw4xzKQdsCZJJZllXvowArMBML1MhPqLDDLGuUlZm89PHixWoWcE4WQY7bW1xxPBD0Un9FSPbPHWdGe2dr7FAokquHCxqOOnxh9NsPvCCsJuLTJnl8CXLsFKsUwlRcHWtKsC0XH5KZI+SsB0JWHinvo9a3kAxSz7cJF5TL41GPyIX1sTvQi10ps0XGjwDyRaUTnD8Giyx7lU3gkkukOkWOByXYyDsUcm3QZzZSbdzF7kdls1vwAxZaC5vc3OuZM13IJsTkAnGd1A2it7AwuQbyGbRuoAbV+nKkf8eIhgdFpyPxUEcqvxY49KtDxoVTsq2ndb9Z+TZc4MeGqxWd0W//g9FcZeKT9iTLBLMmRu74TvcZ8Da6U6nllT2dq5eHLGXDX8AqPDsvGo/1RLgKvATjJ9FCp9Lg+xK3f22+BNJsjhbuLuABoEdvd1SixgA51hFXXjjuZA9oLxyKa8PRTPe/2HwZdTpsxRrcmKmy40MZtU5QxOA8SPs8GKFA1jeANngA8YRHr9QBflTUK9397Vqn0RLH9m8PEyqhpb+bIYdmLtGi56romCXokGNCww8N8v6lZWo6gxE/0B1xxPGT+6bo8I5EPfh4628HPLp5FiIuKXhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2382,
+   "completion_tokens": 916,
+   "total_tokens": 3298,
+   "cost": 0.013924,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013924,
+    "upstream_inference_prompt_cost": 0.004764,
+    "upstream_inference_completions_cost": 0.00916
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 451,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.71
+}

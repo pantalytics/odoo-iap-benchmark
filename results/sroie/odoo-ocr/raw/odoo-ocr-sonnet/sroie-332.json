@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7725F714",
+  "invoice_date": "2017-07-25",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 23.97,
+  "tax": 0.86,
+  "total": 24.83,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": -5,
+    "unit_price": 2.13,
+    "tax_rate": 0,
+    "net": -10.65
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": 3,
+    "unit_price": 2.78,
+    "tax_rate": 0,
+    "net": 8.34
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 4,
+    "unit_price": 2.97,
+    "tax_rate": 0,
+    "net": 11.88
+   },
+   {
+    "description": "CR - VANILLA",
+    "quantity": 10,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 7.2
+   },
+   {
+    "description": "CR - CORN",
+    "quantity": 10,
+    "unit_price": 0.72,
+    "tax_rate": 6,
+    "net": 7.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 9.57,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 14.4,
+    "tax": 0.86
+   }
+  ]
+ },
+ "cost_usd": 0.01277,
+ "raw": {
+  "id": "gen-1794568376-MpzzlWcT15NGol3kMjq3",
+  "object": "chat.completion",
+  "created": 1794568376,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GARDENIA BAKERIES (KL) SDN BHD\",\"vendor_vat\":\"000381399040\",\"invoice_ref\":\"7725F714\",\"invoice_date\":\"2017-07-25\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":23.97,\"tax\":0.86,\"total\":24.83,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"O.C. WHITE\",\"quantity\":-5,\"unit_price\":2.13,\"tax_rate\":0,\"net\":-10.65},{\"description\":\"WHOLEMEAL\",\"quantity\":3,\"unit_price\":2.78,\"tax_rate\":0,\"net\":8.34},{\"description\":\"O.C JUMBO\",\"quantity\":4,\"unit_price\":2.97,\"tax_rate\":0,\"net\":11.88},{\"description\":\"CR - VANILLA\",\"quantity\":10,\"unit_price\":0.72,\"tax_rate\":6,\"net\":7.2},{\"description\":\"CR - CORN\",\"quantity\":10,\"unit_price\":0.72,\"tax_rate\":6,\"net\":7.2}],\"vat_breakdown\":[{\"rate\":0,\"base\":9.57,\"tax\":0},{\"rate\":6,\"base\":14.4,\"tax\":0.86}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key header fields from this invoice: the vendor, GST ID, reference, date, currency, and totals. I'm noting that the tax treatment is mixed, with a 6% rate present, and that the due date and IBAN are missing.\n\nI'm checking which lines fall under the 0% rate: the white item at -10.65 and the wholemeal and jumbo lines add up to the 9.57 base. The vanilla and corn lines are the 6% ones, and the rate-6 base of 14.40 yields the 0.86 tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key header fields from this invoice: the vendor, GST ID, reference, date, currency, and totals. I'm noting that the tax treatment is mixed, with a 6% rate present, and that the due date and IBAN are missing.\n\nI'm checking which lines fall under the 0% rate: the white item at -10.65 and the wholemeal and jumbo lines add up to the 9.57 base. The vanilla and corn lines are the 6% ones, and the rate-6 base of 14.40 yields the 0.86 tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSzwgKEggTEAIYAjgBQgh0aGlua2luZxIM5vV+T72OXsDcHNiNGgwpnJNUpKhsB5OerkMiMMRVdiWdQa26e2Pv/pTxRPuBscTC1l+okJtnjvAjAebnO9QSefnz1GOdie35UWbS1irqB2/zuKtxoWgkYh4vDYbv/1ynQURI4klR56ceKW5kz4nN0FGErQX96dkjFI/qeAtYDSBfiXmdQO2Y/lfDjZw3SKqiNay0Kj6H6g9JtZPFdF4aLKneV/M/TVyDAAyXj7HdND9eOt9n+U9Lw+fqLyTwHJhtP1FRhcNPGwVczxoEvAz2cy1xHdi31fgrGxc3KfMwRHAkFglMtsr3IKFt1iBOuedg8GiCFGTR4cMLy/soR75t7qWmw25CgByWPRSU7aZeXh4tUwa7YJV/9tRLuv5RMydP6Q+1accDHbzav/muhPif555CgjVr/Nt52lolvRtOQ34Lrvqm7aXzVKTV33UcxdQLNZcPHugnLfBjsV9C3FqboCvI1WLjjqtfVPGB9UV6mpcPd9KQyxZN6TvaUsg4M3CWOEcD/UtBZP4xQGr0F9n78DK1dNhxLpnbGwEjib1/kuzzoeP/FYRdTSdAF/SPjHyXJB86GjemkoBYUUFHIuohhPwGtF8UMtMP9k+UWVt6HWya35ACpwY6kSJlZvby9irgtJc61c/E9knKKLTia6h3SDGFUpbqPVtgFssFFbtb+uWxAGus1TqoFY+WDQytdN/W4SU/G/BD97/8v7ikZjXl+777B8k7b8CYldRgkuZrIYk7rzDATX5uqjukl/FoWbUXFN2V24xDQ8+W0inxiGG+rcxQOAxl0U3d3m0NUPob59yX10uv8HGtkrz0Spu4wpKiDlXMPZuTAgvXgDgOtJayMohqFpsuQQadUlTmazkBoDHu1UQQkGNS1RYqv53Q3ptbAZ3UKwzX0E6CY9lCVtTLhmXvrjnRjWTGh567RJg8vwWywz0y1r/sxknCFAAbvhRRJYqAewCkDTnk5n7ilPNW5/KubVaPnsCTSMDLDjVnxw46N7jnlkxyy/qoiEr/KV3ytZKB8AuRCS8BJL2ZcO+Ub1uPP8COOhE1VwlEFp6+LPnxTT6C+HukwcCeiMv/PoXPL9aWKpYCmOdewcW9smnG2zypyinlilGCenGk4z037zN41RMK9SarlmWYHDuhV0+ScYba7joVfGxz8N6G9+9+7UCZdN0w6r5/kYiiPR5rkNNBuYd4bSskZu9Fz1FDwZGMPBsldlkMbbsNpNkxLlc/ubwXw9Ar++aY+6cqlA10JkEsG6ctwSvCBlKl+4ZM9YkdsZOuGgJYEtXWt7ZXxrsRLNmPFpt12lzyTtVrwnbYQiBCj80ELC8tRviOQKfO/byWUJ0N+h8HqPVLrhCLHxwrKP6hEMWnjqeOJgq8YQPGIXJL5WC5Ncvhe5cZXljVKS6oGSc7T8hMEXromtkE8BH0nS74Dt2EgKeMihgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2360,
+   "completion_tokens": 805,
+   "total_tokens": 3165,
+   "cost": 0.01277,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01277,
+    "upstream_inference_prompt_cost": 0.00472,
+    "upstream_inference_completions_cost": 0.00805
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 385,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.08
+}

@@ -1,0 +1,116 @@
+{
+ "pred": {
+  "vendor_name": "T.A.S Leisure Sdn Bhd",
+  "vendor_vat": "001042104320",
+  "invoice_ref": "1080323",
+  "invoice_date": "2017-12-30",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 96.58,
+  "tax": 5.81,
+  "total": 102.39,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "PINEAPPLE JUICE",
+    "quantity": 1,
+    "unit_price": 12.95,
+    "tax_rate": 6,
+    "net": 12.95
+   },
+   {
+    "description": "TOSTADA CHIPS",
+    "quantity": 1,
+    "unit_price": 16.95,
+    "tax_rate": 6,
+    "net": 16.95
+   },
+   {
+    "description": "CHP BWL CK",
+    "quantity": 1,
+    "unit_price": 29.95,
+    "tax_rate": 6,
+    "net": 29.95
+   },
+   {
+    "description": "MARG CK",
+    "quantity": 1,
+    "unit_price": 27.95,
+    "tax_rate": 6,
+    "net": 27.95
+   },
+   {
+    "description": "10 % Srv Chg",
+    "quantity": null,
+    "unit_price": 8.78,
+    "tax_rate": 6,
+    "net": 8.78
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 96.58,
+    "tax": 5.81
+   }
+  ]
+ },
+ "cost_usd": 0.013618,
+ "raw": {
+  "id": "gen-1794568339-wDq4UCLoZkK9hZbSVXlF",
+  "object": "chat.completion",
+  "created": 1794568339,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"T.A.S Leisure Sdn Bhd\",\"vendor_vat\":\"001042104320\",\"invoice_ref\":\"1080323\",\"invoice_date\":\"2017-12-30\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":96.58,\"tax\":5.81,\"total\":102.39,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"PINEAPPLE JUICE\",\"quantity\":1,\"unit_price\":12.95,\"tax_rate\":6,\"net\":12.95},{\"description\":\"TOSTADA CHIPS\",\"quantity\":1,\"unit_price\":16.95,\"tax_rate\":6,\"net\":16.95},{\"description\":\"CHP BWL CK\",\"quantity\":1,\"unit_price\":29.95,\"tax_rate\":6,\"net\":29.95},{\"description\":\"MARG CK\",\"quantity\":1,\"unit_price\":27.95,\"tax_rate\":6,\"net\":27.95},{\"description\":\"10 % Srv Chg\",\"quantity\":null,\"unit_price\":8.78,\"tax_rate\":6,\"net\":8.78}],\"vat_breakdown\":[{\"rate\":6,\"base\":96.58,\"tax\":5.81}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor as T.A.S Leisure Sdn Bhd (possibly Chili's KLCC), the GST ID, the check reference, the date, and the MYR currency. I'm also noting the amounts, with 96.58 untaxed, 5.81 in tax, and a total of 102.39.\n\nI'm weighing whether the total should be 102.39 or the rounded 102.40, and I'm settling on 102.39 so it matches the untaxed amount plus tax. Next I'm mapping the four items plus the 8.78 service charge as lines at the 6% rate, which sum to the 96.58 base, and I'm leaving the due date and IBAN empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor as T.A.S Leisure Sdn Bhd (possibly Chili's KLCC), the GST ID, the check reference, the date, and the MYR currency. I'm also noting the amounts, with 96.58 untaxed, 5.81 in tax, and a total of 102.39.\n\nI'm weighing whether the total should be 102.39 or the rounded 102.40, and I'm settling on 102.39 so it matches the untaxed amount plus tax. Next I'm mapping the four items plus the 8.78 service charge as lines at the 6% rate, which sum to the 96.58 base, and I'm leaving the due date and IBAN empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2299,
+   "completion_tokens": 902,
+   "total_tokens": 3201,
+   "cost": 0.013618,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.013618,
+    "upstream_inference_prompt_cost": 0.004598,
+    "upstream_inference_completions_cost": 0.00902
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 504,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.51
+}

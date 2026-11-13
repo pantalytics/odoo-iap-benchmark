@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "MUSTERLIEFERANT GMBH",
+  "vendor_vat": "DE123456789",
+  "invoice_ref": "RK21012345",
+  "invoice_date": "2018-09-16",
+  "due_date": null,
+  "currency": "EUR",
+  "untaxed": -7.67,
+  "tax": -1.12,
+  "total": -8.79,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "Zitronensäure 100ml",
+    "quantity": -5,
+    "unit_price": 1.0,
+    "tax_rate": 19,
+    "net": -5.0
+   },
+   {
+    "description": "Gelierzucker Extra 250g",
+    "quantity": -2,
+    "unit_price": 1.45,
+    "tax_rate": 7,
+    "net": -2.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 19,
+    "base": -4.85,
+    "tax": -0.92
+   },
+   {
+    "rate": 7,
+    "base": -2.82,
+    "tax": -0.2
+   }
+  ]
+ },
+ "cost_usd": 0.012528,
+ "raw": {
+  "id": "gen-1794568335-B9h34JkMVs1n5lZrx9qw",
+  "object": "chat.completion",
+  "created": 1794568335,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MUSTERLIEFERANT GMBH\",\"vendor_vat\":\"DE123456789\",\"invoice_ref\":\"RK21012345\",\"invoice_date\":\"2018-09-16\",\"due_date\":null,\"currency\":\"EUR\",\"untaxed\":-7.67,\"tax\":-1.12,\"total\":-8.79,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"Zitronensäure 100ml\",\"quantity\":-5,\"unit_price\":1.0,\"tax_rate\":19,\"net\":-5.0},{\"description\":\"Gelierzucker Extra 250g\",\"quantity\":-2,\"unit_price\":1.45,\"tax_rate\":7,\"net\":-2.9}],\"vat_breakdown\":[{\"rate\":19,\"base\":-4.85,\"tax\":-0.92},{\"rate\":7,\"base\":-2.82,\"tax\":-0.2}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling out the invoice header: vendor MUSTERLIEFERANT GMBH with VAT DE123456789, reference RK21012345 dated 2018-09-16, no due date, currency EUR. The printed tax of \"1,12\" doesn't match the breakdown, which sums to -1.12, so I suspect the minus sign was lost in OCR, and I'm checking the total against the untaxed amount of -7.67.\n\nI'm confirming the tax as -1.12, which lines up with the breakdown, and that no IBAN is given and the VAT treatment is S. I'm also going through the two line items, quantities, unit prices, rates and nets, plus the descriptions, and checking the per-rate bases and taxes.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling out the invoice header: vendor MUSTERLIEFERANT GMBH with VAT DE123456789, reference RK21012345 dated 2018-09-16, no due date, currency EUR. The printed tax of \"1,12\" doesn't match the breakdown, which sums to -1.12, so I suspect the minus sign was lost in OCR, and I'm checking the total against the untaxed amount of -7.67.\n\nI'm confirming the tax as -1.12, which lines up with the breakdown, and that no IBAN is given and the VAT treatment is S. I'm also going through the two line items, quantities, unit prices, rates and nets, plus the descriptions, and checking the per-rate bases and taxes.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQStAgKEggTEAIYAjgBQgh0aGlua2luZxIM4S+k9tmkksDIy/M6GgyoFcRxWVPjC+dG7T8iMHpWehKqd/695NQvf6K7bGnEL8fOPosTt878KPniqrQj8frLbGYB03ckk/PfoWtfAirPB4SMZKALPDq9Gqi7uicDOIG/OqRqgRZmQZQafL3K+xIA6eELpZ4PXaiOZJ5aPreR4yPoITJlotmEMx1iSf/kiHoxlgywO39r317ZYm9NJ/ECM2xEMvQvfPgmb7o7CvBYViES9DAb//Ejxdv5dYgpFul9kTw6BfYDEuxwlsQ6CEXVtDu/C6IhQ5HzyeXFasjA7BYz/su8MM47zOgahQdOsT7H9enLOe7FT1hpxu+ceSj5Lp31QLhAE6tuOc7MT9izwno8jQzZT/xTvHw3IrE0d7PU0d8BXQQKa2vgCO3o3P8dQ7w7oPefbAYdF8NHij9nCuBUkEBK9VBT3ZX+hTBs3eluNSihuw8d5wWMiX2EtZYXUn6HrlGIiT5hEi+xvTFijbQKmcoA5MOy77vuoPQ+SwCAx/YBuNxYO0Pm12sxAfEQlhqWJrLkOMdIB1j8ePk2y4t2NncnQwP+b/xpHosKPfVi1ltxyaRKGZAlcRXG2duNZUkakilG5bpd3/S+r9FUckMSswy6RDcxoCL82Bw0MoRGQnYU6XNtGGBTGmNzH00DiKK/Ypw7Vq1m9Ph67RVkrkkONms4xkmrrQPmFsOuqz2T3kjVZtFeUxNrfi9Wl0c8K178SKny59eJ9QTloteLipDEBWIlME5o72dktwMY2o9Kp5pa+hDTJhRJH5Nk3unASJdIn/EQLWSIaq4qg4aI+LzRoX14dxFr3WBhEhPts6vkA6KYTqXlw7a5qaM69DVirjh5WK/s7FyQd0MghXcVaEgcrNxcH7+HxAP39VZDnZ/FGK8j37PVum7k77XhVNxkykw1JquLRmmJx/SymRXUi0fiDjAXsLYstX7t9Xc/TGt/lf95i7E8DvmxyAll8PkbHGzWTunxFHegb/yaiRjuFxCJuDLlqJccBf/zcCjwPFp5Cnda7vagDuBTIXkK53ppK1gDHkZ2xlOrFXKV3XigEZsLZrENtHhGTaCTm1Xu+ShIIHHZiwY9cjr6L1D04vcB0Ij7CBeGMaoZeVpeAqbA3ehgPP37dWRUvhjVAs8XmhQ+DAGcCuxHmPIWqHUdDehzCgkdg0vbW96K8MB5f8pKOpQjrhUzYtjOY/NMsMqnIBhxLA0pBBoCw73SXxrzZj+c5xSZjzPSM7a0ueqL0SzcS8r9ZJGtltvBFWQXxyjYmSFeu8dhO9GS5dWVeaxM+raavV8mxQKH4c1ksWqF6X4pBXcfjE1ofGMnjlCZN0ZeB88JGWfPp+2fgOWU8mpEwtjFB9tNwqRuf0J6b3tP06KYlz5gPhIgcbm9vyFeWm44PhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3209,
+   "completion_tokens": 611,
+   "total_tokens": 3820,
+   "cost": 0.012528,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012528,
+    "upstream_inference_prompt_cost": 0.006418,
+    "upstream_inference_completions_cost": 0.00611
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 313,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.23
+}

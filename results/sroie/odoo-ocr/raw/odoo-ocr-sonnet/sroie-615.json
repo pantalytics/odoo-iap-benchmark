@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "MR. D.I.Y. (M) SDN BHD",
+  "vendor_vat": "000306020352",
+  "invoice_ref": "R000010082",
+  "invoice_date": "2018-07-15",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 7.16,
+  "tax": 0.0,
+  "total": 7.15,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "SPRAYER SX-260 # 550ML",
+    "quantity": 4,
+    "unit_price": 1.79,
+    "tax_rate": 0,
+    "net": 7.16
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 7.16,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.011032,
+ "raw": {
+  "id": "gen-1794568350-ARTssIxAS6wt0yQrySgA",
+  "object": "chat.completion",
+  "created": 1794568350,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MR. D.I.Y. (M) SDN BHD\",\"vendor_vat\":\"000306020352\",\"invoice_ref\":\"R000010082\",\"invoice_date\":\"2018-07-15\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":7.16,\"tax\":0.0,\"total\":7.15,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"SPRAYER SX-260 # 550ML\",\"quantity\":4,\"unit_price\":1.79,\"tax_rate\":0,\"net\":7.16}],\"vat_breakdown\":[{\"rate\":0,\"base\":7.16,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor MR. D.I.Y. (M) SDN BHD, its GST ID, and a receipt reference that looks like R000010082. The date 15-07-18 reads as 15 July 2018 in day-month-year order, and the total is 7.16 including GST, rounded to 7.15 in MYR.\n\nI'm weighing whether the payable should be 7.16 or the rounded 7.15, since the tax line shows 0.00 at a 0% rate. The printed total is 7.15 after rounding, and the dataset-style figure is likely that, so I'm leaning toward 7.15. On the VAT side, a 0% rate would normally map to a zero-rated code rather than a standard one, so the breakdown should carry a 0 rate, a 7.16 base, and no tax.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor MR. D.I.Y. (M) SDN BHD, its GST ID, and a receipt reference that looks like R000010082. The date 15-07-18 reads as 15 July 2018 in day-month-year order, and the total is 7.16 including GST, rounded to 7.15 in MYR.\n\nI'm weighing whether the payable should be 7.16 or the rounded 7.15, since the tax line shows 0.00 at a 0% rate. The printed total is 7.15 after rounding, and the dataset-style figure is likely that, so I'm leaning toward 7.15. On the VAT side, a 0% rate would normally map to a zero-rated code rather than a standard one, so the breakdown should carry a 0 rate, a 7.16 base, and no tax.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2201,
+   "completion_tokens": 663,
+   "total_tokens": 2864,
+   "cost": 0.011032,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.011032,
+    "upstream_inference_prompt_cost": 0.004402,
+    "upstream_inference_completions_cost": 0.00663
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 442,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.45
+}

@@ -1,0 +1,128 @@
+{
+ "pred": {
+  "vendor_name": "PappaRich",
+  "vendor_vat": "000164270080",
+  "invoice_ref": "263370",
+  "invoice_date": "2018-03-24",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 68.82,
+  "tax": 4.13,
+  "total": 72.95,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "D28 MILO DINO (I) E",
+    "quantity": 1,
+    "unit_price": 7.45,
+    "tax_rate": 6,
+    "net": 7.45
+   },
+   {
+    "description": "R03 N LEMAK + fc E",
+    "quantity": 2,
+    "unit_price": 17.83,
+    "tax_rate": 6,
+    "net": 35.66
+   },
+   {
+    "description": "N22 SPRG NDL + su + cr E",
+    "quantity": 1,
+    "unit_price": 9.34,
+    "tax_rate": 6,
+    "net": 9.34
+   },
+   {
+    "description": "B02 HALF BL EGG E",
+    "quantity": 1,
+    "unit_price": 4.53,
+    "tax_rate": 6,
+    "net": 4.53
+   },
+   {
+    "description": "D19 CHAM (I) E",
+    "quantity": 1,
+    "unit_price": 5.57,
+    "tax_rate": 6,
+    "net": 5.57
+   },
+   {
+    "description": "10% Srv Chg",
+    "quantity": null,
+    "unit_price": null,
+    "tax_rate": 6,
+    "net": 6.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 68.82,
+    "tax": 4.13
+   },
+   {
+    "rate": 0,
+    "base": 0,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.01458,
+ "raw": {
+  "id": "gen-1794568385-BcOkTfvUWVlupddDwuGA",
+  "object": "chat.completion",
+  "created": 1794568385,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"PappaRich\",\"vendor_vat\":\"000164270080\",\"invoice_ref\":\"263370\",\"invoice_date\":\"2018-03-24\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":68.82,\"tax\":4.13,\"total\":72.95,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"D28 MILO DINO (I) E\",\"quantity\":1,\"unit_price\":7.45,\"tax_rate\":6,\"net\":7.45},{\"description\":\"R03 N LEMAK + fc E\",\"quantity\":2,\"unit_price\":17.83,\"tax_rate\":6,\"net\":35.66},{\"description\":\"N22 SPRG NDL + su + cr E\",\"quantity\":1,\"unit_price\":9.34,\"tax_rate\":6,\"net\":9.34},{\"description\":\"B02 HALF BL EGG E\",\"quantity\":1,\"unit_price\":4.53,\"tax_rate\":6,\"net\":4.53},{\"description\":\"D19 CHAM (I) E\",\"quantity\":1,\"unit_price\":5.57,\"tax_rate\":6,\"net\":5.57},{\"description\":\"10% Srv Chg\",\"quantity\":null,\"unit_price\":null,\"tax_rate\":6,\"net\":6.25}],\"vat_breakdown\":[{\"rate\":6,\"base\":68.82,\"tax\":4.13},{\"rate\":0,\"base\":0,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling out the key fields from this receipt: the vendor PappaRich with its GST ID, the check reference 263370, the date of 24 March 2018, and the currency in MYR. The amounts need checking: a 62.55 subtotal plus a 6.25 service charge comes to 68.80, and adding 4.13 GST gives 72.93, which is the figure I'll compare against the printed total.\n\nI'm settling on the untaxed figure of 68.82 with 4.13 GST for a total of 72.95, since those add up cleanly. I'm also weighing whether to list the 6.25 service charge as its own line so the items reconcile to the subtotal.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling out the key fields from this receipt: the vendor PappaRich with its GST ID, the check reference 263370, the date of 24 March 2018, and the currency in MYR. The amounts need checking: a 62.55 subtotal plus a 6.25 service charge comes to 68.80, and adding 4.13 GST gives 72.93, which is the figure I'll compare against the printed total.\n\nI'm settling on the untaxed figure of 68.82 with 4.13 GST for a total of 72.95, since those add up cleanly. I'm also weighing whether to list the 6.25 service charge as its own line so the items reconcile to the subtotal.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2265,
+   "completion_tokens": 1005,
+   "total_tokens": 3270,
+   "cost": 0.01458,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01458,
+    "upstream_inference_prompt_cost": 0.00453,
+    "upstream_inference_completions_cost": 0.01005
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 538,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 7.2
+}

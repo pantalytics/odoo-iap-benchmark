@@ -26,4 +26,5 @@ jobs:
           [ -d results ] && python src/aggregate.py results > /dev/null
           [ -d results ] && python src/export_csv.py results > /dev/null
           [ -d results ] && python src/compare_prompts.py results > /dev/null
+          [ -d results ] && python src/odoo_candidates.py results > /dev/null
           git diff --exit-code -- results
