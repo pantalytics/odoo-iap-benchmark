@@ -51,6 +51,8 @@ ENGINES = {
     "claude-opus": ("openrouter", "anthropic/claude-opus-5.5"),
     "mistral-ocr": ("openrouter-ocr", "mistralai/mistral-medium-3-5"),
     "mistral-docai": ("mistral", "mistral-ocr-latest"),
+    # Ablation: Odoo's own OCR words (from its cached answers) as text, read by Sonnet.
+    "odoo-ocr-sonnet": ("odoo-text", "anthropic/claude-sonnet-5.5"),
 }
 
 ODOO_URL = "https://extract.api.odoo.com/api/extract/invoice/2"
@@ -251,6 +253,55 @@ def run_openrouter(path: Path, model: str, cfg: dict, pdf_engine: str = "native"
     return pred, out, float((out.get("usage") or {}).get("cost") or 0)
 
 
+def odoo_text(raw: dict, width: int = 110) -> str:
+    """Odoo's OCR words back to text, each word at its place on a fixed-width grid."""
+    pages = []
+    for _, words in sorted((raw.get("words") or {}).items(), key=lambda kv: int(kv[0])):
+        lines: list[list[dict]] = []
+        for w in sorted(words, key=lambda w: w["coords"][1] + w["coords"][3] / 2):
+            yc, h = w["coords"][1] + w["coords"][3] / 2, w["coords"][3]
+            last = lines[-1] if lines else None
+            if last and abs(yc - (last[0]["coords"][1] + last[0]["coords"][3] / 2)) < h / 2:
+                last.append(w)
+            else:
+                lines.append([w])
+        out = []
+        for line in lines:
+            row = ""
+            for w in sorted(line, key=lambda w: w["coords"][0]):
+                col = round(w["coords"][0] * width)
+                row += " " * max(col - len(row), 1 if row else 0) + str(w["content"])
+            out.append(row)
+        pages.append("\n".join(out))
+    return "\n\f\n".join(pages)
+
+
+def run_odoo_text(path: Path, model: str, cfg: dict):
+    cached = json.loads((cfg["odoo_ocr"] / f"{cfg['doc']['id']}.json").read_text())
+    text = odoo_text(cached["raw"])
+    key = os.environ["OPENROUTER_API_KEY"]
+    body = {
+        "model": model,
+        "temperature": 0,
+        "messages": [
+            {
+                "role": "user",
+                "content": f"{cfg.get('prompt', PROMPT)}\n\nThe bill, as OCR text:\n\n{text}",
+            }
+        ],
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {"name": "bill", "strict": True, "schema": SCHEMA},
+        },
+        "usage": {"include": True},
+    }
+    out = post(OPENROUTER_URL, body, {"Authorization": f"Bearer {key}"})
+    if "error" in out:
+        raise RuntimeError(f"openrouter: {out['error']}")
+    pred = loose_json(out["choices"][0]["message"]["content"])
+    return pred, out, float((out.get("usage") or {}).get("cost") or 0)
+
+
 def run_openrouter_ocr(path: Path, model: str, cfg: dict):
     return run_openrouter(path, model, cfg, pdf_engine="mistral-ocr")
 
@@ -282,6 +333,7 @@ RUNNERS = {
     "openrouter": run_openrouter,
     "openrouter-ocr": run_openrouter_ocr,
     "mistral": run_mistral,
+    "odoo-text": run_odoo_text,
 }
 
 
@@ -334,6 +386,7 @@ def main() -> None:
     ap.add_argument("--usd-eur", type=float, default=0.86)
     ap.add_argument("--odoo-credit-usd", type=float, default=0.12, help="price of 1 IAP credit")
     ap.add_argument("--mistral-page-usd", type=float, default=0.007, help="OCR plus annotation")
+    ap.add_argument("--odoo-ocr", type=Path, help="Odoo's cached answers, for odoo-ocr-sonnet")
     ap.add_argument("--company-vat", help="our VAT number, sent to Odoo as a hint")
     ap.add_argument("--company-name")
     ap.add_argument("--country", help="ISO code, e.g. NL")
@@ -358,6 +411,7 @@ def main() -> None:
             }[args.rules],
             "odoo_credit_usd": args.odoo_credit_usd,
             "mistral_page_usd": args.mistral_page_usd,
+            "odoo_ocr": args.odoo_ocr,
             "user_infos": {
                 "user_company_vat": args.company_vat,
                 "user_company_name": args.company_name,

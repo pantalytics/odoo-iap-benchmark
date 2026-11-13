@@ -1,0 +1,114 @@
+{
+ "pred": {
+  "vendor_name": "GARDENIA BAKERIES (KL) SDN BHD",
+  "vendor_vat": "000381399040",
+  "invoice_ref": "7928F713",
+  "invoice_date": "2017-09-28",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 47.03,
+  "tax": 1.01,
+  "total": 48.04,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "O.C. WHITE",
+    "quantity": 2,
+    "unit_price": 2.13,
+    "tax_rate": 0,
+    "net": 4.26
+   },
+   {
+    "description": "WHOLEMEAL",
+    "quantity": 4,
+    "unit_price": 2.78,
+    "tax_rate": 0,
+    "net": 11.12
+   },
+   {
+    "description": "O.C JUMBO",
+    "quantity": 5,
+    "unit_price": 2.97,
+    "tax_rate": 0,
+    "net": 14.85
+   },
+   {
+    "description": "BUN - SBILIS",
+    "quantity": 20,
+    "unit_price": 0.84,
+    "tax_rate": 6,
+    "net": 16.8
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 30.23,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 16.8,
+    "tax": 1.01
+   }
+  ]
+ },
+ "cost_usd": 0.012434,
+ "raw": {
+  "id": "gen-1794568351-UO02zQpMbMdeRI1IA3yA",
+  "object": "chat.completion",
+  "created": 1794568351,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"GARDENIA BAKERIES (KL) SDN BHD\",\"vendor_vat\":\"000381399040\",\"invoice_ref\":\"7928F713\",\"invoice_date\":\"2017-09-28\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":47.03,\"tax\":1.01,\"total\":48.04,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"O.C. WHITE\",\"quantity\":2,\"unit_price\":2.13,\"tax_rate\":0,\"net\":4.26},{\"description\":\"WHOLEMEAL\",\"quantity\":4,\"unit_price\":2.78,\"tax_rate\":0,\"net\":11.12},{\"description\":\"O.C JUMBO\",\"quantity\":5,\"unit_price\":2.97,\"tax_rate\":0,\"net\":14.85},{\"description\":\"BUN - SBILIS\",\"quantity\":20,\"unit_price\":0.84,\"tax_rate\":6,\"net\":16.8}],\"vat_breakdown\":[{\"rate\":0,\"base\":30.23,\"tax\":0},{\"rate\":6,\"base\":16.8,\"tax\":1.01}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor name and GST ID, the reference number, the date, and the currency. I'm also adding up the line items to get the untaxed subtotal and checking it against the tax and total.\n\nI'm checking the line-item arithmetic against the totals, working out that the 0% items come to 30.23 with no tax, and that the single 6% bun line gives a 16.80 base and 1.01 tax. That makes the untaxed subtotal 47.03, which matches the total of 48.04 once the tax is added.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor name and GST ID, the reference number, the date, and the currency. I'm also adding up the line items to get the untaxed subtotal and checking it against the tax and total.\n\nI'm checking the line-item arithmetic against the totals, working out that the 0% items come to 30.23 with no tax, and that the single 6% bun line gives a 16.80 base and 1.01 tax. That makes the untaxed subtotal 47.03, which matches the total of 48.04 once the tax is added.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSlAoKEAgTGAI4AUIIdGhpbmtpbmcSDBP/19oaTl1oaXyErBoMH7qk5bm+hNemb5RiIjBurUAXRhwOxtf9z5p47SW3th4f28IdfUrR6EXTfX6zP6q2it1FRSnpdw0OSLf/WnsqsQkZqJ/kjv8D893rk0kudz3Z78jQ5Fn89v/C+nfqGLlnBUM47yDdmF8fGuqvWhTRQkUExPUgwvdm20XcXcdaZNAhRh+daL3b47JrTG2WvnKyiqD4+OMue1YWtHYRc3DbNdJbhhBvqk4WfZuq4APQ+2aoYYrCtNX+XnngHJqEoxRd0c6lPljlmDNUWR1A2tLqvk5MH6VRSG6QXf7HR9UyPMRx4u4ZBDV1r41RePayF0BbiHYZcrUC5aVF6ecXVk/XTMCxFizX8m7DAKQpTp/84dmhV8vFZU7eHCudWzNKjDFAiF5LKF2FwcdWKWlSXWfJ/YkFAfCh60SdnLNG6HDzhYBH7ayOiSCVtCucRGTpQeTdtHxarF4kAvpm2VLtOJAtoK/xx0nvHnaQby49evzoz2WuAawyHoDyK5OZjX0Cc/x2cgDxQvPWPJUzCblPEETu3BecuGUgosqRgSL8u5RSdJbdPicvP2QNJ4s34q5J3gdwtolyBQygxfhUqj3E1w0fS8+yPM5YOCiouMwOLUtcK1LwGyF2vdWG6feRWLdYgs0p/zKwJCulzNLxiYgX0GYWxbKyCo0tBWhi6qWNwRgR26DdN2TIxV0PhTVu8H+h1MRhnjywMXacx19zhG/wuPjBDG9dzUH4NhtLAFLZfKCbTLJjFXsXC3wCkhf9Sioa3m11PnJM9LCEKx1Ma3bgcnjvtB3U+/SEuCAcXNH8mIbLwrkGqrBSvmj610aKKRbsFE3fL/D/Bfyv3ZBMG/g3bamp5L1R6PnnBJvPHmvfdGN81j/Fj5+XGciKXNb+k9E8Xoircjh1PemJkU+vTqE+Rd63UiEpRdY+PE2rbsNtVwKpWwQtgPEsh6i+26A5eM0XcP3pQLEfRS7qxjnXZv0IultAbHyP458S9koxSdKS5mlV9xq1Lz4ariLBc0tdZBFYiV7w3/QX6YbLzJ0iPDEeNcGPtxTtqAxqxtiqm1p4SkwIybBxvWBbRs3IUYjZ9sTZmeFl278/XXzTBU4ClxJULAZQze9MEBxHQ+RUjrG/Z5bUcfL/m6CQubsYUK60+BkczqKc8IHVIGBB4k8wk6U2mKpzQcFhMoy9Vt28aYpLQqSY8kUfPQAsxHC6FIlL9j3psV6cXDC2NfgO/cJiooqZG4rj+mo81BfmVWOnk7g+JbTPOnORSZosyuO+FPMUI6rqBnWjG87O9z6wq6SdLLFgEXJfL1lw0FF45xaGOG1MO5cqktxEEY7StSpwLmoZY8MYajAk5Me3qa3lOMP/sQRw5meJ/ZJ6Wmni9Y/kWy53mv+BgZPTZIHjCVvWbhYXbtm12J9Lux14qx6G1zMPUtwnNS2i1IayuVY5XouLfjzP/LONGfKkaPN3kDMEhmfdooM2nU1nU6xr9V09bgP5s69rdU+ccIfFImx4AQLBOJ3uEIr6Lj3KyY3Hz4kQ3572eRX6Upy3rW5PwfpFOvA7AinnLEWRQY0bJb1ar41IUZhW08TU+B2jXZ0fMQ1Qm8uJPBpmehMlKIpLgBJKrWsAb8tvyygBEU6HUzZbGtr0zVMbG6KeAWpt3Ud5xExlG6WUe+R4Pd5SBTcacCoxCX2ZOBMSmvZx31jgGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2327,
+   "completion_tokens": 778,
+   "total_tokens": 3105,
+   "cost": 0.012434,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012434,
+    "upstream_inference_prompt_cost": 0.004654,
+    "upstream_inference_completions_cost": 0.00778
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 403,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.0
+}

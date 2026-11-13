@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "ADVANCO COMPANY",
+  "vendor_vat": "001658445824",
+  "invoice_ref": "389720",
+  "invoice_date": "2018-01-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.6,
+  "tax": 0.4,
+  "total": 7.0,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "UNICORN - 20CM HALF WHITE RULER",
+    "quantity": 1,
+    "unit_price": 0.8,
+    "tax_rate": 6,
+    "net": 0.8
+   },
+   {
+    "description": "CBE - S217 CBE 7\" SCISSORS (2.0MM)",
+    "quantity": 1,
+    "unit_price": 6.2,
+    "tax_rate": 6,
+    "net": 6.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.6,
+    "tax": 0.4
+   }
+  ]
+ },
+ "cost_usd": 0.01029,
+ "raw": {
+  "id": "gen-1794568380-GjbAhUXxKO5WhJkhcYar",
+  "object": "chat.completion",
+  "created": 1794568380,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"ADVANCO COMPANY\",\"vendor_vat\":\"001658445824\",\"invoice_ref\":\"389720\",\"invoice_date\":\"2018-01-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.6,\"tax\":0.4,\"total\":7.0,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"UNICORN - 20CM HALF WHITE RULER\",\"quantity\":1,\"unit_price\":0.8,\"tax_rate\":6,\"net\":0.8},{\"description\":\"CBE - S217 CBE 7\\\" SCISSORS (2.0MM)\",\"quantity\":1,\"unit_price\":6.2,\"tax_rate\":6,\"net\":6.2}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.6,\"tax\":0.4}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor ADVANCO COMPANY, the GST number, the date of 2018-01-17, and the MYR totals of 7.00 total, 6.60 untaxed, and 0.40 tax. I'm also starting on the line items, beginning with the UNICORN 20CM ruler.\n\nI'm checking the line totals against the invoice total, and noting that the printed \"5.40\" tax figure looks like a garbled 6.60, so I'm treating the net as 6.60 with 0.40 tax. I'm recording the VAT treatment as S at a 6% rate, with the IBAN and due date left empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor ADVANCO COMPANY, the GST number, the date of 2018-01-17, and the MYR totals of 7.00 total, 6.60 untaxed, and 0.40 tax. I'm also starting on the line items, beginning with the UNICORN 20CM ruler.\n\nI'm checking the line totals against the invoice total, and noting that the printed \"5.40\" tax figure looks like a garbled 6.60, so I'm treating the net as 6.60 with 0.40 tax. I'm recording the VAT treatment as S at a 6% rate, with the IBAN and due date left empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0gkKEAgTGAI4AUIIdGhpbmtpbmcSDA4QnkIbGZIWZmv0TxoMIpHTql0kKiUfYOmZIjDNIsfd+N5MmT3l6tMzJHl0v7d0Jppvw04+FSQuAjgQ2MwG7OAGefDrpfmSEhQWN/gq7wjLcFO4Wq5nE8tvGLS1dEkuqDC352TJYPkOcwWTEmkr+imI+ffh4sqp9yMP/ABa1okuhK2sYBVJV7zr7PVp3E3aHg5WBHANadICmwyY2qfa8dzK9rkWUc0bS5Kr3g0zs335eIEJTLyGdqZYS5+SS/xHpc3/xDIn0yEnDC1XZv+UWCbpHmLFMUvIuWgBvwMrBJi8Lo7ys70uGvinM8CipuVEqeTBEKqdjQBaoh0TKMXtjVjke5Xn7EIdFR/cbsXro2apcY5wYdrm7t1EdVL26AWx+//jMQRpaplqT/eHcYxbTKJML2GA8WYtebaSpCM8oNh/mZOfHKy/oaYNwiL5v0gACr2QyeeebuMUn8ya+jSzfjhyaUqtsLf48O7RmE2RfIiVRLSLF9rJfLDVJGjQpnQzQFMGSvHg98IAtIF5E4X8s6tgQacbmm/jAgO3ffzUcIkRS0Os+NaQyehfTCjwYCf/IBsU/l297/qwoq3K6wGaUrEZwcdE3AXL3o6Frj9boNnhTyWjpq2RxLtUkd8DLP54lEgtWvCNhUW25eMpt0kck/MMS9NplcDTuoHf3N2z0Q00XFgkXmIsxzr4rlt5pzlf+VnU2uqSXhgGJ0gxtxhYeWvMhwwhgzsZ6CyNh3UtYk08zl1XJU0xPpuk8nsheleWsd/zJKx4uzuAf/kVpjpQPieG2GHluQQ/FSIPVba/LrMLOFGvhDBlynolNvQ8JCOKZHDaR5LasWzXUYMEsA2AiVbmTEAx83FAhKE6uvly3hUiS5Chw3mkl6JMaQBMxxMFZu9H9xnZ9JqyQ1UVSJi2XKLo7IKGRV74Tmmq3xmcDhnuaDuqA/1q3e/G0ZL8xNZ3irOLkg/yvm8wlAnPMLTkQwoQMpDYCcqzM8eXvPNoTlrTIIkz2cIvwGMU1BX2phJaXlAwx5U1z0RESLkp/NL1u3Tc0+d62c8H/qxDfDWtOMEEjoxEphLd87VAM2D60Jy+WaYVP+l79L5rb4OdHBIQJY7IiK7nGDuAn2johzz6xAQOIo7tSsQsvO3h3FpFPslLRWa8VJobzOmlDV7Ka2MEvKQe2sVY/DJBztJcHjJWpYeaB3aVVo233CDJkuVDbU1U9+GrsB6GaJ2OI/R4weCWRtfTefE6QzI74tTRinHGfaCeHpGduwtYPVewgd0TXhs09NTIgqgs8YZ7DAWaYKyvqNBB4m8ogPwOz6rNgJJyW3v/vk7FRnXSlRgVWyssQP+9/2jLRR31vt7OlO+Wqo09ot1IJyfyMa4tnb5mjhwX4varNm8iTDbtn89Sj9mYq1hbI50bG8KDqSpFC9MtFDAm6sCbpXhBSiy21OICbvzhR1RTjcNzg39z9Ezg9TyNnNDITMMcRpd9XDHXP0MptWsXwWvHNZuLOk9W9e3/szt2BWMMIe4ZSzry0GTYhdsLjwcYL+CboNksUOExsNowDX2MIq+TC46P1+UgkHwuOFRUsJnvu5pf7CA1p/LxAxhxK47yE34dQNlhkB9nrzaYQaOqGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2175,
+   "completion_tokens": 594,
+   "total_tokens": 2769,
+   "cost": 0.01029,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01029,
+    "upstream_inference_prompt_cost": 0.00435,
+    "upstream_inference_completions_cost": 0.00594
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 315,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.4
+}

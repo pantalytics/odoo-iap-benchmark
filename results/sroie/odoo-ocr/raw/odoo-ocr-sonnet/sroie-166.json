@@ -1,0 +1,100 @@
+{
+ "pred": {
+  "vendor_name": "THE STORE (MALAYSIA) SDN BHD",
+  "vendor_vat": "000364929024",
+  "invoice_ref": "1012-3001-0094",
+  "invoice_date": "2018-01-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 33.82,
+  "tax": 1.98,
+  "total": 35.8,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "UNI WORKER'S CARD (1-31) 100'S",
+    "quantity": 4,
+    "unit_price": 3.1,
+    "tax_rate": 6,
+    "net": 12.4
+   },
+   {
+    "description": "UNI A6 NOTE BOOK 120'S",
+    "quantity": 18,
+    "unit_price": 1.3,
+    "tax_rate": 6,
+    "net": 23.4
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 33.82,
+    "tax": 1.98
+   },
+   {
+    "rate": 0,
+    "base": 0,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.01233,
+ "raw": {
+  "id": "gen-1794568368-503vynidfxjtxTUrLfa4",
+  "object": "chat.completion",
+  "created": 1794568368,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"THE STORE (MALAYSIA) SDN BHD\",\"vendor_vat\":\"000364929024\",\"invoice_ref\":\"1012-3001-0094\",\"invoice_date\":\"2018-01-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":33.82,\"tax\":1.98,\"total\":35.8,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"UNI WORKER'S CARD (1-31) 100'S\",\"quantity\":4,\"unit_price\":3.1,\"tax_rate\":6,\"net\":12.4},{\"description\":\"UNI A6 NOTE BOOK 120'S\",\"quantity\":18,\"unit_price\":1.3,\"tax_rate\":6,\"net\":23.4}],\"vat_breakdown\":[{\"rate\":6,\"base\":33.82,\"tax\":1.98},{\"rate\":0,\"base\":0,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the fields off this receipt: the vendor, the GST registration number, and a receipt-style reference number, which I'll take as the invoice reference. The date reads 2018-01-14. The currency isn't printed, though the Malaysian entity suggests MYR, and the instructions say to use null for anything missing from the bill, so I'm weighing whether to infer it or leave it empty.\n\nI'm settling on MYR as the currency, since the entity is clearly Malaysian. The totals check out: 35.80 total, 33.82 untaxed, 1.98 tax. The two line items work out to 12.40 and 23.40 at 4 and 18 units, which sum to the total, and I'm noting the 6% rate and the printed unit prices. For the tax breakdown I'm thinking about including both the 6% row and a 0% row exactly as printed, with the VAT treatment set to S and the due date and IBAN left null.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the fields off this receipt: the vendor, the GST registration number, and a receipt-style reference number, which I'll take as the invoice reference. The date reads 2018-01-14. The currency isn't printed, though the Malaysian entity suggests MYR, and the instructions say to use null for anything missing from the bill, so I'm weighing whether to infer it or leave it empty.\n\nI'm settling on MYR as the currency, since the entity is clearly Malaysian. The totals check out: 35.80 total, 33.82 untaxed, 1.98 tax. The two line items work out to 12.40 and 23.40 at 4 and 18 units, which sum to the total, and I'm noting the 6% rate and the printed unit prices. For the tax breakdown I'm thinking about including both the 6% row and a 0% row exactly as printed, with the VAT treatment set to S and the due date and IBAN left null.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2230,
+   "completion_tokens": 787,
+   "total_tokens": 3017,
+   "cost": 0.01233,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01233,
+    "upstream_inference_prompt_cost": 0.00446,
+    "upstream_inference_completions_cost": 0.00787
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 483,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.37
+}

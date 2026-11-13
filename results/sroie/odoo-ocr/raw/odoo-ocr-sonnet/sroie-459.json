@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000954186684",
+  "invoice_ref": "OR18051302170332",
+  "invoice_date": "2018-05-13",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 4.43,
+  "tax": 0.27,
+  "total": 4.7,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 1001000000371 Fish Vege",
+    "quantity": 1,
+    "unit_price": 4.1,
+    "tax_rate": 6,
+    "net": 4.1
+   },
+   {
+    "description": "SR 1001000000044 Add Vegetable",
+    "quantity": 1,
+    "unit_price": 0.6,
+    "tax_rate": 6,
+    "net": 0.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 4.43,
+    "tax": 0.27
+   }
+  ]
+ },
+ "cost_usd": 0.01883,
+ "raw": {
+  "id": "gen-1794568349-wUXp4dqPLXVo6P0yVqY0",
+  "object": "chat.completion",
+  "created": 1794568349,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000954186684\",\"invoice_ref\":\"OR18051302170332\",\"invoice_date\":\"2018-05-13\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":4.43,\"tax\":0.27,\"total\":4.7,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SR 1001000000371 Fish Vege\",\"quantity\":1,\"unit_price\":4.1,\"tax_rate\":6,\"net\":4.1},{\"description\":\"SR 1001000000044 Add Vegetable\",\"quantity\":1,\"unit_price\":0.6,\"tax_rate\":6,\"net\":0.6}],\"vat_breakdown\":[{\"rate\":6,\"base\":4.43,\"tax\":0.27}]}",
+     "refusal": null,
+     "reasoning": "I'm working through a receipt that's been OCR'd three times, so the text is noisy. The vendor name is most likely UNIHAKKA INTERNATIONAL SDN BHD, since one copy reads it correctly and the other two drop or swap a letter. I'm also starting to look at the GST registration number, which is where I've left off.\n\nI'm settling on the GST number as 000954186684, since it's the reading that fits a 12-digit Malaysian GST format. For the invoice reference, I'm weighing a few noisy versions and leaning toward OR18051302170332, because two copies end in 0332 and it matches the date.\n\nI'm weighing the tax figure now: 6% of 4.70 comes to about 0.27 to 0.28, so the printed 0.40 looks wrong, and I'm leaning toward not trusting it.\n\nI'm settling the tax figure by computing it from the total: the 4.70 inclusive amount works out to about 4.43 before tax and 0.27 in GST at 6%, so I'll use those values instead of the printed 0.40. The invoice date reads as 13 May 2018, with no due date, currency MYR, and no IBAN, with the treatment marked as standard-rated.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working through a receipt that's been OCR'd three times, so the text is noisy. The vendor name is most likely UNIHAKKA INTERNATIONAL SDN BHD, since one copy reads it correctly and the other two drop or swap a letter. I'm also starting to look at the GST registration number, which is where I've left off.\n\nI'm settling on the GST number as 000954186684, since it's the reading that fits a 12-digit Malaysian GST format. For the invoice reference, I'm weighing a few noisy versions and leaning toward OR18051302170332, because two copies end in 0332 and it matches the date.\n\nI'm weighing the tax figure now: 6% of 4.70 comes to about 0.27 to 0.28, so the printed 0.40 looks wrong, and I'm leaning toward not trusting it.\n\nI'm settling the tax figure by computing it from the total: the 4.70 inclusive amount works out to about 4.43 before tax and 0.27 in GST at 6%, so I'll use those values instead of the printed 0.40. The invoice date reads as 13 May 2018, with no due date, currency MYR, and no IBAN, with the treatment marked as standard-rated.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGFudGhyb3BpYyJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2570,
+   "completion_tokens": 1369,
+   "total_tokens": 3939,
+   "cost": 0.01883,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01883,
+    "upstream_inference_prompt_cost": 0.00514,
+    "upstream_inference_completions_cost": 0.01369
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1089,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 10.51
+}

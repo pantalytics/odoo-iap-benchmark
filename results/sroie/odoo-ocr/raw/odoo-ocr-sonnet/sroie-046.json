@@ -1,0 +1,135 @@
+{
+ "pred": {
+  "vendor_name": "PASAR MINI JIN SENG",
+  "vendor_vat": "000150511616",
+  "invoice_ref": "002-1550040",
+  "invoice_date": "2018-03-18",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 28.53,
+  "tax": 0.07,
+  "total": 28.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 2.2,
+    "tax_rate": 0,
+    "net": 2.2
+   },
+   {
+    "description": "LTK OMEGA PLUS 105",
+    "quantity": 1,
+    "unit_price": 5.7,
+    "tax_rate": 0,
+    "net": 5.7
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 1.0,
+    "tax_rate": 0,
+    "net": 1.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 2.0,
+    "tax_rate": 0,
+    "net": 2.0
+   },
+   {
+    "description": "VEGETABLES",
+    "quantity": 1,
+    "unit_price": 8.0,
+    "tax_rate": 0,
+    "net": 8.0
+   },
+   {
+    "description": "SEAFOOD",
+    "quantity": 1,
+    "unit_price": 8.5,
+    "tax_rate": 0,
+    "net": 8.5
+   },
+   {
+    "description": "FISH BALL CAKE",
+    "quantity": 1,
+    "unit_price": 1.2,
+    "tax_rate": 6,
+    "net": 1.2
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 1.13,
+    "tax": 0.07
+   },
+   {
+    "rate": 0,
+    "base": 27.4,
+    "tax": 0
+   }
+  ]
+ },
+ "cost_usd": 0.014758,
+ "raw": {
+  "id": "gen-1794568362-ZfQzjVmoDL9jKQaP46up",
+  "object": "chat.completion",
+  "created": 1794568362,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"PASAR MINI JIN SENG\",\"vendor_vat\":\"000150511616\",\"invoice_ref\":\"002-1550040\",\"invoice_date\":\"2018-03-18\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":28.53,\"tax\":0.07,\"total\":28.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":2.2,\"tax_rate\":0,\"net\":2.2},{\"description\":\"LTK OMEGA PLUS 105\",\"quantity\":1,\"unit_price\":5.7,\"tax_rate\":0,\"net\":5.7},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":1.0,\"tax_rate\":0,\"net\":1.0},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":2.0,\"tax_rate\":0,\"net\":2.0},{\"description\":\"VEGETABLES\",\"quantity\":1,\"unit_price\":8.0,\"tax_rate\":0,\"net\":8.0},{\"description\":\"SEAFOOD\",\"quantity\":1,\"unit_price\":8.5,\"tax_rate\":0,\"net\":8.5},{\"description\":\"FISH BALL CAKE\",\"quantity\":1,\"unit_price\":1.2,\"tax_rate\":6,\"net\":1.2}],\"vat_breakdown\":[{\"rate\":6,\"base\":1.13,\"tax\":0.07},{\"rate\":0,\"base\":27.4,\"tax\":0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor PASAR MINI JIN SENG, the GST number, invoice ref 002-1550040, and the date 2018-03-18. The currency is MYR. The total looks like RM 28.60 with GST of 0.07 included, though I still need to confirm the untaxed figure and the GST summary amount of 1.20.\n\nI'm settling on tax-inclusive amounts: 27.40 plus 1.20 gives 28.60, so I'll take untaxed as 28.53 with GST of 0.07 and total 28.60. The breakdown would then be a 6% base of 1.13 and a 0% base of 27.40, though the printed base of 1.20 makes that a bit uncertain.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor PASAR MINI JIN SENG, the GST number, invoice ref 002-1550040, and the date 2018-03-18. The currency is MYR. The total looks like RM 28.60 with GST of 0.07 included, though I still need to confirm the untaxed figure and the GST summary amount of 1.20.\n\nI'm settling on tax-inclusive amounts: 27.40 plus 1.20 gives 28.60, so I'll take untaxed as 28.53 with GST of 0.07 and total 28.60. The breakdown would then be a 6% base of 1.13 and a 0% base of 27.40, though the printed base of 1.20 makes that a bit uncertain.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2194,
+   "completion_tokens": 1037,
+   "total_tokens": 3231,
+   "cost": 0.014758,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014758,
+    "upstream_inference_prompt_cost": 0.004388,
+    "upstream_inference_completions_cost": 0.01037
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 531,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.72
+}

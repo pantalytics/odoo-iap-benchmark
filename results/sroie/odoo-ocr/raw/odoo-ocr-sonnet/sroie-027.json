@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "MR D.I.Y (M) SDN BHD",
+  "vendor_vat": "000306020352",
+  "invoice_ref": "R000418193",
+  "invoice_date": "2018-03-14",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 35.0,
+  "tax": 2.1,
+  "total": 37.1,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SOURING PAD 1018-4 43",
+    "quantity": 4,
+    "unit_price": 2.8,
+    "tax_rate": 6,
+    "net": 11.2
+   },
+   {
+    "description": "SCISSOR G / FISH",
+    "quantity": 2,
+    "unit_price": 1.5,
+    "tax_rate": 6,
+    "net": 3.0
+   },
+   {
+    "description": "TRAILING SKT 5GN + SP 3X1.25MM CABLE 2",
+    "quantity": 1,
+    "unit_price": 22.9,
+    "tax_rate": 6,
+    "net": 22.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 35.0,
+    "tax": 2.1
+   }
+  ]
+ },
+ "cost_usd": 0.01348,
+ "raw": {
+  "id": "gen-1794568346-yF7mGUOTnYCh7nrgYQMD",
+  "object": "chat.completion",
+  "created": 1794568346,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"MR D.I.Y (M) SDN BHD\",\"vendor_vat\":\"000306020352\",\"invoice_ref\":\"R000418193\",\"invoice_date\":\"2018-03-14\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":35.0,\"tax\":2.1,\"total\":37.1,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SOURING PAD 1018-4 43\",\"quantity\":4,\"unit_price\":2.8,\"tax_rate\":6,\"net\":11.2},{\"description\":\"SCISSOR G / FISH\",\"quantity\":2,\"unit_price\":1.5,\"tax_rate\":6,\"net\":3.0},{\"description\":\"TRAILING SKT 5GN + SP 3X1.25MM CABLE 2\",\"quantity\":1,\"unit_price\":22.9,\"tax_rate\":6,\"net\":22.9}],\"vat_breakdown\":[{\"rate\":6,\"base\":35.0,\"tax\":2.1}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor name and GST ID, the receipt number T1 R000418193, and the date 14-03-18, which reads as day-month-year and becomes 2018-03-14. There's no due date, the currency is MYR, and the amounts are 35.00 untaxed, 2.10 tax, and 37 total.\n\nI'm settling the line items now: the sourcing pad's unit price looks like an OCR slip, since 4 times 2.80 gives the printed 11.20, so I'll go with 2.80. The three lines net to 35.00 before tax, with a 6% rate and 2.10 tax, and I'm recording the item descriptions as printed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor name and GST ID, the receipt number T1 R000418193, and the date 14-03-18, which reads as day-month-year and becomes 2018-03-14. There's no due date, the currency is MYR, and the amounts are 35.00 untaxed, 2.10 tax, and 37 total.\n\nI'm settling the line items now: the sourcing pad's unit price looks like an OCR slip, since 4 times 2.80 gives the printed 11.20, so I'll go with 2.80. The three lines net to 35.00 before tax, with a 6% rate and 2.10 tax, and I'm recording the item descriptions as printed.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2255,
+   "completion_tokens": 897,
+   "total_tokens": 3152,
+   "cost": 0.01348,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01348,
+    "upstream_inference_prompt_cost": 0.00451,
+    "upstream_inference_completions_cost": 0.00897
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 565,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.11
+}

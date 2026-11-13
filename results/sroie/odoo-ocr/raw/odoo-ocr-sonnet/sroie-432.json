@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "UNIHAKKA INTERNATIONAL SDN BHD",
+  "vendor_vat": "000656195584",
+  "invoice_ref": "OR18050902160378",
+  "invoice_date": "2018-05-09",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 6.23,
+  "tax": 0.37,
+  "total": 6.6,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SR 100100000061-5 Vege",
+    "quantity": 1,
+    "unit_price": 6.6,
+    "tax_rate": 6,
+    "net": 6.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 6.23,
+    "tax": 0.37
+   }
+  ]
+ },
+ "cost_usd": 0.009216,
+ "raw": {
+  "id": "gen-1794568342-WXtBdgxe7m8I7pzKmRqs",
+  "object": "chat.completion",
+  "created": 1794568342,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"UNIHAKKA INTERNATIONAL SDN BHD\",\"vendor_vat\":\"000656195584\",\"invoice_ref\":\"OR18050902160378\",\"invoice_date\":\"2018-05-09\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":6.23,\"tax\":0.37,\"total\":6.6,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SR 100100000061-5 Vege\",\"quantity\":1,\"unit_price\":6.6,\"tax_rate\":6,\"net\":6.6}],\"vat_breakdown\":[{\"rate\":6,\"base\":6.23,\"tax\":0.37}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor and its GST registration number, the invoice reference and date, and the amounts, with the untaxed, tax and total figures. The line item is a single \"Vege\" entry at 6.60 inclusive of tax.\n\nI'm working out the line-item figures now: the printed 6.60 is inclusive of tax, so I'm weighing whether to record it as the net or use the untaxed 6.23, and I'm settling on the printed amount. The breakdown is a 6% rate on a 6.23 base with 0.37 tax, marked as standard treatment, with the due date and IBAN left empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor and its GST registration number, the invoice reference and date, and the amounts, with the untaxed, tax and total figures. The line item is a single \"Vege\" entry at 6.60 inclusive of tax.\n\nI'm working out the line-item figures now: the printed 6.60 is inclusive of tax, so I'm weighing whether to record it as the net or use the untaxed 6.23, and I'm settling on the printed amount. The breakdown is a 6% rate on a 6.23 base with 0.37 tax, marked as standard treatment, with the due date and IBAN left empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSlAkKEAgTGAI4AUIIdGhpbmtpbmcSDLu11NfFa0+rXUPCphoMKazWDxqK/1BEZQa2IjCk/m1p8hgkUHKg3m6P6cJpVwNZSUq9hNeNFfTp7hEtdSy87ckiZLqnoFP8BhcYbxUqsQjfd1VLioFEkCEyEryKn1IEjHvO/oxPaQGp3mh57HrrOujeSVnb6ZbzgtK65kZEfl8jBh51/u+V9nssvaNnnypxQ7LYr5R9bgsbMgkexltTSavHPGLPPBav9EMguTNo8A0fPHrIh3vbInJ1ZyHvgduChOoeIwzaCC48zQq6MrlexyiriCvnif7ra14HkJP818xR5L+HDesQv+2dmLCiynK5M3BXJq2KrD+tBDWO/A6l4E9G2nCKZL5bliS5nIUAz4YiPL7VWyIzqbsw9RexjgTuorYv6Mk6n07YvviCEEYpVRnf3vJ5LFP03N1LVbJvCE89p3JUBnyIfOI7vHiaimyVm1wmh9WI5P/7y/wLAwCBK50or0tEj7EBdwlCe6bPW12pXx+rtie52n14E5/HVhwloa+BnI+CUP4KgZJgHkXjVKs+zTPyGfhlfHIB/1Nou3WCcGyKfAgsqGpLZtvDpdnNCrjrtwQuiJGwtpZp5OnViExKRt9vAnfg8sEYAB7AyFhNJED0PxP0tAlUjMKq4yjYrri+15NwRvY4aXu5DwBlJQAftRi7NRXdZK/y3OMYPiv1nTF0xiuJG3VoKRvWM4RwD3n1r0kk/97o4yzgHUMH15mcSIka14CYxqDoH/BnBl/YkQXiTwoX1K02XgDWbATzoq32lKNA56UELNAU9TdHd8WzROhNyBiV/6qywA2Bz1PWGgRtbr6xIoXuU8CtMpmD0pxTtSft0ppou3RpGNIfUR0tWkU4LKBtHTdC8VQCyJLEHoUMCssf3A6532laNEABs4Yc2OdeFisop8tLyA3JWYpFcupXes+ZWPF/PBSHmcBNVF78rXqysh+5Wppj2zNEJULfrGSwxrk+/BOYfZbr29BNMtkO601C1/Goaf3BnFG22CVxcYDeFZi/YvJfXGGlXAvlimlMxOE17N91E0dzkdPlrqJFujAWYClmHFFaqBT/VSPL9Iq9wg9s4wqrIOcw+2UqVZ4PJaJKFaamvNMEHVSWczBsCx0Yqc9sIOa+P+jixcp4Dv5gcYhVaD9kEmnXLthebgHHGE8BwChGro33PMyB3oC/Op4efJouCn+1l5VqPp50ToZ/m2sCWwimvMiHM5KgJ8b2hSdaDoJ3X/0F9MJhJgsugDYOHONa1JYnPs+apxIiSxa0NZxJDz31LBeoLXEqUArNrZs1kzxfwPvjs4IVyiVGBm0FWmeNEqO/q8jhcos/UTNGFFvspNIubXtCJW7MHyIcH09hurd1BpZEAMfn2LoDJwgWo0uxlK7pv8eDHeh3LTvlDX2I9BgVEFWOhXhyTgX2W9hvxzI2nInUKpTWUJaa1W0RQNkMA4hMH0kIyRfAK7wG3oeECsD5Qelk2HPE+vn931hQriZGcLNGgsHYRLRn0w44+1gELRJXqAzgoFVwsECb6zl/J7h8MdLffxgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2058,
+   "completion_tokens": 510,
+   "total_tokens": 2568,
+   "cost": 0.009216,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009216,
+    "upstream_inference_prompt_cost": 0.004116,
+    "upstream_inference_completions_cost": 0.0051
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 286,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 3.91
+}

@@ -1,0 +1,95 @@
+{
+ "pred": {
+  "vendor_name": "LIVES PHARMACY SDN BHD",
+  "vendor_vat": null,
+  "invoice_ref": "CS00168420",
+  "invoice_date": "2017-03-31",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 11.5,
+  "tax": 0.69,
+  "total": 12.15,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "HURIXS",
+    "quantity": 1,
+    "unit_price": 4.9,
+    "tax_rate": 6,
+    "net": 4.9
+   },
+   {
+    "description": "HURIIS",
+    "quantity": 1,
+    "unit_price": 6.6,
+    "tax_rate": 6,
+    "net": 6.6
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 11.5,
+    "tax": 0.69
+   }
+  ]
+ },
+ "cost_usd": 0.01255,
+ "raw": {
+  "id": "gen-1794568344-mo93CUcI7T0MGyysRfUA",
+  "object": "chat.completion",
+  "created": 1794568344,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIVES PHARMACY SDN BHD\",\"vendor_vat\":null,\"invoice_ref\":\"CS00168420\",\"invoice_date\":\"2017-03-31\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":11.5,\"tax\":0.69,\"total\":12.15,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"HURIXS\",\"quantity\":1,\"unit_price\":4.9,\"tax_rate\":6,\"net\":4.9},{\"description\":\"HURIIS\",\"quantity\":1,\"unit_price\":6.6,\"tax_rate\":6,\"net\":6.6}],\"vat_breakdown\":[{\"rate\":6,\"base\":11.5,\"tax\":0.69}]}",
+     "refusal": null,
+     "reasoning": "I'm working out the vendor's tax number from the OCR output, which came through garbled: the printed id looks like \"0009\" followed by scrambled characters and \"0696\". I'm weighing whether to report it as printed, normalize it, or return null, and I'm leaning toward null since the text is too unreliable to trust. The company registration number \"1030214K\" looks clean, so that one I can use.\n\nI'm settling on the invoice details now: reference CS00168420, dated 2017-03-31, in MYR. The line items add up to 11.50 before tax, with 0.69 tax and a rounded total of 12.15. For the two lines, I'm using the printed descriptions HURIXS and HURIIS, with VAT treated as standard-rated at 6%.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working out the vendor's tax number from the OCR output, which came through garbled: the printed id looks like \"0009\" followed by scrambled characters and \"0696\". I'm weighing whether to report it as printed, normalize it, or return null, and I'm leaning toward null since the text is too unreliable to trust. The company registration number \"1030214K\" looks clean, so that one I can use.\n\nI'm settling on the invoice details now: reference CS00168420, dated 2017-03-31, in MYR. The line items add up to 11.50 before tax, with 0.69 tax and a rounded total of 12.15. For the two lines, I'm using the printed descriptions HURIXS and HURIIS, with VAT treated as standard-rated at 6%.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2185,
+   "completion_tokens": 818,
+   "total_tokens": 3003,
+   "cost": 0.01255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01255,
+    "upstream_inference_prompt_cost": 0.00437,
+    "upstream_inference_completions_cost": 0.00818
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 571,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.01
+}

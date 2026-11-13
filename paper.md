@@ -1,4 +1,4 @@
-# How well does Odoo read a vendor bill? A reproducible comparison of Odoo's document digitization with six multimodal language models
+# How well does Odoo read a vendor bill? A reproducible comparison of Odoo's document digitization with eight multimodal language models
 
 Pantalytics B.V., Rotterdam. Working paper, version 1, November 2026.
 
@@ -18,6 +18,10 @@ language models.
 - **Odoo got 0 to 9% of documents fully right.** It often takes a heading
   as the supplier, picks the wrong number or date, misses the VAT on simple
   invoices, and on scanned receipts gets the total right only half the time.
+- **Odoo's OCR is not the problem; the step after it is.** Given Odoo's own
+  OCR text, Claude Sonnet 5.5 booked 94%, 100% and 88% of the documents,
+  and Odoo's own candidate lists held the right supplier on 97 to 99% of
+  the Donut bills and receipts (section 6.1, post-hoc).
 - **The AI models got 61 to 100% fully right**, at EUR 0.004 to 0.03 a
   document: below Odoo's price even in its largest credit pack. They do
   need a one-off setup (a module, an API key, the instructions); Odoo's
@@ -537,6 +541,45 @@ the scanned receipts it does not: it got the total on 55 of 100 and the shop
 name on 20, returning fragments such as "SR", "CASH" or "GST Summary" as
 the vendor.
 
+**Is it the OCR or the extraction? (post-hoc, not pre-registered)** Odoo's
+answer contains its OCR words with their positions and, per field, the
+candidates it considered and the one it selected. That allows two checks
+without new Odoo calls. First, whether the right value was among Odoo's own
+candidates (`src/odoo_candidates.py`, `results/odoo_candidates.md`).
+Second, whether a language model reading the same OCR text does better: we
+laid Odoo's words out as text in their page positions and gave that text,
+not the PDF, to Claude Sonnet 5.5 with the baseline prompt (engine
+`odoo-ocr-sonnet`, `results/<set>/odoo-ocr/`, one run, USD 1.80).
+
+| Bookable % | Donut | EN 16931 | SROIE |
+|---|---|---|---|
+| Odoo: its OCR, its extraction | 0 | 9 | 8 |
+| Odoo's OCR text, read by Claude Sonnet 5.5 | 94 | 100 | 88 |
+| Claude Sonnet 5.5 reading the page itself (mean of runs) | 97 | 96 | 91 |
+
+| Right value among Odoo's candidates, % (selected %) | Donut | EN 16931 | SROIE |
+|---|---|---|---|
+| Vendor name | 99 (0) | 65 (9) | 97 (20) |
+| Invoice number | 100 (100) | 100 (52) | - |
+| Invoice date | 69 (69) | 100 (52) | 72 (70) |
+| Untaxed amount | 100 (6) | 100 (96) | - |
+| Tax | 100 (6) | 100 (96) | - |
+| Total | 100 (100) | 100 (100) | 94 (55) |
+
+Odoo's OCR captured nearly everything a booking needs; its extraction
+step chose wrongly. The supplier is the clearest case: present in the
+candidate list on almost every Donut bill and receipt, selected almost
+never. Candidate lists hold up to some 30 entries and names match by
+containment, so the candidate column is an upper bound. Dates are the
+exception: the US dates Odoo misread were already normalised day first in
+every candidate, so that error sits before the selection. Reading the
+page image instead of Odoo's text gained Sonnet 3 points on Donut and
+SROIE, consistent with H2, and lost 4 on EN 16931 (one bill).
+
+In a database Odoo resolves the supplier from its VAT number, IBAN or
+e-mail against existing contacts, which may be why its own selection of
+the name gets little weight. This analysis does not measure that path.
+
 ### 6.2 Where the language models go wrong
 
 Almost every language-model error on Donut is a date. Donut prints US
@@ -688,6 +731,7 @@ that difficulty is in the labels. We exclude such truths from scoring.
 | Six language models | Eight: GPT-5.6 Terra and Claude Opus 5.5 added | Asked by the research owner after the first results. GPT-5.5 had been chosen as OpenAI's newest model by mistake; GPT-5.6 Terra is newer. GPT-5.5 stays in as the earlier generation |
 | (not planned) | H3 and H4, reading rules and a learning loop | Added at the research owner's request after the first results; pre-registered in a plan addendum before any data for them |
 | (not planned) | An exploratory run of all engines with an earlier schema (no VAT summary, no line amount) is not reported | It preceded the final schema; its numbers were within a few points of run 1 and led to the scoring revisions below |
+| (not planned) | Post-hoc: Odoo's OCR text read by Claude Sonnet 5.5, and the truth checked against Odoo's own candidates (section 6.1) | Asked by the research owner to explain Odoo's result; run after all planned results were published, on Odoo's cached answers only |
 | Scoring rules as first written | Four rules revised after inspecting the first LLM answers: (1) names match by containment, not prefix ("Au bon moulin" against "Au bon moulin SARL"); (2) amounts by absolute value (credit notes print negative amounts where the XML holds positive ones); (3) truth IBANs failing their checksum not scored; (4) the VAT summary added to the schema, since line amounts computed as quantity × price miss discounts | Each revision corrects a scoring error that marked a right answer wrong for every engine alike. The original rules remain available (`--strict`) and their results are published |
 
 ## 9. Reproducibility

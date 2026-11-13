@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "Au bon moulin SARL",
+  "vendor_vat": "FR11999999998",
+  "invoice_ref": "FA-2017-0008",
+  "invoice_date": "2017-11-03",
+  "due_date": "2017-12-03",
+  "currency": "EUR",
+  "untaxed": 2076.76,
+  "tax": 0.0,
+  "total": 2076.76,
+  "iban": "FR20 1242 1242 1242 1242 1242 124",
+  "vat_treatment": "K",
+  "lines": [
+   {
+    "description": "Nougat de l'Abbaye 250g",
+    "quantity": 8,
+    "unit_price": 4.55,
+    "tax_rate": 0,
+    "net": 32.76
+   },
+   {
+    "description": "Biscuits aux raisins 300g",
+    "quantity": 20,
+    "unit_price": 3.2,
+    "tax_rate": 0,
+    "net": 64.0
+   },
+   {
+    "description": "Huile d'olive à l'ancienne",
+    "quantity": 100,
+    "unit_price": 19.8,
+    "tax_rate": 0,
+    "net": 1980.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2076.76,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.012868,
+ "raw": {
+  "id": "gen-1794568334-gMwXu2giDiZgvF6ijawz",
+  "object": "chat.completion",
+  "created": 1794568334,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"Au bon moulin SARL\",\"vendor_vat\":\"FR11999999998\",\"invoice_ref\":\"FA-2017-0008\",\"invoice_date\":\"2017-11-03\",\"due_date\":\"2017-12-03\",\"currency\":\"EUR\",\"untaxed\":2076.76,\"tax\":0.0,\"total\":2076.76,\"iban\":\"FR20 1242 1242 1242 1242 1242 124\",\"vat_treatment\":\"K\",\"lines\":[{\"description\":\"Nougat de l'Abbaye 250g\",\"quantity\":8,\"unit_price\":4.55,\"tax_rate\":0,\"net\":32.76},{\"description\":\"Biscuits aux raisins 300g\",\"quantity\":20,\"unit_price\":3.2,\"tax_rate\":0,\"net\":64.0},{\"description\":\"Huile d'olive à l'ancienne\",\"quantity\":100,\"unit_price\":19.8,\"tax_rate\":0,\"net\":1980.0}],\"vat_breakdown\":[{\"rate\":0,\"base\":2076.76,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm working out the invoice date, since 11/03/2017 could read as November 3 or March 11. The payment date of 11/17/2017 suggests the US month-first format, so I'm weighing that. The invoice number is FA-2017-0008, with a due date of 12/03/2017, and the terms are 30% upfront with the balance at 30 days.\n\nThe date works out: counting 30 days from November 3 lands on December 3, which matches the due date, so the invoice is dated 2017-11-03 and due 2017-12-03. Next I'm tallying the line items: the nougat at 8 units with a 10% discount comes to 32.76, the biscuits total 64.00, the oil 1980.00, and the sum is 2076.76. The VAT is zero-rated as an intra-community supply, and I'm noting the IBAN and vendor VAT number as printed.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm working out the invoice date, since 11/03/2017 could read as November 3 or March 11. The payment date of 11/17/2017 suggests the US month-first format, so I'm weighing that. The invoice number is FA-2017-0008, with a due date of 12/03/2017, and the terms are 30% upfront with the balance at 30 days.\n\nThe date works out: counting 30 days from November 3 lands on December 3, which matches the due date, so the invoice is dated 2017-11-03 and due 2017-12-03. Next I'm tallying the line items: the nougat at 8 units with a 10% discount comes to 32.76, the biscuits total 64.00, the oil 1980.00, and the sum is 2076.76. The VAT is zero-rated as an intra-community supply, and I'm noting the IBAN and vendor VAT number as printed.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS/gkKEggTEAIYAjgBQgh0aGlua2luZxIMIKfcveJRIr/t0GJeGgyyk1E+ZVfCtJaGwfciMGFsdmh9P+DH7xY18Tz9LBY26CoxB6WdC4A7gQ7EzNERUxsy/gDu1i8fjtiMOLF0YCqZCVgbRAUjAZNW7g0hAXFl+9JsBWEbGpzTeNWVpPn40+w5lIA5A1+00BgBSHMnp1PZu94mqn6jj7IdXtmigMYP5Ntl7SzMr/+0w7/ZdFa8UvHDYUJK0xqnrljSqt+c6X22gmxZ4hJz/uFWtUwU7r16bFIVBmIm/qzeKKmSCVKKmU4EU9tGGPKL2YfCPaYdlenzsqYPCQylXb8M6zZGQa8CYsqIbKNjlWrjTaCw4QGoAKglpJDiUUSWGXQqat2nkJYouXMc4q/7VAm6hmiI06Ur/hi64Qy/1Bg3fUK9k8rAiC6zwAHJt2ZW7U9ApVdpvyWVqwfePfU+tJqAzgfK4ye3KQtWu0dB4Ap9b+JQ4qdXIigzPORVPYFNgUkAln3vH5kqZL8J+rpFxaDe02TrlwzkQSPfue3IJJEU++IoCK6OMqv2t0pMMHM+Fz0+Sp1sT3g+rYcdTGT6FzSi68EM3W5J0O8aQbfbUNee5IGPCbAaiGZUFFFTi4Jeo3dO87Ygj6Lb9PyFlg/G99PhhOdez3iPtpssF0cKLI0ncCku0X15CVzuiI/FtgtEvH0woRb41Wsjl8SB983GPNAKgtlCJYEUtCZOzGT6lDSOuk9EE3e7mErJrfMXLZ2DmCbKAvDW4UdSbKpm44ifyHmFaqSMLxFV/OK9B39EHLyQi10c/Hx+sFkiMZx9cJiINqWPaaPe7D92mrRirJQ8E7zS7WvAKH2EHtyrFdrbB6GspWQ56snXrtunv2NKDjH/AwhC0gyOtXk5ShBAW0iTOu8zoVSS6pojVOp6qSQCSgRT6V/rD5Azuk9gQeDryE7JQWXXf9xdGAEqDuNSO6kkwW2e6EtqIOrYeHnJ4So1hsT0CusEJSBMP0kHAcQ/h5f83yASELJ3c9E4iBviiXFGOWk2nl+w1DSpJTUAKajo0fiBewZsq05dDTp6SYr9+E8EktfEqLdm6vIh8zZwN1EFAzkLveei88kR3vpdzwa1PqsfYzn0D/HDMIpoyOPqhHz+cBpQQPEf5wfYWR2lLbdmfEGkAipRRatB8MYrgyGX/8ZJ8KTQCeAir9KaQCuBy5Ej79UOqIxjitMK3g1C9NyvvEukVf1HUMCrFT5HiaysB0AsbDyH5g+DntRTlw8yjDwL6mgIghVL2xmNXPwBjjx0t+hstHmCMs66cg98IX57Ix3AbwrvYXg0SNm6B0J812eue3D1NCYpC+p2x16oR4Sv+OSP5CQFjXTWVTYF6kFqe6YWlWi7PGBuE10eMNIp7mQzmbgGWmx4EVtDO1yfDnzjXjnVA0iar2IiP2yamu5pAQ346uMm9m1bZaPEaVJ5A61mCTURfA6QouoXmhx9YdAXUJd97yUdPEXyGqrwW1a1OGdo6b9dhqPS3WIQ5VRe9Zb7pGPSHPT/4p7UKmwmQlCAwxxUWOn0T9Yly8KwcAcQIQ08VvaW8YghtAcbB/YQfZj7YFW9JJqB5pY2JhxRn9ZiEt2BwDYA8PYJtDWamwRdZrxXqo3BijeEw4PiH8RHxPckc9DBQe5QUscUW5pqHAsOmSQIAMu8TKF5/FLIz41GxRmnlz4YAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2564,
+   "completion_tokens": 774,
+   "total_tokens": 3338,
+   "cost": 0.012868,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012868,
+    "upstream_inference_prompt_cost": 0.005128,
+    "upstream_inference_completions_cost": 0.00774
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 427,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 5.18
+}

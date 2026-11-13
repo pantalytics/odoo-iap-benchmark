@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "SOON FATT S/B",
+  "vendor_vat": "000788250624",
+  "invoice_ref": "C02102772",
+  "invoice_date": "2017-02-09",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 347.64,
+  "tax": 14.86,
+  "total": 362.5,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "A1 BIHUN ISTIMEWA 3KG",
+    "quantity": 10,
+    "unit_price": 10.0,
+    "tax_rate": 0,
+    "net": 100.0
+   },
+   {
+    "description": "YSF BUAH KERAS 3KG",
+    "quantity": 1,
+    "unit_price": 36.8,
+    "tax_rate": 6,
+    "net": 36.8
+   },
+   {
+    "description": "HOBE RED KIDNEY BEAN 425GM",
+    "quantity": 1,
+    "unit_price": 58.0,
+    "tax_rate": 6,
+    "net": 58.0
+   },
+   {
+    "description": "CAP LANG JAGUNG MANIS 425GM",
+    "quantity": 1,
+    "unit_price": 53.8,
+    "tax_rate": 6,
+    "net": 53.8
+   },
+   {
+    "description": "DAIRY CHAMP EVAP 390GM",
+    "quantity": 1,
+    "unit_price": 113.9,
+    "tax_rate": 6,
+    "net": 113.9
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 100.0,
+    "tax": 0.0
+   },
+   {
+    "rate": 6,
+    "base": 247.64,
+    "tax": 14.86
+   }
+  ]
+ },
+ "cost_usd": 0.012988,
+ "raw": {
+  "id": "gen-1794568363-7e8aozPND17AN1yBaqeA",
+  "object": "chat.completion",
+  "created": 1794568363,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"SOON FATT S/B\",\"vendor_vat\":\"000788250624\",\"invoice_ref\":\"C02102772\",\"invoice_date\":\"2017-02-09\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":347.64,\"tax\":14.86,\"total\":362.5,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"A1 BIHUN ISTIMEWA 3KG\",\"quantity\":10,\"unit_price\":10.0,\"tax_rate\":0,\"net\":100.0},{\"description\":\"YSF BUAH KERAS 3KG\",\"quantity\":1,\"unit_price\":36.8,\"tax_rate\":6,\"net\":36.8},{\"description\":\"HOBE RED KIDNEY BEAN 425GM\",\"quantity\":1,\"unit_price\":58.0,\"tax_rate\":6,\"net\":58.0},{\"description\":\"CAP LANG JAGUNG MANIS 425GM\",\"quantity\":1,\"unit_price\":53.8,\"tax_rate\":6,\"net\":53.8},{\"description\":\"DAIRY CHAMP EVAP 390GM\",\"quantity\":1,\"unit_price\":113.9,\"tax_rate\":6,\"net\":113.9}],\"vat_breakdown\":[{\"rate\":0,\"base\":100.0,\"tax\":0.0},{\"rate\":6,\"base\":247.64,\"tax\":14.86}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields out of the invoice now: the vendor name looks like SOON FATT S/B, with GST registration 000788250624, and the date 9/2/2017 reads as 9 February 2017 in Malaysian format. The currency is MYR, with 347.64 untaxed, 14.86 tax, and a total of 362.50.\n\nI'm settling on the VAT treatment as S, since the lines are mixed between S and Z. The amounts already check out: the 100.00 line is zero-rated, the other four lines carry 6% GST, and the figures sum to 262.50 inclusive, matching 247.64 plus 14.86. I'll keep the line amounts as printed, and the due date stays null.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields out of the invoice now: the vendor name looks like SOON FATT S/B, with GST registration 000788250624, and the date 9/2/2017 reads as 9 February 2017 in Malaysian format. The currency is MYR, with 347.64 untaxed, 14.86 tax, and a total of 362.50.\n\nI'm settling on the VAT treatment as S, since the lines are mixed between S and Z. The amounts already check out: the 100.00 line is zero-rated, the other four lines carry 6% GST, and the figures sum to 262.50 inclusive, matching 247.64 plus 14.86. I'll keep the line amounts as printed, and the due date stays null.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSwgoKEAgTGAI4AUIIdGhpbmtpbmcSDC3Dte0d4YepRDnPihoM42ZpEKUUxX7MNb4xIjCfyEu7ADlGrLDg4utvsNOVtHKNDDHY0GDaO01yNpi23vHayCdh3Huq/NIdRQwvcxAq3wky4OjkW4Gzajs+b0cE+xunjapbJZOLbD7mi5EIRXH3VC4e+t84iJlnkbQqO9dBNWRoebFZAz6Rra+sMBlTF1hyZOo3cMM+qMbJoACSMF3u+f95XysBRCR4SOgk2g3WR+TZYUNmIQakrJPIfgMWpW9IguXUUMfvMZkiaIUor+yi99xR2pzB9CBgDsuwNgrU2XHCUi7CSv8WsmsCxam4rqzkJ78stkQWg1nBUu//FjgpM5ikdqUZoFD7bDtWmNNnhVUSYArUu7RHayqYPXbO4hIA8vS1rRSg+6k9x5cTAyVSR9SALcSwqMqh7yUHVljUSAjkguHs7rCxyL4ia0nyf9PyEN540F2dB4vJ4PYrl7YGDGtHFK+Ctl2vvIwXudj/NHpK3BbXScnIYaEyMz2sY/4h/nswMKhRcTeFBg98tV6Ud1RK80bJUC+S3VMKvA9oV/OcGDc/zy5ojxbT7bcGv+fwNIw4FucHEZwPK/RtbBx2FgLHAzWCXDZaIzU9pR3cfCT9s1TfTr7l9nq+OSwo/kx/Nn+GR0wA375qRZxhXUt2sUKTxJheL8fX23/3c2od1r0eImgbBIFCylKOf9oIh7XGfY2pVxjDQMyN4Evnd3SfVur7i5KPN95U04nsYFS4EpW2aA3rXTG+yQJHCCk42+UobbT1DLYT56GFy1UaRLGe1jJ0BoTVE4LPlWohIWAEgmnf0yufCeVg722hrXIIgtYttNeDnHH+75kz4Hf24+FNm2TTlMBJN6/s4KOMcQt0kg0PI3WF3/8dlVQXGVWmVEHTkNr5kvtBnJ5G42Xb7+3LydzDjTajJu4T39vxM1lnCQQallgAZ6WNTLMuJIwSlG92d6fDXqWdAea1OThWk7NDzxzsxZyCNVWiVGxSeB+KM3h2gLYbsqa8Jv8wmbkeUUDRkiGyhRjhc+QWwQO1+C+6EIqiRjJ0/hA0+PuDuY63Nd+0oJv29sipXU0x3tLI6VkGquIjNcYjwV0vpHyPuKTlKiuZ9crg8E8OytH4uCOW12uWKOFUMWtJRNII2x987EfNV8KOuMcED71QQtbBgGzcFX79dHyN6SD3x58CO7l2GJGQMHz5VGW5loN6LqVvfKyb1O/IYEDUzDJYyyevwZgY7AVtO57CERHL9nCap+9mtBGlF6e0QwT5CQ9dBdOigsdhAUt3SKVm/+LLEFOVBh6XMELtoZZ4iwM/onvURU6N6MoFovggYY7kX73K9Brv5cmIZvXP/TT2vroyPAJm9T3Z9I7Kz96/I2KVfHJMs22YNOKezlSPtISoHScEM2w0JU1CpzUCpebBNi9voOVK3uvcRqmiFKReWSEK1UfnutHDAkUUwoDwot4RIvQ5xD5TpwgUHTNZ8skTmQDBCOhrccUCHLOXVheR02hFYj6tlEqDNIXOi+GrS4kdJKWrUPCYJHft9PSV9i1cNi5ZbyYJGTJ8Ge9WHyzSJbO0xp+iHlxaBSbjtPY98uBVpk++pTgrHHM/+N2O80kzJr6UaJoARBpXcxLVmnpBBjFij9x+X1QSYm79GWayojP0IwidZVTsLRUcPgJwAq8c/Mrwllq7RkcAU5fKRGP4nC2yseebzhT1/L/Lyvp2B9Bni75dU39M2wYz98jpEc58VbYsn+ck0FevrPu2iHH2w/vLnkrBBiTvfRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2204,
+   "completion_tokens": 858,
+   "total_tokens": 3062,
+   "cost": 0.012988,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.012988,
+    "upstream_inference_prompt_cost": 0.004408,
+    "upstream_inference_completions_cost": 0.00858
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 397,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.34
+}

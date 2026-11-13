@@ -1,0 +1,121 @@
+{
+ "pred": {
+  "vendor_name": "LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD",
+  "vendor_vat": "001147416576",
+  "invoice_ref": null,
+  "invoice_date": "2018-01-06",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 50.67,
+  "tax": 2.86,
+  "total": 53.55,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "CURRY MIXED VEGE",
+    "quantity": 1,
+    "unit_price": 16.85,
+    "tax_rate": 6,
+    "net": 16.85
+   },
+   {
+    "description": "517",
+    "quantity": 1,
+    "unit_price": 14.73,
+    "tax_rate": 6,
+    "net": 14.73
+   },
+   {
+    "description": "XINGHUA SPRING ROLL (12 PCS)",
+    "quantity": 1,
+    "unit_price": 12.72,
+    "tax_rate": 6,
+    "net": 12.72
+   },
+   {
+    "description": "TI GUAN YIN TEA (POT)",
+    "quantity": 1,
+    "unit_price": 3.18,
+    "tax_rate": 6,
+    "net": 3.18
+   },
+   {
+    "description": "PLAIN RICE",
+    "quantity": 2,
+    "unit_price": 1.59,
+    "tax_rate": 6,
+    "net": 3.18
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 2.87,
+    "tax": 0
+   },
+   {
+    "rate": 6,
+    "base": 47.8,
+    "tax": 2.86
+   }
+  ]
+ },
+ "cost_usd": 0.017148,
+ "raw": {
+  "id": "gen-1794568380-glvehzoOStgoFpkbm5Dq",
+  "object": "chat.completion",
+  "created": 1794568380,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"LIAN CHI PU TIAN VEGETARIAN RESTAURANT SDN BHD\",\"vendor_vat\":\"001147416576\",\"invoice_ref\":null,\"invoice_date\":\"2018-01-06\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":50.67,\"tax\":2.86,\"total\":53.55,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"CURRY MIXED VEGE\",\"quantity\":1,\"unit_price\":16.85,\"tax_rate\":6,\"net\":16.85},{\"description\":\"517\",\"quantity\":1,\"unit_price\":14.73,\"tax_rate\":6,\"net\":14.73},{\"description\":\"XINGHUA SPRING ROLL (12 PCS)\",\"quantity\":1,\"unit_price\":12.72,\"tax_rate\":6,\"net\":12.72},{\"description\":\"TI GUAN YIN TEA (POT)\",\"quantity\":1,\"unit_price\":3.18,\"tax_rate\":6,\"net\":3.18},{\"description\":\"PLAIN RICE\",\"quantity\":2,\"unit_price\":1.59,\"tax_rate\":6,\"net\":3.18}],\"vat_breakdown\":[{\"rate\":0,\"base\":2.87,\"tax\":0},{\"rate\":6,\"base\":47.8,\"tax\":2.86}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the fields from this invoice: the vendor is a vegetarian restaurant in Malaysia, the GST ID is listed, and the invoice ref is missing. The date is 6 January 2018 in day-first format, the currency is MYR, and I'm checking the untaxed amounts against the tax lines to see how they add up.\n\nI'm weighing whether the untaxed base should be 47.80 or 50.67, since the line items include a 6% service charge and the printed tax of 2.86 doesn't quite match either figure. I'm leaning toward 50.67 as the untaxed amount, accepting the 0.02 rounding gap against the 53.55 total.\n\nI'm recording the VAT breakdown as a 6% row with base 47.80 and tax 2.86, plus a 0% row for the 2.87 service charge. Next I'm working out the line descriptions, with the unreadable \"517\" kept as-is and the spring roll, tea, and rice items named from the receipt.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the fields from this invoice: the vendor is a vegetarian restaurant in Malaysia, the GST ID is listed, and the invoice ref is missing. The date is 6 January 2018 in day-first format, the currency is MYR, and I'm checking the untaxed amounts against the tax lines to see how they add up.\n\nI'm weighing whether the untaxed base should be 47.80 or 50.67, since the line items include a 6% service charge and the printed tax of 2.86 doesn't quite match either figure. I'm leaning toward 50.67 as the untaxed amount, accepting the 0.02 rounding gap against the 53.55 total.\n\nI'm recording the VAT breakdown as a 6% row with base 47.80 and tax 2.86, plus a 0% row for the 2.87 service charge. Next I'm working out the line descriptions, with the unreadable \"517\" kept as-is and the spring roll, tea, and rice items named from the receipt.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0w8KEggTEAIYAjgBQgh0aGlua2luZxIMy1VCjJSdU6AfbfHZGgyrZvcBwH/RlLcOZ3YiMPUkHJLKay7ERozU85tVtLxqHAE674z4HCOHYv1rMGmGb5IpbHM9zQH0C2xxrHsCNCruDi6UpDr7tSmqTKhlbvb7fotRj2SYjdIYF9Br3LFIXQfFWHa1kwBHEBrCtXZX1Rp5ER0rnO+SNUgSINgkQS1W/75lYBBCBR7B3C2gJrKsIQkarFyGTUjO8MVfnpJq7KHL8oy4Y21wnIsLwbh56dxC7uB8ZtTgaiwWc9viKz8/8A40d3KpJTDb7NCgRNTwxc5VMbY47w0VcyTCLtxAf75HEyqcUEOw2ohRN1qXRgxJ0Z3Q2joXqbNR4MMPT1jicvEgm+Ze4HyqK/OdMcCA8PFCHXiIlKstQJxBCIuZH8W1B93mdvmLb5BxieCGA7twFiMtgBcJMWlFOIrMOWBmnuqmcgDx9R8RX65QfEZPXD1kWgwyGRcJTLL4tVFxmrNW3xL23zIZ14s10/TCDC1MA3OrQyojoUtxy4J6FUtesbVptnJy15+sdZbH+LnMd4LLuxoIQ61yA2KYOxbXjxAa5BNwyy0wSutwMGvRxAGMQd8EqPnA3aK2YRUz5AdOz8ItRCB/wuRtWibQ9MXHlSP7tc7uBDkrK5H6ooNVDUsrR1wM1yqR6Il1lmFx2eQhtILTdjQoExtpvatkmY4+Ntt1TT4tpGD3MqKdRaqo9uBddosBYNQxvTwVI5yjSXe8tKR7E9kkSzAT3CKgQ+nZLUeC4KGMJ8EakB7BuL2xqRMGL8Pf1Cay2c6Uzn+qDvFr149JWC3kFnBKAesbUNv/zyL7T7LPuvms5OnIxGq0TFA1NflOtAdKl4+WqWlcHXAGL2Y6JSiSNAbfwUV9Pi2AWtw96+JQ5V0aC1B4bAg4VGAXP+ugO7w0z77nr1KBcYWz0hQ7IrEvKe5LaqnBihie70EdYcDKPj96GYdC75WMWBDWUl5PCaB9SkdgRYfyif4+i1VuG4rIyVJxvxKw/vildQJJpswBPA4laWdVOI/VV3gRa9mOkzlEemTFtsFGiRHKqfgMlByiKk9bVsIIZ3lNMOTlT2Mb1U0evL4Wwcf31CSuwXawtS/q70XUSCnPTDjnhq6ak3T4bIgwpbUj0u+XDIdJWjJBjaymnsrXv8cAgIrSX1t1cseRbY03MYsrHq03anfOMsPzkfQhgaJQhHJtnanX2EX086dsS/dBc0OHDuikYZ8+yFT9XPLkxSQcsiC1ZuI53r6UoeBJ0CDVPOOyPXnr3FuyY8/mE6YyzcXhFu7S0AsZYKhB89WLIpzcYyFgGhykxAFGI2+2MKTgSIyPmBBSuBt0uK+J/0bfXDYcDSqQBQ/3tZAg6u1eq0xoIRjt2sZ2P1h8fD7PqZqGUXHDw4cL1DlITYiRYx/5SlmaKnvx7Bqb3WWeX8fAdElTTdl5nMjL34MI7H4mzOqxgWA9T092O9snBKQSuXU6j+hTeOEXiaQ5rD+qvNhyborfzlqfffDQsTGo7jWyl1oskCQhn6/aFxKEPSMtsHeX6McKLqA2miRYBRrIR67iam+Bo9duzl3q8qzRbBWRZNWrgsq5vJsZP8oJ+8fo/TtOiyMTqbMEZLxKBkqN3QoTPTYFpAieYoYRIJ5vNUdVYmCeJIxWyUT1o8bNwZA1WUSH+RTYZCtvnbmOFsyOr39o0ZOhKZNGA73Uv0w91aw76bK8xJMBaSqUbVZCMLr7EkHJWF0ArSIEMXw220u1uRtdlKLmHqC9n4ZHkDEnZiMXjf0e0xnoCORWy6Y/amP3/HWG2v+YDC0eCeK9H1HoRXbGBoFunsT3cfeABgq7yW3eKFv4UemqHWq9ZVTZxa8QhNisFxsSGaOw3oMArIjHZ97KZA+02FT8tEydpSZe2qgBESCgOUNVwh35QDvPe1T7RiosIXup6TBjNHKV8Pfkae+BpK3PrDRfGNX9vOuD1Jg+RIG/g/vGYTEjW4VGuIV5l9+t7NA0dn8C215fvAJXsA65pwaudIp2Kieo1AMcMFs5fMgrthjVG83+24meP0XDMG0kc/wwsu1qpfEhwhbPGDA8UHpyd2SPK/SnKelA23qemfC2DdYXJ6HPgGlbtvVC2PUJQ0gdnDEcSty23E6TB0XAqV669zbC/zS/XvIaZ7mzNA4sSPIHpRLVWo17cQ0Y/He/t84WKrbB2Jc3ob1LGlDUCEeEGKC5do0f6duosbkzXuS7tT8XDIWUU5TZKFp7++/JpjO4ZQBCSAbcEdGhEp90sCN/yKoHDMkyXsPGK6mlpovvfpbsOTE9iyKkahjWh22h77h8jSkEOA1KETxz+wFrTCJuCWhZn9nTZ+HOO7ufdtFKt0v/0kbS/cFT+kmzGySMXeEH4NKFRlOhlfC/QWbCtlXU1m3bOyEaVHlNxrpnWMM8clD33svMqTp8ZHgu04oX5+ZGlR8Ts3ZQTK4ZHKRdlJBbWhZkcLobCWdDwK9Vw6/TFumzbkJaoIQcITp2F+c8RKx+eUG2Y9e2ER8ULD8DmCI22ER0wLPhlsW2z+X9RKOZayayC9wGcjDkc+RHeG+8rvMwJcFz//TvxKyjzZoZ+lZHpjAMyHLGQQT8u1SFE5vyZKlW2zRwguDPMMax/M8GAB+E5YQJgaUmNRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2214,
+   "completion_tokens": 1272,
+   "total_tokens": 3486,
+   "cost": 0.017148,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.017148,
+    "upstream_inference_prompt_cost": 0.004428,
+    "upstream_inference_completions_cost": 0.01272
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 826,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 9.02
+}

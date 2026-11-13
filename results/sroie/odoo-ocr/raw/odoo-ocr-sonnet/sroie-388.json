@@ -1,0 +1,144 @@
+{
+ "pred": {
+  "vendor_name": "CHEF LEE SDN BHD",
+  "vendor_vat": "001406865408",
+  "invoice_ref": "039170",
+  "invoice_date": "2016-02-13",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 90.75,
+  "tax": 5.45,
+  "total": 96.2,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "SEAFOOD FRIED PRICE",
+    "quantity": 1,
+    "unit_price": 13.5,
+    "tax_rate": 6,
+    "net": 13.5
+   },
+   {
+    "description": "FISH HEAD",
+    "quantity": 1,
+    "unit_price": 11.5,
+    "tax_rate": 6,
+    "net": 11.5
+   },
+   {
+    "description": "FISH CAKE",
+    "quantity": 1,
+    "unit_price": 7.9,
+    "tax_rate": 6,
+    "net": 7.9
+   },
+   {
+    "description": "G. CRISPY CHIC RICE",
+    "quantity": 1,
+    "unit_price": 15.9,
+    "tax_rate": 6,
+    "net": 15.9
+   },
+   {
+    "description": "V. GRILL CHIC RICE",
+    "quantity": 1,
+    "unit_price": 16.5,
+    "tax_rate": 6,
+    "net": 16.5
+   },
+   {
+    "description": "W/ MELON JUICE",
+    "quantity": 1,
+    "unit_price": 7.5,
+    "tax_rate": 6,
+    "net": 7.5
+   },
+   {
+    "description": "RIBENA",
+    "quantity": 1,
+    "unit_price": 5.9,
+    "tax_rate": 6,
+    "net": 5.9
+   },
+   {
+    "description": "ICED CHINESE TEA",
+    "quantity": 1,
+    "unit_price": 3.8,
+    "tax_rate": 6,
+    "net": 3.8
+   },
+   {
+    "description": "SERV. CHG. 10%",
+    "quantity": 1,
+    "unit_price": 8.25,
+    "tax_rate": 6,
+    "net": 8.25
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 90.75,
+    "tax": 5.45
+   }
+  ]
+ },
+ "cost_usd": 0.01819,
+ "raw": {
+  "id": "gen-1794568375-jXSTcxU9AH9Yn4dbLS9P",
+  "object": "chat.completion",
+  "created": 1794568375,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"CHEF LEE SDN BHD\",\"vendor_vat\":\"001406865408\",\"invoice_ref\":\"039170\",\"invoice_date\":\"2016-02-13\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":90.75,\"tax\":5.45,\"total\":96.2,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"SEAFOOD FRIED PRICE\",\"quantity\":1,\"unit_price\":13.5,\"tax_rate\":6,\"net\":13.5},{\"description\":\"FISH HEAD\",\"quantity\":1,\"unit_price\":11.5,\"tax_rate\":6,\"net\":11.5},{\"description\":\"FISH CAKE\",\"quantity\":1,\"unit_price\":7.9,\"tax_rate\":6,\"net\":7.9},{\"description\":\"G. CRISPY CHIC RICE\",\"quantity\":1,\"unit_price\":15.9,\"tax_rate\":6,\"net\":15.9},{\"description\":\"V. GRILL CHIC RICE\",\"quantity\":1,\"unit_price\":16.5,\"tax_rate\":6,\"net\":16.5},{\"description\":\"W/ MELON JUICE\",\"quantity\":1,\"unit_price\":7.5,\"tax_rate\":6,\"net\":7.5},{\"description\":\"RIBENA\",\"quantity\":1,\"unit_price\":5.9,\"tax_rate\":6,\"net\":5.9},{\"description\":\"ICED CHINESE TEA\",\"quantity\":1,\"unit_price\":3.8,\"tax_rate\":6,\"net\":3.8},{\"description\":\"SERV. CHG. 10%\",\"quantity\":1,\"unit_price\":8.25,\"tax_rate\":6,\"net\":8.25}],\"vat_breakdown\":[{\"rate\":6,\"base\":90.75,\"tax\":5.45}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the vendor name from the document, which reads \"OLD ASIA\" with an owner line that says Chef Lee Sdn Bhd, and the company number is 458592-T. I'm leaning toward treating Chef Lee Sdn Bhd as the issuer, and I'm weighing whether \"OLD ASIA CHEF\n\nI'm settling on Chef Lee Sdn Bhd as the vendor name, since that's the owner line on the receipt. I'm checking the tax details next: the GST number, the invoice reference, the date, and the currency. For the line items, I'm adding up the amounts and working out the service charge, GST, and rounding. I'm also deciding how to record the service charge and the unclear Ribena entry.\n\nI'm settling the line items now: I'll keep quantity at 1 for each, with the Ribena entry at a unit price of 5.90, and I'm setting the breakdown to a 6% rate on a 90.75 base with 5.45 in tax. The VAT treatment is S, and the due date and IBAN stay empty.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the vendor name from the document, which reads \"OLD ASIA\" with an owner line that says Chef Lee Sdn Bhd, and the company number is 458592-T. I'm leaning toward treating Chef Lee Sdn Bhd as the issuer, and I'm weighing whether \"OLD ASIA CHEF\n\nI'm settling on Chef Lee Sdn Bhd as the vendor name, since that's the owner line on the receipt. I'm checking the tax details next: the GST number, the invoice reference, the date, and the currency. For the line items, I'm adding up the amounts and working out the service charge, GST, and rounding. I'm also deciding how to record the service charge and the unclear Ribena entry.\n\nI'm settling the line items now: I'll keep quantity at 1 for each, with the Ribena entry at a unit price of 5.90, and I'm setting the breakdown to a 6% rate on a 90.75 base with 5.45 in tax. The VAT treatment is S, and the due date and IBAN stay empty.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2250,
+   "completion_tokens": 1369,
+   "total_tokens": 3619,
+   "cost": 0.01819,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01819,
+    "upstream_inference_prompt_cost": 0.0045,
+    "upstream_inference_completions_cost": 0.01369
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 776,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 8.8
+}

@@ -1,0 +1,88 @@
+{
+ "pred": {
+  "vendor_name": "POPULAR BOOK CO. (M) SDN BHD",
+  "vendor_vat": "001492992000",
+  "invoice_ref": "9060293578",
+  "invoice_date": "2018-03-11",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 5.42,
+  "tax": 0.33,
+  "total": 5.75,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "DOCUMENT HOL A4 9101A - Tra",
+    "quantity": 5,
+    "unit_price": 1.15,
+    "tax_rate": 6,
+    "net": 5.77
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 5.42,
+    "tax": 0.33
+   }
+  ]
+ },
+ "cost_usd": 0.01197,
+ "raw": {
+  "id": "gen-1794568362-QEWQXfeSUv5R1oO48jrJ",
+  "object": "chat.completion",
+  "created": 1794568362,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"POPULAR BOOK CO. (M) SDN BHD\",\"vendor_vat\":\"001492992000\",\"invoice_ref\":\"9060293578\",\"invoice_date\":\"2018-03-11\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":5.42,\"tax\":0.33,\"total\":5.75,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"DOCUMENT HOL A4 9101A - Tra\",\"quantity\":5,\"unit_price\":1.15,\"tax_rate\":6,\"net\":5.77}],\"vat_breakdown\":[{\"rate\":6,\"base\":5.42,\"tax\":0.33}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this receipt: the vendor name and GST registration number, the slip reference, and the date, which looks like DD/MM/YY and so becomes 2018-03-11. The total is MYR 5.75 including GST, and the cash tendered was 50.00 with 44.25 returned as change, which confirms the 5.75 payment. I'm noting that the line item amount is next.\n\nI'm working out the line item now: 5 units at 1.15 would come to 5.75, but the OCR reads 5.77, so I'm weighing which figure to record. The printed total and tax breakdown point to 5.75 as the true amount, so I'm sorting out whether the net should follow the printed line or the calculated value.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this receipt: the vendor name and GST registration number, the slip reference, and the date, which looks like DD/MM/YY and so becomes 2018-03-11. The total is MYR 5.75 including GST, and the cash tendered was 50.00 with 44.25 returned as change, which confirms the 5.75 payment. I'm noting that the line item amount is next.\n\nI'm working out the line item now: 5 units at 1.15 would come to 5.75, but the OCR reads 5.77, so I'm weighing which figure to record. The printed total and tax breakdown point to 5.75 as the true amount, so I'm sorting out whether the net should follow the printed line or the calculated value.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGdvb2dsZS12ZXJ0ZXgvZ2xvYmFsIn0"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2125,
+   "completion_tokens": 772,
+   "total_tokens": 2897,
+   "cost": 0.01197,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01197,
+    "upstream_inference_prompt_cost": 0.00425,
+    "upstream_inference_completions_cost": 0.00772
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 546,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 6.27
+}

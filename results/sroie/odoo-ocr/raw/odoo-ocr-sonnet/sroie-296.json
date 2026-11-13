@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "DOMINO'S PIZZA",
+  "vendor_vat": "001694261248",
+  "invoice_ref": "004079",
+  "invoice_date": "2018-04-17",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 3.68,
+  "tax": 0.22,
+  "total": 3.9,
+  "iban": null,
+  "vat_treatment": "S",
+  "lines": [
+   {
+    "description": "6 \" HT ( TE ) FPP - FREE",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "6 \" HT ( BP ) WTUELA - E",
+    "quantity": 1,
+    "unit_price": 12.8,
+    "tax_rate": 6,
+    "net": 12.8
+   },
+   {
+    "description": "Coupon Discount",
+    "quantity": 1,
+    "unit_price": -21.7,
+    "tax_rate": 6,
+    "net": -21.7
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 6,
+    "base": 3.68,
+    "tax": 0.22
+   }
+  ]
+ },
+ "cost_usd": 0.01135,
+ "raw": {
+  "id": "gen-1794568363-hDNr3VjMCUmbuVZNS6vQ",
+  "object": "chat.completion",
+  "created": 1794568363,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"DOMINO'S PIZZA\",\"vendor_vat\":\"001694261248\",\"invoice_ref\":\"004079\",\"invoice_date\":\"2018-04-17\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":3.68,\"tax\":0.22,\"total\":3.9,\"iban\":null,\"vat_treatment\":\"S\",\"lines\":[{\"description\":\"6 \\\" HT ( TE ) FPP - FREE\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"6 \\\" HT ( BP ) WTUELA - E\",\"quantity\":1,\"unit_price\":12.8,\"tax_rate\":6,\"net\":12.8},{\"description\":\"Coupon Discount\",\"quantity\":1,\"unit_price\":-21.7,\"tax_rate\":6,\"net\":-21.7}],\"vat_breakdown\":[{\"rate\":6,\"base\":3.68,\"tax\":0.22}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from this invoice: the vendor as Domino's Pizza (operated by Dommal Food Services Sdn Bhd), the GST reference number, the invoice reference and date. Currency isn't printed, but Malaysian context points to MYR. The totals are 3.90 gross, 0.22 tax and 3.68 untaxed.\n\nI'm working out the tax split on the total: 6% GST included gives about 0.22, leaving 3.68 untaxed. The line items look like two items at 12.80 plus a discount of -21.70 that brings the total to 3.90, so I'll record the discount as its own line with the same 6% rate.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from this invoice: the vendor as Domino's Pizza (operated by Dommal Food Services Sdn Bhd), the GST reference number, the invoice reference and date. Currency isn't printed, but Malaysian context points to MYR. The totals are 3.90 gross, 0.22 tax and 3.68 untaxed.\n\nI'm working out the tax split on the total: 6% GST included gives about 0.22, leaving 3.68 untaxed. The line items look like two items at 12.80 plus a discount of -21.70 that brings the total to 3.90, so I'll record the discount as its own line with the same 6% rate.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSrwoKEAgTGAI4AUIIdGhpbmtpbmcSDEMlSDKrQUKBkNbvwhoM8Cxz5oJZAnmFZVp0IjDGbpFhV336ead14MbUmuZZ72amgDKAszfbNtwr4Vbs46D2cK2uzRNN06vYB/iU2MsqzAmsjWzoAX73BSA4KFwellILOP+KBagRqCjb+h2r0qtRoJEOLBWWZBEUVFBYNJwZh4vRD3MCW9W4Z11f8JLQxz+lfu7LVixQVESNjO9iHNnJJLqpEiVSFiJuGiShznycXJeXpQT+yLWppX6D+d2qSoc3mnvkqYc56EHk9kChBlyXEQteFoIR7OfQAXiBO1ZZ8OER9GnVrJysz8gVMm37yCzp/mj69quvtGDEAXYvMfrzZ+omnDI2Ju4w4vJIv6vhutiBTCN3DRdEKyfnc/SoKZX8ctaeIwZXoBUMRnB8V/KR9FEEx3rMHS0bW+BwtxeIjqy4kFLvhjNuYMWJig/veatKDNZo8bXXRUYM/rHsf8ofUO7qMGzTGpvpZ4qriUj7HqLTaqyAywAPi/ZrejeBmYGGwS1gX4CGfbiyEePgtNRgtpMizgrEcc+fkNiO5cTFNH/y2u8LcxyEfX+Rz2ovoaAlzgTWPxEHx/TW3GjGJnp2aj6MPY0Ec6PD9th1Ells+LqrFj6GljkrDYvwqBxt5UN9cNcYk8GWcvi8/IVfRtsVIJj+3ML2N8VAboFuX8vmY//jXY2948naSjI260+YfuPLXghQjcoQ0UE/K4V/FuwLYxNJPlk674g3S0NYKLQBSvU2lNhfk02ow3Cj5UXZvYeChfg7VDdjCMgBjiDUC/UlR1xpM9ITM2I1ZgCWSerNS9KfEr4V6XQYkjVnJ9nknvScrWKma0Wq8/dabVkOE8V/m2shOUZZ5qjJ7GOuaP874prArsOpDnoruqhr8ikh9WWAVx4uubbtNQE0KKmuy6cNV5LNBDT8Wx7p57qhpHHEb1/dBQpnGed1mhfzTkZ2AFAsdxcsXMYCWLwpusQvR6M1H5maoimAMGMPA/XYp77Nbf9uV/zMtrLCezbeNoUhz6h21ufgQjlEh/g0vCXpT4bYya4Xac5cIkNPWqjRB/zH46bNdzFSHISL1uWwRvWnefMAYTc/5OIhH03k8a+Mg1goD0SxIr09ecUHF+E9xnCV9P4xDuXKi+cSmumcUlAVw0jvHX1YbxKoQXNsKak2EFQnk4kX2hxpYRvcQY1o3zqcRCRNjrAfrFcgBla6d4Sy7tK1cH2lZsl/tPD2ydoNAnd674PA7MZiyWJa6j2ftRt9W4Dgk0Q2v6OGMlTObL1ogfwZou/yZKzAM7P/WcjHLahftYU6EfZl2NIslSCG/Pa7btR8VXd9v60gs8fqfdE/Pc4CkxBIPD+YMKuUidtjB8f+iLd1ZhaLKy/fWzBUjkGorJ2s5wfG3whIO5wqBYDV94Vs9TaodOyeFje20O9pML8tc8hmi1UM2VcI/TqoDd9sT+gWD+feFL8MdyFRZCBE4I2VKaVpjxJ8cPEekQpjEcP5rDJeEXwADP7pLJ0C4Hr6owLBmgAT0guWSRV+5xw2fthIGjd8nnIQQnIFJHSSJCRXRPk/hpajwYIs+xpNqJEcPEib0NWKZ51N+O6Z60Cx9Co/wcvubdFasS//Fo0HdvDCEoSyutqWBOHd79w3vDgpS9BBFuI2dsBUQUiH+ONFKdP1zHV29YmVkEWE906M3Oj+g/Kf7lcJIU+OdtEMwB11K4/+JYgoWcZC2gQz1SLiNfI9CygteEoiOzrbFpTHGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2310,
+   "completion_tokens": 673,
+   "total_tokens": 2983,
+   "cost": 0.01135,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.01135,
+    "upstream_inference_prompt_cost": 0.00462,
+    "upstream_inference_completions_cost": 0.00673
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 355,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.87
+}

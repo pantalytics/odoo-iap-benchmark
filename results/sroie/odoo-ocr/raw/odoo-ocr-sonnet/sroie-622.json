@@ -1,0 +1,102 @@
+{
+ "pred": {
+  "vendor_name": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+  "vendor_vat": "000670224384",
+  "invoice_ref": "V001--540835",
+  "invoice_date": "2018-06-20",
+  "due_date": null,
+  "currency": "MYR",
+  "untaxed": 38.0,
+  "tax": 0.0,
+  "total": 38.0,
+  "iban": null,
+  "vat_treatment": "Z",
+  "lines": [
+   {
+    "description": "Fish Item",
+    "quantity": 1,
+    "unit_price": 30.0,
+    "tax_rate": 0,
+    "net": 30.0
+   },
+   {
+    "description": "Beverage",
+    "quantity": 1,
+    "unit_price": 5.0,
+    "tax_rate": 0,
+    "net": 5.0
+   },
+   {
+    "description": "Noodle Item Single",
+    "quantity": 1,
+    "unit_price": 3.0,
+    "tax_rate": 0,
+    "net": 3.0
+   }
+  ],
+  "vat_breakdown": [
+   {
+    "rate": 0,
+    "base": 38.0,
+    "tax": 0.0
+   }
+  ]
+ },
+ "cost_usd": 0.010164,
+ "raw": {
+  "id": "gen-1794568372-2ynkPqwPeSryafx5ExzZ",
+  "object": "chat.completion",
+  "created": 1794568372,
+  "model": "anthropic/claude-sonnet-5.5",
+  "provider": "Azure",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"vendor_name\":\"ONE ONE THREE SEAFOOD RESTAURANT SDN BHD\",\"vendor_vat\":\"000670224384\",\"invoice_ref\":\"V001--540835\",\"invoice_date\":\"2018-06-20\",\"due_date\":null,\"currency\":\"MYR\",\"untaxed\":38.0,\"tax\":0.0,\"total\":38.0,\"iban\":null,\"vat_treatment\":\"Z\",\"lines\":[{\"description\":\"Fish Item\",\"quantity\":1,\"unit_price\":30.0,\"tax_rate\":0,\"net\":30.0},{\"description\":\"Beverage\",\"quantity\":1,\"unit_price\":5.0,\"tax_rate\":0,\"net\":5.0},{\"description\":\"Noodle Item Single\",\"quantity\":1,\"unit_price\":3.0,\"tax_rate\":0,\"net\":3.0}],\"vat_breakdown\":[{\"rate\":0,\"base\":38.0,\"tax\":0.0}]}",
+     "refusal": null,
+     "reasoning": "I'm pulling the key fields from the receipt: the vendor is ONE ONE THREE SEAFOOD RESTAURANT SDN BHD, dated 2018-06-20 in MYR, with a total of 38.00 and no tax. The invoice reference reads V001--540835, though I'm unsure of the quantity on the fish line since its \"1\" is garbled.\n\nI'm settling the line items: the fish is 30.00, the beverage 5.00, and the noodle 3.00, each taken as quantity 1. With the tax rate at 0%, I'll treat this as zero-rated (Z) rather than standard rated.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm pulling the key fields from the receipt: the vendor is ONE ONE THREE SEAFOOD RESTAURANT SDN BHD, dated 2018-06-20 in MYR, with a total of 38.00 and no tax. The invoice reference reads V001--540835, though I'm unsure of the quantity on the fish line since its \"1\" is garbled.\n\nI'm settling the line items: the fish is 30.00, the beverage 5.00, and the noodle 3.00, each taken as quantity 1. With the tax rate at 0%, I'll treat this as zero-rated (Z) rather than standard rated.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQShwkKEAgTGAI4AUIIdGhpbmtpbmcSDFtbKCC004FyCge7GRoMKVtlCPMejI8AEMaWIjBFCKJet7fwHFFjg8Opa/IRhvdl+7e3fjL28mtLN+fGIiOtxN+ndbwCInheaBYk3A4qpAjfmfIZdiTAUMTuKOCFRp5bG027gUVMzONqGpN1od1Y2HOTnFMTTm7PQvhCru/kOxfnCBkdFiURMmUliOfjdYZthyuEVzLERc3yvbexBTCQhj1fdHoOmY4r+tsjwX9JiUlmkQ36e/5sOdBnURM2CITZyGvLW+dfm5tzyo5HiS1I5uWZThdXRvyk6MC8/O6xrVt0pZU+5SG4BSfIn/xt+vJsq6xPwFOMT/4V7jrlw3VmUZAgcVYFuBSksQwWgSOrehALufYQyM2nYDjfIFLwipleCKa08QKRxixtZfUnXrDLbIvcpqeD7BEcQxH9Rr1yzpinpqt2h0/bsPRzdN+5c+EvTq/qAQgsRfT6kPCaXnI6uej1D6ZyCESXrlyALnQmXtTx165JuNgDFuD5MaFoSAz4d2wIgWXNoVv1eZylD7OGtVNnY9ynS8RwKabNvb8WeSRj+Mh8E1mcPaot6wKghJAXYmeh819Q2RgDHFJAbuVuSxMWSggvJS5zeL4DxVwJ4beaDMnjGqSfeGnGeN88qMkvSLfPUk6FVaaXoQFtvCVs7n5Shz8A/a9kjunEl/b5iZMIryd39UsyeZAK+V/CBoBdjyCDCwx3nRs+LDkFqgkQ3qunnG7FCB0ur3wBTLDuIvlmWnXuxAUfTQPxDuJf1V7chj7xaONA1ETHGG67i9j0pCd8SgRe+9VMRr1Y3xs4D5X0iRolTARfsOHkw9XaUeBhtajftfYLvXkR5PmsAmZejZZQP7/BK9tRrSrkaYXhiqB7tQ/veWNFdM3QcjaK3DdF71br8GIQwcoa9ATEQ7JCNx8dua6cdXBx+8x/Vnd8RMuvDP8Ic8HzPxNzRONO0irFoKvZi5evtax4FaGlb53/GeoJi6SRtnA9wH8IbadN0t8ZbYtxJWU2ErLy6jsN+70TaC2wb4tui0FD5jpr6mU1WR0uhZR248Ewppq3CQFJjP3skf04dhZS8s2B+xFk6afiZlm416I5PoLBAjYDhS2cYUDeBzPOPbyXSYHbSyOiEbhLfcKoeNQCYYoAAUEW2GMdM4tyj0T+fL123mLMFzp59SMimeqpqILdt5r3XwzLaeV6a5W0+NCOvk+WCnbkEAoE2oeqkclX4geEebjL2SAJZFeEu2dg1OS5ki18jkXZWa9zsBSqabFLT/XH+4XKfxprYDYTO9tL1RF7X5l9IZwyS0f6VgseQLKNGEoxqjlHVWCGFSrNoIiDNdMRUJ/5Z7oMFrG+IVbjgF3XBrgnasgCvnlL7gjsMdsvBli66+SeiLEK8bV6xzuIFbKkTy9BsFTXB+5ESPqbrscnaStJnyc4nJKiGHwz6hLcqkoMuENtAc9hh6GlwaT47wjN0txlckw79tHZSAovDkAaUPZc30D62OXED8qT6idNdwuxjbnch9wDNDyIGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1zb25uZXQtNS41LTIwMjYwOTI4fGF6dXJlL2dsb2JhbCJ9"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2117,
+   "completion_tokens": 593,
+   "total_tokens": 2710,
+   "cost": 0.010164,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.010164,
+    "upstream_inference_prompt_cost": 0.004234,
+    "upstream_inference_completions_cost": 0.00593
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 284,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ "seconds": 4.14
+}
