@@ -24,7 +24,12 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-from aggregate import CORRECTION_MINUTES, ODOO_CREDIT_EUR, USD_EUR  # noqa: E402
+from aggregate import (  # noqa: E402
+    CORRECTION_MINUTES,
+    ODOO_CREDIT_EUR,
+    ODOO_CREDIT_EUR_BULK,
+    USD_EUR,
+)
 from bench_score import wilson  # noqa: E402
 
 INK = "#001d21"
@@ -213,12 +218,22 @@ def fig_cost_time(root: Path, out: Path) -> None:
         for col, (idx, unit, fmt) in enumerate(((1, "EUR", "{:.2f}"), (2, "h", "{:.1f}"))):
             ax = axes[row][col]
             vals = [r[idx] for r in rows]
-            ax.barh(ys, vals, color=colors, height=0.62)
+            # Odoo's price runs from its largest (solid) to its smallest credit pack (pale)
+            pale = [
+                ODOO + "59" if r[0] == "odoo" and col == 0 else c
+                for r, c in zip(rows, colors, strict=True)
+            ]
+            ax.barh(ys, vals, color=pale, height=0.62)
+            if col == 0:
+                bulk = [100 * ODOO_CREDIT_EUR_BULK if r[0] == "odoo" else 0 for r in rows]
+                ax.barh(ys, bulk, color=ODOO, height=0.62)
             top = max(vals) or 1
             for y, v in zip(ys, vals, strict=True):
                 label = fmt.format(v) + (f" {unit}" if unit == "h" else "")
                 if unit == "EUR":
                     label = "EUR " + label
+                    if rows[y][0] == "odoo":  # solid: largest pack, pale: smallest pack
+                        label = f"EUR {100 * ODOO_CREDIT_EUR_BULK:.0f} to {v:.0f}"
                 ax.annotate(label, (v, y), xytext=(4, 0), textcoords="offset points",
                             va="center", fontsize=8.5, color=INK)  # fmt: skip
             ax.set_xlim(0, top * 1.35)

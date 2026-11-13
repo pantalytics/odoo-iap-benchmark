@@ -7,16 +7,21 @@ Code, data manifests and every raw answer are in this repository
 
 ## Executive summary
 
-Odoo can read supplier bills and receipts for you, at about EUR 0.15 a
-document. We measured how often the result can be booked without
+Odoo can read supplier bills and receipts for you, built in and with
+nothing to set up, at EUR 0.05 to 0.15 a document depending on the credit
+pack. We measured how often the result can be booked without
 correction, on 223 public test documents, and compared Odoo with eight AI
 language models.
+
+![Figure 0. Bills bookable without correction, against AI cost per document](figures/fig0_overview.png)
 
 - **Odoo got 0 to 9% of documents fully right.** It often takes a heading
   as the supplier, picks the wrong number or date, misses the VAT on simple
   invoices, and on scanned receipts gets the total right only half the time.
-- **The AI models got 61 to 100% fully right**, at a fifth of Odoo's price
-  or less (EUR 0.004 to 0.03 a document).
+- **The AI models got 61 to 100% fully right**, at EUR 0.004 to 0.03 a
+  document: below Odoo's price even in its largest credit pack. They do
+  need a one-off setup (a module, an API key, the instructions); Odoo's
+  reader works out of the box.
 - **Correcting costs more than reading.** Per 100 documents Odoo leaves
   about 3 hours of corrections, the best models 10 to 20 minutes. The AI
   cost differs by a few euros.
@@ -50,7 +55,8 @@ were mostly US dates read day first; one prompt rule about date
 conventions raised Gemini 3.8 Flash from 64% to 97% on Donut. Rules learned
 automatically from a training sample's errors did not help and lowered one
 result, because the errors lacked the documents' context. AI cost per 100
-documents was EUR 15 for Odoo against EUR 0.44 to 3.03 for the models;
+documents was EUR 5 to 15 for Odoo, by credit pack, against EUR 0.44 to
+3.03 for the models;
 correction time, at two minutes per document, was about 3 hours against 0.1
 to 1.3. Code, data, every raw answer and the pre-registered plan are
 published.
@@ -59,7 +65,8 @@ published.
 
 Odoo, an open-source ERP used by small and mid-sized companies, can read
 vendor bills: a PDF is sent to Odoo's Extract API, and the fields of a
-draft bill are filled in. The service costs one IAP credit per document.
+draft bill are filled in. The service costs one IAP credit per document, EUR 0.05 to 0.15 depending
+on the pack, and needs no setup: it is on by default in Accounting.
 Odoo publishes no accuracy figure for it, and we found no independent
 measurement. Accuracy claims that circulate online come from vendors of
 competing products and come without a method.
@@ -234,8 +241,9 @@ field is not held against Odoo.
 
 Model ids were checked against OpenRouter's model list on 2026-11-12, the
 day all runs took place. Costs per call are OpenRouter's reported cost.
-Odoo's cost is the list price of one IAP credit in the smallest pack (100
-credits for EUR 15; larger packs go down to EUR 0.05). Seconds are wall-clock
+Odoo's cost is the list price of one IAP credit (iap.odoo.com, 2026-11-12):
+EUR 0.15 in the 100-credit pack, 0.12 at 1,000, 0.10 at 10,000 and 0.05 at
+100,000. Tables and figures show the range. Seconds are wall-clock
 time per bill, including Odoo's polling at 5-second intervals.
 
 ### 4.4 Reading rules and the learning loop (H3, H4)
@@ -563,15 +571,15 @@ real mix.
 
 AI cost and human time are reported apart (figure 3). AI cost is what was
 billed: OpenRouter's reported cost per call for the language models, and
-the list price of Odoo's smallest credit pack (100 credits for EUR 15) for
-Odoo. Human time is the number of documents that are not bookable as read,
+the list price of Odoo's credits for Odoo, from EUR 0.15 a credit in the
+smallest pack to EUR 0.05 in the largest. Human time is the number of documents that are not bookable as read,
 times an assumed two minutes to correct one (`results/<set>/aggregate.md`).
 
 ![Figure 3. AI cost and correction time per 100 bills](figures/fig3_cost_time.png)
 
 | Per 100 documents | AI cost | To correct: Donut | EN 16931 | SROIE |
 |---|---|---|---|---|
-| Odoo | EUR 15.00 | 100, 3.3 h | 91, 3.0 h | 92, 3.1 h |
+| Odoo | EUR 5.00 to 15.00 | 100, 3.3 h | 91, 3.0 h | 92, 3.1 h |
 | Claude Sonnet 5.5 | EUR 0.86 to 1.41 | 3, 0.1 h | 4, 0.1 h | 9, 0.3 h |
 | Claude Opus 5.5 | EUR 1.89 to 2.83 | 3, 0.1 h | 0 | 10, 0.3 h |
 | Gemini 3.8 Flash | EUR 0.44 to 0.64 | 36, 1.2 h | 0 | 6, 0.2 h |
@@ -583,9 +591,16 @@ times an assumed two minutes to correct one (`results/<set>/aggregate.md`).
 | Mistral OCR → Medium | EUR 0.45 to 0.82 | 39, 1.3 h | 9, 0.3 h | 12, 0.4 h |
 
 The AI cost differs by a few euros per 100 documents; the correcting differs
-by hours. Unless an hour of correcting is worth less than a few euros, the
+by hours. Even at Odoo's bulk price of EUR 5 per 100, every model was
+cheaper per document. Unless an hour of correcting is worth less than a few euros, the
 engine that is right most often is also the cheapest in total. Between
 engines that are equally right, the AI cost decides.
+
+Setup is the one cost on Odoo's side of the ledger. Odoo's reader is on by
+default: no module, no API key, no instructions to maintain. A language
+model needs all three once, which is implementation time we did not
+measure. At three hours of correcting saved per hundred documents, that
+setup pays back after a few hundred documents.
 
 Time per document: Claude Sonnet 5.5, GPT-5.6 Terra and the Mistral pipeline
 answered in 3 to 7 seconds, Gemini 3.1 Pro in 20 to 26. Odoo took 7 to 8,
@@ -599,8 +614,8 @@ on US-style bills, and the total on scanned receipts. Inside a database the
 vendor lookup will recover part of the vendor errors (section 7), but not
 the numbers, dates and amounts.
 
-A current language model gets most of these documents right as read, at a
-fifth of Odoo's price or less, and saves around three hours of correcting
+A current language model gets most of these documents right as read, for
+less than Odoo's credit even in bulk, and saves around three hours of correcting
 per hundred documents. On these sets two choices stand out: Claude Sonnet
 5.5 (right without help, EUR 0.01 a document) and Gemini 3.8 Flash with the
 four reading rules of H3 (as accurate on these sets, at half the price).

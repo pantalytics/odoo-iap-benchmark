@@ -27,6 +27,12 @@ python3 src/bench_invoices.py results/en16931 results/en16931/r1 --engines odoo,
 python3 src/aggregate.py results
 ```
 
+The figures (needs `pip install matplotlib`):
+
+```bash
+python3 src/figures.py results figures && python3 src/fig_overview.py results figures
+```
+
 ## Repeat from scratch
 
 Python 3.12 or newer. Only `prepare_zugferd.py` needs a package (`pypdf`).
