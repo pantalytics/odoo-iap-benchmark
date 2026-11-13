@@ -7,7 +7,7 @@ Usage:
     python src/fig_overview.py results figures
 
 y: share of documents bookable without correction, the mean of the three
-sets (each set weighs the same). x: AI cost per document, log scale. Odoo is
+sets (each set weighs the same). x: AI cost per document, log scale, inverted so that better is top right. Odoo is
 a range, from its largest to its smallest credit pack. Writes
 figures/fig0_overview.png and .svg.
 """
@@ -28,12 +28,12 @@ from aggregate import ODOO_CREDIT_EUR, ODOO_CREDIT_EUR_BULK, USD_EUR  # noqa: E4
 from figures import GRID, INK, LLM, MUTED, NAMES, ODOO, SETS, load, mean, save  # noqa: E402
 
 RULES = "gemini-flash"  # the H3 arm shown as its own point
-PLACE = {
+PLACE = {  # the x axis runs from dear (left) to cheap (right), so better is top right
     "Gemini 3.8 Flash + 4 rules": (0, 11, "center"),
-    "GPT-5.5": (6, 9, "left"),
-    "Gemini 2.5 Pro": (6, -10, "left"),
+    "GPT-5.5": (-6, 9, "right"),
+    "Gemini 2.5 Pro": (-6, -10, "right"),
     "GPT-5.6 Terra": (0, -12, "center"),
-    "Mistral OCR + Medium": (-8, 0, "right"),
+    "Mistral OCR + Medium": (8, 0, "left"),
     "Claude Sonnet 5.5": (0, -11, "center"),
 }
 
@@ -73,7 +73,7 @@ def main() -> None:
                 ax.scatter(x, book, marker="D", s=70, color=ODOO, edgecolor="white", lw=2, zorder=3)
             ax.annotate("Odoo digitization\nEUR 0.05 to 0.15, by credit pack",
                         (ODOO_CREDIT_EUR_BULK, book), xytext=(0, 12), textcoords="offset points",
-                        ha="left", fontsize=9.5, fontweight="bold", color=INK)  # fmt: skip
+                        ha="right", fontsize=9.5, fontweight="bold", color=INK)  # fmt: skip
             continue
         rules = name.endswith("rules")
         ax.scatter(cost, book, s=70, marker="s" if rules else "o", color=LLM,
@@ -82,24 +82,24 @@ def main() -> None:
     # overlaps (offset in points, horizontal alignment). Unknown names go right.
     for name, cost, book in pts:
         if name != "Odoo":
-            dx, dy, ha = PLACE.get(name, (8, 0, "left"))
+            dx, dy, ha = PLACE.get(name, (-8, 0, "right"))
             ax.annotate(f"{name}  {book:.0f}%", (cost, book), xytext=(dx, dy),
                         textcoords="offset points", ha=ha, va="center", fontsize=8.5,
                         color=INK)  # fmt: skip
     ax.set_xscale("log")
-    ax.set_xlim(0.0022, 0.4)
+    ax.set_xlim(0.4, 0.0016)  # inverted: cheaper to the right
     ticks = [0.005, 0.01, 0.02, 0.05, 0.1, 0.2]
     ax.xaxis.set_major_locator(FixedLocator(ticks))
     ax.xaxis.set_minor_locator(NullLocator())
     ax.set_xticklabels([f"{t:g}" for t in ticks])
-    ax.set_xlabel("AI cost per document, EUR (log scale)")
+    ax.set_xlabel("AI cost per document, EUR (log scale, cheaper to the right)")
     ax.set_ylim(0, 105)
     ax.set_yticks([0, 25, 50, 75, 100], ["0", "25", "50", "75", "100%"])
     ax.grid(color=GRID, lw=0.8)
     ax.set_axisbelow(True)
     ax.tick_params(length=0)
-    ax.annotate("better ↑", (0.0025, 62), fontsize=8.5, color=MUTED, ha="left")
-    ax.annotate("cheaper ←", (0.0025, 3), fontsize=8.5, color=MUTED, ha="left")
+    ax.annotate("better ↑", (0.0018, 62), fontsize=8.5, color=MUTED, ha="right")
+    ax.annotate("cheaper →", (0.0018, 3), fontsize=8.5, color=MUTED, ha="right")
     fig.suptitle("Bills bookable without correction, against what reading one costs",
                  x=0.01, ha="left", fontsize=13, fontweight="bold", color=INK)  # fmt: skip
     ax.set_title("Mean of three public test sets (223 documents): Donut invoices, EN 16931 "
