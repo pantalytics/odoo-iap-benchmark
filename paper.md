@@ -1,6 +1,6 @@
 # How well does Odoo read a vendor bill? A reproducible comparison of Odoo's document digitization with eight multimodal language models
 
-Pantalytics B.V., Rotterdam. Working paper, version 1, November 2026.
+Pantalytics B.V., Rotterdam. Working paper, version 1.1, November 2026.
 
 Code, data manifests and every raw answer are in this repository
 ([README](README.md)): github.com/pantalytics/odoo-iap-benchmark.
@@ -694,6 +694,15 @@ that difficulty is in the labels. We exclude such truths from scoring.
   position and default taxes. The bill an accountant finally sees can be
   better than the raw read, or worse where defaults override a correct
   read. A follow-up study books real bills in a real database.
+- Cold read, no learning. Each document was read once, by a database that
+  had never seen its supplier. Odoo says its reader learns per supplier: a
+  correction lowers a score, and a supplier that keeps failing gets a
+  template made by hand. An older Odoo forum FAQ mentions around 600
+  templates recognised at 95% after the first try
+  (odoo.com/forum/help-1/ocr-documentation-and-faq-185159). We did not test
+  that learning, and the 95% cannot be compared with our figures as it
+  stands: it does not say whether it counts fields or whole documents. Bills
+  from suppliers Odoo already knows may be read better than we measured.
 - Mostly clean documents. Both invoice sets are generated PDFs. The SROIE
   receipts are real scans, but flatbed scans of Malaysian till receipts, not
   phone photos of European bills. H2 is tested on clean invoices and on these
@@ -754,6 +763,10 @@ service. To keep that interest from steering the result we used only
 public data, wrote the hypotheses down before collecting it, publish every
 raw answer and the scoring under the original rules, and give the code to
 anyone who wants to check it.
+
+Odoo S.A. was not consulted before publication. We invite Odoo to comment,
+point out errors or share its own accuracy figures. We will publish any
+response next to this paper and correct errors in a new version.
 
 ## References
 
