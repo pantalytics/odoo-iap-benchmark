@@ -34,7 +34,7 @@ def main() -> None:
     rows = [odoo, *models]  # bottom to top: Odoo last in reading order
 
     fig = plt.figure(figsize=(5.4, 6.75), dpi=200)
-    ax = fig.add_axes((0.37, 0.12, 0.40, 0.64))
+    ax = fig.add_axes((0.37, 0.155, 0.40, 0.61))
     for i, (name, cost, book) in enumerate(rows):
         is_odoo = name == "Odoo"
         y = i + (0.6 if not is_odoo else 0)  # a gap between Odoo and the models
@@ -66,7 +66,9 @@ def main() -> None:
     fig.text(0.05, 0.835, "Bills and receipts bookable without any correction,\n"
              "and what reading one costs. 223 public test documents.",
              fontsize=10.5, color=MUTED, va="top", linespacing=1.35)  # fmt: skip
-    fig.text(0.05, 0.035, "Mean of three public test sets: Donut, EN 16931, SROIE.\n"
+    fig.text(0.05, 0.035, "Odoo: what its reader returns, before it matches the supplier to your\n"
+             "contacts. Even with the supplier always right, at most 25%.\n"
+             "Mean of three public test sets: Donut, EN 16931, SROIE.\n"
              "Source: Pantalytics, github.com/pantalytics/odoo-iap-benchmark",
              fontsize=8, color=MUTED, va="bottom", linespacing=1.4)  # fmt: skip
     fig.savefig(out / "social_bookable.png", dpi=200, facecolor="white", bbox_inches=None)
