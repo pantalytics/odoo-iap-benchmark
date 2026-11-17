@@ -14,6 +14,14 @@ to book it, and how do current language models compare? The paper is
 | `results/<set>/aggregate.md` | Mean and range over the runs |
 | `results/**/*.csv` | Flat copies of truth, answers, calls and scores; every column in [DATA.md](DATA.md) |
 
+## The test documents
+
+The exact PDFs every engine received (100 Donut invoices, 23 EN 16931 invoices
+without their XML) are in one zip under
+[Releases](https://github.com/pantalytics/odoo-iap-benchmark/releases/tag/test-documents-v1),
+with licences and SHA-256 sums. The SROIE receipts are not redistributed; build
+them with `src/prepare_sroie.py`.
+
 ## Rescore without spending anything
 
 The raw answers are in the repository, so the scores can be recomputed
