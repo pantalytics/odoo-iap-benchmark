@@ -61,7 +61,7 @@ def main() -> None:
     for s in ax.spines.values():
         s.set_visible(False)
 
-    fig.text(0.05, 0.955, "AI reads 80 to 96% of bills\nright. Odoo reads 6%.",
+    fig.text(0.05, 0.955, "We compared Odoo IAP with LLMs.\nThis is the result.",
              fontsize=19, fontweight="bold", color=INK, va="top", linespacing=1.15)  # fmt: skip
     fig.text(0.05, 0.835, "Bills you can book without fixing anything",
              fontsize=11.5, color=MUTED, va="top")  # fmt: skip
