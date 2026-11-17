@@ -63,7 +63,7 @@ def main() -> None:
 
     fig.text(0.05, 0.955, "We compared Odoo IAP with LLMs.\nThis is the result.",
              fontsize=19, fontweight="bold", color=INK, va="top", linespacing=1.15)  # fmt: skip
-    fig.text(0.05, 0.835, "Bills you can book without fixing anything",
+    fig.text(0.05, 0.835, "Bills read without errors",
              fontsize=11.5, color=MUTED, va="top")  # fmt: skip
     fig.text(0.05, 0.035, "223 public test bills. Odoo before it matches suppliers to your contacts.\n"
              "github.com/pantalytics/odoo-iap-benchmark",
